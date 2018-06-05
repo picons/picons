@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="50.511mm" width="169.33mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 599.99998 178.97708">
+ <g fill-rule="evenodd" transform="translate(85.714 -347.18)">
+  <path d="m-85.714 475.04h57.576v48.1h-57.576v-48.1z" fill="#ed1c24"/>
+  <path d="m348.81 526.16-103.37-178.98h68.31l35.06 61.58 35.12-61.58h68.15l-103.27 178.98z"/>
+  <path d="m514.29 523.14h-58.56v-111.45h58.56v111.45z"/>
+  <path d="m514.29 395.9h-58.56v-48.62h58.56v48.62z" fill="#ed1c24"/>
+  <g>
+   <path d="m190.77 396.43v126.98h-58.99v-126.98h-51.833v-49.07h162.54v49.07h-51.72z"/>
+   <path d="m39.929 454.55h-0.366c16.683-8.08 28.857-24.05 31.512-43.05h-156.71l-0.001 48.63h61.856l35.836 63.19h66.914l-39.041-68.77z"/>
+   <path d="m15.786 347.36c28.217 0.27 51.467 21.4 55.289 48.54h-156.71l-0.001-48.63h101.42l0.002 0.09z"/>
+  </g>
+ </g>
+</svg>

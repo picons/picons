@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="61.980629mm"
+   height="53.302536mm"
+   viewBox="0 0 61.980629 53.302536"
+   version="1.1"
+   id="svg846"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="scifi.default.svg">
+  <defs
+     id="defs840">
+    <mask
+       maskUnits="userSpaceOnUse"
+       x="0"
+       y="-307.295"
+       width="368.545"
+       height="203.974"
+       id="mask-6">
+      <g
+         id="g13"
+         style="filter:url(#Adobe_OpacityMaskFilter)">
+        <polygon
+           id="path-5"
+           points="0,-103.318 0,-307.294 368.549,-307.294 368.549,-103.318 "
+           style="fill:#ffffff" />
+      </g>
+    </mask>
+    <filter
+       id="Adobe_OpacityMaskFilter"
+       filterUnits="userSpaceOnUse"
+       x="0"
+       y="-307.29501"
+       width="368.54501"
+       height="203.974">
+      <feColorMatrix
+         type="matrix"
+         values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
+         id="feColorMatrix7" />
+    </filter>
+    <filter
+       id="filter1410"
+       filterUnits="userSpaceOnUse"
+       x="0"
+       y="-307.29501"
+       width="368.54501"
+       height="203.974">
+      <feColorMatrix
+         type="matrix"
+         values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
+         id="feColorMatrix1408" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.2148437"
+     inkscape:cx="133.61119"
+     inkscape:cy="87.068626"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="983"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata843">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-85.840728,-120.54697)">
+    <g
+       id="g23"
+       transform="matrix(0.06198063,0,0,0.06198063,85.840728,139.59343)">
+      <path
+         d="m 768.926,-63.076 v -0.018 H 594.02 l -0.01,-80.451 h 174.92 c 3.655,-3.657 5.698,-5.705 9.353,-9.359 v -145.03 c -3.649,-3.649 -5.692,-5.696 -9.353,-9.354 H 491.585 l -81.85,81.875 0.003,246.089 81.854,81.874 h 277.333 c 3.664,-3.646 5.699,-5.697 9.357,-9.343 V -53.716 c -3.64,-3.662 -5.692,-5.718 -9.356,-9.36 z"
+         id="path5"
+         inkscape:connector-curvature="0" />
+      <defs
+         id="defs10">
+        <filter
+           id="filter1457"
+           filterUnits="userSpaceOnUse"
+           x="0"
+           y="-307.29501"
+           width="368.54501"
+           height="203.974">
+          <feColorMatrix
+             type="matrix"
+             values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
+             id="feColorMatrix1455" />
+        </filter>
+      </defs>
+      <mask
+         maskUnits="userSpaceOnUse"
+         x="0"
+         y="-307.295"
+         width="368.545"
+         height="203.974"
+         id="mask1417">
+        <g
+           id="g1415"
+           style="filter:url(#Adobe_OpacityMaskFilter)">
+          <polygon
+             id="polygon1413"
+             points="0,-307.294 368.549,-307.294 368.549,-103.318 0,-103.318 "
+             style="fill:#ffffff" />
+        </g>
+      </mask>
+      <path
+         id="Fill-7"
+         mask="url(#mask-6)"
+         d="M 359.195,-307.295 H 81.847 L 0,-225.421 v 112.771 c 3.654,3.655 5.702,5.699 9.354,9.328 h 174.92 v -40.229 h 174.92 c 3.654,-3.658 5.699,-5.705 9.352,-9.362 v -145.03 c -3.649,-3.647 -5.693,-5.693 -9.351,-9.352"
+         inkscape:connector-curvature="0" />
+      <path
+         id="Fill-10"
+         d="m 9.356,-63.085 c -3.654,3.652 -5.704,5.704 -9.353,9.357 V 93.197 c 3.653,3.65 5.699,5.699 9.353,9.351 H 286.7 l 81.848,-81.87 V -93.959 c -3.651,-3.657 -5.701,-5.709 -9.354,-9.359 h -174.92 v 40.229 H 9.356 Z"
+         inkscape:connector-curvature="0" />
+      <path
+         id="Fill-12"
+         d="M 768.923,142.833 H 491.576 l -81.847,81.877 v 318.615 c 3.657,3.652 5.705,5.697 9.351,9.353 h 161.832 c 3.655,-3.653 5.698,-5.7 9.353,-9.353 v -50.997 h 178.662 c 3.655,-3.655 5.699,-5.704 9.353,-9.358 V 356.169 c -3.65,-3.654 -5.695,-5.701 -9.353,-9.357 H 590.262 v -40.234 h 178.663 c 3.655,-3.652 5.698,-5.704 9.353,-9.357 V 152.195 c -3.656,-3.656 -5.698,-5.707 -9.355,-9.362"
+         inkscape:connector-curvature="0" />
+      <path
+         d="M 1000,-297.938 V 93.199 c -3.657,3.641 -5.696,5.697 -9.355,9.356 H 828.827 c -3.66,-3.657 -5.699,-5.715 -9.357,-9.356 v -391.137 c 3.658,-3.662 5.697,-5.699 9.357,-9.359 h 161.817 c 3.657,3.661 5.698,5.698 9.356,9.359 z"
+         id="path19"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 999.993,152.191 v 391.14 c -3.658,3.642 -5.697,5.697 -9.355,9.359 h -161.82 c -3.657,-3.66 -5.697,-5.718 -9.355,-9.359 v -391.14 c 3.656,-3.659 5.697,-5.697 9.355,-9.358 h 161.82 c 3.658,3.66 5.697,5.697 9.355,9.358 z"
+         id="path21"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

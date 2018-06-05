@@ -1,0 +1,18 @@
+<svg width="200mm" height="101.38mm" version="1.1" viewBox="0 0 200 101.38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g transform="translate(2382.2 -732.83)">
+  <g transform="matrix(40.213 0 0 40.213 -1044.2 -1708.6)">
+   <path d="m-28.68 61.626h-0.38171v0.76341h0.38171zm-0.76376 1.1455v-1.5272h0.76376l0.3817 0.3817v1.1455z" fill="#e20023"/>
+   <g transform="matrix(.35278 0 0 -.35278 -30.302 60.713)">
+    <path d="m0 0v-5.835h2.164v1.082h-1.082v2.165h1.082v1.081h-1.082v1.507z" fill="#e20023"/>
+   </g>
+   <g transform="matrix(.35278 0 0 -.35278 -32.508 60.713)" fill="#fff">
+    <path d="m0 0v-1.507h-2.165v-3.246l1.082-1.083h2.165v5.836zm-1.083-2.588h1.083v-2.164h-1.083z" fill="#fff"/>
+   </g>
+   <path d="m-31.265 62.39h-0.38171v-0.30445h0.38171zm-0.76376-0.76376h0.76376v0.07761h-0.76376v1.0679h1.1455v-1.5272h-1.1455z" fill="#fff"/>
+   <g transform="matrix(.35278 0 0 -.35278 -30.788 61.245)" fill="#fff">
+    <path d="m0 0v-4.555l1.083-1.083v5.638z" fill="#fff"/>
+   </g>
+   <path d="m-30.788 61.167h0.38206v-0.45402h-0.38206z" fill="#fff"/>
+  </g>
+ </g>
+</svg>

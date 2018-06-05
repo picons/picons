@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="428.31" viewBox="0 0 600 428.3057" width="600" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <path d="m0 428.31h428.31v-428.31h-428.31z" fill="#fff"/>
+ <g>
+  <path d="m0.08894 428.29h428.16v-428.27h-428.16z" fill="#fff"/>
+  <g fill="#d71428">
+   <path d="m368.51 346.79h59.78v-346.77h-59.78z"/>
+   <path d="m80.181 346.79h267.51v-346.77h-267.51z"/>
+   <path d="m368.51 428.29h59.78v-61.11h-59.78z"/>
+   <path d="m347.48 367.18h-288.38v-0.9h-0.126v-366.21h-58.974v428.22h347.48v-61.11"/>
+  </g>
+ </g>
+ <g fill="#fff">
+  <path d="m94.395 231.63v101.5h18.505v-42.48h34.48v-17.86h-34.48v-23.26h34.95v-17.9h-53.455"/>
+  <path d="m157.78 333.13h18.85v-101.5h-18.85z"/>
+  <path d="m186.65 231.63v101.5h52.55v-17.43h-33.88v-84.07h-18.67"/>
+  <path d="m248.28 231.54v101.68h18.42v-83.65h14.82v83.65h18.42v-83.65h14.77v83.65h18.42v-101.68h-84.85"/>
+  <path style="color-rendering:auto;text-decoration-color:#000000;color:#000000;font-variant-numeric:normal;shape-rendering:auto;font-variant-ligatures:normal;text-decoration-line:none;font-variant-position:normal;mix-blend-mode:normal;solid-color:#000000;font-feature-settings:normal;shape-padding:0;font-variant-alternates:normal;text-indent:0;font-variant-caps:normal;image-rendering:auto;white-space:normal;text-decoration-style:solid;text-orientation:mixed;isolation:auto;text-transform:none" d="m451.57 2.2424v131.07h146.43v-131.12c-48.79 0.0361-97.72-0.0615-146.43 0.0524z"/>
+ </g>
+ <g fill="#d71428">
+  <path d="m466.92 16.956v101.5h18.85v-41.33h15.71v41.33h18.84v-101.5h-18.84v41.323h-15.71v-41.327z"/>
+  <path d="m529.65 16.956v101.5h37.25l16.14-14.03v-72.914l-17.35-14.56zm18.68 17.433h16.04v66.641h-16.04z"/>
+  <path style="color-rendering:auto;text-decoration-color:#000000;color:#000000;font-variant-numeric:normal;shape-rendering:auto;font-variant-ligatures:normal;text-decoration-line:none;font-variant-position:normal;mix-blend-mode:normal;solid-color:#000000;font-feature-settings:normal;shape-padding:0;font-variant-alternates:normal;text-indent:0;font-variant-caps:normal;image-rendering:auto;white-space:normal;text-decoration-style:solid;text-orientation:mixed;isolation:auto;text-transform:none" d="m449.57 0.19451v135.12h150.43v-135.12zm4.1 4.0947h142.24v126.92h-142.24z"/>
+ </g>
+</svg>

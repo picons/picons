@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="800.000000pt"
+   height="200.000000pt"
+   viewBox="0 0 800.000000 200.000000"
+   preserveAspectRatio="xMidYMid meet"
+   id="svg14"
+   sodipodi:docname="centralchinatelevision.light.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+  <defs
+     id="defs18" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1280"
+     inkscape:window-height="961"
+     id="namedview16"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     inkscape:zoom="0.26625"
+     inkscape:cx="65.7277"
+     inkscape:cy="133.33333"
+     inkscape:window-x="-8"
+     inkscape:window-y="43"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg14" />
+  <metadata
+     id="metadata2">
+Created by potrace 1.12, written by Peter Selinger 2001-2015
+<rdf:RDF>
+  <cc:Work
+     rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type
+       rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:title></dc:title>
+  </cc:Work>
+</rdf:RDF>
+</metadata>
+  <g
+     transform="matrix(0.1,0,0,-0.1,0,200)"
+     id="g12"
+     style="fill:#ffffff;stroke:none">
+    <path
+       d="M 890,1840 C 647,1788 455,1687 301,1531 211,1441 165,1372 123,1270 -51,837 229,363 773,171 c 165,-58 271,-75 472,-75 182,0 256,9 405,51 73,21 216,81 229,97 8,9 -14,68 -80,217 -50,112 -93,206 -95,208 -2,2 -30,-8 -63,-23 -110,-49 -203,-67 -376,-73 -246,-8 -386,27 -496,125 -87,77 -139,224 -124,348 14,119 102,238 221,301 117,62 128,63 566,63 h 398 v 225 225 l -427,-1 c -375,0 -438,-3 -513,-19 z"
+       id="path4"
+       inkscape:connector-curvature="0" />
+    <path
+       d="m 2640,1841 c -251,-54 -454,-163 -610,-328 -63,-66 -90,-105 -130,-186 -108,-218 -108,-419 0,-642 222,-459 883,-706 1465,-546 96,27 231,79 254,99 20,17 18,21 -69,217 -49,110 -91,204 -93,209 -1,5 -43,-8 -93,-27 -130,-52 -260,-71 -449,-64 -215,7 -328,48 -425,154 -70,77 -94,143 -94,268 -1,92 1,105 29,159 43,85 103,147 182,189 128,66 133,67 575,67 h 398 v 225 225 l -427,-1 c -373,0 -439,-3 -513,-18 z"
+       id="path6"
+       inkscape:connector-curvature="0" />
+    <path
+       d="m 3720,1635 v -225 h 315 315 V 765 120 h 270 270 v 645 645 h 288 288 l 148,-367 c 82,-203 198,-493 260,-645 l 111,-278 h 330 330 l 67,163 c 37,89 101,243 141,342 41,99 107,258 146,353 39,94 103,250 142,345 39,94 104,252 145,349 41,98 74,180 74,183 0,3 -123,5 -274,5 h -275 l -7,-22 c -3,-13 -41,-106 -84,-208 -42,-102 -114,-275 -160,-385 -45,-110 -114,-273 -151,-363 -38,-90 -69,-168 -69,-174 0,-30 -28,30 -155,327 -75,176 -156,367 -181,425 -25,58 -74,170 -107,250 l -62,145 -1057,3 -1058,2 z"
+       id="path8"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 7300,415 V 120 h 305 305 v 295 295 h -305 -305 z"
+       id="path10"
+       inkscape:connector-curvature="0"
+       style="fill:#ff0000" />
+  </g>
+</svg>

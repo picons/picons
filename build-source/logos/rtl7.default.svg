@@ -1,0 +1,13 @@
+<svg width="600" height="122.25" version="1.1" viewBox="0 0 600 122.24616" xmlns="http://www.w3.org/2000/svg">
+ <g fill="#ffc61e">
+  <g transform="matrix(1.0009 0 0 1.0009 0 -70.281)" stroke-width="1.1599">
+   <path d="m0 110.86v81.299h21.342v-82.282h59.905v-19.355h-60.983c-20.264 0-20.264 20.338-20.264 20.338z"/>
+   <path d="m204.23 172.81v-82.293h-21.374v81.299s0 20.338 20.317 20.338h60.983v-19.344z"/>
+   <path d="m112.79 70.219h-21.374v101.6c0 20.338 20.045 20.338 20.045 20.338h61.16v-19.344h-59.831v-62.938h59.831v-19.355h-59.831z"/>
+  </g>
+  <path d="m294.58 0.053052-11.242 24.668h56.406l-44.444 97.524h28.346l55.686-122.19h-84.752z" stroke-width="1.2314" style="font-variation-settings:normal"/>
+  <rect transform="matrix(1 0 .41469 -.90996 0 0)" x="560.97" y="-134.34" width="39.058" height="134.28" stroke-width="1.5153" style="font-variation-settings:normal"/>
+  <rect transform="matrix(1 0 .41469 -.90996 0 0)" x="496.02" y="-134.34" width="26.167" height="134.28" stroke-width="1.2403" style="font-variation-settings:normal"/>
+  <rect transform="matrix(1 0 .41469 -.90996 0 0)" x="430.97" y="-134.34" width="13.076" height="134.28" stroke-width=".87673" style="font-variation-settings:normal"/>
+ </g>
+</svg>
