@@ -14,28 +14,28 @@ Download the repository by using one of the following commands:
 sudo apt-get install git binutils pngquant imagemagick librsvg2-bin jq
 
 # Ubuntu
-git clone https://github.com/picons/picons-source.git ~/picons-source
+git clone https://gitlab.com/picons/picons.git ~/picons-source
 
 # Bash on Ubuntu on Windows
-git clone https://github.com/picons/picons-source.git /mnt/c/picons-source
+git clone https://gitlab.com/picons/picons.git /mnt/c/picons-source
 ```
 
-Next, copy the required files to the folder [build-input](https://github.com/picons/picons-source#build-input).
+Next, copy the required files to the folder [build-input](build-input).
 
 We will start the creation of the servicelist and the picons with the following commands:
 ```
 # Ubuntu
-cd ~/picons-source
+cd ~/picons
 
 # Bash on Ubuntu on Windows
-cd /mnt/c/picons-source
+cd /mnt/c/picons
 
 # Ubuntu, Bash on Ubuntu on Windows
 ./1-build-servicelist.sh
 ./2-build-picons.sh
 ```
 
-Take a look at the folder [build-output](https://github.com/picons/picons-source#build-output) for the results.
+Take a look at the folder [build-output](build-output) for the results.
 
 TIP: To automate the building process, you can also use some of the following commands:
 
@@ -115,7 +115,7 @@ Example:
 
 ## build-output
 
-This folder will contain the output from the build. Similar to the files [servicelist-enigma2-snp.txt](https://raw.githubusercontent.com/picons/picons-source/master/resources/samples/servicelist-enigma2-snp.txt) and [servicelist-enigma2-srp.txt](https://raw.githubusercontent.com/picons/picons-source/master/resources/samples/servicelist-enigma2-srp.txt). The picon binaries are also saved in this folder.
+This folder will contain the output from the build. Similar to the files [servicelist-enigma2-snp.txt](resources/samples/servicelist-enigma2-snp.txt) and [servicelist-enigma2-srp.txt](resources/samples/servicelist-enigma2-srp.txt). The picon binaries are also saved in this folder.
 
 Possible output files and folders:
 ```
