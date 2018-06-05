@@ -14,10 +14,10 @@ Download the repository by using one of the following commands:
 sudo apt-get install git binutils pngquant imagemagick librsvg2-bin jq
 
 # Ubuntu
-git clone https://gitlab.com/picons/picons.git ~/picons-source
+git clone https://gitlab.com/picons/picons.git ~/picons
 
 # Bash on Ubuntu on Windows
-git clone https://gitlab.com/picons/picons.git /mnt/c/picons-source
+git clone https://gitlab.com/picons/picons.git /mnt/c/picons
 ```
 
 Next, copy the required files to the folder [build-input](build-input).
