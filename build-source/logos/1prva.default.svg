@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" id="svg134026" version="1.1" viewBox="0 0 264.5833272454602 187.1899683122979" height="707.4896240234375" width="1000">
+ <defs id="defs134020">
+  <linearGradient id="linearGradient123714" spreadMethod="pad" gradientTransform="matrix(-6e-7,13.4590054,13.4590054,6e-7,53.9304008,8.213552499999989)" gradientUnits="userSpaceOnUse" y2="0" x2="1" y1="0" x1="0">
+   <stop id="stop123708" offset="0" style="stop-color:#ed1c24" />
+   <stop id="stop123710" offset="0.5787398424" style="stop-color:#ed1c24" />
+   <stop id="stop123712" offset="1" style="stop-color:#8b0304" />
+  </linearGradient>
+  <clipPath id="clipPath123724" clipPathUnits="userSpaceOnUse">
+   <path id="path123722" d="M 0,841.8899999999996 H 595.2759999999999 V 0 H 0 Z" />
+  </clipPath>
+  <clipPath id="clipPath123736" clipPathUnits="userSpaceOnUse">
+   <path id="path123734" d="M 49.893,8.213999999999998 H 68.924 V 21.674 H 49.893 Z" />
+  </clipPath>
+ </defs>
+ <metadata id="metadata134023">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:title></dc:title>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-122.8877727579361,97.9701909081197)" id="layer1">
+  <g id="g133980" transform="matrix(13.90516632768716,0,0,-13.90516632768716,-570.9077201287491,203.421508211234)">
+   <g id="g123692" transform="translate(52.5829,8.212899999999999)">
+    <path d="M 0,0 2.689,2.692 2.694,12.365 0.003,13.46 Z" style="fill:#ed1d24" id="path123694" />
+   </g>
+   <g id="g123696">
+    <g id="g123698">
+     <g id="g123704">
+      <g id="g123706">
+       <path d="M 52.583,8.213999999999998 55.27300000000001,10.905 55.27800000000002,20.579 52.586,21.673 Z" style="fill:url(#linearGradient123714)" id="path123716" />
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="g123718">
+    <g id="g123720" clip-path="url(#clipPath123724)">
+     <g id="g123726" transform="translate(52.5868,21.6748)">
+      <path d="M 0,0 -2.692,-2.692 V -6.480000000000003 L 2.691,-1.096 Z" style="fill:#f7941e" id="path123728" />
+     </g>
+    </g>
+   </g>
+   <g id="g123730">
+    <g id="g123732" clip-path="url(#clipPath123736)">
+     <g id="g123738" transform="translate(57.0028,15.1807)">
+      <path d="M 0,0 H 1.486 C 1.898,0 2.324,0.1640000000000001 2.324,0.7480000000000001 2.324,1.496 1.72,1.496 1.435,1.496 H 0 Z M -0.215,1.684 H 1.523 C 1.992,1.684 2.539,1.52 2.539,0.758 2.539,0.196 2.221,-0.187 1.491,-0.187 H 0 V -1.655 H -0.215 Z" style="fill:#f7941e" id="path123740" />
+     </g>
+     <g id="g123742" transform="translate(63.0448,16.8643)">
+      <path d="M 0,0 H 0.243 L 1.603,-3.067 2.964,0 H 3.207 L 1.725,-3.338999999999999 H 1.481 Z" style="fill:#f7941e" id="path123744" />
+     </g>
+     <g id="g123746" transform="translate(66.43150000000001,14.7881)">
+      <path d="M 0,0 H 1.675 L 0.8369999999999999,1.833 Z M 0.7160000000000001,2.076 H 0.9589999999999998 L 2.491,-1.263 H 2.249 L 1.758,-0.187 H -0.084 L -0.575,-1.263 H -0.8179999999999999 Z" style="fill:#f7941e" id="path123748" />
+     </g>
+     <g id="g123750" transform="translate(60.2314,15.1807)">
+      <path d="M 0,0 V 1.496 H 1.435 C 1.721,1.496 2.323,1.496 2.323,0.7480000000000001 2.323,0.1640000000000001 1.897,0 1.487,0 Z M 2.642,-1.655 1.96,-0.119 C 2.358,0.016 2.538,0.3350000000000001 2.538,0.758 2.538,1.52 1.991,1.684 1.523,1.684 H -0.215 V -1.655 H 0 V -0.187 H 1.492 C 1.58,-0.187 1.663,-0.181 1.74,-0.17 L 2.398,-1.655 Z" style="fill:#f7941e" id="path123752" />
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

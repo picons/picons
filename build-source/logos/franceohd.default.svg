@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="373.3" viewBox="0 0 600 373.30316" width="600" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <defs>
+  <linearGradient id="c" y2="502.43" gradientUnits="userSpaceOnUse" x2="508.84" gradientTransform="matrix(.61908 0 0 .61908 -19.43 -.0033043)" y1="165.44" x1="530.48">
+   <stop stop-color="#cdcdcd" offset="0"/>
+   <stop stop-color="#ededed" offset=".22542"/>
+   <stop stop-color="#fff" offset=".45084"/>
+   <stop stop-color="#bbb" offset=".47844"/>
+   <stop stop-color="#fff" offset="1"/>
+  </linearGradient>
+  <linearGradient id="d" y2="394.3" gradientUnits="userSpaceOnUse" x2="948.66" gradientTransform="matrix(.61908 0 0 .61908 -19.43 -.0033043)" y1="268.92" x1="927.83">
+   <stop stop-color="#f6f6f6" stop-opacity="0" offset="0"/>
+   <stop stop-color="#fff" offset=".39159"/>
+   <stop stop-color="#bbb" offset=".51399"/>
+   <stop stop-color="#c0c0c0" offset=".84533"/>
+   <stop stop-color="#c5c5c5" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="b" y2="568.01" gradientUnits="userSpaceOnUse" x2="3441.5" gradientTransform="matrix(.45723 0 0 -.45723 -1438.2 636.52)" y1="1360" x1="3372.2">
+   <stop stop-color="#eeaa5f" offset="0"/>
+   <stop stop-color="#ee922d" offset=".25"/>
+   <stop stop-color="#eea453" offset=".5"/>
+   <stop stop-color="#ee8410" offset="1"/>
+  </linearGradient>
+  <linearGradient id="a" y2="710.27" gradientUnits="userSpaceOnUse" x2="3467.6" gradientTransform="matrix(.45723 0 0 -.45723 -1438.2 636.52)" y1="1166.4" x1="3467.6">
+   <stop stop-color="#fff" offset=".5"/>
+   <stop stop-color="#bfbfbf" offset="1"/>
+  </linearGradient>
+ </defs>
+ <path fill="url(#c)" d="m290.81 103.48v207.32h59.97v-84.94h67.98v84.94h95.86c72.19 0 85.38-62.77 85.38-102.87v-1.57c0-40.09-13.19-102.88-85.38-102.88h-95.86v72.55h-67.98v-72.55zm200.81 46.74c28.3 0.03 47.96 3.67 47.96 56.3v1.24c0 60.29-25.56 56.29-60.86 56.22v-113.68s8.79-0.08 12.9-0.08z"/>
+ <path fill="url(#d)" d="m525.07 157.69c9.15 7.22 14.51 21.34 14.51 48.83v1.24c0 29.25-6.02 43.37-16.25 50.14h68.76c6.07-16.85 7.91-34.99 7.91-49.97v-1.57c0-14.59-1.75-32.19-7.45-48.67z"/>
+ <g stroke-width=".45723">
+  <path d="m0 316.25c0 5.03 4.025 10 8.9449 11.05l215.53 45.81c4.92 1.04 8.95-2.22 8.95-7.25v-358.42c0-5.0308-4.03-8.2904-8.95-7.2447l-215.53 45.812c-4.915 1.046-8.94 6.017-8.94 11.046z" fill="#ee8410"/>
+  <path d="m2.5148 313.13c0 5.03 4.025 10 8.9452 11.04l210.27 44.7c4.92 1.04 8.94-2.22 8.94-7.25v-349.94c0-5.0277-4.02-8.2873-8.94-7.2416l-210.27 44.695c-4.9202 1.046-8.9452 6.016-8.9452 11.046z" fill="url(#b)"/>
+  <path d="m2.0383 55.185s205.68-24.487 231.37 31.102l0.01 111.85s-1.55 67.47-33.14 77.59l-103.63 22c-0.004 0-89.846 30.07-95.667-161.1-2.7123-62.204 1.0567-81.445 1.0567-81.445z" fill="#ee8410"/>
+  <path d="m161.65 103.21c-56.61 0-100.54 23.82-100.54 105.76-0.003 70.39 34.256 102.79 98.68 102.79 33.98 0 57.74-8.92 73.63-24.28v-160.97c-16.4-15.63-40.24-23.3-71.77-23.3zm-3.35 163.11c-25.33 0-35.74-16.39-35.74-59.58 0-46.19 11.92-57.73 40.96-57.73 25.31 0 35.37 17.13 35.37 54 0 42.45-6.32 63.31-40.59 63.31z" fill="url(#a)"/>
+ </g>
+ <polyline points="3562.3 215.15 3493.6 168.39 3424.9 216.85 3347.5 216.85 3451.3 126.88 3535.9 126.88 3639.7 215.15" fill="#fff" transform="matrix(.45723 0 0 .45723 -1440.1 3.5303)"/>
+</svg>

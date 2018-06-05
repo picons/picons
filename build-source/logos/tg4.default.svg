@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" height="219.64" width="600" version="1.1">
+  <defs>
+    <linearGradient id="linearGradient3603" gradientUnits="userSpaceOnUse" gradientTransform="matrix(10.538625,86.296926,-86.296926,10.538625,113.27418,388.81711)" x1="0" x2="1" y1="0" y2="0">
+      <stop stop-color="#FFF" offset="0"/>
+      <stop stop-color="#b8bab8" offset="0.91327"/>
+      <stop stop-color="#b8bab8" offset="1"/>
+    </linearGradient>
+    <radialGradient id="radialGradient3608" gradientUnits="userSpaceOnUse" cy="0" cx="0" gradientTransform="matrix(-1.4628794e-5,323.07386,-581.9203,-2.560039e-5,172.56737,132.23975)" r="1">
+      <stop stop-color="#28292b" offset="0"/>
+      <stop stop-color="#040606" offset="1"/>
+    </radialGradient>
+  </defs>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g transform="translate(182.38667,-316.12541)">
+    <path fill="url(#radialGradient3608)" d="m197.21,535.76,220.41,0,0-219.64-220.41,0,0,219.64zm-379.59,0,363.67,0,0-219.64-363.67,0,0,219.64z"/>
+    <path fill="url(#linearGradient3603)" d="m233.01,450.62c0,3.9742,0.18286,9.0577,0.80459,13.666h88.26v49.25l33.476-10.362v-38.888h25.588v-29.014h-25.588v-90.503c-4.7787-0.79239-11.118-0.79239-15.104-0.79239-59.417,0-107.44,43.533-107.44,106.64m89.065-73.851,0,58.503-54.651,0c3.5475-29.721,26.307-53.09,54.651-58.503m-337.02,49.177c0,47.751,35.487,82.762,83.238,82.762,44.02,0,81.165-32.634,81.165-81.97v-9.5453h-73.607l-13.8,27.868h50.713c-5.949,18.944-21.419,31.866-43.947,31.866-28.538,0-48.775-21.017-48.775-50.262,0-29.501,19.286-50.884,46.556-50.884,16.384,0,28.209,8.314,34.621,17.542h41.875c-15.92-33.44-46.162-49.36-76.407-49.36-44.557,0-81.641,32.634-81.641,81.97m-135.61-79.581,0,29.002,53.261,0,0,133.34,33.39,0,0-133.34,43.923,0,14.263-29.002-144.84,0z"/>
+  </g>
+</svg>

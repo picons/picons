@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="600" width="600" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 158.75 158.75">
+ <defs>
+  <clipPath id="a" clipPathUnits="userSpaceOnUse">
+   <path d="m198.72 122.48h23.27v11.63h-23.27z"/>
+  </clipPath>
+ </defs>
+ <g transform="translate(-177.65 -181.34)">
+  <path d="m177.65 340.09h158.75v-158.75h-158.75z" fill="#da205f"/>
+  <g transform="matrix(13.645 0 0 -13.645 -2613.3 2011.3)">
+   <g clip-path="url(#a)">
+    <g transform="translate(210.82 127.32)">
+     <path d="m0 0v2.252l-1.925-2.252zm-3.825-1.271v1.283l4.225 5.072c0.036 0.036 0.072 0.073 0.181 0.073h0.872c0.121 0 0.229-0.097 0.229-0.23l0.013-4.963h0.956c0.133 0 0.23-0.097 0.23-0.218v-1.005c0-0.121-0.097-0.23-0.23-0.23h-0.956l0.012-1.489c0-0.121-0.109-0.23-0.23-0.23h-1.295c-0.121 0-0.23 0.109-0.23 0.23v1.477h-3.547c-0.133 0-0.23 0.109-0.23 0.23" fill="#eceded"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

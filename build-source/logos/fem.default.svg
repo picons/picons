@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="86.598mm" width="169.33mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 599.99998 306.84218">
+ <g transform="translate(-144.05 -380.79)">
+  <path d="m144.05 687.64h545.46v-306.85h-545.46v306.85z" fill="#219ade"/>
+  <path d="m689.51 435.36h54.54v-54.54h-54.54v54.54z" fill="#e22526"/>
+  <g fill="#fff">
+   <path d="m725.18 391.73v21.09l-16.23-21.09h-8.51v32.72h7.96v-21.03l16.28 21.03h8.48v-8.21-24.51h-7.98z"/>
+   <path d="m323.9 457.54h-101.95v153.42h33.99v-60.53h59.75v-30.32h-59.75v-32.25h70.16v-30.32h-2.2z"/>
+   <path d="m445.73 457.54h-101.95v153.42h104.18v-30.32h-70.19v-31.85h59.77v-30.32h-59.77v-30.61h70.19v-30.32h-2.23z"/>
+   <path d="m609.37 457.54h-30.52s-34.37 70.42-37.96 77.74c-3.58-7.32-38.16-77.74-38.16-77.74h-32.72v153.42h34v-79.94c6.13 11.89 25.54 49.59 25.54 49.59h22.71s19.21-37.55 25.35-49.56v79.91h33.99v-153.42h-2.23z"/>
+  </g>
+ </g>
+</svg>

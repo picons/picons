@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="Layer_1" width="300" height="300" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" space="preserve" version="1.1" viewBox="0 0 300 300" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+ <link id="dark-mode" href="" rel="stylesheet" type="text/css"/>
+ <style id="dark-mode-custom-style" type="text/css"/>
+ <metadata id="metadata13">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="g5280" transform="translate(-1,-1)">
+  <rect id="rect3007" x="1" y="1" width="300" height="300" fill="#76bd1d"/>
+  <g id="g2990" transform="translate(1 67.516)">
+   <g id="rect2400_1_">
+    <polygon id="polygon5" points="259.35 50.072 259.35 127.89 208.45 127.89 208.45 50.066 168.13 50.066 168.13 39.073 299.7 39.073 299.7 50.072"/>
+   </g>
+   <path id="path7" d="m154.68 89.459 0.014-8e-3c10.488-3.263 18.104-13.045 18.104-24.608 0-14.231-11.535-25.767-25.766-25.767l0.094-3e-3h-108.12l4e-3 88.822h50.919v-37.874h14.823l26.542 37.874 53.146-5e-3zm-48.202-9.553v0.011h-16.542v-30.724h16.542v-7e-3c8.482 0 15.36 6.876 15.36 15.359 0 8.484-6.878 15.361-15.36 15.361z"/>
+  </g>
+ </g>
+</svg>

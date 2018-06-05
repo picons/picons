@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="640"
+   height="640"
+   viewBox="0 0 512 512"
+   id="svg3013">
+  <metadata
+     id="metadata3029">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3027" />
+  <path
+     d="m -156.68964,194.67162 a 250.15359,239.15784 0 1 1 -500.30719,0 250.15359,239.15784 0 1 1 500.30719,0 z"
+     transform="matrix(1.0233713,0,0,1.0704228,672.3517,47.619066)"
+     id="path3031"
+     style="fill:#5eb643;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+  <g
+     transform="translate(-3.2249939,0.35789479)"
+     id="#ffffffff"
+     style="fill:#ffffff">
+    <path
+       d="m 245.4,133.56 c 5.72,-1.6 11.68,-1.83 17.58,-1.87 36.76,-0.07 73.51,0.07 110.27,0.1 -3.58,15.69 -12.47,30.29 -25.38,40.02 -8.82,6.51 -19.98,8.87 -30.77,9.03 -36.01,0.27 -72.02,0.13 -108.03,0.1 2.23,-7.82 4.73,-15.57 7.79,-23.11 4.97,-12 15.96,-21.18 28.54,-24.27 z"
+       id="path3016"
+       style="fill:#ffffff" />
+    <path
+       d="m 200.73,205.6 c 5.7,-1 11.51,-0.48 17.26,-0.6 13.16,0.09 26.32,-0.11 39.47,0.41 -1.49,7.89 -4.68,15.31 -6.94,22.98 -1.89,6.62 -4.84,12.97 -5.54,19.88 19.02,-0.01 38.05,-0.08 57.08,-0.03 2.13,0.02 4.26,0.23 6.38,0.49 -4.13,14.15 -9.48,27.9 -14.13,41.88 -17.1,0.58 -34.21,0.08 -51.32,0.27 -4.19,0.06 -8.39,-0.12 -12.55,0.51 -9.79,29.24 -18.69,58.78 -28.55,88 -18.89,0.39 -37.79,0.17 -56.69,0.08 5.79,-19.67 12.27,-39.13 18.54,-58.66 12.35,-38.4 24.63,-76.81 36.99,-115.21 z"
+       id="path3018"
+       style="fill:#ffffff" />
+    <path
+       d="m 306.43,320.59 c 9.99,-2.45 21.36,-0.2 28.9,7.03 11.78,10.55 12.8,31 1.56,42.3 -10.84,11.94 -31.46,12.35 -43.1,1.36 -10.94,-10.1 -12.01,-28.64 -2.89,-40.26 3.94,-4.96 9.34,-8.87 15.53,-10.43 z"
+       id="path3020"
+       style="fill:#ffffff" />
+  </g>
+</svg>
