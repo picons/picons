@@ -1,3 +1,7 @@
+rtp14k=rtp14k
+rtp1hd=rtp1hd
+sichd=sichd
+kuriakostv=kuriakostv
 A50_5_1_E082E09=tv4-wapadedrud
 7989_2C7_600_E080000=tv4-wapadedrud
 CEE_3_1_E082F62=film4
@@ -5137,7 +5141,6 @@ rtnbnj=rtnbnj
 rtp1=rtp1
 rtp2=rtp2
 rtp3=rtp3
-rtp4k=rtp4k
 rtpacores=rtpacores
 rtpafrica=rtpafrica
 rtpi=rtpinternacional
