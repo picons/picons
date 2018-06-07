@@ -20,10 +20,3 @@
 *.conf text eol=lf
 *.sh text eol=lf
 *.index text eol=lf
-
-##############
-### Binary ###
-##############
-
-*.png binary
-*.svg binary
