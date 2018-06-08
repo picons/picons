@@ -137,7 +137,7 @@ mkdir $binaries
 ##############################
 if [[ -d $location/.git ]] && which git &> /dev/null; then
     cd $location
-    hash=$(git rev-parse --short HEAD)
+    hash=$(git rev-parse --short=8 HEAD)
     version=$hash
     timestamp=$(date --date=@$(git show -s --format=%ct $hash) +'%Y%m%d%H%M.%S')
 else
