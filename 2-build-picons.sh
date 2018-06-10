@@ -248,10 +248,10 @@ grep -v -e '^#' -e '^$' $backgroundsconf | while read lines ; do
     mv $temp/package/picon $temp/package/$packagename
 
     if [[ $OSTYPE != "msys" ]]; then
-        tar --dereference --owner=root --group=root -cf - --directory=$temp/package $packagename --exclude=logos | $compressor 2>> $logfile > $binaries/$packagename.hardlink.tar.$ext
+        tar --dereference --owner=root --group=root -cf - --exclude=logos --directory=$temp/package $packagename | $compressor 2>> $logfile > $binaries/$packagename.hardlink.tar.$ext
         tar --owner=root --group=root -cf - --directory=$temp/package $packagename | $compressor 2>> $logfile > $binaries/$packagename.symlink.tar.$ext
     else
-        tar --dereference --owner=root --group=root -cf - --directory=$temp/package $packagename --exclude=logos | $compressor 2>> $logfile > $binaries/$packagename.nolink.tar.$ext
+        tar --dereference --owner=root --group=root -cf - --exclude=logos --directory=$temp/package $packagename | $compressor 2>> $logfile > $binaries/$packagename.nolink.tar.$ext
         rm -rf $temp/package/$packagename/*.png
         sed -e "s|$temp/package/picon/||g" $temp/create-symlinks.sh > $temp/package/$packagename/create-symlinks.sh
         chmod 755 $temp/package/$packagename/create-symlinks.sh
