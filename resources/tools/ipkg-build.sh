@@ -223,7 +223,7 @@ tmp_dir=$dest_dir/IPKG_BUILD.$$
 mkdir $tmp_dir
 
 echo $CONTROL > $tmp_dir/tarX
-( cd $pkg_dir && tar $ogargs -czf $tmp_dir/data.tar.gz . -X $tmp_dir/tarX )
+( cd $pkg_dir && tar $ogargs -czf $tmp_dir/data.tar.gz -X $tmp_dir/tarX . )
 ( cd $pkg_dir/$CONTROL && tar $ogargs -czf $tmp_dir/control.tar.gz . )
 rm $tmp_dir/tarX
 
