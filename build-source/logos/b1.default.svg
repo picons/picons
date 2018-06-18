@@ -1,0 +1,8 @@
+<svg width="200mm" height="97.454mm" version="1.1" viewBox="0 0 200 97.454" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(189.71 -167.71)">
+  <path d="m-189.71 167.71h97.862v97.454h-97.862z" fill="#ce2127" fill-rule="evenodd"/>
+  <path d="m-87.567 167.71h97.862v97.454h-97.862z" fill="#ce2127" fill-rule="evenodd"/>
+  <path d="m-172.87 176.98v40.638c-0.1617 1.3019 9e-3 2.6124 0 3.9242 0 18.508 15.004 33.51 33.511 33.51 18.508 0 33.51-15.004 33.51-33.51-1.3e-4 -18.508-15.004-33.511-33.51-33.511-3.8556 9e-3 -7.6803 0.68759-11.306 1.9994v-13.051zm33.525 31.842a12.336 12.336 0 0 1 12.336 12.336 12.336 12.336 0 0 1-12.336 12.336 12.336 12.336 0 0 1-12.336-12.336 12.336 12.336 0 0 1 12.336-12.336z" fill="#fff" opacity=".99" stroke-width="1.0321" style="paint-order:stroke markers fill"/>
+  <path d="m-47.202 193.54 20.903-12.899v71.266h-20.903z" fill="#fff" opacity=".99" stroke-width="1.0212" style="paint-order:stroke markers fill"/>
+ </g>
+</svg>
