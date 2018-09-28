@@ -1,6 +1,9 @@
 <svg width="211.67mm" height="88.591mm" version="1.1" viewBox="0 0 211.67 88.591" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(-65.354 -187.06)">
-  <text transform="scale(1.0115 .98864)" x="244.46515" y="224.69301" fill="#ebeaea" font-family="sans-serif" font-size="20.09px" letter-spacing="0px" stroke-width=".28756" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="244.46515" y="224.69301" fill="#ebeaea" stroke-width=".28756">HD</tspan></text>
+  <g transform="scale(1.0115 .98864)" fill="#ebeaea" stroke-width=".28756" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="HD">
+   <path d="m246.44 210.05h1.9815v6.0035h7.2002v-6.0035h1.9815v14.646h-1.9815v-6.9746h-7.2002v6.9746h-1.9815z"/>
+   <path d="m263.53 211.68v11.389h2.3935q3.0312 0 4.4339-1.3733 1.4126-1.3733 1.4126-4.3358 0-2.9429-1.4126-4.3064-1.4028-1.3733-4.4339-1.3733zm-1.9815-1.6284h4.071q4.2574 0 6.2487 1.7755 1.9913 1.7657 1.9913 5.5326 0 3.7865-2.0012 5.562-2.0012 1.7755-6.2389 1.7755h-4.071z"/>
+  </g>
  </g>
  <g transform="translate(75.857 29.431)">
   <g transform="matrix(3.8031 0 0 3.6132 -81.143 -40.238)" fill="#ebeaea" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="arta">
