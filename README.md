@@ -79,6 +79,8 @@ TVH_PORT="9981"
 TVH_USER=""
 # tvheadend password of above user
 TVH_PASS=""
+# tvheadend http_root setting
+TVH_HTTP_ROOT=""
 ```
 
 Only the values which are different from the default values are required. For most people this will be a file with a single host name or host IP address.
