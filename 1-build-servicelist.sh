@@ -153,6 +153,7 @@ if [[ -f $location/build-input/tvheadend.serverconf ]]; then
     TVH_PORT="9981"
     TVH_USER=""
     TVH_PASS=""
+    TVH_HTTP_ROOT=""
 
     # ...replace default credentials by those configured in file
     source $location/build-input/tvheadend.serverconf
@@ -163,7 +164,10 @@ if [[ -f $location/build-input/tvheadend.serverconf ]]; then
 
     # ...the server url
     [[ -n $TVH_USER ]] && url="http://$TVH_USER:$TVH_PASS@$TVH_HOST:$TVH_PORT" || url="http://$TVH_HOST:$TVH_PORT"
-  
+
+    # ...check if we need to append a base url to the tvheadend url
+    [[ -n $TVH_HTTP_ROOT ]] && url="$url/$TVH_HTTP_ROOT"
+
     # ...reading the number of channel from the server
     channelcount=$(curl -s $url'/api/channel/grid?start=0&limit=1' | jq -r '.total' )
 
