@@ -1,0 +1,28 @@
+<svg width="211.67mm" height="192.7mm" version="1.1" viewBox="0 0 211.67 192.7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="b" x1="-169.58" x2="-171.35" y1="258.45" y2="-.089284" gradientTransform="matrix(.7169 0 0 .7169 326.53 150.72)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#dd4c41" offset="0"/>
+   <stop stop-color="#f6cecb" offset="1"/>
+  </linearGradient>
+  <linearGradient id="a" x1="-169.58" x2="-171.35" y1="258.45" y2="-.089284" gradientTransform="matrix(.69413 0 0 .5335 321.57 191.75)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#dd4c41" offset="0"/>
+   <stop stop-color="#bb0d00" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g transform="translate(-99.03 -146.98)">
+  <rect x="102.17" y="150.11" width="205.39" height="186.43" rx="34.142" ry="28.723" fill="url(#b)" fill-rule="evenodd" stroke="#d21405" stroke-width="6.2721"/>
+  <rect x="104.33" y="191.3" width="201.06" height="141.45" rx="33.058" ry="25.408" fill="url(#a)" fill-rule="evenodd"/>
+  <g>
+   <g transform="matrix(.67441 0 0 .76206 326.53 150.72)" fill="#fff" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="7">
+    <path d="m-250.16 26.448v32.851h82.306c-31.192 30.729-49.894 68.839-53.51 106.23l47.835 0.35558c1.6071-38.964 22.384-82.951 59.717-112.38l0.80357-27.06z" fill="#fff" stroke-width="2.9778"/>
+   </g>
+   <g transform="matrix(.7784 0 0 .66025 326.53 150.72)" fill="#fff" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="NEWS">
+    <path d="m-222.35 235.39v-40.885h10.49l12.516 18.118 0.1192 0.4172v-18.536h11.562v40.885h-10.728l-12.278-17.701-0.1788-0.4172v18.118z" stroke-width=".85308"/>
+    <path d="m-184.16 235.39v-40.885h30.694l-1.192 9.4168h-17.224v5.96h16.569v9.1188h-16.569v6.6156h17.224l1.192 9.7744z" stroke-width=".85308"/>
+    <path d="m-153.79 194.51h10.722l4.7929 22.708h0.19765l4.8423-22.708h10.623l4.7435 22.708h0.19765l4.7929-22.708h9.734l-9.1905 40.885h-11.76l-4.1011-19.608h-0.29646l-4.1011 19.608h-11.957z" stroke-width=".77675"/>
+    <path d="m-85.738 203.26q-4.222 0-4.222 2.3567 0 1.4028 1.3734 2.1322 1.4243 0.67335 3.5099 1.2345l4.5272 1.1222q5.5446 1.4028 8.088 5.1623 1.3734 2.1322 1.3734 5.6673 0 3.5912-1.1191 6.1162-1.1191 2.525-3.1538 4.1523-3.9168 3.1423-11.242 3.1423-6.3076 0-10.377-2.9739-4.5272-3.3667-4.5272-9.3707v-0.67334q0-0.33668 0.0509-0.67334h9.8684q-0.05087 0.22445-0.05087 0.78555 0 0.61724 0.20347 1.3467 0.25434 0.72945 0.76302 1.2906 1.2208 1.2345 3.2555 1.2345 2.0347 0 3.0012-0.16833 0.96649-0.22445 1.4752-0.56112 0.86476-0.56113 0.86476-1.7956 0-1.2345-1.3734-1.9078-1.3734-0.67335-3.459-1.1784-2.0856-0.50501-4.5272-1.1222-2.3908-0.67334-4.4764-1.9639-4.8325-3.0862-4.8325-9.6512 0-5.8356 4.3746-9.2024 3.9677-3.03 10.428-3.03 6.2059 0 10.021 2.8056 4.1712 3.1423 4.1712 8.9779v0.67334h-9.7666v-0.22444q0-1.4589-0.96649-2.5812-0.96649-1.1222-3.2555-1.1222z" stroke-width=".76471"/>
+   </g>
+   <text transform="scale(1.0289 .97195)" x="162.0753" y="331.15076" fill="#ffffff" font-family="'Source Sans Pro'" font-size="17.553px" font-weight="bold" letter-spacing="0px" stroke-width=".25124" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="162.0753" y="331.15076" fill="#ffffff" font-family="'Source Sans Pro'" font-weight="bold" stroke-width=".25124">SMASH TV</tspan></text>
+  </g>
+ </g>
+</svg>
