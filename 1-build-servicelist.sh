@@ -105,45 +105,6 @@ else
     echo "Enigma2: $location/build-input/enigma2 not found"
 fi
 
-########################################################
-## TvHeadend servicelist creation (from config files) ##
-########################################################
-if [[ -d $location/build-input/tvheadend ]]; then
-    file=$location/build-output/servicelist-tvheadend-filemode-$style.txt
-    tempfile=$(mktemp --suffix=.servicelist)
-    channelcount=$(find "$location/build-input/tvheadend/channel/config/" -maxdepth 1 -type f | wc -l)
-
-    for channelfile in $location/build-input/tvheadend/channel/config/* ; do
-        ((currentline++))
-        echo -ne "TvHeadend (file-mode): Converting channel: $currentline/$channelcount"\\r
-
-        serviceref=$(grep -o '1_0_.*_.*_.*_.*_.*_0_0_0' "$channelfile")
-        serviceref_id=$(sed -e 's/^[^_]*_0_[^_]*_//g' -e 's/_0_0_0$//g' <<< "$serviceref")
-        unique_id=${serviceref_id%????}
-        tvhservice=$(grep -A1 'services' "$channelfile" | sed -n "2p" | sed -e 's/"//g' -e 's/,//g')
-        channelname=$(grep 'svcname' $(find "$location/build-input/tvheadend" -type f -name $tvhservice) | sed -e 's/.*"svcname": "//g' -e 's/",//g' | iconv -f utf-8 -t ascii//translit 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/^//g')
-
-        logo_srp=$(grep -i -m 1 "^$unique_id" <<< "$index" | sed -n -e 's/.*=//p')
-        if [[ -z $logo_srp ]]; then logo_srp="--------"; fi
-
-        if [[ $style = "snp" ]]; then
-            snpname=$(sed -e 's/&/and/g' -e 's/*/star/g' -e 's/+/plus/g' -e 's/\(.*\)/\L\1/g' -e 's/[^a-z0-9]//g' <<< "$channelname")
-            if [[ -z $snpname ]]; then snpname="--------"; fi
-            logo_snp=$(grep -i -m 1 "^$snpname=" <<< "$index" | sed -n -e 's/.*=//p')
-            if [[ -z $logo_snp ]]; then logo_snp="--------"; fi
-            echo -e "$serviceref\t$channelname\t$serviceref_id=$logo_srp\t$snpname=$logo_snp" >> $tempfile
-        else
-            echo -e "$serviceref\t$channelname\t$serviceref_id=$logo_srp" >> $tempfile
-        fi
-    done
-
-    sort -t $'\t' -k 2,2 "$tempfile" | sed -e 's/\t/^|/g' | column -t -s $'^' | sed -e 's/|/  |  /g' > $file
-    rm $tempfile
-    echo "TvHeadend (file-mode): Exported to $file"
-else
-    echo "TvHeadend (file-mode): $location/build-input/tvheadend not found"
-fi
-
 ######################################################
 ## TvHeadend servicelist creation (from server API) ##
 ######################################################
