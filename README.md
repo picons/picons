@@ -60,15 +60,7 @@ The idea behind SNP is that a simplified name derived from the channel name is u
 Copy your `enigma2` folder, probably located in `/etc` on your box into this folder.
 
 ###### TvHeadend servicelist creation
-TvHeadend users, have two options:
-
-1. Use the server generated configuration files by copying your `tvheadend` configuration folder, probably located in `/home/hts/.hts` on your server into this folder.
-
-2. Use the servers API and directly ask the server about all channels by creating a file called `tvheadend.serverconf`.
-
-The first option has the advantage to work even without a running server. The advantage of the second option is that you don't have to copy files around, automatically you'll have the most accurate channel list and it's about 20% faster.
-
-The file `tvheadend.serverconf` can contain the following values:
+Use the servers API and directly ask the server about all channels by creating a file called `tvheadend.serverconf`. The file can contain the following values:
 
 ```sh
 # hostname or ip address of tvheadend server (default: "localhost")
