@@ -130,7 +130,7 @@ if [[ -f $location/build-input/tvheadend.serverconf ]]; then
     [[ -n $TVH_HTTP_ROOT ]] && url="$url/$TVH_HTTP_ROOT"
 
     # ...reading the number of channel from the server
-    channelcount=$(curl -s $url'/api/channel/grid?start=0&limit=1' | jq -r '.total' )
+    channelcount=$(curl -s --anyauth $url'/api/channel/grid?start=0&limit=1' | jq -r '.total' )
 
     if [[ -n $channelcount ]]; then
         # looping trough the given number of channels and fetch one by one to parse the json object
@@ -138,7 +138,7 @@ if [[ -f $location/build-input/tvheadend.serverconf ]]; then
             echo -ne "TvHeadend (server-mode): Converting channel: $channel/$channelcount"\\r
 
             # fetching next channel
-            rx_buf=$(curl -s $url'/api/channel/grid?start='$channel'&limit=1' )
+            rx_buf=$(curl -s --anyauth $url'/api/channel/grid?start='$channel'&limit=1' )
 
             # extracting service reference and skip the rest if nothing usable found
             serviceref=$(echo $rx_buf |  jq -r '.entries[].icon'  | grep -o '1_0_.*_.*_.*_.*_.*_0_0_0')
