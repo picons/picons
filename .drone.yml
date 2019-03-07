@@ -12,7 +12,7 @@ steps:
   pull: always
   commands:
     - ./resources/tools/check-index.sh ./build-source srp
-    - ./resources/tools/check-index.sh ./build-source srp
+    - ./resources/tools/check-index.sh ./build-source snp
     - ./resources/tools/check-logos.sh ./build-source/logos
 
 - name: build
