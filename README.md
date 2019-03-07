@@ -141,3 +141,8 @@ This is where all the channel logos go and how they are linked to the serviceref
 ### ~/picons/resources
 
 Some additional files.
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/picons/picons/badge.svg?style=beer-square)](https://beerpay.io/picons/picons)  [![Beerpay](https://beerpay.io/picons/picons/make-wish.svg?style=flat-square)](https://beerpay.io/picons/picons?focus=wish)
