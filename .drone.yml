@@ -28,6 +28,8 @@ steps:
   settings:
     api_key:
       from_secret: github_token
-    files: build-output/*
+    files:
+      - build-output/binaries-srp/*
+      - build-output/binaries-snp/*
   when:
     event: tag
