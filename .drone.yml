@@ -7,8 +7,27 @@ trigger:
       - pull_request
 
 steps:
+- name: checks
+  image: picons/picons
+  pull: always
+  commands:
+    - ./resources/tools/check-index.sh ./build-source srp
+    - ./resources/tools/check-index.sh ./build-source srp
+    - ./resources/tools/check-logos.sh ./build-source/logos
+
 - name: build
   image: picons/picons
   pull: always
   commands:
     - ./2-build-picons.sh snp-full
+  when:
+    event: tag
+
+- name: publish
+  image: plugins/github-release
+  settings:
+    api_key:
+      from_secret: github_token
+    files: build-output/*
+  when:
+    event: tag
