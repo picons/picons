@@ -29,7 +29,7 @@ steps:
     api_key:
       from_secret: github_token
     files:
-      - build-output/binaries-srp/*
-      - build-output/binaries-snp/*
+      - build-output/binaries-srp-full/*
+      - build-output/binaries-snp-full/*
   when:
     event: tag
