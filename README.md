@@ -15,10 +15,10 @@ Download the repository by using one of the following commands:
 sudo apt-get install git binutils pngquant imagemagick librsvg2-bin jq
 
 # Ubuntu
-git clone https://gitlab.com/picons/picons.git ~/picons
+git clone https://github.com/picons/picons.git ~/picons
 
 # Bash on Ubuntu on Windows
-git clone https://gitlab.com/picons/picons.git /mnt/c/picons
+git clone https://github.com/picons/picons.git /mnt/c/picons
 ```
 
 Next, copy the required files to the folder [build-input](build-input).
@@ -56,7 +56,7 @@ The idea behind SNP is that a simplified name derived from the channel name is u
 
 ## FOLDER OVERVIEW
 
-### build-input
+### ~/picons/build-input
 
 #### Enigma2 servicelist creation
 
@@ -115,7 +115,7 @@ Example:
 # 800x450;800x450;light;transparent
 ```
 
-### build-output
+### ~/picons/build-output
 
 This folder will contain the output from the build. Similar to the files [servicelist-enigma2-snp.txt](resources/samples/servicelist-enigma2-snp.txt) and [servicelist-enigma2-srp.txt](resources/samples/servicelist-enigma2-srp.txt). The picon binaries are also saved in this folder.
 
@@ -134,10 +134,10 @@ servicelist-vdr-snp.txt
 servicelist-vdr-srp.txt
 ```
 
-### build-source
+### ~/picons/build-source
 
 This is where all the channel logos go and how they are linked to the serviceref or a simplified version of the name. Backgrounds and the default `backgrounds.conf` file can also be found in this directory.
 
-### resources
+### ~/picons/resources
 
 Some additional files.
