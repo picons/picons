@@ -1,0 +1,14 @@
+kind: pipeline
+name: default
+
+trigger:
+  event:
+    exclude:
+      - pull_request
+
+steps:
+- name: build
+  image: picons/picons
+  pull: always
+  commands:
+    - ./2-build-picons.sh snp-full
