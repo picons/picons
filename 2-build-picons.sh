@@ -171,7 +171,7 @@ grep -v -e '^#' -e '^$' "$backgroundsconf" | while read -r lines ; do
 
     OLDIFS=$IFS
     IFS=";"
-    line=("$lines")
+    line=($lines)
     IFS=$OLDIFS
 
     resolution=${line[0]}
