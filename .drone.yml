@@ -19,6 +19,7 @@ steps:
   image: picons/picons
   pull: always
   commands:
+    - ./2-build-picons.sh srp-full
     - ./2-build-picons.sh snp-full
   when:
     event: tag
