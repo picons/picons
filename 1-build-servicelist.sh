@@ -6,7 +6,7 @@
 location=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 logfile=$(mktemp --suffix=.servicelist.log)
 
-echo -e "\nLog file located at: $logfile\n"
+echo "$(date +'%H:%M:%S') - INFO: Log file located at: $logfile"
 
 ########################################################
 ## Search for required commands and exit if not found ##
@@ -23,8 +23,7 @@ for i in ${commands[@]}; do
     fi
 done
 if [[ ! -z $missingcommands ]]; then
-    echo "ERROR: The following commands are not found: $missingcommands" >> $logfile
-    echo "TERMINATED: Read the log file!"
+    echo "$(date +'%H:%M:%S') - ERROR: The following commands are not found: $missingcommands"
     exit 1
 fi
 
@@ -32,8 +31,7 @@ fi
 ## Check path for spaces ##
 ###########################
 if [[ $location == *" "* ]]; then
-    echo "ERROR: The path contains spaces, please move the repository to a path without spaces!" >> $logfile
-    echo "TERMINATED: Read the log file!"
+    echo "$(date +'%H:%M:%S') - ERROR: The path contains spaces, please move the repository to a path without spaces!"
     exit 1
 fi
 
@@ -56,8 +54,7 @@ fi
 ## Check if style is valid ##
 #############################
 if [[ ! $style = "srp" ]] && [[ ! $style = "snp" ]]; then
-    echo "ERROR: Unknown style!" >> $logfile
-    echo "TERMINATED: Read the log file!"
+    echo "$(date +'%H:%M:%S') - ERROR: Unknown style!"
     exit 1
 fi
 
@@ -77,7 +74,9 @@ if [[ -d $location/build-input/enigma2 ]]; then
 
     cat $location/build-input/enigma2/*bouquet.* | grep -o '#SERVICE .*:0:.*:.*:.*:.*:.*:0:0:0' | sed -e 's/#SERVICE //g' -e 's/.*/\U&\E/' -e 's/:/_/g' | sort -u | while read serviceref ; do
         ((currentline++))
-        echo -ne "Enigma2: Converting channel: $currentline/$channelcount"\\r
+        if [[ $- == *i* ]]; then
+            echo -ne "Enigma2: Converting channel: $currentline/$channelcount"\\r
+        fi
 
         serviceref_id=$(sed -e 's/^[^_]*_0_[^_]*_//g' -e 's/_0_0_0$//g' <<< "$serviceref")
         unique_id=${serviceref_id%????}
@@ -100,9 +99,9 @@ if [[ -d $location/build-input/enigma2 ]]; then
 
     sort -t $'\t' -k 2,2 "$tempfile" | sed -e 's/\t/^|/g' | column -t -s $'^' | sed -e 's/|/  |  /g' > $file
     rm $tempfile
-    echo "Enigma2: Exported to $file"
+    echo "$(date +'%H:%M:%S') - INFO: Enigma2: Exported to $file"
 else
-    echo "Enigma2: $location/build-input/enigma2 not found"
+    echo "$(date +'%H:%M:%S') - ERROR: Enigma2: $location/build-input/enigma2 not found"
 fi
 
 ######################################################
@@ -135,7 +134,9 @@ if [[ -f $location/build-input/tvheadend.serverconf ]]; then
     if [[ -n $channelcount ]]; then
         # looping trough the given number of channels and fetch one by one to parse the json object
         for ((channel=0; channel<$channelcount; channel++)); do
-            echo -ne "TvHeadend (server-mode): Converting channel: $channel/$channelcount"\\r
+            if [[ $- == *i* ]]; then
+                echo -ne "TvHeadend (server-mode): Converting channel: $channel/$channelcount"\\r
+            fi
 
             # fetching next channel
             rx_buf=$(curl -s --anyauth $url'/api/channel/grid?start='$channel'&limit=1' )
@@ -167,12 +168,12 @@ if [[ -f $location/build-input/tvheadend.serverconf ]]; then
 
         sort -t $'\t' -k 2,2 "$tempfile" | sed -e 's/\t/^|/g' | column -t -s $'^' | sed -e 's/|/  |  /g' > $file
         rm $tempfile
-        echo "TvHeadend (server-mode): Exported to $file"
+        echo "$(date +'%H:%M:%S') - INFO: TvHeadend (server-mode): Exported to $file"
     else
-        echo "TvHeadend (server-mode): \"${TVH_HOST}\" is not reachable or has no channels."
+        echo "$(date +'%H:%M:%S') - ERROR: TvHeadend (server-mode): \"${TVH_HOST}\" is not reachable or has no channels."
     fi
 else
-    echo "TvHeadend (server-mode): $location/build-input/tvheadend.serverconf not found"
+    echo "$(date +'%H:%M:%S') - ERROR: TvHeadend (server-mode): $location/build-input/tvheadend.serverconf not found"
 fi
 
 ##############################
@@ -185,7 +186,9 @@ if [[ -f $location/build-input/channels.conf ]]; then
 
     grep -o '.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:0' $location/build-input/channels.conf | sort -u | while read channel ; do
         ((currentline++))
-        echo -ne "VDR: Converting channel: $currentline/$channelcount"\\r
+        if [[ $- == *i* ]]; then
+            echo -ne "VDR: Converting channel: $currentline/$channelcount"\\r
+        fi
 
         IFS=":"
         vdrchannel=($channel)
@@ -229,9 +232,9 @@ if [[ -f $location/build-input/channels.conf ]]; then
 
     sort -t $'\t' -k 2,2 "$tempfile" | sed -e 's/\t/^|/g' | column -t -s $'^' | sed -e 's/|/  |  /g' > $file
     rm $tempfile
-    echo "VDR: Exported to $file"
+    echo "$(date +'%H:%M:%S') - INFO: VDR: Exported to $file"
 else
-    echo "VDR: $location/build-input/channels.conf not found"
+    echo "$(date +'%H:%M:%S') - ERROR: VDR: $location/build-input/channels.conf not found"
 fi
 
 exit 0

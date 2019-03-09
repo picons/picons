@@ -7,17 +7,13 @@ location=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 temp=$(mktemp -d --suffix=.picons)
 logfile=$(mktemp --suffix=.picons.log)
 
-path_inkscape=$(find /c/PROGRA~1/Inkscape* -maxdepth 0 -type d 2>>/dev/null); if [[ -n $path_inkscape ]]; then export PATH=$PATH:$path_inkscape; fi
-path_imagemagick=$(find /c/PROGRA~1/ImageMagick* -maxdepth 0 -type d 2>>/dev/null); if [[ -n $path_imagemagick ]]; then export PATH=$PATH:$path_imagemagick; fi
-
-echo -e "\nLog file located at: $logfile\n"
+echo "$(date +'%H:%M:%S') - INFO: Log file located at: $logfile"
 
 ###########################
 ## Check path for spaces ##
 ###########################
 if [[ $location == *" "* ]]; then
-    echo "ERROR: The path contains spaces, please move the repository to a path without spaces!" >> $logfile
-    echo "TERMINATED: Read the log file!"
+    echo "$(date +'%H:%M:%S') - ERROR: The path contains spaces, please move the repository to a path without spaces!"
     exit 1
 fi
 
@@ -31,67 +27,59 @@ for i in ${commands[@]}; do
     fi
 done
 if [[ -z $missingcommands ]]; then
-    echo "INFO: All required commands are found!" >> $logfile
+    echo "$(date +'%H:%M:%S') - INFO: All required commands are found!"
 else
-    echo "ERROR: The following commands are not found: $missingcommands" >> $logfile
-    echo "TERMINATED: Read the log file!"
+    echo "$(date +'%H:%M:%S') - ERROR: The following commands are not found: $missingcommands"
     exit 1
 fi
 
 if which ar &> /dev/null; then
     skipipk="false"
-    echo "INFO: Creation of ipk files enabled!" >> $logfile
+    echo "$(date +'%H:%M:%S') - INFO: Creation of ipk files enabled!"
 else
     skipipk="true"
-    echo "WARNING: Creation of ipk files disabled! Try installing: ar (found in package: binutils)" >> $logfile
+    echo "$(date +'%H:%M:%S') - WARNING: Creation of ipk files disabled! Try installing: ar (found in package: binutils)"
 fi
 
 if which xz &> /dev/null; then
     compressor="xz -9 --extreme --memlimit=40%" ; ext="xz"
-    echo "INFO: Using xz as compression!" >> $logfile
+    echo "$(date +'%H:%M:%S') - INFO: Using xz as compression!"
 elif which bzip2 &> /dev/null; then
     compressor="bzip2 -9" ; ext="bz2"
-    echo "INFO: Using bzip2 as compression!" >> $logfile
+    echo "$(date +'%H:%M:%S') - INFO: Using bzip2 as compression!"
 else
-    echo "ERROR: No archiver has been found! Try installing: xz (or: bzip2)" >> $logfile
-    echo "TERMINATED: Read the log file!"
+    echo "$(date +'%H:%M:%S') - ERROR: No archiver has been found! Try installing: xz (or: bzip2)"
     exit 1
 fi
 
 if which pngquant &> /dev/null; then
     pngquant="pngquant"
-    echo "INFO: Image compression enabled!" >> $logfile
-else
+    echo "$(date +'%H:%M:%S') - INFO: Image compression enabled!"
     pngquant="cat"
-    echo "WARNING: Image compression disabled! Try installing: pngquant" >> $logfile
+    echo "$(date +'%H:%M:%S') - WARNING: Image compression disabled! Try installing: pngquant"
 fi
 
 if which convert &> /dev/null; then
-    echo "INFO: ImageMagick was found!" >> $logfile
+    echo "$(date +'%H:%M:%S') - INFO: ImageMagick was found!"
 else
-    echo "ERROR: ImageMagick was not found! Try installing: imagemagick" >> $logfile
-    echo "TERMINATED: Read the log file!"
+    echo "$(date +'%H:%M:%S') - ERROR: ImageMagick was not found! Try installing: imagemagick"
     exit 1
 fi
 
 if [[ -f $location/build-input/svgconverter.conf ]]; then
     svgconverterconf=$location/build-input/svgconverter.conf
 else
-    echo "$(date +'%H:%M:%S') - No \"svgconverter.conf\" file found in \"build-input\", using default file!"
+    echo "$(date +'%H:%M:%S') - INFO: No \"svgconverter.conf\" file found in \"build-input\", using default file!"
     svgconverterconf=$location/build-source/config/svgconverter.conf
 fi
 if which inkscape &> /dev/null && [[ $(grep -v -e '^#' -e '^$' $svgconverterconf) = "inkscape" ]]; then
     svgconverter="inkscape -w 850 --without-gui --export-area-drawing --export-png="
-    echo "INFO: Using inkscape as svg converter!" >> $logfile
+    echo "$(date +'%H:%M:%S') - INFO: Using inkscape as svg converter!"
 elif which rsvg-convert &> /dev/null && [[ $(grep -v -e '^#' -e '^$' $svgconverterconf) = "rsvg" ]]; then
     svgconverter="rsvg-convert -w 1000 --keep-aspect-ratio --output "
-    echo "INFO: Using rsvg as svg converter!" >> $logfile
+    echo "$(date +'%H:%M:%S') - INFO: Using rsvg as svg converter!"
 else
-    echo "ERROR: SVG converter: $(grep -v -e '^#' -e '^$' $svgconverterconf), was not found!" >> $logfile
-    echo "       Try installing on Ubuntu: librsvg2-bin (or: inkscape)" >> $logfile
-    echo "       Try installing in Cygwin: rsvg (or: inkscape)" >> $logfile
-    echo "       Try installing on Windows: inkscape" >> $logfile
-    echo "TERMINATED: Read the log file!"
+    echo "$(date +'%H:%M:%S') - ERROR: SVG converter: $(grep -v -e '^#' -e '^$' $svgconverterconf), was not found!"
     exit 1
 fi
 
@@ -118,8 +106,7 @@ fi
 if [[ ! $style = "srp-full" ]] && [[ ! $style = "snp-full" ]]; then
     for file in $location/build-output/servicelist-*-$style.txt ; do
         if [[ ! -f $file ]]; then
-            echo "ERROR: No $style servicelist has been found!" >> $logfile
-            echo "TERMINATED: Read the log file!"
+            echo "$(date +'%H:%M:%S') - ERROR: No $style servicelist has been found!"
             exit 1
         fi
     done
@@ -196,12 +183,13 @@ grep -v -e '^#' -e '^$' $backgroundsconf | while read lines ; do
 
     mkdir -p $temp/package/picon/logos
 
-    echo "$(date +'%H:%M:%S') -----------------------------------------------------------"
-    echo "$(date +'%H:%M:%S') - Creating picons: $packagenamenoversion"
+    echo "$(date +'%H:%M:%S') - EXECUTING: Creating picons: $packagenamenoversion"
 
     echo "$logocollection" | while read logoname ; do
         ((currentlogo++))
-        echo -ne "           Converting logo: $currentlogo/$logocount"\\r
+        if [[ $- == *i* ]]; then
+            echo -ne "           Converting logo: $currentlogo/$logocount"\\r
+        fi
 
         if [[ -f $location/build-source/logos/$logoname.$type.png ]] || [[ -f $location/build-source/logos/$logoname.$type.svg ]]; then
             logotype=$type
@@ -223,11 +211,11 @@ grep -v -e '^#' -e '^$' $backgroundsconf | while read lines ; do
         convert $location/build-source/backgrounds/$resolution/$background.png \( $logo -background none -bordercolor none -border 100 -trim -border 1% -resize $resize -gravity center -extent $resolution +repage \) -layers merge - 2>> $logfile | $pngquant - 2>> $logfile > $temp/package/picon/logos/$logoname.png
     done
 
-    echo "$(date +'%H:%M:%S') - Creating binary packages: $packagenamenoversion"
+    echo "$(date +'%H:%M:%S') - EXECUTING: Creating binary packages: $packagenamenoversion"
     $temp/create-symlinks.sh
     find $temp/package -exec touch --no-dereference -t $timestamp {} \;
 
-    if [[ $skipipk = "false" ]] && [[ $OSTYPE != "msys" ]]; then
+    if [[ $skipipk = "false" ]]; then
         mkdir $temp/package/CONTROL ; cat > $temp/package/CONTROL/control <<-EOF
 			Package: enigma2-plugin-picons-$packagenamenoversion
 			Version: $version
@@ -247,16 +235,8 @@ grep -v -e '^#' -e '^$' $backgroundsconf | while read lines ; do
 
     mv $temp/package/picon $temp/package/$packagename
 
-    if [[ $OSTYPE != "msys" ]]; then
-        tar --dereference --owner=root --group=root -cf - --exclude=logos --directory=$temp/package $packagename | $compressor 2>> $logfile > $binaries/$packagename.hardlink.tar.$ext
-        tar --owner=root --group=root -cf - --directory=$temp/package $packagename | $compressor 2>> $logfile > $binaries/$packagename.symlink.tar.$ext
-    else
-        tar --dereference --owner=root --group=root -cf - --exclude=logos --directory=$temp/package $packagename | $compressor 2>> $logfile > $binaries/$packagename.nolink.tar.$ext
-        rm -rf $temp/package/$packagename/*.png
-        sed -e "s|$temp/package/picon/||g" $temp/create-symlinks.sh > $temp/package/$packagename/create-symlinks.sh
-        chmod 755 $temp/package/$packagename/create-symlinks.sh
-        tar --owner=root --group=root -cf - --directory=$temp/package $packagename | $compressor 2>> $logfile > $binaries/$packagename.script.tar.$ext
-    fi
+    tar --dereference --owner=root --group=root -cf - --exclude=logos --directory=$temp/package $packagename | $compressor 2>> $logfile > $binaries/$packagename.hardlink.tar.$ext
+    tar --owner=root --group=root -cf - --directory=$temp/package $packagename | $compressor 2>> $logfile > $binaries/$packagename.symlink.tar.$ext
 
     find $binaries -exec touch -t $timestamp {} \;
     rm -rf $temp/package
