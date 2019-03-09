@@ -164,7 +164,7 @@ mkdir -p $temp/cache
 if [[ -f $location/build-input/backgrounds.conf ]]; then
     backgroundsconf=$location/build-input/backgrounds.conf
 else
-    echo "$(date +'%H:%M:%S') - No \"backgrounds.conf\" file found in \"build-input\", using default file!"
+    echo "$(date +'%H:%M:%S') - INFO: No \"backgrounds.conf\" file found in \"build-input\", using default file!"
     backgroundsconf=$location/build-source/config/backgrounds.conf
 fi
 
@@ -250,5 +250,5 @@ done
 ######################################
 if [[ -d $temp ]]; then rm -rf $temp; fi
 
-echo "$(date +'%H:%M:%S') - FINISHED!"
+echo "$(date +'%H:%M:%S') - INFO: Finished building $style!"
 exit 0
