@@ -55,6 +55,7 @@ fi
 if which pngquant &> /dev/null; then
     pngquant="pngquant"
     echo "$(date +'%H:%M:%S') - INFO: Image compression enabled!"
+else
     pngquant="cat"
     echo "$(date +'%H:%M:%S') - WARNING: Image compression disabled! Try installing: pngquant"
 fi
@@ -133,22 +134,22 @@ else
     timestamp=$(date --date=@$($epoch) +'%Y%m%d%H%M.%S')
 fi
 
-echo "$(date +'%H:%M:%S') - Version: $version"
+echo "$(date +'%H:%M:%S') - INFO: Version: $version"
 
 #############################################
 ## Some basic checking of the source files ##
 #############################################
-echo "$(date +'%H:%M:%S') - Checking index"
+echo "$(date +'%H:%M:%S') - EXECUTING: Checking index"
 $location/resources/tools/check-index.sh $location/build-source srp
 $location/resources/tools/check-index.sh $location/build-source snp
 
-echo "$(date +'%H:%M:%S') - Checking logos"
+echo "$(date +'%H:%M:%S') - EXECUTING: Checking logos"
 $location/resources/tools/check-logos.sh $location/build-source/logos
 
 #####################
 ## Create symlinks ##
 #####################
-echo "$(date +'%H:%M:%S') - Creating symlinks"
+echo "$(date +'%H:%M:%S') - EXECUTING: Creating symlinks"
 $location/resources/tools/create-symlinks.sh $location $temp $style
 
 ####################################################################
