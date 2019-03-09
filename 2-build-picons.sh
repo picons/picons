@@ -70,7 +70,7 @@ fi
 if [[ -f $location/build-input/svgconverter.conf ]]; then
     svgconverterconf=$location/build-input/svgconverter.conf
 else
-    echo "$(date +'%H:%M:%S') - INFO: No \"svgconverter.conf\" file found in \"build-input\", using default file!"
+    echo "$(date +'%H:%M:%S') - WARNING: No \"svgconverter.conf\" file found in \"build-input\", using default file!"
     svgconverterconf=$location/build-source/config/svgconverter.conf
 fi
 if which inkscape &> /dev/null && [[ $(grep -v -e '^#' -e '^$' $svgconverterconf) = "inkscape" ]]; then
@@ -164,7 +164,7 @@ mkdir -p $temp/cache
 if [[ -f $location/build-input/backgrounds.conf ]]; then
     backgroundsconf=$location/build-input/backgrounds.conf
 else
-    echo "$(date +'%H:%M:%S') - INFO: No \"backgrounds.conf\" file found in \"build-input\", using default file!"
+    echo "$(date +'%H:%M:%S') - WARNING: No \"backgrounds.conf\" file found in \"build-input\", using default file!"
     backgroundsconf=$location/build-source/config/backgrounds.conf
 fi
 
