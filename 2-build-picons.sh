@@ -139,12 +139,14 @@ echo "$(date +'%H:%M:%S') - INFO: Version: $version"
 #############################################
 ## Some basic checking of the source files ##
 #############################################
-echo "$(date +'%H:%M:%S') - EXECUTING: Checking index"
-$location/resources/tools/check-index.sh $location/build-source srp
-$location/resources/tools/check-index.sh $location/build-source snp
+if [[ $- == *i* ]]; then
+    echo "$(date +'%H:%M:%S') - EXECUTING: Checking index"
+    $location/resources/tools/check-index.sh $location/build-source srp
+    $location/resources/tools/check-index.sh $location/build-source snp
 
-echo "$(date +'%H:%M:%S') - EXECUTING: Checking logos"
-$location/resources/tools/check-logos.sh $location/build-source/logos
+    echo "$(date +'%H:%M:%S') - EXECUTING: Checking logos"
+    $location/resources/tools/check-logos.sh $location/build-source/logos
+fi
 
 #####################
 ## Create symlinks ##
