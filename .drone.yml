@@ -1,5 +1,6 @@
+---
 kind: pipeline
-name: default
+name: checks
 
 trigger:
   event:
@@ -15,14 +16,43 @@ steps:
     - ./resources/tools/check-index.sh ./build-source snp
     - ./resources/tools/check-logos.sh ./build-source/logos
 
+---
+kind: pipeline
+name: snp
+
+trigger:
+  event:
+    - tag
+
+steps:
+- name: build
+  image: picons/picons
+  pull: always
+  commands:
+    - ./2-build-picons.sh snp-full
+
+- name: publish
+  image: plugins/github-release
+  settings:
+    api_key:
+      from_secret: github_token
+    files:
+      - build-output/binaries-snp-full/*
+
+---
+kind: pipeline
+name: srp
+
+trigger:
+  event:
+    - tag
+
+steps:
 - name: build
   image: picons/picons
   pull: always
   commands:
     - ./2-build-picons.sh srp-full
-    - ./2-build-picons.sh snp-full
-  when:
-    event: tag
 
 - name: publish
   image: plugins/github-release
@@ -31,6 +61,3 @@ steps:
       from_secret: github_token
     files:
       - build-output/binaries-srp-full/*
-      - build-output/binaries-snp-full/*
-  when:
-    event: tag
