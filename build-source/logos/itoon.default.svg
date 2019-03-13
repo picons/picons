@@ -1,17 +1,16 @@
-<svg width="200mm" height="89.065mm" version="1.1" viewBox="0 0 200 89.065" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
- <defs>
-  <radialGradient id="a" cx="128.29" cy="154.47" r="79.334" gradientTransform="matrix(.042882 .52928 -1.5816 .12814 367.52 67.362)" gradientUnits="userSpaceOnUse">
-   <stop stop-color="#fe451f" offset="0"/>
-   <stop stop-color="#bd2078" offset="1"/>
-  </radialGradient>
-  <radialGradient id="b" cx="128.29" cy="154.47" r="79.334" gradientTransform="matrix(.054052 .66715 -1.9936 .16152 405.1 -61.242)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
- </defs>
- <path d="m86.721 22.817a24.805 24.805 0 0 0-24.805 24.805 24.805 24.805 0 0 0 24.805 24.805 24.805 24.805 0 0 0 24.805-24.805 24.805 24.805 0 0 0-24.805-24.805zm0.72043 14.658a9.2772 9.8611 0 0 1 9.2769 9.8611 9.2772 9.8611 0 0 1-9.2769 9.8611 9.2772 9.8611 0 0 1-9.2775-9.8611 9.2772 9.8611 0 0 1 9.2775-9.8611z" fill="url(#b)" stroke-width="1.2605"/>
- <path d="m133.62 22.791a24.805 24.805 0 0 0-24.805 24.805 24.805 24.805 0 0 0 24.805 24.805 24.805 24.805 0 0 0 24.805-24.805 24.805 24.805 0 0 0-24.805-24.805zm-0.0189 14.814a9.2772 9.8611 0 0 1 9.2769 9.8611 9.2772 9.8611 0 0 1-9.2769 9.8611 9.2772 9.8611 0 0 1-9.2775-9.8611 9.2772 9.8611 0 0 1 9.2775-9.8611z" fill="url(#b)" stroke-width="1.2605"/>
- <path d="m22.087 11.044a11.044 11.044 0 0 1-11.044 11.044 11.044 11.044 0 0 1-11.044-11.044 11.044 11.044 0 0 1 11.044-11.044 11.044 11.044 0 0 1 11.044 11.044z" fill="url(#b)" stroke-width="1.2605"/>
- <path d="m200 71.231h-3.1291l-24.981-18.3v18.3h-14.9v-46.831h3.4391l25.338 19.979v-19.979h14.233z" fill="url(#b)" stroke-width="1.9085"/>
- <path d="m61.461 41.358h-9.0514v28.271h-13.564v-28.271h-12.386v-16.57h35.001z" fill="url(#b)" stroke-width="1.3839"/>
- <path d="m3.097 25.274h8.3039l8.9528 13.365v17.647l5.8388 10.25v2.9843h-13.753l-9.3422-10.25z" fill="url(#b)" stroke-width="1.2605"/>
- <path d="m147.87 74.622c-18.495 10.196-44.981 18.24-68.787 4.9755l-1.2285 2.2009c24.876 13.861 52.339 5.4484 71.235-4.968z" color="#000000" color-rendering="auto" dominant-baseline="auto" fill="url(#b)" image-rendering="auto" shape-rendering="auto" solid-color="#000000" stroke-width="1.2605" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;isolation:auto;mix-blend-mode:normal;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
- <path d="m73.423 86.181 10.643-11.377-13.212-0.55049z" fill="url(#b)" stroke-width="1.2605"/>
+<svg width="200mm" height="336.624" viewBox="0 0 200 89.065" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <radialGradient id="a" cx="128.29" cy="154.47" r="79.334" gradientTransform="matrix(.04288 .52928 -1.5816 .12814 367.52 67.362)" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fe451f" offset="0"/>
+            <stop stop-color="#bd2078" offset="1"/>
+        </radialGradient>
+        <radialGradient id="b" cx="128.29" cy="154.47" r="79.334" gradientTransform="matrix(.05405 .66715 -1.9936 .16152 405.1 -61.242)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+    </defs>
+    <path d="M86.721 22.817a24.805 24.805 0 0 0-24.805 24.805 24.805 24.805 0 0 0 24.805 24.805 24.805 24.805 0 0 0 24.805-24.805 24.805 24.805 0 0 0-24.805-24.805zm.72 14.658a9.277 9.861 0 0 1 9.277 9.861 9.277 9.861 0 0 1-9.277 9.861 9.277 9.861 0 0 1-9.277-9.86 9.277 9.861 0 0 1 9.277-9.862z" fill="url(#b)" stroke-width="1.26"/>
+    <path d="M133.62 22.791a24.805 24.805 0 0 0-24.805 24.805 24.805 24.805 0 0 0 24.805 24.805 24.805 24.805 0 0 0 24.805-24.805 24.805 24.805 0 0 0-24.805-24.805zm-.019 14.814a9.277 9.861 0 0 1 9.277 9.861 9.277 9.861 0 0 1-9.277 9.861 9.277 9.861 0 0 1-9.277-9.86 9.277 9.861 0 0 1 9.277-9.862zM22.087 11.044a11.044 11.044 0 0 1-11.044 11.044A11.044 11.044 0 0 1-.001 11.044 11.044 11.044 0 0 1 11.043 0a11.044 11.044 0 0 1 11.044 11.044z" fill="url(#b)" stroke-width="1.26"/>
+    <path d="M200 71.231h-3.13l-24.98-18.3v18.3h-14.9V24.4h3.439l25.338 19.979V24.4H200z" fill="url(#b)" stroke-width="1.909"/>
+    <path d="M61.461 41.358H52.41v28.271H38.846V41.358H26.46v-16.57h35z" fill="url(#b)" stroke-width="1.384"/>
+    <path d="M3.097 25.274h8.304l8.953 13.365v17.647l5.839 10.25v2.984H12.438L3.097 59.27z" fill="url(#b)" stroke-width="1.26"/>
+    <path d="M147.87 74.622c-18.495 10.196-44.981 18.24-68.787 4.976l-1.228 2.2c24.875 13.861 52.338 5.449 71.234-4.968z" color="#000" fill="url(#b)" stroke-width="1.26" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;isolation:auto;mix-blend-mode:normal;shape-padding:0;text-decoration-color:#000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
+    <path d="M73.423 86.181l10.643-11.377-13.212-.55z" fill="url(#b)" stroke-width="1.26"/>
 </svg>
