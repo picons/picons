@@ -1,76 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   version="1.1"
-   width="623.6275"
-   height="239.99998"
-   id="svg2">
-  <defs
-     id="defs4" />
-  <metadata
-     id="metadata7">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     transform="translate(-32.236957,-194.07646)"
-     id="layer1">
-    <g
-       id="text2985"
-       style="font-size:65.46867371px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#204c9e;fill-opacity:1;stroke:none;font-family:Sans">
-      <path
-         d="m 162.96972,397.00201 -130.732763,0 0,-27.27435 c 33.066747,-25.16447 55.296666,-44.57489 66.689823,-58.23132 11.39299,-13.65626 17.08953,-25.77818 17.08963,-36.3658 -10e-5,-8.4392 -2.74288,-14.97966 -8.22834,-19.62143 -5.48565,-4.64148 -13.02349,-6.96229 -22.613549,-6.96244 -14.577066,1.5e-4 -29.76783,5.17882 -45.572337,15.53603 l -2.877042,0 0,-33.02844 c 19.026794,-7.28833 37.171318,-10.93258 54.433626,-10.93276 20.484442,1.8e-4 36.269792,4.46918 47.356102,13.40702 11.08607,8.93816 16.62916,21.46287 16.6293,37.57416 -1.4e-4,12.42893 -4.5075,25.56741 -13.52209,39.41547 -9.01485,13.84823 -29.97887,33.35455 -62.892132,58.51902 l 84.239772,0 z"
-         id="path3850"
-         style="font-size:235.6872406px;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#204c9e;fill-opacity:1;font-family:Meiryo UI;-inkscape-font-specification:Meiryo UI Bold" />
-      <path
-         d="m 326.50076,353.84639 -24.62748,0 0,43.50087 -36.3658,0 0,-43.50087 -83.77945,0 0,-30.49664 82.1683,-99.7758 37.97695,0 0,103.5735 24.62748,0 z m -60.99328,-26.69894 0,-68.01327 -56.15985,68.01327 z"
-         id="path3852"
-         style="font-size:235.6872406px;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#204c9e;fill-opacity:1;font-family:Meiryo UI;-inkscape-font-specification:Meiryo UI Bold" />
-      <path
-         d="m 509.48058,396.19644 c -9.43678,2.30163 -19.5256,3.45245 -30.26647,3.45245 -15.88132,0 -27.50456,-3.39491 -34.86975,-10.18472 -7.36525,-6.78981 -11.04786,-17.7801 -11.04784,-32.9709 l 0,-69.39424 -17.49241,0 0,-23.36158 17.6075,0 0,-37.40154 35.21498,0 0,37.40154 40.85399,0 0,23.36158 -40.85399,0 0,54.89395 c -5e-5,14.11673 1.80289,23.32325 5.40884,27.6196 3.60583,4.2964 9.66679,6.44459 18.1829,6.44457 5.44712,2e-5 10.85595,-1.3426 16.22652,-4.02786 l 1.03573,0 z"
-         id="path3854"
-         style="font-size:235.6872406px;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#204c9e;fill-opacity:1;font-family:Meiryo UI;-inkscape-font-specification:Meiryo UI Bold" />
-      <path
-         d="m 655.86447,263.73745 -54.5487,133.26456 -33.37368,0 -54.31855,-133.26456 38.32219,0 33.94909,92.29549 33.60385,-92.29549 z"
-         id="path3856"
-         style="font-size:235.6872406px;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#204c9e;fill-opacity:1;font-family:Meiryo UI;-inkscape-font-specification:Meiryo UI Bold" />
+<svg xmlns="http://www.w3.org/2000/svg" width="623.628" height="240">
+    <g fill="#204c9e">
+        <g style="line-height:125%" font-size="235.687" font-weight="700" letter-spacing="0" word-spacing="0" font-family="Meiryo UI">
+            <path d="M130.733 202.926H0V175.65c33.067-25.164 55.297-44.575 66.69-58.231 11.393-13.656 17.09-25.778 17.09-36.366 0-8.44-2.743-14.98-8.229-19.621-5.486-4.642-13.023-6.963-22.613-6.963-14.578 0-29.768 5.179-45.573 15.536H4.488V36.978c19.027-7.289 37.172-10.933 54.434-10.933 20.484 0 36.27 4.47 47.356 13.407 11.086 8.938 16.63 21.463 16.63 37.574 0 12.43-4.508 25.568-13.523 39.416-9.015 13.848-29.979 33.354-62.892 58.519h84.24zM294.264 159.77h-24.628v43.5h-36.365v-43.5h-83.78v-30.497l82.168-99.776h37.977v103.574h24.628zM233.27 133.07V65.058l-56.16 68.013zM477.244 202.12c-9.437 2.302-19.526 3.452-30.267 3.452-15.881 0-27.504-3.394-34.87-10.184-7.365-6.79-11.047-17.78-11.047-32.971V93.023h-17.493V69.66h17.608V32.259h35.215v37.402h40.854v23.362H436.39v54.894c0 14.116 1.803 23.323 5.408 27.62 3.606 4.296 9.667 6.444 18.183 6.444 5.447 0 10.856-1.343 16.227-4.028h1.036zM623.628 69.661l-54.55 133.265h-33.373L481.387 69.66h38.322l33.949 92.295 33.604-92.295z" style="-inkscape-font-specification:Meiryo UI Bold"/>
+        </g>
+        <path d="M314.906 0h25.714v126.857h-25.714zM314.906 161.143h25.714V240h-25.714z"/>
+        <path d="M338.62 98h25.714v90H338.62z"/>
     </g>
-    <g
-       id="g3844">
-      <rect
-         width="25.714285"
-         height="126.85715"
-         x="347.14285"
-         y="194.07646"
-         id="rect3773"
-         style="fill:#204c9e;fill-opacity:1" />
-      <rect
-         width="25.714285"
-         height="78.857147"
-         x="347.14285"
-         y="355.2193"
-         id="rect3773-1"
-         style="fill:#204c9e;fill-opacity:1" />
-      <rect
-         width="25.714285"
-         height="90"
-         x="370.85712"
-         y="292.07651"
-         id="rect3773-7"
-         style="fill:#204c9e;fill-opacity:1" />
-    </g>
-  </g>
 </svg>

@@ -1,4 +1,10 @@
-<svg width="600" height="641.2" clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" Googl="true" version="1.1" viewBox="0 0 547.98 625.74" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs><style type="text/css"><![CDATA[
-    .fil1 {fill:white}
-    .fil0 {fill:#ED1B24}
-   ]]></style></defs><rect class="fil0 str0" x="28.989" y="356.22" width="131.82" height="259.02" fill="#ed1b24" stroke-width="2.1408"/><rect class="fil0 str0" transform="rotate(-45)" x="-72.552" y="59.273" width="131.83" height="427.84" fill="#ed1b24" stroke-width="2.7514"/><polygon class="fil1 str0" transform="matrix(2.1408 0 0 2.1408 -9.9819 -.59148)" points="208.67 0.27653 152.78 61.352 208.67 112.86 208.67 292.57 273.79 292.57 273.79 0.27653" fill="#fff"/></svg>
+<svg width="600" height="641.2" clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 547.98 625.74" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .fil0{fill:#ed1b24}
+        </style>
+    </defs>
+    <path class="fil0 str0" fill="#ed1b24" stroke-width="2.141" d="M28.989 356.22h131.82v259.02H28.989z"/>
+    <path class="fil0 str0" fill="#ed1b24" stroke-width="2.751" d="M-9.39 93.214L83.828-.004l302.529 302.529-93.218 93.218z"/>
+    <path class="str0" fill="#fff" d="M436.739 0l-119.65 130.75 119.65 110.27v384.722h139.409V.001z"/>
+</svg>
