@@ -28,7 +28,7 @@ trigger:
 steps:
 - name: build
   image: picons/picons
-  shm_size: '2gb'
+  shm_size: 2048000000
   pull: always
   commands:
     - ./2-build-picons.sh snp-full
@@ -52,7 +52,7 @@ trigger:
 steps:
 - name: build
   image: picons/picons
-  shm_size: '2gb'
+  shm_size: 2048000000
   pull: always
   commands:
     - ./2-build-picons.sh srp-full
