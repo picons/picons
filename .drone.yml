@@ -28,7 +28,7 @@ trigger:
 steps:
 - name: build
   image: picons/picons
-  tmpfs: /tmp
+  tmpfs: /tmp/picons
   pull: always
   commands:
     - ./2-build-picons.sh snp-full
@@ -52,7 +52,7 @@ trigger:
 steps:
 - name: build
   image: picons/picons
-  tmpfs: /tmp
+  tmpfs: /tmp/picons
   pull: always
   commands:
     - ./2-build-picons.sh srp-full
