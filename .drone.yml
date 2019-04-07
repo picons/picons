@@ -6,6 +6,7 @@ trigger:
   event:
     exclude:
       - pull_request
+      - tag
 
 steps:
 - name: checks
