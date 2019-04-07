@@ -19,7 +19,7 @@ steps:
 
 ---
 kind: pipeline
-name: snp-100x60
+name: snp
 
 trigger:
   event:
@@ -30,7 +30,7 @@ steps:
   image: picons/picons
   pull: always
   commands:
-    - ./2-build-picons.sh snp-full 100x60
+    - ./2-build-picons.sh snp-full
 
 - name: publish
   image: plugins/github-release
@@ -42,7 +42,7 @@ steps:
 
 ---
 kind: pipeline
-name: srp-100x60
+name: srp
 
 trigger:
   event:
@@ -53,237 +53,7 @@ steps:
   image: picons/picons
   pull: always
   commands:
-    - ./2-build-picons.sh srp-full 100x60
-
-- name: publish
-  image: plugins/github-release
-  settings:
-    api_key:
-      from_secret: github_token
-    files:
-      - build-output/binaries-srp-full/*
-
----
-kind: pipeline
-name: snp-220x132
-
-trigger:
-  event:
-    - tag
-
-steps:
-- name: build
-  image: picons/picons
-  pull: always
-  commands:
-    - ./2-build-picons.sh snp-full 220x132
-
-- name: publish
-  image: plugins/github-release
-  settings:
-    api_key:
-      from_secret: github_token
-    files:
-      - build-output/binaries-snp-full/*
-
----
-kind: pipeline
-name: srp-220x132
-
-trigger:
-  event:
-    - tag
-
-steps:
-- name: build
-  image: picons/picons
-  pull: always
-  commands:
-    - ./2-build-picons.sh srp-full 220x132
-
-- name: publish
-  image: plugins/github-release
-  settings:
-    api_key:
-      from_secret: github_token
-    files:
-      - build-output/binaries-srp-full/*
-
----
-kind: pipeline
-name: snp-256x256
-
-trigger:
-  event:
-    - tag
-
-steps:
-- name: build
-  image: picons/picons
-  pull: always
-  commands:
-    - ./2-build-picons.sh snp-full 256x256
-
-- name: publish
-  image: plugins/github-release
-  settings:
-    api_key:
-      from_secret: github_token
-    files:
-      - build-output/binaries-snp-full/*
-
----
-kind: pipeline
-name: srp-256x256
-
-trigger:
-  event:
-    - tag
-
-steps:
-- name: build
-  image: picons/picons
-  pull: always
-  commands:
-    - ./2-build-picons.sh srp-full 256x256
-
-- name: publish
-  image: plugins/github-release
-  settings:
-    api_key:
-      from_secret: github_token
-    files:
-      - build-output/binaries-srp-full/*
-
----
-kind: pipeline
-name: snp-400x170
-
-trigger:
-  event:
-    - tag
-
-steps:
-- name: build
-  image: picons/picons
-  pull: always
-  commands:
-    - ./2-build-picons.sh snp-full 400x170
-
-- name: publish
-  image: plugins/github-release
-  settings:
-    api_key:
-      from_secret: github_token
-    files:
-      - build-output/binaries-snp-full/*
-
----
-kind: pipeline
-name: srp-400x170
-
-trigger:
-  event:
-    - tag
-
-steps:
-- name: build
-  image: picons/picons
-  pull: always
-  commands:
-    - ./2-build-picons.sh srp-full 400x170
-
-- name: publish
-  image: plugins/github-release
-  settings:
-    api_key:
-      from_secret: github_token
-    files:
-      - build-output/binaries-srp-full/*
-
----
-kind: pipeline
-name: snp-400x240
-
-trigger:
-  event:
-    - tag
-
-steps:
-- name: build
-  image: picons/picons
-  pull: always
-  commands:
-    - ./2-build-picons.sh snp-full 400x240
-
-- name: publish
-  image: plugins/github-release
-  settings:
-    api_key:
-      from_secret: github_token
-    files:
-      - build-output/binaries-snp-full/*
-
----
-kind: pipeline
-name: srp-400x240
-
-trigger:
-  event:
-    - tag
-
-steps:
-- name: build
-  image: picons/picons
-  pull: always
-  commands:
-    - ./2-build-picons.sh srp-full 400x240
-
-- name: publish
-  image: plugins/github-release
-  settings:
-    api_key:
-      from_secret: github_token
-    files:
-      - build-output/binaries-srp-full/*
-
----
-kind: pipeline
-name: snp-800x450
-
-trigger:
-  event:
-    - tag
-
-steps:
-- name: build
-  image: picons/picons
-  pull: always
-  commands:
-    - ./2-build-picons.sh snp-full 800x450
-
-- name: publish
-  image: plugins/github-release
-  settings:
-    api_key:
-      from_secret: github_token
-    files:
-      - build-output/binaries-snp-full/*
-
----
-kind: pipeline
-name: srp-800x450
-
-trigger:
-  event:
-    - tag
-
-steps:
-- name: build
-  image: picons/picons
-  pull: always
-  commands:
-    - ./2-build-picons.sh srp-full 800x450
+    - ./2-build-picons.sh srp-full
 
 - name: publish
   image: plugins/github-release
