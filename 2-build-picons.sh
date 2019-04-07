@@ -167,8 +167,11 @@ else
     echo "$(date +'%H:%M:%S') - WARNING: No \"backgrounds.conf\" file found in \"build-input\", using default file!"
     backgroundsconf=$location/build-source/config/backgrounds.conf
 fi
+if [[ -n $2 ]]; then
+    format="$2"
+fi
 
-grep -v -e '^#' -e '^$' $backgroundsconf | while read lines ; do
+grep -v -e '^#' -e '^$' $backgroundsconf | grep -e "$format" | while read lines ; do
     currentlogo=""
 
     OLDIFS=$IFS
