@@ -62,4 +62,3 @@ steps:
       from_secret: github_token
     files:
       - build-output/binaries-srp-full/*
-
