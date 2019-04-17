@@ -2,12 +2,6 @@
 
 All the full resolution channel logos and their link to the actual channel (=serviceref) are kept up2date in this repository. The end result are picons for Enigma2 tuners and Kodi mediacenter in combination with a compatible PVR backend.
 
-## SUPPORT ON BEERPAY
-
-Hey dude! Help us out for a couple of :beers:!
-
-[![Beerpay](https://beerpay.io/picons/picons/badge.svg?style=beer-square)](https://beerpay.io/picons/picons)  [![Beerpay](https://beerpay.io/picons/picons/make-wish.svg?style=flat-square)](https://beerpay.io/picons/picons?focus=wish)
-
 ## BUILDING THE PICONS
 
 [Ubuntu](http://www.ubuntu.com/download) and [Bash on Ubuntu on Windows](https://msdn.microsoft.com/commandline/wsl) are tested and supported platforms for building the picons.
