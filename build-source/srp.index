@@ -1,3 +1,7 @@
+2FC_5_85_C00000=anixeplus
+E7F_3200_13E_820000=anixeplus
+E80_3200_13E_820000=anixehdserie
+E7E_3200_13E_820000=aristotv
 113C_404_1_C00000=rneradio3
 113D_404_1_C00000=rneradio4
 113E_404_1_C00000=rneradio5
@@ -11231,7 +11235,6 @@ B78_48_46_E080000=yletv2hd
 2F85_7F4_2_11A0000=itvplus1
 2F99_454_1_C00000=cashtv
 2F9_C9A_3_EB0000=natgeowildhd
-2FC_5_85_C00000=anixe
 2FD_7_85_C00000=mediaspartv
 300_7_85_C00000=rnf
 301_7_85_C00000=channel21
