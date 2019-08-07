@@ -1,5 +1,22 @@
 ---
 kind: pipeline
+name: checks
+
+trigger:
+  event:
+    - tag
+
+steps:
+- name: checks
+  image: picons/picons
+  pull: always
+  commands:
+    - ./resources/tools/check-index.sh ./build-source srp
+    - ./resources/tools/check-index.sh ./build-source snp
+    - ./resources/tools/check-logos.sh ./build-source/logos
+
+---
+kind: pipeline
 name: snp
 
 trigger:
