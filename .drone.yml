@@ -5,6 +5,7 @@ name: checks
 trigger:
   event:
     - tag
+    - push
 
 steps:
 - name: checks
