@@ -39,25 +39,25 @@ steps:
     files:
       - build-output/binaries-snp-full/*
 
-# ---
-# kind: pipeline
-# name: srp
+---
+kind: pipeline
+name: srp
 
-# trigger:
-#   event:
-#     - tag
+trigger:
+  event:
+    - tag
 
-# steps:
-# - name: build
-#   image: picons/picons
-#   pull: always
-#   commands:
-#     - ./2-build-picons.sh srp-full
+steps:
+- name: build
+  image: picons/picons
+  pull: always
+  commands:
+    - ./2-build-picons.sh srp-full
 
-# - name: publish
-#   image: plugins/github-release
-#   settings:
-#     api_key:
-#       from_secret: github_token
-#     files:
-#       - build-output/binaries-srp-full/*
+- name: publish
+  image: plugins/github-release
+  settings:
+    api_key:
+      from_secret: github_token
+    files:
+      - build-output/binaries-srp-full/*
