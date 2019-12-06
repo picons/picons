@@ -1,7 +1,7 @@
 ---
 name: Add picons request
-about: Make sure users provide the correct info to add picons
-title: "[ADD]"
+about: This template helps you make a proper request to add picons
+title: "[ADD] a description of what you'd like to add"
 labels: enhancement
 assignees: ''
 
@@ -9,14 +9,14 @@ assignees: ''
 
 # SNP/SRP entries
 
-*snp.index*
+**snp.index**
 ```
 samplechannelname=samplelogoname
 samplechannelname1=samplelogoname1
 samplechannelname2=samplelogoname2
 ```
 
-*srp.index*
+**srp.index**
 ```
 422B_3DB8_13E_820000=samplelogoname
 425A_3DB8_13E_820000=samplelogoname1
