@@ -28,3 +28,5 @@ _Make sure you replace the above sample data with the actual data you want added
 # Logos
 
 Attach a zip file containing the logos properly named according the channelname used in `snp.index` or `srp.index`.
+
+**PS: Make sure to read [CONTRIBUTING.md](https://github.com/picons/picons/blob/master/CONTRIBUTING.md)**
