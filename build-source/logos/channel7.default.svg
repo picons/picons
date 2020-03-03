@@ -1,0 +1,13 @@
+<svg width="472.26pt" height="600pt" version="1.1" viewBox="0 0 472.26 600" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient id="linearGradient845" x1="-863.49" x2="-376.47" y1="-186.14" y2="300.88" gradientTransform="matrix(.60667 0 0 .60667 683.84 231.36)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#21244a" offset="0"/>
+   <stop stop-color="#0c0f28" offset="1"/>
+  </linearGradient>
+ </defs>
+ <path d="m147.39 0h324.87v600h-324.87z" fill="#fff" style="paint-order:stroke markers fill"/>
+ <path d="m158.8 124.17v-91.856h302.11v93.149l-184.32 440.83h-104.11l190.95-442.12z" fill="url(#linearGradient845)" style="font-variant-east_asian:normal;paint-order:stroke markers fill"/>
+ <path d="m150.88 4.8534v590.29h317.9v-590.29zm4.2467 5.4601h309.4v579.37h-309.4z" fill="url(#linearGradient845)" style="font-variant-east_asian:normal;paint-order:stroke markers fill"/>
+ <path d="m147.39 142.71v152.49l26.019 0.024v-72.531h74.487v72.531l27.434-0.024v-152.49l-27.434 0.0116v55.141h-74.487v-55.141z" fill="url(#linearGradient845)" style="font-variant-east_asian:normal;paint-order:stroke markers fill"/>
+ <path d="m137.63 140.55a137.63 146.31 0 0 0-137.63 146.31 137.63 146.31 0 0 0 137.63 146.31 137.63 146.31 0 0 0 137.03-133.74h-33.393a104.37 110.95 0 0 1-103.64 98.382 104.37 110.95 0 0 1-104.37-110.95 104.37 110.95 0 0 1 104.37-110.95 104.37 110.95 0 0 1 6.5158 0.34658v-35.456a137.63 146.31 0 0 0-6.5158-0.24528z" fill="url(#linearGradient845)" style="font-variant-east_asian:normal;paint-order:stroke markers fill"/>
+</svg>

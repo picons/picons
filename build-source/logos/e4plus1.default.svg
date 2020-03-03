@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="LogoE4" width="782.54" height="836" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" focusable="false" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" version="1.1" viewBox="0 0 782.54 836" xmlns="http://www.w3.org/2000/svg">
+ <link id="dark-mode" href="" rel="stylesheet" type="text/css"/>
+ <style id="dark-mode-custom-style" type="text/css"/>
+ <metadata id="metadata11">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <path id="digitE4" d="m155.12 836v-67.865h67.865v67.865zm222.98-111.49v-121.19h67.865v121.19zm10.045-724.51 52.737 42.706-62.783 77.532v-107.83zm101.45 559.69v-67.865h116.34v67.865zm-111.49 276.31v-67.865h169.66v67.865zm-111.49 0v-232.68h67.862v232.68zm67.865-661.89-10.55 13.03h-87.326l97.876-120.86zm111.49 13.031h-65.904l65.904-81.384z" fill-rule="evenodd"/>
+ <path id="signE4" d="m449.47 402.8v-15.148c0-15.943-12.923-28.866-28.868-28.866h-214.08c-6.0695 0-9.4276-7.0421-5.6087-11.76l30.796-38.029c2.7394-3.3836 6.8613-5.349 11.217-5.349h177.68c15.945 0 28.868-12.926 28.868-28.868v-15.146c0-15.945-12.923-28.868-28.868-28.868h-198.67c-13.063 0-25.429 5.899-33.65 16.05l-178.63 220.59c-6.2427 7.7117-9.6491 17.33-9.6491 27.252v32.558c0 17.936 14.54 32.476 32.476 32.476h388.12c15.945 0 28.868-12.923 28.868-28.866v-15.148c0-15.943-12.923-28.868-28.868-28.868h-317.75c-6.0695 0-9.4276-7.0396-5.6087-11.757l30.796-38.029c2.7394-3.3836 6.8613-5.349 11.217-5.349h281.34c15.945 0 28.868-12.926 28.868-28.868" fill="#8700ff" fill-rule="evenodd"/>
+ <g id="g828" transform="matrix(1.0104 0 0 1.0104 525 42)">
+  <path id="path2-7" d="m213.11 0h41.767v212.74h-45.81l-1e-5 -165.62-54.395 28.264v-43.834z" opacity=".5"/>
+  <path id="path4-6" transform="scale(.75)" d="m72.236 95.453v72.381h-72.236v43.492h72.236v72.381h43.621v-72.381h72.236v-43.492h-72.236v-72.381z" opacity=".5" stroke-width="1.3333"/>
+ </g>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="LogoFilm4" width="881.88" height="836" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" focusable="false" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" version="1.1" viewBox="0 0 881.88 836" xmlns="http://www.w3.org/2000/svg">
+ <link id="dark-mode" href="" rel="stylesheet" type="text/css"/>
+ <style id="dark-mode-custom-style" type="text/css"/>
+ <metadata id="metadata11">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <path id="digitFilm4" d="m388.58 0 52.795 42.706-62.853 77.532v-107.83zm-53.731 174.11-10.565 13.033-87.421-3e-3 97.985-120.86zm111.62 13.032h-65.978l65.978-81.384zm-67.943 537.37v-232.68h67.943v232.68zm3e-3 111.49v-67.865h169.85v67.865zm111.62-276.31v-67.865h116.47v67.865zm-223.23 276.31v-344.17h67.938v344.17zm-111.61 0v-67.865h67.94v67.865zm-155.29-276.31v-67.865h111.62v67.865zm111.62-218.06v106.57h-86.393z"/>
+ <path id="signFilm4" d="m335.33 297.01h-111.8l-3e-3 59.365h111.8v65.068h-111.8v139.29h-68.05v-328.79h179.85zm43.748 152.28v-217.35h68.05v217.35zm179.86-58.427h48.607v58.426h-116.66v-217.35h68.056zm248.31-158.92h74.637v217.35h-61.219v-131.24l-41.931 84.433h-35.221l-41.931-81.926v128.74h-61.219v-217.35h74.637l46.96 90.281z" fill="#e30613"/>
+ <g id="g828" transform="matrix(1.0104 0 0 1.0104 623 621)">
+  <path id="path2" d="m213.11 0h41.767v212.74h-45.81l-1e-5 -165.62-54.395 28.264v-43.834z" opacity=".5"/>
+  <path id="path4" transform="scale(.75)" d="m72.236 95.453v72.381h-72.236v43.492h72.236v72.381h43.621v-72.381h72.236v-43.492h-72.236v-72.381z" opacity=".5" stroke-width="1.3333"/>
+ </g>
+</svg>

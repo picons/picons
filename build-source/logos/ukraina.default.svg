@@ -1,0 +1,54 @@
+<svg version="1.1" viewBox="0 0 800 119.72" xmlns="http://www.w3.org/2000/svg">
+ <desc>Created with Sketch.</desc>
+ <defs>
+  <linearGradient id="d" x1="565.8" x2="565.8" y1=".35694" y2="33.944" gradientTransform="scale(.59243 1.688)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#FFCB0A" offset="0"/>
+   <stop stop-color="#FED307" offset=".4"/>
+   <stop stop-color="#FAAE1B" offset=".5"/>
+   <stop stop-color="#FBB219" offset=".6506"/>
+   <stop stop-color="#FDBD14" offset=".8354"/>
+   <stop stop-color="#FFCB0A" offset="1"/>
+  </linearGradient>
+  <linearGradient id="c" x1="518.75" x2="518.75" y1=".42415" y2="40.335" gradientTransform="scale(.70398 1.4205)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#FFCB0A" offset="0"/>
+   <stop stop-color="#FED307" offset=".4"/>
+   <stop stop-color="#FAAE1B" offset=".5"/>
+   <stop stop-color="#FBB219" offset=".6506"/>
+   <stop stop-color="#FDBD14" offset=".8354"/>
+   <stop stop-color="#FFCB0A" offset="1"/>
+  </linearGradient>
+  <linearGradient id="b" x1="20.47" x2="20.47" y1=".42339" y2="40.264" gradientTransform="scale(.70273 1.423)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#FFCB0A" offset="0"/>
+   <stop stop-color="#FED307" offset=".4"/>
+   <stop stop-color="#FAAE1B" offset=".5"/>
+   <stop stop-color="#FBB219" offset=".6506"/>
+   <stop stop-color="#FDBD14" offset=".8354"/>
+   <stop stop-color="#FFCB0A" offset="1"/>
+  </linearGradient>
+  <linearGradient id="a" x1="74.73" x2="74.73" y1=".35783" y2="34.029" gradientTransform="scale(.59391 1.6837)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#FFCB0A" offset="0"/>
+   <stop stop-color="#FED307" offset=".4"/>
+   <stop stop-color="#FAAE1B" offset=".5"/>
+   <stop stop-color="#FBB219" offset=".6506"/>
+   <stop stop-color="#FDBD14" offset=".8354"/>
+   <stop stop-color="#FFCB0A" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g transform="matrix(2.1114 0 0 2.1114 -.84455 -1.2668)" fill-rule="evenodd">
+  <path d="m223.2 11.9a4.9 4.9 0 0 1-4.9 4.9 4.9 4.9 0 0 1-4.9-4.9 4.9 4.9 0 0 1 4.9-4.9 4.9 4.9 0 0 1 4.9 4.9z" fill="#ffcb05"/>
+  <path d="m230.6 5.7a4.9 4.9 0 0 1-4.9 4.9 4.9 4.9 0 0 1-4.9-4.9 4.9 4.9 0 0 1 4.9-4.9 4.9 4.9 0 0 1 4.9 4.9z" fill="#ffcb05"/>
+  <g transform="translate(64,12)" fill="#005ea1">
+   <path d="m166.8 0v33.6h-12.5v-23.1z"/>
+   <path d="m81 33.7v-33.7h19.3c10.5 0 14.3 6.5 14.3 12.1 0 5.9-4.3 11.9-14 11.9h-7.1v9.7zm12.5-17.4h2.6c3.9 0 5.9-1.5 5.9-4.3 0-2-1-4.3-6-4.3h-2.5z"/>
+   <path d="m138.1 33.7-2.3-7.2h-10.1l-2.2 7.2h-12.5l11.5-33.6h17l11.7 33.6zm-11-15h7.3l-3.5-10.8h-0.3z"/>
+   <path d="m9.6 33.7 3.7-7.3-13.2-26.4h13.1l6.6 13.3 6.7-13.3h13.1l-16.9 33.7z"/>
+   <path d="m194.8 33.7v-12.5h-8.6v12.5h-12.5v-33.7h12.5v11.7h8.6v-11.7h12.6v33.7z"/>
+   <path d="m238.2 33.7-2.3-7.2h-10.1l-2.2 7.2h-12.5l11.5-33.6h17l11.7 33.6zm-11-15h7.3l-3.5-10.8h-0.3z"/>
+   <path d="m42.9 33.7v-33.7h12.5v13.3l7.9-13.3h14l-10.1 16.8 10.1 16.9h-14.1l-7.8-13.4v13.4z"/>
+  </g>
+  <path d="m328.2 29.1c0 9.7-1 19.1-2.9 28.2h17.3c1.7-9.2 2.6-18.6 2.6-28.2 0-9.7-0.9-19.2-2.6-28.5h-17.3c1.8 9.2 2.9 18.7 2.9 28.5z" fill="url(#d)" opacity=".7"/>
+  <path d="m377.1 0.6h-25.9c1.6 9.2 2.5 18.8 2.5 28.5 0 9.6-0.8 19.1-2.4 28.2h25.9c1.4-9.2 2.1-18.6 2.1-28.2-0.1-9.7-0.8-19.2-2.2-28.5z" fill="url(#c)"/>
+  <path d="m25.9 29.1c0-9.7 0.9-19.2 2.5-28.5h-25.9c-1.4 9.3-2.1 18.8-2.1 28.5 0 9.6 0.7 19 2.1 28.2h25.9c-1.7-9.2-2.5-18.6-2.5-28.2z" fill="url(#b)"/>
+  <path d="m37 57.3h17.3c-1.9-9.1-2.9-18.6-2.9-28.2 0-9.8 1-19.3 3-28.5h-17.4c-1.7 9.2-2.6 18.7-2.6 28.5 0 9.6 0.9 19 2.6 28.2z" fill="url(#a)" opacity=".7"/>
+ </g>
+</svg>

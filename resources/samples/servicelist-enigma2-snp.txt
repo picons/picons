@@ -1,0 +1,206 @@
+1_0_1_5302_814_2_11A0000_0_0_0     |  4seven            |  5302_814_2_11A0000=--------    |  4seven=4seven
+1_0_1_1E23_809_2_11A0000_0_0_0     |  5*                |  1E23_809_2_11A0000=--------    |  5star=5star
+1_0_1_1E25_809_2_11A0000_0_0_0     |  5* +1             |  1E25_809_2_11A0000=--------    |  5starplus1=5starplus1
+1_0_1_1E1E_809_2_11A0000_0_0_0     |  5 USA             |  1E1E_809_2_11A0000=--------    |  5usa=5usa
+1_0_1_1E1F_809_2_11A0000_0_0_0     |  5 USA +1          |  1E1F_809_2_11A0000=--------    |  5usaplus1=5usaplus1
+1_0_2_D852_838_2_11A0000_0_0_0     |  Absolute          |  D852_838_2_11A0000=--------    |  absolute=absolute
+1_0_2_D84E_838_2_11A0000_0_0_0     |  Absolute 80s      |  D84E_838_2_11A0000=--------    |  absolute80s=--------
+1_0_1_C7A3_817_2_11A0000_0_0_0     |  Al Jazeera Eng    |  C7A3_817_2_11A0000=--------    |  aljazeeraeng=aljazeera
+1_0_1_CBA7_83C_2_11A0000_0_0_0     |  B4U Music         |  CBA7_83C_2_11A0000=--------    |  b4umusic=b4umusic
+1_0_1_D7A7_840_2_11A0000_0_0_0     |  BABESTATION       |  D7A7_840_2_11A0000=--------    |  babestation=babestation
+1_0_2_288F_7FE_2_11A0000_0_0_0     |  BBC 6Music        |  288F_7FE_2_11A0000=--------    |  bbc6music=bbcradio6music
+1_0_1_1917_7FF_2_11A0000_0_0_0     |  BBC ALBA          |  1917_7FF_2_11A0000=--------    |  bbcalba=bbcalba
+1_0_2_193C_7FF_2_11A0000_0_0_0     |  BBC Asian Net     |  193C_7FF_2_11A0000=--------    |  bbcasiannet=--------
+1_0_1_18AC_7FD_2_11A0000_0_0_0     |  BBC Four          |  18AC_7FD_2_11A0000=--------    |  bbcfour=bbcfour
+1_0_19_22E3_80D_2_11A0000_0_0_0    |  BBC Four HD       |  22E3_80D_2_11A0000=--------    |  bbcfourhd=bbcfourhd
+1_0_1_2876_800_2_11A0000_0_0_0     |  BBC NEWS          |  2876_800_2_11A0000=--------    |  bbcnews=bbcnews
+1_0_19_22D9_80D_2_11A0000_0_0_0    |  BBC NEWS HD       |  22D9_80D_2_11A0000=--------    |  bbcnewshd=bbcnewshd
+1_0_1_18D9_7FD_2_11A0000_0_0_0     |  BBC One CI        |  18D9_7FD_2_11A0000=--------    |  bbconeci=bbcone
+1_0_1_2842_7FE_2_11A0000_0_0_0     |  BBC One East E    |  2842_7FE_2_11A0000=--------    |  bbconeeaste=bbcone
+1_0_1_18CF_7FD_2_11A0000_0_0_0     |  BBC One East W    |  18CF_7FD_2_11A0000=--------    |  bbconeeastw=bbcone
+1_0_1_2841_7FE_2_11A0000_0_0_0     |  BBC One E Mid     |  2841_7FE_2_11A0000=--------    |  bbconeemid=bbcone
+1_0_19_1B1D_802_2_11A0000_0_0_0    |  BBC One HD        |  1B1D_802_2_11A0000=--------    |  bbconehd=bbconehd
+1_0_1_189D_7FD_2_11A0000_0_0_0     |  BBC One Lon       |  189D_7FD_2_11A0000=--------    |  bbconelon=bbcone
+1_0_1_1947_7FF_2_11A0000_0_0_0     |  BBC One NE&C      |  1947_7FF_2_11A0000=--------    |  bbconeneandc=bbcone
+1_0_1_2879_800_2_11A0000_0_0_0     |  BBC One NI        |  2879_800_2_11A0000=--------    |  bbconeni=bbcone
+1_0_19_1B1F_802_2_11A0000_0_0_0    |  BBC One NI HD     |  1B1F_802_2_11A0000=--------    |  bbconenihd=bbconehd
+1_0_1_1929_7FF_2_11A0000_0_0_0     |  BBC One N West    |  1929_7FF_2_11A0000=--------    |  bbconenwest=bbcone
+1_0_1_2874_800_2_11A0000_0_0_0     |  BBC One Oxford    |  2874_800_2_11A0000=--------    |  bbconeoxford=bbcone
+1_0_1_1915_7FF_2_11A0000_0_0_0     |  BBC One Scot      |  1915_7FF_2_11A0000=--------    |  bbconescot=bbcone
+1_0_19_22C5_80D_2_11A0000_0_0_0    |  BBC One ScotHD    |  22C5_80D_2_11A0000=--------    |  bbconescothd=bbconehd
+1_0_1_193D_7FF_2_11A0000_0_0_0     |  BBC One S East    |  193D_7FF_2_11A0000=--------    |  bbconeseast=bbcone
+1_0_1_2871_800_2_11A0000_0_0_0     |  BBC One South     |  2871_800_2_11A0000=--------    |  bbconesouth=bbcone
+1_0_1_2872_800_2_11A0000_0_0_0     |  BBC One S West    |  2872_800_2_11A0000=--------    |  bbconeswest=bbcone
+1_0_1_2847_7FE_2_11A0000_0_0_0     |  BBC One Wales     |  2847_7FE_2_11A0000=--------    |  bbconewales=bbcone
+1_0_19_22CF_80D_2_11A0000_0_0_0    |  BBC One Wal HD    |  22CF_80D_2_11A0000=--------    |  bbconewalhd=bbconehd
+1_0_1_18C5_7FD_2_11A0000_0_0_0     |  BBC One West      |  18C5_7FD_2_11A0000=--------    |  bbconewest=bbcone
+1_0_1_283D_7FE_2_11A0000_0_0_0     |  BBC One W Mid     |  283D_7FE_2_11A0000=--------    |  bbconewmid=bbcone
+1_0_1_283F_7FE_2_11A0000_0_0_0     |  BBC One Yk&Li     |  283F_7FE_2_11A0000=--------    |  bbconeykandli=bbcone
+1_0_1_1933_7FF_2_11A0000_0_0_0     |  BBC One Yorks     |  1933_7FF_2_11A0000=--------    |  bbconeyorks=bbcone
+1_0_1_2843_7FE_2_11A0000_0_0_0     |  BBC Parliament    |  2843_7FE_2_11A0000=--------    |  bbcparliament=bbcparliament
+1_0_2_1932_7FF_2_11A0000_0_0_0     |  BBC Radio 1       |  1932_7FF_2_11A0000=--------    |  bbcradio1=--------
+1_0_2_1942_7FF_2_11A0000_0_0_0     |  BBC Radio 1X      |  1942_7FF_2_11A0000=--------    |  bbcradio1x=--------
+1_0_2_1934_7FF_2_11A0000_0_0_0     |  BBC Radio 2       |  1934_7FF_2_11A0000=--------    |  bbcradio2=--------
+1_0_2_288C_7FE_2_11A0000_0_0_0     |  BBC Radio 3       |  288C_7FE_2_11A0000=--------    |  bbcradio3=--------
+1_0_2_2890_7FE_2_11A0000_0_0_0     |  BBC Radio 4 Ex    |  2890_7FE_2_11A0000=--------    |  bbcradio4ex=--------
+1_0_2_288D_7FE_2_11A0000_0_0_0     |  BBC Radio 4 FM    |  288D_7FE_2_11A0000=--------    |  bbcradio4fm=--------
+1_0_2_288E_7FE_2_11A0000_0_0_0     |  BBC Radio 4 LW    |  288E_7FE_2_11A0000=--------    |  bbcradio4lw=--------
+1_0_2_1901_7FF_2_11A0000_0_0_0     |  BBC Radio 5L      |  1901_7FF_2_11A0000=--------    |  bbcradio5l=--------
+1_0_2_1940_7FF_2_11A0000_0_0_0     |  BBC Radio 5SX     |  1940_7FF_2_11A0000=--------    |  bbcradio5sx=--------
+1_0_2_2897_7FE_2_11A0000_0_0_0     |  BBCRadioFoyle     |  2897_7FE_2_11A0000=--------    |  bbcradiofoyle=--------
+1_0_2_1946_7FF_2_11A0000_0_0_0     |  BBCRadioLondon    |  1946_7FF_2_11A0000=--------    |  bbcradiolondon=--------
+1_0_1_18F6_7FD_2_11A0000_0_0_0     |  BBC RB 1          |  18F6_7FD_2_11A0000=--------    |  bbcrb1=bbcredbutton
+1_0_2_2895_7FE_2_11A0000_0_0_0     |  BBC R Cymru       |  2895_7FE_2_11A0000=--------    |  bbcrcymru=bbcradioasiannetwork
+1_0_2_2893_7FE_2_11A0000_0_0_0     |  BBC RnGaidheal    |  2893_7FE_2_11A0000=--------    |  bbcrngaidheal=--------
+1_0_2_2892_7FE_2_11A0000_0_0_0     |  BBC R Scotland    |  2892_7FE_2_11A0000=--------    |  bbcrscotland=--------
+1_0_2_2896_7FE_2_11A0000_0_0_0     |  BBC R Ulster      |  2896_7FE_2_11A0000=--------    |  bbcrulster=--------
+1_0_2_2894_7FE_2_11A0000_0_0_0     |  BBC R Wales       |  2894_7FE_2_11A0000=--------    |  bbcrwales=--------
+1_0_1_286F_800_2_11A0000_0_0_0     |  BBC Three         |  286F_800_2_11A0000=--------    |  bbcthree=bbcthree
+1_0_19_1B27_802_2_11A0000_0_0_0    |  BBC Three HD      |  1B27_802_2_11A0000=--------    |  bbcthreehd=bbcthreehd
+1_0_1_189E_7FD_2_11A0000_0_0_0     |  BBC Two Eng       |  189E_7FD_2_11A0000=--------    |  bbctwoeng=bbctwo
+1_0_19_1B1C_802_2_11A0000_0_0_0    |  BBC Two HD        |  1B1C_802_2_11A0000=--------    |  bbctwohd=bbctwohd
+1_0_1_287A_800_2_11A0000_0_0_0     |  BBC Two NI        |  287A_800_2_11A0000=--------    |  bbctwoni=bbctwo
+1_0_1_1916_7FF_2_11A0000_0_0_0     |  BBC Two Scot      |  1916_7FF_2_11A0000=--------    |  bbctwoscot=bbctwo
+1_0_1_2848_7FE_2_11A0000_0_0_0     |  BBC Two Wales     |  2848_7FE_2_11A0000=--------    |  bbctwowales=bbctwo
+1_0_2_2891_7FE_2_11A0000_0_0_0     |  BBC World Sv      |  2891_7FE_2_11A0000=--------    |  bbcworldsv=--------
+1_0_1_C789_815_2_11A0000_0_0_0     |  BET               |  C789_815_2_11A0000=--------    |  bet=bet
+1_0_2_CB3C_839_2_11A0000_0_0_0     |  BFBS Radio        |  CB3C_839_2_11A0000=--------    |  bfbsradio=--------
+1_0_1_CD46_844_2_11A0000_0_0_0     |  Bloomberg TV      |  CD46_844_2_11A0000=--------    |  bloombergtv=--------
+1_0_2_2558_82F_2_11A0000_0_0_0     |  Capital FM        |  2558_82F_2_11A0000=--------    |  capitalfm=capital
+1_0_1_D748_82F_2_11A0000_0_0_0     |  CAPITAL TV        |  D748_82F_2_11A0000=--------    |  capitaltv=capitaltv
+1_0_2_254D_82F_2_11A0000_0_0_0     |  Capital XTRA      |  254D_82F_2_11A0000=--------    |  capitalxtra=--------
+1_0_1_2870_800_2_11A0000_0_0_0     |  CBBC              |  2870_800_2_11A0000=--------    |  cbbc=cbbc
+1_0_19_1B28_802_2_11A0000_0_0_0    |  CBBC HD           |  1B28_802_2_11A0000=--------    |  cbbchd=cbbchd
+1_0_1_18AE_7FD_2_11A0000_0_0_0     |  CBeebies          |  18AE_7FD_2_11A0000=--------    |  cbeebies=cbeebies
+1_0_19_22E4_80D_2_11A0000_0_0_0    |  CBeebies HD       |  22E4_80D_2_11A0000=--------    |  cbeebieshd=cbeebieshd
+1_0_1_D1CE_841_2_11A0000_0_0_0     |  CBS Action        |  D1CE_841_2_11A0000=--------    |  cbsaction=cbsaction
+1_0_1_C6D7_840_2_11A0000_0_0_0     |  CBS Drama         |  C6D7_840_2_11A0000=--------    |  cbsdrama=cbsdrama
+1_0_1_CD19_844_2_11A0000_0_0_0     |  CBS Reality       |  CD19_844_2_11A0000=--------    |  cbsreality=cbsreality
+1_0_1_CB86_83B_2_11A0000_0_0_0     |  CBS Reality +1    |  CB86_83B_2_11A0000=--------    |  cbsrealityplus1=cbsrealityplus1
+1_0_1_D3C8_829_2_11A0000_0_0_0     |  CCTV-NEWS         |  D3C8_829_2_11A0000=--------    |  cctvnews=cctvnews
+1_0_1_1799_7D7_2_11A0000_0_0_0     |  Challenge         |  1799_7D7_2_11A0000=--------    |  challenge=challenge
+1_0_1_179E_7D7_2_11A0000_0_0_0     |  Challenge +1      |  179E_7D7_2_11A0000=--------    |  challengeplus1=challengeplus1
+1_0_1_23FB_7F9_2_11A0000_0_0_0     |  Channel 4         |  23FB_7F9_2_11A0000=--------    |  channel4=channel4
+1_0_1_2077_7FA_2_11A0000_0_0_0     |  Channel 4 + 1     |  2077_7FA_2_11A0000=--------    |  channel4plus1=channel4plus1
+1_0_19_52D0_814_2_11A0000_0_0_0    |  Channel 4 HD      |  52D0_814_2_11A0000=--------    |  channel4hd=channel4hd
+1_0_1_1E15_809_2_11A0000_0_0_0     |  Channel 5         |  1E15_809_2_11A0000=--------    |  channel5=channel5
+1_0_1_1E28_809_2_11A0000_0_0_0     |  Channel 5 +1      |  1E28_809_2_11A0000=--------    |  channel5plus1=channel5plus1
+1_0_1_1E24_809_2_11A0000_0_0_0     |  Channel 5+24      |  1E24_809_2_11A0000=--------    |  channel5plus24=channel5plus24
+1_0_1_CB8B_83B_2_11A0000_0_0_0     |  CHANNEL AKA       |  CB8B_83B_2_11A0000=--------    |  channelaka=channelaka
+1_0_1_D7A2_840_2_11A0000_0_0_0     |  CHANNELS24        |  D7A2_840_2_11A0000=--------    |  channels24=channels24
+1_0_1_D075_83E_2_11A0000_0_0_0     |  Chart Show TV     |  D075_83E_2_11A0000=--------    |  chartshowtv=chartshowtv
+1_0_1_D74A_82F_2_11A0000_0_0_0     |  CHILLED           |  D74A_82F_2_11A0000=--------    |  chilled=--------
+1_0_1_2757_7FC_2_11A0000_0_0_0     |  CITV              |  2757_7FC_2_11A0000=--------    |  citv=childrenitv
+1_0_2_2562_82F_2_11A0000_0_0_0     |  Classic FM        |  2562_82F_2_11A0000=--------    |  classicfm=classicfm
+1_0_1_D749_82F_2_11A0000_0_0_0     |  CLUBLAND TV       |  D749_82F_2_11A0000=--------    |  clublandtv=clublandtv
+1_0_1_C6C2_82A_2_11A0000_0_0_0     |  CNBC              |  C6C2_82A_2_11A0000=--------    |  cnbc=cnbc
+1_0_1_C42C_813_2_11A0000_0_0_0     |  CNN               |  C42C_813_2_11A0000=--------    |  cnn=cnn
+1_0_1_CB52_839_2_11A0000_0_0_0     |  Colors            |  CB52_839_2_11A0000=--------    |  colors=colors
+1_0_1_1291_7EA_2_11A0000_0_0_0     |  COMMUNITY         |  1291_7EA_2_11A0000=--------    |  community=communitychannel
+1_0_1_CC0B_83D_2_11A0000_0_0_0     |  Craft Extra       |  CC0B_83D_2_11A0000=--------    |  craftextra=createandcraftextra
+1_0_1_CC0A_83D_2_11A0000_0_0_0     |  Create & Craft    |  CC0A_83D_2_11A0000=--------    |  createandcraft=createandcraft
+1_0_1_D043_83E_2_11A0000_0_0_0     |  Dancember         |  D043_83E_2_11A0000=--------    |  dancember=--------
+1_0_1_CB8E_83B_2_11A0000_0_0_0     |  DAYSTAR TV        |  CB8E_83B_2_11A0000=--------    |  daystartv=daystartv
+1_0_1_197A_7E6_2_11A0000_0_0_0     |  Drama             |  197A_7E6_2_11A0000=--------    |  drama=drama-clivebesle
+1_0_1_2071_7FA_2_11A0000_0_0_0     |  E4                |  2071_7FA_2_11A0000=--------    |  e4=e4
+1_0_1_206C_7FA_2_11A0000_0_0_0     |  E4 + 1            |  206C_7FA_2_11A0000=--------    |  e4plus1=e4plus1
+1_0_1_D3D0_829_2_11A0000_0_0_0     |  euronews          |  D3D0_829_2_11A0000=--------    |  euronews=euronews
+1_0_1_D863_838_2_11A0000_0_0_0     |  Fashion One       |  D863_838_2_11A0000=--------    |  fashionone=fashionone
+1_0_1_2404_7F9_2_11A0000_0_0_0     |  Film4             |  2404_7F9_2_11A0000=--------    |  film4=filmfour
+1_0_1_2409_7F9_2_11A0000_0_0_0     |  Film4 + 1         |  2409_7F9_2_11A0000=--------    |  film4plus1=filmfourplus1
+1_0_1_CB30_839_2_11A0000_0_0_0     |  Film On TV        |  CB30_839_2_11A0000=--------    |  filmontv=--------
+1_0_1_CD14_844_2_11A0000_0_0_0     |  Food Network      |  CD14_844_2_11A0000=--------    |  foodnetwork=foodnetwork
+1_0_1_CD1E_844_2_11A0000_0_0_0     |  Food Network+1    |  CD1E_844_2_11A0000=--------    |  foodnetworkplus1=--------
+1_0_1_1791_7D7_2_11A0000_0_0_0     |  Forces TV         |  1791_7D7_2_11A0000=--------    |  forcestv=forcestv
+1_0_1_CD5A_844_2_11A0000_0_0_0     |  France 24         |  CD5A_844_2_11A0000=--------    |  france24=france24
+1_0_1_1CE8_7F6_2_11A0000_0_0_0     |  Freesat 4K        |  1CE8_7F6_2_11A0000=--------    |  freesat4k=--------
+1_0_1_CD28_844_2_11A0000_0_0_0     |  Gems TV           |  CD28_844_2_11A0000=--------    |  gemstv=gemstv
+1_0_1_CB9E_83C_2_11A0000_0_0_0     |  GOD Channel       |  CB9E_83C_2_11A0000=--------    |  godchannel=godtv
+1_0_2_2559_82F_2_11A0000_0_0_0     |  Gold              |  2559_82F_2_11A0000=--------    |  gold=gold
+1_0_1_253B_82F_2_11A0000_0_0_0     |  GR SHOP           |  253B_82F_2_11A0000=--------    |  grshop=--------
+1_0_2_CB3E_839_2_11A0000_0_0_0     |  Heart             |  CB3E_839_2_11A0000=--------    |  heart=heart
+1_0_1_D747_82F_2_11A0000_0_0_0     |  Heart Xmas        |  D747_82F_2_11A0000=--------    |  heartxmas=--------
+1_0_1_D73E_82F_2_11A0000_0_0_0     |  HIGH STREET TV    |  D73E_82F_2_11A0000=--------    |  highstreettv=highstreettv
+1_0_1_2541_82F_2_11A0000_0_0_0     |  Hochanda          |  2541_82F_2_11A0000=--------    |  hochanda=hochanda
+1_0_1_D1C4_841_2_11A0000_0_0_0     |  horror ch+1       |  D1C4_841_2_11A0000=--------    |  horrorchplus1=horrorchannelplus1
+1_0_1_CB89_83B_2_11A0000_0_0_0     |  horror channel    |  CB89_83B_2_11A0000=--------    |  horrorchannel=horrorchannel
+1_0_1_CC09_83D_2_11A0000_0_0_0     |  IDEAL EXTRA       |  CC09_83D_2_11A0000=--------    |  idealextra=idealextra
+1_0_1_CC08_83D_2_11A0000_0_0_0     |  Ideal World       |  CC08_83D_2_11A0000=--------    |  idealworld=idealworld
+1_0_1_CB26_839_2_11A0000_0_0_0     |  Information TV    |  CB26_839_2_11A0000=--------    |  informationtv=informationtv
+1_0_1_C4D6_811_2_11A0000_0_0_0     |  Inspiration TV    |  C4D6_811_2_11A0000=--------    |  inspirationtv=--------
+1_0_1_CB5C_839_2_11A0000_0_0_0     |  IRISH TV          |  CB5C_839_2_11A0000=--------    |  irishtv=irishtv
+1_0_1_D10B_90C_2_11A0000_0_0_0     |  ISLAM CHANNEL     |  D10B_90C_2_11A0000=--------    |  islamchannel=islamchannel
+1_0_1_274C_7FC_2_11A0000_0_0_0     |  ITV               |  274C_7FC_2_11A0000=--------    |  itv=itv
+1_0_1_27AB_805_2_11A0000_0_0_0     |  ITV +1            |  27AB_805_2_11A0000=--------    |  itvplus1=itvplus1
+1_0_1_2756_7FC_2_11A0000_0_0_0     |  ITV2              |  2756_7FC_2_11A0000=--------    |  itv2=itv2
+1_0_1_27B5_805_2_11A0000_0_0_0     |  ITV2+1            |  27B5_805_2_11A0000=--------    |  itv2plus1=itv2plus1
+1_0_1_2814_806_2_11A0000_0_0_0     |  ITV3              |  2814_806_2_11A0000=--------    |  itv3=itv3
+1_0_1_2815_806_2_11A0000_0_0_0     |  ITV3+1            |  2815_806_2_11A0000=--------    |  itv3plus1=itv3plus1
+1_0_1_2758_7FC_2_11A0000_0_0_0     |  ITV4              |  2758_7FC_2_11A0000=--------    |  itv4=itv4
+1_0_1_2759_7FC_2_11A0000_0_0_0     |  ITV4+1            |  2759_7FC_2_11A0000=--------    |  itv4plus1=itv4plus1
+1_0_1_275B_7FC_2_11A0000_0_0_0     |  ITVBe             |  275B_7FC_2_11A0000=--------    |  itvbe=itvbe
+1_0_1_279B_805_2_11A0000_0_0_0     |  ITVBe+1           |  279B_805_2_11A0000=--------    |  itvbeplus1=itvbeplus1
+1_0_19_5208_812_2_11A0000_0_0_0    |  ITV HD            |  5208_812_2_11A0000=--------    |  itvhd=itvhd
+1_0_2_D851_838_2_11A0000_0_0_0     |  JazzFM            |  D851_838_2_11A0000=--------    |  jazzfm=jazzfm
+1_0_1_D1C9_841_2_11A0000_0_0_0     |  JewelleryMaker    |  D1C9_841_2_11A0000=--------    |  jewellerymaker=jewellerymaker
+1_0_1_D386_830_2_11A0000_0_0_0     |  JML Direct        |  D386_830_2_11A0000=--------    |  jmldirect=jml
+1_0_1_2EEA_7F8_2_11A0000_0_0_0     |  Kiss              |  2EEA_7F8_2_11A0000=--------    |  kiss=kiss
+1_0_1_D066_83E_2_11A0000_0_0_0     |  Kix               |  D066_83E_2_11A0000=--------    |  kix=kix
+1_0_1_D070_83E_2_11A0000_0_0_0     |  Kix +1            |  D070_83E_2_11A0000=--------    |  kixplus1=kixplus1
+1_0_2_CB3D_839_2_11A0000_0_0_0     |  LBC               |  CB3D_839_2_11A0000=--------    |  lbc=lbc
+1_0_1_D1D8_841_2_11A0000_0_0_0     |  Magic             |  D1D8_841_2_11A0000=--------    |  magic=magic
+1_0_1_2094_7FA_2_11A0000_0_0_0     |  More4             |  2094_7FA_2_11A0000=--------    |  more4=more4
+1_0_1_240E_7F9_2_11A0000_0_0_0     |  More4 + 1         |  240E_7F9_2_11A0000=--------    |  more4plus1=more4plus1
+1_0_1_D35E_830_2_11A0000_0_0_0     |  more>movies       |  D35E_830_2_11A0000=--------    |  moremovies=morethanmovies
+1_0_1_C6D0_82A_2_11A0000_0_0_0     |  more>movies+1     |  C6D0_82A_2_11A0000=--------    |  moremoviesplus1=--------
+1_0_1_C7AC_817_2_11A0000_0_0_0     |  Movies4Men        |  C7AC_817_2_11A0000=--------    |  movies4men=movies4men
+1_0_1_C7AE_817_2_11A0000_0_0_0     |  Movies4Men+1      |  C7AE_817_2_11A0000=--------    |  movies4menplus1=--------
+1_0_19_CF9B_83A_2_11A0000_0_0_0    |  NHK WORLD HD      |  CF9B_83A_2_11A0000=--------    |  nhkworldhd=nhkworld
+1_0_1_CB2A_839_2_11A0000_0_0_0     |  NOW Christmas     |  CB2A_839_2_11A0000=--------    |  nowchristmas=--------
+1_0_1_CC01_83D_2_11A0000_0_0_0     |  PBS America       |  CC01_83D_2_11A0000=--------    |  pbsamerica=pbs
+1_0_1_1299_7EA_2_11A0000_0_0_0     |  PICK              |  1299_7EA_2_11A0000=--------    |  pick=pick
+1_0_1_13FD_7EA_2_11A0000_0_0_0     |  PICK +1           |  13FD_7EA_2_11A0000=--------    |  pickplus1=pickplus1
+1_0_2_2567_82F_2_11A0000_0_0_0     |  PlanetRock        |  2567_82F_2_11A0000=--------    |  planetrock=--------
+1_0_1_D05C_83E_2_11A0000_0_0_0     |  POP               |  D05C_83E_2_11A0000=--------    |  pop=pop
+1_0_1_19C8_7DD_2_11A0000_0_0_0     |  QVC               |  19C8_7DD_2_11A0000=--------    |  qvc=qvc
+1_0_1_19CB_7DD_2_11A0000_0_0_0     |  QVC Beauty        |  19CB_7DD_2_11A0000=--------    |  qvcbeauty=qvcbeauty
+1_0_1_19C9_7DD_2_11A0000_0_0_0     |  QVC Extra         |  19C9_7DD_2_11A0000=--------    |  qvcextra=qvcextra
+1_0_1_19CA_7DD_2_11A0000_0_0_0     |  QVC Style         |  19CA_7DD_2_11A0000=--------    |  qvcstyle=qvcstyle
+1_0_2_2557_82F_2_11A0000_0_0_0     |  Radio X           |  2557_82F_2_11A0000=--------    |  radiox=--------
+1_0_1_197B_7E6_2_11A0000_0_0_0     |  Really            |  197B_7E6_2_11A0000=--------    |  really=really
+1_0_1_CB9F_83C_2_11A0000_0_0_0     |  Revelation        |  CB9F_83C_2_11A0000=--------    |  revelation=revelationtv
+1_0_1_CB87_83B_2_11A0000_0_0_0     |  Rishtey           |  CB87_83B_2_11A0000=--------    |  rishtey=rishtey
+1_0_1_253D_82F_2_11A0000_0_0_0     |  Rocks and Co1     |  253D_82F_2_11A0000=--------    |  rocksandco1=rocksandco
+1_0_2_258C_7FB_2_11A0000_0_0_0     |  RTE 2fm           |  258C_7FB_2_11A0000=--------    |  rte2fm=rte2fm
+1_0_2_258E_7FB_2_11A0000_0_0_0     |  RTE Lyric fm      |  258E_7FB_2_11A0000=--------    |  rtelyricfm=rtelyricfm
+1_0_2_258B_7FB_2_11A0000_0_0_0     |  RTE Radio 1       |  258B_7FB_2_11A0000=--------    |  rteradio1=rteradio1
+1_0_2_258D_7FB_2_11A0000_0_0_0     |  RTE RnaG          |  258D_7FB_2_11A0000=--------    |  rternag=rtraidinagaeltachta
+1_0_19_CF9C_83A_2_11A0000_0_0_0    |  RT HD             |  CF9C_83A_2_11A0000=--------    |  rthd=rt
+1_0_1_D7FF_840_2_11A0000_0_0_0     |  S4C Digidol       |  D7FF_840_2_11A0000=--------    |  s4cdigidol=--------
+1_0_1_CB61_839_2_11A0000_0_0_0     |  Showcase          |  CB61_839_2_11A0000=--------    |  showcase=showcasetv
+1_0_1_1260_7EA_2_11A0000_0_0_0     |  Sky News          |  1260_7EA_2_11A0000=--------    |  skynews=skynews-clivebesle
+1_0_2_D75C_82F_2_11A0000_0_0_0     |  Smooth RadioUK    |  D75C_82F_2_11A0000=--------    |  smoothradiouk=--------
+1_0_1_D138_90C_2_11A0000_0_0_0     |  Sonlife TV        |  D138_90C_2_11A0000=--------    |  sonlifetv=--------
+1_0_1_D35B_830_2_11A0000_0_0_0     |  SONY SAB          |  D35B_830_2_11A0000=--------    |  sonysab=sonysab
+1_0_1_1E32_809_2_11A0000_0_0_0     |  Spike             |  1E32_809_2_11A0000=--------    |  spike=spike
+1_0_1_D057_83E_2_11A0000_0_0_0     |  Starz TV          |  D057_83E_2_11A0000=--------    |  starztv=starztv-clivebesle
+1_0_2_27FE_806_2_11A0000_0_0_0     |  talkSPORT         |  27FE_806_2_11A0000=--------    |  talksport=talksport
+1_0_1_D11A_90C_2_11A0000_0_0_0     |  Thane             |  D11A_90C_2_11A0000=--------    |  thane=thanedirect
+1_0_1_2EE5_7F8_2_11A0000_0_0_0     |  The Box           |  2EE5_7F8_2_11A0000=--------    |  thebox=thebox
+1_0_1_D06B_83E_2_11A0000_0_0_0     |  The Vault         |  D06B_83E_2_11A0000=--------    |  thevault=thevault
+1_0_1_D052_83E_2_11A0000_0_0_0     |  Tiny Pop          |  D052_83E_2_11A0000=--------    |  tinypop=tinypop
+1_0_1_D061_83E_2_11A0000_0_0_0     |  Tiny Pop +1       |  D061_83E_2_11A0000=--------    |  tinypopplus1=tinypopplus1
+1_0_1_D110_90C_2_11A0000_0_0_0     |  TJC               |  D110_90C_2_11A0000=--------    |  tjc=thejewellerychannel
+1_0_1_CB66_839_2_11A0000_0_0_0     |  TJC Choice        |  CB66_839_2_11A0000=--------    |  tjcchoice=thejewellerychannelchoice
+1_0_1_CB84_83B_2_11A0000_0_0_0     |  Travel Ch +1      |  CB84_83B_2_11A0000=--------    |  travelchplus1=travelchannelplus1
+1_0_1_D356_830_2_11A0000_0_0_0     |  Travel Channel    |  D356_830_2_11A0000=--------    |  travelchannel=travelchannel
+1_0_1_D048_83E_2_11A0000_0_0_0     |  True Christmas    |  D048_83E_2_11A0000=--------    |  truechristmas=--------
+1_0_1_D084_83E_2_11A0000_0_0_0     |  True Drama        |  D084_83E_2_11A0000=--------    |  truedrama=truedrama
+1_0_1_D07F_83E_2_11A0000_0_0_0     |  True Ent          |  D07F_83E_2_11A0000=--------    |  trueent=trueentertainment
+1_0_1_D04D_83E_2_11A0000_0_0_0     |  True Movies 2     |  D04D_83E_2_11A0000=--------    |  truemovies2=truemovies2
+1_0_1_D355_830_2_11A0000_0_0_0     |  truTV             |  D355_830_2_11A0000=--------    |  trutv=trutv
+1_0_2_D845_838_2_11A0000_0_0_0     |  TWR               |  D845_838_2_11A0000=--------    |  twr=--------
+1_0_1_CBD4_83B_2_11A0000_0_0_0     |  Vintage TV        |  CBD4_83B_2_11A0000=--------    |  vintagetv=vintagetv
+1_0_1_1B61_7DA_2_11A0000_0_0_0     |  VIVA              |  1B61_7DA_2_11A0000=--------    |  viva=viva-clivebesle
+1_0_1_1969_7E6_2_11A0000_0_0_0     |  Yesterday         |  1969_7E6_2_11A0000=--------    |  yesterday=yesterday
+1_0_1_CD3C_844_2_11A0000_0_0_0     |  YourTV            |  CD3C_844_2_11A0000=--------    |  yourtv=yourtv
