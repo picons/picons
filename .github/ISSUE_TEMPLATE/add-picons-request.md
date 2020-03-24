@@ -1,7 +1,7 @@
 ---
-name: Add picons request
-about: This template helps you make a proper request to add picons
-title: "A description of what you'd like to add"
+name: Update request
+about: This template helps you make a proper request to update logos or *.index entries
+title: A description of what you are updating by this request
 labels: update
 assignees: ''
 
