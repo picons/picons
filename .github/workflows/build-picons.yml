@@ -1,0 +1,22 @@
+name: Build Picons
+on:
+  release:
+    types: [created]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@master
+    - name: Build the picons
+      run: |
+        sudo apt update
+        sudo apt install -y --no-install-recommends --no-install-suggests git xz-utils binutils pngquant imagemagick librsvg2-bin jq
+        bash 2-build-picons.sh snp-full
+        bash 2-build-picons.sh srp-full
+    - name: Upload the picons
+      uses: skx/github-action-publish-binaries@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        args: 'build-output/binaries-*-full/*'
