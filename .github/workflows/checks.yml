@@ -3,9 +3,13 @@ on:
   push:
     branches:
       - master
+    paths:
+      - 'build-source/**'
   pull_request:
     branches:
       - master
+    paths:
+      - 'build-source/**'
 
 jobs:
   checks:
