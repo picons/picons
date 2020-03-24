@@ -4,12 +4,16 @@ on:
     branches:
       - master
     paths:
-      - 'build-source/**'
+      - 'build-source/logos/**'
+      - 'build-source/snp.index'
+      - 'build-source/srp.index'
   pull_request:
     branches:
       - master
     paths:
-      - 'build-source/**'
+      - 'build-source/logos/**'
+      - 'build-source/snp.index'
+      - 'build-source/srp.index'
 
 jobs:
   checks:
