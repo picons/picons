@@ -1,0 +1,13 @@
+name: Check for faults
+on: push
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Checking for faults...
+      run: |
+        bash ./resources/tools/check-index.sh ./build-source srp
+        bash ./resources/tools/check-index.sh ./build-source snp
+        bash ./resources/tools/check-logos.sh ./build-source/logos
