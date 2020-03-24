@@ -1,5 +1,11 @@
 name: Check for faults
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   checks:
