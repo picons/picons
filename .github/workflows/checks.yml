@@ -1,5 +1,5 @@
 name: Check for faults
-on: push
+on: [push, pull_request]
 
 jobs:
   checks:
