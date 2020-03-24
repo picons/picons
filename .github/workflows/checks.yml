@@ -10,6 +10,10 @@ on:
   pull_request:
     branches:
       - master
+    paths:
+      - 'build-source/logos/**'
+      - 'build-source/snp.index'
+      - 'build-source/srp.index'
 
 jobs:
   checks:
