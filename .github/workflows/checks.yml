@@ -8,6 +8,7 @@ jobs:
     - uses: actions/checkout@master
     - name: Checking for faults...
       run: |
-        bash ./resources/tools/check-index.sh ./build-source srp
-        bash ./resources/tools/check-index.sh ./build-source snp
-        bash ./resources/tools/check-logos.sh ./build-source/logos
+        bash ./resources/tools/check-index.sh ./build-source srp $PWD/errors_detected
+        bash ./resources/tools/check-index.sh ./build-source snp $PWD/errors_detected
+        bash ./resources/tools/check-logos.sh ./build-source/logos $PWD/errors_detected
+        [[ -f $PWD/errors_detected ]] && exit 1
