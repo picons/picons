@@ -8,6 +8,6 @@ jobs:
     - uses: actions/checkout@master
     - name: Build
       run: |
-        apt update
-        apt install -y --no-install-recommends --no-install-suggests git xz-utils binutils pngquant imagemagick librsvg2-bin jq
+        sudo apt update
+        sudo apt install -y --no-install-recommends --no-install-suggests git xz-utils binutils pngquant imagemagick librsvg2-bin jq
         bash 2-build-picons.sh srp-full
