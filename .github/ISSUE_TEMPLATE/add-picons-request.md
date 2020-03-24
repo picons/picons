@@ -1,8 +1,8 @@
 ---
 name: Add picons request
 about: This template helps you make a proper request to add picons
-title: "[ADD] a description of what you'd like to add"
-labels: enhancement
+title: "A description of what you'd like to add"
+labels: update
 assignees: ''
 
 ---
