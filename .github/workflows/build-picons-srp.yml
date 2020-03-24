@@ -1,0 +1,13 @@
+name: Build Picons SRP
+on: push
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Build
+      run: |
+        apt update
+        apt install -y --no-install-recommends --no-install-suggests git xz-utils binutils pngquant imagemagick librsvg2-bin jq
+        bash 2-build-picons.sh srp-full
