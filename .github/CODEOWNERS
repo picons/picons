@@ -1,2 +1,2 @@
-*              @hotio
-/build-source/ @picons/piconcreators
+*.sh      @hotio
+/.github/ @hotio
