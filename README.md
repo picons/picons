@@ -1,4 +1,4 @@
-# PICONS
+# PICONSgg
 
 All the full resolution channel logos and their link to the actual channel (=serviceref) are kept up2date in this repository. The end result are picons for Enigma2 tuners and Kodi mediacenter in combination with a compatible PVR backend.
 
