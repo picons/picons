@@ -12,7 +12,9 @@ jobs:
         uses: actions/checkout@master
       - name: Get current version
         id: version
-        run: echo "::set-output name=version::$(date --date=@$(git show -s --format=%ct $(git rev-parse --short HEAD)) +'%Y-%m-%d--%H-%M-%S')"
+        run: |
+          hash=$(git rev-parse --short HEAD)
+          echo "::set-output name=version::$(date --date=@$(git show -s --format=%ct $hash) +'%Y-%m-%d--%H-%M-%S')"
       - name: Create Release
         id: create_release
         uses: actions/create-release@latest
