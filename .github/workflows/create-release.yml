@@ -1,0 +1,27 @@
+name: Create Release
+on:
+  schedule:
+    - cron:  '15,45 * * * *'
+
+jobs:
+  build:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@master
+      - name: Get current version
+        id: version
+        run: echo "::set-output name=version::$(date --date=@$(git show -s --format=%ct $(git rev-parse --short HEAD)) +'%Y-%m-%d--%H-%M-%S')"
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        with:
+          tag_name: ${{steps.version.outputs.version}}
+          release_name: ${{steps.version.outputs.version}}
+          body: |
+            Picon packages can take up to an hour to appear here...
+          draft: false
+          prerelease: false
