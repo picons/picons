@@ -126,12 +126,12 @@ mkdir $binaries
 if [[ -d $location/.git ]] && which git &> /dev/null; then
     cd $location
     hash=$(git rev-parse --short HEAD)
-    version=$(date --date=@$(git show -s --format=%ct $hash) +'%Y-%m-%d--%H-%M-%S')
-    timestamp=$(date --date=@$(git show -s --format=%ct $hash) +'%Y%m%d%H%M.%S')
+    version=$(date --utc --date=@$(git show -s --format=%ct $hash) +'%Y-%m-%d--%H-%M-%S')
+    timestamp=$(date --utc --date=@$(git show -s --format=%ct $hash) +'%Y%m%d%H%M.%S')
 else
-    epoch="date +%s"
-    version=$(date --date=@$($epoch) +'%Y-%m-%d--%H-%M-%S')
-    timestamp=$(date --date=@$($epoch) +'%Y%m%d%H%M.%S')
+    epoch="date --utc +%s"
+    version=$(date --utc --date=@$($epoch) +'%Y-%m-%d--%H-%M-%S')
+    timestamp=$(date --utc --date=@$($epoch) +'%Y%m%d%H%M.%S')
 fi
 
 echo "$(date +'%H:%M:%S') - INFO: Version: $version"
