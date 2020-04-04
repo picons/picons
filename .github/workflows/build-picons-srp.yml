@@ -7,16 +7,24 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout the repository
-      uses: actions/checkout@master
-    - name: Build the picons
+    - name: Install dependencies
       run: |
         sudo apt update
         sudo apt install -y --no-install-recommends --no-install-suggests git xz-utils binutils pngquant imagemagick librsvg2-bin jq
-        bash 2-build-picons.sh srp-full
-    - name: Upload the picons
+    - name: Checkout the repository
+      uses: actions/checkout@master
+    - name: Download channellists
+      run: |
+        curl -fsSL "https://github.com/picons/channellists/archive/master.tar.gz" | tar xzf - -C "./build-input" --strip-components=1
+    - name: Build 13e.19e.23e.28e picons
+      run: |
+        mv ./build-input/13e.19e.23e.28e ./build-input/enigma2
+        bash 1-build-servicelist.sh srp
+        bash 2-build-picons.sh srp 13e.19e.23e.28e.
+        rm -rf ./build-input/enigma2
+    - name: Upload 13e.19e.23e.28e picons
       uses: skx/github-action-publish-binaries@master
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        args: 'build-output/binaries-srp-full/*'
+        args: 'build-output/binaries-srp/*'
