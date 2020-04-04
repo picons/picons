@@ -1,4 +1,4 @@
-name: Build Picons snp
+name: Build Picons snp-full
 on:
   release:
     types: [published]
@@ -13,16 +13,10 @@ jobs:
         sudo apt install -y --no-install-recommends --no-install-suggests git xz-utils binutils pngquant imagemagick librsvg2-bin jq
     - name: Checkout the repository
       uses: actions/checkout@master
-    - name: Download channellists
+    - name: Build snp-full picons
       run: |
-        curl -fsSL "https://github.com/picons/channellists/archive/master.tar.gz" | tar xzf - -C "./build-input" --strip-components=1
-    - name: Build snp-13e.19e.23e.28e picons
-      run: |
-        mv ./build-input/13e.19e.23e.28e ./build-input/enigma2
-        bash 1-build-servicelist.sh snp
-        bash 2-build-picons.sh snp -13e.19e.23e.28e
-        rm -rf ./build-input/enigma2
-    - name: Upload snp-13e.19e.23e.28e picons
+        bash 2-build-picons.sh snp-full
+    - name: Upload snp-full picons
       uses: skx/github-action-publish-binaries@master
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
