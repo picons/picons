@@ -181,8 +181,8 @@ grep -v -e '^#' -e '^$' $backgroundsconf | while read lines ; do
     type=${line[2]}
     background=${line[3]}
     tag=$2
-    packagenamenoversion=$tag$style.$resolution-$resize.$type.on.$background
-    packagename=$tag$style.$resolution-$resize.$type.on.${background}_${version}
+    packagenamenoversion=$style$tag.$resolution-$resize.$type.on.$background
+    packagename=$style$tag.$resolution-$resize.$type.on.${background}_${version}
 
     mkdir -p $temp/package/picon/logos
 
