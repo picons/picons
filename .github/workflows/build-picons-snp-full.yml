@@ -21,4 +21,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        args: 'build-output/binaries-snp/*'
+        args: 'build-output/binaries-snp-full/*'
