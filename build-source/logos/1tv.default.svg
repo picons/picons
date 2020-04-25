@@ -1,6 +1,5 @@
-<svg width="141.06mm" height="211.67mm" version="1.1" viewBox="0 0 141.06 211.67" xmlns="http://www.w3.org/2000/svg">
- <g transform="translate(127.98 -72.482)" fill="#e6003c">
-  <path d="m-127.98 284.15 70.482-72.873v-138.79l-70.482 69.296z" fill-opacity=".8"/>
-  <path d="m-0.052601 128.97v25.817l13.129-12.909zm-57.447 82.306v-138.79l32.331 31.792-26.251 22.251 12.905 14.717 18.699-15.856v48.835z"/>
+<svg width="70.367mm" height="211.67mm" version="1.1" viewBox="0 0 70.367 211.67" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(26.051 78.628)">
+  <path d="m-26.051-8.147 70.367-70.481v141.19l-70.367 70.481z" fill="#ed1847" opacity=".97"/>
  </g>
 </svg>
