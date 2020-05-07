@@ -28,3 +28,15 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
         args: 'build-output/binaries-snp/*'
+    - name: Build snp-ziggo picons
+      run: |
+        mv ./build-input/ziggo ./build-input/enigma2
+        bash 1-build-servicelist.sh snp
+        bash 2-build-picons.sh snp -ziggo
+        rm -rf ./build-input/enigma2
+    - name: Upload snp-ziggo picons
+      uses: skx/github-action-publish-binaries@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+      with:
+        args: 'build-output/binaries-snp/*'
