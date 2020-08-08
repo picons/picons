@@ -1,0 +1,49 @@
+<svg width="271.97mm" height="30mm" version="1.1" viewBox="0 0 271.97 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="b" x1="-9.2076e-6" x2="3.4355" y1="17.075" y2="17.075" gradientTransform="scale(1.6468 .60723)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="a">
+   <stop stop-color="#fff" offset="0"/>
+   <stop stop-color="#fff" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="c" x1="-8.7939e-6" x2="3.2812" y1="8.0581" y2="8.0581" gradientTransform="scale(1.7243 .57995)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="d" x1="22.006" x2="25.441" y1="17.074" y2="17.074" gradientTransform="scale(1.6467 .60727)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="e" x1="21.017" x2="24.298" y1="8.0577" y2="8.0577" gradientTransform="scale(1.7242 .57998)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="f" x1="46.389" x2="49.824" y1="17.075" y2="17.075" gradientTransform="scale(1.6468 .60723)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="g" x1="44.304" x2="47.586" y1="8.0581" y2="8.0581" gradientTransform="scale(1.7243 .57995)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+ </defs>
+ <g transform="translate(-141.89 -99.86)">
+  <g transform="matrix(5.128 0 0 5.128 -585.73 -412.23)">
+   <g transform="matrix(.38446 0 0 .38446 141.89 99.86)" fill-rule="evenodd">
+    <g fill="#fff">
+     <path d="m24.279 0v11.412h10.753v3.8041h-15.003c-0.75048 0-1.3582-0.60836-1.3582-1.3582v-13.858z"/>
+     <path d="m60.778 14.463-6.3036-12.473c-0.46063-0.91254 0.20196-1.9903 1.2242-1.9903h4.3551l5.0807 10.547c0.01247 0.0268 0.05049 0.02618 0.06296-6.23e-4l4.41-9.74c0.22252-0.49118 0.71183-0.80658 1.2504-0.80658h5.148l-6.7537 14.397c-0.23437 0.49928-0.73614 0.81842-1.2878 0.81842h-5.9627c-0.51736 0-0.99046-0.29109-1.2236-0.75235z"/>
+     <path d="m101.73 0.36838 8.6511 8.2821v-8.6504h5.5731c6.2e-4 0 1e-3 6.2332e-4 1e-3 0.0012466v13.816c0 0.77229-0.62581 1.3981-1.3981 1.3981h-3.8584c-0.35342 0-0.69313-0.13775-0.94745-0.38334l-9.3286-8.8399v9.222c0 6.23e-4 -5.5719 0.0012-5.5719 0.0012-6.24e-4 0-0.0012-6.24e-4 -0.0012-0.0012v-13.874c1.93e-4 -0.74051 0.60045-1.3401 1.3403-1.3401h4.6363c0.33784 0 0.66197 0.13214 0.90382 0.36838z"/>
+     <path d="M 16.831,3.7218 V 0 H 1.379 C 0.6173,0 2e-4,0.61771 2e-4,1.3788 v 2.3431 z"/>
+     <path d="m0.0037399 11.412v3.8041h15.614c0.76232 0 1.3807-0.61833 1.3807-1.3807v-2.4235z"/>
+     <path d="m0 5.6242h16.606v3.7019h-16.606z"/>
+    </g>
+    <path d="m0 9.3255 5.6579 2.0863v-2.0863z" fill="url(#b)"/>
+    <path d="m0 3.7218 5.6579 1.903v-1.903z" fill="url(#c)"/>
+    <g fill="#fff">
+     <path d="m53.068 3.7218v-3.7218h-15.452c-0.7617 0-1.3788 0.61771-1.3788 1.3788v2.3431z"/>
+     <path d="m36.241 11.412v3.8041h15.614c0.76232 0 1.3807-0.61833 1.3807-1.3807v-2.4235z"/>
+     <path d="m36.237 5.6242h16.606v3.7019h-16.606z"/>
+    </g>
+    <path d="m36.237 9.3255 5.6573 2.0863v-2.0863z" fill="url(#d)"/>
+    <path d="m36.237 3.7218 5.6573 1.903v-1.903z" fill="url(#e)"/>
+    <g fill="#fff">
+     <path d="m93.224 3.7218v-3.7218h-15.452c-0.7617 0-1.3788 0.61771-1.3788 1.3788v2.3431z"/>
+     <path d="m76.397 11.412v3.8041h15.614c0.76232 0 1.3807-0.61833 1.3807-1.3807v-2.4235z"/>
+     <path d="m76.393 5.6242h16.606v3.7019h-16.606z"/>
+    </g>
+    <path d="m76.393 9.3255 5.6579 2.0863v-2.0863z" fill="url(#f)"/>
+    <path d="m76.393 3.7218 5.6579 1.903v-1.903z" fill="url(#g)"/>
+   </g>
+   <g transform="matrix(.11954 0 0 .11954 -26.923 97.735)" fill="#fff" stroke="#656565" stroke-width="1px" aria-label="4">
+    <g>
+     <path d="m1827.6 17.773-26.322 29.494v9.0742h30.398v10.369h14.057v-10.369h10.111v-11.24h-10.111v-27.328zm4.0762 10.777v16.551h-14.705z" color="#000000" color-rendering="auto" dominant-baseline="auto" fill="#fff" image-rendering="auto" shape-rendering="auto" solid-color="#000000" stop-color="#000000" stroke="none" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-variation-settings:normal;inline-size:0;isolation:auto;mix-blend-mode:normal;shape-margin:0;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
