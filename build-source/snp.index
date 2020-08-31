@@ -1,3 +1,8 @@
+vtmhd=vtm
+vtm2=vtm2
+vtm2hd=vtm2
+vtm3=vtm3
+vtm4=vtm4
 radiocapodistria=radiocapodistria
 grandprixradio=grandprixradio
 deepradio=deepradio
@@ -10515,7 +10520,6 @@ radio2wvl=vrtradio2
 vrtradio2=vrtradio2
 vtc10=vtc10
 vtm=vtm
-vtmhd=vtmhd
 vtmkids=vtmkids
 vtmkidskanaalz=vtmkids_kanaalz
 vtmkidsjr=vtmkidsjr
