@@ -4,6 +4,7 @@
 23E1_446_1_C00000=cheriefm
 23DC_446_1_C00000=contactfm
 23CE_446_1_C00000=europe1
+23DB_446_1_C00000=fg
 23C3_446_1_C00000=fip
 23C7_446_1_C00000=francebleu
 23C6_446_1_C00000=franceculture
@@ -18,7 +19,6 @@
 23DE_446_1_C00000=nrj
 23D8_446_1_C00000=ouifm
 23CC_446_1_C00000=radioclassique
-23DB_446_1_C00000=radiofg
 23CB_446_1_C00000=radiofranceinternational
 23EA_446_1_C00000=radionotredame
 23DA_446_1_C00000=radionova
