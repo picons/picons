@@ -1,0 +1,42 @@
+<svg width="751.87mm" height="148mm" version="1.1" viewBox="0 0 751.87 148" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="i" x="-.00022624" y="-.00015042" width="1.0005" height="1.0003" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="0.0011971783"/>
+  </filter>
+  <filter id="h" x="-.00022626" y="-.00015042" width="1.0005" height="1.0003" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="0.0011971783"/>
+  </filter>
+  <filter id="g" x="-9.5774e-5" y="-.00015122" width="1.0002" height="1.0003" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="0.0011971783"/>
+  </filter>
+  <filter id="f" x="-9.9765e-5" y="-.00035915" width="1.0002" height="1.0007" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="0.0011971783"/>
+  </filter>
+  <filter id="e" x="-9.0631e-5" y="-.00014965" width="1.0002" height="1.0003" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="0.00031675343"/>
+  </filter>
+  <filter id="d" x="-9.4794e-5" y="-.00034205" width="1.0002" height="1.0007" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="0.00031675343"/>
+  </filter>
+  <filter id="c" x="-4.6903e-5" y="-.00035039" width="1.0001" height="1.0007" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="0.00031675343"/>
+  </filter>
+  <filter id="b" x="-.00010701" y="-9.2685e-5" width="1.0002" height="1.0002" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="0.00031675343"/>
+  </filter>
+  <filter id="a" x="-.00037887" y="-.00061816" width="1.0008" height="1.0012" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="0.001294815"/>
+  </filter>
+ </defs>
+ <g transform="translate(-29.475 -131.15)" fill="#ed1c24">
+  <path transform="matrix(17.755 0 0 17.755 -493.84 -2197.3)" d="m71.783 133.45c0.21167-1.7462-0.4236-2.196-2.0902-2.196h-4.2598l-0.21193 1.8521h3.9423c0.29104 0 0.39688 0.10583 0.34396 0.5027-0.05292 0.37016-0.15875 0.55563-0.50244 0.55563h-2.249l-0.23812 2.1167h2.196c0.3175 0 0.4236 0.0265 0.37042 0.5027-0.05292 0.47625-0.18521 0.55563-0.55589 0.55563h-3.5983l-0.21167 2.1167h3.9688c2.4342 0 2.54-1.614 2.6723-2.6458 0.07937-0.52916 0.13229-1.1642-0.60854-1.5875 0.71464-0.29078 0.89985-0.74083 1.0321-1.7727z" filter="url(#b)" stroke-width=".26458"/>
+  <path transform="matrix(17.755 0 0 17.755 -493.84 -2197.3)" d="m52.468 131.2h-12.118c-1.2433 0-2.0638 0.58208-2.1693 1.561-0.05292 0.37015-0.07964 0.60854-0.07964 0.60854h16.14s0.02672-0.15875 0.05292-0.37042c0.1061-0.97869-0.3175-1.7992-1.8254-1.7992" filter="url(#c)" stroke-width=".26458"/>
+  <path transform="matrix(17.755 0 0 17.755 -493.84 -2197.3)" d="m54.082 134.46s-0.02646 0.4236-0.05292 0.76729c-0.10556 0.71438-0.60854 1.3229-1.5875 1.3229h-3.4396l-0.39688 2.9104h-2.7252l0.60854-5.0271h7.5935" filter="url(#a)" stroke-width=".26458"/>
+  <path transform="matrix(4.6976 0 0 4.6976 -17.375 -484.46)" d="m12.676 139.45 1.099-8h27.701l-1.1 8z" filter="url(#f)"/>
+  <path transform="matrix(4.6976 0 0 4.6976 -17.375 -484.46)" d="m12.976 143.45h27l-0.901 8h-17.3l-0.4 3h17.301l-1 8h-27.7l2.5-18.8" filter="url(#g)"/>
+  <path transform="matrix(17.755 0 0 17.755 -493.84 -2197.3)" d="m55.14 131.25h5.9002c0.95276 0 1.9315 0.34396 1.7198 1.8521-0.02646 0.26458-0.05292 0.26458-0.05292 0.26458h-7.9375l0.29131-2.2225" filter="url(#d)" stroke-width=".26458"/>
+  <path transform="matrix(4.6976 0 0 4.6976 -17.375 -484.46)" d="m105.28 143.25h10.3l-2.3 19.101h-10.399l2.399-19.101" filter="url(#h)"/>
+  <path transform="matrix(4.6976 0 0 4.6976 -17.375 -484.46)" d="m124.88 143.25h10.399l-2.399 19.101h-10.301l2.301-19.101" filter="url(#i)"/>
+  <path transform="matrix(17.755 0 0 17.755 -493.84 -2197.3)" d="m44.001 134.4h-6.006c-0.21167 1.3229 0.44979 1.9047 1.4023 1.9047 0.50271 0 3.7042 0.0529 3.7042 0.0529l-0.15875 0.97896h-5.3184l-0.26458 2.1431s5.7944-0.0265 6.0325-0.0265c0.18521-0.0265 1.561-0.0529 2.0111-1.1642 0.15875-0.37015 0.29104-1.6669 0.3175-1.9315 0.21167-1.5875-0.87339-1.9576-1.7198-1.9576" filter="url(#e)" stroke-width=".26458"/>
+ </g>
+</svg>
