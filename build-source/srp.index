@@ -1,3 +1,8 @@
+77BF_40A_1_C00000=movistardeportes3
+77C2_40A_1_C00000=movistardeportes2
+77C4_40A_1_C00000=movistarligadecampeones4
+77C8_40A_1_C00000=movistardeportes4
+77C9_40A_1_C00000=movistarlaliga4
 19DC_10_55_300000=dom
 2C2F_19C8_FBFF_820000=skysport-phibruspel
 2CF3_1AF4_FBFF_820000=realtimehd-phibruspel
@@ -5797,7 +5802,7 @@ FA0_1_0_EBAD9B=tokfm
 1008_F001_2268_14A0000=tokfm
 142A_5DC_13E_820000=tokfm
 74FF_420_1_C00000=movistarlaliga1
-769b_41E_1_C00000=movistarlaliga4
+769B_41E_1_C00000=movistarlaliga4
 7579_412_1_C00000=movistarlaliga5
 757E_412_1_C00000=movistarlaliga6
 756E_412_1_C00000=movistarlaliga7
