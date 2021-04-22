@@ -1,11 +1,11 @@
-<svg width="600" height="570.59" version="1.1" viewBox="0 0 158.75 150.97" xmlns="http://www.w3.org/2000/svg">
- <g transform="translate(27.941 -104.62)">
-  <g transform="matrix(.21498 0 0 .21498 -13.065 104.62)" stroke-width="1.2308">
-   <ellipse cx="300.03" cy="300.01" rx="300.03" ry="300.02" fill="#fff" stroke-width="1.2308"/>
+<svg version="1.1" viewBox="0 0 600 570.6" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(3.7795 0 0 3.7795 105.6 -395.4)">
+  <g transform="matrix(.21498 0 0 .21498 -13.065 104.62)" stroke-width=".32565">
+   <ellipse cx="300.03" cy="300.01" rx="300.03" ry="300.02" fill="#fff" stroke-width=".32565"/>
   </g>
-  <g transform="matrix(.21498 0 0 .21498 71.384 104.63)" fill="#c51f26" stroke-width="1.2308">
-   <g transform="matrix(1.25,0,0,-1.25,-268.17,475.38)" fill="#c51f26" stroke-width="1.2308">
-    <g transform="matrix(.17104 0 0 .17104 -99.685 -99.685)" fill="#c51f26" stroke-width="1.2308">
+  <g transform="matrix(.21498 0 0 .21498 71.384 104.63)" fill="#c51f26" stroke-width=".32565">
+   <g transform="matrix(1.25,0,0,-1.25,-268.17,475.38)" fill="#c51f26" stroke-width=".32565">
+    <g transform="matrix(.17104 0 0 .17104 -99.685 -99.685)" fill="#c51f26" stroke-width=".32565">
      <path d="m2194.8 2557.9h0.01v-0.01h0.02l0.01-0.02 0.01-0.01 0.02-0.01h0.01-0.01l-0.02 0.01-0.01 0.01-0.01 0.02c0-0.02 0 0-0.02 0v0.01h-0.01"/>
      <path d="m2796.6 1560.1v0.07c0 0.01 0 0.02-0.01 0.02v0.05c0 0.01-0.02 0.01-0.02 0.02v0.07c-0.01 0.01-0.01 0.03-0.01 0.04 0-0.01 0-0.03 0.01-0.04v-0.07c0-0.01 0.02-0.01 0.02-0.02v-0.05c0.01 0 0.01-0.01 0.01-0.02v-0.07"/>
      <path d="m2405.5 420.6c-0.01-0.012-0.04-0.032-0.05-0.043-0.01-8e-3 -0.03-0.028-0.04-0.039-0.01-8e-3 -0.03-0.032-0.03-0.059-0.02 0-0.03-0.02-0.04-0.039-0.02-0.012-0.03-0.024-0.04-0.043-0.02-8e-3 -0.04-0.02-0.04-0.039-0.02-8e-3 -0.03-0.02-0.06-0.039 0-0.02-0.01-0.039-0.04-0.051 0.03 0.012 0.04 0.031 0.04 0.039 0.03 0.012 0.04 0.031 0.06 0.043 0 8e-3 0.02 0.027 0.04 0.039 0.01 0.027 0.02 0.039 0.04 0.051 0.01 0.019 0.02 0.027 0.04 0.039 0 8e-3 0.02 0.051 0.03 0.059 0.01 0.011 0.03 0.031 0.04 0.039 0.01 0.011 0.04 0.031 0.05 0.043"/>
@@ -14,6 +14,6 @@
     </g>
    </g>
   </g>
-  <text x="-28.176876" y="255.3336" fill="#c51f26" font-family="HalifaxW03-Regular" font-size="21.417px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="-28.176876" y="255.3336" fill="#c51f26" stroke-width=".26458">West-Vlaanderen</tspan></text>
+  <text x="-28.176876" y="255.3336" fill="#c51f26" font-family="HalifaxW03-Regular" font-size="21.417px" letter-spacing="0px" stroke-width=".070004" word-spacing="0px" style="font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="-28.176876" y="255.3336" fill="#c51f26" stroke-width=".070004">West-Vlaanderen</tspan></text>
  </g>
 </svg>
