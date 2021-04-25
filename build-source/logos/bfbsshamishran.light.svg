@@ -1,0 +1,23 @@
+<svg enable-background="new 0 0 170.1 170.1" version="1.1" viewBox="0 0 170.1 170.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<style type="text/css">
+	.st0{fill:none;stroke:#EB5B4F;stroke-width:9.996;stroke-miterlimit:10;}
+	.st1{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:4.116;stroke-miterlimit:10;}
+	.st2{clip-path:url(#a);fill:none;stroke:#EB5B4F;stroke-width:9.996;stroke-miterlimit:10;}
+</style>
+<line class="st0" x1="93.6" x2="93.6" y1="65.5" y2="140.7"/>
+
+	<defs>
+		<rect id="b" x="-40" y="-40" width="250" height="250"/>
+	</defs>
+	<clipPath id="a">
+		<use xlink:href="#b"/>
+	</clipPath>
+	<path class="st1" d="m86.5 126.6c-16.9 0-30.6-13.7-30.6-30.6s13.8-30.6 30.6-30.6 39.8 9.8 40.3 36.2c0 20.1-14.6 41-40.3 41s-46.6-20.8-46.6-46.6 20.9-46.6 46.6-46.6v-0.2c12.5 0 22.7-10.2 22.7-22.7s-10.2-22.7-22.7-22.7v153.9c0 4.8-3.9 8.8-8.8 8.8-4.8 0-8.8-3.9-8.8-8.8" clip-path="url(#a)" stroke="#8ad2eb"/>
+	<path class="st2" d="m83.4 140.3" clip-path="url(#a)"/>
+
+<style type="text/css">
+	.st0{clip-path:url(#a);fill:#004861;}
+	.st1{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:4.116;stroke-miterlimit:10;}
+	.st2{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:5.88;stroke-miterlimit:10;}
+	.st3{clip-path:url(#a);fill:#F298BC;}
+</style></svg>
