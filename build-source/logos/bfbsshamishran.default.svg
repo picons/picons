@@ -1,18 +1,6 @@
-<svg enable-background="new 0 0 170.1 170.1" version="1.1" viewBox="0 0 170.1 170.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<style type="text/css">
-	.st0{fill:none;stroke:#EB5B4F;stroke-width:9.996;stroke-miterlimit:10;}
-	.st1{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:4.116;stroke-miterlimit:10;}
-	.st2{clip-path:url(#a);fill:none;stroke:#EB5B4F;stroke-width:9.996;stroke-miterlimit:10;}
-</style>
-<line class="st0" x1="93.6" x2="93.6" y1="65.5" y2="140.7"/>
-
-	<defs>
-		<rect id="b" x="-40" y="-40" width="250" height="250"/>
-	</defs>
-	<clipPath id="a">
-		<use xlink:href="#b"/>
-	</clipPath>
-	<path class="st1" d="m86.5 126.6c-16.9 0-30.6-13.7-30.6-30.6s13.8-30.6 30.6-30.6 39.8 9.8 40.3 36.2c0 20.1-14.6 41-40.3 41s-46.6-20.8-46.6-46.6 20.9-46.6 46.6-46.6v-0.2c12.5 0 22.7-10.2 22.7-22.7s-10.2-22.7-22.7-22.7v153.9c0 4.8-3.9 8.8-8.8 8.8-4.8 0-8.8-3.9-8.8-8.8" clip-path="url(#a)"/>
-	<path class="st2" d="m83.4 140.3" clip-path="url(#a)"/>
-
+<svg width="91.016" height="166.82" version="1.1" viewBox="0 0 24.081 44.137" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(-234.18 -14.276)" fill="none" stroke-miterlimit="10">
+  <path d="m248.78 31.434v19.897" stroke="#eb5b4f" stroke-width="2.6448"/>
+  <path d="m247.06 47.311c-4.4715 0-8.0962-3.6248-8.0962-8.0962 0-4.4715 3.6512-8.0962 8.0962-8.0962s10.53 2.5929 10.663 9.5779c0 5.3181-3.8629 10.848-10.663 10.848s-12.33-5.5033-12.33-12.33 5.5298-12.33 12.33-12.33v-0.0529c3.3073 0 6.006-2.6988 6.006-6.006s-2.6988-6.006-6.006-6.006v40.719c0 1.27-1.0319 2.3283-2.3283 2.3283-1.27 0-2.3283-1.0319-2.3283-2.3283" stroke="#004861" stroke-width="1.089"/>
+ </g>
 </svg>
