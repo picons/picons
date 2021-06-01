@@ -34,7 +34,7 @@ This obviously means that spaces and other characters are not allowed.
 Examples:
 
 - `5*` => `5star`
-- `Sony Chnl +1` => `sonychnlplus1`
+- `Sony Channel +1` => `sonychannelplus1`
 - `BT Sport//ESPN` => `btsportespn`
 
 __Logo:__
