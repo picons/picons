@@ -224,11 +224,11 @@ grep -v -e '^#' -e '^$' $backgroundsconf | while read lines ; do
 			Version: $version
 			Section: base
 			Architecture: all
-			Maintainer: http://picons.eu
-			Source: http://picons.eu
+			Maintainer: https://github.com/picons
+			Source: https://github.com/picons
 			Description: $packagenamenoversion
 			OE: enigma2-plugin-picons-$packagenamenoversion
-			HomePage: http://picons.eu
+			HomePage: https://github.com/picons
 			License: unknown
 			Priority: optional
 		EOF
