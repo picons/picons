@@ -41,5 +41,5 @@
 		<stop stop-color="#FFFDF6" offset=".9243"/>
 		<stop stop-color="#fff" offset="1"/>
 	</linearGradient>
-	<polygon class="st3" points="276.8 100.5 303.7 60.9 311.6 49.3 325.1 29.4 228.4 29.4" fill="url(#a)"/>
+	<path class="st3" d="m276.8 100.5 26.9-39.6 7.9-11.6 13.5-19.9h-96.7z" fill="url(#a)"/>
 </g></svg>

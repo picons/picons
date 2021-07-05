@@ -34,7 +34,7 @@
 		<stop stop-color="#FFFDF6" offset=".9243"/>
 		<stop stop-color="#fff" offset="1"/>
 	</linearGradient>
-	<polygon class="st3" points="311.6 49.3 325.1 29.4 228.4 29.4 276.8 100.5 303.7 60.9" fill="url(#a)"/>
+	<path class="st3" d="m311.6 49.3 13.5-19.9h-96.7l48.4 71.1 26.9-39.6z" fill="url(#a)"/>
 </g>
 <path class="st1" d="m421.2 156.18h25.8l-6.6 11.3h-5.2l-7.7 24h-11.9l7.7-24h-6.1z"/>
 <g class="st4" transform="translate(84.9 32.283)">
