@@ -6,7 +6,7 @@
 	.st3{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:4.116;stroke-miterlimit:10;}
 </style>
 <path class="st0" d="m114.11 235.17-9.1367-10.098h-65.399l23.563 25.487 3.3661 3.3661v234.67h47.607z" fill="#dcdc0e" stroke-width="4.8088"/>
-<path class="st1" d="m138.16 487.15v-152.44h75.017v152.44" fill="none" stroke="#8ad2eb" stroke-miterlimit="10" stroke-width="19.793"/>
+
 <g transform="matrix(4.8088 0 0 4.8088 -50.828 -8.1535)">
 	<defs>
 		<rect id="b" x="-40" y="-40" width="250" height="250"/>
@@ -27,5 +27,5 @@
 	<path class="st2" d="m139.8 30.3c0 2 2 3.5 4.4 3.5s4.4-1.6 4.4-3.5c0-2-2-3.5-4.4-3.5s-4.4 1.6-4.4 3.5" clip-path="url(#a)" fill="#8ad2eb"/>
 	<path class="st2" d="m123.3 55.5 13.9 8h-28.3z" clip-path="url(#a)" fill="#8ad2eb"/>
 	<path class="st2" d="m98.5 63.5s-4.2-8-13.8-8c-9.5 0-13.8 8-13.8 8z" clip-path="url(#a)" fill="#8ad2eb"/>
-</g>
+<path class="st3" transform="translate(-37.799)" d="m92.9 103v-31.7h-15.8v31.7" clip-path="url(#a)" fill="none" stroke="#8ad2eb" stroke-miterlimit="10" stroke-width="4.116"/></g>
 </svg>
