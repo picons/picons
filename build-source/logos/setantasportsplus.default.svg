@@ -1,0 +1,66 @@
+<svg version="1.1" viewBox="0 0 800 210.47" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css">
+	.st0{fill:url(#c);}
+	.st1{fill:#494949;}
+	.st2{fill:url(#b);}
+	.st3{fill:#5F5F5F;}
+	.st4{fill:url(#a);}
+	.st5{fill:#FFFFFF;}
+</style>
+<g transform="scale(1.5625)">
+	
+		<linearGradient id="c" x1="445.06" x2="445.06" y2="134.68" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FEF2A2" offset="0"/>
+			<stop stop-color="#FEF19B" offset=".0084501"/>
+			<stop stop-color="#FEEC77" offset=".060185"/>
+			<stop stop-color="#FEE857" offset=".1183"/>
+			<stop stop-color="#FEE43B" offset=".1826"/>
+			<stop stop-color="#FEE125" offset=".2552"/>
+			<stop stop-color="#FEDF14" offset=".34"/>
+			<stop stop-color="#FEDD09" offset=".4448"/>
+			<stop stop-color="#FEDC02" offset=".5918"/>
+			<stop stop-color="#FEDC00" offset="1"/>
+		</linearGradient>
+		<path class="st0" d="m378.1 0v134.7h89.8c24.3 0 44.1-19.4 44.1-44.1v-90.6z" fill="url(#c)"/>
+		<path class="st1" d="m432.9 33.5h23.2v22.4h22.4v23.2h-22.4v22.5h-23.2v-22.5h-22.5v-23.2h22.5z" fill="#494949"/>
+	
+	<linearGradient id="b" x1="185.66" x2="185.66" y1="1.5256e-5" y2="67.339" gradientUnits="userSpaceOnUse">
+		<stop stop-color="#FEF2A2" offset="0"/>
+		<stop stop-color="#FEEF8E" offset=".042189"/>
+		<stop stop-color="#FEEA68" offset=".1327"/>
+		<stop stop-color="#FEE648" offset=".2305"/>
+		<stop stop-color="#FEE22E" offset=".3355"/>
+		<stop stop-color="#FEDF19" offset=".4505"/>
+		<stop stop-color="#FEDD0B" offset=".5804"/>
+		<stop stop-color="#FEDC03" offset=".738"/>
+		<stop stop-color="#FEDC00" offset="1"/>
+	</linearGradient>
+	<path class="st2" d="M 44.1,0 C 19.8,0 0,19.4 0,44.1 V 67.3 H 371.3 V 0 Z" fill="url(#b)" Googl="true"/>
+	
+		<path class="st3" d="m65.3 52.1c5.7 0 10.3-4.6 10.3-10.2s-4.6-10.2-10.3-10.2h-12.2c-0.8 0-1.4-0.6-1.4-1.4s0.6-1.4 1.4-1.4h12.3c5.2 0 9.5-3.8 10.2-8.8h-22.5c-5.7 0-10.3 4.6-10.3 10.2s4.6 10.2 10.3 10.2h12.2c0.8 0 1.4 0.6 1.4 1.4s-0.6 1.4-1.4 1.4h-12.2c-5.2 0-9.5 3.8-10.2 8.8z"/>
+		<path class="st3" d="m94.5 43.3v-2.8h10.6v-8.8h-10.6v-2.7h21v-8.8h-29.9v31.9h30.5v-8.8z"/>
+		<path class="st3" d="m158.2 20.2h-31.3v8.8h11.2v23.1h8.9v-23.1h11.2z"/>
+		<path class="st3" d="m283.7 20.2h-31.3v8.8h11.2v23.1h8.9v-23.1h11.2z"/>
+		<path class="st3" d="m191.3 52.1h9.8l-14.3-31.9h-9.8l-14.3 31.9h25.6l-3.9-8.8h-7.9l5.5-12.3z"/>
+		<path class="st3" d="m315.9 52.1h9.8l-14.3-31.9h-9.8l-14.3 31.9h25.6l-3.9-8.8h-8l5.5-12.3z"/>
+		<path class="st3" d="m233.7 20.2v18l-15-18h-8.9v31.9h8.9v-18l15 18h8.9v-31.9z"/>
+	
+	<linearGradient id="a" x1="185.66" x2="185.66" y1="67.339" y2="134.68" gradientUnits="userSpaceOnUse">
+		<stop stop-color="#6A6C6C" offset="0"/>
+		<stop stop-color="#5E5F5F" offset=".076256"/>
+		<stop stop-color="#4A4B4B" offset=".2352"/>
+		<stop stop-color="#3D3D3D" offset=".4161"/>
+		<stop stop-color="#343535" offset=".6353"/>
+		<stop stop-color="#323232" offset="1"/>
+	</linearGradient>
+	<path class="st4" d="m0 67.3h371.3v67.3h-371.3z" fill="url(#a)"/>
+	
+		<path class="st5" d="m52.7 84.9c-5.5 0-10 4.5-10 10s4.5 10 10 10h13.7c1 0 1.8 0.8 1.8 1.8s-0.8 1.8-1.8 1.8h-13.8c-4.8 0-8.9 3.5-9.8 8.2h23.6c5.5 0 10-4.5 10-10s-4.5-10-10-10h-13.7c-1 0-1.8-0.8-1.8-1.8s0.8-1.8 1.8-1.8h13.8c4.8 0 8.9-3.5 9.8-8.2h-23.6"/>
+		<path class="st5" d="m301.9 84.9c-5.5 0-10 4.5-10 10s4.5 10 10 10h13.7c1 0 1.8 0.8 1.8 1.8s-0.8 1.8-1.8 1.8h-13.8c-4.8 0-8.9 3.5-9.8 8.2h23.6c5.5 0 10-4.5 10-10s-4.5-10-10-10h-13.7c-1 0-1.8-0.8-1.8-1.8s0.8-1.8 1.8-1.8h13.8c4.8 0 8.9-3.5 9.8-8.2h-23.6"/>
+		<path class="st5" d="m239.5 84.9v8.2h14.5v23.7h8.2v-23.7h14.6v-8.2z"/>
+		<path class="st5" d="m92.2 84.9v31.9h8.2v-23.7h17.1c1 0 1.8 0.8 1.8 1.8s-0.8 1.8-1.8 1.8h-13.6v8.2h13.6c5.5 0 10-4.5 10-10s-4.5-10-10-10z"/>
+		<path class="st5" d="m191.5 84.9v31.9h8.2v-23.7h16.7c1 0 1.8 0.8 1.8 1.8s-0.8 1.8-1.8 1.8h-13.2v8.2h8.8s5 11.4 5.2 11.8h9c-0.4-1-5.6-12.7-5.6-12.7l0.3-0.2c3.4-1.7 5.5-5.1 5.5-9 0-5.5-4.5-10-10-10z"/>
+		<path class="st5" d="m150.3 84.9c-5.5 0-10 4.5-10 10v11.8c0 5.5 4.5 10 10 10h15c5.5 0 10-4.5 10-10v-10h-8.2v10c0 0.5-0.2 0.9-0.5 1.3-0.3 0.3-0.8 0.5-1.3 0.5h-15c-0.5 0-0.9-0.2-1.3-0.5-0.3-0.3-0.5-0.8-0.5-1.3v-11.8c0-0.5 0.2-0.9 0.5-1.3 0.3-0.3 0.8-0.5 1.3-0.5h24.7c-0.9-4.7-5-8.2-9.8-8.2z"/>
+	
+</g>
+</svg>
