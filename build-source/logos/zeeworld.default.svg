@@ -1,0 +1,17 @@
+<svg width="1292.3pt" height="538.05pt" version="1.1" viewBox="0 0 1292.3 538.05" xmlns="http://www.w3.org/2000/svg">
+ <radialGradient id="a" cx="209.98" cy="402.8" r="358.33" gradientTransform="matrix(1.1394 1.1495 -.79768 .79069 175.4 -455.8)" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#98258c" offset="0"/>
+  <stop stop-color="#98258d" offset=".29216"/>
+  <stop stop-color="#b11d8b" offset=".52903"/>
+  <stop stop-color="#ec0a88" offset="1"/>
+ </radialGradient>
+ <g transform="translate(1.8567e-7 -.001353)">
+  <path d="M 537.5,269.02 A 268.75,269.02 0 0 1 268.75,538.05 268.75,269.02 0 0 1 0,269.02 268.75,269.02 0 0 1 268.75,0 268.75,269.02 0 0 1 537.5,269.02 Z" fill="url(#a)"/>
+  <g fill="#fff">
+   <path d="m155.48 200.78h109.95v22.808l-74.745 86.795h74.81l0.0366 25.567h-112.35v-22.821l74.531-86.742h-72.229z"/>
+   <path d="m349.28 201.47 51.495 0.0586v25.52h-73.729v28.931h73.729v25.624h-73.729v29.147h73.729v25.89h-102.88v-135.11z"/>
+   <path d="m488.54 200.52-51.381 0.0571v135.11h91.607c2.1843-8.538 3.9482-17.178 5.2852-25.89h-67.745v-29.147h70.607c0.27765-3.8718 0.47153-7.7492 0.58155-11.629-0.0435-4.6681-0.2088-9.3342-0.49507-13.994h-70.693v-28.932h67.619c-1.3987-8.5938-3.2133-17.115-5.4375-25.532z"/>
+  </g>
+  <text x="562.47705" y="333.40796" fill="#e70c8c" font-family="Metropolis" font-size="190.11px" font-weight="600" letter-spacing="0px" stroke-width="5.0923" style="line-height:1.25" xml:space="preserve"><tspan x="562.47705" y="333.40796" fill="#e70c8c" font-family="Metropolis" font-weight="600" stroke-width="5.0923">WORLD</tspan></text>
+ </g>
+</svg>
