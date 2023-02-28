@@ -1,11 +1,8 @@
-<svg width="600" height="685.65" version="1.1" viewBox="0 0 158.75 181.41" xmlns="http://www.w3.org/2000/svg">
- <g transform="translate(-1.0584 -216.13)">
+<svg xmlns="http://www.w3.org/2000/svg" width="623" height="604" viewBox="0 0 623 604">
+  <rect fill="#0c4c7e" x="6" y="6" width="610.55" height="591.96"/>
+  <path fill="#fff" d="M622.55,603.96H0V0H622.55V603.96ZM12,591.96H610.55V12H12V591.96Z"/>
   <g>
-   <path d="m1.0584 397.54h158.75v-135.29l-78.517-46.128-80.233 45.452z" fill="#0d4a7d"/>
-   <path d="m80.963 226.3-72.08 41.091v122.51h142.53v-121.98zm-0.03228 2.9097 67.958 40.154v118.04h-137.5v-118.55z" color="#000000" color-rendering="auto" dominant-baseline="auto" fill="#fff" image-rendering="auto" shape-rendering="auto" solid-color="#000000" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;isolation:auto;mix-blend-mode:normal;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
-   <path d="m70.554 369.45h-20.699l-21.367-65.437h21.491z" fill="#fff"/>
-   <path d="m48.904 298.34h-22.035l-7.119-19.03h22.536z" fill="#fff"/>
-   <path d="m92.408 369.45h20.49l26.431-90.143h-21.618l-14.503 49.58-13.128-49.58h-20.296l-9.2508 43.817 12.405 38.021 7.7287-36.465z" fill="#26a59b"/>
+    <polygon fill="#24a59a" points="241.94 306.87 273.54 155.21 337.15 155.28 392.17 331.43 446.56 154.87 526.32 155.21 426.38 475.17 362.21 475.16 312.07 315.84 284.67 444.73 241.94 306.87"/>
+    <path fill="#fff" d="M203.94,242.56l71.95,232.61h-72.93s-72.1-232.61-72.1-232.61h73.08Zm-79.76-20.1l-20.88-67.25,73.08,.07,20.88,67.23-73.08-.06Z"/>
   </g>
- </g>
 </svg>
