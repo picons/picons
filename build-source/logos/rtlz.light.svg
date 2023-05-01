@@ -1,7 +1,27 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="198.11" width="600" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 158.75 52.415673">
- <g transform="translate(-61.988 -96.923)">
-  <path d="m149.85 141.03h25.72v8.31h-26.34c-4.51 0-8.57-2.3-8.57-8.75v-34.92h9.19zm-39.34-27.05v27.05h25.73v8.31h-26.34c-4.51 0-8.58-2.3-8.58-8.75v-43.667h9.19v8.747h25.73v8.31zm-48.522 35.36v-34.92c0-6.45 4.066-8.75 8.574-8.75h26.341v8.31h-25.723v35.36z" fill="#fff"/>
-  <path d="m179.99 139.88 23.35-26.43h-6.2c-6.9 0-7.69 1.95-7.69 6.1v2.12h-8.58v-16h39.78v10.35l-23.09 25.45h4.97c8.04 0 9.37-1.32 9.37-7.16v-1.77h8.84v16.8h-40.75z" fill="#17bbb2"/>
- </g>
+<svg version="1.1" viewBox="0 0 919.87 140" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#01B8AC;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#009699;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#0AA9EE;}
+</style>
+<g transform="scale(1.2739)">
+	
+		
+			<path class="st0" d="m0 0h195.4v109.9h-195.4z" clip-rule="evenodd" fill="#01b8ac" fill-rule="evenodd"/>
+			<path class="st1" d="m106.2 52.7c8.4 0 12.5-2.7 12.5-8.2s-4.1-8.1-12.5-8.1h-36.8v16.4h36.8zm-50.4-27.4h52.1c15.9 0 24.7 7.1 24.7 19.1 0 10.3-6.6 17.1-17.9 18.8l25.6 21.5h-19.6l-24-20.8h-27.3v20.8h-13.6z"/>
+		
+		<g clip-rule="evenodd" fill-rule="evenodd">
+			<path class="st2" d="m429.9 0h195.4v109.9h-195.4z" fill="#009699"/>
+			<path class="st1" d="m504.4 72.9h60.3v11.8h-73.9v-59.4h13.6z" fill="#fff"/>
+		</g>
+		<g clip-rule="evenodd" fill-rule="evenodd">
+			<path class="st3" d="m215 0h195.2v109.9h-195.2z" fill="#0aa9ee"/>
+			<path class="st1" d="m271.5 25.3h82.3v11.7h-34.4v47.7h-13.5v-47.7h-34.4z" fill="#fff"/>
+		</g>
+	
+	
+		<path d="m722.1 95.6h-63.1v-12.4l44-55.7v-0.5h-43v-12.7h61.3v12.7l-43.9 55.4v0.5h44.6v12.7z" fill="#fff"/>
+	
+</g>
 </svg>
