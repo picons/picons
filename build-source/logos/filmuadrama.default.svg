@@ -1,5 +1,5 @@
 <svg width="600mm" height="230.09mm" version="1.1" viewBox="0 0 600 230.09" xmlns="http://www.w3.org/2000/svg">
- <g transform="translate(-41.261 54.039)">
+ <g transform="translate(-41.261 54.039)" fill="#d1506f">
   <g transform="matrix(4.2152 0 0 4.2452 -133.28 -568.67)" stroke-width=".53836" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="FILM">
    <path d="m60.289 126.15 0.03761-4.9272h-18.919v26.328h5.9427v-9.9672h11.885v-4.9648h-11.885v-6.4693z"/>
    <path d="m69.756 147.55v-26.328h-5.9427v26.328z"/>
@@ -7,7 +7,7 @@
    <path d="m124.94 147.55v-26.328h-6.6197l-7.6352 16.098-7.6728-16.098h-6.6573v26.328h5.3785v-17.753l6.9958 15.082h3.874l6.9958-15.082v17.753z"/>
   </g>
   <g transform="matrix(4.2791 0 0 4.1818 -133.28 -568.67)" stroke-width=".54342" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="UA">
-   <path d="m150.5 123.06h-3.0372v15.642c0 5.1633-3.0372 8.1626-8.0866 8.1626-5.0494 0-8.1626-2.9993-8.1626-8.1626v-15.642h-3.0372v15.642c0 6.9097 4.2142 11.086 11.2 11.086 6.9477 0 11.124-4.1762 11.124-11.086z"/>
+   <path d="m150.5 123.06h-3.0372v15.642c0 5.1633-3.0372 8.1626-8.0866 8.1626s-8.1626-2.9993-8.1626-8.1626v-15.642h-3.0372v15.642c0 6.9097 4.2142 11.086 11.2 11.086 6.9477 0 11.124-4.1762 11.124-11.086z"/>
    <path d="m174.74 142.92 2.9613 6.7199h3.303l-11.883-26.576h-3.1511l-11.921 26.576h3.2271l2.9613-6.7199zm-1.2908-2.9233h-11.921l5.9226-13.478z"/>
   </g>
   <g transform="matrix(4.2017 0 0 4.2589 -133.28 -568.67)" stroke-width=".53956" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="DRAMA">
