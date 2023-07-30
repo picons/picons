@@ -13,7 +13,10 @@
   </linearGradient>
   <linearGradient id="h" x1="361.88" x2="361.88" y1="-971.11" y2="-1413.6" gradientTransform="matrix(.294 0 0 -.294 0 -277.05)" xlink:href="#a"/>
   <linearGradient id="g" x1="365.34" x2="359.49" y1="-1205.6" y2="-1038.1" gradientTransform="scale(.294)" xlink:href="#b"/>
-  <linearGradient id="d" x1="3601.4" x2="4182.4" y1="250" y2="250" gradientTransform="scale(.294)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="d" x1="3693" x2="3689.1" y1="6.4837" y2="497.28" gradientTransform="scale(.294)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#434343" offset=".4"/>
+   <stop stop-color="#030303" offset="1"/>
+  </linearGradient>
   <linearGradient id="c" x1="2241.6" x2="2233" y1="-1148.8" y2="-899.82" gradientTransform="matrix(.294 0 0 -.294 0 -277.05)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
  </defs>
  <path d="m1219.8 0h-151.24a9.799 9.799 0 0 0-9.7932 9.7931v127.41a9.7873 9.7873 0 0 0 9.7932 9.7931h151.24a9.7873 9.7873 0 0 0 9.7931-9.7931v-127.41a9.799 9.799 0 0 0-9.7931-9.7931m0 2.94a6.8473 6.8473 0 0 1 6.8443 6.8443v127.42a6.862 6.862 0 0 1-6.8443 6.8531h-151.24a6.8767 6.8767 0 0 1-6.862-6.862v-127.4a6.862 6.862 0 0 1 6.862-6.8531h151.24" fill="url(#d)" stroke-width=".294"/>
