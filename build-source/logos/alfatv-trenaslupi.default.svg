@@ -1,0 +1,38 @@
+<svg version="1.1" viewBox="0 0 800 745.33" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <style>.a{fill:#f03f45;}
+			.b{fill:url(#a);}
+			.c{fill:url(#b);}
+			.d{fill:url(#c);}</style>
+  <linearGradient id="a" x1="80.487" x2="-5.5" y1="51.902" y2="67.063" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#f66161" offset="0"/>
+   <stop stop-color="#f66161" offset=".26"/>
+   <stop stop-color="#f54c4c" offset=".454"/>
+   <stop stop-color="#f54e4e" offset=".627"/>
+   <stop stop-color="#f22828" offset=".787"/>
+   <stop stop-color="#e80e0e" offset=".937"/>
+   <stop stop-color="#ca0c0c" offset="1"/>
+  </linearGradient>
+  <linearGradient id="b" x1="1.169" x2="115.84" y1="85.683" y2="85.683" gradientTransform="matrix(6.7991 0 0 6.7991 -7.9482 -35.281)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#f66161" offset="0"/>
+   <stop stop-color="#f65858" offset=".346"/>
+   <stop stop-color="#f55b5b" offset=".549"/>
+   <stop stop-color="#f42b2b" offset=".716"/>
+   <stop stop-color="#d22222" offset=".861"/>
+   <stop stop-color="#ee0e0e" offset=".993"/>
+   <stop stop-color="#ec0e0e" offset="1"/>
+  </linearGradient>
+  <linearGradient id="c" x1="97.659" x2="78.117" y1="114.98" y2="4.154" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#f66161" offset="0"/>
+   <stop stop-color="#f66161" offset=".428"/>
+   <stop stop-color="#f66161" offset=".614"/>
+   <stop stop-color="#f33939" offset=".752"/>
+   <stop stop-color="#f21d1d" offset=".867"/>
+   <stop stop-color="#d70d0d" offset=".967"/>
+   <stop stop-color="#d20d0d" offset="1"/>
+  </linearGradient>
+ </defs>
+ <polygon class="b" transform="matrix(6.7991 0 0 6.7991 -7.9482 -35.281)" points="72.25 5.189 60 31.585 21.371 114.81 1.169 104.88 47.747 5.189" fill="url(#a)"/>
+ <path class="c" d="m3.15e-8 677.81s237.85-449.75 705.88-296.86l73.764 165.63s-372.67-202.58-642.29 198.76z" fill="url(#b)" stroke-width="6.7991"/>
+ <polygon class="d" transform="matrix(6.7991 0 0 6.7991 -7.9482 -35.281)" points="118.83 104.88 98.629 114.81 60 31.585 72.25 5.189 72.253 5.189" fill="url(#c)"/>
+</svg>
