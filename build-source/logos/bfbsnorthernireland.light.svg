@@ -1,29 +1,29 @@
 <svg version="1.1" viewBox="0 0 800 800.68" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
 <style type="text/css">
-	.st0{fill:none;stroke:#F298BC;stroke-width:9.996;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st0{fill:none;stroke:#8ad2eb;stroke-width:19.822;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 	.st1{fill:none;stroke:#8ad2eb;stroke-width:4.116;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st2{fill:none;stroke:#8ad2eb;stroke-width:4.116;stroke-linejoin:round;stroke-miterlimit:10;}
-</style><g fill="none" stroke-linejoin="round" stroke-miterlimit="10">
-<path class="st0" d="m122.12 468.87v331.81" stroke="#f298bc" stroke-width="9.996"/><g stroke="#8ad2eb" stroke-width="4.116"><g stroke-linecap="round">
+	.st2{fill:none;stroke:#8ad2eb;stroke-width:19.822;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<path d="m122.12 468.87v331.82" fill="none" stroke="#f298bc" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="48.14"/>
 <path class="st1" transform="matrix(4.8159 0 0 4.8159 -9.8341 -7.4261)" d="m68.8 17.4-16.2-13.8h-32.3l-16.2 13.8 16.2 13.8h32.3z"/>
 <path class="st1" transform="matrix(4.8159 0 0 4.8159 -9.8341 -7.4261)" d="m68.8 83.8-16.2-13.8h-32.3l-16.2 13.8 16.2 13.9h32.3z"/>
 <path class="st1" transform="matrix(4.8159 0 0 4.8159 -9.8341 -7.4261)" d="m166 56.2-16.1-13.8h-32.4l-16.1 13.8 16.1 13.8h32.4z"/>
 <path class="st1" transform="matrix(4.8159 0 0 4.8159 -9.8341 -7.4261)" d="m166 138.7-16.1-13.9h-32.4l-16.1 13.9 16.1 13.8h32.4z"/>
 <path class="st1" transform="matrix(4.8159 0 0 4.8159 -9.8341 -7.4261)" d="m117.6 70.1-16.1-13.8h-32.4l-16.1 13.8 16.1 13.9h32.4z"/>
 <path class="st1" transform="matrix(4.8159 0 0 4.8159 -9.8341 -7.4261)" d="m117.6 113.1-16.1-13.8h-32.4l-16.1 13.8 16.1 13.8h32.4z"/>
-</g><path class="st2" d="m9.9111 76.371v724.31"/>
-<path class="st2" d="m87.929 463.09v337.59"/>
-<path class="st1" d="m87.929 142.83v186.86" stroke-linecap="round"/>
-<path class="st2" d="m243.48 463.09v337.59"/>
-<path class="st1" d="m243.48 142.83v186.86" stroke-linecap="round"/>
+<path class="st2" d="m9.9111 76.371v724.31"/>
+<path class="st2" d="m87.929 463.09v337.6"/>
+<path class="st0" d="m87.929 142.83v186.86"/>
+<path class="st2" d="m243.48 463.09v337.6"/>
+<path class="st0" d="m243.48 142.83v186.86"/>
 <path class="st2" d="m322.46 599.86v200.82"/>
-<path class="st1" d="m322.46 396.15v74.64" stroke-linecap="round"/>
-<path class="st1" d="m322.46 76.371v189.75" stroke-linecap="round"/>
+<path class="st0" d="m322.46 396.15v74.647"/>
+<path class="st0" d="m322.46 76.371v189.75"/>
 <path class="st2" d="m478.5 603.71v196.97"/>
-<path class="st1" d="m478.5 396.63v74.16" stroke-linecap="round"/>
-<path class="st2" d="m557 727v73.68"/>
-<path class="st1" d="m557 328.72v264.88" stroke-linecap="round"/>
-<path class="st2" d="m712.07 726.04v74.64"/>
-<path class="st1" d="m712.07 329.69v263.91" stroke-linecap="round"/>
-<path class="st2" d="m790.09 263.23v537.45"/>
-</g></g></svg>
+<path class="st0" d="m478.5 396.63v74.165"/>
+<path class="st2" d="m557 727v73.683"/>
+<path class="st0" d="m557 328.72v264.88"/>
+<path class="st2" d="m712.07 726.04v74.647"/>
+<path class="st0" d="m712.07 329.69v263.91"/>
+<path class="st2" d="m790.09 263.23v537.46"/>
+</svg>

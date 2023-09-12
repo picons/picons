@@ -1,19 +1,16 @@
-<svg version="1.1" viewBox="0 0 800 361.52" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><filter id="filter857" color-interpolation-filters="sRGB"><feColorMatrix result="color1" type="hueRotate" values="180"/><feColorMatrix result="color2" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "/></filter><filter id="filter863" color-interpolation-filters="sRGB"><feColorMatrix result="color1" type="hueRotate" values="180"/><feColorMatrix result="color2" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "/></filter><filter id="filter869" color-interpolation-filters="sRGB"><feColorMatrix result="color1" type="hueRotate" values="180"/><feColorMatrix result="color2" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "/></filter></defs>
-<style type="text/css">
-	.st0{fill:none;stroke:#DCDC0E;stroke-width:9.996;stroke-miterlimit:10;}
-	.st1{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:4.116;stroke-miterlimit:10;}
-	.st2{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:4.116;stroke-linecap:round;stroke-miterlimit:10;}
-</style>
-<line class="st0" x1="475.1" x2="536.72" y1="275.98" y2="144.07" fill="none" stroke="#dcdc0e" stroke-miterlimit="10" stroke-width="48.124"/>
-<g transform="matrix(4.8143,0,0,4.8143,-9.6984,-210.26)">
+<svg version="1.1" viewBox="0 0 800 361.53" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs>
-		<rect id="b" x="-40" y="-40" width="250" height="250"/>
+		<clipPath id="a">
+			<use width="100%" height="100%" xlink:href="#b"/>
+		</clipPath>
 	</defs>
-	<clipPath id="a">
-		<use width="100%" height="100%" xlink:href="#b"/>
-	</clipPath><g fill="none" stroke="#004861" stroke-miterlimit="10" stroke-width="4.116">
-	<path class="st1" d="m139.4 60.3a8.5 8.5 0 0 1-8.5 8.5 8.5 8.5 0 0 1-8.5-8.5 8.5 8.5 0 0 1 8.5-8.5 8.5 8.5 0 0 1 8.5 8.5" clip-path="url(#a)" filter="url(#filter863)"/>
-	<path class="st2" d="m4.1 116.7 50.1-18.6 49.9 9.4 24.3-21.8 33.8 2.5-20.9-18.3" clip-path="url(#a)" filter="url(#filter869)" stroke-linecap="round"/>
-	<path class="st2" d="m35.8 98.6 21.9-24.7 37.5 22 11.5-24.3-13.5-24.3 24.3 8.1" clip-path="url(#a)" filter="url(#filter857)" stroke-linecap="round"/>
-</g></g>
+	<style type="text/css">
+		.st0{fill:none;stroke:#DCDC0E;stroke-width:9.996;stroke-miterlimit:10;}
+		.st1{clip-path:url(#a);fill:none;stroke:#8ad2eb;stroke-width:4.116;stroke-miterlimit:10;}
+		.st2{clip-path:url(#a);fill:none;stroke:#8ad2eb;stroke-width:4.116;stroke-linecap:round;stroke-miterlimit:10;}
+	</style>
+	<path class="st0" d="m475.04 276.02 61.63-131.93"/>
+	<path class="st1" transform="matrix(4.8151 0 0 4.8151 -9.8324 -210.3)" d="m139.4 60.3a8.5 8.5 0 0 1-8.5 8.5 8.5 8.5 0 0 1-8.5-8.5 8.5 8.5 0 0 1 8.5-8.5 8.5 8.5 0 0 1 8.5 8.5z"/>
+	<path class="st2" transform="matrix(4.8151 0 0 4.8151 -9.8324 -210.3)" d="m4.1 116.7 50.1-18.6 49.9 9.4 24.3-21.8 33.8 2.5-20.9-18.3"/>
+	<path class="st2" transform="matrix(4.8151 0 0 4.8151 -9.8324 -210.3)" d="m35.8 98.6 21.9-24.7 37.5 22 11.5-24.3-13.5-24.3 24.3 8.1"/>
 </svg>

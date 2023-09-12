@@ -1,14 +1,6 @@
 <svg width="91.016" height="166.82" version="1.1" viewBox="0 0 24.081 44.137" xmlns="http://www.w3.org/2000/svg">
- <path d="m14.6 17.158v19.897" fill="none" stroke="#eb5b4f" stroke-miterlimit="10" stroke-width="2.6448"/>
- <path d="m12.88 33.035c-4.4715 0-8.0962-3.6248-8.0962-8.0962 0-4.4715 3.6512-8.0962 8.0962-8.0962s10.53 2.5929 10.663 9.5779c0 5.3181-3.8629 10.848-10.663 10.848s-12.33-5.5033-12.33-12.33 5.5298-12.33 12.33-12.33v-0.0529c3.3073 0 6.006-2.6988 6.006-6.006s-2.6988-6.006-6.006-6.006v40.719c0 1.27-1.0319 2.3283-2.3283 2.3283-1.27 0-2.3283-1.0319-2.3283-2.3283" fill="none" stroke="#8ad2eb" stroke-miterlimit="10" stroke-width="1.089"/>
- <style type="text/css">.st0{fill:none;stroke:#EB5B4F;stroke-width:9.996;stroke-miterlimit:10;}
-	.st1{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:4.116;stroke-miterlimit:10;}
-	.st2{clip-path:url(#a);fill:none;stroke:#EB5B4F;stroke-width:9.996;stroke-miterlimit:10;}</style>
- <style type="text/css">.st0{clip-path:url(#a);fill:#004861;}
-	.st1{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:4.116;stroke-miterlimit:10;}
-	.st2{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:5.88;stroke-miterlimit:10;}
-	.st3{clip-path:url(#a);fill:#F298BC;}</style>
- <style type="text/css">.st0{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:4.116;stroke-miterlimit:10;}
-	.st1{clip-path:url(#a);fill:#DCDC0E;}
-	.st2{clip-path:url(#a);fill:#004861;}</style>
+ <g transform="translate(-234.18 -14.276)" fill="none" stroke-miterlimit="10">
+  <path d="m248.78 31.434v19.897" stroke="#eb5b4f" stroke-width="2.6448"/>
+  <path d="m247.06 47.311c-4.4715 0-8.0962-3.6248-8.0962-8.0962 0-4.4715 3.6512-8.0962 8.0962-8.0962s10.53 2.5929 10.663 9.5779c0 5.3181-3.8629 10.848-10.663 10.848s-12.33-5.5033-12.33-12.33 5.5298-12.33 12.33-12.33v-0.0529c3.3073 0 6.006-2.6988 6.006-6.006s-2.6988-6.006-6.006-6.006v40.719c0 1.27-1.0319 2.3283-2.3283 2.3283-1.27 0-2.3283-1.0319-2.3283-2.3283" stroke="#8ad2eb" stroke-width="1.089"/>
+ </g>
 </svg>
