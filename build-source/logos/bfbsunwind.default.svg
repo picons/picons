@@ -1,19 +1,16 @@
-<svg version="1.1" viewBox="0 0 800 361.52" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<style type="text/css">
-	.st0{fill:none;stroke:#DCDC0E;stroke-width:9.996;stroke-miterlimit:10;}
-	.st1{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:4.116;stroke-miterlimit:10;}
-	.st2{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:4.116;stroke-linecap:round;stroke-miterlimit:10;}
-</style>
-<line class="st0" x1="475.1" x2="536.72" y1="275.98" y2="144.07" fill="none" stroke="#dcdc0e" stroke-miterlimit="10" stroke-width="48.124"/>
-<g transform="matrix(4.8143 0 0 4.8143 -9.6984 -210.26)">
+<svg version="1.1" viewBox="0 0 800 361.53" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs>
-		<rect id="b" x="-40" y="-40" width="250" height="250"/>
+		<clipPath id="a">
+			<use width="100%" height="100%" xlink:href="#b"/>
+		</clipPath>
 	</defs>
-	<clipPath id="a">
-		<use width="100%" height="100%" xlink:href="#b"/>
-	</clipPath><g fill="none" stroke="#004861" stroke-miterlimit="10" stroke-width="4.116">
-	<circle class="st1" cx="130.9" cy="60.3" r="8.5" clip-path="url(#a)"/>
-	<polyline class="st2" points="4.1 116.7 54.2 98.1 104.1 107.5 128.4 85.7 162.2 88.2 141.3 69.9" clip-path="url(#a)" stroke-linecap="round"/>
-	<polyline class="st2" points="35.8 98.6 57.7 73.9 95.2 95.9 106.7 71.6 93.2 47.3 117.5 55.4" clip-path="url(#a)" stroke-linecap="round" Googl="true"/>
-</g></g>
+	<style type="text/css">
+		.st0{fill:none;stroke:#DCDC0E;stroke-width:9.996;stroke-miterlimit:10;}
+		.st1{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:4.116;stroke-miterlimit:10;}
+		.st2{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:4.116;stroke-linecap:round;stroke-miterlimit:10;}
+	</style>
+	<path class="st0" d="m475.04 276.02 61.63-131.93"/>
+	<path class="st1" transform="matrix(4.8151 0 0 4.8151 -9.8324 -210.3)" d="m139.4 60.3a8.5 8.5 0 0 1-8.5 8.5 8.5 8.5 0 0 1-8.5-8.5 8.5 8.5 0 0 1 8.5-8.5 8.5 8.5 0 0 1 8.5 8.5z"/>
+	<path class="st2" transform="matrix(4.8151 0 0 4.8151 -9.8324 -210.3)" d="m4.1 116.7 50.1-18.6 49.9 9.4 24.3-21.8 33.8 2.5-20.9-18.3"/>
+	<path class="st2" transform="matrix(4.8151 0 0 4.8151 -9.8324 -210.3)" d="m35.8 98.6 21.9-24.7 37.5 22 11.5-24.3-13.5-24.3 24.3 8.1"/>
 </svg>

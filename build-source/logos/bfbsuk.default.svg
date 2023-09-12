@@ -1,17 +1,14 @@
-<svg Googl="true" version="1.1" viewBox="0 0 800 422.07" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<style type="text/css">
-	.st0{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:4.116;}
-	.st1{clip-path:url(#a);fill:#5DC2D9;}
-</style>
-<g transform="matrix(4.7899 0 0 4.7899 -7.865 -198.02)">
+<svg version="1.1" viewBox="0 0 800 422.07" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs>
-		<polygon id="b" points="210 -40 210 210 -40 210 -40 -43"/>
-	</defs>
-	<clipPath id="a">
-		<use width="100%" height="100%" xlink:href="#b"/>
+		<clipPath id="a">
+		<use xlink:href="#SVGID_1_"/>
 	</clipPath>
-	<path class="st0" d="m3.7 93.4v-50h18.5v50.1c0 9.9 6.3 15.9 15.5 15.9s15.5-6 15.5-15.9v-50.1h18.5v49.9c0 20.6-14.2 34.1-34 34.1-19.9 0.1-34-13.4-34-34z" clip-path="url(#a)" fill="none" stroke="#004861" stroke-width="4.116"/>
-	<polygon class="st0" points="106.6 126.1 88.3 126.1 88.3 43.4 106.6 43.4 106.6 78 134.7 43.4 157.4 43.4 124.8 83.1 164 126.1 140.3 126.1 106.6 89.1" clip-path="url(#a)" fill="none" stroke="#004861" stroke-width="4.116"/>
-	<path class="st1" d="m15.8 117.7v-72.2h-10v48c0 10.2 3.7 18.5 10 24.2" clip-path="url(#a)" fill="#5dc2d9"/>
-</g>
+	</defs>
+	<style type="text/css">
+		.st0{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:4.116;}
+		.st1{clip-path:url(#a);fill:#5DC2D9;}
+	</style>
+	<path class="st0" transform="matrix(4.7899 0 0 4.7899 -7.865 -198.02)" d="m3.7 93.4v-50h18.5v50.1c0 9.9 6.3 15.9 15.5 15.9s15.5-6 15.5-15.9v-50.1h18.5v49.9c0 20.6-14.2 34.1-34 34.1-19.9 0.1-34-13.4-34-34z"/>
+	<path class="st0" transform="matrix(4.7899 0 0 4.7899 -7.865 -198.02)" d="m106.6 78 28.1-34.6h22.7l-32.6 39.7 39.2 43h-23.7l-33.7-37v37h-18.3v-82.7h18.3z"/>
+	<path class="st1" transform="matrix(4.7899 0 0 4.7899 -7.865 -198.02)" d="m15.8 117.7v-72.2h-10v48c0 10.2 3.7 18.5 10 24.2"/>
 </svg>

@@ -1,26 +1,23 @@
 <svg version="1.1" viewBox="0 0 800 678.87" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<style type="text/css">
-	.st0{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:4.116;stroke-miterlimit:10;}
-	.st1{clip-path:url(#a);fill:#FFCC00;}
-</style>
-<g transform="matrix(4.8312 0 0 4.8312 -10.768 -68.806)">
 	<defs>
-		<rect id="b" x="-40" y="-40" width="250" height="250"/>
+		<clipPath id="a">
+			<use xlink:href="#SVGID_1_"/>
+		</clipPath>
 	</defs>
-	<clipPath id="a">
-		<use width="100%" height="100%" xlink:href="#b"/>
-	</clipPath><g fill="none" stroke="#004861" stroke-miterlimit="10" stroke-width="4.116">
-	<path class="st0" d="m25 148.8s2.6-12.2-3-18.5-17.8-8.6-17.8-8.6" clip-path="url(#a)"/>
-	<path class="st0" d="m59.1 105.7s23.8-13.2 31.1-32.1c7.3-18.8 10.9-47.6 10.9-47.6h43.4l13.2 9.3v33.7c0 8.3 3.3 9.3 7 21.8 3.6 12.6-3.3 32.8-3.3 32.8l0.7 18.2c-4.6 4-34.1 7-42.7 4.6v-9.6c-7.9-0.7-39.7 15.9-57.9 15.9s-41.7-3-49-8.3c-4-2.9-7.9-13.6-8.2-22.8-0.2-7.6 2-14.1 8.5-14.6 28.8-2 49.3-9.3 62.6-29.8 13.2-20.5 15.2-60.9 15.2-60.9h21.4v8.9" clip-path="url(#a)"/>
-	<path class="st0" d="m161.3 123.6c-19.5 5.6-36.1 2.6-43.7 4.3s-40.4 16.2-54.9 16.2c-14.6 0-28.8-2-37.1-4" clip-path="url(#a)"/>
-	<line class="st0" x1="87.8" x2="106.4" y1="37.9" y2="41.3" clip-path="url(#a)"/>
-	<line class="st0" x1="86.2" x2="103.7" y1="48.8" y2="53.7" clip-path="url(#a)"/>
-	<line class="st0" x1="82.9" x2="100.2" y1="60.4" y2="66.7" clip-path="url(#a)" Googl="true"/>
-	<line class="st0" x1="79.2" x2="95.2" y1="70.3" y2="78.6" clip-path="url(#a)"/>
-	<line class="st0" x1="74.6" x2="89.2" y1="79.6" y2="89.8" clip-path="url(#a)"/>
-	<line class="st0" x1="67.3" x2="81.2" y1="87.9" y2="99.1" clip-path="url(#a)"/>
-	<line class="st0" x1="59.1" x2="70.6" y1="95.1" y2="106.1" clip-path="url(#a)"/>
-	</g><path class="st1" d="m163.4 123.9v1.4h0.1v-1.9c0 0.2-0.1 0.4-0.1 0.5" clip-path="url(#a)" fill="#fc0"/>
-	<path class="st1" d="m153.6 123.3c2-0.4 4.1-0.8 6.1-1.4 0.9-3 3.5-11.8 3.9-20.3v-4.3c-0.1-2.1-0.4-4.1-0.9-5.9-1.5-5.2-3-8.4-4.2-11-1.7-3.6-2.9-6.3-2.9-11.4h-2.1v54.3z" clip-path="url(#a)" fill="#fc0"/>
-</g>
+	<style type="text/css">
+		.st0{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:4.116;stroke-miterlimit:10;}
+		.st1{clip-path:url(#a);fill:#FFCC00;}
+	</style>
+	<path class="st0" transform="matrix(4.8312 0 0 4.8312 -10.768 -68.806)" d="m25 148.8s2.6-12.2-3-18.5-17.8-8.6-17.8-8.6"/>
+	<path class="st0" transform="matrix(4.8312 0 0 4.8312 -10.768 -68.806)" d="m59.1 105.7s23.8-13.2 31.1-32.1c7.3-18.8 10.9-47.6 10.9-47.6h43.4l13.2 9.3v33.7c0 8.3 3.3 9.3 7 21.8 3.6 12.6-3.3 32.8-3.3 32.8l0.7 18.2c-4.6 4-34.1 7-42.7 4.6v-9.6c-7.9-0.7-39.7 15.9-57.9 15.9s-41.7-3-49-8.3c-4-2.9-7.9-13.6-8.2-22.8-0.2-7.6 2-14.1 8.5-14.6 28.8-2 49.3-9.3 62.6-29.8 13.2-20.5 15.2-60.9 15.2-60.9h21.4v8.9"/>
+	<path class="st0" transform="matrix(4.8312 0 0 4.8312 -10.768 -68.806)" d="m161.3 123.6c-19.5 5.6-36.1 2.6-43.7 4.3s-40.4 16.2-54.9 16.2c-14.6 0-28.8-2-37.1-4"/>
+	<path class="st0" transform="matrix(4.8312 0 0 4.8312 -10.768 -68.806)" d="m87.8 37.9 18.6 3.4"/>
+	<path class="st0" transform="matrix(4.8312 0 0 4.8312 -10.768 -68.806)" d="m86.2 48.8 17.5 4.9"/>
+	<path class="st0" transform="matrix(4.8312 0 0 4.8312 -10.768 -68.806)" d="m82.9 60.4 17.3 6.3"/>
+	<path class="st0" transform="matrix(4.8312 0 0 4.8312 -10.768 -68.806)" d="m79.2 70.3 16 8.3"/>
+	<path class="st0" transform="matrix(4.8312 0 0 4.8312 -10.768 -68.806)" d="m74.6 79.6 14.6 10.2"/>
+	<path class="st0" transform="matrix(4.8312 0 0 4.8312 -10.768 -68.806)" d="m67.3 87.9 13.9 11.2"/>
+	<path class="st0" transform="matrix(4.8312 0 0 4.8312 -10.768 -68.806)" d="m59.1 95.1 11.5 11"/>
+	<path class="st1" transform="matrix(4.8312 0 0 4.8312 -10.768 -68.806)" d="m163.4 123.9v1.4h0.1v-1.9c0 0.2-0.1 0.4-0.1 0.5"/>
+	<path class="st1" transform="matrix(4.8312 0 0 4.8312 -10.768 -68.806)" d="m153.6 123.3c2-0.4 4.1-0.8 6.1-1.4 0.9-3 3.5-11.8 3.9-20.3v-4.3c-0.1-2.1-0.4-4.1-0.9-5.9-1.5-5.2-3-8.4-4.2-11-1.7-3.6-2.9-6.3-2.9-11.4h-2.1v54.3z"/>
 </svg>
