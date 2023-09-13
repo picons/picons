@@ -1,13 +1,8 @@
 <svg version="1.1" viewBox="0 0 800 799.64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<defs>
-		<clipPath id="a">
-		<use xlink:href="#SVGID_1_"/>
-	</clipPath>
-	</defs>
 	<style type="text/css">
 		.st0{fill:none;stroke:#EB5B4F;stroke-width:9.996;stroke-miterlimit:10;}
-		.st1{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:4.116;stroke-miterlimit:10;}
-		.st2{clip-path:url(#a);fill:#004861;}
+		.st1{fill:none;stroke:#004861;stroke-width:4.116;stroke-miterlimit:10;}
+		.st2{fill:#004861;}
 	</style>
 	<g transform="scale(4.815)">
 	<path class="st0" d="m18.737 96.237 40.7 40.7"/>

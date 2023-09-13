@@ -1,12 +1,7 @@
 <svg version="1.1" viewBox="0 0 800 834.77" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<defs>
-		<clipPath id="a">
-			<use width="100%" height="100%" xlink:href="#b"/>
-		</clipPath>
-	</defs>
 	<style type="text/css">
-		.st0{clip-path:url(#a);fill:none;stroke:#8ad2eb;stroke-width:4.116;stroke-miterlimit:10;}
-		.st1{clip-path:url(#a);fill:none;stroke:#DCDC0E;stroke-width:9.996;stroke-miterlimit:10;}
+		.st0{fill:none;stroke:#8ad2eb;stroke-width:4.116;stroke-miterlimit:10;}
+		.st1{fill:none;stroke:#DCDC0E;stroke-width:9.996;stroke-miterlimit:10;}
 	</style>
 	<g transform="matrix(5.0493 0 0 5.0493 -29.297 -9.8057)">
 		<path class="st0" d="m35.2 90.4s-10.2 5-10.8 7.3 2 6.8 2.5 9.9c0.5 3.2-0.8 6.3 0.3 8.1s25.1 40.3 31 43.6 7.9 5.2 9.9 5.1c2.1-0.1 11.7-7.9 11.7-7.9z"/>

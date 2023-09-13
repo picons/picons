@@ -1,13 +1,8 @@
 <svg version="1.1" viewBox="0 0 800 919.76" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<defs>
-	<clipPath id="a">
-		<use width="100%" height="100%" xlink:href="#SVGID_1_"/>
-	</clipPath>
-	</defs>
 	<style type="text/css">
-		.st0{clip-path:url(#a);fill:none;stroke:#8ad2eb;stroke-width:4.116;stroke-linejoin:round;stroke-miterlimit:10;}
-		.st1{clip-path:url(#a);fill:none;stroke:#8ad2eb;stroke-width:4.116;stroke-miterlimit:10;}
-		.st2{clip-path:url(#a);fill:#EB5B4F;}
+		.st0{fill:none;stroke:#8ad2eb;stroke-width:4.116;stroke-linejoin:round;stroke-miterlimit:10;}
+		.st1{fill:none;stroke:#8ad2eb;stroke-width:4.116;stroke-miterlimit:10;}
+		.st2{fill:#EB5B4F;}
 	</style>
 	<path class="st0" transform="matrix(5.5052 0 0 5.5052 -71.8 -6.8375)" d="m85.7 3.3c36.4 0 68 30 70.6 68.2 0 0-7.4-10.4-18.5-12.5s-20.9 2.4-27.6 9.6c-4.4-7.7-13.4-11.1-24.5-11.1s-20.1 3.5-24.5 11.1c-6.7-7.2-16.5-11.7-27.6-9.6s-18.5 12.5-18.5 12.5c2.6-38.2 34.3-68.2 70.6-68.2z"/>
 	<path class="st1" transform="matrix(5.5052 0 0 5.5052 -71.8 -6.8375)" d="m15.1 71.5 70.6 93.4 70.7-93.4"/>

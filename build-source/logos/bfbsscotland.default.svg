@@ -1,14 +1,9 @@
 <svg version="1.1" viewBox="0 0 800 676.91" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<defs>
-		<clipPath id="a">
-			<use xlink:href="#SVGID_1_"/>
-		</clipPath>
-	</defs>
 	<style type="text/css">
-		.st0{clip-path:url(#a);fill:#004861;}
-		.st1{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:4.116;stroke-miterlimit:10;}
-		.st2{clip-path:url(#a);fill:none;stroke:#004861;stroke-width:5.88;stroke-miterlimit:10;}
-		.st3{clip-path:url(#a);fill:#F298BC;}
+		.st0{fill:#004861;}
+		.st1{fill:none;stroke:#004861;stroke-width:4.116;stroke-miterlimit:10;}
+		.st2{fill:none;stroke:#004861;stroke-width:5.88;stroke-miterlimit:10;}
+		.st3{fill:#F298BC;}
 	</style>
 	<path class="st0" transform="matrix(4.789 0 0 4.789 -6.1081 -73.952)" d="m74.7 75.7c-2.6-3.3-4.8-5.9-6.3-7.6-1.6 2.1-3.2 4.4-4.9 6.9 1.8 2.1 4.1 4.8 6.6 8.2 1.5-2.7 3-5.1 4.6-7.5"/>
 	<path class="st0" transform="matrix(4.789 0 0 4.789 -6.1081 -73.952)" d="m81.6 75.5c1.9 2.5 3.9 5.3 6 8.4 2.1-3.1 4.1-5.9 6-8.4-2-2.9-4.1-5.5-6-7.9-2 2.4-4 5.1-6 7.9"/>
