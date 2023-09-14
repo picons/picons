@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 379.1 193.61">  
+<defs
+     id="defs15">
+    <style
+       id="style2">.cls-1{fill:url(#a);}.cls-2{fill:url(#c);}.cls-3{fill:url(#b);}.cls-4{fill:#040507;}</style>
+    <linearGradient
+       id="a"
+       x1="87.58"
+       x2="52.68"
+       y1="1.85"
+       y2="113.71"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#f93"
+         offset="0"
+         id="stop4" />
+      <stop
+         stop-color="#ff3100"
+         offset="1"
+         id="stop6" />
+    </linearGradient>
+    <linearGradient
+       id="c"
+       x1="13.72"
+       x2="79.22"
+       y1="28.29"
+       y2="67.97"
+       xlink:href="#a" />
+    <linearGradient
+       id="b"
+       x1="61.71"
+       x2="89.73"
+       y1="48.72"
+       y2="20.7"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#f32c15"
+         offset="0"
+         id="stop10" />
+      <stop
+         stop-color="#e35120"
+         offset="1"
+         id="stop12" />
+    </linearGradient>
+  </defs>
+  <g
+     data-name="Layer 2"
+     id="g33">
+    <g
+       data-name="Layer 1"
+       id="g31">
+      <path
+         class="cls-1"
+         d="M 91.31,4.06 A 4.07,4.07 0 0 0 87.24,0 H 36.57 a 4.06,4.06 0 0 0 -4.06,4.06 v 185.48 a 4.07,4.07 0 0 0 4.06,4.07 h 31.55 a 4.07,4.07 0 0 0 4.06,-4.07 v -17.21 a 4.07,4.07 0 0 1 4.07,-4.06 h 11 a 4.07,4.07 0 0 0 4.07,-4.06 z"
+         id="path17" />
+      <path
+         class="cls-2"
+         d="m 4.06,19.12 h 87.25 v 58.8 H 4.06 A 4.06,4.06 0 0 1 0,73.86 V 23.18 a 4.06,4.06 0 0 1 4.06,-4.06 z"
+         id="path19" />
+      <rect
+         class="cls-3"
+         x="32.509998"
+         y="19.120001"
+         width="58.799999"
+         height="58.799999"
+         id="rect21" />
+      <path
+         class="cls-4"
+         d="m 167.1,66.22 h -48.68 a 7.57,7.57 0 0 0 -7.57,7.57 v 84.63 a 9.2,9.2 0 0 0 9.19,9.19 h 2.81 v -32.39 h 44.25 a 7.57,7.57 0 0 0 7.56,-7.57 V 73.79 a 7.57,7.57 0 0 0 -7.56,-7.57 z m -4.44,57 H 122.85 V 82.35 A 4.13,4.13 0 0 1 127,78.22 h 35.68 z"
+         fill="#fff"
+         id="path23"
+         style="fill:#ffffff" />
+      <path
+         class="cls-4"
+         d="m 379.1,73.79 a 7.56,7.56 0 0 0 -7.56,-7.57 H 336 a 9.19,9.19 0 0 0 -9.19,9.19 v 2.81 H 363 a 4.12,4.12 0 0 1 4.12,4.13 v 6.13 h -43.21 a 8.62,8.62 0 0 0 -8.61,8.61 v 30.57 a 7.56,7.56 0 0 0 7.56,7.56 h 48.68 a 7.55,7.55 0 0 0 7.56,-7.56 V 94.48 Z m -12,49.43 h -35.67 a 4.12,4.12 0 0 1 -4.13,-4.12 v -14.49 a 4.13,4.13 0 0 1 4.13,-4.13 h 35.67 z"
+         fill="#fff"
+         id="path25"
+         style="fill:#ffffff" />
+      <path
+         class="cls-4"
+         d="m 225.54,66.22 h -31.39 a 7.57,7.57 0 0 0 -7.56,7.56 V 126 a 9.19,9.19 0 0 0 9.19,9.18 h 2.81 V 82.35 a 4.13,4.13 0 0 1 4.13,-4.13 h 32 v -2.81 a 9.19,9.19 0 0 0 -9.18,-9.19 z"
+         fill="#fff"
+         id="path27"
+         style="fill:#ffffff" />
+      <path
+         class="cls-4"
+         d="M 299.76,72.2 280,125.05 h -2.6 l -20,-52.89 a 9.17,9.17 0 0 0 -8.59,-5.94 h -6.56 l 24.49,66.49 a 3.83,3.83 0 0 0 3.61,2.51 H 287 a 3.86,3.86 0 0 0 3.61,-2.52 l 17.27,-47.34 c 4,-10.84 7,-19.14 7,-19.14 h -6.48 a 9.2,9.2 0 0 0 -8.64,5.98 z"
+         fill="#fff"
+         id="path29"
+         style="fill:#ffffff" />
+    </g>
+  </g>
+</svg>
