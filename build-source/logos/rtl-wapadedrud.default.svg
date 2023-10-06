@@ -1,18 +1,16 @@
-<?xml version="1.0" encoding="windows-1252"?>
-<!-- Generator: Adobe Illustrator 25.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="&#1064;&#1072;&#1088;_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 439.68 77.28" style="enable-background:new 0 0 439.68 77.28;" xml:space="preserve">
-<g>
-	<g>
-		<rect style="fill-rule:evenodd;clip-rule:evenodd;fill:#d4000d;" width="137.4" height="77.28" Googl="true"/>
-		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;" d="M74.65,37.08c5.9,0,8.77-1.9,8.77-5.78s-2.87-5.73-8.77-5.73    H48.8v11.51H74.65z M39.24,17.76H75.9c11.16,0,17.37,5.01,17.37,13.42c0,7.22-4.66,12.05-12.6,13.19l17.97,15.15H84.85L67.95,44.9    H48.8v14.62h-9.56V17.76z"/>
-	</g>
-	<g>
-		<rect x="302.28" style="fill-rule:evenodd;clip-rule:evenodd;fill:#53a0f9;" width="137.4" height="77.28"/>
-		<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;" points="345.12,17.76 354.66,17.76 354.66,51.29     397.08,51.29 397.08,59.52 345.12,59.52   "/>
-	</g>
-	<g>
-		<rect x="151.2" style="fill-rule:evenodd;clip-rule:evenodd;fill:#9629bc;" width="137.28" height="77.28" Googl="true"/>
-		<polygon style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;" points="215.07,25.99 190.92,25.99 190.92,17.76     248.76,17.76 248.76,25.99 224.61,25.99 224.61,59.52 215.07,59.52   "/>
-	</g>
+<svg version="1.1" viewBox="0 0 800 140.61" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<g transform="scale(1.8195)" clip-rule="evenodd" fill-rule="evenodd">
+	
+		<path d="m0 0h137.4v77.28h-137.4z" fill="#1f0fc2"/>
+		<path d="m74.65 37.08c5.9 0 8.77-1.9 8.77-5.78s-2.87-5.73-8.77-5.73h-25.85v11.51zm-35.41-19.32h36.66c11.16 0 17.37 5.01 17.37 13.42 0 7.22-4.66 12.05-12.6 13.19l17.97 15.15h-13.79l-16.9-14.62h-19.15v14.62h-9.56z" fill="#fff"/>
+	
+	
+		<path d="m302.28 0h137.4v77.28h-137.4z" fill="#67e0c2"/>
+		<path d="m345.12 17.76h9.54v33.53h42.42v8.23h-51.96z" fill="#fff"/>
+	
+	
+		<path d="m151.2 0h137.28v77.28h-137.28z" fill="#d51b35"/>
+		<path d="m215.07 25.99h-24.15v-8.23h57.84v8.23h-24.15v33.53h-9.54z" fill="#fff"/>
+	
 </g>
 </svg>
