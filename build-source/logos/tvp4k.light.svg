@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="0 0 893 222.6"
+   xml:space="preserve"
+   id="svg18339"
+   sodipodi:docname="tvp4k.light.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs18343" /><sodipodi:namedview
+   id="namedview18341"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   showgrid="false"
+   inkscape:zoom="1.0638298"
+   inkscape:cx="446.5"
+   inkscape:cy="111.39"
+   inkscape:window-width="1530"
+   inkscape:window-height="1136"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg18339" />
+<style
+   type="text/css"
+   id="style18327">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#1A315C;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#0E7DC2;}
+</style>
+<rect
+   class="st0"
+   width="893"
+   height="222.6"
+   id="rect18329" />
+<path
+   class="st1"
+   d="m318.1 41.8-64 143.8-64-143.8h31l33.4 74.1 32.5-74.1zm148.1 49c0 24.2-18.5 48.7-56.2 48.7l-6.1-0.2v42.2h-27.9v-138.1h36.7c35.6 0 53.3 23.6 53.5 47.4zm-27.1 0.8c-1.2-15.9-9.2-21.4-25.1-21.6h-10v43.6h8.8c15.9-0.2 25.3-5.5 26.3-22zm-404.1-48v26.7h38.7v111.4h29.5v-111.4h38.8v-26.7zm473.1-43.6v222.6h-508.1v-222.6zm-342.3 10.2h-154.4v202.6h154.4zm165.6 0h-154.4v202.6h154.4zm165.5 0h-154.3v202.6h154.4v-202.6z"
+   id="path18331" />
+<rect
+   class="st2"
+   x="508.1"
+   width="384.9"
+   height="222.6"
+   Googl="true"
+   id="rect18333" />
+<polygon
+   class="st0"
+   points="867.9 43.4 819.4 43.4 746.4 99.4 746.4 43.4 716.9 43.4 716.9 181.5 746.4 181.5 746.4 117.8 828.5 181.5 876.8 181.5 782.8 108.7"
+   id="polygon18335" />
+<polygon
+   class="st0"
+   points="670.6 43.4 650.4 43.4 641 43.4 635.8 43.4 537 122.8 537 152.3 624.4 152.3 624.4 122.8 584.2 122.8 641 77 641 122.8 641 152.3 641 181.5 670.6 181.5 670.6 152.3 699.5 152.3 699.5 122.8 670.6 122.8"
+   id="polygon18337" />
+</svg>
