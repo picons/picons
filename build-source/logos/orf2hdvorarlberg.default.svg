@@ -1,11 +1,11 @@
-<svg version="1.1" viewBox="0 0 1030 180" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" viewBox="0 0 1030 180.01" xmlns="http://www.w3.org/2000/svg">
  <defs>
   <linearGradient id="a" x1="626.52" x2="451.71" y1="20.041" y2="20.041" gradientTransform="matrix(.64465 0 0 .64465 -174.24 -239.35)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#FFF" offset="0"/>
    <stop offset="1"/>
   </linearGradient>
  </defs>
- <g transform="matrix(1.3646 0 0 1.3646 163.09 399.23)">
+ <g transform="matrix(1.3646 0 0 1.3646 163.08 399.23)">
   <path d="m188.04-292.21h315.33v131.56h-315.33z" fill="#fff" stroke-width="1.5482"/>
   <path d="m-119.51-292.21h307.29v131.56h-307.29z" fill="#ec1b24"/>
   <g fill="#fff">
@@ -28,6 +28,6 @@
    <path d="m333.76-160.99h132.47v-28.811c-2.3563 1.4256-4.8472 2.6956-7.535 3.7145v17.562h-117.41v-13.828h-7.535"/>
   </g>
  </g>
- <path d="m850 180h180.01v-180h-180.01z" fill="#f50020"/>
- <path d="m986.72 39.823h-26.668l-19.968 48.868-20.11-48.868h-26.684l46.794 106.19 46.636-106.19" fill="#fff"/>
+ <path class="background" d="m849.99 0h180v180h-180z" fill="#b62025" stroke-width="3.1474"/>
+ <path class="logo" d="m963.96 39.941-23.964 63.892-23.426-63.892h-27.697l40.472 100.12h21.302l39.944-100.12z" fill="#fff" stroke-width="3.1474"/>
 </svg>
