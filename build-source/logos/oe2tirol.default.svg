@@ -1,11 +1,11 @@
-<svg width="210.94mm" height="63.273mm" version="1.1" viewBox="0 0 210.94 63.273" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="158.77mm" height="47.625mm" version="1.1" viewBox="0 0 158.77 47.625" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <linearGradient id="a" x1="147.67" x2="210.94" y1="31.637" y2="31.637" gradientTransform="translate(-128.53 117.2)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="a" x1="147.67" x2="210.94" y1="31.637" y2="31.637" gradientTransform="translate(-128.53,117.2)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#67080a" offset="0"/>
-   <stop stop-color="#a71516" offset="1"/>
+   <stop stop-color="#b62025" offset="1"/>
   </linearGradient>
  </defs>
- <g transform="translate(128.53 -117.2)">
+ <g transform="matrix(.75265 0 0 .75265 96.737 -88.209)">
   <rect x="19.142" y="117.2" width="63.273" height="63.273" fill="url(#a)"/>
   <g transform="translate(.36196 -.0031669)">
    <path d="m-128.89 117.2h147.67v63.273h-147.67z" clip-rule="evenodd" fill="#d21b09" fill-rule="evenodd" stroke-width=".077731"/>
@@ -15,8 +15,8 @@
     <path class="st2" d="m-46.399 160.04h-11.636v-25.465h11.636c8.3949 0 13.587 6.0008 13.587 12.732s-5.3557 12.732-13.587 12.732zm0-19.464h-5.4334v13.463h5.4334c4.5861 0 7.3378-3.0393 7.3378-6.7315s-2.7594-6.7315-7.3378-6.7315z"/>
     <path class="st2" d="m-27.542 160.04v-25.465h6.2418v25.457h-6.2418z"/>
     <path class="st2" d="m-2.5278 160.52c-7.5399 0-13.587-5.7598-13.587-13.214s6.0397-13.214 13.587-13.214c7.5477 0 13.587 5.7598 13.587 13.214s-6.0397 13.214-13.587 13.214zm0-20.428c-3.7311 0-7.1357 3.2025-7.1357 7.2134s3.4046 7.2134 7.1357 7.2134c3.6922 0 7.1357-3.2025 7.1357-7.2134 8e-3 -4.0109-3.4435-7.2134-7.1357-7.2134z"/>
-    <path class="st2" d="m55.483 138.81v25.34h-9.0556v-25.34h-9.9962v-7.812h29.056v7.812z" stroke-width=".077731"/>
    </g>
   </g>
  </g>
+ <path class="logo" d="m123.89 10.569v6.1997h7.7496v20.29h6.622v-20.29h7.7496v-6.1997z" fill="#fff" stroke-width=".83275"/>
 </svg>
