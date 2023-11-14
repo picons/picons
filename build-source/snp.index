@@ -1,3 +1,6 @@
+motorvision=motorvisionplus
+motorvisionhd=motorvisionplus
+motorvisiontvhd=motorvisionplus
 motorvisionplus=motorvisionplus
 stubruzwaregitaren=stubruzwaregitaren
 studiobrusselzwaregitaren=stubruzwaregitaren
@@ -7991,7 +7994,6 @@ motorvisionchannelhd=motorvisiontv
 motorvisiontv=motorvisiontv
 motorvisiontvconnect=motorvisiontv
 motorvisionhd=motorvisiontvhd
-motorvisiontvhd=motorvisiontvhd
 motowizja=motowizjatv
 motowizjahd=motowizjatv
 motowizjatv=motowizjatv
