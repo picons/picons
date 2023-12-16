@@ -1,3 +1,6 @@
+bbcfourcbeebieshd=bbccbeebies_bbcfour
+bbcthreecbbchd=bbccbbc_bbcthree
+vintageradio=vintageradio
 58D_C_1_FFFF0000=radio1fm936
 2558_82F_2_11A0000=958capitalfm
 cartoonitod=cartoonito
@@ -1546,7 +1549,7 @@ bbcbrithdn=bbcbrit
 bbcbrit=bbcbrit-lichoridas
 bbcb=bbcbrit-swokauisti
 bbcbritsouthafrica=bbcbrit-swokauisti
-bbcthreecbbc=bbccbbc
+bbcthreecbbc=bbccbbc_bbcthree
 cbbc=bbccbbc
 cbbcchannel=bbccbbc
 cbbchd=bbccbbc
