@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="166.56" enable-background="new 0 0 500 166.6" version="1.1" viewBox="0 0 500 166.56" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css">
+	.st0{fill:#EDD3AE;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:#ACD8A7;}
+	.st3{fill:#33BAB1;}
+</style>
+
+	<path class="st0" d="m500 0h-156.3v87.9h156.3z"/>
+	<g transform="translate(195.05,79.954)">
+		<path class="st1" d="m197.3-59.8h10.9v38.1h48.3v9.4h-59.1v-47.5z"/>
+	</g>
+	<path class="st2" d="m328.1 0h-156.2v87.9h156.3v-87.9z"/>
+	<g transform="translate(148.28,76.991)">
+		<path class="st1" d="m96.3-47.4h-27.5v-9.4h65.8v9.4h-27.5v38.1h-10.8z"/>
+	</g>
+	<path class="st3" d="m156.3 0h-156.3v87.9h156.3z"/>
+	
+		<g transform="translate(97.642,72.998)">
+			<path class="st1" d="m-13-30.8c6.7 0 10-2.2 10-6.6s-3.3-6.5-10-6.5h-29.4v13.1zm-40.2-22h41.6c12.7 0 19.7 5.7 19.7 15.3 0 8.2-5.3 13.7-14.3 15l20.4 17.2h-15.6l-19.2-16.6h-21.8v16.6h-10.9z"/>
+		</g><g fill="#fff">
+		<g transform="translate(119.37,41.157)">
+			<path d="m33.9 101.6c0-10.2-5.4-16.4-14.2-16.4s-14.2 6.2-14.2 16.4c0 10.1 5.4 16.4 14.2 16.4s14.2-6.3 14.2-16.4m-36.6 0c0-14.2 9-23.8 22.4-23.8s22.4 9.6 22.4 23.8-9 23.8-22.4 23.8-22.4-9.6-22.4-23.8" fill="#fff"/>
+		</g>
+		<g transform="translate(127.18,33.851)">
+			<path d="m50.7 132v-38.9h-13.8v-7.3h35.7v7.3h-13.7v38.9z" fill="#fff"/>
+		</g>
+		<g transform="translate(139.31,33.851)">
+			<path d="m76.9 132v-38.9h-13.8v-7.3h35.7v7.3h-13.8v38.9z" fill="#fff"/>
+		</g>
+		<g transform="translate(157.58,48.462)">
+			<path d="m116.4 71.2h8.1v46.2h-8.1v-20.2h-21.2v20.2h-8.1v-46.2h8.1v18.7h21.2z" fill="#fff"/>
+		</g>
+		<g transform="translate(174.22,41.157)">
+			<path d="m152.3 101.6c0-10.2-5.4-16.4-14.2-16.4s-14.2 6.2-14.2 16.4c0 10.1 5.4 16.4 14.2 16.4s14.2-6.3 14.2-16.4m-36.6 0c0-14.2 9-23.8 22.4-23.8s22.4 9.6 22.4 23.8-9 23.8-22.4 23.8-22.4-9.6-22.4-23.8" fill="#fff"/>
+		</g>
+		<g transform="translate(179.31,33.851)">
+			<path d="m163.3 132v-46.2h9.4l20.3 33.4h0.3v-33.4h8.1v46.2h-9.4l-20.3-33.2h-0.3v33.2z" fill="#fff"/>
+		</g>
+	
+
+</g></svg>
