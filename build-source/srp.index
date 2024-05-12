@@ -1,3 +1,11 @@
+1018_451_35_C00000sportdigitalfussball
+10CC_418_1_C00000sportdigitalfussball
+C386_271A_F001_FFFF0000sportdigitalfussball
+4EEF_21FC_9C_5A0000sportdigitalfussball
+24BA_47_1_FFFF0000sportdigitalfussball
+9CA8_191_270F_FFFF0000sportdigitalfussball
+6217_83_270F_FFFF0000sportdigitalfussball
+D16B_2712_F001_FFFF0000sportdigitalfussball
 7F_D_85_C00000=13thstreet
 220A_44C_1_C00000=6ter
 101D_451_35_C00000=axnblack
@@ -30,7 +38,7 @@ D_6_85_C00000=skycrime
 8E_B_85_C00000=skyshowcase
 11_9_85_C00000=skysportf1
 72_D_85_C00000=skysporttennis
-10CF_418_1_C00000=sportdigitaledge
+10CF_418_1_C00000sportdigitalfussballedge
 28CA_40F_1_C00000=swrkultur
 28D0_40F_1_C00000=swrkultur
 7E_C_85_C00000=syfy
@@ -6776,7 +6784,6 @@ D11F_832_2_11A0000=zeecinema
 28F4_425_1_C00000=rbb24inforadio
 2F9A_454_1_C00000=sonlifetv
 10CD_418_1_C00000=sport1plushd-wispelutri
-10CC_418_1_C00000=sportdigitalhd
 3404_3ED_1_C00000=stimmungsgartentv
 18F9_3F4_1_C00000=telesurhd
 10D0_418_1_C00000=waidwerk
@@ -7917,7 +7924,6 @@ C350_271C_F001_FFFF0000=skyonehd
 8D_1_85_FFFF0000=skysportmix
 91_4_85_FFFF0000=skysportpremierleague
 34_6_85_FFFF0000=spiegelgeschichte
-C386_271A_F001_FFFF0000=sportdigitalhd
 28C8_431_1_FFFF0000=swr1badenwuerttemberg
 28C9_431_1_FFFF0000=swr1rheinlandpfalz
 28CA_431_1_FFFF0000=swrkultur
@@ -10926,7 +10932,6 @@ B_C_85_FFFF0000=skycinemathrillerhd
 1E_4_85_FFFF0000=skysportaustria1
 149_3_85_FFFF0000=skysportaustria2
 103_1_85_FFFF0000=skysportaustria4
-C386_271A_F001_FFFF0000=sportdigital
 7E_1_85_FFFF0000=syfyhd
 C38E_2722_F001_FFFF0000=tagesschau24hd
 C394_2727_F001_FFFF0000=tlchd
@@ -12452,7 +12457,6 @@ C9_14B4_9C_5A0000=prosiebenmaxxhd
 268_206C_9C_5A0000=spiegeltvwissenhd
 EA_1644_9C_5A0000=sport1hd-wispelutri
 26F_206C_9C_5A0000=sport1plushd-wispelutri
-4EEF_21FC_9C_5A0000=sportdigitalhd
 E8_1644_9C_5A0000=tele5hd
 EB_1644_9C_5A0000=tlchd
 CE_14B4_9C_5A0000=toggoplus
@@ -15587,7 +15591,6 @@ B7_61_1_FFFF0000=more4
 2440_46_1_FFFF0000=sport1hd-wispelutri
 234B_53_1_FFFF0000=sport1plushd-wispelutri
 233A_54_1_FFFF0000=sport1ushd-wispelutri
-24BA_47_1_FFFF0000=sportdigitalhd
 234E_58_1_FFFF0000=srf1hd
 2345_A9_1_FFFF0000=srfinfohd
 234F_58_1_FFFF0000=srfzweihd
@@ -16693,7 +16696,6 @@ BBE5_1E1_270F_FFFF0000=ntvmir
 AC58_1FF_270F_FFFF0000=ocko
 206_1_85_FFFF0000=romancetv
 5A45_E7_270F_FFFF0000=rtvd
-9CA8_191_270F_FFFF0000=sportdigitalhd
 6215_F1_270F_FFFF0000=tvn24
 389_4E84_16E_A00000=hrthr1
 38A_4E84_16E_A00000=hrthr2
@@ -17974,7 +17976,6 @@ EF8C_3F9_1_C00000=prosiebenmaxxhd
 1006_451_35_C00000=ab3
 E3A_1C20_13E_820000=rtl1025
 101A_451_35_C00000=vrtradio1
-1018_451_35_C00000=sportdigitalhd
 101C_451_35_C00000=kabeleinsclassics
 100D_451_35_C00000=hustlertv
 100B_451_35_C00000=hustlertv
@@ -20445,7 +20446,6 @@ DB2B_231_270F_FFFF0000=warnertvseriehd
 6212_F1_270F_FFFF0000=mtvbrandnew
 6213_B5_270F_FFFF0000=powerturktv
 6214_F1_270F_FFFF0000=samanyolutv
-6217_83_270F_FFFF0000=sportdigital
 6219_19B_270F_FFFF0000=13thstreethd
 621A_1B9_270F_FFFF0000=automotorsporthd
 621A_1D7_270F_FFFF0000=automotorsporthd
@@ -21256,7 +21256,6 @@ D164_2713_F001_FFFF0000=vox
 D166_2713_F001_FFFF0000=ntv
 D167_2718_F001_FFFF0000=eurosport1
 D16_B_1_E08B1AD=protvinternational
-D16B_2712_F001_FFFF0000=sportdigital
 D16C_2726_F001_FFFF0000=astrotv
 D16D_2712_F001_FFFF0000=cnn
 D16E_2714_F001_FFFF0000=aljazeera
