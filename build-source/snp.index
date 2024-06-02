@@ -1,3 +1,7 @@
+srf1=radiosrf1
+4331_300C_13E_820000=srf1
+AC4E_172_A018_FFFF0000=srf1
+D359_38F_270F_FFFF0000=srf1
 sky70s=skycinema70s
 sky70shd=skycinema70shd
 sr1=sr1
@@ -14846,7 +14850,6 @@ radioch59=sputnikradio
 sr2kulturradio=sr2kulturradio
 srcfm=srcfm
 srctv=srctv
-srf1=srf1
 srf1hd=srf1hd
 radiosrf2kultur=srf2kultur
 srf2kultur=srf2kultur
