@@ -194,8 +194,21 @@ grep -v -e '^#' -e '^$' $backgroundsconf | while read lines ; do
             echo -ne "           Converting logo: $currentlogo/$logocount"\\r
         fi
 
-        if [[ -f $location/build-source/logos/$logoname.$type.png ]] || [[ -f $location/build-source/logos/$logoname.$type.svg ]]; then
-            logotype=$type
+        # Determine the logo type with fallbacks
+        if [[ $type == "white" ]]; then
+            if [[ -f $location/build-source/logos/$logoname.white.png ]] || [[ -f $location/build-source/logos/$logoname.white.svg ]]; then
+                logotype=white
+            elif [[ -f $location/build-source/logos/$logoname.light.png ]] || [[ -f $location/build-source/logos/$logoname.light.svg ]]; then
+                logotype=light
+            else
+                logotype=default
+            fi
+        elif [[ $type == "light" ]]; then
+            if [[ -f $location/build-source/logos/$logoname.light.png ]] || [[ -f $location/build-source/logos/$logoname.light.svg ]]; then
+                logotype=light
+            else
+                logotype=default
+            fi
         else
             logotype=default
         fi
