@@ -2,12 +2,12 @@
 <svg
    id="_Слой_1"
    data-name="Слой 1"
-   width="500"
-   height="314.14"
-   viewBox="0 0 500 314.14"
+   width="499.98999"
+   height="314.14001"
+   viewBox="0 0 499.98999 314.14"
    version="1.1"
-   sodipodi:docname="Kabaret_TV.svg"
-   inkscape:version="1.3.1 (9b9bdc1480, 2023-11-25, custom)"
+   sodipodi:docname="kabarettv.default.svg"
+   inkscape:version="1.3.1 (91b66b0783, 2023-11-16)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,11 +23,11 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1.694"
      inkscape:cx="250"
-     inkscape:cy="157.02479"
-     inkscape:window-width="1530"
-     inkscape:window-height="1136"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:cy="157.31995"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="g26" />
   <defs
@@ -72,11 +72,11 @@
      inkscape:label="Kabaret tv logo">
     <polygon
        class="cls-4"
-       points="267.61 5.48 403.38 211.08 32.53 304.1 267.61 5.48"
+       points="32.53,304.1 267.61,5.48 403.38,211.08 "
        id="polygon1" />
     <polygon
        class="cls-5"
-       points="400.87,195.57 250.9,0 37.36,314.14 "
+       points="37.36,314.14 400.87,195.57 250.9,0 "
        id="polygon2"
        style="display:inline" />
     <g
@@ -87,12 +87,12 @@
          inkscape:label="kabaret background">
         <polygon
            class="cls-1"
-           points="23.77,143.72 449.57,68.6 428.85,187.89 2.89,263.02 "
+           points="428.85,187.89 2.89,263.02 23.77,143.72 449.57,68.6 "
            id="polygon3"
            style="display:inline" />
         <polygon
            class="cls-2"
-           points="0,260.12 20.88,140.82 446.67,65.7 425.96,185 "
+           points="446.67,65.7 425.96,185 0,260.12 20.88,140.82 "
            id="polygon4"
            style="display:inline" />
       </g>
@@ -173,22 +173,22 @@
            id="g19">
           <path
              class="cls-3"
-             d="M470.98,59.69l-4.77.84-5.74,33.7-11.01,1.94,5.74-33.7-4.05.71,1.69-9.48,4.05-.71,1.33-8.09,11.01-1.94-1.33,8.09,4.77-.84-1.69,9.48Z"
+             d="m 470.98,59.69 -4.77,0.84 -5.74,33.7 -11.01,1.94 5.74,-33.7 -4.05,0.71 1.69,-9.48 4.05,-0.71 1.33,-8.09 11.01,-1.94 -1.33,8.09 4.77,-0.84 z"
              id="path18" />
           <path
              class="cls-3"
-             d="M486.25,89.55l-13.96,2.52.84-42.02,10.77-1.95-2.45,27.74.77-.14,7.03-28.57,10.74-1.94-13.75,44.35Z"
+             d="m 486.25,89.55 -13.96,2.52 0.84,-42.02 10.77,-1.95 -2.45,27.74 0.77,-0.14 7.03,-28.57 10.74,-1.94 -13.75,44.35 z"
              id="path19" />
         </g>
         <g
            id="g21">
           <path
              class="cls-4"
-             d="M468.13,56.71l-4.77.84-5.74,33.7-11.01,1.94,5.74-33.7-4.05.71,1.69-9.48,4.05-.71,1.33-8.09,11.01-1.94-1.33,8.09,4.77-.84-1.69,9.48Z"
+             d="m 468.13,56.71 -4.77,0.84 -5.74,33.7 -11.01,1.94 5.74,-33.7 -4.05,0.71 1.69,-9.48 4.05,-0.71 1.33,-8.09 11.01,-1.94 -1.33,8.09 4.77,-0.84 z"
              id="path20" />
           <path
              class="cls-4"
-             d="M483.4,86.57l-13.96,2.52.84-42.02,10.77-1.95-2.45,27.74.77-.14,7.03-28.57,10.74-1.94-13.75,44.35Z"
+             d="m 483.4,86.57 -13.96,2.52 0.84,-42.02 10.77,-1.95 -2.45,27.74 0.77,-0.14 7.03,-28.57 10.74,-1.94 -13.75,44.35 z"
              id="path21" />
         </g>
       </g>
