@@ -1,0 +1,20 @@
+<svg width="2400px" height="1500px" clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1" viewBox="0 0 2400 1604.2" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <style type="text/css">
+   
+    .fil0 {fill:#4B84FF}
+    .fil1 {fill:url(#a)}
+   
+  </style>
+  <radialGradient id="a" cx="966.98" cy="861.65" r="154.71" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#fff" offset="0"/>
+   <stop stop-color="#DEF8FF" offset=".23922"/>
+   <stop stop-color="#0cf" offset="1"/>
+  </radialGradient>
+ </defs>
+ 
+  
+  <path class="fil0" d="m2170.3 647.43c-123.24-299.05-595.94-647.43-1065.4-647.43-480.68 0-1105 500.77-1105 802.13 0 443.13 727.8 802.13 1105 802.13 508.5 0 1096-289.86 1295-785.1-30.279-26.745-290.15 89.747-389.64 89.747-99.491 0-308.87-83.87-386.55-37.312-55.568 33.307-102.76 125.91-157.38 204.24-91.314 139.03-250.4 225.6-417.61 225.6-275.71 0-499.31-223.6-499.31-499.31s223.6-499.31 499.31-499.31c187.57 0 361.02 107.2 445.5 273.69 22.115 37.298 43.265 65.939 63.156 82.548 13.043 10.895 81.923-5.8137 141.58-5.8137 59.662 0 199.61 56.172 263.68 56.172 64.071 0 218.79-34.726 207.56-61.98z"/>
+  <path class="fil1" d="m1420.9 802.12a372.04 372.04 0 0 1-372.04 372.04 372.04 372.04 0 0 1-372.04-372.04 372.04 372.04 0 0 1 372.04-372.04 372.04 372.04 0 0 1 372.04 372.04z" fill="url(#a)"/>
+ 
+</svg>

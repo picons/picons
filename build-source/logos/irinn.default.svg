@@ -1,5 +1,11 @@
-<svg version="1.1" viewBox="0 0 800 762.79" xmlns="http://www.w3.org/2000/svg">
- <path d="m800 381.4a400 381.4 0 0 1-400 381.4 400 381.4 0 0 1-400-381.4 400 381.4 0 0 1 400-381.4 400 381.4 0 0 1 400 381.4z" fill="#f4710f" stroke-width="1.5504"/>
+<svg version="1.1" viewBox="0 0 800 762.79" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <radialGradient id="a" cx="400" cy="381.4" r="400" gradientTransform="matrix(1 0 0 .9535 0 17.735)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#00dae2" offset="0"/>
+   <stop stop-color="#027e83" offset="1"/>
+  </radialGradient>
+ </defs>
+ <path d="m800 381.4a400 381.4 0 0 1-400 381.4 400 381.4 0 0 1-400-381.4 400 381.4 0 0 1 400-381.4 400 381.4 0 0 1 400 381.4z" fill="url(#a)" stroke-width="1.5504"/>
  <g transform="matrix(1.5504 0 0 1.5504 -6.2016 -6.2015)" fill="#fff">
   <path d="m307 367a55 55 0 0 1-55 55 55 55 0 0 1-55-55 55 55 0 0 1 55-55 55 55 0 0 1 55 55z"/>
   <path d="m311 119a55 55 0 0 1-55 55 55 55 0 0 1-55-55 55 55 0 0 1 55-55 55 55 0 0 1 55 55z"/>
