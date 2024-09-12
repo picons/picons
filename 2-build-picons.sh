@@ -210,7 +210,7 @@ grep -v -e '^#' -e '^$' $backgroundsconf | while read lines ; do
                 logotype=default
             fi
 	elif [[ $type == "dark" ]]; then
-            if [[ -f $location/build-source/logos/$logoname.light.png ]] || [[ -f $location/build-source/logos/$logoname.light.svg ]]; then
+            if [[ -f $location/build-source/logos/$logoname.dark.png ]] || [[ -f $location/build-source/logos/$logoname.dark.svg ]]; then
                 logotype=dark
             else
                 logotype=default
