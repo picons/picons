@@ -1,0 +1,14 @@
+<svg width="211.67mm" height="66.739mm" version="1.1" viewBox="0 0 211.67 66.739" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(.57995 0 0 .57995 36.666 -155.09)" fill-rule="evenodd" stroke-linecap="round">
+  <g transform="matrix(38.56 0 0 38.56 -783.84 -12602)" direction="rtl" fill="#00aeef" stroke-width="2" style="paint-order:stroke fill markers" aria-label="TV">
+   <path d="m24.985 336.04v-1.8669h-0.5588v-0.41592h1.6669v0.41592h-0.5588v1.8669z"/>
+   <path d="m26.848 336.04-0.71438-2.2828h0.58102l0.2413 0.9144q0.12065 0.44132 0.19368 0.86995h0.0095q0.07303-0.40323 0.19685-0.86995l0.2413-0.9144h0.55562l-0.70802 2.2828z"/>
+  </g>
+  <g transform="matrix(3.7675 0 0 3.7675 -197.08 -237.11)" fill="#0070b7">
+   <path d="m35.529 157.28v-23.365h8.8202q5.4222 0 8.4226 3.0871 3.0003 3.0871 3.0003 8.579 0 5.4594-3.0003 8.579t-8.4226 3.1196zm8.8202-4.2895q2.3858 0 3.5787-1.6248 1.229-1.6248 1.229-5.7843 0-4.1595-1.1929-5.7843-1.1929-1.6248-3.6148-1.6248h-2.5665v14.818z" direction="rtl" stroke-width="21.59" style="paint-order:stroke fill markers"/>
+   <path d="m57.631 138.7v-4.7833h5.2433v4.7833zm0 18.581v-16.496h5.2433v16.496z" direction="rtl" stroke-width="19.315" style="paint-order:stroke fill markers"/>
+   <path d="m83.327 138.7v-4.7833h5.2433v4.7833zm0 18.581v-16.496h5.2433v16.496z" direction="rtl" stroke-width="19.315" style="paint-order:stroke fill markers"/>
+   <path d="m74.972 156.6h-0.06344q-0.888 0.47572-3.0763 0.47572-3.108 0-5.0743-2.3786-1.9663-2.3786-1.9663-6.3746 0-8.9751 8.4994-8.9751 3.4251 0 7.104 1.2686v16.46q0 3.5837-2.0297 5.4866-2.0297 1.9028-5.5817 1.9028-2.9811 0-6.5648-1.0149v-3.3617h6.3428q2.4103 0 2.4103-2.1248zm0-12.844h-2.0297q-2.5054 0-2.5054 4.5668 0 4.5351 2.5054 4.5351h2.0297z" direction="rtl" stroke-width="19.977" style="paint-order:stroke fill markers"/>
+  </g>
+ </g>
+</svg>
