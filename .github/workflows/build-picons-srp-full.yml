@@ -19,6 +19,6 @@ jobs:
     - name: Upload srp-full picons
       uses: skx/github-action-publish-binaries@master
       env:
-        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         args: 'build-output/binaries-srp-full/*'
