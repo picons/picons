@@ -10,20 +10,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Get current version
         id: version
         run: |
           hash=$(git rev-parse --short HEAD)
-          echo "::set-output name=version::$(date --utc --date=@$(git show -s --format=%ct $hash) +'%Y-%m-%d--%H-%M-%S')"
+          echo "version=$(date --utc --date=@$(git show -s --format=%ct $hash) +'%Y-%m-%d--%H-%M-%S')" >> $GITHUB_OUTPUT
       - name: Create Release
         id: create_release
-        uses: actions/create-release@latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{steps.version.outputs.version}}
-          release_name: ${{steps.version.outputs.version}}
+          name: ${{steps.version.outputs.version}}
           body: |
             Picon packages can take up to an hour to appear here...
           draft: false
@@ -38,7 +36,7 @@ jobs:
         sudo apt update
         sudo apt install -y --no-install-recommends --no-install-suggests git xz-utils binutils pngquant imagemagick librsvg2-bin jq
     - name: Checkout the repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: Build snp-full picons
       run: |
         bash 2-build-picons.sh snp-full
@@ -58,7 +56,7 @@ jobs:
         sudo apt update
         sudo apt install -y --no-install-recommends --no-install-suggests git xz-utils binutils pngquant imagemagick librsvg2-bin jq
     - name: Checkout the repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: Download channellists
       run: |
         curl -fsSL "https://github.com/picons/channellists/archive/master.tar.gz" | tar xzf - -C "./build-input" --strip-components=1
@@ -96,7 +94,7 @@ jobs:
         sudo apt update
         sudo apt install -y --no-install-recommends --no-install-suggests git xz-utils binutils pngquant imagemagick librsvg2-bin jq
     - name: Checkout the repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: Build srp-full picons
       run: |
         bash 2-build-picons.sh srp-full
@@ -116,7 +114,7 @@ jobs:
         sudo apt update
         sudo apt install -y --no-install-recommends --no-install-suggests git xz-utils binutils pngquant imagemagick librsvg2-bin jq
     - name: Checkout the repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: Download channellists
       run: |
         curl -fsSL "https://github.com/picons/channellists/archive/master.tar.gz" | tar xzf - -C "./build-input" --strip-components=1
