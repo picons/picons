@@ -8,6 +8,8 @@ jobs:
   create-release:
     name: Create Release
     runs-on: ubuntu-latest
+    outputs:
+      version: ${{steps.version.outputs.version}}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -37,15 +39,17 @@ jobs:
         sudo apt install -y --no-install-recommends --no-install-suggests git xz-utils binutils pngquant imagemagick librsvg2-bin jq
     - name: Checkout the repository
       uses: actions/checkout@v4
+      with:
+        ref: '${{needs.create-release.outputs.version}}'
     - name: Build snp-full picons
       run: |
         bash 2-build-picons.sh snp-full
     - name: Upload snp-full picons
-      uses: skx/github-action-publish-binaries@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: svenstaro/upload-release-action@2.9.0
       with:
-        args: 'build-output/binaries-snp-full/*'
+        file: build-output/binaries-snp-full/*
+        file_glob: true
+        tag: ${{needs.create-release.outputs.version}}
 
   build-snp:
     runs-on: ubuntu-latest
@@ -57,6 +61,8 @@ jobs:
         sudo apt install -y --no-install-recommends --no-install-suggests git xz-utils binutils pngquant imagemagick librsvg2-bin jq
     - name: Checkout the repository
       uses: actions/checkout@v4
+      with:
+        ref: '${{needs.create-release.outputs.version}}'
     - name: Download channellists
       run: |
         curl -fsSL "https://github.com/picons/channellists/archive/master.tar.gz" | tar xzf - -C "./build-input" --strip-components=1
@@ -66,24 +72,18 @@ jobs:
         bash 1-build-servicelist.sh snp
         bash 2-build-picons.sh snp -13e.19e.23e.28e
         rm -rf ./build-input/enigma2
-    - name: Upload snp-13e.19e.23e.28e picons
-      uses: skx/github-action-publish-binaries@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        args: 'build-output/binaries-snp/*'
     - name: Build snp-ziggo picons
       run: |
         mv ./build-input/ziggo ./build-input/enigma2
         bash 1-build-servicelist.sh snp
         bash 2-build-picons.sh snp -ziggo
         rm -rf ./build-input/enigma2
-    - name: Upload snp-ziggo picons
-      uses: skx/github-action-publish-binaries@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Upload snp picons
+      uses: svenstaro/upload-release-action@2.9.0
       with:
-        args: 'build-output/binaries-snp/*'
+        file: build-output/binaries-snp/*
+        file_glob: true
+        tag: ${{needs.create-release.outputs.version}}
 
   build-srp-full:
     runs-on: ubuntu-latest
@@ -95,15 +95,17 @@ jobs:
         sudo apt install -y --no-install-recommends --no-install-suggests git xz-utils binutils pngquant imagemagick librsvg2-bin jq
     - name: Checkout the repository
       uses: actions/checkout@v4
+      with:
+        ref: '${{needs.create-release.outputs.version}}'
     - name: Build srp-full picons
       run: |
         bash 2-build-picons.sh srp-full
     - name: Upload srp-full picons
-      uses: skx/github-action-publish-binaries@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: svenstaro/upload-release-action@2.9.0
       with:
-        args: 'build-output/binaries-srp-full/*'
+        file: build-output/binaries-srp-full/*
+        file_glob: true
+        tag: ${{needs.create-release.outputs.version}}
 
   build-srp:
     runs-on: ubuntu-latest
@@ -115,6 +117,8 @@ jobs:
         sudo apt install -y --no-install-recommends --no-install-suggests git xz-utils binutils pngquant imagemagick librsvg2-bin jq
     - name: Checkout the repository
       uses: actions/checkout@v4
+      with:
+        ref: '${{needs.create-release.outputs.version}}'
     - name: Download channellists
       run: |
         curl -fsSL "https://github.com/picons/channellists/archive/master.tar.gz" | tar xzf - -C "./build-input" --strip-components=1
@@ -124,21 +128,15 @@ jobs:
         bash 1-build-servicelist.sh srp
         bash 2-build-picons.sh srp -13e.19e.23e.28e
         rm -rf ./build-input/enigma2
-    - name: Upload srp-13e.19e.23e.28e picons
-      uses: skx/github-action-publish-binaries@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        args: 'build-output/binaries-srp/*'
     - name: Build srp-ziggo picons
       run: |
         mv ./build-input/ziggo ./build-input/enigma2
         bash 1-build-servicelist.sh srp
         bash 2-build-picons.sh srp -ziggo
         rm -rf ./build-input/enigma2
-    - name: Upload srp-ziggo picons
-      uses: skx/github-action-publish-binaries@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Upload srp picons
+      uses: svenstaro/upload-release-action@2.9.0
       with:
-        args: 'build-output/binaries-srp/*'
+        file: build-output/binaries-srp/*
+        file_glob: true
+        tag: ${{needs.create-release.outputs.version}}
