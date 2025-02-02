@@ -72,6 +72,12 @@ jobs:
         bash 1-build-servicelist.sh snp
         bash 2-build-picons.sh snp -13e.19e.23e.28e
         rm -rf ./build-input/enigma2
+    - name: Upload snp picons
+      uses: svenstaro/upload-release-action@2.9.0
+      with:
+        file: build-output/binaries-snp/*
+        file_glob: true
+        tag: ${{needs.create-release.outputs.version}}
     - name: Build snp-ziggo picons
       run: |
         mv ./build-input/ziggo ./build-input/enigma2
@@ -128,6 +134,12 @@ jobs:
         bash 1-build-servicelist.sh srp
         bash 2-build-picons.sh srp -13e.19e.23e.28e
         rm -rf ./build-input/enigma2
+    - name: Upload srp picons
+      uses: svenstaro/upload-release-action@2.9.0
+      with:
+        file: build-output/binaries-srp/*
+        file_glob: true
+        tag: ${{needs.create-release.outputs.version}}
     - name: Build srp-ziggo picons
       run: |
         mv ./build-input/ziggo ./build-input/enigma2
