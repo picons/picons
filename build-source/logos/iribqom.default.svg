@@ -1,0 +1,15 @@
+<svg width="2400px" height="2100px" clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1" viewBox="0 0 2400 2015.8" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:lime}
+    .fil0 {fill:yellow}
+   ]]>
+  </style>
+ </defs>
+ 
+  
+  <path class="fil0" d="m1414.7 1247.2a274.09 274.09 0 0 1-274.09 274.09 274.09 274.09 0 0 1-274.09-274.09 274.09 274.09 0 0 1 274.09-274.09 274.09 274.09 0 0 1 274.09 274.09z" fill="#f2ea00"/>
+  <path class="fil1" d="m1200.1 2015.8c-205.78 0-1200.1-304.9-1200.1-805.89 0-500.99 844.52-963.12 1200.1-1209.9 571.91 325.99 1199.9 592.96 1199.9 1121.3 0 528.39-994.15 894.44-1199.9 894.44zm-332.23-1680.2c-210.78 225.64-420.65 379.42-420.65 681.94 0 302.52 451.24 566.12 752.88 566.12v432.14c281.86-162.73 794.58-398.78 794.58-789.4s-685.48-700.96-1126.8-890.8z" fill="#00a03b"/>
+ 
+</svg>

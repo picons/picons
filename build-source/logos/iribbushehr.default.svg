@@ -1,0 +1,17 @@
+<svg width="2e3" height="2400" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" version="1.1" viewBox="0 0 2e3 2422" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <radialGradient id="A" cx="991" cy="1347" r="416" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#ff6" offset="0"/>
+   <stop stop-color="#ff6" offset=".2"/>
+   <stop stop-color="#fc0" offset=".3"/>
+   <stop stop-color="#804400" offset=".8"/>
+   <stop stop-color="#300" offset="1"/>
+  </radialGradient>
+ </defs>
+ <g fill="#fae393">
+  <path d="M2000 1430c0 546-450 992-1000 992S4 1979 0 1430c237 289 597 474 1000 474s763-185 1000-474z"/>
+  <path d="m1e3 0c580 226 1e3 780 1e3 1430-238-286-597-474-1e3 -479v-951z"/>
+ </g>
+ <path d="m1830 972c-88.4-305-382-639-641-778" fill="none" stroke="#dccba5" stroke-dasharray="108.184882 108.184882" stroke-width="108.2"/>
+ <path d="m1448 1428a448 448 0 0 1-448 448 448 448 0 0 1-448-448 448 448 0 0 1 448-448 448 448 0 0 1 448 448z" fill="url(#A)"/>
+</svg>

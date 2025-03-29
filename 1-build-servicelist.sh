@@ -150,7 +150,7 @@ if [[ -f $location/build-input/tvheadend.serverconf ]]; then
 
             serviceref_id=$(sed -e 's/^[^_]*_0_[^_]*_//g' -e 's/_0_0_0$//g' <<< "$serviceref")
             unique_id=$(echo "$serviceref" | sed -n -e 's/^1_0_[^_]*_//p' | sed -n -e 's/_0_0_0$//p')
-            channelname=$(echo $rx_buf | jq -r '.entries | .[] | .name')
+            channelname=$(echo $rx_buf | jq -r '.entries | .[] | .name' | iconv -f utf-8 -t ascii//TRANSLIT)
 
             logo_srp=$(grep -i -m 1 "^$unique_id" <<< "$index" | sed -n -e 's/.*=//p')
             if [[ -z $logo_srp ]]; then logo_srp="--------"; fi

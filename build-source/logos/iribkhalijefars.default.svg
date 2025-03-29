@@ -1,0 +1,14 @@
+<svg width="2400px" height="1800px" clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1" viewBox="0 0 2399.8 1987.5" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="b" x2="2387.1" y1="665.49" y2="1058.4" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#fba30b" offset="0"/>
+   <stop stop-color="#fbc407" offset="1"/>
+  </linearGradient>
+  <linearGradient id="a" x1="191.16" x2="2388.4" y1="1331" y2="2030.1" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#0a86fb" offset="0"/>
+   <stop stop-color="#15f0ff" offset="1"/>
+  </linearGradient>
+ </defs>
+ <path d="m398.54 758.27c-120.17 78.086-338.45 320.36-398.54 572.66l503.12-4.1887c216.28-162.19 429.8-396.42 659.81-419.13 293.73-29.007 522.13 323.01 702.36 419.13h534.53c-216.28-967.1-1073.9-1170.6-1933-1326.7l-311.37 690.18c102.13 0 243.15 68.093 243.15 68.093z" fill="url(#b)"/>
+ <path d="m2396.1 1494.9c-0.62745 66.064-40.717 331.31-66.328 492.54h-979.07c-62.963-234.97-94.511-396.86-120.16-492.54 0 0-211.78 244.78-459.61 492.54h-717.72c-30.938-162.18-42.597-354.4-48.303-492.54h540.72c216.3-114.14 429.93-432.5 654.87-432.5 223.98 0 402.54 306.36 624.84 432.5h570.76z" fill="url(#a)"/>
+</svg>
