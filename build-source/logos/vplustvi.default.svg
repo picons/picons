@@ -1,1 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="430.204" height="200"><defs><clipPath id="a" clipPathUnits="userSpaceOnUse"><path d="M0 336.106h841.89v259.169H0Z"/></clipPath></defs><g style="fill:#000"><path d="m0 0 77.595-122.907L97.787-91.05 41.083 0Z" style="fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1.62724 0 0 -1.62724 0 0)"/><g style="fill:#000"><path d="m0 0-46.053-72.672-20.212 32.444L-41.082 0Z" style="fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1.62724 0 0 -1.62724 253.01 0)"/></g><g clip-path="url(#a)" style="fill:#000" transform="matrix(1.62724 0 0 -1.62724 -469.874 833.905)"><g style="fill:#000"><path d="M-35.424 7.842v45.564h-31.779V7.842h-39.862l-20.138-31.778h90.791l-30.791-31.285v-14.28h31.779v45.564H10.14V7.842Z" style="fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(542.992 459.06)"/></g></g></g></svg>
+<svg version="1.1" viewBox="0 0 430.2 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <clipPath id="a">
+   <path d="M0 336.106h841.89v259.169H0Z"/>
+  </clipPath>
+  <radialGradient id="b" cx="215.1" cy="100" r="215.1" gradientTransform="matrix(1 0 0 .46489 0 53.51)" gradientUnits="userSpaceOnUse">
+   <stop offset="0"/>
+   <stop stop-color="#f32323" offset="1"/>
+  </radialGradient>
+  <linearGradient id="e" x1="-78.382" x2="-47.024" y1="-42.655" y2="32.122" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#884cca" offset="0"/>
+   <stop stop-color="#ff3334" offset="1"/>
+  </linearGradient>
+  <linearGradient id="d" x1="56.237" x2="52.056" y1="-117.07" y2="-2.1263" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#02d8fd" offset="0"/>
+   <stop stop-color="#8737e8" offset="1"/>
+  </linearGradient>
+  <linearGradient id="c" x1="-67.81" x2="-2.163" y1="-36.027" y2="-4.2004" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#7b6ab9" offset="0"/>
+   <stop stop-color="#f32323" offset="1"/>
+  </linearGradient>
+ </defs>
+ <path transform="scale(1.6272 -1.6272)" d="m0 0 77.595-122.907L97.787-91.05 41.083 0Z" fill="url(#d)"/>
+ <g fill="url(#b)">
+  <path transform="matrix(1.6272 0 0 -1.6272 253.01 0)" d="m0 0-46.053-72.672-20.212 32.444L-41.082 0Z" fill="url(#c)"/>
+ </g>
+ <g transform="matrix(1.6272 0 0 -1.6272 -469.87 833.9)" clip-path="url(#a)" fill="url(#b)">
+  <g fill="url(#b)">
+   <path transform="translate(542.99 459.06)" d="M-35.424 7.842v45.564h-31.779V7.842h-39.862l-20.138-31.778h90.791l-30.791-31.285v-14.28h31.779v45.564H10.14V7.842Z" fill="url(#e)"/>
+  </g>
+ </g>
+</svg>
