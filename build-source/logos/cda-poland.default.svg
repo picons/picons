@@ -1,0 +1,16 @@
+<svg width="211.67mm" height="73.832mm" version="1.1" viewBox="0 0 211.67 73.832" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <clipPath id="b">
+   <path d="m0 0h2522.8v880h-2522.8z"/>
+  </clipPath>
+  <clipPath id="a">
+   <path d="m0 0h2522.8v880h-2522.8z"/>
+  </clipPath>
+ </defs>
+ <g transform="matrix(2.3783 0 0 2.3783 -144.1 -316.51)">
+  <g transform="matrix(.26458 0 0 .26458 60.59 -115.27)" fill-rule="evenodd">
+   <path transform="matrix(.13333 0 0 -.13333 0 1056)" d="m0 880v-880h2522.8v880h-2522.8" clip-path="url(#b)" fill="#db2925"/>
+   <path transform="matrix(.13333 0 0 -.13333 0 1056)" d="m168.18 240v400h252.28v-80.004h-168.19v-240h252.28v-80zm672.76 320h-168.19v-240h168.19zm-252.28-320v400h252.28v79.996h84.094v-480zm672.76 160h-168.19v-80h168.19zm-252.29-160v240h252.29v80h-168.19v80.004h252.28v-400h-84.09zm420.48 80h84.08v-80h-84.08zm420.47 240h-168.19v-160h168.19zm-168.19-240v-160h-84.1v480h336.39v-320zm336.37-80v480h84.1v-400h168.19v80h84.1v-160h-336.39" clip-path="url(#a)" fill="#fff"/>
+  </g>
+ </g>
+</svg>
