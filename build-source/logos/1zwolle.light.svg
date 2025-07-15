@@ -1,5 +1,4 @@
 <svg version="1.1" viewBox="0 0 800 335.84" xmlns="http://www.w3.org/2000/svg">
- <style>@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } } @keyframes slideIn { from { transform: translateX(-20px); opacity: 0; } to { transform: translateX(0); opacity: 1; } } @keyframes numberFade { 0% { opacity: 0.5; } 50% { opacity: 1; } 100% { opacity: 0.5; } } .logo-text { animation: slideIn 1s ease-out forwards; } .number-bg { animation: numberFade 3s infinite; } .number { animation: fadeIn 1.5s ease-out forwards; }</style>
  <g class="logo-text" transform="scale(2.0542)" fill="#283593">
   <path d="m207.63 53.09-13.04 29.93h12.89v12.06h-31.68l12.98-29.93h-13.72v-12.06h32.58z"/>
   <path d="m255.44 53.09v30.24c0 3.77-1.14 6.85-3.41 9.23s-5.22 3.57-8.83 3.57c-4.35 0-7.67-1.98-9.97-5.94-1.42 2.13-2.93 3.66-4.55 4.57s-3.62 1.37-6 1.37c-3.77 0-6.67-1.19-8.67-3.57-2.01-2.38-3.01-5.8-3.01-10.27v-29.19h12.49v27.32c0 1.35 0.11 2.25 0.32 2.68 0.22 0.43 0.65 0.65 1.31 0.65 1.23 0 1.85-1.04 1.85-3.11v-27.53h12.49v27.32c0 1.31 0.11 2.2 0.34 2.65s0.67 0.68 1.32 0.68c1.23 0 1.85-1.11 1.85-3.32v-27.32h12.49z"/>
