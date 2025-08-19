@@ -1050,6 +1050,7 @@ antena1=antena1
 ondamedia=antena1
 radioa1=antena1
 1_0_16E_1860000=antena1-nafrecocru
+28_CC_1_FFFF0000=antena1-nafrecocru
 65_E_1C_1860000=antena1-nafrecocru
 76CC_2C0_600_E080000=antena1-nafrecocru
 76D5_2C0_600_E080000=antena1-nafrecocru
