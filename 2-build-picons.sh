@@ -84,17 +84,19 @@ else
     exit 1
 fi
 
-##############################################
-## Ask the user whether to build SNP or SRP ##
-##############################################
+#########################################################
+## Ask the user whether to build SNP or SRP or UTF8SNP ##
+#########################################################
 if [[ -z $1 ]]; then
     echo "Which style are you going to build?"
-    select choice in "Service Reference" "Service Reference (Full)" "Service Name" "Service Name (Full)"; do
+    select choice in "Service Reference" "Service Reference (Full)" "Service Name" "Service Name (Full)" "UTF8 Service Name" "UTF8 Service Name (Full)"; do
         case $choice in
             "Service Reference" ) style=srp; break;;
             "Service Reference (Full)" ) style=srp-full; break;;
             "Service Name" ) style=snp; break;;
             "Service Name (Full)" ) style=snp-full; break;;
+            "UTF8 Service Name" ) style=utf8snp; break;;
+            "UTF8 Service Name (Full)" ) style=utf8snp-full; break;;
         esac
     done
 else
@@ -104,7 +106,7 @@ fi
 #############################################
 ## Check if previously chosen style exists ##
 #############################################
-if [[ ! $style = "srp-full" ]] && [[ ! $style = "snp-full" ]]; then
+if [[ ! $style = "srp-full" ]] && [[ ! $style = "snp-full" ]] && [[ ! $style = "utf8snp-full" ]]; then
     for file in $location/build-output/servicelist-*-$style.txt ; do
         if [[ ! -f $file ]]; then
             echo "$(date +'%H:%M:%S') - ERROR: No $style servicelist has been found!"
@@ -143,6 +145,7 @@ if [[ $- == *i* ]]; then
     echo "$(date +'%H:%M:%S') - EXECUTING: Checking index"
     $location/resources/tools/check-index.sh $location/build-source srp
     $location/resources/tools/check-index.sh $location/build-source snp
+    $location/resources/tools/check-index.sh $location/build-source utf8snp
 
     echo "$(date +'%H:%M:%S') - EXECUTING: Checking logos"
     $location/resources/tools/check-logos.sh $location/build-source/logos
