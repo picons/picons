@@ -30,7 +30,7 @@ jobs:
           else
             git add build-source/srp.index
             git commit -m "Auto: sort srp.index via GitHub Action"
-            git push
+            git push --force
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
