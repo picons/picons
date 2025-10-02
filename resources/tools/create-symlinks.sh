@@ -30,15 +30,15 @@ if [[ $style = "snp" ]] || [[ $style = "srp" ]] || [[ $style = "utf8snp" ]]; the
         utf8snpname=${link_utf8snp[0]}
 
         if [[ ! $logo_srp = "--------" ]]; then
-            echo "ln -s -f \"logos/$logo_srp.png\" \"$temp/package/picon/$serviceref.png\"" >> $temp/create-symlinks.sh
+            echo "ln -s -f 'logos/$logo_srp.png' '$temp/package/picon/$serviceref.png'" >> $temp/create-symlinks.sh
         fi
 
         if [[ $style = "snp" ]] && [[ ! $logo_snp = "--------" ]]; then
-            echo "ln -s -f \"logos/$logo_snp.png\" \"$temp/package/picon/$snpname.png\"" >> $temp/create-symlinks.sh
+            echo "ln -s -f 'logos/$logo_snp.png' '$temp/package/picon/$snpname.png'" >> $temp/create-symlinks.sh
         fi
 
         if [[ $style = "utf8snp" ]] && [[ ! $logo_utf8snp = "--------" ]]; then
-            echo "ln -s -f \"logos/$logo_utf8snp.png\" \"$temp/package/picon/$utf8snpname.png\"" >> $temp/create-symlinks.sh
+            echo "ln -s -f 'logos/$logo_utf8snp.png' '$temp/package/picon/$utf8snpname.png'" >> $temp/create-symlinks.sh
         fi
     done
 fi
@@ -54,9 +54,9 @@ if [[ $style = "snp-full" ]]; then
         snpname=${link_snp[0]}
 
         if [[ $snpname == *"_"* ]]; then
-            echo "ln -s -f \"logos/$logo_snp.png\" \"$temp/package/picon/1_0_1_"$snpname"_0_0_0.png\"" >> $temp/create-symlinks.sh
+            echo "ln -s -f 'logos/$logo_snp.png' '$temp/package/picon/1_0_1_"$snpname"_0_0_0.png'" >> $temp/create-symlinks.sh
         else
-            echo "ln -s -f \"logos/$logo_snp.png\" \"$temp/package/picon/$snpname.png\"" >> $temp/create-symlinks.sh
+            echo "ln -s -f 'logos/$logo_snp.png' '$temp/package/picon/$snpname.png'" >> $temp/create-symlinks.sh
         fi
     done
 fi
@@ -71,7 +71,7 @@ if [[ $style = "srp-full" ]]; then
         logo_srp=${link_srp[1]}
         unique_id=${link_srp[0]}
 
-        echo "ln -s -f \"logos/$logo_srp.png\" \"$temp/package/picon/1_0_1_"$unique_id"_0_0_0.png\"" >> $temp/create-symlinks.sh
+        echo "ln -s -f 'logos/$logo_srp.png' '$temp/package/picon/1_0_1_"$unique_id"_0_0_0.png'" >> $temp/create-symlinks.sh
     done
 fi
 
@@ -86,9 +86,9 @@ if [[ $style = "utf8snp-full" ]]; then
         utf8snpname=${link_utf8snp[0]}
 
         if [[ $utf8snpname == *"_"* ]]; then
-            echo "ln -s -f \"logos/$logo_utf8snp.png\" \"$temp/package/picon/1_0_1_"$utf8snpname"_0_0_0.png\"" >> $temp/create-symlinks.sh
+            echo "ln -s -f 'logos/$logo_utf8snp.png' '$temp/package/picon/1_0_1_"$utf8snpname"_0_0_0.png'" >> $temp/create-symlinks.sh
         else
-            echo "ln -s -f \"logos/$logo_utf8snp.png\" \"$temp/package/picon/$utf8snpname.png\"" >> $temp/create-symlinks.sh
+            echo "ln -s -f 'logos/$logo_utf8snp.png' '$temp/package/picon/$utf8snpname.png'" >> $temp/create-symlinks.sh
         fi
     done
 fi
