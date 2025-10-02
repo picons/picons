@@ -85,7 +85,7 @@ if [[ $style = "utf8snp-full" ]]; then
         logo_utf8snp=${link_utf8snp[1]}
         utf8snpname=`echo ${link_utf8snp[0]} | sed "s/'/'\"'\"'/g"`  # escape single quotes
 
-		if [[ $utf8snpname =~ ^[0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+$ ]]; then
+        if [[ $utf8snpname =~ ^[0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+$ ]]; then
             echo "ln -s -f 'logos/$logo_utf8snp.png' '$temp/package/picon/1_0_1_"$utf8snpname"_0_0_0.png'" >> $temp/create-symlinks.sh
         else
             echo "ln -s -f 'logos/$logo_utf8snp.png' '$temp/package/picon/$utf8snpname.png'" >> $temp/create-symlinks.sh
