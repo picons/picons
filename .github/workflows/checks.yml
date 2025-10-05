@@ -7,6 +7,7 @@ on:
       - 'build-source/logos/**'
       - 'build-source/snp.index'
       - 'build-source/srp.index'
+      - 'build-source/utf8snp.index'
   pull_request:
     branches:
       - master
@@ -20,5 +21,6 @@ jobs:
       run: |
         bash ./resources/tools/check-index.sh ./build-source srp $PWD/errors_detected
         bash ./resources/tools/check-index.sh ./build-source snp $PWD/errors_detected
+        bash ./resources/tools/check-index.sh ./build-source utf8snp $PWD/errors_detected
         bash ./resources/tools/check-logos.sh ./build-source/logos $PWD/errors_detected
         if [[ -f $PWD/errors_detected ]]; then echo "Errors were found in the repository!"; exit 1; fi
