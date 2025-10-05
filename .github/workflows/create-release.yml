@@ -29,6 +29,28 @@ jobs:
           draft: false
           prerelease: false
 
+  build-utf8snp-full:
+    runs-on: ubuntu-latest
+    needs: [create-release]
+    steps:
+    - name: Install dependencies
+      run: |
+        sudo apt update
+        sudo apt install -y --no-install-recommends --no-install-suggests git xz-utils binutils pngquant imagemagick librsvg2-bin jq
+    - name: Checkout the repository
+      uses: actions/checkout@v4
+      with:
+        ref: '${{needs.create-release.outputs.version}}'
+    - name: Build utf8snp-full picons
+      run: |
+        bash 2-build-picons.sh utf8snp-full
+    - name: Upload utf8snp-full picons
+      uses: svenstaro/upload-release-action@2.9.0
+      with:
+        file: build-output/binaries-utf8snp-full/*
+        file_glob: true
+        tag: ${{needs.create-release.outputs.version}}
+
   build-snp-full:
     runs-on: ubuntu-latest
     needs: [create-release]
