@@ -16,9 +16,28 @@ Contains partial Enigma2 service references, establishing a link between the act
 - UPPERCASE
 - Only the part `296_5_85_C00000` is used, the parts `1_0_1_` and `_0_0_0` must be removed.
 
-In this example, `1AD_9_3_130000=nationalgeographicwild`
-- The part before the `=` sign is the partial service reference.
-- The second part after the `=` sign is the logo on **this repository**. This is not the channel name.
+Example entries in srp.index
+
+```
+65_251C_D5_820000=travelchannel
+13F_1_1_1862FEF=travelchannel-lichoridas
+1AD_9_3_130000=nationalgeographicwild
+```
+The parts before the `=` sign are the partial service references.
+The parts after the `=` sign are the logos on **this repository**. This is not the channel name.
+
+
+__utf8snp.index:__
+
+Contains utf8 channel names establishing a link between the actual logos in this repository. With the exception of system characters, the names will match the channel name. We use lowercase.
+This project cannot use the `=` sign, so please use the SRP entry for such channels.
+
+Example utf8snp name:
+
+- `5*` => `5*`
+- `Sony Channel +1` => `sony channel +1`
+- `BT Sport//ESPN` => `bt sportespn`
+
 
 __snp.index:__
 
@@ -35,40 +54,12 @@ SNP names are constructed by the following rules:
 
 This obviously means that spaces and other characters are not allowed.
 
-Examples:
+Example snp name:
 
 - `5*` => `5star`
 - `Sony Channel +1` => `sonychannelplus1`
 - `BT Sport//ESPN` => `btsportespn`
 
-When there are channels with identical names but are different, we distinguish between them by using srp references for some of them. For example, For example `sky comedy hd`
-
-```
-EEB_7EE_2_11A0000=skycinemacomedy
-skycomedyhd=skycomedy
-```
-In this example, `saudichforquran=saudiquran`
-- The part before the `=` sign is the channel's snp name.
-- The second part after the `=` sign is the logo on **this repository**. This is not the channel name.
-
-__utf8snp.index:__
-Contains utf8 channel names establishing a link between the actual logos in this repository. 
-This project cannot use the `=` sine, so please use the SRP entry for such channels.
-
-Examples:
-- film mánia=filmmania
-- rté2+1=rte2plus1
-- al malakoot sat – the kingdom sat الملكوت سات=almalakoot
-
-When there are channels with identical names but are different, we distinguish between them by using srp references for some of them. For example, For example `sky comedy hd`
-
-```
-EEB_7EE_2_11A0000=skycinemacomedy
-sky comedy hd=skycomedy
-```
-In this example, `saudi ch for quran hd=saudiquran`
-- The part before the `=` sign is the channel's snp name.
-- The second part after the `=` sign is the logo on **this repository**. This is not the channel name.
 
 __Logo:__
 
@@ -120,6 +111,45 @@ New additions can go at the top. Best to cleanup the old entries.
 101_E_85_C00000=skybundesligahd-racratridr
 ```
 
+
+### utf8snp.index
+
+New additions can go at the top. Best to cleanup the old entries.
+
+```
+kabelio 5 uk=channel5
+5 +1=channel5plus1
+5+1=channel5plus1
+channel 5 +1=channel5plus1
+5_14_22FC_EEEE0000=channel5thailand
+kanal yek hd=channelone
+kanal yek sd=channelone
+channel s=channels
+chstv=channels
+channels 24=channels24
+al malakoot sat – the kingdom sat الملكوت سات=almalakoot
+```
+
+In the above examples, 
+The parts before the `=` sign are the channel's utf8snp names.
+The parts after the `=` sign are the logos on **this repository**. These are not the channel names.
+
+**Channels with identical names**
+
+When there are different channels but with identical snp names, we distinguish between them by using srp references for some of them. For example there are two different channels on 28.2 but have the same name `sky comedy hd`. The entries in the index to ensure they have linkages to different logos are:
+
+```
+EEB_7EE_2_11A0000=skycinemacomedy
+sky comedy hd=skycomedy
+```
+
+You **cannot** have two different `utf8snp names` that point to different `logos on this repository`. In the example below, only the logo in the topmost line will be used to create a picon.
+```
+sky comedy=skycomedy
+sky comedy=skycinemacomedy
+```
+
+
 ### snp.index
 
 New additions can go at the top. Best to cleanup the old entries.
@@ -139,20 +169,20 @@ cplusdeporthd=canalplusdeporteshd-radubrekac
 cplusestrenos=canalplusestrenos-radubrekac
 cplusestrenoshd=canalplusestrenoshd-radubrekac
 ```
+The parts before the `=` sign are the channel's snp names.
+The parts after the `=` sign are the logos on **this repository**. Thes are not the channel names.
 
-You **cannot** have two different `snpnames` that point to different `logos on this repository`.
+**Channels with identical names**
 
+When there are different channels but with identical snp names, we distinguish between them by using srp references for some of them. For example there are two different channels on 28.2 but have the same name `sky comedy hd`. The entries in the index to ensure they have linkages to different logos are:
+
+```
+EEB_7EE_2_11A0000=skycinemacomedy
+skycomedyhd=skycomedy
+```
+
+You **cannot** have two different `snp names` that point to different `logos on this repository`. In the example below, only the logo in the topmost line will be used to create a picon.
 ```
 skycomedy=skycomedy
 skycomedy=skycinemacomedy
-```
-
-### utf8snp.index
-
-New additions can go at the top. Best to cleanup the old entries.
-
-You **cannot** have two different `utf8snpnames` that point to different `logos on this repository`.
-```
-sky comedy=skycomedy
-sky comedy=skycinemacomedy
 ```
