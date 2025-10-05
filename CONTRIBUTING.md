@@ -135,6 +135,7 @@ The parts before the `=` sign are the channel's utf8snp names.
 The parts after the `=` sign are the logos on **this repository**. These are not the channel names.
 
 **Channels with identical names**
+
 When there are different channels but with identical snp names, we distinguish between them by using srp references for some of them. For example there are two different channels on 28.2 but have the same name `sky comedy hd`. The entries in the index to ensure they have linkages to different logos are:
 
 ```
@@ -172,6 +173,7 @@ The parts before the `=` sign are the channel's snp names.
 The parts after the `=` sign are the logos on **this repository**. Thes are not the channel names.
 
 **Channels with identical names**
+
 When there are different channels but with identical snp names, we distinguish between them by using srp references for some of them. For example there are two different channels on 28.2 but have the same name `sky comedy hd`. The entries in the index to ensure they have linkages to different logos are:
 
 ```
