@@ -47,46 +47,10 @@ Example snp name:
 - `Sony Channel +1` => `sonychannelplus1`
 - `BT Sport//ESPN` => `btsportespn`
 
-Example entries in snp.index
-
-```
-saudichforquran=saudiquran
-daznelevensports1=elevensports1
-```
-The parts before the `=` sign are the channel's snp names.
-The parts after the `=` sign are the logos on **this repository**. Thes are not the channel names.
-
-**Channels with identical names**
-When there are different channels but with identical snp names, we distinguish between them by using srp references for some of them. For example there are two different channels on 28.2 but have the same name `sky comedy hd`. The entries in the index to ensure they have linkages to different logos are:
-
-```
-EEB_7EE_2_11A0000=skycinemacomedy
-skycomedyhd=skycomedy
-```
-
 
 __utf8snp.index:__
 Contains utf8 channel names establishing a link between the actual logos in this repository. 
 This project cannot use the `=` sine, so please use the SRP entry for such channels.
-
-Examples entries in utf8snp.index:
-```
-film mánia=filmmania
-rté2+1=rte2plus1
-al malakoot sat – the kingdom sat الملكوت سات=almalakoot
-saudi ch for quran hd=saudiquran
-```
-In the above examples, 
-The parts before the `=` sign are the channel's utf8snp names.
-The parts after the `=` sign are the logos on **this repository**. These are not the channel names.
-
-**Channels with identical names**
-When there are different channels but with identical snp names, we distinguish between them by using srp references for some of them. For example there are two different channels on 28.2 but have the same name `sky comedy hd`. The entries in the index to ensure they have linkages to different logos are:
-
-```
-EEB_7EE_2_11A0000=skycinemacomedy
-sky comedy hd=skycomedy
-```
 
 __Logo:__
 
@@ -157,6 +121,16 @@ cplusdeporthd=canalplusdeporteshd-radubrekac
 cplusestrenos=canalplusestrenos-radubrekac
 cplusestrenoshd=canalplusestrenoshd-radubrekac
 ```
+The parts before the `=` sign are the channel's snp names.
+The parts after the `=` sign are the logos on **this repository**. Thes are not the channel names.
+
+**Channels with identical names**
+When there are different channels but with identical snp names, we distinguish between them by using srp references for some of them. For example there are two different channels on 28.2 but have the same name `sky comedy hd`. The entries in the index to ensure they have linkages to different logos are:
+
+```
+EEB_7EE_2_11A0000=skycinemacomedy
+skycomedyhd=skycomedy
+```
 
 You **cannot** have two different `snpnames` that point to different `logos on this repository`. In the example below, only the logo in the topmost line will be used to create a picon.
 ```
@@ -180,6 +154,18 @@ channel s=channels
 chstv=channels
 channels 24=channels24
 al malakoot sat – the kingdom sat الملكوت سات=almalakoot
+```
+
+In the above examples, 
+The parts before the `=` sign are the channel's utf8snp names.
+The parts after the `=` sign are the logos on **this repository**. These are not the channel names.
+
+**Channels with identical names**
+When there are different channels but with identical snp names, we distinguish between them by using srp references for some of them. For example there are two different channels on 28.2 but have the same name `sky comedy hd`. The entries in the index to ensure they have linkages to different logos are:
+
+```
+EEB_7EE_2_11A0000=skycinemacomedy
+sky comedy hd=skycomedy
 ```
 
 You **cannot** have two different `utf8snpnames` that point to different `logos on this repository`. In the example below, only the logo in the topmost line will be used to create a picon.
