@@ -23,8 +23,8 @@ Example entries in srp.index
 13F_1_1_1862FEF=travelchannel-lichoridas
 1AD_9_3_130000=nationalgeographicwild
 ```
-- The parts before the `=` sign are the partial service references.
-- The parts after the `=` sign are the logos on **this repository**. This is not the channel name.
+The parts before the `=` sign are the partial service references.
+The parts after the `=` sign are the logos on **this repository**. This is not the channel name.
 
 __snp.index:__
 
@@ -53,8 +53,8 @@ Example entries in snp.index
 saudichforquran=saudiquran
 daznelevensports1=elevensports1
 ```
-- The parts before the `=` sign are the channel's snp names.
-- The parts after the `=` sign are the logos on **this repository**. Thes are not the channel names.
+The parts before the `=` sign are the channel's snp names.
+The parts after the `=` sign are the logos on **this repository**. Thes are not the channel names.
 
 **Channels with identical names**
 When there are different channels but with identical snp names, we distinguish between them by using srp references for some of them. For example there are two different channels on 28.2 but have the same name `sky comedy hd`. The entries in the index to ensure they have linkages to different logos are:
@@ -77,8 +77,8 @@ al malakoot sat – the kingdom sat الملكوت سات=almalakoot
 saudi ch for quran hd=saudiquran
 ```
 In the above examples, 
-- The parts before the `=` sign are the channel's utf8snp names.
-- The parts after the `=` sign are the logos on **this repository**. These are not the channel names.
+The parts before the `=` sign are the channel's utf8snp names.
+The parts after the `=` sign are the logos on **this repository**. These are not the channel names.
 
 **Channels with identical names**
 When there are different channels but with identical snp names, we distinguish between them by using srp references for some of them. For example there are two different channels on 28.2 but have the same name `sky comedy hd`. The entries in the index to ensure they have linkages to different logos are:
