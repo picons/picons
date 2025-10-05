@@ -2,7 +2,7 @@
 
 When submitting an issue, make sure you follow these rules:
 
-- Put entries to `srp.index` or `snp.index` inside fenced code blocks. You can create fenced code blocks by placing a new line with three backticks ` ``` ` before and after the code block. ([READ THIS GUIDE](https://help.github.com/articles/creating-and-highlighting-code-blocks/))
+- Put entries to `srp.index`, `snp.index` or `utf8snp.index` inside fenced code blocks. You can create fenced code blocks by placing a new line with three backticks ` ``` ` before and after the code block. ([READ THIS GUIDE](https://help.github.com/articles/creating-and-highlighting-code-blocks/))
 - Logos should be inside an archive, correctly named (see below). Share the link.
 
 Do you like copy/paste? We do too, make sure your issue is easily copy/pasted.
@@ -16,9 +16,13 @@ Contains partial Enigma2 service references, establishing a link between the act
 - UPPERCASE
 - Only the part `296_5_85_C00000` is used, the parts `1_0_1_` and `_0_0_0` must be removed.
 
+In this example, `1AD_9_3_130000=nationalgeographicwild`
+- The part before the `=` sign is the partial service reference.
+- The second part after the `=` sign is the logo on **this repository**. This is not the channel name.
+
 __snp.index:__
 
-Contains simplified channel names according an OpenVIX implementation, called SNP, establishing a link between the actual logos in this repository.
+Contains simplified channel names according to OpenVIX implementation, called SNP, establishing a link between the actual logos in this repository.
 
 SNP names are constructed by the following rules:
 
@@ -36,6 +40,35 @@ Examples:
 - `5*` => `5star`
 - `Sony Channel +1` => `sonychannelplus1`
 - `BT Sport//ESPN` => `btsportespn`
+
+When there are channels with identical names but are different, we distinguish between them by using srp references for some of them. For example, For example `sky comedy hd`
+
+```
+EEB_7EE_2_11A0000=skycinemacomedy
+skycomedyhd=skycomedy
+```
+In this example, `saudichforquran=saudiquran`
+- The part before the `=` sign is the channel's snp name.
+- The second part after the `=` sign is the logo on **this repository**. This is not the channel name.
+
+__utf8snp.index:__
+Contains utf8 channel names establishing a link between the actual logos in this repository. 
+This project cannot use the `=` sine, so please use the SRP entry for such channels.
+
+Examples:
+- film mánia=filmmania
+- rté2+1=rte2plus1
+- al malakoot sat – the kingdom sat الملكوت سات=almalakoot
+
+When there are channels with identical names but are different, we distinguish between them by using srp references for some of them. For example, For example `sky comedy hd`
+
+```
+EEB_7EE_2_11A0000=skycinemacomedy
+sky comedy hd=skycomedy
+```
+In this example, `saudi ch for quran hd=saudiquran`
+- The part before the `=` sign is the channel's snp name.
+- The second part after the `=` sign is the logo on **this repository**. This is not the channel name.
 
 __Logo:__
 
@@ -67,7 +100,7 @@ black=fully black logo, no colors allowed (indexed 1-bit, black/white), looks go
 
 ### srp.index
 
-New additions can go at the top. No need to cleanup old entries, but if you want to, go right ahead.
+New additions can go at the top. Best to cleanup the old entries.
 
 ```
 1005_29_46_E080000=eurosporthd
@@ -89,7 +122,7 @@ New additions can go at the top. No need to cleanup old entries, but if you want
 
 ### snp.index
 
-New additions can go at the top. No need to cleanup old entries, but if you want to, go right ahead.
+New additions can go at the top. Best to cleanup the old entries.
 
 ```
 2843_7FE_2_11A0000=bbcparliament
@@ -105,4 +138,21 @@ cplusdeportes=canalplusdeportes-radubrekac
 cplusdeporthd=canalplusdeporteshd-radubrekac
 cplusestrenos=canalplusestrenos-radubrekac
 cplusestrenoshd=canalplusestrenoshd-radubrekac
+```
+
+You **cannot** have two different `snpnames` that point to different `logos on this repository`.
+
+```
+skycomedy=skycomedy
+skycomedy=skycinemacomedy
+```
+
+### utf8snp.index
+
+New additions can go at the top. Best to cleanup the old entries.
+
+You **cannot** have two different `utf8snpnames` that point to different `logos on this repository`.
+```
+sky comedy=skycomedy
+sky comedy=skycinemacomedy
 ```
