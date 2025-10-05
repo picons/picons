@@ -42,10 +42,13 @@ Take a look at the folder [build-output](build-output) for the results.
 TIP: To automate the building process, you can also use some of the following commands:
 
 ```shell
+./1-build-servicelist.sh utf8snp
 ./1-build-servicelist.sh snp
 ./1-build-servicelist.sh srp
+./2-build-picons.sh utf8snp
 ./2-build-picons.sh snp
 ./2-build-picons.sh srp
+./2-build-picons.sh utf8snp-full
 ./2-build-picons.sh snp-full
 ./2-build-picons.sh srp-full
 ```
@@ -53,6 +56,15 @@ TIP: To automate the building process, you can also use some of the following co
 ## SNP - SERVICE NAME PICONS
 
 The idea behind SNP is that a simplified name derived from the channel name is used to lookup a channel logo. The idea and code was first implemented by OpenVIX for the Enigma2 tuners. Any developer currently using the serviceref method as a way to lookup a logo and would like to implement this alternative, can find the code used to generate the simplified name at the OpenVIX github [repository](https://github.com/OpenViX/enigma2/blob/master/lib/python/Components/Renderer/Picon.py#L88-L89).
+
+## UTF8 SNP - UTF8 SERVICE NAME PICONS
+The problem with Service Name Picons is that the code in Enigma2 only allowed a-z and 0-9 and no other characters such as `+` , `&`, `*`, `(`  and others This is ok for channels that use the western alphabet without accents or special characters but not for Arabic ( اسم قناتي ) or Bulgarian ( Диема ХД ) or even western European ( Áèíöúñ ).
+
+Following this commit https://github.com/OpenPLi/enigma2/commit/2e7479e22eb2694fa1071f2429aad5721c663e1f, picon code was subsequently changed in April 2024 to allow unicode names and overcome the limitations of SNP.
+
+More details about UTF8 here: 
+https://en.wikipedia.org/wiki/UTF-8
+
 
 ## FOLDER OVERVIEW
 
@@ -122,8 +134,10 @@ This folder will contain the output from the build. Similar to the files [servic
 Possible output files and folders:
 
 ```yaml
+binaries-utf8snp/
 binaries-snp/
 binaries-srp/
+servicelist-enigma2-utf8snp.txt
 servicelist-enigma2-snp.txt
 servicelist-enigma2-srp.txt
 servicelist-tvheadend-filemode-snp.txt
