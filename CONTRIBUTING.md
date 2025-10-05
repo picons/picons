@@ -158,8 +158,7 @@ cplusestrenos=canalplusestrenos-radubrekac
 cplusestrenoshd=canalplusestrenoshd-radubrekac
 ```
 
-You **cannot** have two different `snpnames` that point to different `logos on this repository`.
-
+You **cannot** have two different `snpnames` that point to different `logos on this repository`. In the example below, only the logo in the topmost line will be used to create a picon.
 ```
 skycomedy=skycomedy
 skycomedy=skycinemacomedy
@@ -169,7 +168,21 @@ skycomedy=skycinemacomedy
 
 New additions can go at the top. Best to cleanup the old entries.
 
-You **cannot** have two different `utf8snpnames` that point to different `logos on this repository`.
+```
+kabelio 5 uk=channel5
+5 +1=channel5plus1
+5+1=channel5plus1
+channel 5 +1=channel5plus1
+5_14_22FC_EEEE0000=channel5thailand
+kanal yek hd=channelone
+kanal yek sd=channelone
+channel s=channels
+chstv=channels
+channels 24=channels24
+al malakoot sat – the kingdom sat الملكوت سات=almalakoot
+```
+
+You **cannot** have two different `utf8snpnames` that point to different `logos on this repository`. In the example below, only the logo in the topmost line will be used to create a picon.
 ```
 sky comedy=skycomedy
 sky comedy=skycinemacomedy
