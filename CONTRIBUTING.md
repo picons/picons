@@ -26,6 +26,19 @@ Example entries in srp.index
 The parts before the `=` sign are the partial service references.
 The parts after the `=` sign are the logos on **this repository**. This is not the channel name.
 
+
+__utf8snp.index:__
+
+Contains utf8 channel names establishing a link between the actual logos in this repository. With the exception of system characters, the names will match the channel name. We use lowercase.
+This project cannot use the `=` sign, so please use the SRP entry for such channels.
+
+Example utf8snp name:
+
+- `5*` => `5*`
+- `Sony Channel +1` => `sony channel +1`
+- `BT Sport//ESPN` => `bt sportespn`
+
+
 __snp.index:__
 
 Contains simplified channel names according to OpenVIX implementation, called SNP, establishing a link between the actual logos in this repository.
@@ -46,18 +59,6 @@ Example snp name:
 - `5*` => `5star`
 - `Sony Channel +1` => `sonychannelplus1`
 - `BT Sport//ESPN` => `btsportespn`
-
-
-__utf8snp.index:__
-
-Contains utf8 channel names establishing a link between the actual logos in this repository. With the exception of system characters, the names will match the channel name. We use lowercase.
-This project cannot use the `=` sign, so please use the SRP entry for such channels.
-
-Example utf8snp name:
-
-- `5*` => `5*`
-- `Sony Channel +1` => `sony channel +1`
-- `BT Sport//ESPN` => `bt sportespn`
 
 
 __Logo:__
@@ -110,41 +111,6 @@ New additions can go at the top. Best to cleanup the old entries.
 101_E_85_C00000=skybundesligahd-racratridr
 ```
 
-### snp.index
-
-New additions can go at the top. Best to cleanup the old entries.
-
-```
-2843_7FE_2_11A0000=bbcparliament
-100procentnl=100procentnl
-cplusalademande=canalplusalademande-thukalafri
-cpluscomedia=canalpluscomedia-radubrekac
-cpluscomediahd=canalpluscomediahd-radubrekac
-cplusdcine=canalplusdcine-radubrekac
-cplusdcinehd=canalplusdcinehd-radubrekac
-cplusdep2hd=canalplusdeportes2hd-radubrekac
-cplusdeport2=canalplusdeportes2-radubrekac
-cplusdeportes=canalplusdeportes-radubrekac
-cplusdeporthd=canalplusdeporteshd-radubrekac
-cplusestrenos=canalplusestrenos-radubrekac
-cplusestrenoshd=canalplusestrenoshd-radubrekac
-```
-The parts before the `=` sign are the channel's snp names.
-The parts after the `=` sign are the logos on **this repository**. Thes are not the channel names.
-
-**Channels with identical names**
-When there are different channels but with identical snp names, we distinguish between them by using srp references for some of them. For example there are two different channels on 28.2 but have the same name `sky comedy hd`. The entries in the index to ensure they have linkages to different logos are:
-
-```
-EEB_7EE_2_11A0000=skycinemacomedy
-skycomedyhd=skycomedy
-```
-
-You **cannot** have two different `snpnames` that point to different `logos on this repository`. In the example below, only the logo in the topmost line will be used to create a picon.
-```
-skycomedy=skycomedy
-skycomedy=skycinemacomedy
-```
 
 ### utf8snp.index
 
@@ -180,4 +146,41 @@ You **cannot** have two different `utf8snpnames` that point to different `logos 
 ```
 sky comedy=skycomedy
 sky comedy=skycinemacomedy
+```
+
+
+### snp.index
+
+New additions can go at the top. Best to cleanup the old entries.
+
+```
+2843_7FE_2_11A0000=bbcparliament
+100procentnl=100procentnl
+cplusalademande=canalplusalademande-thukalafri
+cpluscomedia=canalpluscomedia-radubrekac
+cpluscomediahd=canalpluscomediahd-radubrekac
+cplusdcine=canalplusdcine-radubrekac
+cplusdcinehd=canalplusdcinehd-radubrekac
+cplusdep2hd=canalplusdeportes2hd-radubrekac
+cplusdeport2=canalplusdeportes2-radubrekac
+cplusdeportes=canalplusdeportes-radubrekac
+cplusdeporthd=canalplusdeporteshd-radubrekac
+cplusestrenos=canalplusestrenos-radubrekac
+cplusestrenoshd=canalplusestrenoshd-radubrekac
+```
+The parts before the `=` sign are the channel's snp names.
+The parts after the `=` sign are the logos on **this repository**. Thes are not the channel names.
+
+**Channels with identical names**
+When there are different channels but with identical snp names, we distinguish between them by using srp references for some of them. For example there are two different channels on 28.2 but have the same name `sky comedy hd`. The entries in the index to ensure they have linkages to different logos are:
+
+```
+EEB_7EE_2_11A0000=skycinemacomedy
+skycomedyhd=skycomedy
+```
+
+You **cannot** have two different `snpnames` that point to different `logos on this repository`. In the example below, only the logo in the topmost line will be used to create a picon.
+```
+skycomedy=skycomedy
+skycomedy=skycinemacomedy
 ```
