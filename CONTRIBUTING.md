@@ -49,8 +49,16 @@ Example snp name:
 
 
 __utf8snp.index:__
-Contains utf8 channel names establishing a link between the actual logos in this repository. 
-This project cannot use the `=` sine, so please use the SRP entry for such channels.
+
+Contains utf8 channel names establishing a link between the actual logos in this repository. With the exception of system characters, the names will match the channel name. We use lowercase.
+This project cannot use the `=` sign, so please use the SRP entry for such channels.
+
+Example utf8snp name:
+
+- `5*` => `5*`
+- `Sony Channel +1` => `sony channel +1`
+- `BT Sport//ESPN` => `bt sportespn`
+
 
 __Logo:__
 
