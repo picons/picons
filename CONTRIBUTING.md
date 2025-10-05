@@ -142,7 +142,7 @@ EEB_7EE_2_11A0000=skycinemacomedy
 sky comedy hd=skycomedy
 ```
 
-You **cannot** have two different `utf8snpnames` that point to different `logos on this repository`. In the example below, only the logo in the topmost line will be used to create a picon.
+You **cannot** have two different `utf8snp names` that point to different `logos on this repository`. In the example below, only the logo in the topmost line will be used to create a picon.
 ```
 sky comedy=skycomedy
 sky comedy=skycinemacomedy
@@ -179,7 +179,7 @@ EEB_7EE_2_11A0000=skycinemacomedy
 skycomedyhd=skycomedy
 ```
 
-You **cannot** have two different `snpnames` that point to different `logos on this repository`. In the example below, only the logo in the topmost line will be used to create a picon.
+You **cannot** have two different `snp names` that point to different `logos on this repository`. In the example below, only the logo in the topmost line will be used to create a picon.
 ```
 skycomedy=skycomedy
 skycomedy=skycinemacomedy
