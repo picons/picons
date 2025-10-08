@@ -51,68 +51,6 @@ jobs:
         file_glob: true
         tag: ${{needs.create-release.outputs.version}}
 
-  build-snp-full:
-    runs-on: ubuntu-latest
-    needs: [create-release]
-    steps:
-    - name: Install dependencies
-      run: |
-        sudo apt update
-        sudo apt install -y --no-install-recommends --no-install-suggests git xz-utils binutils pngquant imagemagick librsvg2-bin jq
-    - name: Checkout the repository
-      uses: actions/checkout@v4
-      with:
-        ref: '${{needs.create-release.outputs.version}}'
-    - name: Build snp-full picons
-      run: |
-        bash 2-build-picons.sh snp-full
-    - name: Upload snp-full picons
-      uses: svenstaro/upload-release-action@2.9.0
-      with:
-        file: build-output/binaries-snp-full/*
-        file_glob: true
-        tag: ${{needs.create-release.outputs.version}}
-
-  build-snp:
-    runs-on: ubuntu-latest
-    needs: [create-release]
-    steps:
-    - name: Install dependencies
-      run: |
-        sudo apt update
-        sudo apt install -y --no-install-recommends --no-install-suggests git xz-utils binutils pngquant imagemagick librsvg2-bin jq
-    - name: Checkout the repository
-      uses: actions/checkout@v4
-      with:
-        ref: '${{needs.create-release.outputs.version}}'
-    - name: Download channellists
-      run: |
-        curl -fsSL "https://github.com/picons/channellists/archive/master.tar.gz" | tar xzf - -C "./build-input" --strip-components=1
-    - name: Build snp-13e.19e.23e.28e picons
-      run: |
-        mv ./build-input/13e.19e.23e.28e ./build-input/enigma2
-        bash 1-build-servicelist.sh snp
-        bash 2-build-picons.sh snp -13e.19e.23e.28e
-        rm -rf ./build-input/enigma2
-    - name: Upload snp picons
-      uses: svenstaro/upload-release-action@2.9.0
-      with:
-        file: build-output/binaries-snp/*
-        file_glob: true
-        tag: ${{needs.create-release.outputs.version}}
-    - name: Build snp-ziggo picons
-      run: |
-        mv ./build-input/ziggo ./build-input/enigma2
-        bash 1-build-servicelist.sh snp
-        bash 2-build-picons.sh snp -ziggo
-        rm -rf ./build-input/enigma2
-    - name: Upload snp picons
-      uses: svenstaro/upload-release-action@2.9.0
-      with:
-        file: build-output/binaries-snp/*
-        file_glob: true
-        tag: ${{needs.create-release.outputs.version}}
-
   build-srp-full:
     runs-on: ubuntu-latest
     needs: [create-release]
