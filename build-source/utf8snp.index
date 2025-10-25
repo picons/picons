@@ -7755,6 +7755,7 @@ rtv hollands midden fm=rtvhollandsmidden
 rtv hollands midden=rtvhollandsmidden
 rtv horizon radio=rtvhorizon
 rtv horizon tv=rtvhorizon
+10939h sid 0x191=rtvi
 rtvi europe=rtvi
 rtvi=rtvi
 rtv katwijk radio=rtvkatwijk
