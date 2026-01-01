@@ -9636,6 +9636,7 @@ srf info hd=srfinfohd
 srf zwei hd=srfzweihd
 sr 2 kulturradio=srkultur
 sr kultur=srkultur
+sr unserding=srunserding
 ssad tv=ssadtv
 southern sudan tv=ssbc
 ssbc=ssbc
