@@ -3782,6 +3782,7 @@ france 5 hd=france5
 france 5=france5
 france culture=franceculture
 france info=franceinfo
+france info:=franceinfo
 franceinfo hd=franceinfo
 franceinfo:=franceinfo
 franceinfo=franceinfo
