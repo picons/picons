@@ -11480,6 +11480,7 @@ vtm 4=vtm4
 vtm gold=vtmgold
 vtm life=vtmlife
 vtm non-stop 90s=vtmnonstop90s
+vtm series=vtmseries
 vtm xmas=vtmxmas
 anadoluda vuslat=vuslattv
 w9 hd=w9
