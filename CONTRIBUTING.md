@@ -29,12 +29,25 @@ The parts after the `=` sign are the logos on **this repository**. This is not t
 
 __utf8snp.index:__
 
-Contains utf8 channel names establishing a link between the actual logos in this repository. With the exception of system characters, the names will match the channel name. We use lowercase.
-This project cannot use the `=` sign, so please use the SRP entry for such channels.
+Contains utf8 channel names establishing a link between the actual logos in this repository. With the exception of system characters and those listed below, the names will match the channel name. We use lowercase.
+
+The following characters are not allowed:
+
+= (equals)
+< (less than)
+> (greater than)
+: (colon)
+" (double quote)
+/ (forward slash)
+\ (backslash)
+| (vertical bar or pipe)
+? (question mark)
+* (asterisk)
+
+A full stop at the end of the channel name is not allowed.
 
 Example utf8snp name:
 
-- `5*` => `5*`
 - `Sony Channel +1` => `sony channel +1`
 - `BT Sport//ESPN` => `bt sportespn`
 
