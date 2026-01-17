@@ -1,0 +1,12 @@
+<svg version="1.1" viewBox="0 0 606.27 800" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <radialGradient id="a" cx="799.8" cy="372.5" r="329.6" fy="407.4" data-name="Naamloos verloop" gradientTransform="matrix(1.0769 0 0 -1.0769 -558.35 884.53)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#f4a11d" offset=".3"/>
+   <stop stop-color="#f3981d" offset=".4"/>
+   <stop stop-color="#f1821d" offset=".5"/>
+   <stop stop-color="#ee5d1d" offset=".7"/>
+   <stop stop-color="#ec3b1e" offset=".9"/>
+  </radialGradient>
+ </defs>
+ <path d="m394.99 208.05-91.964 155.71h0.21537l-0.21537 0.43074c72.58 0 131.38 58.904 131.38 131.38 0 72.473-58.797 131.38-131.38 131.38-81.972 0-176.57-93.023-112.64-199l252.74-427.94h-198.36l-200.94 339.75c-27.783 45.767-43.828 99.61-43.828 157.11 0 167.45 135.68 303.14 303.14 303.14 167.45 0 303.14-135.68 303.14-303.14 0-167.45-88.626-249.83-211.06-288.81z" fill="url(#a)"/>
+</svg>
