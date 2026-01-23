@@ -33,6 +33,7 @@ Contains utf8 channel names establishing a link between the actual logos in this
 
 The following characters are not allowed:
 
+```
 = (equals)
 < (less than)
 > (greater than)
@@ -43,6 +44,7 @@ The following characters are not allowed:
 | (vertical bar or pipe)
 ? (question mark)
 * (asterisk)
+```
 
 A full stop at the end of the channel name is not allowed.
 
