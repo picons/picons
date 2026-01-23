@@ -2,79 +2,12 @@
 
 When submitting an issue, make sure you follow these rules:
 
-- Put entries to `srp.index`, `snp.index` or `utf8snp.index` inside fenced code blocks. You can create fenced code blocks by placing a new line with three backticks ` ``` ` before and after the code block. ([READ THIS GUIDE](https://help.github.com/articles/creating-and-highlighting-code-blocks/))
+- Please put entries to `srp.index` or `utf8snp.index` inside fenced code blocks. You can create fenced code blocks by placing a new line with three backticks ` ``` ` before and after the code block. ([READ THIS GUIDE](https://help.github.com/articles/creating-and-highlighting-code-blocks/))
 - Logos should be inside an archive, correctly named (see below). Share the link.
 
 Do you like copy/paste? We do too, make sure your issue is easily copy/pasted.
 
 # NAMING
-
-__srp.index:__
-
-Contains partial Enigma2 service references, establishing a link between the actual logos in this repository.
-
-- UPPERCASE
-- Only the part `296_5_85_C00000` is used, the parts `1_0_1_` and `_0_0_0` must be removed.
-
-Example entries in srp.index
-
-```
-65_251C_D5_820000=travelchannel
-13F_1_1_1862FEF=travelchannel-lichoridas
-1AD_9_3_130000=nationalgeographicwild
-```
-The parts before the `=` sign are the partial service references.
-The parts after the `=` sign are the logos on **this repository**. This is not the channel name.
-
-
-__utf8snp.index:__
-
-Contains utf8 channel names establishing a link between the actual logos in this repository. With the exception of system characters and those listed below, the names will match the channel name. We use lowercase.
-
-The following characters are not allowed:
-
-```
-= (equals)
-< (less than)
-> (greater than)
-: (colon)
-" (double quote)
-/ (forward slash)
-\ (backslash)
-| (vertical bar or pipe)
-? (question mark)
-* (asterisk)
-```
-
-A full stop at the end of the channel name is not allowed.
-
-Example utf8snp name:
-
-- `Sony Channel +1` => `sony channel +1`
-- `BT Sport//ESPN` => `bt sportespn`
-
-
-__snp.index:__
-
-Contains simplified channel names according to OpenVIX implementation, called SNP, establishing a link between the actual logos in this repository.
-
-SNP names are constructed by the following rules:
-
-- lowercase
-- letters `a to z`
-- numbers `0 to 9`
-- replace `&` with `and`
-- replace `+` with `plus`
-- replace `*` with `star`
-
-This obviously means that spaces and other characters are not allowed.
-
-Example snp name:
-
-- `5*` => `5star`
-- `Sony Channel +1` => `sonychannelplus1`
-- `BT Sport//ESPN` => `btsportespn`
-
 
 __Logo:__
 
@@ -102,11 +35,62 @@ white=fully white logo, no colors allowed (indexed 1-bit, black/white), looks go
 black=fully black logo, no colors allowed (indexed 1-bit, black/white), looks good on light backgrounds
 ```
 
+__srp.index:__
+
+Contains the partial Enigma2 service references, establishing a link between the actual logos in this repository.
+The parts before the `=` sign are the partial service references.
+The parts after the `=` sign are the logos on **this repository**. These are not the channel names.
+
+- Only the unique part of the service refernce is used.
+For example, Das Erste HD has the following service reference `1_0_19_283D_3FB_1_C00000_0_0_0`
+
+The first three elements are dropped. `1_0_19_`.  Depending on service type, other channels/services could have `1_0_1_` or `1_0_16_` or `4097_0_1_`
+The last three elements are dropped too, leaving 
+
+`283D_3FB_1_C00000`
+
+- All entries on the first part must be in UPPERCASE
+The logo we want to use on this repository is called `daserstehd`
+
+Example entry in srp.index will be
+
+```
+283D_3FB_1_C00000=daserstehd
+```
+
+
+__utf8snp.index:__
+
+Contains utf8 channel names establishing a link between the actual logos in this repository. With the exception of system characters and those listed below, the names will match the channel name. We use lowercase.
+
+The following characters are not allowed:
+
+```
+= (equals)
+< (less than)
+> (greater than)
+: (colon)
+" (double quote)
+/ (forward slash)
+\ (backslash)
+| (vertical bar or pipe)
+? (question mark)
+* (asterisk)
+```
+
+A full stop at the end of the channel name is not allowed.
+
+Example utf8snp names:
+
+- `Sony Channel +1` => `sony channel +1`
+- `BT Sport//ESPN` => `bt sportespn`
+
+
 # SAMPLES
 
 ### srp.index
 
-New additions can go at the top. Best to cleanup the old entries.
+New additions can go at the top. Best to delete redundant/old entries.
 
 ```
 1005_29_46_E080000=eurosporthd
@@ -129,7 +113,7 @@ New additions can go at the top. Best to cleanup the old entries.
 
 ### utf8snp.index
 
-New additions can go at the top. Best to cleanup the old entries.
+New additions can go at the top. Best to delete redundant/old entries, although this is not a requirement.
 
 ```
 kabelio 5 uk=channel5
@@ -151,53 +135,24 @@ The parts after the `=` sign are the logos on **this repository**. These are not
 
 **Channels with identical names**
 
-When there are different channels but with identical snp names, we distinguish between them by using srp references for some of them. For example there are two different channels on 28.2 but have the same name `sky comedy hd`. The entries in the index to ensure they have linkages to different logos are:
+When there are different channels but with identical utf8snp names, we distinguish between them by using srp references for some of them. For example there is `NTV` on a few satellites. They have the same utf8snp name `ntv`. The entries in the index to ensure they have linkages to different logos are:
 
 ```
-EEB_7EE_2_11A0000=skycinemacomedy
-sky comedy hd=skycomedy
+ntv=ntv
+55F3_FFDF_36E_1680000=ntv-kiwuslorit
+E_64_10_D84AD7F=ntv-stawahicle
+1D6F_C3B4_7E_460000=ntv-trahaclasp
+D3CD_839_2_11A0000=ntvbangla
 ```
 
-You **cannot** have two different `utf8snp names` that point to different `logos on this repository`. In the example below, only the logo in the topmost line will be used to create a picon.
+You **cannot** have two different `utf8snp names` that link to different `logos on this repository`. In the examples below, only the the top line will be used to create a picon.
+
 ```
 sky comedy=skycomedy
 sky comedy=skycinemacomedy
 ```
 
-
-### snp.index
-
-New additions can go at the top. Best to cleanup the old entries.
-
 ```
-2843_7FE_2_11A0000=bbcparliament
-100procentnl=100procentnl
-cplusalademande=canalplusalademande-thukalafri
-cpluscomedia=canalpluscomedia-radubrekac
-cpluscomediahd=canalpluscomediahd-radubrekac
-cplusdcine=canalplusdcine-radubrekac
-cplusdcinehd=canalplusdcinehd-radubrekac
-cplusdep2hd=canalplusdeportes2hd-radubrekac
-cplusdeport2=canalplusdeportes2-radubrekac
-cplusdeportes=canalplusdeportes-radubrekac
-cplusdeporthd=canalplusdeporteshd-radubrekac
-cplusestrenos=canalplusestrenos-radubrekac
-cplusestrenoshd=canalplusestrenoshd-radubrekac
-```
-The parts before the `=` sign are the channel's snp names.
-The parts after the `=` sign are the logos on **this repository**. Thes are not the channel names.
-
-**Channels with identical names**
-
-When there are different channels but with identical snp names, we distinguish between them by using srp references for some of them. For example there are two different channels on 28.2 but have the same name `sky comedy hd`. The entries in the index to ensure they have linkages to different logos are:
-
-```
-EEB_7EE_2_11A0000=skycinemacomedy
-skycomedyhd=skycomedy
-```
-
-You **cannot** have two different `snp names` that point to different `logos on this repository`. In the example below, only the logo in the topmost line will be used to create a picon.
-```
-skycomedy=skycomedy
-skycomedy=skycinemacomedy
+ntv=ntv
+ntv=ntvbangla
 ```

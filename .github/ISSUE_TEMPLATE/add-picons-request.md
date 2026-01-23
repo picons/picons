@@ -11,38 +11,34 @@ assignees: ''
 
 - Name of the channel as you see it on the receiver.
 - Full Service reference of the channel. You can get this from openwebif.
-- `Partial service reference` as used in this project. 
+- `Partial service reference` as used in this project.
 - `utf8snp name` of the channel if you are adding to utf8snp.index
-- `snpname` of the channel if you are adding to snp.index
 - The `logo_name` to be used to create the picons.
 
 
 # Logos
 
-Do the logo's you want to be used to create the picon exits in this repository?
+Do the logos you want to be used to create the picons exist in this repository?
 
-If not, name them in the properly like other logos in the `logo` directory of this repository.
-Create a `zip` with the new logos and attach them to your issue. You can drag and drop it.
+If they do, please use the correct and existing names.
+
+If they not exist and you are adding new logos, please name them properly like the other logos in the `logo` directory of this repository.
+Create a `zip` with the new logos and attach them to your issue. You can drag and drop to attach the zip file to your issue.
+
+If you are just updating the existing logos and there are no changes to service references, please use the exact names that we already have, so we can overwrite existing logos.
 
 ```
 logos.zip
 ```
 
 
-# SNP/SRP/UTF8SNP entries
+# SRP or UTF8SNP entries
 
 **utf8snp.index**
 ```
 utf8snpname=logo_name
 utf8snpname1=logo_name1
 utf8snpname2=logo_name2
-```
-
-**snp.index**
-```
-snpname=logo_name
-snpname1=logo_name
-snpname2=logo_name
 ```
 
 **srp.index**
