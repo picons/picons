@@ -66,7 +66,6 @@ Contains utf8 channel names establishing a link between the actual logos in this
 The following characters are not allowed:
 
 ```
-= (equals)
 < (less than)
 > (greater than)
 : (colon)
