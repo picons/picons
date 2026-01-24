@@ -25,9 +25,11 @@ if [[ $style = "snp" ]] || [[ $style = "srp" ]] || [[ $style = "utf8snp" ]]; the
         link_snp=($link_snp)
         logo_snp=${link_snp[1]}
         snpname=${link_snp[0]}
-        link_utf8snp=($link_utf8snp)
-        logo_utf8snp=${link_utf8snp[1]}
-        utf8snpname=`echo ${link_utf8snp[0]} | sed "s/'/'\"'\"'/g"`  # escape single quotes
+
+        # for utf8snp we split on last occurance of = because the channel name may contain =, and that is valid
+        split_char="="
+        logo_utf8snp="${link_utf8snp##*${split_char}}"
+        utf8snpname=`echo ${link_utf8snp%${split_char}*} | sed "s/'/'\"'\"'/g"`  # escape single quotes
 
         if [[ ! $logo_srp = "--------" ]]; then
             echo "ln -s -f 'logos/$logo_srp.png' '$temp/package/picon/$serviceref.png'" >> $temp/create-symlinks.sh
@@ -80,10 +82,10 @@ fi
 ##############################################
 if [[ $style = "utf8snp-full" ]]; then
     sed '1!G;h;$!d' $location/build-source/utf8snp.index | while read line ; do
-        IFS="="
-        link_utf8snp=($line)
-        logo_utf8snp=${link_utf8snp[1]}
-        utf8snpname=`echo ${link_utf8snp[0]} | sed "s/'/'\"'\"'/g"`  # escape single quotes
+        # for utf8snp we split on last occurance of = because the channel name may contain =, and that is valid
+        split_char="="
+        logo_utf8snp="${line##*${split_char}}"
+        utf8snpname=`echo ${line%${split_char}*} | sed "s/'/'\"'\"'/g"`  # escape single quotes
 
         if [[ $utf8snpname =~ ^[0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+$ ]]; then
             echo "ln -s -f 'logos/$logo_utf8snp.png' '$temp/package/picon/1_0_1_"$utf8snpname"_0_0_0.png'" >> $temp/create-symlinks.sh
