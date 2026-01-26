@@ -257,6 +257,7 @@ grep -v -e '^#' -e '^$' $backgroundsconf | while read lines ; do
 		if [[ "$style" == "utf8snp" ]] || [[ "$style" == "utf8snp-full" ]]; then
 			echo "Provides: enigma2-plugin-picons-snp-${packagenamenoversion:8}" >> $temp/package/CONTROL/control
 			echo "Replaces: enigma2-plugin-picons-snp-${packagenamenoversion:8}" >> $temp/package/CONTROL/control
+			echo "Conflicts: enigma2-plugin-picons-snp-${packagenamenoversion:8}" >> $temp/package/CONTROL/control
 		fi
         touch --no-dereference -t $timestamp $temp/package/CONTROL/control
         $location/resources/tools/ipkg-build.sh -o root -g root $temp/package $binaries >> $logfile
