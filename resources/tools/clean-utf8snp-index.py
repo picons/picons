@@ -1,8 +1,10 @@
 import unicodedata
-import os
+from os.path import dirname, isfile, realpath, sep, splitext
 import re
+import urllib.request
 
-sep = os.path.sep
+
+# cleans and sorts utf8snp.index
 
 
 # Workaround for when run on Windows.
@@ -17,11 +19,20 @@ if sys.stdout.encoding != "utf-8":
 # End workaround
 
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
+dir_path = dirname(realpath(__file__))
 
-filename = f"{dir_path}{sep}..{sep}..{sep}build-source{sep}utf8snp.index"
+filename = "utf8snp.index"
+
+file_path = f"{dir_path}{sep}..{sep}..{sep}build-source{sep}{filename}"  # repo path
+
+if not isfile(file_path):  # tool not running from the repo, test /tmp
+	file_path = f"{sep}tmp{sep}{filename}"
+
+if not isfile(file_path):  # fetch to local from repo if necessary
+	open(file_path, "w").write(urllib.request.urlopen(f"https://raw.githubusercontent.com/picons/picons/master/build-source/{filename}").read().decode())
+
+
 snames = {}
-changes = False
 
 
 def sanitizeFilename(filename, maxlen=255):  # 255 is max length in ext4 (and most other file systems)
@@ -55,7 +66,7 @@ def sanitizeFilename(filename, maxlen=255):  # 255 is max length in ext4 (and mo
 	# ignoring errors along the way, the result will be valid unicode.
 	# Prioritise maintaining the complete extension if possible.
 	# Any truncation of root or ext will be done at the end of the string
-	root, ext = os.path.splitext(filename.encode(encoding='utf-8', errors='ignore'))
+	root, ext = splitext(filename.encode(encoding='utf-8', errors='ignore'))
 	if len(ext) > maxlen - (1 if root else 0):  # leave at least one char for root if root
 		ext = ext[:maxlen - (1 if root else 0)]
 	# convert back to unicode, ignoring any incomplete utf8 multibyte chars
@@ -65,12 +76,19 @@ def sanitizeFilename(filename, maxlen=255):  # 255 is max length in ext4 (and mo
 		filename = "__"
 	return filename
 
+def lsort(listItem):
+	# sort by logo, then servicename
+	# if servicename is sref, sort by logo, then namespace, ONID, TSID, SID
+	sname, logo = listItem.rsplit("=", 1)
+	if re.match("^[0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+$", sname, re.IGNORECASE):
+		return (logo, 1, int((x := sname.split("_"))[3], 16), int(x[2], 16), int(x[1], 16), int(x[0], 16))
+	return (logo, 0, sname)
 
-for i, line in enumerate(open(filename, 'r', encoding="utf-8").readlines()):
+
+for i, line in enumerate((orig := open(file_path, 'r', encoding="utf-8").read()).splitlines()):
 	rsp = line.rstrip().rsplit("=", 1)
 	if not len(rsp) == 2:
 		print(f"error on line {i}, {line}")
-		changes = True
 		continue
 	name, logo = rsp
 	
@@ -81,23 +99,17 @@ for i, line in enumerate(open(filename, 'r', encoding="utf-8").readlines()):
 	if sname in snames:
 		f"line {i}, skip duplicate entries for {sname}, {snames[sname]} and {logo}"
 		print(f"line {i}, skip duplicate entries for {sname}, {snames[sname]} and {logo}")
-		changes = True
 		continue
 	if sname and sname != "__":
 		snames[sname] = logo
 		if sname != name:
 			print(f"line {str(i)}, changed {str(name)} to {str(sname)}")
-			changes = True
 	else:
 		print(f"error on line {i}, {line}")
-		changes = True
 
-if changes:
-	out = [k + "=" + v + "\n" for k, v in snames.items()]
-	open(filename + ".cleaned", 'w', encoding="utf-8").write("".join(out))
-	print(f"changes saved in {filename}.cleaned")
+out = "".join(sorted([k + "=" + v + "\n" for k, v in snames.items()], key=lambda listItem: lsort(listItem)))
+if out != orig:
+	open(file_path + ".cleaned", 'w', encoding="utf-8").write(out)
+	print(f"changes saved in {file_path}.cleaned")
 else:
 	print("no changes were required")
-
-
-
