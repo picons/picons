@@ -97,7 +97,6 @@ for i, line in enumerate((orig := open(file_path, 'r', encoding="utf-8").read())
 	else:
 		sname = name and (x := sanitizeFilename(name)) and x.lower()
 	if sname in snames:
-		f"line {i}, skip duplicate entries for {sname}, {snames[sname]} and {logo}"
 		print(f"line {i}, skip duplicate entries for {sname}, {snames[sname]} and {logo}")
 		continue
 	if sname and sname != "__":
