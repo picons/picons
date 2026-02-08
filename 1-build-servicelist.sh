@@ -79,25 +79,47 @@ if [[ -d $location/build-input/enigma2 ]]; then
             echo -ne "Enigma2: Converting channel: $currentline/$channelcount"\\r
         fi
 
-        serviceref_id=$(sed -e 's/^[^_]*_0_[^_]*_//g' -e 's/_0_0_0$//g' <<< "$serviceref")
-        unique_id=${serviceref_id%????}
         channelref=(${serviceref//_/ })
+
+        # Detect actual SID format in lamedb (supports leading characters like 0, A, F, etc.)
+        # Search for pattern with any potential leading hex character
+        if grep -i -q "[0-9A-Fa-f]*${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb"; then
+            # Extract the actual SID from lamedb (with leading character if present)
+            sid_full=$(grep -i -o "[0-9A-Fa-f]*${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}" <<< "$lamedb" | head -1 | cut -d':' -f1)
+            sid_search="$sid_full"
+            
+            # Convert to uppercase for consistency
+            sid_full=$(echo "$sid_full" | sed 's/.*/\U&\E/')
+            
+            # Build correct unique_id with full SID
+            unique_id="${sid_full}_${channelref[4]}_${channelref[5]}_${channelref[6]}"
+            serviceref_id="${unique_id}0000"
+            
+            # Build correct service reference with full SID
+            serviceref="${channelref[0]}_${channelref[1]}_${channelref[2]}_${unique_id}0000_0_0_0"
+        else
+            # Fallback: Use SID without leading character
+            sid_search="${channelref[3]}"
+            unique_id="${channelref[3]}_${channelref[4]}_${channelref[5]}_${channelref[6]}"
+            serviceref_id="${unique_id}0000"
+        fi
 
         logo_srp=$(grep -i -m 1 "^$unique_id" <<< "$index" | sed -n -e 's/.*=//p')
         if [[ -z $logo_srp ]]; then logo_srp="--------"; fi
 
         if [[ $style = "snp" ]] || [[ $style = "utf8snp" ]]; then
             if [[ $style = "utf8snp" ]]; then
-                channelname=$(grep -i -A1 "${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/^//g')
+                channelname=$(grep -i -A1 "${sid_search}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/^//g')
                 snpname=$(sed -e 's/\(.*\)/\L\1/g' <<< "$channelname")
             else
-                channelname=$(grep -i -A1 "${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" | iconv -f utf-8 -t ascii//translit 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/^//g')
+                channelname=$(grep -i -A1 "${sid_search}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" | iconv -f utf-8 -t ascii//translit 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/^//g')
                 snpname=$(sed -e 's/&/and/g' -e 's/*/star/g' -e 's/+/plus/g' -e 's/\(.*\)/\L\1/g' -e 's/[^a-z0-9]//g' <<< "$channelname")
             fi
             logo_snp=$(grep -i -m 1 "^$snpname=" <<< "$index" | sed -n -e 's/.*=//p')
             if [[ -z $logo_snp ]]; then logo_snp="--------"; fi
             echo -e "$serviceref\t$channelname\t$serviceref_id=$logo_srp\t$snpname=$logo_snp" >> $tempfile
         else
+            channelname=$(grep -i -A1 "${sid_search}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/^//g')
             echo -e "$serviceref\t$channelname\t$serviceref_id=$logo_srp" >> $tempfile
         fi
     done
