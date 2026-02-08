@@ -1,0 +1,8 @@
+<svg class="icons logo-algemeen-dagblad" version="1.1" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+ <path d="m800 0h-800v800h800z" fill="#d10a10" stroke-linecap="round" stroke-linejoin="round" stroke-width="12.291" style="paint-order:markers fill stroke"/>
+ <g transform="scale(7.767)" fill="none" fill-rule="evenodd" stroke-width=".375">
+  <g fill="#fff" stroke-width=".375">
+   <path d="m63 67v-31h2.93c8.408-0.207 14.11 4.626 14.07 15.5 0.04 11.158-5.377 15.707-13.928 15.5zm-20-44 20 57h4c19.453 0 30-11.656 30-28.5 0-17.128-10.405-28.5-30-28.5zm-14.887 34.495 5.36-17.95 5.388 17.95h-10.747zm-2.113-34.495-20 57h15.453l2.835-9.674 18.415-0.044 2.882 9.718h15.415l-20-57z" stroke-width=".375"/>
+  </g>
+ </g>
+</svg>
