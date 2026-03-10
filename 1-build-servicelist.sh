@@ -73,6 +73,18 @@ if [[ -d $location/build-input/enigma2 ]]; then
     lamedb=$(<"$location/build-input/enigma2/lamedb")
     channelcount=$(cat "$location/build-input/enigma2/"*bouquet.* | grep -o '#SERVICE .*:0:.*:.*:.*:.*:.*:0:0:0' | sort -u | wc -l)
 
+    ## Build a serviceref->name map from bouquet #DESCRIPTION lines (used as utf8snp fallback)
+    bouquetmap=$(mktemp --suffix=.bouquetmap)
+    awk '
+        /^#DESCRIPTION/ { desc = substr($0, 14); sub(/\r/, "", desc); next }
+        /^#SERVICE.*:0:.*:.*:.*:.*:.*:0:0:0/ {
+            if (desc != "") {
+                ref = $0; sub(/^#SERVICE /, "", ref); sub(/:[\r]?$/, "", ref)
+                gsub(/:/, "_", ref); print toupper(ref) "\t" desc; desc = ""
+            }
+        }
+    ' $location/build-input/enigma2/*bouquet.* | sort -u > "$bouquetmap"
+
     cat $location/build-input/enigma2/*bouquet.* | grep -o '#SERVICE .*:0:.*:.*:.*:.*:.*:0:0:0' | sed -e 's/#SERVICE //g' -e 's/.*/\U&\E/' -e 's/:/_/g' | sort -u | while read serviceref ; do
         ((currentline++))
         if [[ $- == *i* ]]; then
