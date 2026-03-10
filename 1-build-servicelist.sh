@@ -194,27 +194,40 @@ if [[ -f $location/build-input/tvheadend.serverconf ]]; then
             # fetching next channel
             rx_buf=$(curl -s --anyauth $url'/api/channel/grid?start='$channel'&limit=1' )
 
-            # extracting service reference and skip the rest if nothing usable found
+            # extracting service reference; IPTV channels won't have one in this form
             serviceref=$(echo $rx_buf |  jq -r '.entries[].icon'  | grep -o '1_0_.*_.*_.*_.*_.*_0_0_0')
 
-            if [[ ! -n $serviceref ]]; then
+            # skip if no service reference and style is srp (nothing useful to do without one)
+            if [[ ! -n $serviceref ]] && [[ $style = "srp" ]]; then
                 continue
             fi
 
-            serviceref_id=$(sed -e 's/^[^_]*_0_[^_]*_//g' -e 's/_0_0_0$//g' <<< "$serviceref")
-            unique_id=$(echo "$serviceref" | sed -n -e 's/^1_0_[^_]*_//p' | sed -n -e 's/_0_0_0$//p')
-            channelname=$(echo $rx_buf | jq -r '.entries | .[] | .name' | iconv -f utf-8 -t ascii//TRANSLIT | sed -e 's/\xef\xbb\xbf//g')
+            channelname_raw=$(echo $rx_buf | jq -r '.entries | .[] | .name' | sed -e 's/\xef\xbb\xbf//g')
 
-            logo_srp=$(grep -i -m 1 "^$unique_id" <<< "$index" | sed -n -e 's/.*=//p')
+            if [[ -n $serviceref ]]; then
+                serviceref_id=$(sed -e 's/^[^_]*_0_[^_]*_//g' -e 's/_0_0_0$//g' <<< "$serviceref")
+                unique_id=$(echo "$serviceref" | sed -n -e 's/^1_0_[^_]*_//p' | sed -n -e 's/_0_0_0$//p')
+                logo_srp=$(grep -i -m 1 "^$unique_id" <<< "$index" | sed -n -e 's/.*=//p')
+            fi
             if [[ -z $logo_srp ]]; then logo_srp="--------"; fi
 
-            if [[ $style = "snp" ]]; then
+            if [[ $style = "utf8snp" ]]; then
+                channelname=$channelname_raw
+                # Force NFD to match decomposed entries in utf8snp.index
+                utf8snpname=$(python3 -c "import unicodedata,sys; print(unicodedata.normalize('NFD', sys.argv[1]))" "$channelname" | sed -e 's/\(.*\)/\L\1/g')
+                if [[ -z $utf8snpname ]]; then utf8snpname="--------"; fi
+                logo_utf8snp=$(grep -i -m 1 "^$utf8snpname=" <<< "$index" | sed -n -e 's/.*=//p')
+                if [[ -z $logo_utf8snp ]]; then logo_utf8snp="--------"; fi
+                echo -e "$serviceref\t$channelname\t$serviceref_id=$logo_srp\t$utf8snpname=$logo_utf8snp" >> $tempfile
+            elif [[ $style = "snp" ]]; then
+                channelname=$(iconv -f utf-8 -t ascii//TRANSLIT <<< "$channelname_raw" | sed -e 's/\xef\xbb\xbf//g')
                 snpname=$(sed -e 's/&/and/g' -e 's/*/star/g' -e 's/+/plus/g' -e 's/\(.*\)/\L\1/g' -e 's/[^a-z0-9]//g' <<< "$channelname")
                 if [[ -z $snpname ]]; then snpname="--------"; fi
                 logo_snp=$(grep -i -m 1 "^$snpname=" <<< "$index" | sed -n -e 's/.*=//p')
                 if [[ -z $logo_snp ]]; then logo_snp="--------"; fi
                 echo -e "$serviceref\t$channelname\t$serviceref_id=$logo_srp\t$snpname=$logo_snp" >> $tempfile
             else
+                channelname=$(iconv -f utf-8 -t ascii//TRANSLIT <<< "$channelname_raw" | sed -e 's/\xef\xbb\xbf//g')
                 echo -e "$serviceref\t$channelname\t$serviceref_id=$logo_srp" >> $tempfile
             fi
         done
@@ -266,25 +279,36 @@ if [[ -f $location/build-input/channels.conf ]]; then
         unique_id=$(sed -e 's/.*/\U&\E/' <<< "$sid"'_'"$tid"'_'"$nid"'_'"$namespace")
         serviceref='1_0_'"$channeltype"'_'"$unique_id"'0000_0_0_0'
         serviceref_id="$unique_id"'0000'
-        channelname=(${vdrchannel[0]})
-        channelname=$(iconv -f utf-8 -t ascii//translit <<< "${channelname[0]}" 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
+        channelname_raw=(${vdrchannel[0]})
+        channelname_raw="${channelname_raw[0]}"
 
         logo_srp=$(grep -i -m 1 "^$unique_id" <<< "$index" | sed -n -e 's/.*=//p')
         if [[ -z $logo_srp ]]; then logo_srp="--------"; fi
 
-        if [[ $style = "snp" ]]; then
+        if [[ $style = "utf8snp" ]]; then
+            # VDR uses NFC for filenames; normalise to NFD only for index lookup, then convert back to NFC for output
+            channelname=$(sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g' <<< "$channelname_raw")
+            utf8snpname_nfd=$(python3 -c "import unicodedata,sys; print(unicodedata.normalize('NFD', sys.argv[1]))" "$channelname" | sed -e 's/\(.*\)/\L\1/g')
+            utf8snpname=$(python3 -c "import unicodedata,sys; print(unicodedata.normalize('NFC', sys.argv[1]))" "$channelname" | sed -e 's/\(.*\)/\L\1/g')
+            if [[ -z $utf8snpname ]]; then utf8snpname="--------"; fi
+            logo_utf8snp=$(grep -i -m 1 "^$utf8snpname_nfd=" <<< "$index" | sed -n -e 's/.*=//p')
+            if [[ -z $logo_utf8snp ]]; then logo_utf8snp="--------"; fi
+            echo -e "$serviceref\t$channelname\t$serviceref_id=$logo_srp\t$utf8snpname=$logo_utf8snp" >> $tempfile
+        elif [[ $style = "snp" ]]; then
+            channelname=$(iconv -f utf-8 -t ascii//translit <<< "$channelname_raw" 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
             snpname=$(sed -e 's/&/and/g' -e 's/*/star/g' -e 's/+/plus/g' -e 's/\(.*\)/\L\1/g' -e 's/[^a-z0-9]//g' <<< "$channelname")
             if [[ -z $snpname ]]; then snpname="--------"; fi
             logo_snp=$(grep -i -m 1 "^$snpname=" <<< "$index" | sed -n -e 's/.*=//p')
             if [[ -z $logo_snp ]]; then logo_snp="--------"; fi
             echo -e "$serviceref\t$channelname\t$serviceref_id=$logo_srp\t$snpname=$logo_snp" >> $tempfile
         else
+            channelname=$(iconv -f utf-8 -t ascii//translit <<< "$channelname_raw" 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
             echo -e "$serviceref\t$channelname\t$serviceref_id=$logo_srp" >> $tempfile
         fi
     done
 
     sort -t $'\t' -k 2,2 "$tempfile" | sed -e 's/\t/^|/g' | column -t -s $'^' | sed -e 's/|/  |  /g' > $file
-    rm $tempfile "$bouquetmap"
+    rm $tempfile
     echo "$(date +'%H:%M:%S') - INFO: VDR: Exported to $file"
 else
     echo "$(date +'%H:%M:%S') - ERROR: VDR: $location/build-input/channels.conf not found"
