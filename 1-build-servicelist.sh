@@ -94,7 +94,7 @@ if [[ -d $location/build-input/enigma2 ]]; then
         fi
 
         serviceref_id=$(sed -e 's/^[^_]*_0_[^_]*_//g' -e 's/_0_0_0$//g' <<< "$serviceref")
-        unique_id=${serviceref_id%????}
+        unique_id=$serviceref_id
         channelref=(${serviceref//_/ })
 
         logo_srp=$(grep -i -m 1 "^$unique_id" <<< "$index" | sed -n -e 's/.*=//p')
