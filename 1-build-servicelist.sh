@@ -73,11 +73,13 @@ if [[ -d $location/build-input/enigma2 ]]; then
     lamedb=$(<"$location/build-input/enigma2/lamedb")
     channelcount=$(cat "$location/build-input/enigma2/"*bouquet.* | grep -o '#SERVICE .*:0:.*:.*:.*:.*:.*:0:0:0' | sort -u | wc -l)
 
-    ## Build a serviceref->name map from bouquet #DESCRIPTION lines (used as utf8snp fallback)
+    ## Build a serviceref->name map from bouquet #DESCRIPTION lines
+    ## Includes standard services and IPTV entries (excludes folder type 64 and sub-bouquet type 320)
     bouquetmap=$(mktemp --suffix=.bouquetmap)
     awk '
         /^#DESCRIPTION/ { desc = substr($0, 14); sub(/\r/, "", desc); next }
-        /^#SERVICE.*:0:.*:.*:.*:.*:.*:0:0:0/ {
+        /^#SERVICE/ {
+            if ($0 ~ /^#SERVICE 1:64:/ || $0 ~ /^#SERVICE 1:320:/) { desc = ""; next }
             if (desc != "") {
                 ref = $0; sub(/^#SERVICE /, "", ref); sub(/:[\r]?$/, "", ref)
                 gsub(/:/, "_", ref); print toupper(ref) "\t" desc; desc = ""
@@ -100,18 +102,32 @@ if [[ -d $location/build-input/enigma2 ]]; then
 
         if [[ $style = "snp" ]] || [[ $style = "utf8snp" ]]; then
             if [[ $style = "utf8snp" ]]; then
-                channelname=$(grep -i -A1 "0*${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
-                if [[ -z $channelname ]]; then
-                    channelname=$(grep -m 1 "^${serviceref}	" "$bouquetmap" | cut -f2)
-                fi
+                channelname_lamedb=$(grep -i -A1 "0*${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
+                channelname_bouquet=$(grep -m 1 "^${serviceref}	" "$bouquetmap" | cut -f2)
+                channelname=${channelname_lamedb:-$channelname_bouquet}
                 snpname=$(sed -e 's/\(.*\)/\L\1/g' <<< "$channelname")
             else
-                channelname=$(grep -i -A1 "0*${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" | iconv -f utf-8 -t ascii//translit 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
+                channelname_lamedb=$(grep -i -A1 "0*${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" | iconv -f utf-8 -t ascii//translit 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
+                channelname_bouquet=$(grep -m 1 "^${serviceref}	" "$bouquetmap" | cut -f2 | iconv -f utf-8 -t ascii//translit 2>> $logfile | sed -e 's/\xef\xbb\xbf//g')
+                channelname=${channelname_lamedb:-$channelname_bouquet}
                 snpname=$(sed -e 's/&/and/g' -e 's/*/star/g' -e 's/+/plus/g' -e 's/\(.*\)/\L\1/g' -e 's/[^a-z0-9]//g' <<< "$channelname")
             fi
+            if [[ -z $snpname ]]; then snpname="--------"; fi
             logo_snp=$(grep -i -m 1 "^$snpname=" <<< "$index" | sed -n -e 's/.*=//p')
             if [[ -z $logo_snp ]]; then logo_snp="--------"; fi
             echo -e "$serviceref\t$channelname\t$serviceref_id=$logo_srp\t$snpname=$logo_snp" >> $tempfile
+            ## If bouquet name differs from lamedb name (case-insensitive), output a second row
+            if [[ -n $channelname_lamedb ]] && [[ -n $channelname_bouquet ]] && [[ "${channelname_lamedb,,}" != "${channelname_bouquet,,}" ]]; then
+                if [[ $style = "utf8snp" ]]; then
+                    snpname2=$(sed -e 's/\(.*\)/\L\1/g' <<< "$channelname_bouquet")
+                else
+                    snpname2=$(sed -e 's/&/and/g' -e 's/*/star/g' -e 's/+/plus/g' -e 's/\(.*\)/\L\1/g' -e 's/[^a-z0-9]//g' <<< "$channelname_bouquet")
+                fi
+                if [[ -z $snpname2 ]]; then snpname2="--------"; fi
+                logo_snp2=$(grep -i -m 1 "^$snpname2=" <<< "$index" | sed -n -e 's/.*=//p')
+                if [[ -z $logo_snp2 ]]; then logo_snp2="--------"; fi
+                echo -e "$serviceref\t$channelname_bouquet\t$serviceref_id=$logo_srp\t$snpname2=$logo_snp2" >> $tempfile
+            fi
         else
             echo -e "$serviceref\t$channelname\t$serviceref_id=$logo_srp" >> $tempfile
         fi
