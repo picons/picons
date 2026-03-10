@@ -117,9 +117,9 @@ if [[ -d $location/build-input/enigma2 ]]; then
             fi
             if [[ $style = "utf8snp" ]]; then
                 if [[ -z $utf8snpname ]]; then utf8snpname="--------"; fi
-                logo_snp=$(grep -i -m 1 "^$utf8snpname=" <<< "$index" | sed -n -e 's/.*=//p')
-                if [[ -z $logo_snp ]]; then logo_snp="--------"; fi
-                echo -e "$serviceref\t$channelname\t$serviceref_id=$logo_srp\t$utf8snpname=$logo_snp" >> $tempfile
+                logo_utf8snp=$(grep -i -m 1 "^$utf8snpname=" <<< "$index" | sed -n -e 's/.*=//p')
+                if [[ -z $logo_utf8snp ]]; then logo_utf8snp="--------"; fi
+                echo -e "$serviceref\t$channelname\t$serviceref_id=$logo_srp\t$utf8snpname=$logo_utf8snp" >> $tempfile
             else
                 if [[ -z $snpname ]]; then snpname="--------"; fi
                 logo_snp=$(grep -i -m 1 "^$snpname=" <<< "$index" | sed -n -e 's/.*=//p')
@@ -135,9 +135,9 @@ if [[ -d $location/build-input/enigma2 ]]; then
                 fi
                 if [[ $style = "utf8snp" ]]; then
                     if [[ -z $utf8snpname2 ]]; then utf8snpname2="--------"; fi
-                    logo_snp2=$(grep -i -m 1 "^$utf8snpname2=" <<< "$index" | sed -n -e 's/.*=//p')
-                    if [[ -z $logo_snp2 ]]; then logo_snp2="--------"; fi
-                    echo -e "$serviceref\t$channelname_bouquet\t$serviceref_id=$logo_srp\t$utf8snpname2=$logo_snp2" >> $tempfile
+                    logo_utf8snp2=$(grep -i -m 1 "^$utf8snpname2=" <<< "$index" | sed -n -e 's/.*=//p')
+                    if [[ -z $logo_utf8snp2 ]]; then logo_utf8snp2="--------"; fi
+                    echo -e "$serviceref\t$channelname_bouquet\t$serviceref_id=$logo_srp\t$utf8snpname2=$logo_utf8snp2" >> $tempfile
                 else
                     if [[ -z $snpname2 ]]; then snpname2="--------"; fi
                     logo_snp2=$(grep -i -m 1 "^$snpname2=" <<< "$index" | sed -n -e 's/.*=//p')
