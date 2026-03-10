@@ -100,52 +100,43 @@ if [[ -d $location/build-input/enigma2 ]]; then
         logo_srp=$(grep -i -m 1 "^$unique_id" <<< "$index" | sed -n -e 's/.*=//p')
         if [[ -z $logo_srp ]]; then logo_srp="--------"; fi
 
-        channelname=$(grep -i -A1 "0*${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" | iconv -f utf-8 -t ascii//translit 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
-        if [[ -z $channelname ]]; then channelname=$(grep -m 1 "^${serviceref}\t" "$bouquetmap" | cut -f2 | iconv -f utf-8 -t ascii//translit 2>> $logfile | sed -e 's/\xef\xbb\xbf//g'); fi
-
-        if [[ $style = "snp" ]] || [[ $style = "utf8snp" ]]; then
-            if [[ $style = "utf8snp" ]]; then
-                channelname_lamedb=$(grep -i -A1 "0*${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
-                channelname_bouquet=$(grep -m 1 "^${serviceref}	" "$bouquetmap" | cut -f2)
-                channelname=${channelname_lamedb:-$channelname_bouquet}
-                utf8snpname=$(python3 -c "import unicodedata,sys; print(unicodedata.normalize('NFD', sys.argv[1]))" "$channelname" | sed -e 's/\(.*\)/\L\1/g')
-            else
-                channelname_lamedb=$(grep -i -A1 "0*${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" | iconv -f utf-8 -t ascii//translit 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
-                channelname_bouquet=$(grep -m 1 "^${serviceref}	" "$bouquetmap" | cut -f2 | iconv -f utf-8 -t ascii//translit 2>> $logfile | sed -e 's/\xef\xbb\xbf//g')
-                channelname=${channelname_lamedb:-$channelname_bouquet}
-                snpname=$(sed -e 's/&/and/g' -e 's/*/star/g' -e 's/+/plus/g' -e 's/\(.*\)/\L\1/g' -e 's/[^a-z0-9]//g' <<< "$channelname")
-            fi
-            if [[ $style = "utf8snp" ]]; then
-                if [[ -z $utf8snpname ]]; then utf8snpname="--------"; fi
-                logo_utf8snp=$(grep -i -m 1 "^$utf8snpname=" <<< "$index" | sed -n -e 's/.*=//p')
-                if [[ -z $logo_utf8snp ]]; then logo_utf8snp="--------"; fi
-                echo -e "$serviceref\t$channelname\t$serviceref_id=$logo_srp\t$utf8snpname=$logo_utf8snp" >> $tempfile
-            else
-                if [[ -z $snpname ]]; then snpname="--------"; fi
-                logo_snp=$(grep -i -m 1 "^$snpname=" <<< "$index" | sed -n -e 's/.*=//p')
-                if [[ -z $logo_snp ]]; then logo_snp="--------"; fi
-                echo -e "$serviceref\t$channelname\t$serviceref_id=$logo_srp\t$snpname=$logo_snp" >> $tempfile
-            fi
+        if [[ $style = "utf8snp" ]]; then
+            channelname_lamedb=$(grep -i -A1 "0*${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
+            channelname_bouquet=$(grep -m 1 "^${serviceref}	" "$bouquetmap" | cut -f2)
+            channelname=${channelname_lamedb:-$channelname_bouquet}
+            utf8snpname=$(python3 -c "import unicodedata,sys; print(unicodedata.normalize('NFD', sys.argv[1]))" "$channelname" | sed -e 's/\(.*\)/\L\1/g')
+            if [[ -z $utf8snpname ]]; then utf8snpname="--------"; fi
+            logo_utf8snp=$(grep -i -m 1 "^$utf8snpname=" <<< "$index" | sed -n -e 's/.*=//p')
+            if [[ -z $logo_utf8snp ]]; then logo_utf8snp="--------"; fi
+            echo -e "$serviceref\t$channelname\t$serviceref_id=$logo_srp\t$utf8snpname=$logo_utf8snp" >> $tempfile
             ## If bouquet name differs from lamedb name (case-insensitive), output a second row
             if [[ -n $channelname_lamedb ]] && [[ -n $channelname_bouquet ]] && [[ "${channelname_lamedb,,}" != "${channelname_bouquet,,}" ]]; then
-                if [[ $style = "utf8snp" ]]; then
-                    utf8snpname2=$(python3 -c "import unicodedata,sys; print(unicodedata.normalize('NFD', sys.argv[1]))" "$channelname_bouquet" | sed -e 's/\(.*\)/\L\1/g')
-                else
-                    snpname2=$(sed -e 's/&/and/g' -e 's/*/star/g' -e 's/+/plus/g' -e 's/\(.*\)/\L\1/g' -e 's/[^a-z0-9]//g' <<< "$channelname_bouquet")
-                fi
-                if [[ $style = "utf8snp" ]]; then
-                    if [[ -z $utf8snpname2 ]]; then utf8snpname2="--------"; fi
-                    logo_utf8snp2=$(grep -i -m 1 "^$utf8snpname2=" <<< "$index" | sed -n -e 's/.*=//p')
-                    if [[ -z $logo_utf8snp2 ]]; then logo_utf8snp2="--------"; fi
-                    echo -e "$serviceref\t$channelname_bouquet\t$serviceref_id=$logo_srp\t$utf8snpname2=$logo_utf8snp2" >> $tempfile
-                else
-                    if [[ -z $snpname2 ]]; then snpname2="--------"; fi
-                    logo_snp2=$(grep -i -m 1 "^$snpname2=" <<< "$index" | sed -n -e 's/.*=//p')
-                    if [[ -z $logo_snp2 ]]; then logo_snp2="--------"; fi
-                    echo -e "$serviceref\t$channelname_bouquet\t$serviceref_id=$logo_srp\t$snpname2=$logo_snp2" >> $tempfile
-                fi
+                utf8snpname2=$(python3 -c "import unicodedata,sys; print(unicodedata.normalize('NFD', sys.argv[1]))" "$channelname_bouquet" | sed -e 's/\(.*\)/\L\1/g')
+                if [[ -z $utf8snpname2 ]]; then utf8snpname2="--------"; fi
+                logo_utf8snp2=$(grep -i -m 1 "^$utf8snpname2=" <<< "$index" | sed -n -e 's/.*=//p')
+                if [[ -z $logo_utf8snp2 ]]; then logo_utf8snp2="--------"; fi
+                echo -e "$serviceref\t$channelname_bouquet\t$serviceref_id=$logo_srp\t$utf8snpname2=$logo_utf8snp2" >> $tempfile
+            fi
+        elif [[ $style = "snp" ]]; then
+            channelname_lamedb=$(grep -i -A1 "0*${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" | iconv -f utf-8 -t ascii//translit 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
+            channelname_bouquet=$(grep -m 1 "^${serviceref}	" "$bouquetmap" | cut -f2 | iconv -f utf-8 -t ascii//translit 2>> $logfile | sed -e 's/\xef\xbb\xbf//g')
+            channelname=${channelname_lamedb:-$channelname_bouquet}
+            snpname=$(sed -e 's/&/and/g' -e 's/*/star/g' -e 's/+/plus/g' -e 's/\(.*\)/\L\1/g' -e 's/[^a-z0-9]//g' <<< "$channelname")
+            if [[ -z $snpname ]]; then snpname="--------"; fi
+            logo_snp=$(grep -i -m 1 "^$snpname=" <<< "$index" | sed -n -e 's/.*=//p')
+            if [[ -z $logo_snp ]]; then logo_snp="--------"; fi
+            echo -e "$serviceref\t$channelname\t$serviceref_id=$logo_srp\t$snpname=$logo_snp" >> $tempfile
+            ## If bouquet name differs from lamedb name (case-insensitive), output a second row
+            if [[ -n $channelname_lamedb ]] && [[ -n $channelname_bouquet ]] && [[ "${channelname_lamedb,,}" != "${channelname_bouquet,,}" ]]; then
+                snpname2=$(sed -e 's/&/and/g' -e 's/*/star/g' -e 's/+/plus/g' -e 's/\(.*\)/\L\1/g' -e 's/[^a-z0-9]//g' <<< "$channelname_bouquet")
+                if [[ -z $snpname2 ]]; then snpname2="--------"; fi
+                logo_snp2=$(grep -i -m 1 "^$snpname2=" <<< "$index" | sed -n -e 's/.*=//p')
+                if [[ -z $logo_snp2 ]]; then logo_snp2="--------"; fi
+                echo -e "$serviceref\t$channelname_bouquet\t$serviceref_id=$logo_srp\t$snpname2=$logo_snp2" >> $tempfile
             fi
         else
+            channelname=$(grep -i -A1 "0*${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" | iconv -f utf-8 -t ascii//translit 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
+            if [[ -z $channelname ]]; then channelname=$(grep -m 1 "^${serviceref}\t" "$bouquetmap" | cut -f2 | iconv -f utf-8 -t ascii//translit 2>> $logfile | sed -e 's/\xef\xbb\xbf//g'); fi
             echo -e "$serviceref\t$channelname\t$serviceref_id=$logo_srp" >> $tempfile
         fi
     done
