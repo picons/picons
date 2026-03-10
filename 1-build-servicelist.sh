@@ -104,14 +104,14 @@ if [[ -d $location/build-input/enigma2 ]]; then
             channelname_lamedb=$(grep -i -A1 "0*${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
             channelname_bouquet=$(grep -m 1 "^${serviceref}	" "$bouquetmap" | cut -f2)
             channelname=${channelname_lamedb:-$channelname_bouquet}
-            utf8snpname=$(python3 -c "import unicodedata,sys; print(unicodedata.normalize('NFD', sys.argv[1]))" "$channelname" | sed -e 's/\(.*\)/\L\1/g')
+            utf8snpname=$(python3 -c "import unicodedata,sys; print(unicodedata.normalize('NFD', sys.argv[1]))" "$channelname" | sed -e 's/\(.*\)/\L\1/g' -e 's/[<>:"\/\\|?*]//g')
             if [[ -z $utf8snpname ]]; then utf8snpname="--------"; fi
             logo_utf8snp=$(grep -i -m 1 "^$utf8snpname=" <<< "$index" | sed -n -e 's/.*=//p')
             if [[ -z $logo_utf8snp ]]; then logo_utf8snp="--------"; fi
             echo -e "$serviceref\t$channelname\t$serviceref_id=$logo_srp\t$utf8snpname=$logo_utf8snp" >> $tempfile
             ## If bouquet name differs from lamedb name (case-insensitive), output a second row
             if [[ -n $channelname_lamedb ]] && [[ -n $channelname_bouquet ]] && [[ "${channelname_lamedb,,}" != "${channelname_bouquet,,}" ]]; then
-                utf8snpname2=$(python3 -c "import unicodedata,sys; print(unicodedata.normalize('NFD', sys.argv[1]))" "$channelname_bouquet" | sed -e 's/\(.*\)/\L\1/g')
+                utf8snpname2=$(python3 -c "import unicodedata,sys; print(unicodedata.normalize('NFD', sys.argv[1]))" "$channelname_bouquet" | sed -e 's/\(.*\)/\L\1/g' -e 's/[<>:"\/\\|?*]//g')
                 if [[ -z $utf8snpname2 ]]; then utf8snpname2="--------"; fi
                 logo_utf8snp2=$(grep -i -m 1 "^$utf8snpname2=" <<< "$index" | sed -n -e 's/.*=//p')
                 if [[ -z $logo_utf8snp2 ]]; then logo_utf8snp2="--------"; fi
@@ -205,7 +205,7 @@ if [[ -f $location/build-input/tvheadend.serverconf ]]; then
             if [[ $style = "utf8snp" ]]; then
                 channelname=$channelname_raw
                 # Force NFD to match decomposed entries in utf8snp.index
-                utf8snpname=$(python3 -c "import unicodedata,sys; print(unicodedata.normalize('NFD', sys.argv[1]))" "$channelname" | sed -e 's/\(.*\)/\L\1/g')
+                utf8snpname=$(python3 -c "import unicodedata,sys; print(unicodedata.normalize('NFD', sys.argv[1]))" "$channelname" | sed -e 's/\(.*\)/\L\1/g' -e 's/[<>:"\/\\|?*]//g')
                 if [[ -z $utf8snpname ]]; then utf8snpname="--------"; fi
                 logo_utf8snp=$(grep -i -m 1 "^$utf8snpname=" <<< "$index" | sed -n -e 's/.*=//p')
                 if [[ -z $logo_utf8snp ]]; then logo_utf8snp="--------"; fi
@@ -279,7 +279,7 @@ if [[ -f $location/build-input/channels.conf ]]; then
         if [[ $style = "utf8snp" ]]; then
             # VDR uses NFC for filenames; normalise to NFD only for index lookup, then convert back to NFC for output
             channelname=$(sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g' <<< "$channelname_raw")
-            utf8snpname_nfd=$(python3 -c "import unicodedata,sys; print(unicodedata.normalize('NFD', sys.argv[1]))" "$channelname" | sed -e 's/\(.*\)/\L\1/g')
+            utf8snpname_nfd=$(python3 -c "import unicodedata,sys; print(unicodedata.normalize('NFD', sys.argv[1]))" "$channelname" | sed -e 's/\(.*\)/\L\1/g' -e 's/[<>:"\/\\|?*]//g')
             utf8snpname=$(python3 -c "import unicodedata,sys; print(unicodedata.normalize('NFC', sys.argv[1]))" "$channelname" | sed -e 's/\(.*\)/\L\1/g')
             if [[ -z $utf8snpname ]]; then utf8snpname="--------"; fi
             logo_utf8snp=$(grep -i -m 1 "^$utf8snpname_nfd=" <<< "$index" | sed -n -e 's/.*=//p')
