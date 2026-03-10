@@ -101,6 +101,7 @@ if [[ -d $location/build-input/enigma2 ]]; then
         if [[ -z $logo_srp ]]; then logo_srp="--------"; fi
 
         channelname=$(grep -i -A1 "0*${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" | iconv -f utf-8 -t ascii//translit 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
+        if [[ -z $channelname ]]; then channelname=$(grep -m 1 "^${serviceref}\t" "$bouquetmap" | cut -f2 | iconv -f utf-8 -t ascii//translit 2>> $logfile | sed -e 's/\xef\xbb\xbf//g'); fi
 
         if [[ $style = "snp" ]] || [[ $style = "utf8snp" ]]; then
             if [[ $style = "utf8snp" ]]; then
