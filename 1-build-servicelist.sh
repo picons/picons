@@ -100,6 +100,8 @@ if [[ -d $location/build-input/enigma2 ]]; then
         logo_srp=$(grep -i -m 1 "^$unique_id" <<< "$index" | sed -n -e 's/.*=//p')
         if [[ -z $logo_srp ]]; then logo_srp="--------"; fi
 
+        channelname=$(grep -i -A1 "0*${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" | iconv -f utf-8 -t ascii//translit 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
+
         if [[ $style = "snp" ]] || [[ $style = "utf8snp" ]]; then
             if [[ $style = "utf8snp" ]]; then
                 channelname_lamedb=$(grep -i -A1 "0*${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
