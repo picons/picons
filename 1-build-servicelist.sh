@@ -101,6 +101,9 @@ if [[ -d $location/build-input/enigma2 ]]; then
         if [[ $style = "snp" ]] || [[ $style = "utf8snp" ]]; then
             if [[ $style = "utf8snp" ]]; then
                 channelname=$(grep -i -A1 "0*${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
+                if [[ -z $channelname ]]; then
+                    channelname=$(grep -m 1 "^${serviceref}	" "$bouquetmap" | cut -f2)
+                fi
                 snpname=$(sed -e 's/\(.*\)/\L\1/g' <<< "$channelname")
             else
                 channelname=$(grep -i -A1 "0*${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" | iconv -f utf-8 -t ascii//translit 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
@@ -115,7 +118,7 @@ if [[ -d $location/build-input/enigma2 ]]; then
     done
 
     sort -t $'\t' -k 2,2 "$tempfile" | sed -e 's/\t/^|/g' | column -t -s $'^' | sed -e 's/|/  |  /g' > $file
-    rm $tempfile
+    rm $tempfile "$bouquetmap"
     echo "$(date +'%H:%M:%S') - INFO: Enigma2: Exported to $file"
 else
     echo "$(date +'%H:%M:%S') - ERROR: Enigma2: $location/build-input/enigma2 not found"
@@ -248,7 +251,7 @@ if [[ -f $location/build-input/channels.conf ]]; then
     done
 
     sort -t $'\t' -k 2,2 "$tempfile" | sed -e 's/\t/^|/g' | column -t -s $'^' | sed -e 's/|/  |  /g' > $file
-    rm $tempfile
+    rm $tempfile "$bouquetmap"
     echo "$(date +'%H:%M:%S') - INFO: VDR: Exported to $file"
 else
     echo "$(date +'%H:%M:%S') - ERROR: VDR: $location/build-input/channels.conf not found"
