@@ -88,10 +88,10 @@ if [[ -d $location/build-input/enigma2 ]]; then
 
         if [[ $style = "snp" ]] || [[ $style = "utf8snp" ]]; then
             if [[ $style = "utf8snp" ]]; then
-                channelname=$(grep -i -A1 "${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/^//g')
+                channelname=$(grep -i -A1 "${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
                 snpname=$(sed -e 's/\(.*\)/\L\1/g' <<< "$channelname")
             else
-                channelname=$(grep -i -A1 "${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" | iconv -f utf-8 -t ascii//translit 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/^//g')
+                channelname=$(grep -i -A1 "${channelref[3]}:.*${channelref[6]}:.*${channelref[4]}:.*${channelref[5]}:.*:.*" <<< "$lamedb" | sed -n "2p" | iconv -f utf-8 -t ascii//translit 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
                 snpname=$(sed -e 's/&/and/g' -e 's/*/star/g' -e 's/+/plus/g' -e 's/\(.*\)/\L\1/g' -e 's/[^a-z0-9]//g' <<< "$channelname")
             fi
             logo_snp=$(grep -i -m 1 "^$snpname=" <<< "$index" | sed -n -e 's/.*=//p')
@@ -155,7 +155,7 @@ if [[ -f $location/build-input/tvheadend.serverconf ]]; then
 
             serviceref_id=$(sed -e 's/^[^_]*_0_[^_]*_//g' -e 's/_0_0_0$//g' <<< "$serviceref")
             unique_id=$(echo "$serviceref" | sed -n -e 's/^1_0_[^_]*_//p' | sed -n -e 's/_0_0_0$//p')
-            channelname=$(echo $rx_buf | jq -r '.entries | .[] | .name' | iconv -f utf-8 -t ascii//TRANSLIT)
+            channelname=$(echo $rx_buf | jq -r '.entries | .[] | .name' | iconv -f utf-8 -t ascii//TRANSLIT | sed -e 's/\xef\xbb\xbf//g')
 
             logo_srp=$(grep -i -m 1 "^$unique_id" <<< "$index" | sed -n -e 's/.*=//p')
             if [[ -z $logo_srp ]]; then logo_srp="--------"; fi
@@ -219,7 +219,7 @@ if [[ -f $location/build-input/channels.conf ]]; then
         serviceref='1_0_'"$channeltype"'_'"$unique_id"'0000_0_0_0'
         serviceref_id="$unique_id"'0000'
         channelname=(${vdrchannel[0]})
-        channelname=$(iconv -f utf-8 -t ascii//translit <<< "${channelname[0]}" 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/^//g')
+        channelname=$(iconv -f utf-8 -t ascii//translit <<< "${channelname[0]}" 2>> $logfile | sed -e 's/^[ \t]*//' -e 's/|//g' -e 's/\xef\xbb\xbf//g')
 
         logo_srp=$(grep -i -m 1 "^$unique_id" <<< "$index" | sed -n -e 's/.*=//p')
         if [[ -z $logo_srp ]]; then logo_srp="--------"; fi
