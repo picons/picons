@@ -8,16 +8,15 @@ echo "#!/bin/sh" > $temp/create-symlinks.sh
 chmod 755 $temp/create-symlinks.sh
 
 ##############################################################
-## Create symlinks for UTF8SNP, SNP & SRP using servicelist ##
+## Create symlinks for SNP & SRP using servicelist ##
 ##############################################################
-if [[ $style = "snp" ]] || [[ $style = "srp" ]] || [[ $style = "utf8snp" ]]; then
-    cat $location/build-output/servicelist-*-$style.txt | tr -d [:blank:] | tr -d [=*=] | while read line ; do
+if [[ $style = "snp" ]] || [[ $style = "srp" ]]; then
+    cat $location/build-output/servicelist-*-$style.txt | sed 's/\r//' | tr -d [:blank:] | tr -d [=*=] | while read line ; do
         IFS="|"
         line_data=($line)
         serviceref=${line_data[0]}
         link_srp=${line_data[2]}
         link_snp=${line_data[3]}
-        link_utf8snp=${line_data[3]}
 
         IFS="="
         link_srp=($link_srp)
@@ -26,7 +25,33 @@ if [[ $style = "snp" ]] || [[ $style = "srp" ]] || [[ $style = "utf8snp" ]]; the
         logo_snp=${link_snp[1]}
         snpname=${link_snp[0]}
 
+        if [[ ! $logo_srp = "--------" ]]; then
+            echo "ln -s -f 'logos/$logo_srp.png' '$temp/package/picon/$serviceref.png'" >> $temp/create-symlinks.sh
+        fi
+
+        if [[ $style = "snp" ]] && [[ ! $logo_snp = "--------" ]]; then
+            echo "ln -s -f 'logos/$logo_snp.png' '$temp/package/picon/$snpname.png'" >> $temp/create-symlinks.sh
+        fi
+    done
+fi
+
+##############################################################
+## Create symlinks for UTF8SNP using servicelist ##
+##############################################################
+if [[ $style = "utf8snp" ]]; then
+    cat $location/build-output/servicelist-*-$style.txt | sed 's/\r//' | tr -d [=*=] | while read line ; do
+        IFS="|"
+        line_data=($line)
+        serviceref=$(echo "${line_data[0]}" | tr -d [:blank:])
+        link_srp=$(echo "${line_data[2]}" | tr -d [:blank:])
+
+        IFS="="
+        link_srp=($link_srp)
+        logo_srp=${link_srp[1]}
+
         # for utf8snp we split on last occurance of = because the channel name may contain =, and that is valid
+        # column 4 is read without stripping blanks to preserve spaces in utf8snpname
+        link_utf8snp=$(echo "${line_data[3]}" | sed 's/^[[:blank:]]*//' | sed 's/[[:blank:]]*$//')
         split_char="="
         logo_utf8snp="${link_utf8snp##*${split_char}}"
         utf8snpname=`echo ${link_utf8snp%${split_char}*} | sed "s/'/'\"'\"'/g"`  # escape single quotes
@@ -35,11 +60,7 @@ if [[ $style = "snp" ]] || [[ $style = "srp" ]] || [[ $style = "utf8snp" ]]; the
             echo "ln -s -f 'logos/$logo_srp.png' '$temp/package/picon/$serviceref.png'" >> $temp/create-symlinks.sh
         fi
 
-        if [[ $style = "snp" ]] && [[ ! $logo_snp = "--------" ]]; then
-            echo "ln -s -f 'logos/$logo_snp.png' '$temp/package/picon/$snpname.png'" >> $temp/create-symlinks.sh
-        fi
-
-        if [[ $style = "utf8snp" ]] && [[ ! $logo_utf8snp = "--------" ]]; then
+        if [[ ! $logo_utf8snp = "--------" ]]; then
             echo "ln -s -f 'logos/$logo_utf8snp.png' '$temp/package/picon/$utf8snpname.png'" >> $temp/create-symlinks.sh
         fi
     done
