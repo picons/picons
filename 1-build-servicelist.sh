@@ -35,16 +35,16 @@ if [[ $location == *" "* ]]; then
     exit 1
 fi
 
-##############################################
-## Ask the user whether to build SNP or SRP ##
-##############################################
+#######################################################
+## Ask the user whether to build UTF8SNP, SNP or SRP ##
+#######################################################
 if [[ -z $1 ]]; then
     echo "Which style are you going to build?"
-    select choice in "Service Reference" "Service Name"; do
+    select choice in "Service Reference" "UTF8 Service Name" "Service Name (Being made redundant, please move to UTF8 Service Name)"; do
         case $choice in
             "Service Reference" ) style="srp"; break;;
-            "Service Name" ) style="snp"; break;;
             "UTF8 Service Name" ) style="utf8snp"; break;;
+            "Service Name (Being made redundant, please move to UTF8 Service Name)" ) style="snp"; break;;
         esac
     done
 else

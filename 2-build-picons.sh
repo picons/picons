@@ -89,14 +89,14 @@ fi
 #########################################################
 if [[ -z $1 ]]; then
     echo "Which style are you going to build?"
-    select choice in "Service Reference" "Service Reference (Full)" "Service Name" "Service Name (Full)" "UTF8 Service Name" "UTF8 Service Name (Full)"; do
+    select choice in "Service Reference" "Service Reference (Full)" "UTF8 Service Name" "UTF8 Service Name (Full)" "Service Name (Being made redundant, please move to UTF8 Service Name)" "Service Name Full (Being made redundant, please move to UTF8 Service Name)"; do
         case $choice in
             "Service Reference" ) style=srp; break;;
             "Service Reference (Full)" ) style=srp-full; break;;
-            "Service Name" ) style=snp; break;;
-            "Service Name (Full)" ) style=snp-full; break;;
             "UTF8 Service Name" ) style=utf8snp; break;;
             "UTF8 Service Name (Full)" ) style=utf8snp-full; break;;
+            "Service Name (Being made redundant, please move to UTF8 Service Name)" ) style=snp; break;;
+            "Service Name Full (Being made redundant, please move to UTF8 Service Name)" ) style=snp-full; break;;
         esac
     done
 else
