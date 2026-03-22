@@ -1,0 +1,47 @@
+<svg version="1.1" viewBox="0 0 870.87 403.39" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="d" x="13.764" y="25.427" width="22.765" height="24.865" filterUnits="userSpaceOnUse">
+   <feOffset dy="2" input="SourceAlpha"/>
+   <feGaussianBlur result="blur" stdDeviation="2"/>
+   <feFlood flood-opacity=".161"/>
+   <feComposite in2="blur" operator="in"/>
+   <feComposite in="SourceGraphic"/>
+  </filter>
+  <filter id="c" x="0" y="0" width="50.292" height="46.713" filterUnits="userSpaceOnUse">
+   <feOffset dy="2" input="SourceAlpha"/>
+   <feGaussianBlur result="blur-2" stdDeviation="2"/>
+   <feFlood flood-opacity=".161"/>
+   <feComposite in2="blur-2" operator="in"/>
+   <feComposite in="SourceGraphic"/>
+  </filter>
+  <filter id="b" x="38.896" y="0" width="50.292" height="49.958" filterUnits="userSpaceOnUse">
+   <feOffset dy="2" input="SourceAlpha"/>
+   <feGaussianBlur result="blur-3" stdDeviation="2"/>
+   <feFlood flood-opacity=".161"/>
+   <feComposite in2="blur-3" operator="in"/>
+   <feComposite in="SourceGraphic"/>
+  </filter>
+  <filter id="a" x="77.781" y="0" width="50.292" height="50.097" filterUnits="userSpaceOnUse">
+   <feOffset dy="2" input="SourceAlpha"/>
+   <feGaussianBlur result="blur-4" stdDeviation="2"/>
+   <feFlood flood-opacity=".161"/>
+   <feComposite in2="blur-4" operator="in"/>
+   <feComposite in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g transform="matrix(6.7998 0 0 6.7234 -6092.3 -60.51)" stroke-width=".1479" data-name="Group 81">
+  <g transform="translate(895.96,9)" filter="url(#d)">
+   <path transform="translate(-2262.2 -3675.6)" d="m2291.8 3716.3a18.06 18.06 0 0 1-8.765 0v-10.325h8.765z" fill="#f00" fill-rule="evenodd" stroke="#fefefe" stroke-width=".29579" data-name="Path 91"/>
+  </g>
+  <g transform="translate(895.96,9)" filter="url(#c)">
+   <path transform="translate(-1103,-1534)" d="m1128.1 1539a18.125 18.125 0 0 1 12.355 31.41v-21.519h-7.967v8.894h-8.765v-8.894h-7.979v21.519a18.132 18.132 0 0 1 12.356-31.41z" fill="#f00" fill-rule="evenodd" stroke="#fefefe" stroke-width=".29579" data-name="Path 92"/>
+  </g>
+  <g transform="translate(895.96,9)" filter="url(#b)">
+   <path transform="translate(-4379.1,-1534)" d="m4443.1 1539a18.142 18.142 0 0 1 4.776 35.646v-25.755h-9.551v25.755a18.144 18.144 0 0 1 4.775-35.646z" fill="#fd0" fill-rule="evenodd" stroke="#fefefe" stroke-width=".29579" data-name="Path 93"/>
+  </g>
+  <g transform="translate(895.96,9)" filter="url(#a)">
+   <path transform="translate(-7654.2 -1534)" d="m7757.2 1539a18.145 18.145 0 0 1 3.99 35.846v-19.583h8.1v-6.641h-24.183v6.641h8.107v19.583a18.144 18.144 0 0 1 3.989-35.846z" fill="#00f" fill-rule="evenodd" stroke="#fefefe" stroke-width=".29579" data-name="Path 94"/>
+  </g>
+  <path transform="translate(-131.93 -4872.2)" d="m1142.7 4930.6-2.089 5.492h4.177zm-1.8-2.581h3.579l5.4 12.9h-3.227l-1.033-2.652h-5.82l-0.986 2.652h-3.25zm-16.392 8.084h2.992v0.528a2.3 2.3 0 0 0-0.023 0.27v0.246a2.882 2.882 0 0 0 0.305 1.338c0.2 0.387 0.692 0.586 1.467 0.586 0.81 0 1.3-0.2 1.49-0.586a3.2 3.2 0 0 0 0.293-1.467v-9h3.086v9.117a8.38 8.38 0 0 1-0.2 1.819 2.523 2.523 0 0 1-1.115 1.5 4.363 4.363 0 0 1-1.373 0.575 6.851 6.851 0 0 1-1.549 0.211 1.277 1.277 0 0 1-0.211 0.012h-0.657l-0.446-0.035h-0.188l-0.176-0.036a6.135 6.135 0 0 1-2.241-0.727 2.6 2.6 0 0 1-1.326-1.689 5.385 5.385 0 0 1-0.117-0.74c-0.023-0.246-0.023-0.5-0.023-0.75v-0.293a2.254 2.254 0 0 1 0.012-0.281v-0.6zm-5.257 4.811v-12.895h3.086v12.9zm-13.822 0v-2.241l8.167-8.319h-8v-2.335h11.757v2.241l-8.19 8.319h8v2.335zm-5.139 0v-12.895h3.086v12.9zm-9.621 0-5.163-12.9h3.4l3.191 9.656 3.262-9.656h3.379l-5.116 12.9zm-17.166 0v-12.895h10.9v2.241h-7.85v2.746h7.181v2.206h-7.181v3.32h8.225v2.382zm-12.109 0v-12.895h3.086v10.513h7.333v2.382zm-13.634 0v-12.895h10.9v2.241h-7.85v2.746h7.181v2.206h-7.181v3.32h8.225v2.382zm-9.293 0v-10.6h-4.442v-2.295h11.968v2.3h-4.435v10.6z" fill="#DDD9CE" fill-rule="evenodd" data-name="Path 95"/>
+ </g>
+</svg>
