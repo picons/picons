@@ -50,6 +50,8 @@ def check_utf8snp(file_path):
 			if any(c in name for c in ["\\", "/", ":", "*", "?", "\"", "<", ">", "|", "\0"]):
 				print(f"line {i}, invalid character in name '{name}'")
 				invalid += 1
+				continue  # skip duplicate check for invalid entries
+
 		if re.match("^[0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+$", name, re.IGNORECASE):
 			sname = name.upper()
 		else:
