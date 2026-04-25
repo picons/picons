@@ -25,6 +25,7 @@ if not isfile(file_path):  # fetch to local from repo if necessary
 
 
 logos = {}
+logos_lines = {}  # track which line each ref was first seen on
 
 for i, line in enumerate((orig := open(file_path, 'r', encoding="utf-8").read()).splitlines()):
 	rsp = line.rstrip().rsplit("=", 1)
@@ -36,9 +37,10 @@ for i, line in enumerate((orig := open(file_path, 'r', encoding="utf-8").read())
 		ref = ref.upper()
 		print(f"line {i}, sref contains lower case")
 	if ref in logos:
-		print(f"line {i}, skip duplicate entries for {ref}, {logos[ref]} and {logo}")
+		print(f"line {i}, duplicate key '{ref}' already seen on line {logos_lines[ref]} (existing logo: {logos[ref]}, skipping logo: {logo} on line {i})")
 		continue
 	logos[ref] = logo
+	logos_lines[ref] = i
 
 out = "".join([k + "=" + logos[k] + "\n" for k in sorted(logos.keys(), key=lambda listItem: rsort(listItem))])
 if out != orig:

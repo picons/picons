@@ -33,6 +33,7 @@ if not isfile(file_path):  # fetch to local from repo if necessary
 
 
 snames = {}
+sname_lines = {}  # track which line each sname was first seen on
 
 
 def sanitizeFilename(filename, maxlen=255):  # 255 is max length in ext4 (and most other file systems)
@@ -97,10 +98,11 @@ for i, line in enumerate((orig := open(file_path, 'r', encoding="utf-8").read())
 	else:
 		sname = name and (x := sanitizeFilename(name)) and x.lower()
 	if sname in snames:
-		print(f"line {i}, skip duplicate entries for {sname}, {snames[sname]} and {logo}")
+		print(f"line {i}, duplicate key '{sname}' already seen on line {sname_lines[sname]} (existing logo: {snames[sname]}, skipping logo: {logo} on line {i})")
 		continue
 	if sname and sname != "__":
 		snames[sname] = logo
+		sname_lines[sname] = i
 		if sname != name:
 			print(f"line {str(i)}, changed {str(name)} to {str(sname)}")
 	else:
