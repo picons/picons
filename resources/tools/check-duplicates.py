@@ -4,9 +4,11 @@ import re
 import sys
 
 
+# Reports invalid character entries in utf8snp.index
+# Exits with code 1 if invalid characters are found in utf8snp.index
 # Reports duplicate entries in utf8snp.index and srp.index
 # Does not modify any files
-# Exits with code 1 if invalid characters are found in utf8snp.index
+
 
 
 dir_path = dirname(realpath(__file__))
@@ -36,11 +38,12 @@ def sanitizeFilename(filename, maxlen=255):
 
 
 def check_utf8snp(file_path):
-	print(f"=== Checking {file_path} for duplicates ===")
+	print(f"=== Checking {file_path} ===")
 	snames = {}
 	sname_lines = {}
-	duplicates = 0
-	invalid = 0
+	invalid_msgs = []
+	duplicate_msgs = []
+
 	for i, line in enumerate(open(file_path, 'r', encoding="utf-8").read().splitlines()):
 		rsp = line.rstrip().rsplit("=", 1)
 		if len(rsp) != 2:
@@ -48,10 +51,8 @@ def check_utf8snp(file_path):
 		name, logo = rsp
 		if not re.match("^[0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+$", name, re.IGNORECASE):
 			if any(c in name for c in ["\\", "/", ":", "*", "?", "\"", "<", ">", "|", "\0"]):
-				print(f"line {i}, invalid character in name '{name}'")
-				invalid += 1
+				invalid_msgs.append(f"line {i}, invalid character in name '{name}'")
 				continue  # skip duplicate check for invalid entries
-
 		if re.match("^[0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+$", name, re.IGNORECASE):
 			sname = name.upper()
 		else:
@@ -59,23 +60,34 @@ def check_utf8snp(file_path):
 		if not sname or sname == "__":
 			continue
 		if sname in snames:
-			print(f"line {i}, duplicate key '{sname}' already seen on line {sname_lines[sname]} (existing logo: {snames[sname]}, skipping logo: {logo} on line {i})")
-			duplicates += 1
+			duplicate_msgs.append(f"line {i}, duplicate key '{sname}' already seen on line {sname_lines[sname]} (existing logo: {snames[sname]}, skipping logo: {logo} on line {i})")
 		else:
 			snames[sname] = logo
 			sname_lines[sname] = i
-	if duplicates == 0:
-		print("no duplicates found")
+
+	if invalid_msgs:
+		print(f"{len(invalid_msgs)} invalid character(s) found:")
+		for msg in invalid_msgs:
+			print(msg)
 	else:
-		print(f"{duplicates} duplicate(s) found")
-	return invalid
+		print("no invalid characters found")
+
+	if duplicate_msgs:
+		print(f"{len(duplicate_msgs)} duplicate(s) found:")
+		for msg in duplicate_msgs:
+			print(msg)
+	else:
+		print("no duplicates found")
+
+	return len(invalid_msgs)
 
 
 def check_srp(file_path):
-	print(f"=== Checking {file_path} for duplicates ===")
+	print(f"=== Checking {file_path} ===")
 	logos = {}
 	logos_lines = {}
-	duplicates = 0
+	duplicate_msgs = []
+
 	for i, line in enumerate(open(file_path, 'r', encoding="utf-8").read().splitlines()):
 		rsp = line.rstrip().rsplit("=", 1)
 		if len(rsp) != 2:
@@ -83,15 +95,17 @@ def check_srp(file_path):
 		ref, logo = rsp
 		ref = ref.upper()
 		if ref in logos:
-			print(f"line {i}, duplicate key '{ref}' already seen on line {logos_lines[ref]} (existing logo: {logos[ref]}, skipping logo: {logo} on line {i})")
-			duplicates += 1
+			duplicate_msgs.append(f"line {i}, duplicate key '{ref}' already seen on line {logos_lines[ref]} (existing logo: {logos[ref]}, skipping logo: {logo} on line {i})")
 		else:
 			logos[ref] = logo
 			logos_lines[ref] = i
-	if duplicates == 0:
-		print("no duplicates found")
+
+	if duplicate_msgs:
+		print(f"{len(duplicate_msgs)} duplicate(s) found:")
+		for msg in duplicate_msgs:
+			print(msg)
 	else:
-		print(f"{duplicates} duplicate(s) found")
+		print("no duplicates found")
 
 
 build_source = f"{dir_path}{sep}..{sep}..{sep}build-source"
