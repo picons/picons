@@ -144,7 +144,9 @@ E_64_10_D84AD7F=ntv-stawahicle
 D3CD_839_2_11A0000=ntvbangla
 ```
 
-You **cannot** have two different `utf8snp names` that link to different `logos on this repository`. In the examples below, only the the top line will be used to create a picon.
+You **cannot** have two different `utf8snp names` that link to different `logos on this repository`. Pull requests with multiple assignments will fail. 
+
+Previously, in the examples below, only the the first line will be used to create a picon.
 
 ```
 sky comedy=skycomedy
