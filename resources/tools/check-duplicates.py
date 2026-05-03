@@ -79,7 +79,7 @@ def check_utf8snp(file_path):
 	else:
 		print("no duplicates found")
 
-	return len(invalid_msgs)
+	return len(invalid_msgs), len(duplicate_msgs)
 
 
 def check_srp(file_path):
@@ -114,9 +114,10 @@ utf8snp_path = f"{build_source}{sep}utf8snp.index"
 srp_path = f"{build_source}{sep}srp.index"
 
 invalid = 0
+duplicates = 0
 
 if isfile(utf8snp_path):
-	invalid = check_utf8snp(utf8snp_path)
+	invalid, duplicates = check_utf8snp(utf8snp_path)
 else:
 	print(f"utf8snp.index not found at {utf8snp_path}")
 
@@ -127,6 +128,10 @@ if isfile(srp_path):
 else:
 	print(f"srp.index not found at {srp_path}")
 
-if invalid > 0:
-	print(f"\n{invalid} invalid character(s) found in utf8snp.index - failing build")
+if invalid > 0 or duplicates > 0:
+	print()
+	if invalid > 0:
+		print(f"{invalid} invalid character(s) found in utf8snp.index - please correct before merging")
+	if duplicates > 0:
+		print(f"{duplicates} duplicate utf8snp name(s) found in utf8snp.index - please remove duplicate entries before merging")
 	sys.exit(1)
