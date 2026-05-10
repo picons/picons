@@ -120,7 +120,7 @@ if [[ $style = "utf8snp-full" ]]; then
         # for utf8snp we split on last occurance of = because the channel name may contain =, and that is valid
         split_char="="
         logo_utf8snp="${line##*${split_char}}"
-        utf8snpname=`echo ${line%${split_char}*} | sed "s/'/'\"'\"'/g"`  # escape single quotes
+        utf8snpname=`echo "${line%${split_char}*}" | sed "s/'/'\"'\"'/g"`  # escape single quotes
 
         if [[ $utf8snpname =~ ^[0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+$ ]]; then
             echo "ln -s -f 'logos/$logo_utf8snp.png' '$temp/package/picon/1_0_1_"$utf8snpname"_0_0_0.png'" >> $temp/create-symlinks.sh
