@@ -59,11 +59,15 @@ jobs:
           CORES=$(nproc)
           TOTAL=${#FILES[@]}
 
+          MAGICK_BIN=$(command -v magick)
+          echo "Using ImageMagick at: $MAGICK_BIN"
+          export MAGICK_BIN
+
           echo "ImageMagick: optimizing $TOTAL files using $CORES cores..."
           printf '%s\n' "${FILES[@]}" | xargs -P "$CORES" -I {} bash -c '
             f="$1"
             TMP=$(mktemp --suffix=".png")
-            if magick "$f" -fuzz 5% -trim +repage -strip "$TMP" 2>&1; then
+            if "$MAGICK_BIN" "$f" -fuzz 5% -trim +repage -strip "$TMP" 2>&1; then
               mv "$TMP" "$f"
               echo "  ✓ $(basename "$f")"
             else
