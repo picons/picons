@@ -67,14 +67,15 @@ jobs:
           printf '%s\n' "${FILES[@]}" | xargs -P "$CORES" -I {} bash -c '
             f="$1"
             TMP=$(mktemp --suffix=".png")
-            if "$MAGICK_BIN" "$f" -fuzz 5% -trim +repage -strip "$TMP" 2>&1; then
+            if "$MAGICK_BIN" "$f" -fuzz 5% -trim +repage -strip "$TMP" 2>/dev/null; then
               mv "$TMP" "$f"
               echo "  ✓ $(basename "$f")"
             else
               rm -f "$TMP"
               echo "Warning: magick failed on $(basename "$f")" >&2
             fi
-          ' _ {}
+            exit 0
+          ' _ {} || true
           echo "Done."
 
       - name: Commit optimized files
