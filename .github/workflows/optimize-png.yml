@@ -24,8 +24,10 @@ jobs:
 
       - name: Install ImageMagick 7
         run: |
-          sudo wget -q https://download.imagemagick.org/ImageMagick/download/binaries/magick \
-            -O /usr/local/bin/magick
+          APPIMAGE_URL=$(curl -s https://api.github.com/repos/ImageMagick/ImageMagick/releases/latest \
+            | grep -o 'https://[^"]*gcc-x86_64.AppImage' | head -1)
+          echo "Downloading: $APPIMAGE_URL"
+          sudo curl -sL "$APPIMAGE_URL" -o /usr/local/bin/magick
           sudo chmod +x /usr/local/bin/magick
           magick --version
 
