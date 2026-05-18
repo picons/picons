@@ -22,10 +22,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install dependencies
+      - name: Install ImageMagick 7
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y imagemagick
+          sudo wget -q https://download.imagemagick.org/ImageMagick/download/binaries/magick \
+            -O /usr/local/bin/magick
+          sudo chmod +x /usr/local/bin/magick
+          magick --version
 
       - name: Determine PNG folder
         id: folder
