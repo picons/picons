@@ -1,0 +1,169 @@
+name: Optimize SVG
+
+on:
+  push:
+    paths:
+      - '**.svg'
+  workflow_dispatch:
+    inputs:
+      folder:
+        description: 'Folder containing SVG files (relative to the repo root)'
+        required: true
+        default: '.'
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y inkscape python3 scour
+
+      - name: Determine SVG folder
+        id: folder
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "dir=${{ github.event.inputs.folder }}" >> "$GITHUB_OUTPUT"
+          else
+            # On push, use the repo root
+            echo "dir=." >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Find SVG files
+        id: find
+        run: |
+          DIR="${{ steps.folder.outputs.dir }}"
+          mapfile -t FILES < <(find "$DIR" -maxdepth 1 -name "*.svg" | sort)
+          TOTAL=${#FILES[@]}
+          if [[ $TOTAL -eq 0 ]]; then
+            echo "No SVG files found in '$DIR'."
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "SVG files found: $TOTAL"
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Step 1 - Inkscape text-to-path and fit canvas
+        if: steps.find.outputs.found == 'true'
+        run: |
+          DIR="${{ steps.folder.outputs.dir }}"
+          mapfile -t FILES < <(find "$DIR" -maxdepth 1 -name "*.svg" | sort)
+          echo "Converting text to path and fitting canvas..."
+          for f in "${FILES[@]}"; do
+            echo "file-open:$f; select-all; export-text-to-path; export-area-drawing; export-plain-svg; export-filename:$f; export-do; file-close"
+          done | inkscape --shell 2>/dev/null
+          for f in "${FILES[@]}"; do
+            OUT="${f%.svg}_out.svg"
+            [[ -f "$OUT" ]] && mv "$OUT" "$f"
+          done
+          echo "Step 1 done."
+
+      - name: Step 2 - Inline CSS class styles
+        if: steps.find.outputs.found == 'true'
+        run: |
+          DIR="${{ steps.folder.outputs.dir }}"
+          mapfile -t FILES < <(find "$DIR" -maxdepth 1 -name "*.svg" | sort)
+          CORES=$(nproc)
+
+          INLINE_PY=$(mktemp --suffix=".py")
+          cat > "$INLINE_PY" << 'PYEOF'
+          import sys, re
+
+          path = sys.argv[1]
+          with open(path, "r", encoding="utf-8") as fh:
+              svg = fh.read()
+
+          class_fills = {}
+          for m in re.finditer(r"\.([\w-]+)\s*\{[^}]*?fill\s*:\s*([^;}/]+)", svg, re.DOTALL):
+              class_fills[m.group(1)] = m.group(2).strip()
+
+          if not class_fills:
+              sys.exit(0)
+
+          def replace_elem(m):
+              tag = m.group(0)
+              cls_match = re.search(r'class="([^"]+)"', tag)
+              if not cls_match:
+                  cls_match = re.search(r"class='([^']+)'", tag)
+              if not cls_match:
+                  return tag
+              classes = cls_match.group(1).split()
+              fill = None
+              for c in classes:
+                  if c in class_fills:
+                      fill = class_fills[c]
+                      break
+              if fill is None:
+                  return tag
+              tag = re.sub(r'\s*class="[^"]*"', "", tag)
+              tag = re.sub(r"\s*class='[^']*'", "", tag)
+              if re.search(r'\bfill=', tag):
+                  tag = re.sub(r'fill="[^"]*"', 'fill="' + fill + '"', tag)
+                  tag = re.sub(r"fill='[^']*'", 'fill="' + fill + '"', tag)
+              else:
+                  tag = tag.rstrip(">").rstrip("/").rstrip() + ' fill="' + fill + '"' + ("/>" if m.group(0).rstrip().endswith("/>") else ">")
+              return tag
+
+          svg = re.sub(r"<(?:path|rect|circle|ellipse|polygon|polyline|line|g)\b[^>]*>", replace_elem, svg)
+
+          if not re.search(r'class=', svg):
+              svg = re.sub(r"\s*<style[^>]*>.*?</style>", "", svg, flags=re.DOTALL)
+
+          with open(path, "w", encoding="utf-8") as fh:
+              fh.write(svg)
+          PYEOF
+
+          export INLINE_PY
+          inline_css_file() { python3 "$INLINE_PY" "$1"; }
+          export -f inline_css_file
+
+          echo "Inlining CSS styles in parallel ($CORES cores)..."
+          printf '%s\n' "${FILES[@]}" | xargs -P "$CORES" -I {} bash -c 'inline_css_file "$@"' _ {}
+          rm -f "$INLINE_PY"
+          echo "Step 2 done."
+
+      - name: Step 3 - Optimize with scour
+        if: steps.find.outputs.found == 'true'
+        run: |
+          DIR="${{ steps.folder.outputs.dir }}"
+          mapfile -t FILES < <(find "$DIR" -maxdepth 1 -name "*.svg" | sort)
+          CORES=$(nproc)
+          TOTAL=${#FILES[@]}
+
+          SCOUR_OPTS_STR="--set-precision=5 --strip-xml-prolog --remove-metadata --enable-comment-stripping --enable-viewboxing --indent=space --nindent=1 --enable-id-stripping --shorten-ids --renderer-workaround"
+          export SCOUR_OPTS_STR
+
+          echo "scour: optimizing $TOTAL files using $CORES cores..."
+          printf '%s\n' "${FILES[@]}" | xargs -P "$CORES" -I {} bash -c '
+            f="$1"
+            TMP=$(mktemp --suffix=".svg")
+            read -ra opts <<< "$SCOUR_OPTS_STR"
+            if scour "${opts[@]}" -i "$f" -o "$TMP" 2>/dev/null; then
+              mv "$TMP" "$f"
+            else
+              rm -f "$TMP"
+              echo "Warning: scour failed on $(basename "$f")" >&2
+            fi
+          ' _ {}
+          echo "Step 3 done."
+
+      - name: Commit optimized files
+        if: steps.find.outputs.found == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: optimize SVG files [skip ci]"
+            git push
+          fi
