@@ -9,7 +9,7 @@ on:
       folder:
         description: 'Folder containing SVG files (relative to the repo root)'
         required: true
-        default: '.'
+        default: 'build-source/logos'
 
 jobs:
   optimize:
