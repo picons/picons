@@ -1,0 +1,87 @@
+name: Optimize PNG
+
+on:
+  push:
+    paths:
+      - '**.png'
+  workflow_dispatch:
+    inputs:
+      folder:
+        description: 'Folder containing PNG files (relative to the repo root)'
+        required: true
+        default: 'build-source/logos'
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y imagemagick
+
+      - name: Determine PNG folder
+        id: folder
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "dir=${{ github.event.inputs.folder }}" >> "$GITHUB_OUTPUT"
+          else
+            # On push, use the repo root
+            echo "dir=." >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Find PNG files
+        id: find
+        run: |
+          DIR="${{ steps.folder.outputs.dir }}"
+          mapfile -t FILES < <(find "$DIR" -maxdepth 1 -name "*.png" | sort)
+          TOTAL=${#FILES[@]}
+          if [[ $TOTAL -eq 0 ]]; then
+            echo "No PNG files found in '$DIR'."
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "PNG files found: $TOTAL"
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Trim margins and strip metadata
+        if: steps.find.outputs.found == 'true'
+        run: |
+          DIR="${{ steps.folder.outputs.dir }}"
+          mapfile -t FILES < <(find "$DIR" -maxdepth 1 -name "*.png" | sort)
+          CORES=$(nproc)
+          TOTAL=${#FILES[@]}
+
+          echo "ImageMagick: optimizing $TOTAL files using $CORES cores..."
+          printf '%s\n' "${FILES[@]}" | xargs -P "$CORES" -I {} bash -c '
+            f="$1"
+            TMP=$(mktemp --suffix=".png")
+            if magick "$f" -fuzz 5% -trim +repage -strip "$TMP" 2>/dev/null; then
+              mv "$TMP" "$f"
+              echo "  ✓ $(basename "$f")"
+            else
+              rm -f "$TMP"
+              echo "Warning: magick failed on $(basename "$f")" >&2
+            fi
+          ' _ {}
+          echo "Done."
+
+      - name: Commit optimized files
+        if: steps.find.outputs.found == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: optimize PNG files [skip ci]"
+            git push
+          fi
