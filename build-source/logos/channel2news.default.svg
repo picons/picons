@@ -1,6 +1,6 @@
-<svg width="800" height="98.252" enable-background="new 0 -9.75 136.393 16.75" version="1.1" viewBox="0 -9.75 800 98.252" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-<rect y="-9.75" width="800" height="98.252" fill="#fff" stroke-width="5.8658" Googl="true"/>
-<g transform="matrix(5.8658 0 0 5.8658 -.052776 47.441)">
+<svg width="800" height="98.253" enable-background="new 0 -9.75 136.393 16.75" version="1.1" viewBox="0 -9.75 800 98.253" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<rect y="-9.7494" width="800" height="98.252" fill="#fff" stroke-width="5.8658" Googl="true"/>
+<g transform="matrix(5.8658 0 0 5.8658 -.052776 47.442)">
 	<linearGradient id="a" x1=".0088" x2="136.39" y1="-1.375" y2="-1.375" gradientUnits="userSpaceOnUse">
 		<stop stop-color="#A10103" offset="0"/>
 		<stop stop-color="#300" offset="1"/>

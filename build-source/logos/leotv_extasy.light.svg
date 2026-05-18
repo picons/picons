@@ -1,16 +1,16 @@
-<svg width="158.75mm" height="102.75mm" version="1.1" viewBox="0 0 158.75 102.75" xmlns="http://www.w3.org/2000/svg">
+<svg width="158.76mm" height="102.75mm" version="1.1" viewBox="0 0 158.76 102.75" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <linearGradient id="f" x2="1" gradientTransform="matrix(0 62.64 -62.64 0 -511.64 121.02)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="f" x2="1" gradientTransform="matrix(0,62.64,-62.64,0,-511.64,121.02)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#FFF" offset="0"/>
    <stop stop-color="#ed2023" offset=".68628"/>
    <stop stop-color="#ed2023" offset="1"/>
   </linearGradient>
-  <linearGradient id="e" x2="1" gradientTransform="matrix(0 62.642 -62.642 0 -336.88 121.02)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="e" x2="1" gradientTransform="matrix(0,62.642,-62.642,0,-336.88,121.02)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#FFF" offset="0"/>
    <stop stop-color="#ed2023" offset=".68628"/>
    <stop stop-color="#ed2023" offset="1"/>
   </linearGradient>
-  <linearGradient id="d" x2="1" gradientTransform="matrix(0 65.768 -65.768 0 -151.22 119.29)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="d" x2="1" gradientTransform="matrix(0,65.768,-65.768,0,-151.22,119.29)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#FFF" offset="0"/>
    <stop stop-color="#ed2023" offset=".68628"/>
    <stop stop-color="#ed2023" offset="1"/>

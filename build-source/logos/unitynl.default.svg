@@ -1,6 +1,6 @@
 <svg Googl="true" version="1.1" viewBox="0 0 800 338.1" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(352.68 149.05)">
-  <g transform="matrix(8.4526 0 0 8.4526 -352.52 -149.05)" opacity=".9965" data-name="Layer 2">
+  <g transform="matrix(8.4526,0,0,8.4526,-352.52,-149.05)" opacity=".9965" data-name="Layer 2">
    <g data-name="Layer 1">
     <g data-name="Kleur">
      <path d="m94.61 40h-86.29a10 10 0 0 1-4.08-1 7.53 7.53 0 0 1-4.24-7.31v-23.39a7.9 7.9 0 0 1 2.2-5.85 9.34 9.34 0 0 1 6.12-2.45h78a9.34 9.34 0 0 1 6.1 2.45 8 8 0 0 1 2.2 5.86zm-8.31-36.89h-78a6.81 6.81 0 0 0-2.76 0.72 4.53 4.53 0 0 0-2.41 4.47v23.39a4.53 4.53 0 0 0 2.51 4.5 7 7 0 0 0 2.69 0.69h83.16v-28.58a4.55 4.55 0 0 0-2.42-4.47 6.86 6.86 0 0 0-2.77-0.72z" fill="#f77e2a" data-name="Path 1"/>
@@ -13,7 +13,7 @@
     </g>
    </g>
   </g>
-  <g transform="matrix(9.5329 0 0 7.4947 -352.68 -149.05)" opacity=".9965" stroke="#000" stroke-width=".59801" aria-label="NL">
+  <g transform="matrix(9.5329,0,0,7.4947,-352.68,-149.05)" opacity=".9965" stroke="#000" stroke-width=".59801" aria-label="NL">
    <path d="m58.483 30.904v-14.371h1.9508l7.5484 11.283v-11.283h1.8234v14.371h-1.9508l-7.5484-11.293v11.293z"/>
    <path d="m72.658 30.904v-14.371h1.9018v12.675h7.7875v1.6959z"/>
   </g>

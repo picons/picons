@@ -1,10 +1,10 @@
 <svg Googl="true" version="1.1" viewBox="0 0 800 396.67" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
-  <polygon id="c" points="0.42823 53 0.42823 0.4982 25.472 0.4982 25.472 53"/>
-  <polygon id="b" points="0 1 0 54 206 54 206 1"/>
+  <polygon id="c" points="0.42823 0.4982 25.472 0.4982 25.472 53 0.42823 53"/>
+  <polygon id="b" points="0 54 206 54 206 1 0 1"/>
  </defs>
  <path d="m0 0h800v396.67h-800z" fill="#cf2639" stroke-opacity=".98824" stroke-width="36.942"/>
- <g transform="matrix(3.3333 0 0 3.3333 56.667 109.17)" fill="none" fill-rule="evenodd">
+ <g transform="matrix(3.3333,0,0,3.3333,56.667,109.17)" fill="none" fill-rule="evenodd">
   <g transform="translate(-34,-27)">
    <g transform="translate(17)">
     <g transform="translate(17,27)">

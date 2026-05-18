@@ -1,16 +1,16 @@
-<svg version="1.1" viewBox="0 0 1e3 285" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" viewBox="0 0 999.8 284.5" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <mask id="a" fill="#fff">
-   <path d="M0 0h999.8v284.5H0z"/>
+  <mask id="a" fill="#ffffff">
+   <path d="m0 0h999.8v284.5h-999.8z"/>
   </mask>
-  <mask id="b" fill="#fff">
-   <path d="M0 284.5h1000V0H0z"/>
+  <mask id="b" fill="#ffffff">
+   <path d="m0 284.5h1e3v-284.5h-1e3z"/>
   </mask>
-  <mask id="c" fill="#fff">
-   <path d="M0 284.5h1000V0H0z"/>
+  <mask id="c" fill="#ffffff">
+   <path d="m0 284.5h1e3v-284.5h-1e3z"/>
   </mask>
-  <mask id="d" fill="#fff">
-   <path d="M0 284.5h1000V0H0z"/>
+  <mask id="d" fill="#ffffff">
+   <path d="m0 284.5h1e3v-284.5h-1e3z"/>
   </mask>
   <mask id="e" fill="#ffffff">
    <path d="m0 284.5h1e3v-284.5h-1e3z"/>

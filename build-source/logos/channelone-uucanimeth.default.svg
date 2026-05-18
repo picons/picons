@@ -1,4 +1,4 @@
-<svg enable-background="new 0 0 637.795 172.828" Googl="true" version="1.1" viewBox="0 0 800 216.78" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<svg enable-background="new 0 0 637.795 172.828" Googl="true" version="1.1" viewBox="0 0 799.98 216.78" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
 
 <g transform="scale(1.2543)">
 	<g clip-rule="evenodd" fill-rule="evenodd">
@@ -14,7 +14,7 @@
 			<stop stop-color="#f00" offset="0"/>
 			<stop stop-color="#fff" offset="1"/>
 		</linearGradient>
-		<path d="m73.865 77.93c-13.948-2.884-23.957-10.765-23.957-20.034 0-11.713 15.981-22.401 35.697-22.401s35.696 10.688 35.696 22.401c0 9.111-9.671 16.88-23.247 19.882v-39.05c-10.692 7.304-21.385 14.608-32.077 21.912v2.541h7.888v14.749z" fill="url(#a)"/>
+		<path d="m73.865 77.93c-13.948-2.884-23.957-10.765-23.957-20.034 0-11.713 15.981-22.401 35.697-22.401s35.696 10.688 35.696 22.401c0 9.111-9.671 16.88-23.247 19.882v-39.05c-10.692 7.304-21.385 14.608-32.077 21.912v2.541h7.888z" fill="url(#a)"/>
 	</g>
 </g>
 </svg>

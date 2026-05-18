@@ -1,12 +1,12 @@
-<svg width="600" height="600.02" version="1.1" viewBox="0 0 158.75 158.7563" xmlns="http://www.w3.org/2000/svg">
+<svg width="600" height="600.03" version="1.1" viewBox="0 0 158.75 158.76" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <linearGradient id="a" x2="1" gradientTransform="matrix(139.53 0 0 139.53 28.364 205.29)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="a" x2="1" gradientTransform="matrix(139.53,0,0,139.53,28.364,205.29)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#b25625" offset="0"/>
    <stop stop-color="#f5b88b" offset=".58303"/>
    <stop stop-color="#b25625" offset="1"/>
   </linearGradient>
  </defs>
- <g transform="translate(-26.458 -69.456)">
+ <g transform="translate(-26.461 -69.452)">
   <path d="m28.363 226.31h154.94v-154.95h-154.94z" fill="#1f2748"/>
   <g fill="#fff">
    <path d="m157.25 89.239-7.6411 31.473h-0.14929l-7.6379-31.473h-63.078v31.448c-1.6064-4.0592-4.8372-6.37-8.2572-7.5475 3.9845-2.17 6.6024-5.0864 6.6024-10.489 0-5.4722-2.9984-13.412-17.088-13.412h-29.297v53.492h30.35c7.6369 0 15.079-3.6849 17.691-10.737v10.737h16.471v-20.375h15.057v-12.285h-15.096v-8.1005h23.191v40.76h15.584v-34.31h0.15455l9.279 34.31h12.291l9.2843-34.31h0.15769v34.31h15.585v-53.492zm-110.1 12.732h8.7387c3.3716 0 5.6246 0.97353 5.6246 3.6765 0 3.4452-2.1784 4.424-5.6246 4.424h-8.7387zm9.7059 28.024h-9.6617v-9.9593h10.338c3.9046 0 5.7781 1.7179 5.7781 4.8708 0 4.1191-2.9984 5.0884-6.4541 5.0884"/>

@@ -1,4 +1,4 @@
-<svg enable-background="new 0 0 650.793 250" version="1.1" viewBox="0 0 650.79 250" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg enable-background="new 0 0 650.793 250" version="1.1" viewBox="0 0 650.8 250" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
 
 	
@@ -10,7 +10,7 @@
 				<use width="100%" height="100%" overflow="visible" xlink:href="#t"/>
 			</clipPath>
 			
-				<linearGradient id="g" x1="-723.79" x2="-711.38" y1="6416.4" y2="6416.4" gradientTransform="matrix(39.464 0 0 -39.464 28708 253376)" gradientUnits="userSpaceOnUse">
+				<linearGradient id="g" x1="-723.79" x2="-711.38" y1="6416.4" y2="6416.4" gradientTransform="matrix(39.464,0,0,-39.464,28708,253376)" gradientUnits="userSpaceOnUse">
 				<stop stop-color="#E2011A" offset="0"/>
 				<stop stop-color="#9A151E" offset=".6667"/>
 				<stop stop-color="#9A151E" offset="1"/>
@@ -23,13 +23,13 @@
 		
 		
 			<defs>
-				<path id="f" d="m0 70.263v178.4h649.45v-178.4h-649.45zm634.22 18.071c-0.323 37.422-14.547 70.439-37.707 95.226-13.367 14.285-29.677 25.828-48.034 33.921-19.375 8.552-41.009 13.244-63.797 13.244l-338.77-0.16-1.502-0.012 1.316-11.196 13.119-110.63 2.594-21.857 472.79 0.111c1e-3 0.446 1e-3 0.905-0.012 1.35z"/>
+				<path id="f" d="m0 70.263v178.4h649.45v-178.4zm634.22 18.071c-0.323 37.422-14.547 70.439-37.707 95.226-13.367 14.285-29.677 25.828-48.034 33.921-19.375 8.552-41.009 13.244-63.797 13.244l-338.77-0.16-1.502-0.012 1.316-11.196 13.119-110.63 2.594-21.857 472.79 0.111c1e-3 0.446 1e-3 0.905-0.012 1.35z"/>
 			</defs>
 			<clipPath id="e">
 				<use width="100%" height="100%" overflow="visible" xlink:href="#f"/>
 			</clipPath>
 			
-				<radialGradient id="d" cx="-676.47" cy="6685.5" r="12.412" gradientTransform="matrix(13.427 0 0 -13.427 9325.5 89842)" gradientUnits="userSpaceOnUse">
+				<radialGradient id="d" cx="-676.47" cy="6685.5" r="12.412" gradientTransform="matrix(13.427,0,0,-13.427,9325.5,89842)" gradientUnits="userSpaceOnUse">
 				<stop stop-color="#89B9E0" offset="0"/>
 				<stop stop-color="#89B9E0" offset=".1009"/>
 				<stop stop-color="#012C52" offset="1"/>
@@ -38,27 +38,27 @@
 		
 		
 			<defs>
-				<polygon id="c" points="15.726 126.51 41.94 126.51 32.234 207.64 49.834 207.64 59.552 126.51 86.486 126.51 88.435 110.24 17.662 110.24"/>
+				<polygon id="c" points="41.94 126.51 32.234 207.64 49.834 207.64 59.552 126.51 86.486 126.51 88.435 110.24 17.662 110.24 15.726 126.51"/>
 			</defs>
 			<clipPath id="b">
 				<use width="100%" height="100%" overflow="visible" xlink:href="#c"/>
 			</clipPath>
 			
-				<linearGradient id="a" x1="-2512" x2="-2499.6" y1="6523.1" y2="6523.1" gradientTransform="matrix(0 3.0534 3.0534 0 -19866 7836.6)" gradientUnits="userSpaceOnUse">
+				<linearGradient id="ad" x1="-2512" x2="-2499.6" y1="6523.1" y2="6523.1" gradientTransform="matrix(0,3.0534,3.0534,0,-19866,7836.6)" gradientUnits="userSpaceOnUse">
 				<stop stop-color="#fff" offset="0"/>
 				<stop stop-color="#C6C7C8" offset="1"/>
 			</linearGradient>
-			<path d="m15.726 110.24h72.709v97.397h-72.709z" clip-path="url(#b)" fill="url(#a)"/>
+			<path d="m15.726 110.24h72.709v97.397h-72.709z" clip-path="url(#b)" fill="url(#ad)"/>
 		
 		
 			<defs>
-				<path id="ad" d="m71.964 164.94c0 21.274 12.275 43.988 46.743 43.988 8.862 0 21.001-1.291 25.73-2.867l5.945-49.698h-32.767l-1.825 15.429h15.167l-2.06 17.277c-4.853 1.44-7.894 1.862-12.375 1.862-14.807 0-26.35-8.701-26.35-26.698 0-22.292 17.116-37.286 41.394-37.286 7.522 0 13.839 1.005 21.969 3.575l2.073-17.997c-6.566-2.284-14.944-3.562-24.042-3.562-43.441-1e-3 -59.602 31.414-59.602 55.977"/>
+				<path id="a" d="m71.964 164.94c0 21.274 12.275 43.988 46.743 43.988 8.862 0 21.001-1.291 25.73-2.867l5.945-49.698h-32.767l-1.825 15.429h15.167l-2.06 17.277c-4.853 1.44-7.894 1.862-12.375 1.862-14.807 0-26.35-8.701-26.35-26.698 0-22.292 17.116-37.286 41.394-37.286 7.522 0 13.839 1.005 21.969 3.575l2.073-17.997c-6.566-2.284-14.944-3.562-24.042-3.562-43.441-1e-3 -59.602 31.414-59.602 55.977"/>
 			</defs>
 			<clipPath id="ac">
-				<use width="100%" height="100%" overflow="visible" xlink:href="#ad"/>
+				<use width="100%" height="100%" overflow="visible" xlink:href="#a"/>
 			</clipPath>
 			
-				<linearGradient id="ab" x1="-2512" x2="-2499.6" y1="6541.9" y2="6541.9" gradientTransform="matrix(0 3.0534 3.0534 0 -19861 7836.5)" gradientUnits="userSpaceOnUse">
+				<linearGradient id="ab" x1="-2512" x2="-2499.6" y1="6541.9" y2="6541.9" gradientTransform="matrix(0,3.0534,3.0534,0,-19861,7836.5)" gradientUnits="userSpaceOnUse">
 				<stop stop-color="#fff" offset="0"/>
 				<stop stop-color="#C6C7C8" offset="1"/>
 			</linearGradient>
@@ -72,7 +72,7 @@
 				<use width="100%" height="100%" overflow="visible" xlink:href="#aa"/>
 			</clipPath>
 			
-				<linearGradient id="y" x1="-2512" x2="-2499.6" y1="6564.2" y2="6564.2" gradientTransform="matrix(0 3.0534 3.0534 0 -19855 7836.5)" gradientUnits="userSpaceOnUse">
+				<linearGradient id="y" x1="-2512" x2="-2499.6" y1="6564.2" y2="6564.2" gradientTransform="matrix(0,3.0534,3.0534,0,-19855,7836.5)" gradientUnits="userSpaceOnUse">
 				<stop stop-color="#fff" offset="0"/>
 				<stop stop-color="#C6C7C8" offset="1"/>
 			</linearGradient>
@@ -86,7 +86,7 @@
 				<use width="100%" height="100%" overflow="visible" xlink:href="#x"/>
 			</clipPath>
 			
-				<linearGradient id="v" x1="-2512" x2="-2499.6" y1="6587.3" y2="6587.3" gradientTransform="matrix(0 3.0534 3.0534 0 -19849 7836.5)" gradientUnits="userSpaceOnUse">
+				<linearGradient id="v" x1="-2512" x2="-2499.6" y1="6587.3" y2="6587.3" gradientTransform="matrix(0,3.0534,3.0534,0,-19849,7836.5)" gradientUnits="userSpaceOnUse">
 				<stop stop-color="#fff" offset="0"/>
 				<stop stop-color="#C6C7C8" offset="1"/>
 			</linearGradient>
@@ -94,13 +94,13 @@
 		
 		
 			<defs>
-				<polygon id="u" points="343.05 110.24 323.74 110.24 296.81 207.64 314.52 207.64 333.22 139.94 333.46 139.94 348.02 207.64 356.4 207.64 387.1 141.81 387.35 141.81 389.9 207.64 406.89 207.64 403 110.24 384.31 110.24 356.4 171.51"/>
+				<polygon id="u" points="323.74 110.24 296.81 207.64 314.52 207.64 333.22 139.94 333.46 139.94 348.02 207.64 356.4 207.64 387.1 141.81 387.35 141.81 389.9 207.64 406.89 207.64 403 110.24 384.31 110.24 356.4 171.51 343.05 110.24"/>
 			</defs>
 			<clipPath id="s">
 				<use width="100%" height="100%" overflow="visible" xlink:href="#u"/>
 			</clipPath>
 			
-				<linearGradient id="r" x1="-2512" x2="-2499.6" y1="6613.9" y2="6613.9" gradientTransform="matrix(0 3.0534 3.0534 0 -19843 7836.6)" gradientUnits="userSpaceOnUse">
+				<linearGradient id="r" x1="-2512" x2="-2499.6" y1="6613.9" y2="6613.9" gradientTransform="matrix(0,3.0534,3.0534,0,-19843,7836.6)" gradientUnits="userSpaceOnUse">
 				<stop stop-color="#fff" offset="0"/>
 				<stop stop-color="#C6C7C8" offset="1"/>
 			</linearGradient>
@@ -114,7 +114,7 @@
 				<use width="100%" height="100%" overflow="visible" xlink:href="#q"/>
 			</clipPath>
 			
-				<linearGradient id="o" x1="-2398.6" x2="-2386.2" y1="6622.5" y2="6622.5" gradientTransform="matrix(0 3.2625 3.2625 0 -21146 7992.3)" gradientUnits="userSpaceOnUse">
+				<linearGradient id="o" x1="-2398.6" x2="-2386.2" y1="6622.5" y2="6622.5" gradientTransform="matrix(0,3.2625,3.2625,0,-21146,7992.3)" gradientUnits="userSpaceOnUse">
 				<stop stop-color="#fff" offset="0"/>
 				<stop stop-color="#C6C7C8" offset="1"/>
 			</linearGradient>
@@ -128,7 +128,7 @@
 				<use width="100%" height="100%" overflow="visible" xlink:href="#n"/>
 			</clipPath>
 			
-				<linearGradient id="l" x1="-2398.6" x2="-2386.2" y1="6645.6" y2="6645.6" gradientTransform="matrix(0 3.2625 3.2625 0 -21140 7992.3)" gradientUnits="userSpaceOnUse">
+				<linearGradient id="l" x1="-2398.6" x2="-2386.2" y1="6645.6" y2="6645.6" gradientTransform="matrix(0,3.2625,3.2625,0,-21140,7992.3)" gradientUnits="userSpaceOnUse">
 				<stop stop-color="#fff" offset="0"/>
 				<stop stop-color="#C6C7C8" offset="1"/>
 			</linearGradient>
@@ -143,7 +143,7 @@
 			<use width="100%" height="100%" overflow="visible" xlink:href="#k"/>
 		</clipPath>
 		
-			<radialGradient id="h" cx="-564.28" cy="7340.7" r="12.412" gradientTransform="matrix(5.1565 0 0 -5.1565 3167.3 37924)" gradientUnits="userSpaceOnUse">
+			<radialGradient id="h" cx="-564.28" cy="7340.7" r="12.412" gradientTransform="matrix(5.1565,0,0,-5.1565,3167.3,37924)" gradientUnits="userSpaceOnUse">
 			<stop stop-color="#89B9E0" offset="0"/>
 			<stop stop-color="#89B9E0" offset=".1009"/>
 			<stop stop-color="#012C52" offset="1"/>

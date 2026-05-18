@@ -1,22 +1,22 @@
-<svg width="610" height="271.81" version="1.1" viewBox="0 0 161.4 71.915" xmlns="http://www.w3.org/2000/svg">
+<svg width="609.98" height="271.8" version="1.1" viewBox="0 0 161.4 71.912" xmlns="http://www.w3.org/2000/svg">
  <defs>
   <clipPath id="a">
-   <path d="m666.14 0h666.16v907.09h-666.16v-907.09z"/>
+   <path d="m666.14 0h666.16v907.09h-666.16z"/>
   </clipPath>
   <clipPath id="b">
-   <path d="m666.14 0h666.16v907.09h-666.16v-907.09z"/>
+   <path d="m666.14 0h666.16v907.09h-666.16z"/>
   </clipPath>
   <clipPath id="e">
-   <path d="m666.14 0h666.16v907.09h-666.16v-907.09z"/>
+   <path d="m666.14 0h666.16v907.09h-666.16z"/>
   </clipPath>
   <clipPath id="d">
-   <path d="m1159.4 263.39h47.6v-19.04h-47.6v19.04z"/>
+   <path d="m1159.4 263.39h47.6v-19.04h-47.6z"/>
   </clipPath>
   <clipPath id="c">
-   <path d="m1161.8 261.19h42.7v-15.2h-42.7v15.2z"/>
+   <path d="m1161.8 261.19h42.7v-15.2h-42.7z"/>
   </clipPath>
  </defs>
- <g transform="translate(-31.809,-142.1)">
+ <g transform="translate(-31.809 -142.1)">
   <path d="m184.18 209.82h-104.39l-3e-3 -33.86h104.39v33.86z" fill="#18b400"/>
   <g transform="matrix(2.5647,0,0,-2.5647,-2902.5,843.28)">
    <g clip-path="url(#e)">

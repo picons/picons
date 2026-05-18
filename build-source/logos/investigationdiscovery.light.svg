@@ -1,22 +1,22 @@
-<svg version="1.1" viewBox="0 0 703.37 800" xmlns="http://www.w3.org/2000/svg">
- <radialGradient id="ac" cx="675.09" cy="-103.99" r="396.3" gradientTransform="matrix(.62684 .84368 -.64547 .48568 -173.71 -189.67)" gradientUnits="userSpaceOnUse">
+<svg version="1.1" viewBox="0 0 703.37 799.99" xmlns="http://www.w3.org/2000/svg">
+ <radialGradient id="a" cx="675.09" cy="-103.99" r="396.3" gradientTransform="matrix(.62684 .84368 -.64547 .48568 -173.71 -189.67)" gradientUnits="userSpaceOnUse">
   <stop stop-color="#242424" offset="0"/>
   <stop stop-color="#171717" offset=".233"/>
   <stop stop-color="#060606" offset=".625"/>
   <stop offset=".92"/>
  </radialGradient>
- <path d="m676.54 576.4-574.3 100.66-102.24-576.4 574.3-100.66z" fill="url(#ac)" stroke-width="1.0526"/>
+ <path d="M 676.54,576.4 102.24,677.06 0,100.66 574.3,0 Z" fill="url(#a)" stroke-width="1.0526"/>
  <path d="m415.87 413.94c1.0737 6.0337 4.8926 9.9674 12.257 8.68 4.921-0.86316 55.473-9.939 55.473-9.939 58.955-10.56 82.323-49.608 70.083-117.14-2.1495-11.862-4.859-22.38-8.9326-33.225-50.109 25.366-98.387 45.741-145.07 62.318 7.8 42.975 15.417 84.941 16.187 89.311z" fill="none" stroke-width="1.0526"/>
- <linearGradient id="ab" x1="657.63" x2="601.91" y1="-78.897" y2="-281.75" gradientTransform="matrix(1.0486 .091688 -.091688 1.0486 -353.13 367.98)" gradientUnits="userSpaceOnUse">
+ <linearGradient id="c" x1="657.63" x2="601.91" y1="-78.897" y2="-281.75" gradientTransform="matrix(1.0486 .091688 -.091688 1.0486 -353.13 367.98)" gradientUnits="userSpaceOnUse">
   <stop stop-color="#404040" offset="0"/>
   <stop stop-color="#141414" offset="1"/>
  </linearGradient>
- <path d="m7.1042 103.96s17.555 97.215 20.701 114.6c3.1463 17.389 30.223 161.33 36.424 179.38 160.42-19.804 336.59-50.674 543.82-169.84-3.5074-31.034-0.67474-28.611 0.44947-28.123 1.1253 0.48842-34.183-195.36-34.183-195.36l-1.8484 3.3389-560.93 98.721z" fill="url(#ab)" stroke-width="1.0526" Googl="true"/>
- <radialGradient id="aa" cx="400.35" cy="-305.93" r="281.12" gradientTransform="matrix(1.0486 .091688 -.091688 1.0486 -353.13 367.98)" gradientUnits="userSpaceOnUse">
+ <path d="m7.1042 103.96s17.555 97.215 20.701 114.6c3.1463 17.389 30.223 161.33 36.424 179.38 160.42-19.804 336.59-50.674 543.82-169.84-3.5074-31.034-0.67474-28.611 0.44947-28.123 1.1253 0.48842-34.183-195.36-34.183-195.36l-1.8484 3.3389-560.93 98.721z" fill="url(#c)" stroke-width="1.0526" Googl="true"/>
+ <radialGradient id="d" cx="400.35" cy="-305.93" r="281.12" gradientTransform="matrix(1.0486 .091688 -.091688 1.0486 -353.13 367.98)" gradientUnits="userSpaceOnUse">
   <stop stop-color="#8c8c8c" offset=".129"/>
   <stop stop-color="#030303" offset="1"/>
  </radialGradient>
- <path d="m11.629 106.69-11.629-6.0379 418.68-73.455 39.107 0.68421z" fill="url(#aa)" stroke-width="1.0526"/>
+ <path d="m11.629 106.69-11.629-6.0379 418.68-73.455 39.107 0.68421z" fill="url(#d)" stroke-width="1.0526"/>
  <radialGradient id="z" cx="326.33" cy="-280.17" r="256.96" gradientTransform="matrix(1.0486 .091688 -.091688 1.0486 -353.13 367.98)" gradientUnits="userSpaceOnUse">
   <stop stop-color="#595959" offset=".037"/>
   <stop stop-color="#6e6e6e" offset=".095"/>

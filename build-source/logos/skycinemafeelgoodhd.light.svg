@@ -1,4 +1,4 @@
-<svg width="200mm" height="52.226mm" version="1.1" viewBox="0 0 200 52.226" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="200mm" height="52.225mm" version="1.1" viewBox="0 0 200 52.225" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <linearGradient id="c" x1="-8600.5" x2="-8600.5" y1="-4687.6" y2="-4591.4" gradientTransform="matrix(-2.9812,0,0,-2.9812,-24493,-13655)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#a80000" offset="0"/>
@@ -7,7 +7,7 @@
   </linearGradient>
   <linearGradient id="b" x1="-8600.5" x2="-8600.5" y1="-4687.6" y2="-4591.4" gradientTransform="matrix(-.25724 0 0 -.25724 -2817.3 -864.67)" gradientUnits="userSpaceOnUse" xlink:href="#c"/>
  </defs>
- <g transform="translate(703.85 -313.6)">
+ <g transform="translate(703.85 -313.59)">
   <path d="m-649.98 313.6h107.69v32.366h-107.69z" fill="url(#b)" stroke-width=".25724"/>
   <path d="m-649.98 345.96h-51.704c-1.1867 0-2.1577-0.971-2.1577-2.1577v-28.077c0-1.1328 0.94399-2.1307 2.1307-2.1307h51.732z" fill="#fff" stroke-width=".26971"/>
   <path d="m-626.38 316.62c0.52299-0.15469 1.1288-0.0395 1.534 0.33399 0.57995 0.50746 0.69646 1.4544 0.25243 2.0855-0.32881 0.51263-0.97284 0.80066-1.5728 0.68998-0.75148-0.11715-1.3787-0.82397-1.3502-1.5936-0.0123-0.68481 0.47898-1.3308 1.1366-1.5159z" fill="#fff" stroke-width=".064727"/>

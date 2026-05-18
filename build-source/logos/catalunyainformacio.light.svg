@@ -1,4 +1,4 @@
-<svg enable-background="new 0 0 278.795 218.611" version="1.1" viewBox="0 0 800 628.17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg enable-background="new 0 0 278.795 218.611" version="1.1" viewBox="0 0 800 628.18" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <rect x="523.9" y="380.04" width="433.05" height="140.02" display="none" fill="#9c6"/>
 <path d="m525.04 449.2c0-37.517 30.412-67.929 67.928-67.929s67.927 30.412 67.927 67.929-30.411 67.932-67.927 67.932c-37.516-1e-3 -67.928-30.416-67.928-67.932z" display="none" fill="#fff"/>
 <g transform="scale(2.8763)">
@@ -24,7 +24,7 @@
 
 
 	
-		<linearGradient id="a" x1="62.5" x2="198.36" y1="793.71" y2="793.71" gradientTransform="translate(8.5601 -725.78)" gradientUnits="userSpaceOnUse">
+		<linearGradient id="a" x1="62.5" x2="198.36" y1="793.71" y2="793.71" gradientTransform="translate(8.5601,-725.78)" gradientUnits="userSpaceOnUse">
 		<stop stop-color="#C6362E" offset="0"/>
 		<stop stop-color="#DB8F1B" offset="1"/>
 	</linearGradient>
@@ -34,7 +34,7 @@
 		
 			
 				<defs>
-					<polygon id="g" points="142.46 110.3 142.46 135.79 189.34 135.79 189.34 110.3 182.75 110.3 182.75 45.463 144.34 45.463 144.34 70.016 150.01 70.016 150.01 110.3"/>
+					<polygon id="g" points="189.34 110.3 182.75 110.3 182.75 45.463 144.34 45.463 144.34 70.016 150.01 70.016 150.01 110.3 142.46 110.3 142.46 135.79 189.34 135.79"/>
 				</defs>
 				<clipPath id="f">
 					<use overflow="visible" xlink:href="#g"/>

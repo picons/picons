@@ -1,11 +1,9 @@
 <svg version="1.1" viewBox="0 0 1207.4 801.67" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
-  <clipPath id="g">
+  <clipPath>
    <path d="m260 220h8v9h-8z"/>
   </clipPath>
-  <clipPath>
-   <path d="m260.3 222.37 4.8203 2.4062-4.8203 2.4102c0.34375 0.70312 0.83204 1.3203 1.4219 1.8125l5.7266-3.0742 0.0117-0.0156 0.043-0.0312v-2.1992l-0.043-0.0352-0.0117-0.0117-5.7266-3.0742c-0.59375 0.49219-1.0781 1.1094-1.4219 1.8125"/>
-  </clipPath>
+  
   <clipPath id="e">
    <path d="m259 219h12v12h-12z"/>
   </clipPath>
@@ -51,18 +49,11 @@
   </linearGradient>
   <linearGradient id="b" x1="-.1554" x2="1.1554" gradientTransform="matrix(4.2969,-10.123,-10.123,-4.2969,263.09,229.84)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
  </defs>
- <style type="text/css">
-  .st0{fill:#222D34;}
-  .st1{fill:url(#h);}
- </style>
  <g transform="translate(244.26 .60044)">
   <g transform="translate(138.16,182.03)">
    <g transform="matrix(4.3815,0,0,4.3815,-51.922,-182.03)">
-    <linearGradient id="h" x1="93.629" x2="31.205" y1="208.02" y2="99.894" gradientTransform="matrix(1,0,0,-1,0,216.36)" gradientUnits="userSpaceOnUse">
-     <stop stop-color="#ED3124" offset="0"/>
-     <stop stop-color="#D60B8B" offset="1"/>
-    </linearGradient>
-    <g transform="matrix(11.357,0,0,11.357,-2950,-2490.5)" clip-path="url(#g)"/>
+    
+    
     <g transform="matrix(11.357,0,0,11.357,-2950,-2490.5)" clip-path="url(#e)">
      <g transform="translate(2.6067e-4)" clip-path="url(#d)" fill="url(#b)">
       <path d="m269.06 234.23" fill="url(#b)"/>

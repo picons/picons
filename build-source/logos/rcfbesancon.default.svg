@@ -1,11 +1,11 @@
-<svg width="600" height="415.24" version="1.1" viewBox="0 0 158.75 109.87" xmlns="http://www.w3.org/2000/svg">
+<svg width="599.98" height="415.22" version="1.1" viewBox="0 0 158.74 109.87" xmlns="http://www.w3.org/2000/svg">
  <defs>
   <linearGradient id="a" x2="1" gradientTransform="matrix(53.654,-41.469,-41.469,-53.654,44.044,196.4)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#bf2329" offset="0"/>
    <stop stop-color="#ee2722" offset="1"/>
   </linearGradient>
  </defs>
- <g transform="translate(-20.411 -120.39)">
+ <g transform="translate(-20.414 -120.39)">
   <path d="m138.68 221.28v1.6796h36.542v-1.6796z" color="#000000" color-rendering="auto" dominant-baseline="auto" fill="#ec732b" image-rendering="auto" shape-rendering="auto" solid-color="#000000" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;isolation:auto;mix-blend-mode:normal;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
   <path d="m24.351 221.28v1.6796h36.539v-1.6796z" color="#000000" color-rendering="auto" dominant-baseline="auto" fill="#ec732b" image-rendering="auto" shape-rendering="auto" solid-color="#000000" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;isolation:auto;mix-blend-mode:normal;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
   <g fill="#ec732b" stroke-width=".46212px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="Besançon">
@@ -18,7 +18,7 @@
    <path d="m116.63 221.76q0-1.5712 1.1091-2.7173 1.1276-1.1461 2.6803-1.1461t2.6618 1.1461q1.1276 1.1461 1.1276 2.7173 0 1.5897-1.1091 2.7542-1.1091 1.1461-2.6803 1.1461t-2.6803-1.1461q-1.1091-1.1645-1.1091-2.7542zm2.0148 0q0 0.79485 0.51758 1.3494 0.51757 0.55455 1.257 0.55455 0.73939 0 1.257-0.55455 0.51757-0.55454 0.51757-1.3494 0-0.77636-0.51757-1.3124-0.51758-0.55455-1.257-0.55455-0.7394 0-1.257 0.55455-0.51758 0.53606-0.51758 1.3124z"/>
    <path d="m125.87 225.12v-6.6915q0-0.14788 0.0924-0.24031 0.11091-0.11091 0.25879-0.11091h0.70242q0.22182 0 0.31424 0.22182l0.25879 0.68394q1.0167-1.0906 2.6064-1.0906 1.6636 0 2.477 1.0536 0.81333 1.0536 0.81333 2.6248v3.5491q0 0.1294-0.11091 0.24031-0.0924 0.1109-0.2403 0.1109h-1.5158q-0.14788 0-0.25879-0.0924-0.0924-0.11091-0.0924-0.25879v-3.66q0-0.72091-0.3697-1.1461-0.35121-0.42515-1.0167-0.42515-0.66545 0-1.1276 0.3697-0.44364 0.35121-0.61 0.79485v4.0667q0 0.35121-0.46212 0.35121h-1.3679q-0.1294 0-0.2403-0.1109-0.11091-0.11091-0.11091-0.24031z"/>
   </g>
-  <rect x="24.306" y="124.28" width="150.96" height="75.479" fill="#d22526" stroke-width="5.006"/>
+  <path d="m24.306 124.28h150.96v75.479h-150.96z" fill="#d22526" stroke-width="5.006"/>
   <path d="m108.84 196.47c-3.031 1.2138-6.0774 2.3072-9.1379 3.2942h43.86c-1.169-7.3724-1.7332-14.755-1.708-22.085-9.8602 7.5713-20.906 13.939-33.014 18.791" fill="#f471a8"/>
   <path d="m99.705 199.76c3.0604-0.987 6.1083-2.0818 9.1379-3.2957 12.109-4.8524 23.153-11.22 33.012-18.79 0.0644-18.487 3.8444-36.627 10.891-53.394h-128.44v75.479z" fill="url(#a)"/>
   <path d="m141.86 177.68c-0.0251 7.329 0.53901 14.713 1.708 22.085h31.702v-59.104c-8.7011 14.073-19.94 26.676-33.41 37.019" fill="#f9a72b"/>

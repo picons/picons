@@ -1,7 +1,7 @@
 <svg enable-background="new 0 0 1758.1 500" version="1.1" viewBox="0 0 1757.7 500" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g transform="scale(.9998)">
 	
-		<linearGradient id="f" x1="1045.9" x2="1117.4" y1="135.45" y2="135.45" gradientTransform="matrix(13.403 0 0 -13.403 -13219 2065.4)" gradientUnits="userSpaceOnUse">
+		<linearGradient id="f" x1="1045.9" x2="1117.4" y1="135.45" y2="135.45" gradientTransform="matrix(13.403,0,0,-13.403,-13219,2065.4)" gradientUnits="userSpaceOnUse">
 		<stop stop-color="#0186E0" offset="0"/>
 		<stop stop-color="#54DCF7" offset="1"/>
 	</linearGradient>
@@ -14,15 +14,15 @@
 			<use width="100%" height="100%" overflow="visible" xlink:href="#e"/>
 		</clipPath>
 		
-			<linearGradient id="c" x1="1108.9" x2="1180.5" y1="-14.198" y2="-14.198" gradientTransform="matrix(0 6.1786 6.1786 0 449.61 -6822.8)" gradientUnits="userSpaceOnUse">
+			<linearGradient id="c" x1="1108.9" x2="1180.5" y1="-14.198" y2="-14.198" gradientTransform="matrix(0,6.1786,6.1786,0,449.61,-6822.8)" gradientUnits="userSpaceOnUse">
 			<stop stop-color="#0398F0" offset="0"/>
 			<stop stop-color="#0398F0" offset=".4"/>
 			<stop stop-color="#0186E0" offset="1"/>
 		</linearGradient>
-		<rect y="28.8" width="723.8" height="442.9" clip-path="url(#d)" fill="url(#c)"/>
+		<path d="m0 28.8h723.8v442.9h-723.8z" clip-path="url(#d)" fill="url(#c)"/>
 	
 	
-		<linearGradient id="a" x1="365.37" x2="359.52" y1="1742" y2="1574.5" gradientTransform="translate(0 -1478.8)" gradientUnits="userSpaceOnUse">
+		<linearGradient id="a" x1="365.37" x2="359.52" y1="1742" y2="1574.5" gradientTransform="translate(0,-1478.8)" gradientUnits="userSpaceOnUse">
 		<stop stop-color="#fff" offset="0"/>
 		<stop stop-color="#fff" stop-opacity=".25" offset="1"/>
 	</linearGradient>
@@ -33,7 +33,7 @@
 		<path d="m1427.9 252.8c0-70.2 51.5-122.2 120.8-122.2 69.7 0 121.2 52 121.2 122.2 0 69.7-51.5 122.7-121.2 122.7-69.3-0.1-120.8-53-120.8-122.7m201.2 0c0-54-36.3-86.9-80.5-86.9-43.7 0-80 32.9-80 86.9 0 53.5 36.3 87.3 80 87.3 44.2 0 80.5-33.9 80.5-87.3"/>
 	</g>
 	
-		<linearGradient id="b" x1="1281.5" x2="1272.8" y1="-960.27" y2="-711.22" gradientTransform="matrix(1 0 0 -1 0 -720.33)" gradientUnits="userSpaceOnUse">
+		<linearGradient id="b" x1="1281.5" x2="1272.8" y1="-960.27" y2="-711.22" gradientTransform="matrix(1,0,0,-1,0,-720.33)" gradientUnits="userSpaceOnUse">
 		<stop stop-color="#fff" offset="0"/>
 		<stop stop-color="#fff" stop-opacity=".8347" offset=".1203"/>
 		<stop stop-color="#fff" stop-opacity=".6576" offset=".2693"/>

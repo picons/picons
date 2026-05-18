@@ -1,11 +1,11 @@
-<svg width="600" height="418.83" version="1.1" viewBox="0 0 158.75 110.82" xmlns="http://www.w3.org/2000/svg">
+<svg width="599.98" height="418.82" version="1.1" viewBox="0 0 158.74 110.82" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <linearGradient id="a" x2="1" gradientTransform="matrix(53.654 -41.469 -41.469 -53.654 44.044 196.4)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="a" x2="1" gradientTransform="matrix(53.654,-41.469,-41.469,-53.654,44.044,196.4)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#bf2329" offset="0"/>
    <stop stop-color="#ee2722" offset="1"/>
   </linearGradient>
  </defs>
- <g transform="translate(-20.411 -120.39)">
+ <g transform="translate(-20.414 -120.39)">
   <g fill="#ec732b">
    <path d="m128.22 221.28v1.6796h47.002v-1.6796z" color="#000000" color-rendering="auto" dominant-baseline="auto" image-rendering="auto" shape-rendering="auto" solid-color="#000000" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;isolation:auto;mix-blend-mode:normal;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
    <path d="m24.351 221.28v1.6796h47v-1.6796z" color="#000000" color-rendering="auto" dominant-baseline="auto" image-rendering="auto" shape-rendering="auto" solid-color="#000000" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;isolation:auto;mix-blend-mode:normal;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
@@ -17,7 +17,7 @@
     <path d="m115.72 222.02v-3.5861q0-0.14788 0.0924-0.2403 0.11091-0.11091 0.25879-0.11091h1.5158q0.14787 0 0.2403 0.11091 0.11091 0.0924 0.11091 0.2403v3.6415q0 0.7394 0.35121 1.1646 0.3697 0.42515 0.99819 0.42515 0.55455 0 0.96122-0.42515 0.42515-0.42515 0.51758-0.96122v-3.8449q0-0.20333 0.0924-0.27727 0.0924-0.0739 0.31425-0.0739h1.4048q0.14788 0 0.24031 0.11091 0.11091 0.0924 0.11091 0.2403v6.6916q0 0.1294-0.11091 0.24031-0.0924 0.11091-0.24031 0.11091h-0.68394q-0.24031 0-0.35122-0.27728l-0.22181-0.61q-0.0185 0.0185-0.14788 0.1294-0.11091 0.11091-0.18485 0.16636-0.0555 0.0555-0.22182 0.16637-0.14788 0.1109-0.27728 0.18484-0.11091 0.0739-0.31424 0.16637-0.18485 0.0924-0.38819 0.12939-0.18485 0.0555-0.44363 0.0924-0.24031 0.037-0.4991 0.037-1.6082 0-2.3661-1.0352-0.75789-1.0352-0.75789-2.6064z"/>
    </g>
   </g>
-  <rect x="24.306" y="124.28" width="150.96" height="75.479" fill="#d22526" stroke-width="5.006"/>
+  <path d="m24.306 124.28h150.96v75.479h-150.96z" fill="#d22526" stroke-width="5.006"/>
   <path d="m108.84 196.47c-3.031 1.2138-6.0774 2.3072-9.1379 3.2942h43.86c-1.169-7.3724-1.7332-14.755-1.708-22.085-9.8602 7.5713-20.906 13.939-33.014 18.791" fill="#f471a8"/>
   <path d="m99.705 199.76c3.0604-0.987 6.1083-2.0818 9.1379-3.2957 12.109-4.8524 23.153-11.22 33.012-18.79 0.0644-18.487 3.8444-36.627 10.891-53.394h-128.44v75.479z" fill="url(#a)"/>
   <path d="m141.86 177.68c-0.0251 7.329 0.53901 14.713 1.708 22.085h31.702v-59.104c-8.7011 14.073-19.94 26.676-33.41 37.019" fill="#f9a72b"/>

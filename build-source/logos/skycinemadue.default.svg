@@ -1,22 +1,22 @@
-<svg data-name="Livello 1" version="1.1" viewBox="0 0 3311.2 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg data-name="Livello 1" version="1.1" viewBox="0 0 3311.1 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
-  <linearGradient id="e" x1="2273.7" x2="2345.2" y1="-2081.9" y2="-2081.9" gradientTransform="matrix(23.2 0 0 -23.2 -51942 -48042)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="e" x1="2273.7" x2="2345.2" y1="-2081.9" y2="-2081.9" gradientTransform="matrix(23.2,0,0,-23.2,-51942,-48042)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#ff0031" offset="0"/>
    <stop stop-color="#cc0029" offset=".64"/>
    <stop stop-color="#b40026" offset="1"/>
   </linearGradient>
-  <linearGradient id="d" x1="2273.7" x2="2345.2" y1="-2077" y2="-2077" gradientTransform="matrix(23.2 0 0 -23.2 -51942 -48042)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="d" x1="2273.7" x2="2345.2" y1="-2077" y2="-2077" gradientTransform="matrix(23.2,0,0,-23.2,-51942,-48042)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#ff0031" offset="0"/>
    <stop stop-color="#d6002a" offset=".57"/>
    <stop stop-color="#bc0026" offset="1"/>
   </linearGradient>
-  <linearGradient id="a" x1="2201.8" x2="2206.2" y1="-1475.3" y2="-1475.3" gradientTransform="matrix(-1.96 -56.03 -56.03 1.96 -76715 126471)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="a" x1="2201.8" x2="2206.2" y1="-1475.3" y2="-1475.3" gradientTransform="matrix(-1.96,-56.03,-56.03,1.96,-76715,126471)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#fff" offset="0"/>
    <stop stop-color="#fff" stop-opacity=".4" offset=".5"/>
    <stop stop-color="#fff" stop-opacity=".25" offset="1"/>
   </linearGradient>
-  <linearGradient id="c" x1="2161.3" x2="2165.7" y1="-1439.1" y2="-1439.1" gradientTransform="matrix(-1.32 -37.68 -37.68 1.32 -51012 83588)" xlink:href="#a"/>
-  <linearGradient id="b" x1="2201.8" x2="2206.2" y1="-1475.3" y2="-1475.3" gradientTransform="matrix(-1.96 -56.03 -56.03 1.96 -76715 126471)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="c" x1="2161.3" x2="2165.7" y1="-1439.1" y2="-1439.1" gradientTransform="matrix(-1.32,-37.68,-37.68,1.32,-51012,83588)" xlink:href="#a"/>
+  <linearGradient id="b" x1="2201.8" x2="2206.2" y1="-1475.3" y2="-1475.3" gradientTransform="matrix(-1.96,-56.03,-56.03,1.96,-76715,126471)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
  </defs>
  <path d="m3277.8 9.6169e-5h-863.91a33.32 33.32 0 0 0-33.31 33.31v433.37a33.32 33.32 0 0 0 33.31 33.32h863.91a33.32 33.32 0 0 0 33.31-33.31v-433.38a33.32 33.32 0 0 0-33.31-33.31m0 10a23.36 23.36 0 0 1 23.32 23.33v433.35a23.36 23.36 0 0 1-23.32 23.32h-863.91a23.32 23.32 0 0 1-23.28-23.32v-433.37a23.32 23.32 0 0 1 23.28-23.31h863.91" fill="#b40026"/>
  <path d="m3277.8 10a23.36 23.36 0 0 1 23.32 23.33v433.35a23.36 23.36 0 0 1-23.32 23.32h-863.91a23.32 23.32 0 0 1-23.28-23.32v-433.37a23.32 23.32 0 0 1 23.28-23.31h863.91" fill="#fff"/>

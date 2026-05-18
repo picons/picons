@@ -1,4 +1,4 @@
-<svg width="600" height="370.98" version="1.1" viewBox="0 0 158.75 98.155" xmlns="http://www.w3.org/2000/svg">
+<svg width="600.01" height="370.98" version="1.1" viewBox="0 0 158.75 98.155" xmlns="http://www.w3.org/2000/svg">
  <defs>
   <linearGradient id="a" x2="1" gradientTransform="matrix(0,98.152,-98.152,0,90.195,-171.55)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#84001a" offset="0"/>
@@ -6,8 +6,8 @@
    <stop stop-color="#e3000a" offset="1"/>
   </linearGradient>
  </defs>
- <g transform="translate(-.00049204)">
-  <g transform="translate(-41.754 171.55)">
+ <g transform="translate(-1e-4 -6.3953e-5)">
+  <g transform="translate(-41.754,171.55)">
    <path d="m66.695-171.55 47.005 98.155v-98.153z" fill="url(#a)"/>
    <g fill="#fff">
     <path d="m57.131-141.08v19.544h-8.1807v-19.544h-7.1962v-6.2576h22.581v6.2576z"/>

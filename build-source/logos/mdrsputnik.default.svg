@@ -1,8 +1,8 @@
-<svg version="1.1" viewBox="0 0 856.42 800" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" viewBox="0 0 856.46 800.03" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
 <g transform="scale(10.076)">
-	<rect width="85" height="79.4" fill="none"/>
-</g>
-<g transform="scale(10.076)">
+	<path d="m0 0h85v79.4h-85z" fill="none"/>
+
+
 	
 		<path d="m66.6 13.5-3-12.8-9 2.1c-3.6-1.8-7.7-2.8-12.1-2.8-4.3 0-8.4 1-12.1 2.7l-8.9-2.1-2.9 12.6c-2.8 4.4-4.4 9.5-4.4 15.1 0 15.6 12.7 28.3 28.3 28.3s28.3-12.7 28.3-28.3c0-5.4-1.5-10.5-4.2-14.8z" fill="#f04e4c"/><g fill="#fff">
 		<path d="m57.8 21c0.1-0.4 0.2-0.9 0.2-1.4 0-2.3-1.9-4.2-4.2-4.2s-4.2 1.9-4.2 4.2c0 0.8 0.2 1.6 0.7 2.3z"/>

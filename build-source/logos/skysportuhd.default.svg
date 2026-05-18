@@ -13,7 +13,7 @@
 			<stop stop-color="#f00" offset=".4"/>
 			<stop stop-color="#D42321" offset="1"/>
 		</linearGradient>
-		<path d="m832.1 0h1249.2c18.4 0 33.3 14.9 33.3 33.3v433.4c0 18.4-14.9 33.3-33.3 33.3h-1249.2c-18.4 0-33.3-14.9-33.3-33.3v-433.4c0-18.4 14.9-33.3 33.3-33.3z" fill="url(#d)"/>
+		<path d="m832.1 3e-8h1249.2c18.4 0 33.3 14.9 33.3 33.3v433.4c0 18.4-14.9 33.3-33.3 33.3h-1249.2c-18.4 0-33.3-14.9-33.3-33.3v-433.4c0-18.4 14.9-33.3 33.3-33.3z" fill="url(#d)"/>
 		
 			<linearGradient id="b" x1="1459.5" x2="1450.8" y1="431.73" y2="182.67" gradientTransform="translate(0,-198)" gradientUnits="userSpaceOnUse">
 			<stop stop-color="#fff" offset="0"/>

@@ -1,6 +1,6 @@
 <svg enable-background="new 0 0 500 500" version="1.1" viewBox="0 0 500 500" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
 
-<g>
+
 	<linearGradient id="a" x1="250" x2="250" y2="500" gradientUnits="userSpaceOnUse">
 		<stop stop-color="#dee9f7" offset="0"/>
 		<stop stop-color="#4b89d2" offset="1"/>
@@ -11,4 +11,4 @@
 	
 	
 	
-</g></svg>
+</svg>

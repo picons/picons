@@ -1,11 +1,11 @@
 <svg data-name="Livello 1" version="1.1" viewBox="0 0 1429.5 147" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
-  <linearGradient id="e" x1="1895.3" x2="1966.9" y1="-2153.5" y2="-2153.5" gradientTransform="matrix(6.8208 0 0 -6.8206 -12691 -14613)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="e" x1="1895.3" x2="1966.9" y1="-2153.5" y2="-2153.5" gradientTransform="matrix(6.8208,0,0,-6.8206,-12691,-14613)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#ff0031" offset="0"/>
    <stop stop-color="#cc0029" offset=".64"/>
    <stop stop-color="#b40026" offset="1"/>
   </linearGradient>
-  <linearGradient id="d" x1="1895.3" x2="1966.9" y1="-2148.6" y2="-2148.6" gradientTransform="matrix(6.8208 0 0 -6.8206 -12691 -14613)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="d" x1="1895.3" x2="1966.9" y1="-2148.6" y2="-2148.6" gradientTransform="matrix(6.8208,0,0,-6.8206,-12691,-14613)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#ff0031" offset="0"/>
    <stop stop-color="#d6002a" offset=".57"/>
    <stop stop-color="#bc0026" offset="1"/>
@@ -18,7 +18,7 @@
   <linearGradient id="c" x1="1763.7" x2="1768.2" y1="-1518.2" y2="-1518.2" gradientTransform="matrix(-.38808 -11.078 -11.078 .38807 -16028 20202)" xlink:href="#a"/>
   <linearGradient id="b" x1="1805" x2="1809.4" y1="-1551" y2="-1551" gradientTransform="matrix(-.57624 -16.473 -16.473 .57623 -24030 30688)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
  </defs>
- <g>
+ <g transform="translate(.002)">
   <path d="m1417.7 0.0012h-705.14c-6.9909 0.0080665-12.652 4.3964-12.647 9.8047v127.4c-1e-5 5.4056 5.66 9.7894 12.647 9.7959h705.14c6.9829-6e-3 11.794-4.3848 11.8-9.7869v-127.41c0-5.4083-4.8092-9.7967-11.8-9.8049m0 2.9399c4.8957 0.00161 8.8639 3.0714 8.866 6.8588v127.4c0 3.7862-3.9718 6.8544-8.866 6.856h-705.14c-4.8816-3e-3 -8.8374-3.0647-8.8394-6.8412v-127.41c-0.0147-3.7857 3.9459-6.8615 8.8394-6.8647h705.14" fill="#b40026" stroke-width=".33426"/>
   <path d="m1417.7 2.9411c4.8957 0.00161 8.864 3.0714 8.8661 6.8588l-1e-4 127.4c0 3.7862-3.9718 6.8543-8.866 6.8559h-705.14c-4.8816-3e-3 -8.8374-3.0647-8.8394-6.8412v-127.41c-0.0147-3.7857 3.9459-6.8615 8.8394-6.8647h705.14" fill="#fff" stroke-width=".33426"/>
   <path d="m713.14 0.0012h-468.57a9.7873 9.7871 0 0 0-9.8079 9.7959v127.41a9.799 9.7988 0 0 0 9.8079 9.7959h468.57a9.8108 9.8106 0 0 0 9.8108-9.7959v-127.41a9.7961 9.7959 0 0 0-9.8108-9.7959z" fill="url(#e)" stroke-width=".294"/>

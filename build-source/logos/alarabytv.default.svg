@@ -1,6 +1,6 @@
-<svg version="1.1" viewBox="0 0 800 800.01" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" viewBox="0 0 799.99 800.01" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <linearGradient id="a" x1="133.72" x2="129.02" y1="28.489" y2="29.773" gradientTransform="scale(.65141 1.5351)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="ab" x1="133.72" x2="129.02" y1="28.489" y2="29.773" gradientTransform="scale(.65141 1.5351)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#1B1B1B" offset=".14"/>
    <stop stop-color="#5B5B5B" offset=".44"/>
    <stop stop-color="#8B8B8B" offset=".69"/>
@@ -51,7 +51,7 @@
    <stop stop-color="#A9A9A9" offset=".89"/>
    <stop stop-color="#B4B4B4" offset="1"/>
   </linearGradient>
-  <linearGradient id="ab" x1="126.42" x2="122.81" y1="96.672" y2="114.67" gradientTransform="scale(.96376 1.0376)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="a" x1="126.42" x2="122.81" y1="96.672" y2="114.67" gradientTransform="scale(.96376 1.0376)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#1B1B1B" offset=".14"/>
    <stop stop-color="#5B5B5B" offset=".44"/>
    <stop stop-color="#8B8B8B" offset=".69"/>
@@ -184,10 +184,10 @@
    <stop stop-color="#E3E3E2" offset="1"/>
   </linearGradient>
  </defs>
- <g transform="matrix(4.6921 0 0 4.6921 -3.521 -3.5191)" fill="none" fill-rule="evenodd">
+ <g transform="matrix(4.6921 0 0 4.6921 -3.5229 -3.5153)" fill="none" fill-rule="evenodd">
   <g transform="translate(-30,-30)">
    <g transform="translate(31,31)" fill-rule="nonzero">
-    <path d="m75.378 45.616 21.834 42.7 7.0963-16.846-14.303-37.488-21.265-32.565-1.3056 8.0296z" fill="url(#a)"/>
+    <path d="m75.378 45.616 21.834 42.7 7.0963-16.846-14.303-37.488-21.265-32.565-1.3056 8.0296z" fill="url(#ab)"/>
     <path d="m71.802 130.99-18.931 26.143 27.229-5.5217z" fill="url(#q)"/>
     <path d="m79.509 88.41-16.058-3.9243-9.9712-1.8344 23.919 6.0362z" fill="url(#g)"/>
     <path d="m154.57 82.249 14.686-9.7608-69.366-52.121-2.7269 8.5085z" fill="url(#f)"/>
@@ -195,7 +195,7 @@
     <path d="m75.378 45.616-7.8027 19.068 27.306 24.004 2.3303-0.37229z" fill="url(#d)"/>
     <path d="m78.953 25.58 16.647 63.365 21.711 7.7318 28.605 2.2608-66.313-73.681z" fill="url(#c)"/>
     <path d="m130.81 121.16-13.498-24.483 28.605 2.2608z" fill="url(#b)"/>
-    <path d="m130.79 120.98-22.577-14.189v-2.0611l9.1014-8.0567z" fill="url(#ab)"/>
+    <path d="m130.79 120.98-22.577-14.189v-2.0611l9.1014-8.0567z" fill="url(#a)"/>
     <path d="m67.575 64.684-38.682-7.1107-1.3004 1.9393 67.288 29.176z" fill="url(#aa)"/>
     <path d="m77.979 84.396 16.902 4.2915-66.963-29.176 5.2103 6.0243 28.921 36.957 19.503-6.1394z" fill="url(#z)"/>
     <path d="m12.64 106.37 11.052 12.927 17.229-14.22 1.3004-1.9393z" fill="url(#y)"/>

@@ -1,6 +1,6 @@
-<svg width="600" height="397.87" version="1.1" viewBox="0 0 158.75 105.27" xmlns="http://www.w3.org/2000/svg">
+<svg width="600" height="398.17" version="1.1" viewBox="0 0 158.75 105.35" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <linearGradient id="a" x2="1" gradientTransform="matrix(53.654 -41.469 -41.469 -53.654 44.044 196.4)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="a" x2="1" gradientTransform="matrix(53.654,-41.469,-41.469,-53.654,44.044,196.4)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#bf2329" offset="0"/>
    <stop stop-color="#ee2722" offset="1"/>
   </linearGradient>
@@ -9,12 +9,12 @@
   <path d="m127.71 221.28v1.6796l47.509-9e-5 -5e-5 -1.6796z" color="#000000" color-rendering="auto" dominant-baseline="auto" fill="#ec732b" image-rendering="auto" shape-rendering="auto" solid-color="#000000" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-variation-settings:normal;inline-size:0;isolation:auto;mix-blend-mode:normal;shape-margin:0;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
   <path d="m24.351 221.28v1.6796l47.507 9e-5v-1.6796z" color="#000000" color-rendering="auto" dominant-baseline="auto" fill="#ec732b" image-rendering="auto" shape-rendering="auto" solid-color="#000000" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-variation-settings:normal;inline-size:0;isolation:auto;mix-blend-mode:normal;shape-margin:0;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
   <g fill="#ec732b" stroke-width=".46212px" aria-label="Orne">
-   <path d="m83.396 213.24q-1.9857 0-3.1591 1.4802-1.1643 1.4802-1.1643 4.0346 0 2.5453 1.1643 4.0255 1.1734 1.4802 3.1591 1.4802 1.9857 0 3.141-1.4802 1.1643-1.4802 1.1643-4.0255 0-2.5543-1.1643-4.0346-1.1553-1.4802-3.141-1.4802zm0-1.4802q2.8341 0 4.531 1.9045 1.6969 1.8954 1.6969 5.0906 0 3.1861-1.6969 5.0906-1.6969 1.8954-4.531 1.8954-2.8432 0-4.549-1.8954-1.6969-1.8954-1.6969-5.0906 0-3.1952 1.6969-5.0906 1.7059-1.9045 4.549-1.9045z"/>
+   <path d="m83.396 213.24q-1.9857 0-3.1591 1.4802-1.1643 1.4802-1.1643 4.0346 0 2.5453 1.1643 4.0255 1.1734 1.4802 3.1591 1.4802t3.141-1.4802q1.1643-1.4802 1.1643-4.0255 0-2.5543-1.1643-4.0346-1.1553-1.4802-3.141-1.4802zm0-1.4802q2.8341 0 4.531 1.9045 1.6969 1.8954 1.6969 5.0906 0 3.1861-1.6969 5.0906-1.6969 1.8954-4.531 1.8954-2.8432 0-4.549-1.8954-1.6969-1.8954-1.6969-5.0906t1.6969-5.0906q1.7059-1.9045 4.549-1.9045z"/>
    <path d="m99.055 216.92q-0.2798-0.16246-0.61376-0.23467-0.32493-0.0812-0.72207-0.0812-1.408 0-2.1662 0.92064-0.74915 0.91161-0.74915 2.6265v5.3253h-1.6698v-10.109h1.6698v1.5705q0.5235-0.92064 1.3629-1.3629 0.83941-0.4513 2.0398-0.4513 0.17149 0 0.37909 0.0271 0.2076 0.0181 0.46032 0.0632z"/>
    <path d="m109.67 219.37v6.1015h-1.6608v-6.0473q0-1.4351-0.55961-2.1482-0.5596-0.71305-1.6788-0.71305-1.3449 0-2.1211 0.85746-0.77623 0.85746-0.77623 2.3377v5.7134h-1.6698v-10.109h1.6698v1.5705q0.59571-0.91161 1.399-1.3629 0.81233-0.4513 1.8684-0.4513 1.742 0 2.6356 1.0831 0.89356 1.0741 0.89356 3.1681z"/>
    <path d="m122.42 220v0.81233h-7.6359q0.10831 1.7149 1.029 2.6175 0.92966 0.89356 2.5814 0.89356 0.95674 0 1.8503-0.23467 0.90259-0.23468 1.7871-0.70402v1.5705q-0.89356 0.37909-1.8323 0.57766-0.93869 0.19857-1.9045 0.19857-2.4189 0-3.836-1.408-1.408-1.408-1.408-3.8089 0-2.4821 1.3358-3.9353 1.3448-1.4622 3.6194-1.4622 2.0398 0 3.2222 1.3178 1.1914 1.3088 1.1914 3.5652zm-1.6608-0.48739q-0.0181-1.3629-0.7672-2.1752-0.74012-0.81233-1.9676-0.81233-1.39 0-2.2294 0.78525-0.83038 0.78525-0.95674 2.2113z"/>
   </g>
-  <rect x="24.306" y="124.28" width="150.96" height="75.479" fill="#d22526" stroke-width="5.006"/>
+  <path d="m24.306 124.28h150.96v75.479h-150.96z" fill="#d22526" stroke-width="5.006"/>
   <path d="m108.84 196.47c-3.031 1.2138-6.0774 2.3072-9.1379 3.2942h43.86c-1.169-7.3724-1.7332-14.755-1.708-22.085-9.8602 7.5713-20.906 13.939-33.014 18.791" fill="#f471a8"/>
   <path d="m99.705 199.76c3.0604-0.987 6.1083-2.0818 9.1379-3.2957 12.109-4.8524 23.153-11.22 33.012-18.79 0.0644-18.487 3.8444-36.627 10.891-53.394h-128.44v75.479z" fill="url(#a)"/>
   <path d="m141.86 177.68c-0.0251 7.329 0.53901 14.713 1.708 22.085h31.702v-59.104c-8.7011 14.073-19.94 26.676-33.41 37.019" fill="#f9a72b"/>

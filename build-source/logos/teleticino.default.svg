@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="210.59" width="600" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 158.75 55.718063" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<svg width="600" height="210.6" version="1.1" viewBox="0 0 158.75 55.719" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(-58.151 -160.61)">
   <g fill="#5985cd">
    <path d="m120.09 193.92c0 0.54 0.26 0.8 0.79 0.8h2.37l0.26 0.27v2.66l-0.26 0.26h-2.37c-2.37 0-4.48-1.06-4.48-3.99v-5.85l-0.26-0.26h-1.84l-0.26-0.27v-2.65l0.26-0.27h1.84l0.26-0.27v-2.39l0.27-0.27h3.16l0.26 0.27v2.39l0.26 0.27h2.9l0.26 0.27v2.65l-0.26 0.27h-2.9l-0.26 0.26z"/>
@@ -17,7 +16,7 @@
   </g>
   <path d="m58.151 174.54v13.93l23.884 13.93v-13.93z" fill="#3264b8"/>
   <path d="m93.978 195.44v13.93l11.942-6.97v-13.93z" fill="#3264b8"/>
-  <path d="m82.035 160.61v27.86h0.002l23.883-13.93z" fill="#244b90"/>
-  <path d="m82.037 188.47h-0.002v13.93l-23.884-13.93v13.93l23.884 13.93 11.943-6.96v-13.93l11.942-6.97v-13.93z" fill="#5985cd"/>
+  <path d="m82.035 160.61v27.86h2e-3l23.883-13.93z" fill="#244b90"/>
+  <path d="m82.037 188.47h-2e-3v13.93l-23.884-13.93v13.93l23.884 13.93 11.943-6.96v-13.93l11.942-6.97v-13.93z" fill="#5985cd"/>
  </g>
 </svg>

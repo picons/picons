@@ -1,34 +1,33 @@
 <svg version="1.1" viewBox="0 0 1573.4 437.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
-  <style>.cls-1{fill:none}</style>
   <clipPath id="g">
-   <path class="cls-1" d="m28.42 1.01 6.59 18.75 6.58-18.75c-2.08-0.66-4.29-1.01-6.59-1.01s-4.51 0.35-6.59 1.01"/>
+   <path d="m28.42 1.01 6.59 18.75 6.58-18.75c-2.08-0.66-4.29-1.01-6.59-1.01s-4.51 0.35-6.59 1.01" fill="none"/>
   </clipPath>
-  <linearGradient id="a" x1="-803.95" x2="-803.26" y1="72.53" y2="72.53" gradientTransform="matrix(93.71 0 0 -93.71 75322 6806.4)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="a" x1="-803.95" x2="-803.26" y1="72.53" y2="72.53" gradientTransform="matrix(93.71,0,0,-93.71,75322,6806.4)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#16217c" offset="0"/>
    <stop stop-color="#0009ff" offset=".55"/>
    <stop stop-color="#00ff5b" offset="1"/>
   </linearGradient>
   <clipPath id="f">
-   <path class="cls-1" d="m13.15 21.86c0 12.07 9.79 21.86 21.86 21.86s21.86-9.79 21.86-21.86c0-6.41-2.76-12.18-7.15-16.17l-11.25 25.14h-6.92l-11.25-25.14c-4.4 4-7.15 9.76-7.15 16.17"/>
+   <path d="m13.15 21.86c0 12.07 9.79 21.86 21.86 21.86s21.86-9.79 21.86-21.86c0-6.41-2.76-12.18-7.15-16.17l-11.25 25.14h-6.92l-11.25-25.14c-4.4 4-7.15 9.76-7.15 16.17" fill="none"/>
   </clipPath>
-  <linearGradient id="d" x1="-804.72" x2="-804.02" y1="71.64" y2="71.64" gradientTransform="matrix(88.92 0 0 -88.92 71551 6395.1)" xlink:href="#a"/>
+  <linearGradient id="d" x1="-804.72" x2="-804.02" y1="71.64" y2="71.64" gradientTransform="matrix(88.92,0,0,-88.92,71551,6395.1)" xlink:href="#a"/>
   <clipPath id="e">
-   <path class="cls-1" d="m35 19.77-6.58-18.75c-3.04 0.96-5.8 2.57-8.1 4.67l11.23 25.13h6.92l11.23-25.13c-2.31-2.1-5.07-3.71-8.11-4.67z"/>
+   <path d="m35 19.77-6.58-18.75c-3.04 0.96-5.8 2.57-8.1 4.67l11.23 25.13h6.92l11.23-25.13c-2.31-2.1-5.07-3.71-8.11-4.67z" fill="none"/>
   </clipPath>
-  <linearGradient id="c" x1="-806.66" x2="-805.96" y1="98.92" y2="98.92" gradientTransform="matrix(0 42.85 42.85 0 -4203.8 34566)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="c" x1="-806.66" x2="-805.96" y1="98.92" y2="98.92" gradientTransform="matrix(0,42.85,42.85,0,-4203.8,34566)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#ebf5f7" offset="0"/>
    <stop stop-color="#f1f8f9" offset=".15"/>
    <stop stop-color="#fbfdfd" offset=".54"/>
    <stop stop-color="#fff" offset="1"/>
   </linearGradient>
-  <linearGradient id="b" x1="-803.95" x2="-803.26" y1="72.53" y2="72.53" gradientTransform="matrix(93.71 0 0 -93.71 75322 6806.4)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="b" x1="-803.95" x2="-803.26" y1="72.53" y2="72.53" gradientTransform="matrix(93.71,0,0,-93.71,75322,6806.4)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
  </defs>
  <g transform="matrix(10,0,0,10,-131.5,0)" clip-path="url(#g)">
-  <path transform="rotate(-52.83 34.999 9.8806)" d="m23.15-1.34h23.7v22.43h-23.7z" fill="url(#b)"/>
+  <path transform="rotate(-52.83,34.999,9.8806)" d="m23.15-1.34h23.7v22.43h-23.7z" fill="url(#b)"/>
  </g>
  <g transform="matrix(10,0,0,10,-131.5,0)" clip-path="url(#f)">
-  <path transform="rotate(-60 35.008 24.704)" d="m7.61-3.73h54.8v56.88h-54.8z" fill="url(#d)"/>
+  <path transform="rotate(-60,35.008,24.704)" d="m7.61-3.73h54.8v56.88h-54.8z" fill="url(#d)"/>
  </g>
  <g transform="matrix(10,0,0,10,-131.5,0)" clip-path="url(#e)">
   <path d="m20.32 1.02h29.39v29.81h-29.39z" fill="url(#c)"/>

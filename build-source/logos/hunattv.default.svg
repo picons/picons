@@ -1,67 +1,67 @@
-<svg width="211.67mm" height="61.342mm" version="1.1" viewBox="0 0 211.67 61.342" xmlns="http://www.w3.org/2000/svg">
+<svg width="211.66mm" height="61.341mm" version="1.1" viewBox="0 0 211.66 61.341" xmlns="http://www.w3.org/2000/svg">
  <defs>
   <clipPath id="c">
-   <path transform="translate(-217.01 -475.83)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
+   <path transform="translate(-217.01,-475.83)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
   </clipPath>
   <clipPath id="a">
-   <path transform="translate(-246.72 -465.13)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
+   <path transform="translate(-246.72,-465.13)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
   </clipPath>
   <clipPath id="b">
-   <path transform="translate(-269.66 -525.59)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
+   <path transform="translate(-269.66,-525.59)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
   </clipPath>
   <clipPath id="q">
-   <path transform="translate(-295.86 -505.54)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
+   <path transform="translate(-295.86,-505.54)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
   </clipPath>
   <clipPath id="t">
-   <path transform="translate(-277.35 -442.93)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
+   <path transform="translate(-277.35,-442.93)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
   </clipPath>
   <clipPath id="r">
-   <path transform="translate(-342.97 -464.39)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
+   <path transform="translate(-342.97,-464.39)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
   </clipPath>
   <clipPath id="s">
-   <path transform="translate(-361.49 -527)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
+   <path transform="translate(-361.49,-527)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
   </clipPath>
   <clipPath id="n">
-   <path transform="translate(-372.86 -466.61)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
+   <path transform="translate(-372.86,-466.61)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
   </clipPath>
   <clipPath id="o">
-   <path transform="translate(-406.88 -507.14)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
+   <path transform="translate(-406.88,-507.14)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
   </clipPath>
   <clipPath id="p">
-   <path transform="translate(-431.79 -442.93)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
+   <path transform="translate(-431.79,-442.93)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
   </clipPath>
   <clipPath id="l">
-   <path transform="translate(-508.67 -526.33)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
+   <path transform="translate(-508.67,-526.33)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
   </clipPath>
   <clipPath id="m">
-   <path transform="translate(-452.76 -509.08)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
+   <path transform="translate(-452.76,-509.08)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
   </clipPath>
   <clipPath id="g">
-   <path transform="translate(-554.91 -534.41)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
+   <path transform="translate(-554.91,-534.41)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
   </clipPath>
   <clipPath id="k">
-   <path transform="translate(-547.98 -450.24)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
+   <path transform="translate(-547.98,-450.24)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
   </clipPath>
   <clipPath id="e">
-   <path transform="translate(-611.09 -504.15)" d="m567.16 517.97h112.99v-66.74h-112.99z"/>
+   <path transform="translate(-611.09,-504.15)" d="m567.16 517.97h112.99v-66.74h-112.99z"/>
   </clipPath>
   <clipPath id="d">
-   <path transform="translate(-680.15 -517.54)" d="m567.16 517.97h112.99v-66.74h-112.99z"/>
+   <path transform="translate(-680.15,-517.54)" d="m567.16 517.97h112.99v-66.74h-112.99z"/>
   </clipPath>
   <clipPath id="j">
-   <path transform="translate(-634.84 -569.26)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
+   <path transform="translate(-634.84,-569.26)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
   </clipPath>
   <clipPath id="i">
-   <path transform="translate(-702.65 -519.26)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
+   <path transform="translate(-702.65,-519.26)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
   </clipPath>
   <clipPath id="h">
-   <path transform="translate(-692.68 -435.36)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
+   <path transform="translate(-692.68,-435.36)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
   </clipPath>
   <clipPath id="f">
-   <path transform="translate(-616.07 -402.35)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
+   <path transform="translate(-616.07,-402.35)" d="M 0,595.28 H 841.89 V 0 H 0 Z"/>
   </clipPath>
  </defs>
- <g transform="translate(50.006 -52.388)">
+ <g transform="translate(50.004 -52.388)">
   <path transform="matrix(.35879 0 0 -.35879 103.05 95.819)" d="m0 0c2.178 0.134 3.379 0.267 4.581 0.273 23.436 0.115 46.871 0.22 70.307 0.315 5.392 0.022 6.196-1.3 3.723-5.882-6.974-12.923-14.04-25.797-20.804-38.829-1.827-3.519-3.806-4.142-7.401-2.922-22.079 7.498-38.6 21.508-49.625 41.992-0.732 1.361-0.524 3.228-0.781 5.053" clip-path="url(#k)" fill="#502da7"/>
   <path transform="matrix(.35879 0 0 -.35879 134.22 53.117)" d="m0 0c-1.004-1.937-1.508-3.036-2.12-4.07-11.944-20.164-23.897-40.322-35.859-60.476-2.752-4.636-4.3-4.647-6.96-0.171-7.501 12.623-14.915 25.301-22.618 37.8-2.08 3.375-1.598 5.394 1.297 7.851 17.777 15.087 38.286 22.06 61.524 20.992 1.543-0.071 3.038-1.208 4.736-1.926" clip-path="url(#j)" fill="#ffe428"/>
   <path transform="matrix(.35879 0 0 -.35879 158.55 71.054)" d="m0 0c-2.181-0.077-3.385-0.179-4.587-0.154-23.43 0.494-46.861 0.998-70.291 1.511-5.391 0.118-6.161 1.461-3.569 5.977 7.307 12.737 14.705 25.424 21.805 38.275 1.918 3.47 3.913 4.042 7.475 2.729 21.876-8.068 38.028-22.503 48.517-43.266 0.697-1.38 0.441-3.241 0.65-5.072" clip-path="url(#i)" fill="#e77a18"/>

@@ -1,6 +1,6 @@
-<svg version="1.1" viewBox="0 0 602.42 800" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" viewBox="0 0 602.37 799.95" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <linearGradient id="b" x2="1" gradientTransform="matrix(20.551 -20.287 -20.287 -20.551 284.15 177.84)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="b" x2="1" gradientTransform="matrix(20.551,-20.287,-20.287,-20.551,284.15,177.84)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#c5a152" offset="0"/>
    <stop stop-color="#f8e98c" offset=".13411"/>
    <stop stop-color="#f8e98c" offset=".16004"/>
@@ -13,7 +13,7 @@
    <stop stop-color="#ad823e" offset=".98253"/>
    <stop stop-color="#ad823e" offset="1"/>
   </linearGradient>
-  <linearGradient id="a" x2="1" gradientTransform="matrix(43.551 0 0 -43.551 280.61 162.92)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="a" x2="1" gradientTransform="matrix(43.551,0,0,-43.551,280.61,162.92)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#c5a152" offset="0"/>
    <stop stop-color="#f8e98c" offset=".13411"/>
    <stop stop-color="#f8e98c" offset=".16004"/>
@@ -27,7 +27,7 @@
    <stop stop-color="#ad823e" offset="1"/>
   </linearGradient>
  </defs>
- <g transform="matrix(1.3333,0,0,-1.3333,-374.15,978.43)">
+ <g transform="matrix(1.3333 0 0 -1.3333 -374.23 978.43)">
   <g clip-path="url(#clipPath38)">
    <g mask="url(#mask86)">
     <g clip-path="url(#clipPath120)" opacity=".64999">

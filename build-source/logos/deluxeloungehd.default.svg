@@ -1,7 +1,7 @@
-<svg width="800" height="490.44" version="1.1" viewBox="27.02 13.03 800 490.44" xmlns="http://www.w3.org/2000/svg">
- <g transform="matrix(8.5359 0 0 8.5359 27.017 12.872)">
+<svg width="800" height="490.45" version="1.1" viewBox="27.02 13.03 800 490.45" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(8.5359 0 0 8.5359 27.02 12.876)">
   <path d="m26.67 0.01849-26.665 15.395v26.666l26.665 15.396 26.666-15.396v-26.666z" fill="#f7931e" data-darkreader-inline-fill=""/>
-  <path d="m26.666 57.475-26.666-15.395v-26.666l26.666 15.396z" fill="#f7931e" data-darkreader-inline-fill=""/>
+  <path d="M 26.666,57.475 0,42.08 V 15.414 L 26.666,30.81 Z" fill="#f7931e" data-darkreader-inline-fill=""/>
   <path d="m3.4241e-4 15.413 26.666 15.396 26.666-15.396-26.666-15.395z" fill="#f7931e" data-darkreader-inline-fill=""/>
   <path d="m26.666 57.475 26.666-15.395v-26.666l-26.666 15.396z" fill="#f7931e" data-darkreader-inline-fill=""/>
   <g fill="#f5f5f6" data-darkreader-inline-fill="">

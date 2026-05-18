@@ -1,19 +1,17 @@
 <svg width="47.797mm" height="65.878mm" version="1.1" viewBox="0 0 47.797 65.878" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(-19.191 -84.9)">
-  <g transform="translate(19.192 84.905)">
+  <g transform="translate(19.192,84.905)">
    <g transform="translate(-64.765,-118.58)">
     <g fill-rule="evenodd">
      <path d="m65.336 142.08 23.362-23.505 23.295 23.806-15.743 15.487-0.12799-31.358-12.483 6.3543 0.12799 8.4475 4.7357-2.6878-0.15999 26.686z" fill="#b41e27"/>
      <path transform="scale(.26458)" d="m335.24 448.17-40.191 40.436c7.047 3.4151 15.216 7.4282 24.293 11.93l43.955-22.373 0.18164 44.447c17.875 8.9978 34.927 17.635 49.93 25.25l9.875-9.7129z" fill="#d21e29"/>
     </g>
-   </g>
-   <g transform="translate(-64.765,-118.58)">
     <g transform="translate(-3.4632,-16.383)" fill="#b51d28">
-     <rect x="72.494" y="186.09" width="1.8101" height="2.0363"/>
-     <rect x="84.033" y="186.09" width="1.8101" height="2.0363"/>
-     <rect x="69.733" y="186.09" width="1.8101" height="2.0363"/>
-     <rect x="80.187" y="198.8" width="1.8101" height="2.0363"/>
-     <rect x="77.426" y="198.8" width="1.8101" height="2.0363"/>
+     <path d="m72.494 186.09h1.8101v2.0363h-1.8101z"/>
+     <path d="m84.033 186.09h1.8101v2.0363h-1.8101z"/>
+     <path d="m69.733 186.09h1.8101v2.0363h-1.8101z"/>
+     <path d="m80.187 198.8h1.8101v2.0363h-1.8101z"/>
+     <path d="m77.426 198.8h1.8101v2.0363h-1.8101z"/>
      <g transform="matrix(.38101 0 0 .38101 -34.654 -52.975)" stroke-width="1px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="الوطنية">
       <path d="m395.47 656.25h-5.8125v-28.406h5.8125z"/>
       <path d="m374.38 650.49h4.3828v-22.641h5.7891v25.289q0.0703 0.63282-0.14062 1.2188-0.21094 0.5625-0.60938 1.0078-0.39843 0.42187-0.96093 0.67968-0.5625 0.25782-1.1953 0.25782h-7.2656z"/>

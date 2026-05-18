@@ -26,7 +26,7 @@
    <clipPath id="p">
     <use width="100%" height="100%" overflow="visible" xlink:href="#q"/>
    </clipPath>
-   <linearGradient id="o" x1="-112.52" x2="-111.42" y1="543.61" y2="543.61" gradientTransform="matrix(0 -11.206 -11.206 0 6188.2 -1166.6)" gradientUnits="userSpaceOnUse">
+   <linearGradient id="o" x1="-112.52" x2="-111.42" y1="543.61" y2="543.61" gradientTransform="matrix(0,-11.206,-11.206,0,6188.2,-1166.6)" gradientUnits="userSpaceOnUse">
     <stop stop-color="#fff" offset="0"/>
     <stop stop-color="#fff" offset="1"/>
    </linearGradient>
@@ -40,7 +40,7 @@
   <clipPath id="m">
    <use width="100%" height="100%" overflow="visible" xlink:href="#n"/>
   </clipPath>
-  <linearGradient id="l" x1="-85.468" x2="-84.368" y1="506.83" y2="506.83" gradientTransform="matrix(-2.3657 27.041 27.041 2.3657 -13782 1196.8)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="l" x1="-85.468" x2="-84.368" y1="506.83" y2="506.83" gradientTransform="matrix(-2.3657,27.041,27.041,2.3657,-13782,1196.8)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#2aa9e0" offset="0"/>
    <stop stop-color="#22a8e1" offset=".027"/>
    <stop stop-color="#0fa6e3" offset=".108"/>

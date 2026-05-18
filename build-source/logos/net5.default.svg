@@ -1,7 +1,7 @@
-<svg version="1.1" viewBox="0 0 800 258.27" xmlns="http://www.w3.org/2000/svg">
- <g transform="matrix(1.3333 0 0 -1.3333 0 194.67)">
+<svg version="1.1" viewBox="0 0 799.96 258.26" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(1.3333 0 0 -1.3333 0 194.66)">
   <g transform="matrix(.13267 0 0 .13267 0 -47.703)">
-   <path d="m4522.4 0h-4522.4v1460h4522.4v-1460" fill="#87d497"/>
+   <path d="M 4522.4,0 H 0 V 1460 H 4522.4 V 0" fill="#87d497"/>
    <path d="m250 1260h281.46l408.54-560.28v560.28h280v-1060h-280l-408.54 581.49v-581.49h-281.46v1060" fill="#fffffa"/>
    <path d="m1320 1260h740v-250h-460v-160h460v-230h-460v-170h460v-250h-740v1060" fill="#fffffa"/>
    <path d="m2470 1010h-310v250h941.99l-21.6-250h-330.39v-810h-280v810" fill="#fffffa"/>

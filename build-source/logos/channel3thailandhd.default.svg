@@ -1,6 +1,6 @@
-<svg overflow="hidden" version="1.1" viewBox="0 0 1322.2 760" xmlns="http://www.w3.org/2000/svg">
+<svg overflow="hidden" version="1.1" viewBox="0 0 1322.2 759.98" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(.97752 0 0 .97752 -10.35 522.19)">
-  <g transform="matrix(10 0 0 10 10.588 -534.2)">
+  <g transform="matrix(10,0,0,10,10.588,-534.2)">
    <linearGradient id="q" x1="30.912" x2="30.912" y1="676.28" y2="627.45" gradientTransform="matrix(1,0,0,-1,0,682)" gradientUnits="userSpaceOnUse">
     <stop stop-color="#333" offset=".1795"/>
     <stop stop-color="#808080" offset=".3205"/>

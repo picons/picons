@@ -1,6 +1,6 @@
 <svg version="1.1" viewBox="0 0 512.02 446.57" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <linearGradient id="a" x1="256" x2="256" y1="42.96" y2="466.2" gradientTransform="translate(.02172 -32.71)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="a" x1="256" x2="256" y1="42.96" y2="466.2" gradientTransform="translate(.02344 -32.71)" gradientUnits="userSpaceOnUse">
    <stop stop-color="lime" offset="0"/>
    <stop stop-color="lime" offset=".1"/>
    <stop stop-color="#f9fff1" offset=".4"/>

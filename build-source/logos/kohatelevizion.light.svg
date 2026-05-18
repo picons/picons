@@ -1,7 +1,7 @@
-<svg width="89.53mm" height="46.47mm" version="1.1" viewBox="0 0 89.53 46.47" xmlns="http://www.w3.org/2000/svg">
- <g transform="translate(-44.371 -109.56)" fill="#fff">
+<svg width="89.53mm" height="46.469mm" version="1.1" viewBox="0 0 89.53 46.469" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(-44.37 -109.56)" fill="#fff">
   <g transform="matrix(.42297 0 0 .42297 72.348 124.27)">
-   <rect x="-66.146" y="43.579" width="211.67" height="31.498" fill="#fff"/>
+   <path d="m-66.146 43.579h211.67v31.498h-211.67z"/>
    <g transform="matrix(2.7622,0,0,2.5744,-269.52,-384.15)" fill="#000" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="TELEVIZION">
     <path d="m77.267 170.3h-1.2395v-1.8669h5.275v1.8669h-1.3141l-0.12116 0.11617v6.1648h-2.4791v-6.1648z" stroke-width=".12587"/>
     <path d="m87.803 168.44v1.867h-1.8024v1.1782h1.5832v1.9084h-1.5832v1.2446h1.8024v1.9499h-3.9538v-8.1482z" stroke-width=".11748"/>

@@ -1,9 +1,9 @@
 <svg width="211.67mm" height="70.983mm" version="1.1" viewBox="0 0 211.67 70.983" xmlns="http://www.w3.org/2000/svg">
- <g transform="translate(135.32 -115.23)">
+ <g transform="translate(135.32,-115.23)">
   <path d="m-135.32 115.23h34.91v70.983h-34.91z" fill="#09784e" fill-rule="evenodd"/>
   <g stroke-width="1.0639">
-   <rect x="-132.99" y="155.03" width="6.9695" height="6.9706" fill="#ffd756"/>
-   <rect x="-126.02" y="155.03" width="6.9706" height="6.9706" fill="#c9352c"/>
+   <path d="m-132.99 155.03h6.9695v6.9706h-6.9695z" fill="#ffd756"/>
+   <path d="m-126.02 155.03h6.9706v6.9706h-6.9706z" fill="#c9352c"/>
    <path d="m-101.62 148.06v6.9695h-24.393v-6.9695z" fill="#fff"/>
    <path d="m-119.05 175.94v-6.9717h13.941v-6.9695h-20.91v20.91h24.393v-6.9696h-17.424z" fill="#fff"/>
   </g>

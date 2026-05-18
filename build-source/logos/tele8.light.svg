@@ -1,6 +1,6 @@
-<svg width="211.67mm" height="52.425mm" version="1.1" viewBox="0 0 211.67 52.425" xmlns="http://www.w3.org/2000/svg">
- <g transform="translate(72.404 18.032)">
-  <g transform="matrix(3.3091 0 0 3.0751 -73.208 -17.914)" stroke-width=".28031" aria-label="TELE8">
+<svg width="211.67mm" height="52.427mm" version="1.1" viewBox="0 0 211.67 52.427" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(72.405 18.032)">
+  <g transform="matrix(3.3091,0,0,3.0751,-73.208,-17.914)" stroke-width=".28031" aria-label="TELE8">
    <path d="m4.4324 16.701h2.5873v-12.144h4.2579v-2.2347h-11.035v2.2347h4.1895z" fill="#fff"/>
    <path d="m29.884 14.466v-12.144h-2.7801v14.379h10.256v-2.2347z" fill="#fff"/>
    <path d="m49.896 4.557v-2.2347h-10.26v14.379h10.549v-2.2347h-7.9754v-4.155h7.124l3.38e-4 -2.2345h-7.124l-5.2e-5 -3.5199z" fill="#fff" stroke-width=".25066"/>

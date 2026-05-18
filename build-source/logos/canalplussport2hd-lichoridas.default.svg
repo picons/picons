@@ -1,16 +1,16 @@
-<svg width="600" height="273" version="1.1" viewBox="0 0 158.75 72.231" xmlns="http://www.w3.org/2000/svg">
+<svg width="600" height="273.04" version="1.1" viewBox="0 0 158.75 72.241" xmlns="http://www.w3.org/2000/svg">
  <defs>
   <clipPath id="c">
-   <path d="m666.14 0h666.16v907.09h-666.16v-907.09z"/>
+   <path d="m666.14 0h666.16v907.09h-666.16z"/>
   </clipPath>
   <clipPath id="b">
-   <path d="m1225.1 263.53h55v-19.63h-55v19.63z"/>
+   <path d="m1225.1 263.53h55v-19.63h-55z"/>
   </clipPath>
   <clipPath id="a">
-   <path d="m1227.8 261.26h48.8v-15.14h-48.8v15.14z"/>
+   <path d="m1227.8 261.26h48.8v-15.14h-48.8z"/>
   </clipPath>
  </defs>
- <g transform="translate(191.23,-68.693)">
+ <g transform="translate(191.23 -68.693)">
   <path d="m-41.313 135.31h-118.72v-33.3h118.72l-3e-3 33.3z" fill="#18b400"/>
   <g transform="matrix(2.5352,0,0,-2.5352,-3275.4,761.81)">
    <g clip-path="url(#c)">

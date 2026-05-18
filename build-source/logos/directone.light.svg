@@ -1,21 +1,21 @@
-<svg version="1.1" viewBox="0 0 800 115" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg version="1.1" viewBox="0 0 799.99 115" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
-  <linearGradient id="c" x1="163.48" x2="139.95" y1="-212.25" y2="-212.25" gradientTransform="matrix(3.7796 0 0 3.7796 892.58 326.77)" xlink:href="#b"/>
+  <linearGradient id="c" x1="163.48" x2="139.95" y1="-212.25" y2="-212.25" gradientTransform="matrix(3.7796,0,0,3.7796,892.58,326.77)" xlink:href="#b"/>
   <linearGradient id="b" x1="104.57" x2="104.57" y1="-210.17" y2="-259.31" gradientTransform="matrix(1,0,0,-1,-92.76,-187.76)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#c80000" offset="0"/>
    <stop stop-color="red" offset="1"/>
   </linearGradient>
-  <linearGradient id="d" x1="71.59" x2="46.98" y1="38.57" y2="38.57" gradientTransform="matrix(3.7796 0 0 -3.7796 892.58 606.46)" xlink:href="#a"/>
+  <linearGradient id="d" x1="71.59" x2="46.98" y1="38.57" y2="38.57" gradientTransform="matrix(3.7796,0,0,-3.7796,892.58,606.46)" xlink:href="#a"/>
   <linearGradient id="a" x1="95.04" x2="151.71" y1="-252.72" y2="-252.72" gradientTransform="matrix(1,0,0,-1,-92.76,-187.76)" gradientUnits="userSpaceOnUse">
    <stop stop-color="red" offset="0"/>
    <stop stop-color="#ff4b00" offset="1"/>
   </linearGradient>
-  <linearGradient id="e" x1="116.69" x2="161.44" y1="-199.57" y2="-199.57" gradientTransform="matrix(3.7796 0 0 3.7796 892.58 326.77)" xlink:href="#a"/>
-  <linearGradient id="f" x1="-.63" x2="47.19" y1="62.19" y2="62.19" gradientTransform="matrix(3.7796 0 0 -3.7796 892.58 606.46)" xlink:href="#b"/>
-  <linearGradient id="g" x1="-.19" x2="23.29" y1="38.57" y2="38.57" gradientTransform="matrix(3.7796 0 0 -3.7796 892.58 606.46)" xlink:href="#a"/>
-  <linearGradient id="h" x1="11.72" x2="70.43" y1="20.86" y2="20.86" gradientTransform="matrix(3.7796 0 0 -3.7796 892.58 606.46)" xlink:href="#b"/>
-  <linearGradient id="i" x1="104.57" x2="104.57" y1="-210.17" y2="-259.31" gradientTransform="matrix(1 0 0 -1 -92.748 -187.78)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
-  <linearGradient id="j" x1="95.04" x2="151.71" y1="-252.72" y2="-252.72" gradientTransform="matrix(1 0 0 -1 -92.748 -187.78)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="e" x1="116.69" x2="161.44" y1="-199.57" y2="-199.57" gradientTransform="matrix(3.7796,0,0,3.7796,892.58,326.77)" xlink:href="#a"/>
+  <linearGradient id="f" x1="-.63" x2="47.19" y1="62.19" y2="62.19" gradientTransform="matrix(3.7796,0,0,-3.7796,892.58,606.46)" xlink:href="#b"/>
+  <linearGradient id="g" x1="-.19" x2="23.29" y1="38.57" y2="38.57" gradientTransform="matrix(3.7796,0,0,-3.7796,892.58,606.46)" xlink:href="#a"/>
+  <linearGradient id="h" x1="11.72" x2="70.43" y1="20.86" y2="20.86" gradientTransform="matrix(3.7796,0,0,-3.7796,892.58,606.46)" xlink:href="#b"/>
+  <linearGradient id="i" x1="104.57" x2="104.57" y1="-210.17" y2="-259.31" gradientTransform="matrix(1,0,0,-1,-92.748,-187.78)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
+  <linearGradient id="j" x1="95.04" x2="151.71" y1="-252.72" y2="-252.72" gradientTransform="matrix(1,0,0,-1,-92.748,-187.78)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
  </defs>
  <g transform="translate(.015118 -.016517)" fill="#f9f9f9" stroke-width=".4252">
   <path class="cls-9" d="m148.88 37.74h27.642a47.361 47.361 0 0 1 21.728 4.8211 36.963 36.963 0 0 1 0.11263 66.1 46.235 46.235 0 0 1-21.406 4.8211h-28.076zm27.433 57.55q10.462 0 15.959-4.9659 5.4962-4.9659 5.5124-14.367 0-9.6426-5.673-14.833t-16.216-5.2391h-6.7336v39.405z"/>
@@ -31,7 +31,7 @@
  <path class="cls-1" d="m18.989 94.889-16.199 16.199a9.4823 9.4823 0 0 0 6.7016 2.7804h66.438l18.98-18.98z" fill="url(#j)" stroke-width=".42521"/>
  <path class="cls-2" d="m37.962 75.916-37.962-37.962v66.502a9.4823 9.4823 0 0 0 2.7804 6.7016l16.199-16.264z" fill="url(#i)" stroke-width=".42521"/>
  <path class="cls-3" d="m37.962 75.916-18.98 18.98h75.921l18.98-18.98z" fill="url(#h)" stroke-width=".42521"/>
- <path class="cls-4" d="m37.962 75.916v-37.962h-37.962z" fill="url(#g)" stroke-width=".42521"/>
+ <path class="cls-4" d="M 37.962,75.916 V 37.954 H 0 Z" fill="url(#g)" stroke-width=".42521"/>
  <path class="cls-5" d="m0.015118 37.968h75.921l-37.962-37.962z" fill="url(#f)" stroke-width=".42521"/>
  <path class="cls-6" d="m111.14 2.7804a9.4823 9.4823 0 0 0-6.6536-2.7804h-66.502l37.962 37.962z" fill="url(#e)" stroke-width=".42521"/>
  <path class="cls-7" d="m113.89 37.968-37.962 37.962h37.962z" fill="url(#d)" stroke-width=".42521"/>

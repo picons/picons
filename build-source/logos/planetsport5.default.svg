@@ -1,6 +1,6 @@
 <svg Googl="true" version="1.1" viewBox="0 0 800 618.66" xmlns="http://www.w3.org/2000/svg">
  <desc>Created with Sketch.</desc>
- <g transform="translate(365.31,270.66)">
+ <g transform="translate(365.31 270.66)">
   <g transform="matrix(8,0,0,8,-242.85,-270.66)" fill="none" fill-rule="evenodd">
    <g transform="translate(-252,-52)">
     <g transform="translate(252,52)" fill="#4996c7">
@@ -10,7 +10,7 @@
    </g>
   </g>
  </g>
- <g fill="#4996c7" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="5">
+ <g transform="translate(-.00072 .0015658)" fill="#4996c7" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="5">
   <path d="m626.22 283.37q-17.948 0-34.598-4.9735-4.3248-1.2974-6.0547-2.8111-1.5137-1.7299-1.5137-5.1898v-3.4598q0-4.9735 4.9735-4.9735 0.86496 0 12.758 3.4598 11.893 3.4598 25.949 3.4598h10.163q18.813 0 26.165-7.5684 7.3522-7.7846 7.3522-22.921v-1.2974q0-14.488-7.5684-21.192-7.5684-6.9197-26.814-6.9197h-42.816q-5.8385 0-5.8385-5.8385v-63.142q0-2.5949 1.5137-4.1086 1.7299-1.7299 4.3248-1.7299h83.252q2.5949 0 4.1086 1.7299 1.7299 1.5137 1.7299 4.1086v2.8111q0 5.8385-5.8385 5.8385h-68.764q-4.3248 0-4.3248 4.1086v37.626q0 2.3786 0.86496 3.4598 1.0812 0.86496 3.4598 0.86496h28.976q26.381 0 38.058 10.163 11.893 9.947 11.893 31.571v3.0274q0 22.273-12.109 33.085-11.893 10.812-37.842 10.812z" fill="#4996c7" stroke-width="3.0952"/>
  </g>
 </svg>

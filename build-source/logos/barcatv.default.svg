@@ -1,5 +1,5 @@
-<svg width="800.01" height="312.19" version="1.1" viewBox="0 0 211.67 82.6" xmlns="http://www.w3.org/2000/svg">
- <g transform="translate(122.84 -107.53)">
+<svg width="800.01" height="312.19" version="1.1" viewBox="0 0 211.67 82.599" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(122.85 -107.53)">
   <g transform="matrix(.59428 0 0 .59428 -190.61 51.748)">
    <g transform="matrix(.18927 0 0 .18927 111.7 62.604)">
     <g transform="translate(2.4852,13.596)">
@@ -9,8 +9,6 @@
      <g transform="translate(-.132)" fill="#a50044">
       <path d="m166.42 548.23h83.086v231.8h-83.086z"/>
       <path d="m195.39 768.15h54.117v23.877h-54.117z"/>
-     </g>
-     <g transform="translate(-.132)" fill="#a50044">
       <path d="m496.2 548.23h83.086v231.8h-83.086z"/>
       <path d="m496.2 768.15h54.117v23.877h-54.117z"/>
      </g>

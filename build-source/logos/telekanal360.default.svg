@@ -1,13 +1,13 @@
-<svg version="1.1" viewBox="0 0 799.95 395.03" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" viewBox="0 0 799.94 395.04" xmlns="http://www.w3.org/2000/svg">
  <defs>
   <filter id="c" x="-.064443" y="-.15036" width="1.1289" height="1.3007" color-interpolation-filters="sRGB">
    <feGaussianBlur stdDeviation="10.731543"/>
   </filter>
-  <filter id="b" color-interpolation-filters="sRGB">
+  <filter id="b" x="0" y="0" width="1" height="1" color-interpolation-filters="sRGB">
    <feColorMatrix result="color2" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -0.21 -0.72 -0.07 2 0 "/>
   </filter>
  </defs>
- <g transform="translate(.012933 .0035735)">
+ <g transform="translate(.012769 .0032431)">
   <g transform="matrix(1.773,0,0,1.773,-519.07,-319.47)" fill="#f00" filter="url(#c)" stroke-width=".090646">
    <path class="st1" d="m339.33 325.79c8.59 41.13 117.8 53.12 243.94 26.78 51.88-10.83 98.55-26.46 134.91-43.97-38.28 22.19-92.61 42.27-154.42 55.18-126.14 26.34-235.68 12.82-244.66-30.19s85.99-99.23 212.13-125.57c3.47-0.72 6.92-1.42 10.36-2.08-120.84 27.1-210.61 79.88-202.26 119.85z" fill="#f00" stroke-width=".090646"/>
   </g>

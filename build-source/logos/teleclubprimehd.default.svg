@@ -9,7 +9,7 @@
 				<use width="100%" height="100%" overflow="visible" xlink:href="#q"/>
 			</clipPath>
 			
-				<linearGradient id="g" x1="-318.39" x2="-315.27" y1="-243.51" y2="-243.51" gradientTransform="matrix(8.5799 14.861 -14.861 8.5799 -865.2 6826.8)" gradientUnits="userSpaceOnUse">
+				<linearGradient id="g" x1="-318.39" x2="-315.27" y1="-243.51" y2="-243.51" gradientTransform="matrix(8.5799,14.861,-14.861,8.5799,-865.2,6826.8)" gradientUnits="userSpaceOnUse">
 				<stop stop-color="#C02F19" offset="0"/>
 				<stop stop-color="#B42A17" offset=".2191"/>
 				<stop stop-color="#B42A17" offset=".6573"/>
@@ -21,13 +21,13 @@
 	
 		
 			<defs>
-				<polygon id="f" points="6.5 46 13.5 47.7 59 46.3 54.9 44.2"/>
+				<polygon id="f" points="54.9 44.2 6.5 46 13.5 47.7 59 46.3"/>
 			</defs>
 			<clipPath id="e">
 				<use width="100%" height="100%" overflow="visible" xlink:href="#f"/>
 			</clipPath>
 			
-				<linearGradient id="d" x1="-355.39" x2="-352.27" y1="-270.42" y2="-270.42" gradientTransform="matrix(12.596 -7.2725 7.2725 12.596 6456.2 878.97)" gradientUnits="userSpaceOnUse">
+				<linearGradient id="d" x1="-355.39" x2="-352.27" y1="-270.42" y2="-270.42" gradientTransform="matrix(12.596,-7.2725,7.2725,12.596,6456.2,878.97)" gradientUnits="userSpaceOnUse">
 				<stop stop-color="#8C261A" offset="0"/>
 				<stop stop-color="#8C261A" offset=".7978"/>
 				<stop stop-color="#A22A1C" offset="1"/>
@@ -38,19 +38,19 @@
 	
 		
 			<defs>
-				<polygon id="c" points="59 46.3 56.7 8.1 53 2.5 54.9 44.2"/>
+				<polygon id="c" points="54.9 44.2 59 46.3 56.7 8.1 53 2.5"/>
 			</defs>
 			<clipPath id="b">
 				<use width="100%" height="100%" overflow="visible" xlink:href="#c"/>
 			</clipPath>
 			
-				<linearGradient id="a" x1="-305.98" x2="-302.86" y1="-241.12" y2="-241.12" gradientTransform="matrix(2.4605 13.954 -13.954 2.4605 -2559.6 4865.6)" gradientUnits="userSpaceOnUse">
+				<linearGradient id="aa" x1="-305.98" x2="-302.86" y1="-241.12" y2="-241.12" gradientTransform="matrix(2.4605,13.954,-13.954,2.4605,-2559.6,4865.6)" gradientUnits="userSpaceOnUse">
 				<stop stop-color="#381A14" offset="0"/>
 				<stop stop-color="#451C15" offset=".236"/>
 				<stop stop-color="#451C15" offset=".8371"/>
 				<stop stop-color="#77271C" offset="1"/>
 			</linearGradient>
-			<path d="m66.5 45-13.3 2.3-7.7-43.5 13.3-2.3z" clip-path="url(#b)" fill="url(#a)"/>
+			<path d="m66.5 45-13.3 2.3-7.7-43.5 13.3-2.3z" clip-path="url(#b)" fill="url(#aa)"/>
 		
 	
 	<path d="m15.6 20 6 3.5-0.5 11.8-6.7 0.6z" fill="#451c15"/>
@@ -63,10 +63,10 @@
 	</g>
 		
 			<defs>
-				<rect id="aa" x="6.5" y="2.5" width="197.3" height="45.2"/>
+				<rect id="a" x="6.5" y="2.5" width="197.3" height="45.2"/>
 			</defs>
 			<clipPath id="z">
-				<use width="100%" height="100%" overflow="visible" xlink:href="#aa"/>
+				<use width="100%" height="100%" overflow="visible" xlink:href="#a"/>
 			</clipPath>
 			<path d="m147.6 12.7c-0.2-1.7-1.6-2.7-3.5-2.7-2.9 0-4 2.6-4 5.1 0 2.6 1.1 5.1 4 5.1 2.1 0 3.3-1.2 3.5-3.2h4.5c-0.2 4.5-3.5 7.1-7.9 7.1-5.2 0-8.6-4-8.6-9s3.4-9 8.6-9c3.7 0 7.8 2.4 7.9 6.5z" clip-path="url(#z)" fill="#7c7f81"/>
 		
@@ -145,7 +145,7 @@
 	
 </g>
 <g transform="matrix(4.4248 0 0 4.4248 -28.761 -11.062)" fill="#b41c1b">
-	<path d="m157.1 28.6h4.7v6.6h4.2 1.5v-6.6h4.7v17.9h-4.7v-7.4h-0.9-4.5-0.3v7.4h-4.7v-7c0-3.6-0.1-7.2 0-10.9z"/>
-	<path d="m174.5 28.6h8.1c0.5 0.1 1 0.1 1.5 0.2 1.6 0.3 3.2 0.9 4.3 2.1 0.8 0.8 1.4 1.8 1.8 2.9s0.6 2.2 0.6 3.3c0 1.2-0.1 2.5-0.4 3.7-0.3 1.1-0.7 2.1-1.4 2.9-0.6 0.8-1.4 1.4-2.2 1.9-1.3 0.7-2.9 1-4.4 1h-7.8v-2.5-10.3c-0.1-1.7-0.1-3.4-0.1-5.2m4.7 4.1v10c1.1 0 2.2 0.1 3.4-0.1 0.9-0.1 1.9-0.4 2.5-1.2 0.7-0.8 0.9-1.9 1-2.9 0.1-0.8 0.1-1.7-0.1-2.5-0.2-0.9-0.6-1.7-1.3-2.3-0.9-0.8-2.1-1-3.3-1.1-0.7 0.1-1.5 0-2.2 0.1z"/>
+	<path d="m157.1 28.6h4.7v6.6h5.7v-6.6h4.7v17.9h-4.7v-7.4h-5.7v7.4h-4.7v-7c0-3.6-0.1-7.2 0-10.9z"/>
+	<path d="m174.5 28.6h8.1c0.5 0.1 1 0.1 1.5 0.2 1.6 0.3 3.2 0.9 4.3 2.1 0.8 0.8 1.4 1.8 1.8 2.9s0.6 2.2 0.6 3.3c0 1.2-0.1 2.5-0.4 3.7-0.3 1.1-0.7 2.1-1.4 2.9-0.6 0.8-1.4 1.4-2.2 1.9-1.3 0.7-2.9 1-4.4 1h-7.8v-12.8c-0.1-1.7-0.1-3.4-0.1-5.2m4.7 4.1v10c1.1 0 2.2 0.1 3.4-0.1 0.9-0.1 1.9-0.4 2.5-1.2 0.7-0.8 0.9-1.9 1-2.9 0.1-0.8 0.1-1.7-0.1-2.5-0.2-0.9-0.6-1.7-1.3-2.3-0.9-0.8-2.1-1-3.3-1.1-0.7 0.1-1.5 0-2.2 0.1z"/>
 </g>
 </svg>

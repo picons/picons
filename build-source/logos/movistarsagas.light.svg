@@ -1,4 +1,4 @@
-<svg version="1.1" viewBox="0 0 800 322.99" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" viewBox="0 0 799.99 322.99" xmlns="http://www.w3.org/2000/svg">
  <defs>
   <clipPath id="c">
    <rect transform="rotate(6)" x="21.311" y="19.007" width="198.37" height="55.4" fill="#fff" stroke="#39331d" stroke-width=".1"/>
@@ -10,7 +10,7 @@
    <rect transform="rotate(6)" x="12.778" y="-66.026" width="198.37" height="55.4" fill="#fff" stroke="#39331d" stroke-width=".1"/>
   </clipPath>
  </defs>
- <g transform="matrix(3.2681 0 0 3.2681 2.0956e-6 3.0521e-6)">
+ <g transform="matrix(3.2681 0 0 3.2681 .00061322 .0022651)">
   <g fill="#e82a2a" stroke-width=".88233">
    <g transform="matrix(1.1272 -.11847 .11847 1.1272 -14.482 74.832)" clip-path="url(#a)">
     <g fill="#e82a2a" stroke-width=".88233" aria-label="SAGAS">

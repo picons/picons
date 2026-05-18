@@ -6,8 +6,8 @@
    <stop stop-color="#e3000a" offset="1"/>
   </linearGradient>
  </defs>
- <g transform="translate(-.00038812)">
-  <g transform="translate(-41.754 171.55)">
+ <g transform="translate(-1e-4 -6.8235e-5)">
+  <g transform="translate(-41.754,171.55)">
    <path d="m66.695-171.55 47.005 98.155v-98.153z" fill="url(#a)"/>
    <g fill="#fff">
     <path d="m57.131-141.08v19.544h-8.1807v-19.544h-7.1962v-6.2576h22.581v6.2576z"/>

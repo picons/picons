@@ -1,7 +1,7 @@
 <svg width="107.16mm" height="35.717mm" version="1.1" viewBox="0 0 107.16 35.717" xmlns="http://www.w3.org/2000/svg">
- <g transform="translate(139.44 -79.57)">
+ <g transform="translate(139.44 -79.568)">
   <g transform="matrix(.99999 0 0 .99999 -233.18 -103.57)">
-   <rect x="93.738" y="183.14" width="107.16" height="35.717" fill="#dc5013" stroke-width=".26473"/>
+   <path d="m93.738 183.14h107.16v35.717h-107.16z" fill="#dc5013" stroke-width=".26473"/>
    <g transform="translate(-1.248e-5,-1.4489e-5)" fill="#fff" fill-rule="evenodd" stroke-width="4.6058">
     <path d="m100.89 212.59h9.4c6.66 0 10.74-3.86 10.74-11.03 0-6.78-4.02-10.86-10.74-10.86h-9.4z"/>
     <path d="m122.51 212.59h24.4v-21.89h-8.39l-3.83 11.97-3.78-11.97h-8.4z"/>

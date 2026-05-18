@@ -11,12 +11,12 @@
 		<stop stop-color="#0B70ED" offset=".6226"/>
 		<stop stop-color="#1DB6F9" offset=".7779"/>
 		<stop stop-color="#1DBBF9" offset=".894"/>
-	</radialGradient><g transform="translate(-29.7 -32.9)" fill="url(#a)">
+	</radialGradient><g transform="translate(-29.7,-32.9)" fill="url(#a)">
 	<path d="m212.9 705.5c-15 0-27.7-4.5-33.7-12.7-6-7.5-7.5-15.7-7.5-43.4v-184.7h68.8v-57.6h-68.8v-121.2h-91.2v121.2h-50.8v57.6h50.9v184.8c0 32.9 0.7 47.9 3.7 62.1 5.2 26.9 18.7 44.1 43.4 53.9 12.7 5.2 19.4 6 53.1 6h65.1v-67.5l-7.5 0.7z"/>
 	
 	<path d="m436.6 397.3c-105.5 0-177.3 77.8-177.3 192.2 0 112.2 76.3 191.5 184.8 191.5 83 0 149.6-45.6 171.3-118.9h-94.2c-16.5 30.7-42.6 46.4-78.5 46.4-51.6 0-83-34.4-89.8-98h266.3c-2.3-133.1-71.1-213.2-182.6-213.2zm-81.5 153.4c7.5-53.1 38.1-83 84.5-83 48.6 0 78.5 29.9 85.3 83z"/>
 	
-	<rect x="672.2" y="272.4" width="91.3" height="498.9"/>
+	<path d="m672.2 272.4h91.3v498.9h-91.3z"/>
 	
 	<path d="m999.8 708.5c-51.6 0-83-34.4-89.8-98h266.3c-2.2-133.1-71.1-213.2-182.5-213.2-105.5 0-177.3 77.8-177.3 192.2 0 112.2 76.3 191.5 184.8 191.5 83 0 149.6-45.6 171.3-118.9h-94.2c-16.5 30.7-42.7 46.4-78.6 46.4zm-3-240.8c48.6 0 78.5 29.9 85.3 83h-169.8c7.5-53.1 38.2-83 84.5-83z"/>
 </g>
@@ -32,7 +32,7 @@
 	<stop stop-color="#1DBBF9" offset=".894"/>
 </radialGradient>
 <circle cx="1357" cy="247.6" r="247.6" fill="url(#d)"/>
-<radialGradient id="c" cx="1412.9" cy="236.93" r="154.64" gradientTransform="translate(-29.7 -32.9)" gradientUnits="userSpaceOnUse">
+<radialGradient id="c" cx="1412.9" cy="236.93" r="154.64" gradientTransform="translate(-29.7,-32.9)" gradientUnits="userSpaceOnUse">
 	<stop stop-color="#E2EBF9" offset="0"/>
 	<stop stop-color="#DDE7F6" offset=".3309"/>
 	<stop stop-color="#CDDBEE" offset=".7435"/>

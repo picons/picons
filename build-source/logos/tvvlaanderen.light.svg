@@ -1,4 +1,4 @@
-<svg width="158.75mm" height="17.156mm" version="1.1" viewBox="0 0 158.75 17.156" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="158.75mm" height="17.157mm" version="1.1" viewBox="0 0 158.75 17.157" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <linearGradient id="l" x1="95.2" x2="151.87" y1="327.17" y2="327.17" gradientUnits="userSpaceOnUse">
    <stop stop-color="red" offset="0"/>
@@ -20,13 +20,13 @@
  <g transform="translate(43.09 -161.42)">
   <path class="a" d="m-40.23 175.71-2.4415 2.439a1.4252 1.4252 0 0 0 1.009 0.4186h10.003l2.8649-2.8576z" fill="url(#m)"/>
   <path class="b" d="m-37.372 172.86-5.7177-5.7153v10.003a1.4252 1.4252 0 0 0 0.4186 1.009l5.2966-5.2966z" fill="url(#n)"/>
-  <polygon class="c" transform="matrix(.24197 0 0 .24197 -43.09 161.43)" points="70.87 47.24 23.62 47.24 11.81 59.05 59.05 59.05" fill="url(#o)"/>
-  <polygon class="d" transform="matrix(.24197 0 0 .24197 -43.09 161.43)" points="23.62 47.24 23.62 23.62 0 23.62" fill="url(#p)"/>
-  <polygon class="e" transform="matrix(.24197 0 0 .24197 -43.09 161.43)" points="0 23.62 47.24 23.62 23.62 0" fill="url(#q)"/>
+  <path class="c" transform="matrix(.24197 0 0 .24197 -43.09 161.43)" d="m11.81 59.05h47.24l11.82-11.81h-47.25z" fill="url(#o)"/>
+  <path class="d" transform="matrix(.24197 0 0 .24197 -43.09 161.43)" d="m0 23.62 23.62 23.62v-23.62z" fill="url(#p)"/>
+  <path class="e" transform="matrix(.24197 0 0 .24197 -43.09 161.43)" d="m23.62 0-23.62 23.62h47.24z" fill="url(#q)"/>
   <path class="f" d="m-26.36 161.84a1.4252 1.4252 0 0 0-1.009-0.41861h-10.003l5.7153 5.7153z" fill="url(#r)"/>
-  <polygon class="g" transform="matrix(.24197 0 0 .24197 -43.09 161.43)" points="70.87 23.62 47.24 47.24 70.87 47.24" fill="url(#s)"/>
+  <path class="g" transform="matrix(.24197 0 0 .24197 -43.09 161.43)" d="m70.87 47.24v-23.62l-23.63 23.62z" fill="url(#s)"/>
   <path class="h" d="m-25.941 162.85a1.4252 1.4252 0 0 0-0.4186-1.009l-5.2967 5.2967v5.7153l5.7153-5.7153z" fill="url(#t)"/>
-  <g transform="translate(-69.548 21.171)" fill="#f9f9f9">
+  <g transform="translate(-69.548,21.171)" fill="#f9f9f9">
    <path class="i" d="m52.598 148.67h-3.2835v-2.6858h9.7029v1.2703c0 0.96787-0.45006 1.4155-1.4155 1.4155h-1.9357v8.7374h-3.0681z"/>
    <path class="i" d="m59.547 145.98h3.4117l2.4947 7.501h0.03146l1.9793-6.146c0.29036-0.91706 0.8856-1.3526 1.8511-1.3526h1.9624l-4.3554 11.423h-2.9399z"/>
    <path class="i" d="m75.51 145.98h3.4117l2.4947 7.501h0.03146l1.9793-6.146c0.29036-0.91706 0.8856-1.3526 1.8511-1.3526h1.9624l-4.3554 11.423h-2.9326z"/>

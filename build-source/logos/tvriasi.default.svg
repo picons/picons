@@ -1,6 +1,6 @@
 <svg version="1.1" viewBox="0 0 800 404.13" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <linearGradient id="f" x1="157.59" x2="352.39" y1="10.47" y2="68.647" gradientTransform="matrix(2.7461 0 0 1.5631 -645.19 47.622)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="f" x1="157.59" x2="352.39" y1="10.47" y2="68.647" gradientTransform="matrix(2.7461,0,0,1.5631,-645.19,47.622)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#9a9999" offset="0"/>
    <stop stop-color="#c8c7c7" offset=".125"/>
    <stop stop-color="#e2e2e2" offset=".25"/>

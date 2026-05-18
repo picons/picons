@@ -1,14 +1,14 @@
-<svg width="211.04mm" height="100.95mm" version="1.1" viewBox="0 0 211.04 100.95" xmlns="http://www.w3.org/2000/svg">
+<svg width="211.04mm" height="100.96mm" version="1.1" viewBox="0 0 211.04 100.96" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(139.23 -192.85)">
   <g fill="#fff">
-   <g transform="matrix(4.5526 0 0 4.3997 40.332 -377.41)" stroke-width=".072964" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="RADIO">
+   <g transform="matrix(4.5526,0,0,4.3997,40.332,-377.41)" stroke-width=".072964" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="RADIO">
     <path d="m-13.67 141h0.87678l-0.75954-1.3101c0.39251-0.1988 0.65759-0.59641 0.65759-1.0348 0-0.67798-0.54544-1.2234-1.2234-1.2234h-1.4273v3.5683h0.81561v-1.1724h0.38741zm-1.0603-2.8036h0.61171c0.22429 0 0.4078 0.1988 0.4078 0.45878 0 0.25997-0.18351 0.45878-0.4078 0.45878h-0.61171z"/>
     <path d="m-10.141 141h0.89207l-1.2132-3.5683h-1.0399l-1.2132 3.5683h0.89207l0.17842-0.56073h1.3254zm-1.2591-1.3254 0.418-1.3101 0.418 1.3101z"/>
     <path d="m-7.5174 137.44h-1.4273v3.5683h1.4273c0.98383 0 1.7332-0.77482 1.7332-1.7841s-0.74934-1.7842-1.7332-1.7842zm0 2.7833h-0.61171v-1.9982h0.61171c0.56073 0 0.94815 0.38741 0.94815 0.99912s-0.38741 0.99912-0.94815 0.99912z"/>
     <path d="m-5.3207 137.44v3.5683h0.81561v-3.5683z"/>
-    <path d="m-2.1943 141.08c1.0246 0 1.8555-0.80541 1.8555-1.8555s-0.8309-1.8555-1.8555-1.8555c-1.0246 0-1.8555 0.80541-1.8555 1.8555s0.8309 1.8555 1.8555 1.8555zm0-0.79522c-0.58112 0-1.0399-0.4231-1.0399-1.0603 0-0.6372 0.45878-1.0603 1.0399-1.0603s1.0399 0.42309 1.0399 1.0603c0 0.63719-0.45878 1.0603-1.0399 1.0603z"/>
+    <path d="m-2.1943 141.08c1.0246 0 1.8555-0.80541 1.8555-1.8555s-0.8309-1.8555-1.8555-1.8555-1.8555 0.80541-1.8555 1.8555 0.8309 1.8555 1.8555 1.8555zm0-0.79522c-0.58112 0-1.0399-0.4231-1.0399-1.0603s0.45878-1.0603 1.0399-1.0603 1.0399 0.42309 1.0399 1.0603c0 0.63719-0.45878 1.0603-1.0399 1.0603z"/>
    </g>
-   <g transform="matrix(4.519 0 0 4.4324 40.332 -377.41)" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="REGIO TV">
+   <g transform="matrix(4.519,0,0,4.4324,40.332,-377.41)" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="REGIO TV">
     <path d="m-13.799 145.56h0.8703l-0.75393-1.3004c0.38961-0.19734 0.65273-0.59201 0.65273-1.0272 0-0.67297-0.54141-1.2144-1.2144-1.2144h-1.4168v3.5419h0.80958v-1.1638h0.38455zm-1.0525-2.783h0.60719c0.22264 0 0.40479 0.19733 0.40479 0.45539s-0.18216 0.45539-0.40479 0.45539h-0.60719z" stroke-width=".072425"/>
     <path d="m-11.739 144.78v-0.62743h1.265v-0.7691h-1.265v-0.58695h1.3915v-0.77923h-2.2011v3.5419h2.2264v-0.77923z" stroke-width=".072425"/>
     <path d="m-6.8563 143.59h-1.3849v0.70839h0.84315v0.49119c-0.2647 0.13051-0.57795 0.0553-0.80707 0.0553-0.61346 0-0.99236-0.44021-0.99236-1.0423 0-0.62237 0.39695-1.0626 0.92921-1.0626 0.35635 0 0.64053 0.18216 0.77134 0.41491l0.61346-0.39467c-0.26613-0.47563-0.77585-0.80959-1.3803-0.80959-0.92921 0-1.6554 0.81971-1.6554 1.8469 0 1.017 0.7127 1.8368 1.7051 1.8368 0.88411 0 1.3578-0.25596 1.3578-0.25596z" stroke-width=".068382"/>
@@ -19,7 +19,7 @@
      <path d="m4.005 145.56h1.0322l1.1537-3.5419h-0.88548l-0.78429 2.6058-0.78429-2.6058h-0.88548z"/>
     </g>
    </g>
-   <g transform="matrix(4.6007 0 0 4.3537 40.332 -377.41)" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="INTERNET">
+   <g transform="matrix(4.6007,0,0,4.3537,40.332,-377.41)" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="INTERNET">
     <path d="m-15.318 150.56v3.606h0.82422v-3.606z" stroke-width=".073734"/>
     <path d="m-11.786 150.56v1.9575l-1.2549-1.9575h-0.83854v3.606h0.85887v-1.9575l1.255 1.9575h0.83849v-3.606z" stroke-width=".075268"/>
     <g stroke-width=".073734">

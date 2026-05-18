@@ -19,11 +19,11 @@
   <path d="m-67.301 171.97 0.88919-1.8835h4.2799l0.82992 1.8835h1.8021l-3.7821-8.4996h-1.8732l-3.8413 8.4996zm3.1181-6.9021 1.3753 3.2901h-2.8099l1.4228-3.2901z" stroke-width=".29721"/>
   <path d="m-64.391 161.39-0.48974 1.4203 1.4693-9e-3 0.77547-1.4203z" stroke-width=".847"/>
   <path d="m-43.615 161.38-0.48974 1.4203 1.4693-9e-3 0.77546-1.4203z" stroke-width=".847"/>
-  <rect x="-178.32" y="157.08" width="22.345" height="4.9998" fill="#5fbef2" fill-rule="evenodd"/>
-  <rect x="-107.1" y="157.08" width="22.345" height="4.9998" fill="#5fbef2" fill-rule="evenodd"/>
-  <rect x="-152.88" y="157.08" width="12.246" height="4.9998" fill="#edd840" fill-rule="evenodd"/>
-  <rect x="-137.66" y="157.08" width="12.246" height="4.9998" fill="#b21212" fill-rule="evenodd"/>
-  <rect x="-122.38" y="157.08" width="12.246" height="4.9998" fill="#7de01e" fill-rule="evenodd"/>
-  <ellipse cx="-131.47" cy="159.65" rx="33.515" ry="33.607" fill="none" stroke="#000" stroke-opacity=".98792" stroke-width="5.0966" style="paint-order:stroke markers fill"/>
+  <path d="m-178.32 157.08h22.345v4.9998h-22.345z" fill="#5fbef2" fill-rule="evenodd"/>
+  <path d="m-107.1 157.08h22.345v4.9998h-22.345z" fill="#5fbef2" fill-rule="evenodd"/>
+  <path d="m-152.88 157.08h12.246v4.9998h-12.246z" fill="#edd840" fill-rule="evenodd"/>
+  <path d="m-137.66 157.08h12.246v4.9998h-12.246z" fill="#b21212" fill-rule="evenodd"/>
+  <path d="m-122.38 157.08h12.246v4.9998h-12.246z" fill="#7de01e" fill-rule="evenodd"/>
+  <path d="m-97.955 159.65a33.515 33.607 0 0 1-33.515 33.607 33.515 33.607 0 0 1-33.515-33.607 33.515 33.607 0 0 1 33.515-33.607 33.515 33.607 0 0 1 33.515 33.607z" fill="none" stroke="#000" stroke-opacity=".98792" stroke-width="5.0966" style="paint-order:stroke markers fill"/>
  </g>
 </svg>

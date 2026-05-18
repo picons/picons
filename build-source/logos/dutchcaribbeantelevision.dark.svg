@@ -1,5 +1,5 @@
-<svg version="1.1" viewBox="0 0 800 642.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
- <g transform="matrix(2.6761 0 0 2.6761 -381.89 -308.63)">
+<svg version="1.1" viewBox="0 0 800.27 642.48" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(2.6761 0 0 2.6761 -381.88 -308.66)">
   <defs>
    <linearGradient id="b" x1="319.84" x2="319.84" y1="157.19" y2="323.12" gradientTransform="scale(.90914 1.0999)" gradientUnits="userSpaceOnUse">
     <stop stop-color="#4bb4e3" offset="0"/>
@@ -16,7 +16,7 @@
   </defs>
   <path d="m168.36 198.93 33.448 31.9c9.8575-7.8588 19-14.904 38.359-13.585 17.278 1.1778 36.162 9.2574 44.248 34.236l-0.5905-65.996c-12.476-9.1468-34.101-13.778-52.055-13.609-27.582 0.2605-47.668 12.06-63.41 27.053z" fill="url(#a)"/>
  </g>
- <g transform="scale(.90013 1.1109)" stroke-width="5.0451" aria-label="TV">
+ <g transform="matrix(.90013 0 0 1.1109 .010326 -.027169)" stroke-width="5.0451" aria-label="TV">
   <path d="m733.27 313.53h-45.82v118.34h-37.838v-118.34h-45.82v-28.379h129.48z"/>
   <path d="m889.05 285.15-53.505 146.72h-42.371l-53.505-146.72h39.71l35.473 103.07 35.473-103.07z"/>
  </g>

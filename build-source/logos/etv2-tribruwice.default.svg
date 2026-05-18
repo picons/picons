@@ -1,10 +1,10 @@
-<svg version="1.1" viewBox="0 0 760.31 800" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg version="1.1" viewBox="0 0 760.28 799.99" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Artboard</title>
  <desc>Created with Sketch.</desc>
  <defs>
-  <polygon id="a" points="563.27 2e-4 563.27 592.68 0 592.68 0 2e-4"/>
+  <polygon id="a" points="563.27 592.68 0 592.68 0 2e-4 563.27 2e-4"/>
  </defs>
- <g transform="matrix(1.3498 0 0 1.3498 -.83382 -.21815)" fill="none" fill-rule="evenodd">
+ <g transform="matrix(1.3498 0 0 1.3498 -.85811 -.21814)" fill="none" fill-rule="evenodd">
   <g transform="translate(.61773 .16141)">
    <path d="m91 45h381v497h-381z" fill="#fff"/>
    <mask id="b" fill="#ffffff">

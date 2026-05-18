@@ -1,12 +1,12 @@
-<svg Googl="true" version="1.1" viewBox="0 0 1160.3 423.99" xmlns="http://www.w3.org/2000/svg">
+<svg Googl="true" version="1.1" viewBox="0 0 1160.3 424" xmlns="http://www.w3.org/2000/svg">
  <desc>Created with Sketch.</desc>
- <path d="m735.74 0h424.56v423.99h-424.56z" fill="#e0e0e0" fill-rule="evenodd"/>
- <g fill="#0078bc" fill-rule="evenodd">
+ <path d="m735.74 0.01h424.56v423.99h-424.56z" fill="#e0e0e0" fill-rule="evenodd"/>
+ <g transform="translate(.004 .01)" fill="#0078bc" fill-rule="evenodd">
   <path d="m784.22 48.411h250.98v77.302h-250.98z"/>
   <path d="m860.84 173.34h174.36v77.302h-174.36z"/>
   <path d="m860.84 299.06h174.36v77.302h-174.36z"/>
  </g>
- <g fill-rule="evenodd">
+ <g transform="translate(.004 .01)" fill-rule="evenodd">
   <path d="m784.22 173.34h77.405v203.01h-77.405z" fill="#1d4287"/>
   <path d="m1035.2 48.411h77.405v327.95h-77.405z" fill="#1d4287"/>
   <path d="m106.33 209.26c64.113 0 99.297-28.89 99.297-81.986 0-52.315-32.057-81.206-89.915-81.206h-62.549v163.19zm-53.167 213.16h-53.167v-422.43h115.72c89.915 0 144.65 46.069 144.65 122.59 0 47.63-21.892 85.891-60.986 106.19-20.329 10.932-39.093 14.836-78.187 17.959l164.19 175.69h-68.022l-164.19-177.25z" fill="#e0e0e0"/>

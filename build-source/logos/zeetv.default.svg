@@ -1,61 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   width="330"
-   height="200"
-   viewBox="0 0 87.3125 52.91667"
-   version="1.1"
-   id="svg654"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs651">
-    <linearGradient
-       x1="0"
-       y1="0"
-       x2="1"
-       y2="0"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(69.358864,42.33683,42.33683,-69.358864,1191.1275,721.68524)"
-       spreadMethod="pad"
-       id="linearGradient306">
-      <stop
-         style="stop-opacity:1;stop-color:#e5c317"
-         offset="0"
-         id="stop302" />
-      <stop
-         style="stop-opacity:1;stop-color:#e54017"
-         offset="1"
-         id="stop304" />
-    </linearGradient>
-  </defs>
-  <g
-     id="layer1">
-    <g
-       id="g290"
-       transform="matrix(0.62795004,0,0,-0.62728688,-704.23234,492.45432)">
-      <g
-         id="g292">
-        <g
-           id="g298">
-          <g
-             id="g300">
-            <path
-               d="m 1208.764,721.786 v 38.021 h 12.593 v 4.157 h -30.248 v -4.157 h 12.593 v -38.021 z m 35.911,0 15.847,42.178 h -5.363 l -13.437,-36.815 -13.316,36.815 h -5.483 l 15.847,-42.178 z"
-               style="fill:url(#linearGradient306);stroke:none"
-               id="path308" />
-          </g>
-        </g>
-      </g>
-    </g>
-    <g
-       id="g310"
-       transform="matrix(0.62795004,0,0,-0.62728688,38.86634,3.7310722e-4)">
-      <path
-         d="m 0,0 h -14.399 -45.874 v -1.955 -0.977 h 41.358 l -42.979,-81.426 h 14.399 45.874 v 1.955 0.978 h -41.358 z"
-         style="fill:#b4b4bf;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path312" />
-    </g>
+<svg width="330" height="200" version="1.1" viewBox="0 0 87.312 52.917" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient id="a" x2="1" gradientTransform="matrix(69.359 42.337 42.337 -69.359 1191.1 721.69)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#e5c317" offset="0"/>
+   <stop stop-color="#e54017" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g transform="translate(-2.2424e-7 -.00037311)">
+  <g transform="matrix(.62795 0 0 -.62729 -704.23 492.45)">
+   <path d="m1208.8 721.79v38.021h12.593v4.157h-30.248v-4.157h12.593v-38.021zm35.911 0 15.847 42.178h-5.363l-13.437-36.815-13.316 36.815h-5.483l15.847-42.178z" fill="url(#a)"/>
   </g>
+  <g transform="matrix(.62795 0 0 -.62729 38.866 .00037311)">
+   <path d="m0 0h-60.273v-2.932h41.358l-42.979-81.426h60.273v2.933h-41.358z" fill="#b4b4bf"/>
+  </g>
+ </g>
 </svg>

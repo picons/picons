@@ -1,23 +1,17 @@
 <svg version="1.1" viewBox="0 0 800 270.25" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-<style type="text/css">
-	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FA0000;}
-	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#00AF2C;}
-	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#0CAAED;}
-</style>
 <g transform="scale(1.25)">
 	
 		
-			<path class="st0" d="m0 0h200v112.5h-200z" clip-rule="evenodd" fill="#fa0000" fill-rule="evenodd"/>
-			<path class="st1" d="m108.7 54c8.6 0 12.8-2.8 12.8-8.4s-4.2-8.3-12.8-8.3h-37.7v16.7zm-51.6-28.1h53.4c16.2 0 25.3 7.3 25.3 19.5 0 10.5-6.8 17.5-18.3 19.2l26.2 22.1h-20.1l-24.7-21.3h-27.9v21.3h-13.9z"/>
+			<path d="m0 0h200v112.5h-200z" clip-rule="evenodd" fill="#FA0000" fill-rule="evenodd"/>
+			<path d="m108.7 54c8.6 0 12.8-2.8 12.8-8.4s-4.2-8.3-12.8-8.3h-37.7v16.7zm-51.6-28.1h53.4c16.2 0 25.3 7.3 25.3 19.5 0 10.5-6.8 17.5-18.3 19.2l26.2 22.1h-20.1l-24.7-21.3h-27.9v21.3h-13.9z" fill="#fff"/>
 		
 		<g clip-rule="evenodd" fill-rule="evenodd">
-			<path class="st2" d="m440 0h200v112.5h-200z" fill="#00af2c"/>
-			<path class="st1" d="m516.2 74.7h61.8v11.9h-75.6v-60.7h13.8z" fill="#fff"/>
-		</g>
-		<g clip-rule="evenodd" fill-rule="evenodd">
-			<path class="st3" d="m220.1 0h199.8v112.5h-199.8z" fill="#0caaed"/>
-			<path class="st1" d="m277.9 25.9h84.2v11.9h-35.2v48.8h-13.8v-48.8h-35.2z" fill="#fff"/>
+			<path d="m440 0h200v112.5h-200z" fill="#00AF2C"/>
+			<path d="m516.2 74.7h61.8v11.9h-75.6v-60.7h13.8z" fill="#fff"/>
+		
+		
+			<path d="m220.1 0h199.8v112.5h-199.8z" fill="#0CAAED"/>
+			<path d="m277.9 25.9h84.2v11.9h-35.2v48.8h-13.8v-48.8h-35.2z" fill="#fff"/>
 		</g>
 	
 	

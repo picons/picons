@@ -1,11 +1,11 @@
-<svg width="230.52mm" height="71.113mm" version="1.1" viewBox="0 0 230.52 71.113" xmlns="http://www.w3.org/2000/svg">
+<svg width="230.52mm" height="71.115mm" version="1.1" viewBox="0 0 230.52 71.115" xmlns="http://www.w3.org/2000/svg">
  <defs>
   <clipPath id="a">
    <path d="m322.38 611.08h28.687v10.205h-28.687z"/>
   </clipPath>
  </defs>
  <g transform="translate(246.79 -111.01)">
-  <g transform="translate(-22.276 -46.254)">
+  <g transform="translate(-22.276,-46.254)">
    <g transform="matrix(.75591 0 0 .75591 -322.97 151.69)">
     <g transform="matrix(9.2231,0,0,-9.2231,-2843.1,5737.5)">
      <path d="m335.52 614.13h2.8113v3.041h-2.8113z" fill="#ed1f24" stroke-width=".96087"/>

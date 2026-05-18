@@ -1,15 +1,15 @@
-<svg width="61.981mm" height="53.303mm" version="1.1" viewBox="0 0 61.981 53.303" xmlns="http://www.w3.org/2000/svg">
+<svg width="61.979mm" height="53.31mm" version="1.1" viewBox="0 0 61.979 53.31" xmlns="http://www.w3.org/2000/svg">
  <defs>
   <mask id="a" x="0" y="-307.295" width="368.545" height="203.974" maskUnits="userSpaceOnUse">
    <g filter="url(#b)">
-    <polygon points="0 -103.32 0 -307.29 368.55 -307.29 368.55 -103.32" fill="#fff"/>
+    <polygon points="0 -307.29 368.55 -307.29 368.55 -103.32 0 -103.32" fill="#fff"/>
    </g>
   </mask>
   <filter id="b" x="0" y="-307.3" width="368.55" height="203.97" filterUnits="userSpaceOnUse">
    <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
   </filter>
  </defs>
- <g transform="translate(-85.841 -120.55)">
+ <g transform="translate(-85.841 -120.54)">
   <g fill="#e1ff00">
    <path transform="matrix(.061981 0 0 .061981 85.841 139.59)" d="m359.2-307.3h-277.35l-81.847 81.874v112.77c3.654 3.655 5.702 5.699 9.354 9.328h174.92v-40.229h174.92c3.654-3.658 5.699-5.705 9.352-9.362v-145.03c-3.649-3.647-5.693-5.693-9.351-9.352" mask="url(#a)"/>
    <g stroke-width=".061981">

@@ -1,24 +1,24 @@
-<svg width="600" height="163.41" version="1.1" viewBox="0 0 158.75 43.234862" xmlns="http://www.w3.org/2000/svg">
+<svg width="600.02" height="163.4" version="1.1" viewBox="0 0 158.75 43.232" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <linearGradient id="d" x2="1" gradientTransform="matrix(15.254 -44.768 44.768 15.254 58.736 201.01)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="d" x2="1" gradientTransform="matrix(15.254,-44.768,44.768,15.254,58.736,201.01)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#2a271e" offset="0"/>
    <stop stop-color="#2a271e" offset=".0058992"/>
    <stop stop-color="#6f5d55" offset=".92024"/>
    <stop stop-color="#6f5d55" offset="1"/>
   </linearGradient>
-  <linearGradient id="c" x2="1" gradientTransform="matrix(15.254 -44.767 44.767 15.254 53.085 199.08)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="c" x2="1" gradientTransform="matrix(15.254,-44.767,44.767,15.254,53.085,199.08)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#2a271e" offset="0"/>
    <stop stop-color="#2a271e" offset=".0058992"/>
    <stop stop-color="#6f5d55" offset=".92024"/>
    <stop stop-color="#6f5d55" offset="1"/>
   </linearGradient>
-  <linearGradient id="b" x2="1" gradientTransform="matrix(17.98 -52.768 52.768 17.98 52.659 207.17)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="b" x2="1" gradientTransform="matrix(17.98,-52.768,52.768,17.98,52.659,207.17)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#2a271e" offset="0"/>
    <stop stop-color="#2a271e" offset=".0058992"/>
    <stop stop-color="#6f5d55" offset=".92024"/>
    <stop stop-color="#6f5d55" offset="1"/>
   </linearGradient>
-  <linearGradient id="a" x2="1" gradientTransform="matrix(21.554 -35.481 35.481 21.554 37.479 188.24)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="a" x2="1" gradientTransform="matrix(21.554,-35.481,35.481,21.554,37.479,188.24)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#2a271e" offset="0"/>
    <stop stop-color="#2a271e" offset=".0058992"/>
    <stop stop-color="#6f5d55" offset=".92024"/>

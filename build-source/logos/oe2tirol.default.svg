@@ -5,8 +5,8 @@
    <stop stop-color="#b62025" offset="1"/>
   </linearGradient>
  </defs>
- <g transform="matrix(.75265 0 0 .75265 96.737 -88.209)">
-  <rect x="19.142" y="117.2" width="63.273" height="63.273" fill="url(#a)"/>
+ <g transform="matrix(.75265 0 0 .75265 96.737 -88.208)">
+  <path d="m19.142 117.2h63.273v63.273h-63.273z" fill="url(#a)"/>
   <g transform="translate(.36196 -.0031669)">
    <path d="m-128.89 117.2h147.67v63.273h-147.67z" clip-rule="evenodd" fill="#d21b09" fill-rule="evenodd" stroke-width=".077731"/>
    <g fill="#fff">
@@ -18,5 +18,5 @@
    </g>
   </g>
  </g>
- <path class="logo" d="m123.89 10.569v6.1997h7.7496v20.29h6.622v-20.29h7.7496v-6.1997z" fill="#fff" stroke-width=".83275"/>
+ <path class="logo" d="m123.89 10.57v6.1997h7.7496v20.29h6.622v-20.29h7.7496v-6.1997z" fill="#fff" stroke-width=".83275"/>
 </svg>

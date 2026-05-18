@@ -1,11 +1,11 @@
-<svg version="1.1" viewBox="0 0 779.8 219.64" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" viewBox="0 0 779.81 219.64" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <linearGradient id="b" x2="1" gradientTransform="matrix(10.539 86.297 -86.297 10.539 113.27 388.82)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="b" x2="1" gradientTransform="matrix(10.539,86.297,-86.297,10.539,113.27,388.82)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#FFF" offset="0"/>
    <stop stop-color="#b8bab8" offset=".91327"/>
    <stop stop-color="#b8bab8" offset="1"/>
   </linearGradient>
-  <radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="matrix(-1.4629e-5 323.07 -581.92 -2.56e-5 172.57 132.24)" gradientUnits="userSpaceOnUse">
+  <radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="matrix(-1.4629e-5,323.07,-581.92,-2.56e-5,172.57,132.24)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#28292b" offset="0"/>
    <stop stop-color="#040606" offset="1"/>
   </radialGradient>

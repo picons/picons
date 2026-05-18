@@ -1,5 +1,5 @@
-<svg width="521.02" height="187.19" version="1.1" viewBox="0 0 137.85 49.527" xmlns="http://www.w3.org/2000/svg">
- <g transform="translate(-88.219 -115.65)">
+<svg width="521.03" height="187.22" version="1.1" viewBox="0 0 137.85 49.535" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(-88.22 -115.64)">
   <path d="m174.19 151.47v13.701h20.874v-13.701zm2.1336 2.0085h2.1608v3.6477h2.7923v-3.6477h2.1608v9.623h-2.1608v-4.1054h-2.7923v4.1054h-2.1608zm9.3375 0h2.4218c3.6603 0 4.9558 2.0737 4.9558 4.8088 0 2.7129-1.4298 4.8142-4.3066 4.8142h-3.0709zm2.159 1.8706-1e-3 3e-3h1e-3zm0 3e-3v5.8757h0.76761c1.4 0 2.2427-0.8973 2.2427-3.1526 0-1.86-0.79313-2.7231-2.4467-2.7231z" fill="#fff" fill-rule="evenodd"/>
   <path d="m88.219 165.17h34.565v-49.527h-34.565zm4.9801-44.539h24.585v39.552h-24.582z" fill="#ffd800" stroke-width=".23604"/>
   <g fill="#fff" stroke-width=".23325">
@@ -27,7 +27,7 @@
    <path d="m165.28 165.17h2.3127v-13.608h-2.3127z"/>
   </g>
  </g>
- <g transform="matrix(.8845 0 0 1.1306 5.9574 -24.621)" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="S">
+ <g transform="matrix(.8845 0 0 1.1306 5.9563 -24.614)" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="S">
   <path d="m73.785 65.584c2.9395 0 4.6726-1.3253 4.6726-3.4832 0-3.7211-6.015-3.0585-6.015-5.2504 0-1.0365 0.95152-1.5632 2.1749-1.5632 1.0195 0 1.954 0.30585 2.8376 0.81559l0.56072-1.5972c-0.96851-0.5947-2.1579-0.91754-3.4663-0.91754-2.5657 0-4.3668 1.1894-4.3668 3.3983 0 3.6702 5.998 2.8885 5.998 5.2504 0 1.1044-1.1214 1.6482-2.4298 1.6482-1.2404 0-2.2938-0.28886-3.3983-0.86656l-0.56072 1.6142c1.0195 0.61169 2.3618 0.95152 3.993 0.95152z" fill="#fff"/>
  </g>
 </svg>

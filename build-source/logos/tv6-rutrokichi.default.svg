@@ -1,6 +1,6 @@
-<svg version="1.1" viewBox="0 0 523.01 800" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg version="1.1" viewBox="0 0 523.02 800.01" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <linearGradient id="a" x1="2680.6" x2="1825.7" y1="3258.1" y2="1846.3" gradientTransform="matrix(.15036 0 0 .15036 -.20331 -.17562)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="a" x1="2680.6" x2="1825.7" y1="3258.1" y2="1846.3" gradientTransform="matrix(.15036 0 0 .15036 -.20011 -.17562)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#fe0000" offset="0"/>
    <stop stop-color="#f80101" offset=".27326"/>
    <stop stop-color="#e90303" offset=".53155"/>

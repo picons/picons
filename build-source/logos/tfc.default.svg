@@ -1,5 +1,5 @@
-<svg enable-background="new 0 0 2500 1003" version="1.1" viewBox="0 0 800 317.19" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g transform="matrix(.3327 0 0 .3327 -10.849 -8.2436)">
+<svg enable-background="new 0 0 2500 1003" version="1.1" viewBox="0 0 799.99 317.19" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="matrix(.3327 0 0 .3327 -10.85 -8.2443)">
 	<defs>
 		<rect id="j" x="32.609" y="24.779" width="2434.8" height="953.44"/>
 	</defs>
@@ -18,7 +18,7 @@
 		<use overflow="visible" xlink:href="#h"/>
 	</clipPath>
 	
-		<linearGradient id="f" x1="999.42" x2="1045.3" y1="816.5" y2="816.5" gradientTransform="matrix(4.1075 -7.1144 -7.1144 -4.1075 3924.8 11145)" gradientUnits="userSpaceOnUse">
+		<linearGradient id="f" x1="999.42" x2="1045.3" y1="816.5" y2="816.5" gradientTransform="matrix(4.1075,-7.1144,-7.1144,-4.1075,3924.8,11145)" gradientUnits="userSpaceOnUse">
 		<stop stop-color="#F7941D" offset="0"/>
 		<stop stop-color="#FABC11" offset=".1794"/>
 		<stop stop-color="#FEE305" offset=".3799"/>
@@ -38,7 +38,7 @@
 		<use overflow="visible" xlink:href="#e"/>
 	</clipPath>
 	
-		<linearGradient id="c" x1="970.64" x2="1016.6" y1="861.09" y2="861.09" gradientTransform="matrix(8.2662 -14.317 -14.317 -8.2662 6467.1 21683)" gradientUnits="userSpaceOnUse">
+		<linearGradient id="c" x1="970.64" x2="1016.6" y1="861.09" y2="861.09" gradientTransform="matrix(8.2662,-14.317,-14.317,-8.2662,6467.1,21683)" gradientUnits="userSpaceOnUse">
 		<stop stop-color="#F7941D" offset="0"/>
 		<stop stop-color="#FABC11" offset=".1794"/>
 		<stop stop-color="#FEE305" offset=".3799"/>
@@ -111,7 +111,7 @@
 		<use overflow="visible" xlink:href="#l"/>
 	</clipPath>
 	
-		<linearGradient id="i" x1="977.03" x2="1023" y1="862.39" y2="862.39" gradientTransform="matrix(7.8229 -11.148 -9.9901 -5.9614 2994.9 16618)" gradientUnits="userSpaceOnUse">
+		<linearGradient id="i" x1="977.03" x2="1023" y1="862.39" y2="862.39" gradientTransform="matrix(7.8229,-11.148,-9.9901,-5.9614,2994.9,16618)" gradientUnits="userSpaceOnUse">
 		<stop stop-color="#F7941D" offset="0"/>
 		<stop stop-color="#FABC11" offset=".1794"/>
 		<stop stop-color="#FEE305" offset=".3799"/>

@@ -1,12 +1,13 @@
-<svg version="1.1" viewBox="0 0 600.75 108.97" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" viewBox="0 0 600.08 108.27" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <linearGradient id="a" x1="875.94" x2="875.94" y1="353.36" y2="439.31" gradientTransform="matrix(.64823 0 0 .64823 68.998 -175.6)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#ae1c28" offset="0"/>
    <stop stop-color="#fff" offset=".52353"/>
    <stop stop-color="#21468b" offset="1"/>
   </linearGradient>
+  <linearGradient id="b" x1="875.94" x2="875.94" y1="353.36" y2="439.31" gradientTransform="matrix(.64823 0 0 .64823 68.998 -175.6)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
  </defs>
- <g transform="matrix(1.0738 0 0 1.0738 -.0086414 -.003004)" stroke-width=".2464">
+ <g transform="matrix(1.0738 0 0 1.0738 .019232 -.00085904)" stroke-width=".2464">
   <path d="m-0.01691 63.438 35.944 0.0012v-13.901l-19.003-6.14e-4v-49.521h-16.942z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
   <path d="m37.431 63.426h16.942v-63.422h-16.942z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
   <path d="m56.707 63.438h18.113v-36.838l28.684 36.839 15.901-0.0012v-63.422h-18.113v36.369l-28.288-36.384-16.298 0.014918z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
@@ -14,7 +15,7 @@
   <path d="m216.75 63.438h18.332l-24.587-63.422h-17.984l-24.326 63.422h18.244l4.1449-11.392h21.862zm-9.0648-23.935h-12.511l6.1107-16.899z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
   <path d="m243.63 63.438c5.821 0 10.564-4.4196 10.564-9.9176 0-5.4976-4.743-9.9176-10.672-9.9176-5.821 0-10.564 4.4196-10.564 9.9176 0 5.4976 4.7431 9.9176 10.672 9.9176z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
  </g>
- <g fill="url(#a)" stroke="#000" stroke-width=".1">
+ <g transform="translate(.027873 .002145)" fill="url(#b)" stroke="#000" stroke-width=".1">
   <path d="m0.95978 107.19h11.081v-52.763h-11.081z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
   <path d="m18.535 107.19h10.347v-12.329l4.3297-4.4764 9.3196 16.805h12.329l-14.236-23.923 13.796-15.191h-12.622l-12.915 14.897v-28.546h-10.347z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
   <path d="m73.789 107.19h11.081v-23.629h20.621v23.629h11.008v-52.763h-11.008v19.96h-20.621v-19.96h-11.081z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>

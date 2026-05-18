@@ -1,4 +1,4 @@
-<svg width="211.67mm" height="75.974mm" version="1.1" viewBox="0 0 211.67 75.974" xmlns="http://www.w3.org/2000/svg">
+<svg width="211.67mm" height="75.984mm" version="1.1" viewBox="0 0 211.67 75.984" xmlns="http://www.w3.org/2000/svg">
  <defs>
   <clipPath id="a">
    <g transform="matrix(1.0084 0 0 .99171 -83.155 -141.08)" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="RTW FM">
@@ -10,7 +10,7 @@
    </g>
   </clipPath>
  </defs>
- <g transform="translate(-83.155 -141.08)">
+ <g transform="translate(-83.158 -141.08)">
   <path d="m94.55 141.08 188.18 0.084 0.71823 75.89-187.4 4e-5c-8.419-20.179-1.4961-75.974-1.4961-75.974z" fill="#fbfbfb" opacity=".97"/>
   <path d="m236.08 217.06c20.478-7.0962 34.331-20.346 41.954-38.51 3.8386-9.1464 4.6963-13.889 4.6963-25.964v-11.415c1.5673 2.0666 7.3572 13.627 8.5921 17.264 6.2162 18.31 4.0711 38.83-5.7626 55.127l-2.1112 3.4988-24.684-0.0526zm-142.96-4.5264c-7.0975-11.807-10.006-22.065-9.9613-35.127 0.04181-12.136 4.098-25.986 10.101-34.488l1.2938-1.8327 24.446 0.0418 24.446 0.0422-3.9819 1.3068c-23.138 7.596-39.629 26.921-44.027 51.591-1.1078 6.215-1.2291 14.75-0.26901 18.915 0.37032 1.6062 1.0005 3.9581 0.88098 4.0776-0.11964 0.11964-1.6714-2.4344-2.9292-4.5267z" fill="#f9c703" stroke-width=".66644"/>
   <g transform="scale(1.0084 .99171)" fill="#4f5253" stroke-width=".67201" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="RTW FM">
@@ -21,7 +21,7 @@
    <path d="m259.85 161.46v37.115h-8.4362v-25.056l-3.3699 25.056h-5.9833l-3.5533-24.483v24.483h-8.4362v-37.115h12.494q0.55019 3.347 1.1692 7.886l1.3296 9.4449 2.2008-17.331z"/>
   </g>
  </g>
- <g>
-  <path transform="translate(1e-6 1.6888e-6)" d="m30.29 12.096h153.22v24.568h-153.22z" clip-path="url(#a)" fill="#101516" opacity=".97"/>
+ <g transform="translate(-.0031931)">
+  <path d="m30.29 12.096h153.22v24.568h-153.22z" clip-path="url(#a)" fill="#101516" opacity=".97"/>
  </g>
 </svg>

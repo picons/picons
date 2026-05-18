@@ -1,15 +1,14 @@
-<svg width="212.23mm" height="164.39mm" version="1.1" viewBox="0 0 212.23 164.39" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="212.23mm" height="164.4mm" version="1.1" viewBox="0 0 212.23 164.4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <linearGradient id="a">
    <stop stop-color="#fabf09" offset="0"/>
    <stop stop-color="#f57b0e" offset="1"/>
   </linearGradient>
-  <radialGradient id="d" cx="39.128" cy="26.192" r="20.517" gradientTransform="matrix(3.2084 0 0 4.0062 -72.642 -76.861)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <radialGradient id="d" cx="39.128" cy="26.192" r="20.517" gradientTransform="matrix(3.2084,0,0,4.0062,-72.642,-76.861)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
   <radialGradient id="c" cx="39.128" cy="26.192" r="20.517" gradientTransform="matrix(.73182 0 0 .91786 -50.229 -41.523)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
   <radialGradient id="b" cx="39.128" cy="26.192" r="20.517" gradientTransform="matrix(.73182 0 0 .91786 -74.3 48.196)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
  </defs>
- <g transform="translate(1.3946 -66.21)"></g>
- <g transform="translate(73.501 56.63)">
+ <g transform="translate(73.5 56.634)">
   <path d="m14.207-56.149 117.39 74.113c3.3414 2.1096 7.133 3.1813 7.133 7.133v0.61842c0 3.9517-3.7957 5.0168-7.133 7.133l-117.39 74.434c-3.3373 2.1161-7.133-3.1813-7.133-7.133v-149.17c0-3.9517 3.7915-9.2426 7.133-7.133z" fill="url(#d)" stroke-width="3.1992"/>
   <path d="m-72.939 7.0726v43.081h13.095v-13.132c1.2414 0.05921 2.4232 0.08881 3.5445 0.08881 3.9645 0 7.3486-0.3351 10.152-1.0053 2.8233-0.68986 5.0759-1.7247 6.7578-3.1044 1.6819-1.3994 2.9033-3.0551 3.6641-4.9671 0.78091-1.9316 1.1713-4.2181 1.1713-6.8592 0-2.0302-0.26031-3.7746-0.78091-5.2332-0.52059-1.4783-1.3916-2.789-2.613-3.9322-1.2214-1.1629-2.8733-2.0893-4.9556-2.7792-2.0624-0.70957-4.6155-1.2418-7.6587-1.5966-3.0235-0.3745-6.6378-0.56171-10.843-0.56168l-11.533 3.19e-5zm13.095 20.122v-10.471l6.3077-0.05793c3.3197 0.09327 5.7608-0.02228 6.8286 3.0619 0.14018 0.59131 0.21026 1.291 0.21026 2.0992 0 0.80812-0.10012 1.5374-0.30035 2.1879-0.91556 3.1572-4.0133 3.2599-6.8286 3.2386l-6.2178-0.0573z" stroke="#fff19e" stroke-width="1.123"/>
   <path d="m-27.189 7.4228v42.728l31.859 1.59e-4v-10.142h-19.083v-32.586z" stroke="#fff19e" stroke-width="1.123"/>

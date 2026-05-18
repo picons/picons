@@ -4,8 +4,8 @@
    <stop stop-color="#fff" offset="0"/>
    <stop stop-color="#fff" stop-opacity=".25" offset="1"/>
   </linearGradient>
-  <linearGradient id="c" x1="365.34" x2="359.49" y1="-1061.3" y2="-893.87" gradientTransform="scale(.294)" xlink:href="#a"/>
-  <linearGradient id="b" x1="2469.3" x2="2460.6" y1="-996.65" y2="-747.64" gradientTransform="matrix(.294 0 0 -.294 0 -234.65)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="c" x1="365.34" x2="359.49" y1="-1061.3" y2="-893.87" gradientTransform="matrix(.294 0 0 .294 .0035 0)" xlink:href="#a"/>
+  <linearGradient id="b" x1="2469.3" x2="2460.6" y1="-996.65" y2="-747.64" gradientTransform="matrix(.294 0 0 -.294 .0035 -234.65)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
  </defs>
  <path d="m1353.8 0h-151.24a9.799 9.799 0 0 0-9.7932 9.7931v127.41a9.7873 9.7873 0 0 0 9.7932 9.7931h151.24a9.7873 9.7873 0 0 0 9.7931-9.7931v-127.41a9.799 9.799 0 0 0-9.7931-9.7931m0 2.94a6.8473 6.8473 0 0 1 6.8443 6.8443v127.42a6.862 6.862 0 0 1-6.8443 6.8531h-151.24a6.8767 6.8767 0 0 1-6.862-6.862v-127.4a6.862 6.862 0 0 1 6.862-6.8531h151.24" fill="#e90000" stroke-width=".294"/>
  <path d="m1353.8 2.94a6.8473 6.8473 0 0 1 6.8443 6.8443v127.42a6.862 6.862 0 0 1-6.8443 6.8531h-151.24a6.8767 6.8767 0 0 1-6.862-6.862v-127.4a6.862 6.862 0 0 1 6.862-6.8531h151.24" fill="#fff" stroke-width=".294"/>

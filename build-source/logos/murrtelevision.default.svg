@@ -1,6 +1,6 @@
-<svg version="1.1" viewBox="0 0 800 306.86" xmlns="http://www.w3.org/2000/svg">
- <g transform="translate(102.44 -441.91)">
-  <g transform="matrix(4 0 0 4 -592.67 -1901.1)">
+<svg version="1.1" viewBox="0 0 800 306.87" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(102.43 -441.91)">
+  <g transform="matrix(4,0,0,4,-592.67,-1901.1)">
    <path d="m122.56 648.61v-62.857h200v62.857z" fill="#1b2250"/>
    <g fill="#fff">
     <path d="m226.31 648.61h18.571v-23.393h9.5868v-11.964h-9.5868v-14.249l-18.571 7.1236v7.1253h-5.7521v11.964h5.7521z"/>

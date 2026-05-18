@@ -1,7 +1,7 @@
-<svg version="1.1" viewBox="0 0 800 401.5" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" viewBox="0 0 800.02 401.51" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.1758 0 0 3.1758 -1191.4 -2048.2)">
   <path d="m502.52 646.04h124.07v125.31h-124.07z" fill="#e4f4fc" Googl="true"/>
-  <linearGradient id="a" x1="734.4" x2="734.4" y1="42.057" y2="168.84" gradientTransform="matrix(1 0 0 -1 -295.57 813.41)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="a" x1="734.4" x2="734.4" y1="42.057" y2="168.84" gradientTransform="matrix(1,0,0,-1,-295.57,813.41)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#e4e7e3" offset="0"/>
    <stop stop-color="#aeb1ae" stop-opacity=".86275" offset="1"/>
   </linearGradient>

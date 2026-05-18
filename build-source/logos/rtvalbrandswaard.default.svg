@@ -1,10 +1,10 @@
-<svg width="180.95mm" height="46.706mm" version="1.1" viewBox="0 0 180.95 46.706" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="180.95mm" height="46.71mm" version="1.1" viewBox="0 0 180.95 46.71" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <linearGradient id="b" x1="-8.7161" x2="-2.6494" y1="147.69" y2="129.39" gradientTransform="translate(-70.732 8.3555)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="b" x1="-8.7161" x2="-2.6494" y1="147.69" y2="129.39" gradientTransform="translate(-70.732,8.3555)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#780e00" offset="0"/>
    <stop stop-color="#dc0714" offset="1"/>
   </linearGradient>
-  <linearGradient id="a" x1="-8.7161" x2="-2.6494" y1="147.63" y2="129.39" gradientTransform="rotate(180 -36.973 144.66)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="a" x1="-8.7161" x2="-2.6494" y1="147.63" y2="129.39" gradientTransform="rotate(180,-36.973,144.66)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#01305b" offset="0"/>
    <stop stop-color="#006eb8" offset="1"/>
   </linearGradient>

@@ -1,9 +1,9 @@
 <svg width="211.67mm" height="231.51mm" version="1.1" viewBox="0 0 211.67 231.51" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(442.23 -40.638)">
   <path d="m-269.44 207.01s26.59-34.321 38.878-36.688l-1e-3 101.82h-51.026s8.4369-60.746 12.149-65.133z" fill="#49b5b5"/>
-  <rect x="-442.23" y="40.638" width="211.67" height="231.51" fill="#49b5b5"/>
+  <path d="m-442.23 40.638h211.67v231.51h-211.67z" fill="#49b5b5"/>
   <g fill="#fff">
-   <g transform="matrix(3.5602 0 0 3.5827 -652.28 -421.05)" stroke-width=".10229" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="MELODY TV">
+   <g transform="matrix(3.5602,0,0,3.5827,-652.28,-421.05)" stroke-width=".10229" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="MELODY TV">
     <path d="m63.001 192.17 0.75372-3e-3 0.28963-3.301 0.09422-1.4272 0.39082 1.4272 1.1585 3.3534h0.41874l1.1096-3.3534 0.35592-1.4307 0.1012 1.4307 0.32452 3.301h0.78164l-0.63508-5.311h-1.0433l-0.94215 3.0323-0.26171 1.1271-0.27567-1.1271-0.98403-3.0323h-1.0992z"/>
     <path d="m72.612 192.17h3.3115v-0.61066h-2.5333v-1.825h1.6715v-0.60019h-1.6715v-1.6749h2.2786v-0.60019h-3.0568z"/>
     <path d="m79.545 192.17h2.9032v-0.61066h-2.1076v-4.7003h-0.7956z"/>

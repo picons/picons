@@ -1,4 +1,4 @@
-<svg width="211.67mm" height="121.62mm" version="1.1" viewBox="0 0 211.67 121.62" xmlns="http://www.w3.org/2000/svg">
+<svg width="211.67mm" height="121.63mm" version="1.1" viewBox="0 0 211.67 121.63" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(88.327 47.045)">
   <path d="m-86.689-45.407h208.39v118.35h-208.39z" fill="#fff" stroke="#002562" stroke-width="3.2761"/>
  </g>
@@ -6,7 +6,7 @@
   <path d="m-47.287 107.88h202.01v64.091h-202.01z" fill="#002562"/>
  </g>
  <g transform="translate(88.327 47.045)">
-  <g transform="matrix(6.7503 0 0 5.4598 -88.771 -69.807)" fill="#002562" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="ITALIA">
+  <g transform="matrix(6.7503,0,0,5.4598,-88.771,-69.807)" fill="#002562" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="ITALIA">
    <path d="m1.6557 25.039v-6.986h0.92448v6.986z" stroke-width=".13969"/>
    <path d="m5.9374 25.039v-6.1616h-2.1215v-0.8244h5.1775v0.8244h-2.1316v6.1616z" stroke-width=".13969"/>
    <path d="m8.8145 25.039 2.5586-6.986h0.73656l2.721 6.986h-0.96908l-0.83998-2.1158h-2.5083l-0.79556 2.1158zm1.9444-2.8687h2.0001l-1.0373-2.8277z" stroke-width=".134"/>

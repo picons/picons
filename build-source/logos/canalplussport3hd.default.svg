@@ -1,16 +1,16 @@
-<svg width="600" height="273" version="1.1" viewBox="0 0 158.75 72.231" xmlns="http://www.w3.org/2000/svg">
+<svg width="600" height="273.04" version="1.1" viewBox="0 0 158.75 72.241" xmlns="http://www.w3.org/2000/svg">
  <defs>
   <clipPath id="d">
-   <path d="m666.14 0h666.16v907.09h-666.16v-907.09z"/>
+   <path d="m666.14 0h666.16v907.09h-666.16z"/>
   </clipPath>
   <clipPath id="e">
-   <path d="m1225.1 263.53h55v-19.63h-55v19.63z"/>
+   <path d="m1225.1 263.53h55v-19.63h-55z"/>
   </clipPath>
   <clipPath id="f">
-   <path d="m1227.8 261.26h48.8v-15.14h-48.8v15.14z"/>
+   <path d="m1227.8 261.26h48.8v-15.14h-48.8z"/>
   </clipPath>
  </defs>
- <g transform="translate(191.23,-68.693)">
+ <g transform="translate(191.23 -68.693)">
   <path d="m-41.313 135.31h-118.72v-33.3h118.72l-3e-3 33.3z" fill="#18b400"/>
   <g transform="matrix(2.5352,0,0,-2.5352,-3275.4,761.81)">
    <g clip-path="url(#d)">
@@ -48,12 +48,12 @@
    </g>
   </g>
  </g>
- <g transform="translate(8.61,-188.53)" fill="#04a405">
+ <g transform="translate(8.61 -188.53)" fill="#04a405">
   <path d="m132.47 192.6v-4.07h-2.73v10.52h2.73v-4.34h2.67v-2.11"/>
   <path d="m136.41 191.97v7.08h2.73v-10.52h-2.73"/>
   <path d="m148.58 190.12c-1.02-1.05-2.22-1.59-3.61-1.59h-4.02v2.32h3.35c1.79 0 2.98 1.15 2.98 2.94 0 1.8-1.19 2.94-2.98 2.94h-0.62v-4.61h-2.73v6.93h4.02c1.4 0 2.61-0.52 3.63-1.56 1.02-1.05 1.54-2.28 1.54-3.7 0-1.4-0.52-2.62-1.56-3.67"/>
  </g>
- <g fill="#fff" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="3">
+ <g transform="translate(0,-1.25e-4)" fill="#fff" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="3">
   <path d="m128.12 51.892c0.18616 4.1487 3.2445 5.5848 6.6486 5.5848 3.5105 0 6.3561-2.1807 6.3561-5.9571 0-1.702-0.69146-3.3509-2.4467-4.1753 1.0106-0.71805 1.6488-2.1541 1.6488-3.2711 0-3.6434-2.686-5.2125-5.9306-5.2125-3.1115 0-5.7444 1.9148-5.9571 5.4253h4.0158c0.10638-1.2499 0.74464-1.9148 2.0478-1.9148 1.0638 0 1.8882 0.63826 1.8882 1.702 0 1.1436-0.50529 2.0212-1.7286 2.0212h-1.6489v3.085h1.6489c1.4893 0 2.4999 0.74464 2.4999 2.3403 0 1.3031-1.0106 2.3669-2.3403 2.3669-1.4361 0-2.3935-0.50529-2.686-1.9946z" fill="#fff" stroke-width=".38066"/>
  </g>
 </svg>

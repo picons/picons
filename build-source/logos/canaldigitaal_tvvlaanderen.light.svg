@@ -1,11 +1,11 @@
 <svg width="200mm" height="32.547mm" version="1.1" viewBox="0 0 200 32.547" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
-  <linearGradient id="f" x1="-39.128" x2="-23.962" y1="131.09" y2="131.09" gradientTransform="matrix(1.7353 0 0 1.7353 -105.18 -161.41)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="f" x1="-39.128" x2="-23.962" y1="131.09" y2="131.09" gradientTransform="matrix(1.7353,0,0,1.7353,-105.18,-161.41)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
   <linearGradient id="a" x1="95.2" x2="151.87" y1="327.17" y2="327.17" gradientUnits="userSpaceOnUse">
    <stop stop-color="red" offset="0"/>
    <stop stop-color="#ff4b00" offset="1"/>
   </linearGradient>
-  <linearGradient id="e" x1="-39.585" x2="-33.336" y1="126.17" y2="126.17" gradientTransform="matrix(1.7353 0 0 1.7353 -105.18 -161.41)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
+  <linearGradient id="e" x1="-39.585" x2="-33.336" y1="126.17" y2="126.17" gradientTransform="matrix(1.7353,0,0,1.7353,-105.18,-161.41)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
   <linearGradient id="b" x1="104.74" x2="104.74" y1="284.62" y2="333.76" gradientUnits="userSpaceOnUse">
    <stop stop-color="#c80000" offset="0"/>
    <stop stop-color="red" offset="1"/>
@@ -13,12 +13,12 @@
   <linearGradient id="g" x1="11.81" x2="70.86" y1="53.145" y2="53.145" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
   <linearGradient id="j" x2="23.62" y1="35.43" y2="35.43" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
   <linearGradient id="i" x2="47.24" y1="11.81" y2="11.81" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
-  <linearGradient id="d" x1="-33.336" x2="-21.292" y1="117.02" y2="117.02" gradientTransform="matrix(1.7353 0 0 1.7353 -105.18 -161.41)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="d" x1="-33.336" x2="-21.292" y1="117.02" y2="117.02" gradientTransform="matrix(1.7353,0,0,1.7353,-105.18,-161.41)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
   <linearGradient id="h" x1="47.24" x2="70.86" y1="35.43" y2="35.43" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
-  <linearGradient id="c" x1="-27.086" x2="-20.834" y1="120.38" y2="120.38" gradientTransform="matrix(1.7353 0 0 1.7353 -105.18 -161.41)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
+  <linearGradient id="c" x1="-27.086" x2="-20.834" y1="120.38" y2="120.38" gradientTransform="matrix(1.7353,0,0,1.7353,-105.18,-161.41)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
  </defs>
  <g transform="translate(173.87 -36.222)">
-  <g transform="matrix(1.2598 0 0 1.2598 -56.453 69.466)" fill="#f9f9f9" stroke-width=".22517">
+  <g transform="matrix(1.2598,0,0,1.2598,-56.453,69.466)" fill="#f9f9f9" stroke-width=".22517">
    <path class="i" d="m-62.502-20.786c0-3.3236 2.2517-5.6001 5.51-5.6001a5.4492 5.4492 0 0 1 4.4471 2.1122l-1.9905 1.7519c-0.71831-0.7926-1.4681-1.1687-2.3216-1.1687-1.5267 0-2.6795 1.2137-2.6795 2.8597s1.1079 2.7989 2.666 2.7989a3.0016 3.0016 0 0 0 2.29-1.0786l2.0265 1.7225a5.501 5.501 0 0 1-4.4471 2.0514c-3.3078 0.0028-5.501-2.1684-5.501-5.4492z"/>
    <path class="i" d="m-44.146-15.544-0.61472-1.5425h-1.8014l-1.4681-1.9455-1.1259 3.4879h-3.0849l4.0126-10.63h1.646c0.90069 0 1.4681 0.38954 1.8014 1.2272l3.6523 9.4031zm-1.3511-3.8279-1.2272-3.6028h-0.04504l-1.1687 3.6028z"/>
    <path class="i" d="m-30.759-26.176v10.63h-2.7539l-4.24-6.2125v6.2125h-2.6346v-10.63h2.7246l4.2783 6.2733v-4.9268c0-0.9007 0.41882-1.3173 1.3173-1.333z"/>
@@ -33,7 +33,7 @@
    <path class="i" d="m53.265-15.544-0.61471-1.5425h-1.8014l-1.4681-1.9455-1.1259 3.4879h-3.0849l4.0126-10.63h1.646c0.90069 0 1.4681 0.38954 1.8014 1.2272l3.6523 9.4031zm-1.3511-3.8279-1.2272-3.6028h-0.04506l-1.1686 3.6028z"/>
    <path class="i" d="m64.465-18.049v2.4994h-7.5163v-10.628h1.5267c0.90069 0 1.3173 0.41881 1.3173 1.3173v6.8115z"/>
   </g>
-  <g transform="matrix(1.2598 0 0 1.2598 -56.453 107.06)" fill="#f9f9f9" stroke-width=".94229">
+  <g transform="matrix(1.2598,0,0,1.2598,-56.453,107.06)" fill="#f9f9f9" stroke-width=".94229">
    <path class="i" d="m-59.408-38.628h-3.094v-2.5308h9.1429v1.197c0 0.91201-0.42408 1.3338-1.3338 1.3338h-1.824v8.2331h-2.891z"/>
    <path class="i" d="m-52.86-41.162h3.2148l2.3507 7.0681h0.02964l1.8651-5.7913c0.2736-0.86413 0.83449-1.2745 1.7443-1.2745h1.8491l-4.104 10.764h-2.7702z"/>
    <path class="i" d="m-37.818-41.162h3.2148l2.3507 7.0681h0.02964l1.8651-5.7913c0.2736-0.86413 0.83449-1.2745 1.7443-1.2745h1.8491l-4.104 10.764h-2.7634z"/>
@@ -49,11 +49,11 @@
   </g>
   <path class="a" d="m-168.45 63.346-4.628 4.628a2.7043 2.7043 0 0 0 1.9146 0.79428h18.98l5.4222-5.4222z" fill="url(#f)" stroke-width=".30471"/>
   <path class="b" d="m-163.02 57.917-10.844-10.844v18.98a2.7043 2.7043 0 0 0 0.79428 1.9146l4.628-4.628z" fill="url(#e)" stroke-width=".30471"/>
-  <polygon class="c" transform="matrix(.45911 0 0 .45911 -173.87 36.238)" points="70.86 47.24 23.62 47.24 11.81 59.05 59.05 59.05" fill="url(#g)"/>
-  <polygon class="d" transform="matrix(.45911 0 0 .45911 -173.87 36.238)" points="0 23.62 23.62 47.24 23.62 23.62" fill="url(#j)"/>
-  <polygon class="e" transform="matrix(.45911 0 0 .45911 -173.87 36.238)" points="23.62 0 0 23.62 47.24 23.62" fill="url(#i)"/>
+  <path class="c" transform="matrix(.45911 0 0 .45911 -173.87 36.238)" d="m11.81 59.05h47.24l11.81-11.81h-47.24z" fill="url(#g)"/>
+  <path class="d" transform="matrix(.45911 0 0 .45911 -173.87 36.238)" d="m23.62 23.62h-23.62l23.62 23.62z" fill="url(#j)"/>
+  <path class="e" transform="matrix(.45911 0 0 .45911 -173.87 36.238)" d="M 47.24,23.62 23.62,0 0,23.62 Z" fill="url(#i)"/>
   <path class="f" d="m-142.13 37.016a2.7043 2.7043 0 0 0-1.9146-0.79428h-18.985l10.844 10.844z" fill="url(#d)" stroke-width=".30471"/>
-  <polygon class="g" transform="matrix(.45911 0 0 .45911 -173.87 36.238)" points="70.86 47.24 70.86 23.62 47.24 47.24" fill="url(#h)"/>
+  <path class="g" transform="matrix(.45911 0 0 .45911 -173.87 36.238)" d="m47.24 47.24h23.62v-23.62z" fill="url(#h)"/>
   <path class="h" d="m-141.33 38.934a2.7043 2.7043 0 0 0-0.79428-1.9146l-10.055 10.045v10.844l10.844-10.844z" fill="url(#c)" stroke-width=".30471"/>
  </g>
 </svg>
