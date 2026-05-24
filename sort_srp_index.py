@@ -10,8 +10,6 @@ _log: list[tuple[str, str]] = []
 def log(level: str, msg: str) -> None:
     _log.append((level, msg))
 
-ILLEGAL_CHARS = set('<>:"/\\|?*')
-
 def validate_underscores(value: str) -> bool:
     """Check that value contains exactly 3 underscores and none are adjacent."""
     if value.count("_") != 3:
@@ -25,22 +23,20 @@ def validate_underscores(value: str) -> bool:
 def validate_line(i: int, line: str) -> tuple[bool, str, str, list[str]]:
     """
     Validate a single line. Returns (is_valid, left, right, parts).
-    Prints a descriptive error message on failure.
+    - Auto-corrections (spaces, case) are always applied and the line is always included.
+    - ERROR is logged for invalid chars but the line is still saved.
+    - Only structural errors (missing =, bad underscores, non-hex) skip the line.
     """
-    found = [c for c in line if c in ILLEGAL_CHARS]
-    if found:
-        chars = ", ".join(repr(c) for c in sorted(set(found)))
-        cleaned = "".join(c for c in line if c not in ILLEGAL_CHARS)
-        log(WARN, f"Line {i}: illegal chars {chars} removed  {line!r} -> {cleaned!r}")
-        line = cleaned
+    import re
 
+    # --- auto-corrections first ---
     if " " in line or "\t" in line:
         cleaned = line.replace(" ", "").replace("\t", "")
         log(WARN, f"Line {i}: spaces removed  {line!r} -> {cleaned!r}")
         line = cleaned
 
     if "=" not in line:
-        log(ERROR, f"Line {i}: missing '=' — skipped")
+        log(ERROR, f"Line {i}: missing '=' — removed")
         return False, "", "", []
 
     left, right = line.split("=", 1)
@@ -52,6 +48,12 @@ def validate_line(i: int, line: str) -> tuple[bool, str, str, list[str]]:
     if right != right.lower():
         log(INFO, f"Line {i}: right side lowercased  {right!r} -> {right.lower()!r}")
         right = right.lower()
+
+    # --- whitelist check: log ERROR but still include the line ---
+    invalid = sorted(set(c for c in right if not re.match(r'[a-z0-9_-]', c)))
+    if invalid:
+        chars = ", ".join(repr(c) for c in invalid)
+        log(ERROR, f"Line {i}: invalid character(s) {chars} in right side {right!r}")
 
     line = f"{left}={right}"
 
@@ -93,15 +95,17 @@ def flush_log() -> None:
                 i += 1
                 end = int(_log[i][1].split(":")[1])
             if start == end:
-                grouped.append((INFO, f"Skipped empty line {start}"))
+                grouped.append((INFO, f"Removed empty line {start}"))
             else:
-                grouped.append((INFO, f"Skipped empty lines {start}-{end} ({end-start+1} lines)"))
+                grouped.append((INFO, f"Removed empty lines {start}-{end} ({end-start+1} lines)"))
         else:
             grouped.append((level, msg))
         i += 1
     color_map = {INFO: GRAY, WARN: YELLOW, ERROR: RED}
     label_map = {INFO: "info ", WARN: "warn ", ERROR: "ERROR"}
-    for level, msg in grouped:
+    non_errors = [(lv, msg) for lv, msg in grouped if lv != ERROR]
+    errors     = [(lv, msg) for lv, msg in grouped if lv == ERROR]
+    for level, msg in non_errors + errors:
         c = color_map.get(level, GRAY)
         l = label_map.get(level, "     ")
         print(f"  {c}{l}{RST}  {msg}")
@@ -110,12 +114,24 @@ def flush_log() -> None:
 
 
 def main():
-    import os
+    import os, sys
+    sys.stdout.reconfigure(encoding="utf-8", errors="strict")
     os.system("cls" if os.name == "nt" else "clear")
 
+    fatal_encoding = False
+
     try:
-        with open(FILE_NAME, "r") as f:
-            lines = f.readlines()
+        with open(FILE_NAME, "rb") as f:
+            raw_bytes = f.read()
+        # decode line by line to pinpoint exactly which line has bad bytes
+        lines = []
+        for lineno, raw_line in enumerate(raw_bytes.splitlines(keepends=True), start=1):
+            try:
+                lines.append(raw_line.decode("utf-8"))
+            except UnicodeDecodeError as e:
+                preview = raw_line.replace(b"\n", b"").replace(b"\r", b"")[:60]
+                log(ERROR, f"Line {lineno}: invalid UTF-8 byte 0x{raw_line[e.start]:02X} at position {e.start} -> {preview!r} — skipped")
+                fatal_encoding = True
     except FileNotFoundError:
         log(ERROR, f"File not found: {FILE_NAME!r}")
         for _, msg in _log: print(f"  ERROR  {msg}")
@@ -126,6 +142,7 @@ def main():
         return
 
     sort_list = []
+
     seen      = {}   # line -> first line number seen
     skipped   = 0
     fatal     = 0
@@ -147,7 +164,7 @@ def main():
         normalized = f"{left}={right}"
 
         if left in seen:
-            log(WARN, f"Line {i}: duplicate key {left!r} (first seen at line {seen[left]}) — skipped")
+            log(WARN, f"Line {i}: duplicate key {left!r} (first seen at line {seen[left]}) — removed")
             skipped += 1
             continue
 
@@ -185,13 +202,13 @@ def main():
 
     output_lines = [line + "\n" for line in sorted_order]
 
-    if fatal > 0:
+    if fatal_encoding:
         flush_log()
-        print(f"  \033[91m\033[1mAborted:\033[0m {fatal} uncorrectable error(s) — file not saved.\n")
+        print(f"  \033[91m\033[1mAborted:\033[0m invalid UTF-8 — file not saved.\n")
         return
 
     try:
-        with open(FILE_NAME, "w") as f:
+        with open(FILE_NAME, "w", encoding="utf-8") as f:
             f.writelines(output_lines)
     except OSError as e:
         log(ERROR, f"Write error: {e}")
@@ -210,6 +227,8 @@ def main():
     BOLD   = "\033[1m"
     RST    = "\033[0m"
 
+    errors = sum(1 for lv, _ in _log if lv == ERROR)
+
     def row(label, value, color):
         return f"  {color}{label:<18}{BOLD}{value:>6}{RST}"
 
@@ -218,8 +237,24 @@ def main():
     print(f"  {GRAY}{'─' * 26}{RST}")
     print(row("Lines read",  total,   CYAN))
     print(row("Written",     written, GREEN))
-    print(row("Skipped",     skipped, RED    if skipped else GRAY))
-    print(row("Moved",       moved,   YELLOW if moved   else GRAY))
+    if skipped: print(row("Removed", skipped, RED))
+    if moved:   print(row("Moved",   moved,   YELLOW))
+    if errors:  print(row("Errors",  errors,  RED))
+    print()
+    GREEN  = "\033[92m"
+    RED    = "\033[91m"
+    BOLD   = "\033[1m"
+    RST    = "\033[0m"
+    warnings = sum(1 for lv, _ in _log if lv in (INFO, WARN))
+    if not warnings and not errors:
+        print(f"  {GREEN}{BOLD}✓{RST}  File is clean, no corrections needed.")
+    elif warnings and not errors:
+        print(f"  {GREEN}{BOLD}✓{RST}  All corrections applied and saved.")
+    elif warnings and errors:
+        print(f"  {GREEN}{BOLD}✓{RST}  Corrections (info/warn) applied and saved.")
+        print(f"  {RED}{BOLD}✗{RST}  {errors} error(s) were logged but not fixed — review manually.")
+    elif errors:
+        print(f"  {RED}{BOLD}✗{RST}  {errors} error(s) were logged but not fixed — review manually.")
     print()
 
 
