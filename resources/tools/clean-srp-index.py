@@ -1,6 +1,10 @@
 from os.path import dirname, isfile, realpath, sep, splitext
 import re
+import sys
 import urllib.request
+
+if sys.stdout.encoding != "utf-8":
+	sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 
 # cleans and sorts srp.index
@@ -27,12 +31,15 @@ if not isfile(file_path):  # fetch to local from repo if necessary
 logos = {}
 logos_lines = {}  # track which line each ref was first seen on
 
-for i, line in enumerate((orig := open(file_path, 'r', encoding="utf-8").read()).splitlines()):
+for i, line in enumerate((orig := open(file_path, 'r', encoding="utf-8", errors='replace').read()).splitlines()):
 	rsp = line.rstrip().rsplit("=", 1)
 	if not len(rsp) == 2:
 		print(f"error on line {i}, {line}")
 		continue
 	ref, logo = rsp
+	if not logo.isascii():
+		print(f"line {i}, non-ASCII characters in logo name '{logo}' — skipped")
+		continue
 	if ref != ref.upper():
 		ref = ref.upper()
 		print(f"line {i}, sref contains lower case")

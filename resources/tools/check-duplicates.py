@@ -3,6 +3,9 @@ from os.path import dirname, isfile, realpath, sep, splitext
 import re
 import sys
 
+if sys.stdout.encoding != "utf-8":
+	sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 
 # Reports invalid character entries in utf8snp.index
 # Exits with code 1 if invalid characters are found in utf8snp.index
@@ -86,13 +89,17 @@ def check_srp(file_path):
 	print(f"=== Checking {file_path} ===")
 	logos = {}
 	logos_lines = {}
+	invalid_msgs = []
 	duplicate_msgs = []
 
-	for i, line in enumerate(open(file_path, 'r', encoding="utf-8").read().splitlines()):
+	for i, line in enumerate(open(file_path, 'r', encoding="utf-8", errors='replace').read().splitlines()):
 		rsp = line.rstrip().rsplit("=", 1)
 		if len(rsp) != 2:
 			continue
 		ref, logo = rsp
+		if not logo.isascii():
+			invalid_msgs.append(f"line {i}, non-ASCII characters in logo name '{logo}'")
+			continue
 		ref = ref.upper()
 		if ref in logos:
 			duplicate_msgs.append(f"line {i}, duplicate key '{ref}' already seen on line {logos_lines[ref]} (existing logo: {logos[ref]}, skipping logo: {logo} on line {i})")
@@ -100,12 +107,21 @@ def check_srp(file_path):
 			logos[ref] = logo
 			logos_lines[ref] = i
 
+	if invalid_msgs:
+		print(f"{len(invalid_msgs)} invalid logo name(s) found:")
+		for msg in invalid_msgs:
+			print(msg)
+	else:
+		print("no invalid logo names found")
+
 	if duplicate_msgs:
 		print(f"{len(duplicate_msgs)} duplicate(s) found:")
 		for msg in duplicate_msgs:
 			print(msg)
 	else:
 		print("no duplicates found")
+
+	return len(invalid_msgs), len(duplicate_msgs)
 
 
 build_source = f"{dir_path}{sep}..{sep}..{sep}build-source"
@@ -123,15 +139,22 @@ else:
 
 print()
 
+srp_invalid = 0
+srp_duplicates = 0
+
 if isfile(srp_path):
-	check_srp(srp_path)
+	srp_invalid, srp_duplicates = check_srp(srp_path)
 else:
 	print(f"srp.index not found at {srp_path}")
 
-if invalid > 0 or duplicates > 0:
+if invalid > 0 or duplicates > 0 or srp_invalid > 0 or srp_duplicates > 0:
 	print()
 	if invalid > 0:
 		print(f"{invalid} invalid character(s) found in utf8snp.index - please correct before merging")
 	if duplicates > 0:
 		print(f"{duplicates} duplicate utf8snp name(s) found in utf8snp.index - please remove duplicate entries before merging")
+	if srp_invalid > 0:
+		print(f"{srp_invalid} non-ASCII logo name(s) found in srp.index - please correct before merging")
+	if srp_duplicates > 0:
+		print(f"{srp_duplicates} duplicate srp key(s) found in srp.index - please remove duplicate entries before merging")
 	sys.exit(1)
