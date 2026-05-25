@@ -25,4 +25,4 @@ jobs:
         bash ./resources/tools/check-logos.sh ./build-source/logos $PWD/errors_detected
         if [[ -f $PWD/errors_detected ]]; then echo "Errors were found in the repository!"; exit 1; fi
     - name: Checking for duplicate entries (report only)...
-      run: python3 ./resources/tools/check-duplicates.py
+      run: python3 ./resources/tools/validate_indices.py

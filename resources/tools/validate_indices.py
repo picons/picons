@@ -7,9 +7,10 @@ if sys.stdout.encoding != "utf-8":
 	sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 
-# Reports invalid character entries in utf8snp.index
-# Exits with code 1 if invalid characters are found in utf8snp.index
-# Reports duplicate entries in utf8snp.index and srp.index
+# Validates utf8snp.index and srp.index
+# Checks utf8snp.index for: invalid characters in name, invalid characters in logo name (must match [a-z0-9_-]), duplicate keys
+# Checks srp.index for: non-ASCII logo names, duplicate keys
+# Exits with code 1 if any invalid characters or duplicates are found
 # Does not modify any files
 
 
@@ -163,7 +164,7 @@ else:
 if invalid > 0 or duplicates > 0 or srp_invalid > 0 or srp_duplicates > 0:
 	print()
 	if invalid > 0:
-		print(f"{invalid} invalid character(s) found in utf8snp.index (in name or logo) - please correct before merging")
+		print(f"{invalid} invalid character(s) found in utf8snp.index (in name or logo) - logo names must only contain [a-z0-9_-], please correct before merging")
 	if duplicates > 0:
 		print(f"{duplicates} duplicate utf8snp name(s) found in utf8snp.index - please remove duplicate entries before merging")
 	if srp_invalid > 0:
