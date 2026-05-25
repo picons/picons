@@ -7,9 +7,10 @@ if sys.stdout.encoding != "utf-8":
 	sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 
-# Reports invalid character entries in utf8snp.index
-# Exits with code 1 if invalid characters are found in utf8snp.index
-# Reports duplicate entries in utf8snp.index and srp.index
+# Validates utf8snp.index and srp.index
+# Checks utf8snp.index for: invalid characters in name, invalid characters in logo name (must match [a-z0-9_-]), duplicate keys
+# Checks srp.index for: non-ASCII logo names, duplicate keys
+# Exits with code 1 if any invalid characters or duplicates are found
 # Does not modify any files
 
 
@@ -45,6 +46,7 @@ def check_utf8snp(file_path):
 	snames = {}
 	sname_lines = {}
 	invalid_msgs = []
+	invalid_logo_msgs = []
 	duplicate_msgs = []
 
 	for i, line in enumerate(open(file_path, 'r', encoding="utf-8").read().splitlines()):
@@ -56,6 +58,11 @@ def check_utf8snp(file_path):
 			if any(c in name for c in ["\\", "/", ":", "*", "?", "\"", "<", ">", "|", "\0"]):
 				invalid_msgs.append(f"line {i}, invalid character in name '{name}'")
 				continue  # skip duplicate check for invalid entries
+		invalid_logo_chars = sorted(set(c for c in logo if not re.match(r'[a-z0-9_-]', c)))
+		if invalid_logo_chars:
+			chars = ", ".join(repr(c) for c in invalid_logo_chars)
+			invalid_logo_msgs.append(f"line {i}, invalid character(s) {chars} in logo name '{logo}'")
+			continue  # skip duplicate check for invalid entries
 		if re.match("^[0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+$", name, re.IGNORECASE):
 			sname = name.upper()
 		else:
@@ -69,11 +76,18 @@ def check_utf8snp(file_path):
 			sname_lines[sname] = i
 
 	if invalid_msgs:
-		print(f"{len(invalid_msgs)} invalid character(s) found:")
+		print(f"{len(invalid_msgs)} invalid character(s) found in name:")
 		for msg in invalid_msgs:
 			print(msg)
 	else:
-		print("no invalid characters found")
+		print("no invalid characters found in name")
+
+	if invalid_logo_msgs:
+		print(f"{len(invalid_logo_msgs)} invalid logo name(s) found:")
+		for msg in invalid_logo_msgs:
+			print(msg)
+	else:
+		print("no invalid logo names found")
 
 	if duplicate_msgs:
 		print(f"{len(duplicate_msgs)} duplicate(s) found:")
@@ -82,7 +96,7 @@ def check_utf8snp(file_path):
 	else:
 		print("no duplicates found")
 
-	return len(invalid_msgs), len(duplicate_msgs)
+	return len(invalid_msgs) + len(invalid_logo_msgs), len(duplicate_msgs)
 
 
 def check_srp(file_path):
@@ -150,7 +164,7 @@ else:
 if invalid > 0 or duplicates > 0 or srp_invalid > 0 or srp_duplicates > 0:
 	print()
 	if invalid > 0:
-		print(f"{invalid} invalid character(s) found in utf8snp.index - please correct before merging")
+		print(f"{invalid} invalid character(s) found in utf8snp.index (in name or logo) - logo names must only contain [a-z0-9_-], please correct before merging")
 	if duplicates > 0:
 		print(f"{duplicates} duplicate utf8snp name(s) found in utf8snp.index - please remove duplicate entries before merging")
 	if srp_invalid > 0:
