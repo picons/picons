@@ -44,7 +44,7 @@ def validate_line(i: int, line: str) -> tuple[bool, str, str]:
         log(ERROR, f"Line {i}: missing '=' — removed")
         return False, "", ""
 
-    left, right = line.split("=", 1)
+    left, right = line.rsplit("=", 1)
 
     if right != right.lower():
         log(INFO, f"Line {i}: right side lowercased  {right!r} -> {right.lower()!r}")
