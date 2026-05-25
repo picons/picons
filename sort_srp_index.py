@@ -172,33 +172,8 @@ def main():
         sort_key = (int(parts[3], 16), int(parts[2], 16), int(parts[1], 16), int(parts[0], 16))
         sort_list.append((sort_key, normalized))
 
-    original_order = [line for _, line in sort_list]
     sort_list.sort(key=lambda item: item[0])
     sorted_order = [line for _, line in sort_list]
-
-    # Build rank maps: position of each line in each ordering
-    orig_rank = {line: i for i, line in enumerate(original_order)}
-    sort_rank = {line: i for i, line in enumerate(sorted_order)}
-
-    # A line truly moved only if its rank relative to its neighbours changed.
-    # We detect this by comparing the sort order of consecutive pairs:
-    # if line A came before line B in original but after in sorted, at least
-    # one of them moved. We collect lines that are out of the original sequence.
-    moved_lines = []
-    for i in range(1, len(sorted_order)):
-        prev = sorted_order[i - 1]
-        curr = sorted_order[i]
-        if orig_rank[prev] > orig_rank[curr]:
-            # curr was before prev originally — curr is out of place
-            if curr not in moved_lines:
-                moved_lines.append(curr)
-
-    for line in moved_lines:
-        o = orig_rank[line] + 1
-        s = sort_rank[line] + 1
-        log(WARN, f"Line moved: {line!r} ({o} -> {s})")
-
-    moved = len(moved_lines)
 
     output_lines = [line + "\n" for line in sorted_order]
 
@@ -208,7 +183,7 @@ def main():
         return
 
     try:
-        with open(FILE_NAME, "w", encoding="utf-8") as f:
+        with open(FILE_NAME, "w", encoding="utf-8", newline="\n") as f:
             f.writelines(output_lines)
     except OSError as e:
         log(ERROR, f"Write error: {e}")
@@ -238,7 +213,6 @@ def main():
     print(row("Lines read",  total,   CYAN))
     print(row("Written",     written, GREEN))
     if skipped: print(row("Removed", skipped, RED))
-    if moved:   print(row("Moved",   moved,   YELLOW))
     if errors:  print(row("Errors",  errors,  RED))
     print()
     GREEN  = "\033[92m"
