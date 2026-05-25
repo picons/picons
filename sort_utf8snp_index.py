@@ -11,6 +11,25 @@ def log(level: str, msg: str) -> None:
     _log.append((level, msg))
 
 
+def is_srp_key(value: str) -> bool:
+    """Return True if value matches the SRP format: exactly 4 hex parts separated by underscores."""
+    if value.count("_") != 3:
+        return False
+    if "__" in value:
+        return False
+    if value.startswith("_") or value.endswith("_"):
+        return False
+    parts = value.split("_")
+    if len(parts) != 4:
+        return False
+    for part in parts:
+        try:
+            int(part, 16)
+        except ValueError:
+            return False
+    return True
+
+
 def validate_line(i: int, line: str) -> tuple[bool, str, str]:
     """
     Validate a single line. Returns (is_valid, left, right).
@@ -134,8 +153,14 @@ def main():
             continue
 
         seen[left] = i
-        # Sort key: group by right (id canale), then by left (alias) within the group
-        sort_key = (right, left)
+        # Sort key: always group by right (channel id) first.
+        # Within the same right, if left matches SRP format use numeric hex sort;
+        # otherwise sort alphabetically by left.
+        if is_srp_key(left):
+            parts = left.split("_")
+            sort_key = (right, 0, int(parts[3], 16), int(parts[2], 16), int(parts[1], 16), int(parts[0], 16), "")
+        else:
+            sort_key = (right, 1, 0, 0, 0, 0, left)
         sort_list.append((sort_key, normalized))
 
     sort_list.sort(key=lambda item: item[0])
