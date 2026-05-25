@@ -1,4 +1,4 @@
-FILE_NAME = "build-source/srp.index"
+FILE_NAME = "build-source/utf8snp.index"
 
 # log levels
 INFO  = "info"
@@ -10,70 +10,53 @@ _log: list[tuple[str, str]] = []
 def log(level: str, msg: str) -> None:
     _log.append((level, msg))
 
-def validate_underscores(value: str) -> bool:
-    """Check that value contains exactly 3 underscores and none are adjacent."""
+
+def is_srp_key(value: str) -> bool:
+    """Return True if value matches the SRP format: exactly 4 hex parts separated by underscores."""
     if value.count("_") != 3:
         return False
     if "__" in value:
         return False
     if value.startswith("_") or value.endswith("_"):
         return False
+    parts = value.split("_")
+    if len(parts) != 4:
+        return False
+    for part in parts:
+        try:
+            int(part, 16)
+        except ValueError:
+            return False
     return True
 
-def validate_line(i: int, line: str) -> tuple[bool, str, str, list[str]]:
+
+def validate_line(i: int, line: str) -> tuple[bool, str, str]:
     """
-    Validate a single line. Returns (is_valid, left, right, parts).
-    - Auto-corrections (spaces, case) are always applied and the line is always included.
-    - ERROR is logged for invalid chars but the line is still saved.
-    - Only structural errors (missing =, bad underscores, non-hex) skip the line.
+    Validate a single line. Returns (is_valid, left, right).
+    - Missing '=' is a fatal structural error: line is skipped.
+    - Invalid chars on right side are logged as ERROR but line is kept.
+    - Left side is kept exactly as-is.
+    - Right side is lowercased automatically.
     """
     import re
 
-    # --- auto-corrections first ---
-    if " " in line or "\t" in line:
-        cleaned = line.replace(" ", "").replace("\t", "")
-        log(WARN, f"Line {i}: spaces removed  {line!r} -> {cleaned!r}")
-        line = cleaned
-
     if "=" not in line:
         log(ERROR, f"Line {i}: missing '=' — removed")
-        return False, "", "", []
+        return False, "", ""
 
-    left, right = line.split("=", 1)
-
-    if left != left.upper():
-        log(INFO, f"Line {i}: left side uppercased  {left!r} -> {left.upper()!r}")
-        left = left.upper()
+    left, right = line.rsplit("=", 1)
 
     if right != right.lower():
         log(INFO, f"Line {i}: right side lowercased  {right!r} -> {right.lower()!r}")
         right = right.lower()
 
-    # --- whitelist check: log ERROR but still include the line ---
+    # whitelist check: log ERROR but still include the line
     invalid = sorted(set(c for c in right if not re.match(r'[a-z0-9_-]', c)))
     if invalid:
         chars = ", ".join(repr(c) for c in invalid)
         log(ERROR, f"Line {i}: invalid character(s) {chars} in right side {right!r}")
 
-    line = f"{left}={right}"
-
-    if not validate_underscores(left):
-        log(ERROR, f"Line {i}: bad underscores in {left!r} — skipped")
-        return False, "", "", []
-
-    parts = left.split("_")
-    if len(parts) != 4:
-        log(ERROR, f"Line {i}: wrong part count in {left!r} — skipped")
-        return False, "", "", []
-
-    for part in parts:
-        try:
-            int(part, 16)
-        except ValueError:
-            log(ERROR, f"Line {i}: non-hex value in {left!r} — skipped")
-            return False, "", "", []
-
-    return True, left, right, parts
+    return True, left, right
 
 
 def flush_log() -> None:
@@ -84,25 +67,28 @@ def flush_log() -> None:
     GRAY   = "\033[90m"
     BOLD   = "\033[1m"
     RST    = "\033[0m"
-    grouped: list[tuple[str,str]] = []
+
+    grouped: list[tuple[str, str]] = []
     i = 0
     while i < len(_log):
         level, msg = _log[i]
         if msg.startswith("empty:"):
             start = int(msg.split(":")[1])
             end   = start
-            while i + 1 < len(_log) and _log[i+1][1].startswith("empty:"):
+            while i + 1 < len(_log) and _log[i + 1][1].startswith("empty:"):
                 i += 1
                 end = int(_log[i][1].split(":")[1])
             if start == end:
                 grouped.append((INFO, f"Removed empty line {start}"))
             else:
-                grouped.append((INFO, f"Removed empty lines {start}-{end} ({end-start+1} lines)"))
+                grouped.append((INFO, f"Removed empty lines {start}-{end} ({end - start + 1} lines)"))
         else:
             grouped.append((level, msg))
         i += 1
+
     color_map = {INFO: GRAY, WARN: YELLOW, ERROR: RED}
     label_map = {INFO: "info ", WARN: "warn ", ERROR: "ERROR"}
+
     non_errors = [(lv, msg) for lv, msg in grouped if lv != ERROR]
     errors     = [(lv, msg) for lv, msg in grouped if lv == ERROR]
     for level, msg in non_errors + errors:
@@ -123,7 +109,6 @@ def main():
     try:
         with open(FILE_NAME, "rb") as f:
             raw_bytes = f.read()
-        # decode line by line to pinpoint exactly which line has bad bytes
         lines = []
         for lineno, raw_line in enumerate(raw_bytes.splitlines(keepends=True), start=1):
             try:
@@ -142,10 +127,9 @@ def main():
         return
 
     sort_list = []
-
-    seen      = {}   # line -> first line number seen
-    skipped   = 0
-    fatal     = 0
+    seen    = {}   # left (alias) -> first line number seen
+    skipped = 0
+    fatal   = 0
 
     for i, raw_line in enumerate(lines, start=1):
         line = raw_line.strip()
@@ -155,21 +139,28 @@ def main():
             skipped += 1
             continue
 
-        is_valid, left, right, parts = validate_line(i, line)
+        is_valid, left, right = validate_line(i, line)
         if not is_valid:
             skipped += 1
-            fatal  += 1
+            fatal += 1
             continue
 
         normalized = f"{left}={right}"
 
         if left in seen:
-            log(WARN, f"Line {i}: duplicate key {left!r} (first seen at line {seen[left]}) — removed")
+            log(WARN, f"Line {i}: duplicate alias {left!r} (first seen at line {seen[left]}) — removed")
             skipped += 1
             continue
 
         seen[left] = i
-        sort_key = (int(parts[3], 16), int(parts[2], 16), int(parts[1], 16), int(parts[0], 16))
+        # Sort key: always group by right (channel id) first.
+        # Within the same right, if left matches SRP format use numeric hex sort;
+        # otherwise sort alphabetically by left.
+        if is_srp_key(left):
+            parts = left.split("_")
+            sort_key = (right, 0, int(parts[3], 16), int(parts[2], 16), int(parts[1], 16), int(parts[0], 16), "")
+        else:
+            sort_key = (right, 1, 0, 0, 0, 0, left)
         sort_list.append((sort_key, normalized))
 
     sort_list.sort(key=lambda item: item[0])
@@ -208,17 +199,14 @@ def main():
         return f"  {color}{label:<18}{BOLD}{value:>6}{RST}"
 
     print()
-    print(f"  {BOLD}SRP Index  {GRAY}{FILE_NAME}{RST}")
-    print(f"  {GRAY}{'─' * 26}{RST}")
+    print(f"  {BOLD}UTF8SNP Index  {GRAY}{FILE_NAME}{RST}")
+    print(f"  {GRAY}{'─' * 30}{RST}")
     print(row("Lines read",  total,   CYAN))
     print(row("Written",     written, GREEN))
     if skipped: print(row("Removed", skipped, RED))
     if errors:  print(row("Errors",  errors,  RED))
     print()
-    GREEN  = "\033[92m"
-    RED    = "\033[91m"
-    BOLD   = "\033[1m"
-    RST    = "\033[0m"
+
     warnings = sum(1 for lv, _ in _log if lv in (INFO, WARN))
     if not warnings and not errors:
         print(f"  {GREEN}{BOLD}✓{RST}  File is clean, no corrections needed.")
