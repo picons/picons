@@ -38,13 +38,27 @@ for i, line in enumerate((orig := open(file_path, 'r', encoding="utf-8", errors=
 	if not len(rsp) == 2:
 		print(f"error on line {i}, {line}")
 		continue
+	if " " in line or "\t" in line:
+		cleaned = line.replace(" ", "").replace("\t", "")
+		print(f"line {i}, spaces removed {line!r} -> {cleaned!r}")
+		rsp = cleaned.rstrip().rsplit("=", 1)
+		if not len(rsp) == 2:
+			print(f"error on line {i}, {line}")
+			continue
 	ref, logo = rsp
-	if not logo.isascii():
-		print(f"line {i}, non-ASCII characters in logo name '{logo}' — skipped")
-		continue
+
+	if logo != logo.lower():
+		print(f"line {i}, logo lowercased {logo!r} -> {logo.lower()!r}")
+		logo = logo.lower()
+
+	invalid_logo_chars = sorted(set(c for c in logo if not re.match(r'[a-z0-9_-]', c)))
+	if invalid_logo_chars:
+		chars = ", ".join(repr(c) for c in invalid_logo_chars)
+		print(f"line {i}, invalid character(s) {chars} in logo name '{logo}'")
+
 	if ref != ref.upper():
+		print(f"line {i}, sref uppercased {ref!r} -> {ref.upper()!r}")
 		ref = ref.upper()
-		print(f"line {i}, sref contains lower case")
 	if ref in logos:
 		print(f"line {i}, duplicate key '{ref}' already seen on line {logos_lines[ref]} (existing logo: {logos[ref]}, skipping logo: {logo} on line {i})")
 		continue

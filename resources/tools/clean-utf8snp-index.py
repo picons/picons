@@ -94,7 +94,17 @@ for i, line in enumerate((orig := open(file_path, 'r', encoding="utf-8").read())
 		print(f"error on line {i}, {line}")
 		continue
 	name, logo = rsp
-	
+
+	if logo != logo.lower():
+		print(f"line {i}, logo lowercased {logo!r} -> {logo.lower()!r}")
+		logo = logo.lower()
+
+	invalid_logo_chars = sorted(set(c for c in logo if not re.match(r'[a-z0-9_-]', c)))
+	if invalid_logo_chars:
+		chars = ", ".join(repr(c) for c in invalid_logo_chars)
+		print(f"line {i}, invalid character(s) {chars} in logo name '{logo}' — skipped")
+		continue
+
 	if re.match("^[0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+$", name, re.IGNORECASE):
 		sname = name.upper()
 	else:
