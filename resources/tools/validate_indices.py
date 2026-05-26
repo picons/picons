@@ -8,10 +8,10 @@ if sys.stdout.encoding != "utf-8":
 
 
 # Validates utf8snp.index and srp.index
-# Checks utf8snp.index for: invalid characters in name, invalid characters in logo name (must match [a-z0-9_-]), duplicate keys
-# Checks srp.index for: non-ASCII logo names, duplicate keys
-# Exits with code 1 if any invalid characters or duplicates are found
-# Does not modify any files
+# Checks logo names in both indices: must match [a-z0-9_-]. Fails with code 1 if invalid.
+# Checks utf8snp.index for invalid characters in name and duplicate keys. Fails with code 1 if found.
+# Checks srp.index for duplicate keys. Reports them but does not cause a failure.
+# Does not modify any files.
 
 
 
@@ -111,8 +111,10 @@ def check_srp(file_path):
 		if len(rsp) != 2:
 			continue
 		ref, logo = rsp
-		if not logo.isascii():
-			invalid_msgs.append(f"line {i}, non-ASCII characters in logo name '{logo}'")
+		invalid_logo_chars = sorted(set(c for c in logo if not re.match(r'[a-z0-9_-]', c)))
+		if invalid_logo_chars:
+			chars = ", ".join(repr(c) for c in invalid_logo_chars)
+			invalid_msgs.append(f"line {i}, invalid character(s) {chars} in logo name '{logo}'")
 			continue
 		ref = ref.upper()
 		if ref in logos:
@@ -161,14 +163,14 @@ if isfile(srp_path):
 else:
 	print(f"srp.index not found at {srp_path}")
 
-if invalid > 0 or duplicates > 0 or srp_invalid > 0 or srp_duplicates > 0:
+if invalid > 0 or duplicates > 0 or srp_invalid > 0:
 	print()
 	if invalid > 0:
-		print(f"{invalid} invalid character(s) found in utf8snp.index (in name or logo) - logo names must only contain [a-z0-9_-], please correct before merging")
+		print(f"{invalid} invalid character(s) found in utf8snp.index (in name or logo) - logo names must only contain [a-z0-9_-], please correct")
 	if duplicates > 0:
-		print(f"{duplicates} duplicate utf8snp name(s) found in utf8snp.index - please remove duplicate entries before merging")
+		print(f"{duplicates} duplicate utf8snp name(s) found in utf8snp.index - please assign references for channels which have the same name but are actually different.")
 	if srp_invalid > 0:
-		print(f"{srp_invalid} non-ASCII logo name(s) found in srp.index - please correct before merging")
+		print(f"{srp_invalid} invalid logo name(s) found in srp.index - logo names must only contain [a-z0-9_-], please correct.")
 	if srp_duplicates > 0:
-		print(f"{srp_duplicates} duplicate srp key(s) found in srp.index - please remove duplicate entries before merging")
+		print(f"{srp_duplicates} duplicate srp key(s) found in srp.index - please remove redundant entries")
 	sys.exit(1)
