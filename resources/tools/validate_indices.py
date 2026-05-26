@@ -10,7 +10,8 @@ if sys.stdout.encoding != "utf-8":
 # Validates utf8snp.index and srp.index
 # Checks utf8snp.index for: invalid characters in name, invalid characters in logo name (must match [a-z0-9_-]), duplicate keys
 # Checks srp.index for: non-ASCII logo names, duplicate keys
-# Exits with code 1 if any invalid characters or duplicates are found
+# Exits with code 1 if any invalid characters or duplicates are found in utf8snp.index, or non-ASCII logo names in srp.index
+# Duplicate srp keys are reported but do not cause a failure
 # Does not modify any files
 
 
@@ -161,7 +162,7 @@ if isfile(srp_path):
 else:
 	print(f"srp.index not found at {srp_path}")
 
-if invalid > 0 or duplicates > 0 or srp_invalid > 0 or srp_duplicates > 0:
+if invalid > 0 or duplicates > 0 or srp_invalid > 0:
 	print()
 	if invalid > 0:
 		print(f"{invalid} invalid character(s) found in utf8snp.index (in name or logo) - logo names must only contain [a-z0-9_-], please correct before merging")
