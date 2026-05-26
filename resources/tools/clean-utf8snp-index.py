@@ -25,7 +25,9 @@ filename = "utf8snp.index"
 
 file_path = f"{dir_path}{sep}..{sep}..{sep}build-source{sep}{filename}"  # repo path
 
-if not isfile(file_path):  # tool not running from the repo, test /tmp
+in_repo = isfile(file_path)
+
+if not in_repo:  # tool not running from the repo, test /tmp
 	file_path = f"{sep}tmp{sep}{filename}"
 
 if not isfile(file_path):  # fetch to local from repo if necessary
@@ -110,7 +112,11 @@ for i, line in enumerate((orig := open(file_path, 'r', encoding="utf-8").read())
 
 out = "".join(sorted([k + "=" + v + "\n" for k, v in snames.items()], key=lambda listItem: lsort(listItem)))
 if out != orig:
-	open(file_path + ".cleaned", 'w', encoding="utf-8").write(out)
-	print(f"changes saved in {file_path}.cleaned")
+	if in_repo:
+		open(file_path, 'w', encoding="utf-8", newline="\n").write(out)
+		print(f"changes saved in {file_path}")
+	else:
+		open(file_path + ".cleaned", 'w', encoding="utf-8", newline="\n").write(out)
+		print(f"changes saved in {file_path}.cleaned")
 else:
 	print("no changes were required")

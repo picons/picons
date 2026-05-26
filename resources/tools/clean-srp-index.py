@@ -21,7 +21,9 @@ filename = "srp.index"
 
 file_path = f"{dir_path}{sep}..{sep}..{sep}build-source{sep}{filename}"  # repo path
 
-if not isfile(file_path):  # tool not running from the repo, test /tmp
+in_repo = isfile(file_path)
+
+if not in_repo:  # tool not running from the repo, test /tmp
 	file_path = f"{sep}tmp{sep}{filename}"
 
 if not isfile(file_path):  # fetch to local from repo if necessary
@@ -51,7 +53,11 @@ for i, line in enumerate((orig := open(file_path, 'r', encoding="utf-8", errors=
 
 out = "".join([k + "=" + logos[k] + "\n" for k in sorted(logos.keys(), key=lambda listItem: rsort(listItem))])
 if out != orig:
-	open(file_path + "-orb-sorted", 'w', encoding="utf-8").write(out)
-	print(f"changes saved in {file_path}-orb-sorted")
+	if in_repo:
+		open(file_path, 'w', encoding="utf-8", newline="\n").write(out)
+		print(f"changes saved in {file_path}")
+	else:
+		open(file_path + "-orb-sorted", 'w', encoding="utf-8", newline="\n").write(out)
+		print(f"changes saved in {file_path}-orb-sorted")
 else:
 	print("no changes were required")
