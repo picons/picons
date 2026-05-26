@@ -82,8 +82,8 @@ def lsort(listItem):
 	# if servicename is sref, sort by logo, then namespace, ONID, TSID, SID
 	sname, logo = listItem.rsplit("=", 1)
 	if re.match("^[0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+$", sname, re.IGNORECASE):
-		return (logo, 1, int((x := sname.split("_"))[3], 16), int(x[2], 16), int(x[1], 16), int(x[0], 16))
-	return (logo, 0, sname)
+		return (logo, 0, int((x := sname.split("_"))[3], 16), int(x[2], 16), int(x[1], 16), int(x[0], 16))
+	return (logo, 1, sname)
 
 
 for i, line in enumerate((orig := open(file_path, 'r', encoding="utf-8").read()).splitlines()):
