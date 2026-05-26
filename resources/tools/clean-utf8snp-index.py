@@ -25,7 +25,9 @@ filename = "utf8snp.index"
 
 file_path = f"{dir_path}{sep}..{sep}..{sep}build-source{sep}{filename}"  # repo path
 
-if not isfile(file_path):  # tool not running from the repo, test /tmp
+in_repo = isfile(file_path)
+
+if not in_repo:  # tool not running from the repo, test /tmp
 	file_path = f"{sep}tmp{sep}{filename}"
 
 if not isfile(file_path):  # fetch to local from repo if necessary
@@ -82,8 +84,8 @@ def lsort(listItem):
 	# if servicename is sref, sort by logo, then namespace, ONID, TSID, SID
 	sname, logo = listItem.rsplit("=", 1)
 	if re.match("^[0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+$", sname, re.IGNORECASE):
-		return (logo, 1, int((x := sname.split("_"))[3], 16), int(x[2], 16), int(x[1], 16), int(x[0], 16))
-	return (logo, 0, sname)
+		return (logo, 0, int((x := sname.split("_"))[3], 16), int(x[2], 16), int(x[1], 16), int(x[0], 16))
+	return (logo, 1, sname)
 
 
 for i, line in enumerate((orig := open(file_path, 'r', encoding="utf-8").read()).splitlines()):
@@ -92,7 +94,17 @@ for i, line in enumerate((orig := open(file_path, 'r', encoding="utf-8").read())
 		print(f"error on line {i}, {line}")
 		continue
 	name, logo = rsp
-	
+
+	if logo != logo.lower():
+		print(f"line {i}, logo lowercased {logo!r} -> {logo.lower()!r}")
+		logo = logo.lower()
+
+	invalid_logo_chars = sorted(set(c for c in logo if not re.match(r'[a-z0-9_-]', c)))
+	if invalid_logo_chars:
+		chars = ", ".join(repr(c) for c in invalid_logo_chars)
+		print(f"line {i}, invalid character(s) {chars} in logo name '{logo}' — skipped")
+		continue
+
 	if re.match("^[0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+[_][0-9A-F]+$", name, re.IGNORECASE):
 		sname = name.upper()
 	else:
@@ -110,7 +122,11 @@ for i, line in enumerate((orig := open(file_path, 'r', encoding="utf-8").read())
 
 out = "".join(sorted([k + "=" + v + "\n" for k, v in snames.items()], key=lambda listItem: lsort(listItem)))
 if out != orig:
-	open(file_path + ".cleaned", 'w', encoding="utf-8").write(out)
-	print(f"changes saved in {file_path}.cleaned")
+	if in_repo:
+		open(file_path, 'w', encoding="utf-8", newline="\n").write(out)
+		print(f"changes saved in {file_path}")
+	else:
+		open(file_path + ".cleaned", 'w', encoding="utf-8", newline="\n").write(out)
+		print(f"changes saved in {file_path}.cleaned")
 else:
 	print("no changes were required")
