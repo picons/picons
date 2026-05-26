@@ -1,4 +1,4 @@
-name: Sort srp.index
+name: Sort srp.index and utf8snp.index
 
 on:
   workflow_dispatch:
@@ -18,8 +18,11 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Run sorting script
-        run: python sort_srp_index.py
+      - name: Run SRP sorting script
+        run: python resources/tools/sort_srp_index.py
+
+      - name: Run UTF8 SNP sorting script
+        run: python resources/tools/sort_utf8snp_index.py
 
       - name: Commit changes (if any)
         run: |
@@ -28,8 +31,8 @@ jobs:
           if git diff --quiet; then
             echo "No changes to commit."
           else
-            git add build-source/srp.index
-            git commit -m "Auto: sort srp.index via GitHub Action"
+            git add build-source/srp.index build-source/utf8snp.index
+            git commit -m "Auto: sort srp.index and utf8snp.index via GitHub Action"
             git push --force
           fi
         env:
