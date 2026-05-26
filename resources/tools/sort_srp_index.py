@@ -39,7 +39,7 @@ def validate_line(i: int, line: str) -> tuple[bool, str, str, list[str]]:
         log(ERROR, f"Line {i}: missing '=' — removed")
         return False, "", "", []
 
-    left, right = line.split("=", 1)
+    left, right = line.rsplit("=", 1)
 
     if left != left.upper():
         log(INFO, f"Line {i}: left side uppercased  {left!r} -> {left.upper()!r}")
