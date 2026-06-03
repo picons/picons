@@ -3,12 +3,12 @@
 	<g transform="matrix(3.7162 0 0 3.7162 -3.7163 -3.7162)">
 		<g opacity=".5">
 			<defs>
-				<rect id="b" x="54.211" y="30.614" width="105.79" height="44.386"/>
+				<rect id="c" x="54.211" y="30.614" width="105.79" height="44.386"/>
 			</defs>
-			<clipPath id="a">
-				<use width="100%" height="100%" overflow="visible" xlink:href="#b"/>
+			<clipPath id="d">
+				<use width="100%" height="100%" overflow="visible" xlink:href="#c"/>
 			</clipPath>
-			<rect transform="matrix(.9962 -.0872 .0872 .9962 -4.1949 9.5357)" x="55.562" y="35.039" width="103.08" height="35.538" clip-path="url(#a)" fill="#00933a"/>
+			<rect transform="matrix(.9962 -.0872 .0872 .9962 -4.1949 9.5357)" x="55.562" y="35.039" width="103.08" height="35.538" clip-path="url(#d)" fill="#00933a"/>
 		</g>
 	</g>
 	<rect width="528.3" height="132.06" fill="#0e0f0e" stroke-width="3.7162"/>

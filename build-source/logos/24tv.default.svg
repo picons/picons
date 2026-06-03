@@ -1,76 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   version="1.1"
-   width="623.6275"
-   height="239.99998"
-   id="svg2">
-  <defs
-     id="defs4" />
-  <metadata
-     id="metadata7">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     transform="translate(-32.236957,-194.07646)"
-     id="layer1">
-    <g
-       id="text2985"
-       style="font-size:65.46867371px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#204c9e;fill-opacity:1;stroke:none;font-family:Sans">
-      <path
-         d="m 162.96972,397.00201 -130.732763,0 0,-27.27435 c 33.066747,-25.16447 55.296666,-44.57489 66.689823,-58.23132 11.39299,-13.65626 17.08953,-25.77818 17.08963,-36.3658 -10e-5,-8.4392 -2.74288,-14.97966 -8.22834,-19.62143 -5.48565,-4.64148 -13.02349,-6.96229 -22.613549,-6.96244 -14.577066,1.5e-4 -29.76783,5.17882 -45.572337,15.53603 l -2.877042,0 0,-33.02844 c 19.026794,-7.28833 37.171318,-10.93258 54.433626,-10.93276 20.484442,1.8e-4 36.269792,4.46918 47.356102,13.40702 11.08607,8.93816 16.62916,21.46287 16.6293,37.57416 -1.4e-4,12.42893 -4.5075,25.56741 -13.52209,39.41547 -9.01485,13.84823 -29.97887,33.35455 -62.892132,58.51902 l 84.239772,0 z"
-         id="path3850"
-         style="font-size:235.6872406px;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#204c9e;fill-opacity:1;font-family:Meiryo UI;-inkscape-font-specification:Meiryo UI Bold" />
-      <path
-         d="m 326.50076,353.84639 -24.62748,0 0,43.50087 -36.3658,0 0,-43.50087 -83.77945,0 0,-30.49664 82.1683,-99.7758 37.97695,0 0,103.5735 24.62748,0 z m -60.99328,-26.69894 0,-68.01327 -56.15985,68.01327 z"
-         id="path3852"
-         style="font-size:235.6872406px;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#204c9e;fill-opacity:1;font-family:Meiryo UI;-inkscape-font-specification:Meiryo UI Bold" />
-      <path
-         d="m 509.48058,396.19644 c -9.43678,2.30163 -19.5256,3.45245 -30.26647,3.45245 -15.88132,0 -27.50456,-3.39491 -34.86975,-10.18472 -7.36525,-6.78981 -11.04786,-17.7801 -11.04784,-32.9709 l 0,-69.39424 -17.49241,0 0,-23.36158 17.6075,0 0,-37.40154 35.21498,0 0,37.40154 40.85399,0 0,23.36158 -40.85399,0 0,54.89395 c -5e-5,14.11673 1.80289,23.32325 5.40884,27.6196 3.60583,4.2964 9.66679,6.44459 18.1829,6.44457 5.44712,2e-5 10.85595,-1.3426 16.22652,-4.02786 l 1.03573,0 z"
-         id="path3854"
-         style="font-size:235.6872406px;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#204c9e;fill-opacity:1;font-family:Meiryo UI;-inkscape-font-specification:Meiryo UI Bold" />
-      <path
-         d="m 655.86447,263.73745 -54.5487,133.26456 -33.37368,0 -54.31855,-133.26456 38.32219,0 33.94909,92.29549 33.60385,-92.29549 z"
-         id="path3856"
-         style="font-size:235.6872406px;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#204c9e;fill-opacity:1;font-family:Meiryo UI;-inkscape-font-specification:Meiryo UI Bold" />
-    </g>
-    <g
-       id="g3844">
-      <rect
-         width="25.714285"
-         height="126.85715"
-         x="347.14285"
-         y="194.07646"
-         id="rect3773"
-         style="fill:#204c9e;fill-opacity:1" />
-      <rect
-         width="25.714285"
-         height="78.857147"
-         x="347.14285"
-         y="355.2193"
-         id="rect3773-1"
-         style="fill:#204c9e;fill-opacity:1" />
-      <rect
-         width="25.714285"
-         height="90"
-         x="370.85712"
-         y="292.07651"
-         id="rect3773-7"
-         style="fill:#204c9e;fill-opacity:1" />
-    </g>
+<svg version="1.1" viewBox="0 0 623.63 240" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(-32.237 -194.08)" fill="#204c9e">
+  <g>
+   <path d="m162.97 397h-130.73v-27.274c33.067-25.164 55.297-44.575 66.69-58.231 11.393-13.656 17.09-25.778 17.09-36.366-1e-4 -8.4392-2.7429-14.98-8.2283-19.621-5.4856-4.6415-13.023-6.9623-22.614-6.9624-14.577 1.5e-4 -29.768 5.1788-45.572 15.536h-2.877v-33.028c19.027-7.2883 37.171-10.933 54.434-10.933 20.484 1.8e-4 36.27 4.4692 47.356 13.407 11.086 8.9382 16.629 21.463 16.629 37.574-1.4e-4 12.429-4.5075 25.567-13.522 39.415-9.0148 13.848-29.979 33.355-62.892 58.519h84.24z"/>
+   <path d="m326.5 353.85h-24.627v43.501h-36.366v-43.501h-83.779v-30.497l82.168-99.776h37.977v103.57h24.627zm-60.993-26.699v-68.013l-56.16 68.013z"/>
+   <path d="m509.48 396.2c-9.4368 2.3016-19.526 3.4524-30.266 3.4524-15.881 0-27.505-3.3949-34.87-10.185-7.3652-6.7898-11.048-17.78-11.048-32.971v-69.394h-17.492v-23.362h17.608v-37.402h35.215v37.402h40.854v23.362h-40.854v54.894c-5e-5 14.117 1.8029 23.323 5.4088 27.62 3.6058 4.2964 9.6668 6.4446 18.183 6.4446 5.4471 2e-5 10.856-1.3426 16.227-4.0279h1.0357z"/>
+   <path d="m655.86 263.74-54.549 133.26h-33.374l-54.319-133.26h38.322l33.949 92.295 33.604-92.295z"/>
   </g>
+  <rect x="347.14" y="194.08" width="25.714" height="126.86"/>
+  <rect x="347.14" y="355.22" width="25.714" height="78.857"/>
+  <rect x="370.86" y="292.08" width="25.714" height="90"/>
+ </g>
 </svg>

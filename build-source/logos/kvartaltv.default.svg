@@ -1,12 +1,12 @@
 <svg enable-background="new 0 0 50 37.21" version="1.1" viewBox="0 0 800 623.72" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g transform="matrix(16.8 0 0 16.8 -19.992 -1.3776)">
 <defs>
-<rect id="b" width="50" height="37.209"/>
+<rect id="c" width="50" height="37.209"/>
 </defs>
-<clipPath id="a">
-<use overflow="visible" xlink:href="#b"/>
+<clipPath id="d">
+<use overflow="visible" xlink:href="#c"/>
 </clipPath>
-<g clip-path="url(#a)">
+<g clip-path="url(#d)">
 <path d="m37.227 37.23h-12.101v-19.361h12.101z" fill="#424143"/>
 <path d="m24.872 37.23h-12.099v-19.361h12.099z" fill="#424143"/>
 <path d="m24.872 26.34h-12.099v-8.471h12.099z" fill="#383939"/>

@@ -1,12 +1,12 @@
 <svg width="800mm" height="288.09mm" version="1.1" viewBox="0 0 800 288.09" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <linearGradient id="linearGradient928" x1="184.4" x2="234.53" y1="-81.57" y2="-31.538" gradientTransform="matrix(4.198 0 0 4.198 -625.13 432.91)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="a" x1="184.4" x2="234.53" y1="-81.57" y2="-31.538" gradientTransform="matrix(4.198 0 0 4.198 -625.13 432.91)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#2bc4e6" offset="0"/>
    <stop stop-color="#265b6b" offset="1"/>
   </linearGradient>
  </defs>
  <g transform="translate(-121.72,-39.601)">
-  <path d="m148.98 90.476h210.46v210.04h-210.46z" fill="url(#linearGradient928)" opacity=".97"/>
+  <path d="m148.98 90.476h210.46v210.04h-210.46z" fill="url(#a)" opacity=".97"/>
   <g fill="#fff">
    <path d="m330.01 114.77v29.878h-54.282v133.17h-37.332v-133.17h-54.282v-29.878z" stroke-width="3.2801"/>
    <path d="m373.43 153.68v24.612h0.33626q10.844-26.344 25.302-26.344 6.893 0 16.56 7.8394l-6.8931 23.974q-9.2466-6.3809-14.795-6.3809-8.6583 0-14.627 11.668-5.8842 11.577-5.8842 13.491v37.191h-24.966v-86.051z" stroke-width="2.5661"/>

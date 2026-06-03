@@ -4,25 +4,25 @@
    <stop stop-color="#fff" offset="0"/>
    <stop stop-color="#fff" offset="1"/>
   </linearGradient>
-  <linearGradient id="g" x1="91.1" x2="91.1" y1="32" y2="19.96" gradientTransform="matrix(7.9992 0 0 7.9992 -214.14 -15.984)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="f" x1="91.1" x2="91.1" y1="32" y2="19.96" gradientTransform="matrix(7.9992 0 0 7.9992 -214.14 -15.984)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#bfbfbe" offset="0"/>
    <stop stop-color="#dce0df" offset=".53"/>
    <stop stop-color="#92918f" offset="1"/>
   </linearGradient>
-  <linearGradient id="h" x1="97.3" x2="95.43" y1="2" y2="23.42" gradientTransform="matrix(1 0 -.18 1 57.96 0)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="e" x1="97.3" x2="95.43" y1="2" y2="23.42" gradientTransform="matrix(1 0 -.18 1 57.96 0)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#009345" offset="0"/>
    <stop stop-color="#8bc53f" offset="1"/>
   </linearGradient>
-  <linearGradient id="i" x1="91.33" x2="91.33" y1="24.97" y2="18.39" xlink:href="#a"/>
-  <linearGradient id="b" x1="76.48" x2="76.48" y1="18.15" y2="2.11" gradientTransform="matrix(7.9992,0,0,7.9992,-14.497,-15.984)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="d" x1="91.33" x2="91.33" y1="24.97" y2="18.39" xlink:href="#a"/>
+  <linearGradient id="h" x1="76.48" x2="76.48" y1="18.15" y2="2.11" gradientTransform="matrix(7.9992,0,0,7.9992,-14.497,-15.984)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#bfbfbe" offset="0"/>
    <stop stop-color="#dce0df" offset=".53"/>
    <stop stop-color="#92918f" offset="1"/>
   </linearGradient>
-  <linearGradient id="c" x1="76.94" x2="76.94" y1="8.76" y2="-.12" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="g" x1="76.94" x2="76.94" y1="8.76" y2="-.12" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
  </defs>
  <g transform="translate(-199.64 .00032325)" stroke-width="7.9992">
-  <path class="cls-3" d="m979.48 0.97463h-741.76a22.958 22.958 0 0 0-21.678 18.398l-15.998 91.51a14.958 14.958 0 0 0 15.118 18.398h741.76a22.958 22.958 0 0 0 21.678-18.398l15.998-91.43a14.958 14.958 0 0 0-15.118-18.478z" fill="url(#b)"/>
+  <path class="cls-3" d="m979.48 0.97463h-741.76a22.958 22.958 0 0 0-21.678 18.398l-15.998 91.51a14.958 14.958 0 0 0 15.118 18.398h741.76a22.958 22.958 0 0 0 21.678-18.398l15.998-91.43a14.958 14.958 0 0 0-15.118-18.478z" fill="url(#h)"/>
  </g>
  <g transform="translate(-199.64 .00032325)" stroke-width="7.9992">
   <path class="cls-2" d="m849.41 36.731h-19.918l3.3596-19.358h65.433l-3.4396 19.358h-19.758l-13.439 76.472h-25.597z"/>
@@ -37,10 +37,10 @@
   <path class="cls-2" d="m645.99 41.37h23.278l-1.5198 8.3991a18.398 18.398 0 0 1 15.038-9.199 29.437 29.437 0 0 1 6.3993 0.63993l-3.4396 19.518a78.712 78.712 0 0 0-8.3191-0.71992c-5.1195 0-11.439 1.5198-12.479 7.3592l-7.9992 46.155h-23.518z"/>
  </g>
  <g class="cls-4" transform="matrix(7.9992 0 0 7.9992 -214.14 -15.984)" opacity=".25">
-  <path class="cls-5" d="m124.21 2h-92.73a2.85 2.85 0 0 0-2.7 2.3l-1 5.87h97.33l1-5.86a1.87 1.87 0 0 0-1.9-2.31z" fill="url(#c)" opacity=".25"/>
+  <path class="cls-5" d="m124.21 2h-92.73a2.85 2.85 0 0 0-2.7 2.3l-1 5.87h97.33l1-5.86a1.87 1.87 0 0 0-1.9-2.31z" fill="url(#g)" opacity=".25"/>
  </g>
- <path class="cls-6" d="m733.68 239.99a26.637 26.637 0 0 0 25.197-21.438l9.279-53.354a17.518 17.518 0 0 0-17.678-21.198h-454.99a26.717 26.717 0 0 0-25.277 21.518l-9.199 53.034a17.518 17.518 0 0 0 17.678 21.438z" fill="url(#g)" stroke-width="7.9992"/>
- <polygon class="cls-7" transform="matrix(7.9992 0 0 7.9992 -214.14 -15.984)" points="97.46 13.09 96.73 13.91 92.77 18.15 94.03 12.18 90.59 8.49 95.5 8.09 98.79 2.13 99.58 7.87 102.96 7.6 100.25 10.33 101.67 14.32 97.73 13.19" fill="url(#h)" fill-rule="evenodd"/>
+ <path class="cls-6" d="m733.68 239.99a26.637 26.637 0 0 0 25.197-21.438l9.279-53.354a17.518 17.518 0 0 0-17.678-21.198h-454.99a26.717 26.717 0 0 0-25.277 21.518l-9.199 53.034a17.518 17.518 0 0 0 17.678 21.438z" fill="url(#f)" stroke-width="7.9992"/>
+ <polygon class="cls-7" transform="matrix(7.9992 0 0 7.9992 -214.14 -15.984)" points="97.46 13.09 96.73 13.91 92.77 18.15 94.03 12.18 90.59 8.49 95.5 8.09 98.79 2.13 99.58 7.87 102.96 7.6 100.25 10.33 101.67 14.32 97.73 13.19" fill="url(#e)" fill-rule="evenodd"/>
  <g transform="translate(-199.64 .00032325)" stroke-width="7.9992">
   <path class="cls-2" d="m512.33 160h49.115l-2.7997 14.878h-31.997l-1.9998 10.319h28.797l-2.7197 14.798h-28.877l-4.1596 21.838h-16.958z"/>
   <path class="cls-2" d="m583.12 160h15.998l14.318 61.514h-17.838l-2.1598-11.039h-23.997l-6.4793 10.959h-17.518zm7.9992 37.436-3.5196-17.358-10.159 17.278z"/>
@@ -51,6 +51,6 @@
   <path class="cls-2" d="m882.61 198.55-15.998-38.236h19.278l7.9992 22.238 17.278-22.558h18.958l-30.397 37.996-4.3995 23.118h-17.038z"/>
  </g>
  <g class="cls-4" transform="matrix(7.9992 0 0 7.9992 -214.14 -15.984)" opacity=".25">
-  <path class="cls-8" d="m120.7 20h-57.19a2.87 2.87 0 0 0-2.71 2.3l-0.8 3.7h62.33l0.24-3.75a1.88 1.88 0 0 0-1.87-2.25z" fill="url(#i)" opacity=".25"/>
+  <path class="cls-8" d="m120.7 20h-57.19a2.87 2.87 0 0 0-2.71 2.3l-0.8 3.7h62.33l0.24-3.75a1.88 1.88 0 0 0-1.87-2.25z" fill="url(#d)" opacity=".25"/>
  </g>
 </svg>

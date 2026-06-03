@@ -1,18 +1,18 @@
 <svg width="211.67mm" height="211.67mm" version="1.1" viewBox="0 0 211.67 211.67" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <linearGradient id="d" x2="1" gradientTransform="matrix(1669.2,3.6571,3.6571,-1669.2,482.02,2038)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="a" x2="1" gradientTransform="matrix(1669.2,3.6571,3.6571,-1669.2,482.02,2038)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#482b75" offset="0"/>
    <stop stop-color="#5d4292" offset=".99567"/>
    <stop stop-color="#5d4292" offset="1"/>
   </linearGradient>
-  <clipPath id="c">
+  <clipPath id="b">
    <path d="M 0,2423.1 H 3540.8 V 0 H 0 Z"/>
   </clipPath>
  </defs>
  <g transform="matrix(.31507 0 0 .31507 49.433 67.935)">
   <g transform="matrix(.35278 0 0 -.35278 -445.54 624.26)">
-   <path d="m1661.6 2339.7-802.37-802.34c-55.38-55.393-54.607-145.95 1.71-202.28l815.91-815.93c56.367-56.342 146.91-57.095 202.29-1.716l802.35 802.35c55.404 55.404 54.637 145.97-1.692 202.29l-815.93 815.93c-28.467 28.477-65.678 42.748-102.7 42.748-36.18 0-72.199-13.661-99.565-41.057" fill="url(#d)"/>
-   <g clip-path="url(#c)">
+   <path d="m1661.6 2339.7-802.37-802.34c-55.38-55.393-54.607-145.95 1.71-202.28l815.91-815.93c56.367-56.342 146.91-57.095 202.29-1.716l802.35 802.35c55.404 55.404 54.637 145.97-1.692 202.29l-815.93 815.93c-28.467 28.477-65.678 42.748-102.7 42.748-36.18 0-72.199-13.661-99.565-41.057" fill="url(#a)"/>
+   <g clip-path="url(#b)">
     <g transform="translate(1365.2,1459.9)">
      <path d="m0 0h65.901v103.41h-121.11z" fill="#fff"/>
     </g>
