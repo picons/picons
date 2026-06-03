@@ -1,14 +1,22 @@
 <svg version="1.1" viewBox="0 0 800 529.22" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
 <g transform="scale(1.5625)" fill="#d6d6d6">
 	<g fill="#d6d6d6">
+		
 			<g fill="#d6d6d6">
 				<path class="st0" d="M 175.2,96.8 H 54.1 L 0,0 h 121.1 z"/>
 				<path class="st0" d="m175.2 110.9h-121.1l-54.1 96.7h121.1z"/>
+			
+			
 				<path class="st0" d="m343.6 96.8h-121.1l-54.1-96.8h121.1z"/>
 				<path class="st0" d="m343.6 110.9h-121.1l-54.1 96.7h121.1z"/>
+			
+			
 				<path class="st0" d="m512 96.8h-121.1l-54.1-96.8h121.1z"/>
 				<path class="st0" d="m512 110.9h-121.1l-54.1 96.7h121.1z"/>
 			</g>
+		
+	
+	
 		<path class="st1" d="m20.3 301.9h-4.2v35.1h-16.1v-82.1h16.1v36.4l3.8-1.6 22.6-34.7h18.3l-23.9 34.5-6.3 4.4 6.6 4.6 27.2 38.5h-19.8z"/>
 		<path class="st1" d="m117.4 291.5 0.9-10.7h-0.6l-5.5 11-30.5 45.2h-12.1v-82.1h16.1v44.7l-1.2 11h0.7l5.8-11.4 30.6-44.3h12v82.1h-16.1v-45.5z"/>
 		<path class="st1" d="m195.2 302.6h-30v34.4h-16.1v-82.1h16.1v33.4h30v-33.4h16.1v82.1h-16.1z"/>

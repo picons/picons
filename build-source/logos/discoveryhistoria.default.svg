@@ -1,24 +1,24 @@
-<svg width="600" height="163.41" version="1.1" viewBox="0 0 158.75 43.235" xmlns="http://www.w3.org/2000/svg">
+<svg width="600" height="163.41" version="1.1" viewBox="0 0 158.75 43.234862" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <linearGradient id="e" x2="1" gradientTransform="matrix(15.254 -44.768 44.768 15.254 58.736 201.01)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="d" x2="1" gradientTransform="matrix(15.254 -44.768 44.768 15.254 58.736 201.01)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#2a271e" offset="0"/>
    <stop stop-color="#2a271e" offset=".0058992"/>
    <stop stop-color="#6f5d55" offset=".92024"/>
    <stop stop-color="#6f5d55" offset="1"/>
   </linearGradient>
-  <linearGradient id="f" x2="1" gradientTransform="matrix(15.254 -44.767 44.767 15.254 53.085 199.08)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="c" x2="1" gradientTransform="matrix(15.254 -44.767 44.767 15.254 53.085 199.08)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#2a271e" offset="0"/>
    <stop stop-color="#2a271e" offset=".0058992"/>
    <stop stop-color="#6f5d55" offset=".92024"/>
    <stop stop-color="#6f5d55" offset="1"/>
   </linearGradient>
-  <linearGradient id="g" x2="1" gradientTransform="matrix(17.98 -52.768 52.768 17.98 52.659 207.17)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="b" x2="1" gradientTransform="matrix(17.98 -52.768 52.768 17.98 52.659 207.17)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#2a271e" offset="0"/>
    <stop stop-color="#2a271e" offset=".0058992"/>
    <stop stop-color="#6f5d55" offset=".92024"/>
    <stop stop-color="#6f5d55" offset="1"/>
   </linearGradient>
-  <linearGradient id="h" x2="1" gradientTransform="matrix(21.554 -35.481 35.481 21.554 37.479 188.24)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="a" x2="1" gradientTransform="matrix(21.554 -35.481 35.481 21.554 37.479 188.24)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#2a271e" offset="0"/>
    <stop stop-color="#2a271e" offset=".0058992"/>
    <stop stop-color="#6f5d55" offset=".92024"/>
@@ -26,10 +26,10 @@
   </linearGradient>
  </defs>
  <g transform="translate(-33.349 -153.21)">
-  <path d="m57.166 183.87v12.314h12.044v-15.158l-12.044-1.322z" fill="url(#e)"/>
-  <path d="m57.166 165.71v5.5235l12.044 1.9242v-14.639z" fill="url(#f)"/>
-  <path d="m69.238 158.52h0.01384v-0.0138z" fill="url(#g)"/>
-  <path d="m33.349 169.33v26.856h14.93v-42.977z" fill="url(#h)"/>
+  <path d="m57.166 183.87v12.314h12.044v-15.158l-12.044-1.322z" fill="url(#d)"/>
+  <path d="m57.166 165.71v5.5235l12.044 1.9242v-14.639z" fill="url(#c)"/>
+  <path d="m69.238 158.52h0.01384v-0.0138z" fill="url(#b)"/>
+  <path d="m33.349 169.33v26.856h14.93v-42.977z" fill="url(#a)"/>
   <g fill="#4d3e37">
    <path d="m94.856 185.71h-9.3719v-7.5031h-3.0317v17.969h3.0317v-7.9115h9.3719v7.9115h3.0317v-17.969h-3.0317z"/>
    <path d="m102.42 196.18h3.0247v-17.969h-3.0247z"/>

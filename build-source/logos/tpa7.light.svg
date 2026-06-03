@@ -1,6 +1,6 @@
 <svg width="211.67mm" height="112.18mm" version="1.1" viewBox="0 0 211.67 112.18" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(128.89 -92.743)">
-  <g transform="matrix(3.7888 0 0 3.7888 -333.23 92.582)" fill-rule="evenodd">
+  <g transform="matrix(3.7888 0 0 3.7888 -333.23 92.582)" fill="none" fill-rule="evenodd">
    <path d="m53.931 0.043199 31.655-1.9894e-4v29.608h-31.655z" fill="#fff"/>
    <g fill="#0078bc">
     <rect x="57.502" y="3.4327" width="18.705" height="5.3833"/>

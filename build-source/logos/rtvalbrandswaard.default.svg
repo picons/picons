@@ -1,19 +1,19 @@
-<svg width="180.95mm" height="46.706mm" version="1.1" viewBox="0 0 180.95 46.706" xmlns="http://www.w3.org/2000/svg">
+<svg width="180.95mm" height="46.706mm" version="1.1" viewBox="0 0 180.95 46.706" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
-  <linearGradient id="c" x1="-8.7161" x2="-2.6494" y1="147.69" y2="129.39" gradientTransform="translate(-70.732 8.3555)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="b" x1="-8.7161" x2="-2.6494" y1="147.69" y2="129.39" gradientTransform="translate(-70.732 8.3555)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#780e00" offset="0"/>
    <stop stop-color="#dc0714" offset="1"/>
   </linearGradient>
-  <linearGradient id="d" x1="-8.7161" x2="-2.6494" y1="147.63" y2="129.39" gradientTransform="rotate(180 -36.973 144.66)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="a" x1="-8.7161" x2="-2.6494" y1="147.63" y2="129.39" gradientTransform="rotate(180 -36.973 144.66)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#01305b" offset="0"/>
    <stop stop-color="#006eb8" offset="1"/>
   </linearGradient>
  </defs>
  <g transform="translate(113.53 -125.48)">
   <path d="m-94.348 125.48 6.4145-2.5e-4 10.089 30.669h-5.4122z" fill="#dc0714"/>
-  <path d="m-76.941 156.15 10.776-30.669h-6.414l-7.6709 23.119 2.4054 7.5504z" fill="url(#c)"/>
+  <path d="m-76.941 156.15 10.776-30.669h-6.414l-7.6709 23.119 2.4054 7.5504z" fill="url(#b)"/>
   <path d="m-50.329 172.19-6.4145 2.5e-4 -10.089-30.669h5.4122z" fill="#006eb8"/>
-  <path d="m-67.736 141.52-10.776 30.669h6.414l7.6709-23.119-2.4054-7.5504z" fill="url(#d)"/>
+  <path d="m-67.736 141.52-10.776 30.669h6.414l7.6709-23.119-2.4054-7.5504z" fill="url(#a)"/>
   <g transform="matrix(.95035 0 0 1.0522 -70.732 8.3555)" fill="#006eb8" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="lbrandswaard">
    <path d="m16.564 136.79c0 2.1785 0.73912 3.6567 2.9954 3.6567 0.73912 0 1.2837-0.11671 1.6338-0.27231l-0.38901-2.4508c-0.1556 0.0389-0.23341 0.0389-0.35011 0.0389-0.23341 0-0.54462-0.19451-0.54462-0.85583v-10.231h-3.3455z" stroke-width=".27841"/>
    <path d="m22.491 140.21h2.8196l0.29459-1.0503h0.08416c0.79959 0.85582 1.7254 1.2837 2.6513 1.2837 2.2304 0 4.3767-1.9062 4.3767-5.2711 0-2.9759-1.6202-4.921-4.1032-4.921-0.92584 0-1.8517 0.35011-2.5882 0.97253l0.08416-1.4004v-3.151h-3.6192zm3.6192-2.9565v-3.5789c0.46292-0.50571 0.88376-0.70022 1.4308-0.70022 0.96793 0 1.4729 0.66132 1.4729 2.2563 0 1.8672-0.71542 2.4897-1.5571 2.4897-0.46292 0-0.92584-0.11671-1.3467-0.46682z" stroke-width=".28957"/>

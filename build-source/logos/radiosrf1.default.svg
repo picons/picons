@@ -1,4 +1,14 @@
-<svg width="600" height="739.92" version="1.1" viewBox="0 0 158.75 195.77" xmlns="http://www.w3.org/2000/svg">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="739.92" version="1.1" viewBox="0 0 158.75 195.77" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
  <defs>
   <radialGradient id="a" cx="108.02" cy="114.32" r="76.516" gradientTransform="matrix(1.0374 .0053048 -.0055369 1.0827 20.118 104.65)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#ffdf00" offset="0"/>

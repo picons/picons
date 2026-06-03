@@ -1,20 +1,28 @@
 <svg version="1.1" viewBox="0 0 800 493.34" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
 <g transform="scale(1.5622)" fill="#d6d6d6">
 	<g fill="#d6d6d6">
+		
 			<g fill="#d6d6d6">
 				<g fill="#d6d6d6">
 					<g fill="#d6d6d6">
 						<g fill="#d6d6d6">
 							<path class="st0" d="M 175.2,96.8 H 54.1 L 0,0 h 121.1 z"/>
 							<path class="st0" d="m175.2 110.9h-121.1l-54.1 96.7h121.1z"/>
+						
+						
 							<path class="st0" d="m343.6 96.8h-121.1l-54.1-96.8h121.1z"/>
 							<path class="st0" d="m343.6 110.9h-121.1l-54.1 96.7h121.1z"/>
+						
+						
 							<path class="st0" d="m512 96.8h-121.1l-54.1-96.8h121.1z"/>
 							<path class="st0" d="m512 110.9h-121.1l-54.1 96.7h121.1z"/>
 						</g>
 					</g>
 				</g>
 			</g>
+		
+	
+	
 		<path class="st0" d="m12.8 284.5h-2.7v22.1h-10.1v-51.7h10.1v22.9l2.4-1 14.3-21.9h11.5l-15.1 21.7-4 2.8 4.1 2.9 17.2 24.3h-12.4z"/>
 		<path class="st0" d="m74 277.9 0.6-6.7h-0.4l-3.5 6.9-19.3 28.5h-7.6v-51.7h10.1v28.1l-0.7 6.9h0.4l3.6-7.2 19.3-27.9h7.5v51.7h-10z"/>
 		<path class="st0" d="m123 285h-18.9v21.6h-10.2v-51.7h10.1v21.1h19v-21.1h10.1v51.7h-10.1z"/>

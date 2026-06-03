@@ -1,35 +1,35 @@
 <svg width="211.67mm" height="108.41mm" version="1.1" viewBox="0 0 211.67 108.41" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <clipPath id="h">
+  <clipPath id="g">
    <path d="m0 108h422v-108h-422z"/>
   </clipPath>
-  <clipPath id="k">
+  <clipPath id="d">
    <path d="m340.6 44.142c0-4.319 3.501-7.82 7.82-7.82 4.32 0 7.821 3.501 7.821 7.82 0 4.32-3.501 7.821-7.821 7.821-4.319 0-7.82-3.501-7.82-7.821"/>
   </clipPath>
-  <clipPath id="i">
+  <clipPath id="f">
    <path d="m0 108h422v-108h-422z"/>
   </clipPath>
-  <clipPath id="j">
+  <clipPath id="e">
    <path d="m362.11 44.178c0-4.318 3.501-7.819 7.82-7.819 4.32 0 7.821 3.501 7.821 7.819 0 4.321-3.501 7.822-7.821 7.822-4.319 0-7.82-3.501-7.82-7.822"/>
   </clipPath>
-  <clipPath id="l">
+  <clipPath id="c">
    <path d="m0 108h422v-108h-422z"/>
   </clipPath>
-  <clipPath id="m">
+  <clipPath id="b">
    <path d="m351.24 28.192c0-4.32 3.501-7.821 7.821-7.821 4.319 0 7.818 3.501 7.818 7.821 0 4.319-3.499 7.819-7.818 7.819-4.32 0-7.821-3.5-7.821-7.819"/>
   </clipPath>
-  <clipPath id="n">
+  <clipPath id="a">
    <path d="m0 108h422v-108h-422z"/>
   </clipPath>
  </defs>
  <g transform="translate(94.358 -81.075)">
   <g transform="matrix(1.3954 0 0 -1.3954 -439.7 217.16)">
-   <g clip-path="url(#h)">
+   <g clip-path="url(#g)">
     <g transform="translate(356.14,44.014)">
      <path d="m0 0c0-4.318-3.502-7.821-7.822-7.821-4.318 0-7.821 3.503-7.821 7.821 0 4.319 3.503 7.82 7.821 7.82 4.32 0 7.822-3.501 7.822-7.82" fill="#de1e25"/>
     </g>
    </g>
-   <g clip-path="url(#k)">
+   <g clip-path="url(#d)">
     <g transform="translate(347.88,51.756)">
      <path d="m0 0c0.113 0.176 0.946 0.176 1.061 0z" fill="#e22128" fill-rule="evenodd"/>
     </g>
@@ -1355,7 +1355,7 @@
     </g>
     <path d="m347.56 52.287h1.696v-0.212h-1.696z" fill="#d01f27" fill-rule="evenodd"/>
    </g>
-   <g clip-path="url(#i)">
+   <g clip-path="url(#f)">
     <g transform="translate(356.14,44.014)">
      <path d="m0 0c0-4.318-3.502-7.821-7.822-7.821-4.318 0-7.821 3.503-7.821 7.821 0 4.319 3.503 7.82 7.821 7.82 4.32 0 7.822-3.501 7.822-7.82z" fill="none" stroke="#de1e25" stroke-miterlimit="10" stroke-width=".645"/>
     </g>
@@ -1363,7 +1363,7 @@
      <path d="m0 0c0-4.318-3.503-7.819-7.82-7.819-4.321 0-7.823 3.501-7.823 7.819 0 4.32 3.502 7.821 7.823 7.821 4.317 0 7.82-3.501 7.82-7.821" fill="#30ad46"/>
     </g>
    </g>
-   <g clip-path="url(#j)">
+   <g clip-path="url(#e)">
     <g transform="translate(369.83,52.084)">
      <path d="m0 0h0.317c-4e-3 -0.147 0.05-0.233 0.107-0.318h-0.529c5e-3 0.136 0.135 0.147 0.105 0.318" fill="#32af44" fill-rule="evenodd"/>
     </g>
@@ -2228,7 +2228,7 @@
      <path d="m0 0c0.083-0.023 0.124-0.088 0.107-0.211v-0.318c-4.744 0.036-10.178-0.59-13.786-0.212 0.016 0.124-0.019 0.301 0.106 0.317 4.18-0.306 9.48 2e-3 13.573 0.424" fill="#58c158" fill-rule="evenodd"/>
     </g>
    </g>
-   <g clip-path="url(#l)">
+   <g clip-path="url(#c)">
     <g transform="translate(377.86,43.965)">
      <path d="m0 0c0-4.318-3.503-7.819-7.82-7.819-4.321 0-7.823 3.501-7.823 7.819 0 4.32 3.502 7.821 7.823 7.821 4.317 0 7.82-3.501 7.82-7.821z" fill="none" stroke="#30ad46" stroke-miterlimit="10" stroke-width=".645"/>
     </g>
@@ -2236,7 +2236,7 @@
      <path d="m0 0c0-4.319-3.501-7.821-7.82-7.821s-7.821 3.502-7.821 7.821 3.502 7.82 7.821 7.82 7.82-3.501 7.82-7.82" fill="#2b439d"/>
     </g>
    </g>
-   <g clip-path="url(#m)">
+   <g clip-path="url(#b)">
     <path d="m358.64 36.34h0.635v-0.105h-0.635z" fill="#f1eff9" fill-rule="evenodd"/>
     <g transform="translate(358.53,36.129)">
      <path d="m0 0v0.106h0.848v-0.106h-0.741z" fill="#cfc5e6" fill-rule="evenodd"/>
@@ -3291,7 +3291,7 @@
      <path d="m0 0v-0.424h-0.107v0.529c0.065-5e-3 0.126-0.015 0.107-0.105" fill="#346abc" fill-rule="evenodd"/>
     </g>
    </g>
-   <g clip-path="url(#n)">
+   <g clip-path="url(#a)">
     <g transform="translate(366.78,27.978)">
      <path d="m0 0c0-4.319-3.501-7.821-7.82-7.821s-7.821 3.502-7.821 7.821 3.502 7.82 7.821 7.82 7.82-3.501 7.82-7.82z" fill="none" stroke="#2b439d" stroke-miterlimit="10" stroke-width=".645"/>
     </g>

@@ -1,9 +1,9 @@
 <svg width="800" height="277.33" enable-background="new -145 341 321 111" version="1.1" viewBox="-145 341 800 277.33" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
 	<defs>
 		<style>
-			.cls-1,.cls-5{fill:none;}.cls-2{clip-path:url(#f);}.cls-3{fill:url(#a);}.cls-4{clip-path:url(#g);}.cls-5{stroke:#fff;stroke-width:0.87px;}.cls-6{fill:#003a79;}.cls-7{fill:#0081c8;}
+			.cls-1,.cls-5{fill:none;}.cls-2{clip-path:url(#c);}.cls-3{fill:url(#a);}.cls-4{clip-path:url(#b);}.cls-5{stroke:#fff;stroke-width:0.87px;}.cls-6{fill:#003a79;}.cls-7{fill:#0081c8;}
 		</style>
-		<clipPath id="f" transform="translate(.01 -.66)">
+		<clipPath id="c" transform="translate(.01 -.66)">
 			<path class="cls-1" d="m76.28 21.33c0 11.13 10.15 20.15 22.68 20.15s22.68-9 22.68-20.15-10.16-20.16-22.64-20.16-22.68 9-22.68 20.16" fill="none"/>
 		</clipPath>
 		<radialGradient id="a" cx="189.13" cy="834.83" r=".95" gradientTransform="matrix(22.7,0,0,-22.7,-4194.1,18970)" gradientUnits="userSpaceOnUse">
@@ -15,32 +15,32 @@
 			<stop stop-color="#51aedb" offset=".78"/>
 			<stop stop-color="#0089ca" offset="1"/>
 		</radialGradient>
-		<clipPath id="g" transform="translate(.01 -.66)">
+		<clipPath id="b" transform="translate(.01 -.66)">
 			<rect class="cls-1" x="-.01" y=".46" width="203.02" height="41.58" fill="none"/>
 		</clipPath>
 		<style>
-			.cls-1,.cls-5{fill:none;}.cls-2{clip-path:url(#i);}.cls-3{fill:url(#a);}.cls-4{clip-path:url(#h);}.cls-5{stroke:#fff;stroke-width:0.87px;}.cls-6{fill:#fff;}.cls-7{fill:#0081c8;}
+			.cls-1,.cls-5{fill:none;}.cls-2{clip-path:url(#d);}.cls-3{fill:url(#a);}.cls-4{clip-path:url(#e);}.cls-5{stroke:#fff;stroke-width:0.87px;}.cls-6{fill:#fff;}.cls-7{fill:#0081c8;}
 		</style>
-		<clipPath id="i" transform="translate(.01 -.66)">
+		<clipPath id="d" transform="translate(.01 -.66)">
 			<path class="cls-1" d="m76.28 21.33c0 11.13 10.15 20.15 22.68 20.15s22.68-9 22.68-20.15-10.16-20.16-22.64-20.16-22.68 9-22.68 20.16" fill="none"/>
 		</clipPath>
-		<clipPath id="h" transform="translate(.01 -.66)">
+		<clipPath id="e" transform="translate(.01 -.66)">
 			<rect class="cls-1" x="-.01" y=".46" width="203.02" height="41.58" fill="none"/>
 		</clipPath>
 		<style>
-			.cls-1,.cls-5{fill:none;}.cls-2{clip-path:url(#i);}.cls-3{fill:url(#a);}.cls-4{clip-path:url(#h);}.cls-5{stroke:#fff;stroke-width:0.87px;}.cls-6{fill:#fff;}.cls-7{fill:#0081c8;}
+			.cls-1,.cls-5{fill:none;}.cls-2{clip-path:url(#d);}.cls-3{fill:url(#a);}.cls-4{clip-path:url(#e);}.cls-5{stroke:#fff;stroke-width:0.87px;}.cls-6{fill:#fff;}.cls-7{fill:#0081c8;}
 		</style>
 		<style>
-			.cls-1,.cls-5{fill:none;}.cls-2{clip-path:url(#f);}.cls-3{fill:url(#a);}.cls-4{clip-path:url(#g);}.cls-5{stroke:#fff;stroke-width:0.87px;}.cls-6{fill:#fff;}.cls-7{fill:#0081c8;}
+			.cls-1,.cls-5{fill:none;}.cls-2{clip-path:url(#c);}.cls-3{fill:url(#a);}.cls-4{clip-path:url(#b);}.cls-5{stroke:#fff;stroke-width:0.87px;}.cls-6{fill:#fff;}.cls-7{fill:#0081c8;}
 		</style>
 		<style>
-			.cls-1,.cls-5{fill:none;}.cls-2{clip-path:url(#f);}.cls-3{fill:url(#a);}.cls-4{clip-path:url(#g);}.cls-5{stroke:#fff;stroke-width:0.87px;}.cls-6{fill:#fff;}.cls-7{fill:#0081c8;}
+			.cls-1,.cls-5{fill:none;}.cls-2{clip-path:url(#c);}.cls-3{fill:url(#a);}.cls-4{clip-path:url(#b);}.cls-5{stroke:#fff;stroke-width:0.87px;}.cls-6{fill:#fff;}.cls-7{fill:#0081c8;}
 		</style>
 		<style>
-			.cls-1,.cls-5{fill:none;}.cls-2{clip-path:url(#f);}.cls-3{fill:url(#a);}.cls-4{clip-path:url(#g);}.cls-5{stroke:#fff;stroke-width:0.87px;}.cls-6{fill:#003a79;}.cls-7{fill:#0081c8;}
+			.cls-1,.cls-5{fill:none;}.cls-2{clip-path:url(#c);}.cls-3{fill:url(#a);}.cls-4{clip-path:url(#b);}.cls-5{stroke:#fff;stroke-width:0.87px;}.cls-6{fill:#003a79;}.cls-7{fill:#0081c8;}
 		</style>
 		<style>
-			.cls-1,.cls-5{fill:none;}.cls-2{clip-path:url(#i);}.cls-3{fill:url(#a);}.cls-4{clip-path:url(#h);}.cls-5{stroke:#fff;stroke-width:0.87px;}.cls-6{fill:#003a79;}.cls-7{fill:#0081c8;}
+			.cls-1,.cls-5{fill:none;}.cls-2{clip-path:url(#d);}.cls-3{fill:url(#a);}.cls-4{clip-path:url(#e);}.cls-5{stroke:#fff;stroke-width:0.87px;}.cls-6{fill:#003a79;}.cls-7{fill:#0081c8;}
 		</style>
 	</defs>
 	<path d="m654.99 341h-183.31l-31.51 235.82h183.31z" fill="#fff"/>
@@ -56,3 +56,4 @@
 		<path d="m-82.9 443.5c0-4.9 3.6-8.4 8.5-8.4s8.5 3.5 8.5 8.4-3.6 8.4-8.5 8.4c-4.9 0.1-8.5-3.4-8.5-8.4m13.4 0c0-3.1-1.9-5.4-5-5.4s-5 2.3-5 5.4c0 3 1.9 5.4 5 5.4s5-2.3 5-5.4"/>
 	</g>
 </svg>
+	

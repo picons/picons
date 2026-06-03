@@ -1,9 +1,11 @@
 <svg Googl="true" version="1.1" viewBox="0 0 800 692.54" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
-  <linearGradient id="a" x1="317.28" x2="387.11" y1="126.65" y2="48.998" gradientTransform="scale(1.0748 .93041)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="b" x1=".13451" x2="1.2547" y1="1.4283" y2=".18256">
    <stop stop-color="#ddd" offset="0"/>
    <stop stop-color="#fff" offset="1"/>
   </linearGradient>
+  <linearGradient id="c" x1="8.3853" x2="78.216" y1="89.037" y2="11.38" gradientTransform="scale(1.0748 .93041)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
+  <linearGradient id="a" x1="317.28" x2="387.11" y1="126.65" y2="48.998" gradientTransform="scale(1.0748 .93041)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
  </defs>
  <g transform="scale(11.94)" fill="none" fill-rule="evenodd" opacity=".997">
   <g transform="translate(-332,-35)" fill="url(#a)" fill-rule="nonzero">

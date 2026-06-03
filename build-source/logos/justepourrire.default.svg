@@ -1,4 +1,7 @@
 <svg version="1.1" viewBox="0 0 800 613.76" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <style>.cls-1{fill:none;}.cls-2{fill:#fff;}</style>
+ </defs>
  <g transform="scale(.8)" fill="#fc301f" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="0" stroke-width="15.946">
   <path d="m90.285 236.83c75.891 0 87.341-49.722 87.341-86.359l0.32712-146.55h-65.751v143.28c0 13.085-6.5424 25.842-21.917 25.842-15.375 0-22.244-9.4864-24.207-28.786l-66.078 15.375c2.9441 28.459 13.412 77.2 90.285 77.2z" style="font-feature-settings:'ss01'"/>
   <path d="m298.99 237.49c72.62 0 96.5-35.983 96.5-85.705v-147.86h-65.751v138.04c0 19.3-11.449 32.712-30.749 32.712-19.627 0-31.076-13.412-31.076-32.712v-138.04h-65.751v147.86c0 49.722 24.207 85.705 96.827 85.705z" style="font-feature-settings:'ss01'"/>

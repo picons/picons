@@ -1,7 +1,7 @@
 <svg Googl="true" version="1.1" viewBox="0 0 800 336.97" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
-  <path id="e" d="m0.17068 0.012347s0.39584 1.5492 2.3035 3.4431c1.3985 1.388 1.9974 2.7215 1.9974 2.7215h13.097s-6.7515 10.584-11.199 22.797h7.7937c6.506-19.411 13.566-28.961 13.566-28.961z"/>
-  <radialGradient id="f" cx="14.298" cy="14.147" r="12.857" gradientTransform="scale(.97547 1.0251)" gradientUnits="userSpaceOnUse">
+  <path id="b" d="m0.17068 0.012347s0.39584 1.5492 2.3035 3.4431c1.3985 1.388 1.9974 2.7215 1.9974 2.7215h13.097s-6.7515 10.584-11.199 22.797h7.7937c6.506-19.411 13.566-28.961 13.566-28.961z"/>
+  <radialGradient id="a" cx="14.298" cy="14.147" r="12.857" gradientTransform="scale(.97547 1.0251)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#EB313D" offset="0"/>
    <stop stop-color="#ED1C28" offset=".5253"/>
    <stop stop-color="#B8283A" offset="1"/>
@@ -9,10 +9,10 @@
  </defs>
  <g transform="matrix(5.8066 0 0 5.8066 -.98055 -1.2656)" fill="none" fill-rule="evenodd">
   <g transform="translate(95.147 15.253)">
-   <mask id="d" fill="#ffffff">
-    <use width="100%" height="100%" xlink:href="#e"/>
+   <mask id="c" fill="#ffffff">
+    <use width="100%" height="100%" xlink:href="#b"/>
    </mask>
-   <path d="m0.17068 0.012347h27.559v28.961h-27.559z" fill="url(#f)" fill-rule="nonzero" mask="url(#d)"/>
+   <path d="m0.17068 0.012347h27.559v28.961h-27.559z" fill="url(#a)" fill-rule="nonzero" mask="url(#c)"/>
   </g>
   <g fill="#4b4f5f" fill-rule="nonzero">
    <g transform="translate(82.8)">
