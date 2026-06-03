@@ -1,6 +1,10 @@
 <svg width="101.36mm" height="82.155mm" version="1.1" viewBox="0 0 101.36 82.155" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs>
-		<linearGradient id="a" x1="1.2935" x2="1.2935" y1="106.65" y2="127.28" gradientTransform="matrix(2.3844,0,0,2.3844,2.8328,-163.55)" gradientUnits="userSpaceOnUse"><stop stop-color="#ff082d" offset="0"/><stop stop-color="#f9b000" offset="1"/></linearGradient>
+		<linearGradient id="b">
+			<stop stop-color="#ff082d" offset="0"/>
+			<stop stop-color="#f9b000" offset="1"/>
+		</linearGradient>
+		<linearGradient id="a" x1="1.2935" x2="1.2935" y1="106.65" y2="127.28" gradientTransform="matrix(2.3844,0,0,2.3844,2.8328,-163.55)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
 	</defs>
 	<g transform="matrix(1.4759 0 0 1.4759 29.54 -133.28)" stroke-linecap="round" stroke-miterlimit="10.1">
 		<path d="m-13.602 95.333c-3.5409 0-6.4127 2.8718-6.4127 6.4127v32.464c0 3.5409 2.8718 6.4127 6.4127 6.4127h32.869c3.5409 0 6.4127-2.8718 6.4127-6.4127v-32.464c0-3.5409-2.8718-6.4127-6.4127-6.4127zm0 1.3971h32.869c2.791 0 5.0156 2.2246 5.0156 5.0156v32.464c0 2.791-2.2246 5.0156-5.0156 5.0156h-32.869c-2.791 0-5.0156-2.2246-5.0156-5.0156v-32.464c0-2.791 2.2246-5.0156 5.0156-5.0156z" fill="#e2e2e4" stroke-width="1.6156" style="paint-order:markers stroke fill"/>

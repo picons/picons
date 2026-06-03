@@ -1,12 +1,13 @@
 <svg width="200mm" height="59.592mm" version="1.1" viewBox="0 0 200 59.592" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
-  <linearGradient id="a" x1="367.53" x2="432.35" y1="59.579" y2="40.265" gradientUnits="userSpaceOnUse">
+  <linearGradient id="linearGradient3702">
    <stop stop-color="#bc1b8c" offset="0"/>
    <stop stop-color="#e61f26" offset="1"/>
   </linearGradient>
+  <linearGradient id="linearGradient3704" x1="367.53" x2="432.35" y1="59.579" y2="40.265" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient3702"/>
  </defs>
  <g transform="translate(-367.53 .012507)">
-  <g transform="matrix(3.0853 0 0 3.0853 -766.42 -124.24)" fill="url(#a)">
+  <g transform="matrix(3.0853 0 0 3.0853 -766.42 -124.24)" fill="url(#linearGradient3704)">
    <path d="m374.04 53.73h1.2137v0.47254c0.21686-0.20714 0.67646-0.65702 1.505-0.65702 0.46932 0 1.1943 0.21038 1.6474 0.75413 0.50815 0.60525 0.50815 1.5212 0.50815 1.9517v2.9648h-1.3141v-2.7123c0-0.45313 0-1.7608-1.1134-1.7608-0.2298 0-0.66027 0.11975-0.89654 0.49196-0.24275 0.33985-0.24275 0.90949-0.24275 1.3852v2.5958h-1.3076v-5.4861z" stroke-width=".10763"/>
    <path d="m380.08 54.893h-0.64733v-1.1619h0.64733v-1.8287h1.3141v1.8287h0.78974v1.1619h-0.78974v4.3242h-1.3141z" stroke-width=".10763"/>
    <path d="m388.67 53.73h1.2105v0.47902h0.0194c0.24599-0.3528 0.49521-0.66351 1.175-0.66351h0.11329v1.272c-1.2008 0.0453-1.2008 0.99365-1.2008 1.3141v3.0846h-1.3173v-5.4861z" stroke-width=".10763"/>

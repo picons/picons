@@ -1,9 +1,10 @@
 <svg width="600pt" height="598.08pt" Googl="true" version="1.0" viewBox="0 0 600 598.08" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
-  <linearGradient id="a" x1="28.282" x2="1006" y1="985.63" y2="8.8547" gradientUnits="userSpaceOnUse">
+  <linearGradient id="b">
    <stop stop-color="#f29a00" offset="0"/>
    <stop stop-color="#e63f0b" offset="1"/>
   </linearGradient>
+  <linearGradient id="a" x1="28.282" x2="1006" y1="985.63" y2="8.8547" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
  </defs>
  <g transform="matrix(.611 0 0 -.611 -14.64 608.13)" fill="url(#a)">
   <path d="m403 986c-117-28-237-114-302-215-158-246-64-578 200-704 267-129 575-2 678 278 26 69 35 187 19 260-34 164-163 310-324 366-71 25-198 32-271 15zm261-65c179-63 297-236 291-428-10-348-404-545-693-346-179 123-238 352-144 553 32 68 130 168 197 200 108 52 239 60 349 21z"/>

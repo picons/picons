@@ -4,13 +4,13 @@
    <stop stop-color="#0289b6" offset="0"/>
    <stop stop-color="#04b9e5" offset="1"/>
   </linearGradient>
-  <linearGradient id="f" x1="180.56" x2="183.58" y1="88.003" y2="85.4" gradientTransform="matrix(6.1631 0 0 6.1631 -990.02 -478.31)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
-  <linearGradient id="g" x1="176.29" x2="189.09" y1="92.358" y2="101.23" gradientTransform="matrix(6.1631 0 0 6.1631 -990.02 -478.31)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="e" x1="180.56" x2="183.58" y1="88.003" y2="85.4" gradientTransform="matrix(6.1631 0 0 6.1631 -990.02 -478.31)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="d" x1="176.29" x2="189.09" y1="92.358" y2="101.23" gradientTransform="matrix(6.1631 0 0 6.1631 -990.02 -478.31)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#43454b" offset="0"/>
    <stop offset="1"/>
   </linearGradient>
-  <linearGradient id="h" x1="184.52" x2="194.1" y1="99.182" y2="99.087" gradientTransform="matrix(6.1631 0 0 6.1631 -990.02 -478.31)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
-  <linearGradient id="i" x1="193.84" x2="187.02" y1="88.196" y2="86.054" gradientTransform="matrix(6.1631 0 0 6.1631 -990.02 -478.31)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="c" x1="184.52" x2="194.1" y1="99.182" y2="99.087" gradientTransform="matrix(6.1631 0 0 6.1631 -990.02 -478.31)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="b" x1="193.84" x2="187.02" y1="88.196" y2="86.054" gradientTransform="matrix(6.1631 0 0 6.1631 -990.02 -478.31)" gradientUnits="userSpaceOnUse">
    <stop offset="0"/>
    <stop stop-color="#43454b" offset="1"/>
   </linearGradient>
@@ -22,10 +22,10 @@
    <path d="m237.97 109.56v-21.889h2.8966v19.306h10.78v2.583z"/>
    <path d="m255.02 109.56v-21.889h4.3598l5.181 15.498q0.71668 2.165 1.0452 3.24 0.37327-1.1945 1.1646-3.5088l5.2408-15.23h3.897v21.889h-2.7921v-18.32l-6.3606 18.32h-2.6129l-6.3307-18.634v18.634z"/>
   </g>
-  <path d="m149.44 64.431 55.182 0.82361-28.414-25.532z" fill="url(#i)"/>
-  <path d="m176.21 39.722h-58.476l-28.414 25.944 29.092 26.913z" fill="url(#f)"/>
-  <path d="m89.316 65.666v52.297l30.064 27.592h56.005z" fill="url(#g)"/>
-  <path d="m175.38 145.56 30.885-26.354h-59.35z" fill="url(#h)"/>
+  <path d="m149.44 64.431 55.182 0.82361-28.414-25.532z" fill="url(#b)"/>
+  <path d="m176.21 39.722h-58.476l-28.414 25.944 29.092 26.913z" fill="url(#e)"/>
+  <path d="m89.316 65.666v52.297l30.064 27.592h56.005z" fill="url(#d)"/>
+  <path d="m175.38 145.56 30.885-26.354h-59.35z" fill="url(#c)"/>
  </g>
  <g transform="translate(-89.316 -39.722)">
   <g transform="scale(1.1236 .89002)" fill="#04b9e5" stroke-width=".39778" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="CINE">

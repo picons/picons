@@ -1,18 +1,18 @@
 <svg width="250.95mm" height="105.83mm" version="1.1" viewBox="0 0 250.95 105.83" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <linearGradient id="d" x1="180.56" x2="183.58" y1="88.003" y2="85.4" gradientUnits="userSpaceOnUse">
+  <linearGradient id="e" x1="180.56" x2="183.58" y1="88.003" y2="85.4" gradientUnits="userSpaceOnUse">
    <stop stop-color="#bb8803" offset="0"/>
    <stop stop-color="#f19e03" offset="1"/>
   </linearGradient>
-  <linearGradient id="c" x1="176.29" x2="189.09" y1="92.358" y2="101.23" gradientUnits="userSpaceOnUse">
+  <linearGradient id="f" x1="176.29" x2="189.09" y1="92.358" y2="101.23" gradientUnits="userSpaceOnUse">
    <stop stop-color="#43454b" offset="0"/>
    <stop offset="1"/>
   </linearGradient>
-  <linearGradient id="b" x1="184.52" x2="194.1" y1="99.182" y2="99.087" gradientUnits="userSpaceOnUse">
+  <linearGradient id="g" x1="184.52" x2="194.1" y1="99.182" y2="99.087" gradientUnits="userSpaceOnUse">
    <stop stop-color="#bb8803" offset="0"/>
    <stop stop-color="#f19e03" offset="1"/>
   </linearGradient>
-  <linearGradient id="a" x1="193.84" x2="187.02" y1="88.196" y2="86.054" gradientUnits="userSpaceOnUse">
+  <linearGradient id="h" x1="193.84" x2="187.02" y1="88.196" y2="86.054" gradientUnits="userSpaceOnUse">
    <stop offset="0"/>
    <stop stop-color="#43454b" offset="1"/>
   </linearGradient>
@@ -26,10 +26,10 @@
    <path d="m196.48 100.52v-3.5516h2.568v0.41911h-2.098v1.0878h1.9648v0.41669h-1.9648v1.2089h2.1804v0.41911z"/>
    <path d="m199.63 99.383 0.44334-0.03876q0.0315 0.26649 0.14536 0.4385 0.11629 0.16958 0.35855 0.27618 0.24226 0.10417 0.54509 0.10417 0.26891 0 0.47483-0.0799 0.20593-0.0799 0.30526-0.21803 0.10175-0.14051 0.10175-0.30525 0-0.16716-0.0969-0.29072-0.0969-0.12598-0.31979-0.21077-0.14293-0.05572-0.6323-0.17201-0.48937-0.11871-0.6856-0.22288-0.25438-0.13324-0.38036-0.32948-0.12355-0.19866-0.12355-0.44334 0-0.26891 0.15262-0.50148 0.15263-0.23499 0.44577-0.35613 0.29314-0.12113 0.65168-0.12113 0.39489 0 0.6953 0.1284 0.30283 0.12598 0.46514 0.37308 0.16232 0.24711 0.17443 0.55963l-0.45061 0.03392q-0.0363-0.33674-0.24711-0.50875-0.20834-0.17201-0.61776-0.17201-0.42639 0-0.62262 0.15747-0.19381 0.15505-0.19381 0.37551 0 0.19139 0.13809 0.31494 0.13567 0.12355 0.70741 0.25438 0.57416 0.1284 0.78735 0.2253 0.3101 0.14294 0.45788 0.36339 0.14778 0.21804 0.14778 0.50391 0 0.28345-0.16232 0.5354-0.16232 0.24953-0.46757 0.39004-0.30282 0.13809-0.68318 0.13809-0.4821 0-0.80915-0.14051-0.32464-0.14052-0.51118-0.42154-0.18412-0.28345-0.19381-0.63958z"/>
   </g>
-  <path d="m184.88 88.062 8.9535 0.13364-4.6104-4.1427z" fill="url(#a)"/>
-  <path d="m189.23 84.053h-9.4881l-4.6104 4.2095 4.7204 4.3668z" fill="url(#d)"/>
-  <path d="m175.13 88.262v8.4855l4.878 4.477h9.0872z" fill="url(#c)"/>
-  <path d="m189.09 101.23 5.0113-4.2761h-9.6298z" fill="url(#b)"/>
+  <path d="m184.88 88.062 8.9535 0.13364-4.6104-4.1427z" fill="url(#h)"/>
+  <path d="m189.23 84.053h-9.4881l-4.6104 4.2095 4.7204 4.3668z" fill="url(#e)"/>
+  <path d="m175.13 88.262v8.4855l4.878 4.477h9.0872z" fill="url(#f)"/>
+  <path d="m189.09 101.23 5.0113-4.2761h-9.6298z" fill="url(#g)"/>
  </g>
  <g transform="matrix(6.1613 0 0 6.1613 -1079 -517.88)">
   <g transform="scale(1.1236 .89002)" fill="#f19e03" stroke-width=".064543" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="CINE">

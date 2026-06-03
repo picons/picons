@@ -1,9 +1,9 @@
 <svg data-name="Layer 1" version="1.1" viewBox="0 0 203.01 57.446" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <clipPath id="d" transform="translate(.01 -.66)">
+  <clipPath id="a" transform="translate(.01 -.66)">
    <path class="cls-1" d="m76.28 21.33c0 11.13 10.15 20.15 22.68 20.15s22.68-9 22.68-20.15-10.16-20.16-22.64-20.16-22.68 9-22.68 20.16" fill="none"/>
   </clipPath>
-  <radialGradient id="c" cx="189.13" cy="834.83" r=".95" gradientTransform="matrix(22.7,0,0,-22.7,-4194.1,18970)" gradientUnits="userSpaceOnUse">
+  <radialGradient id="b" cx="189.13" cy="834.83" r=".95" gradientTransform="matrix(22.7,0,0,-22.7,-4194.1,18970)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#fff" offset="0"/>
    <stop stop-color="#fff" offset=".16"/>
    <stop stop-color="#f2f9fc" offset=".23"/>
@@ -25,8 +25,8 @@
   <path d="m-116.96 107c0.47883 0 1.0726-0.13407 1.561-0.42137 1.063-0.60332 1.5035-1.7717 1.5035-2.9304-0.01-1.1588-0.41179-2.2888-1.5035-2.9304-0.46925-0.27772-1.0247-0.42137-1.561-0.42137h-2.3271v6.7036zm-1.2737-5.7076h1.0821c0.26815 0 0.81401 0.0383 1.2928 0.3256 0.67035 0.40221 0.90977 1.1683 0.90977 2.0206 0 0.814-0.22026 1.6472-0.90977 2.0398-0.46925 0.26814-0.90977 0.3256-1.2928 0.3256h-1.0821z" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
  </g>
  <g transform="matrix(1.586 0 0 1.586 -1160.7 -560.49)">
-  <g class="cls-2" transform="matrix(.63051 0 0 .63041 731.84 353.39)" clip-path="url(#d)" stroke-width=".2646">
-   <rect class="cls-3" x="76.29" y=".51" width="45.36" height="40.31" fill="url(#c)" stroke-width=".2646"/>
+  <g class="cls-2" transform="matrix(.63051 0 0 .63041 731.84 353.39)" clip-path="url(#a)" stroke-width=".2646">
+   <rect class="cls-3" x="76.29" y=".51" width="45.36" height="40.31" fill="url(#b)" stroke-width=".2646"/>
   </g>
   <path class="cls-5" d="m783.14 366.37v-0.22695h-3.1526v0.22695a11.4 11.398 0 0 0 0.3657 2.8495h3.0895a14.584 14.581 0 0 1-0.30265-2.8495z" fill="none" stroke="#fff" stroke-width=".54854px"/>
   <path class="cls-5" d="m783.49 363.23h-3.0895a11.349 11.347 0 0 0-0.43505 2.9125h3.1526a14.06 14.058 0 0 1 0.372-2.9125z" fill="none" stroke="#fff" stroke-width=".54854px"/>

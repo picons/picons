@@ -1,5 +1,19 @@
-<svg version="1.1" viewBox="0 0 1000 885.85" xmlns="http://www.w3.org/2000/svg">
- <g transform="translate(-474.38 290.82)">
-  <path d="m974.75-290.32c-42.189 0-61.56 26.732-73.535 45.682l-401.54 694.2c-12.54 21.973-24.793 37.941-24.793 64.145 0 43.02 35.138 80.815 80.92 80.815h837.27c44.572 0 80.815-36.197 80.815-81.659 0-24.922-9.3538-37.963-23.632-62.035l-399.85-690.3c-15.52-28.106-37.751-50.852-75.645-50.852zm-78.705 412.62c7.8909 0 12.69 3.7146 19.307 7.4906l209 120.91c5.7065 3.606 13.821 9.4511 13.821 22.155 0 11.411-6.9397 18.01-15.403 22.683l-207.84 120.48c-7.2489 4.2998-11.169 7.0686-18.674 7.0686-13.69 0-24.582-10.844-24.582-24.266v-252.15c0-13.786 11.416-24.371 24.371-24.371z" fill="#94d500" Googl="true"/>
- </g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1000" height="885.84668" id="svg5637" version="1.1" inkscape:version="0.48.2 r9819" sodipodi:docname="Sanrio.svg">
+  <defs id="defs5639"/>
+  <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="0.14304199" inkscape:cx="330.69646" inkscape:cy="-170.03851" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="false" fit-margin-left="0.5" fit-margin-bottom="0.5" fit-margin-top="0.5" fit-margin-right="0.5" inkscape:window-width="1060" inkscape:window-height="1036" inkscape:window-x="856" inkscape:window-y="-21" inkscape:window-maximized="0">
+    <inkscape:grid type="xygrid" id="grid9981" empspacing="5" visible="true" enabled="true" snapvisiblegridlinesonly="true"/>
+  </sodipodi:namedview>
+  <metadata id="metadata5642">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(-474.38472,290.81875)">
+    <path style="fill:#94d500;fill-opacity:1;stroke:none" d="m 974.75398,-290.31875 c -42.18871,0 -61.56006,26.7325 -73.53501,45.68244 L 499.67773,449.56794 c -12.5396,21.97307 -24.79301,37.941 -24.79301,64.14531 0,43.0195 35.13786,80.81466 80.92016,80.81466 l 837.26522,0 c 44.5716,0 80.8146,-36.19686 80.8146,-81.65868 0,-24.92184 -9.3538,-37.96329 -23.6325,-62.03527 L 1050.399,-239.4667 c -15.5197,-28.10602 -37.7507,-50.85205 -75.64502,-50.85205 z m -78.70462,412.61897 c 7.89092,0 12.69011,3.71455 19.3069,7.49065 L 1124.356,250.69635 c 5.7065,3.60602 13.8208,9.45114 13.8208,22.15546 0,11.41115 -6.9397,18.00951 -15.4033,22.68296 L 914.93425,416.01825 c -7.24886,4.29976 -11.16915,7.06864 -18.67388,7.06864 -13.68996,0 -24.58201,-10.84356 -24.58201,-24.2655 l 0,-252.15017 c 0,-13.78645 11.41648,-24.371 24.371,-24.371 z" id="path9991" inkscape:connector-curvature="0" Googl="true"/>
+  </g>
 </svg>

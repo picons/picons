@@ -1,16 +1,16 @@
 <svg width="600" height="369.06" version="1.1" viewBox="0 0 158.75 97.647" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <radialGradient id="n" cx="0" cy="0" r="1" gradientTransform="matrix(32.023 0 0 32.023 124.03 225.26)" gradientUnits="userSpaceOnUse">
+  <radialGradient id="m" cx="0" cy="0" r="1" gradientTransform="matrix(32.023 0 0 32.023 124.03 225.26)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#140e0c" offset="0"/>
    <stop stop-color="#140e0c" offset=".76688"/>
    <stop stop-color="#3d393a" offset=".90184"/>
    <stop stop-color="#140e0c" offset="1"/>
   </radialGradient>
-  <radialGradient id="o" cx="0" cy="0" r="1" gradientTransform="matrix(36.213 0 0 36.213 111.34 219.78)" gradientUnits="userSpaceOnUse">
+  <radialGradient id="l" cx="0" cy="0" r="1" gradientTransform="matrix(36.213 0 0 36.213 111.34 219.78)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#fff" offset="0"/>
    <stop stop-color="#231f20" offset="1"/>
   </radialGradient>
-  <radialGradient id="p" cx="0" cy="0" r="1" gradientTransform="matrix(78.706 0 0 78.706 131.46 239.31)" gradientUnits="userSpaceOnUse">
+  <radialGradient id="k" cx="0" cy="0" r="1" gradientTransform="matrix(78.706 0 0 78.706 131.46 239.31)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#656263" offset="0"/>
    <stop stop-color="#656263" offset=".006134"/>
    <stop stop-color="#656263" offset=".049978"/>
@@ -18,60 +18,60 @@
    <stop stop-color="#140e0c" offset=".40491"/>
    <stop stop-color="#140e0c" offset="1"/>
   </radialGradient>
-  <radialGradient id="q" cx="0" cy="0" r="1" gradientTransform="matrix(50.394 0 0 50.394 130.84 238.13)" gradientUnits="userSpaceOnUse">
+  <radialGradient id="j" cx="0" cy="0" r="1" gradientTransform="matrix(50.394 0 0 50.394 130.84 238.13)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#656263" offset="0"/>
    <stop stop-color="#656263" offset=".006134"/>
    <stop stop-color="#656263" offset=".2304"/>
    <stop stop-color="#140e0c" offset=".82208"/>
    <stop stop-color="#140e0c" offset="1"/>
   </radialGradient>
-  <radialGradient id="r" cx="0" cy="0" r="1" fx=".34598" fy=".35716" gradientTransform="matrix(41.721 0 0 41.721 107.22 206.51)" gradientUnits="userSpaceOnUse">
+  <radialGradient id="i" cx="0" cy="0" r="1" fx=".34598" fy=".35716" gradientTransform="matrix(41.721 0 0 41.721 107.22 206.51)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#cbcaca" offset="0"/>
    <stop stop-color="#b3b2b2" offset=".20091"/>
    <stop stop-color="#b3b2b2" offset="1"/>
   </radialGradient>
-  <radialGradient id="s" cx="0" cy="0" r="1" fx=".34598" fy=".35716" gradientTransform="matrix(40.434 0 0 40.434 107.74 207.09)" gradientUnits="userSpaceOnUse">
+  <radialGradient id="h" cx="0" cy="0" r="1" fx=".34598" fy=".35716" gradientTransform="matrix(40.434 0 0 40.434 107.74 207.09)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#656263" offset="0"/>
    <stop stop-color="#656263" offset=".006134"/>
    <stop stop-color="#656263" offset=".27931"/>
    <stop stop-color="#fff" offset="1"/>
   </radialGradient>
-  <radialGradient id="t" cx="0" cy="0" r="1" fx=".34598" fy=".35716" gradientTransform="matrix(11.096 0 0 11.096 119.23 216.95)" gradientUnits="userSpaceOnUse">
+  <radialGradient id="g" cx="0" cy="0" r="1" fx=".34598" fy=".35716" gradientTransform="matrix(11.096 0 0 11.096 119.23 216.95)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#656263" offset="0"/>
    <stop stop-color="#656263" offset=".006134"/>
    <stop stop-color="#140e0c" offset=".83309"/>
    <stop stop-color="#140e0c" offset="1"/>
   </radialGradient>
-  <radialGradient id="u" cx="0" cy="0" r="1" fx=".34598" fy=".35716" gradientTransform="matrix(11.22 0 0 11.22 124.26 225.64)" gradientUnits="userSpaceOnUse">
+  <radialGradient id="f" cx="0" cy="0" r="1" fx=".34598" fy=".35716" gradientTransform="matrix(11.22 0 0 11.22 124.26 225.64)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#656263" offset="0"/>
    <stop stop-color="#656263" offset=".006134"/>
    <stop stop-color="#140e0c" offset=".83309"/>
    <stop stop-color="#140e0c" offset="1"/>
   </radialGradient>
-  <radialGradient id="v" cx="0" cy="0" r="1" gradientTransform="matrix(2.7676 4.4878 -4.4878 2.7676 123.46 224.4)" gradientUnits="userSpaceOnUse">
+  <radialGradient id="e" cx="0" cy="0" r="1" gradientTransform="matrix(2.7676 4.4878 -4.4878 2.7676 123.46 224.4)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#656263" offset="0"/>
    <stop stop-color="#656263" offset=".006134"/>
    <stop stop-color="#140e0c" offset=".83309"/>
    <stop stop-color="#140e0c" offset="1"/>
   </radialGradient>
-  <radialGradient id="w" cx="0" cy="0" r="1" gradientTransform="matrix(8.5859 0 0 8.5859 123.07 224.18)" gradientUnits="userSpaceOnUse">
+  <radialGradient id="d" cx="0" cy="0" r="1" gradientTransform="matrix(8.5859 0 0 8.5859 123.07 224.18)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#140e0c" offset="0"/>
    <stop stop-color="#140e0c" offset=".23926"/>
    <stop stop-color="#140e0c" offset=".63601"/>
    <stop stop-color="#656263" offset="1"/>
   </radialGradient>
-  <radialGradient id="x" cx="0" cy="0" r="1" gradientTransform="matrix(8.2911 0 0 8.2911 123.1 224.21)" gradientUnits="userSpaceOnUse">
+  <radialGradient id="c" cx="0" cy="0" r="1" gradientTransform="matrix(8.2911 0 0 8.2911 123.1 224.21)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#656263" offset="0"/>
    <stop stop-color="#656263" offset=".006134"/>
    <stop stop-color="#140e0c" offset=".83309"/>
    <stop stop-color="#140e0c" offset="1"/>
   </radialGradient>
-  <radialGradient id="y" cx="0" cy="0" r="1" gradientTransform="matrix(11.306 0 0 11.306 122.5 224.17)" gradientUnits="userSpaceOnUse">
+  <radialGradient id="b" cx="0" cy="0" r="1" gradientTransform="matrix(11.306 0 0 11.306 122.5 224.17)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#565253" offset="0"/>
    <stop stop-color="#140e0c" offset=".34873"/>
    <stop stop-color="#140e0c" offset="1"/>
   </radialGradient>
-  <radialGradient id="z" cx="0" cy="0" r="1" gradientTransform="matrix(4.2912 0 0 4.2912 123.15 224.11)" gradientUnits="userSpaceOnUse">
+  <radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="matrix(4.2912 0 0 4.2912 123.15 224.11)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#656263" offset="0"/>
    <stop stop-color="#656263" offset=".006134"/>
    <stop stop-color="#140e0c" offset=".28896"/>
@@ -97,20 +97,20 @@
    <path d="m74.304 169.04h1.4205c1.8567 0 2.3488-1.3655 2.3488-2.5399 0-1.4466-0.54618-2.4579-2.3768-2.4579h-1.3925zm-4.5886-8.22h7.7018c3.9054 0 5.2439 2.4029 5.2439 5.0798 0 2.8401-1.1194 4.2335-3.2772 4.7518v0.0542c2.9491 0.43809 3.0591 2.2398 3.1402 4.8617 0.08191 3.8504 0.24704 4.2335 0.87428 4.5066v0.24599h-4.9428c-0.35513-0.65528-0.49212-1.7486-0.49212-3.9604 0-3.3872-0.4642-4.0965-1.9117-4.0965h-1.7477v8.0569h-4.5886z"/>
    <path d="m86.56 163.79 1.2257-3.3005h2.4085l-2.2286 3.3005z"/>
   </g>
-  <path d="m156.91 225.25c0 18.158-14.719 32.879-32.874 32.879s-32.876-14.721-32.876-32.879c0-18.154 14.721-32.873 32.876-32.873 18.154 0 32.874 14.719 32.874 32.873" fill="#140e0c"/>
-  <path d="m92.013 225.25c0 17.687 14.339 32.027 32.024 32.027 17.683 0 32.021-14.34 32.021-32.027 0-17.684-14.337-32.02-32.021-32.02s-32.024 14.335-32.024 32.02" fill="url(#n)"/>
-  <path d="m92.339 225.25c0 17.484 14.175 31.66 31.656 31.66 4.2792 0 8.3589-0.85192 12.084-2.3917-3.4347 1.3105-7.1612 2.0329-11.058 2.0329-17.11 0-30.985-13.875-30.985-30.989 0-17.11 13.875-30.982 30.985-30.982 10.455 0 19.702 5.1796 25.312 13.112-5.6745-8.4969-15.353-14.094-26.337-14.094-17.481 0-31.656 14.172-31.656 31.653" fill="url(#o)"/>
-  <path d="m98.661 225.26c0 14.013 11.362 25.375 25.375 25.375 14.012 0 25.371-11.362 25.371-25.375 0-14.011-11.359-25.374-25.371-25.374-14.013 0-25.375 11.363-25.375 25.374" fill="url(#p)"/>
+  <path d="m156.91 225.25c0 18.158-14.719 32.879-32.874 32.879-18.155 0-32.876-14.721-32.876-32.879 0-18.154 14.721-32.873 32.876-32.873 18.154 0 32.874 14.719 32.874 32.873" fill="#140e0c"/>
+  <path d="m92.013 225.25c0 17.687 14.339 32.027 32.024 32.027 17.683 0 32.021-14.34 32.021-32.027 0-17.684-14.337-32.02-32.021-32.02-17.684 0-32.024 14.335-32.024 32.02" fill="url(#m)"/>
+  <path d="m92.339 225.25c0 17.484 14.175 31.66 31.656 31.66 4.2792 0 8.3589-0.85192 12.084-2.3917-3.4347 1.3105-7.1612 2.0329-11.058 2.0329-17.11 0-30.985-13.875-30.985-30.989 0-17.11 13.875-30.982 30.985-30.982 10.455 0 19.702 5.1796 25.312 13.112-5.6745-8.4969-15.353-14.094-26.337-14.094-17.481 0-31.656 14.172-31.656 31.653" fill="url(#l)"/>
+  <path d="m98.661 225.26c0 14.013 11.362 25.375 25.375 25.375 14.012 0 25.371-11.362 25.371-25.375 0-14.011-11.359-25.374-25.371-25.374-14.013 0-25.375 11.363-25.375 25.374" fill="url(#k)"/>
   <path d="m147.55 225.26c0-12.987-10.527-23.514-23.511-23.514-12.986 0-23.516 10.527-23.516 23.514 0 12.986 10.531 23.516 23.516 23.516 12.984 0 23.511-10.53 23.511-23.516" fill="#140e0c"/>
-  <path d="m100.79 225.26c0 12.838 10.41 23.247 23.248 23.247 12.837 0 23.246-10.409 23.246-23.247 0-12.837-10.41-23.246-23.246-23.246-12.838 0-23.248 10.409-23.248 23.246" fill="url(#q)"/>
-  <path d="m102.35 225.26c0 11.977 9.7123 21.687 21.689 21.687 11.976 0 21.686-9.7095 21.686-21.687 0-11.978-9.7095-21.687-21.686-21.687-11.976 0-21.689 9.7086-21.689 21.687" fill="url(#r)"/>
-  <path d="m103.02 225.26c0 11.606 9.4122 21.018 21.019 21.018 11.606 0 21.018-9.4122 21.018-21.018 0-11.608-9.4112-21.018-21.018-21.018-11.607 0-21.019 9.4103-21.019 21.018" fill="url(#s)"/>
-  <path d="m113.54 225.26c0 5.7948 4.6996 10.494 10.495 10.494 5.7947 0 10.493-4.6996 10.493-10.494 0-5.7957-4.6986-10.495-10.493-10.495-5.7957 0-10.495 4.6996-10.495 10.495" fill="url(#t)"/>
-  <path d="m113.77 225.26c0 5.668 4.5942 10.263 10.263 10.263 5.668 0 10.262-4.5952 10.262-10.263 0-5.6689-4.5942-10.263-10.262-10.263-5.6689 0-10.263 4.5942-10.263 10.263" fill="url(#u)"/>
-  <path d="m118.33 225.26c0 3.1467 2.553 5.6997 5.7016 5.6997 3.1476 0 5.6987-2.553 5.6987-5.6997s-2.5511-5.6997-5.6987-5.6997c-3.1486 0-5.7016 2.553-5.7016 5.6997" fill="url(#v)"/>
-  <path d="m119.3 225.26c0 2.6145 2.1195 4.735 4.734 4.735s4.734-2.1205 4.734-4.735c0-2.6126-2.1195-4.7331-4.734-4.7331s-4.734 2.1205-4.734 4.7331" fill="url(#w)"/>
-  <path d="m119.46 225.26c0 2.525 2.0459 4.5709 4.5718 4.5709 2.5241 0 4.5709-2.0459 4.5709-4.5709 0-2.5241-2.0468-4.5718-4.5709-4.5718-2.526 0-4.5718 2.0478-4.5718 4.5718" fill="url(#x)"/>
-  <path d="m120.17 225.26c0 2.1382 1.7318 3.8691 3.8691 3.8691s3.8691-1.7309 3.8691-3.8691c0-2.1363-1.7318-3.87-3.8691-3.87s-3.8691 1.7337-3.8691 3.87" fill="url(#y)"/>
-  <path d="m120.39 225.26c0 2.0114 1.633 3.6435 3.6435 3.6435 2.0114 0 3.6426-1.6321 3.6426-3.6435 0-2.0124-1.6311-3.6426-3.6426-3.6426-2.0105 0-3.6435 1.6302-3.6435 3.6426" fill="url(#z)"/>
+  <path d="m100.79 225.26c0 12.838 10.41 23.247 23.248 23.247 12.837 0 23.246-10.409 23.246-23.247 0-12.837-10.41-23.246-23.246-23.246-12.838 0-23.248 10.409-23.248 23.246" fill="url(#j)"/>
+  <path d="m102.35 225.26c0 11.977 9.7123 21.687 21.689 21.687 11.976 0 21.686-9.7095 21.686-21.687 0-11.978-9.7095-21.687-21.686-21.687-11.976 0-21.689 9.7086-21.689 21.687" fill="url(#i)"/>
+  <path d="m103.02 225.26c0 11.606 9.4122 21.018 21.019 21.018 11.606 0 21.018-9.4122 21.018-21.018 0-11.608-9.4112-21.018-21.018-21.018-11.607 0-21.019 9.4103-21.019 21.018" fill="url(#h)"/>
+  <path d="m113.54 225.26c0 5.7948 4.6996 10.494 10.495 10.494 5.7947 0 10.493-4.6996 10.493-10.494 0-5.7957-4.6986-10.495-10.493-10.495-5.7957 0-10.495 4.6996-10.495 10.495" fill="url(#g)"/>
+  <path d="m113.77 225.26c0 5.668 4.5942 10.263 10.263 10.263 5.668 0 10.262-4.5952 10.262-10.263 0-5.6689-4.5942-10.263-10.262-10.263-5.6689 0-10.263 4.5942-10.263 10.263" fill="url(#f)"/>
+  <path d="m118.33 225.26c0 3.1467 2.553 5.6997 5.7016 5.6997 3.1476 0 5.6987-2.553 5.6987-5.6997 0-3.1467-2.5511-5.6997-5.6987-5.6997-3.1486 0-5.7016 2.553-5.7016 5.6997" fill="url(#e)"/>
+  <path d="m119.3 225.26c0 2.6145 2.1195 4.735 4.734 4.735 2.6145 0 4.734-2.1205 4.734-4.735 0-2.6126-2.1195-4.7331-4.734-4.7331-2.6145 0-4.734 2.1205-4.734 4.7331" fill="url(#d)"/>
+  <path d="m119.46 225.26c0 2.525 2.0459 4.5709 4.5718 4.5709 2.5241 0 4.5709-2.0459 4.5709-4.5709 0-2.5241-2.0468-4.5718-4.5709-4.5718-2.526 0-4.5718 2.0478-4.5718 4.5718" fill="url(#c)"/>
+  <path d="m120.17 225.26c0 2.1382 1.7318 3.8691 3.8691 3.8691s3.8691-1.7309 3.8691-3.8691c0-2.1363-1.7318-3.87-3.8691-3.87s-3.8691 1.7337-3.8691 3.87" fill="url(#b)"/>
+  <path d="m120.39 225.26c0 2.0114 1.633 3.6435 3.6435 3.6435 2.0114 0 3.6426-1.6321 3.6426-3.6435 0-2.0124-1.6311-3.6426-3.6426-3.6426-2.0105 0-3.6435 1.6302-3.6435 3.6426" fill="url(#a)"/>
  </g>
 </svg>

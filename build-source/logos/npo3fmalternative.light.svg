@@ -1,4 +1,9 @@
 <svg width="317.35mm" height="285.32mm" version="1.1" viewBox="0 0 317.35 285.32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <clipPath>
+   <use width="100%" height="100%" xlink:href="#g2106"/>
+  </clipPath>
+ </defs>
  <g transform="translate(-31.827,45.142)">
   <path d="m31.827 189.37 315.6-10.918 1.7468 50.811-315.6 10.918z" fill="#fff" opacity=".97" stroke-width="1.4817"/>
   <g transform="translate(247.14,-9.7741)">

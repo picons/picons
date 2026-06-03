@@ -1,4 +1,14 @@
-<svg enable-background="new 0 0 1172.9 595.8" version="1.1" viewBox="0 0 595.61 595.8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="595.61" height="595.8" enable-background="new 0 0 1172.9 595.8" version="1.1" viewBox="0 0 595.61 595.8" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
  <defs>
   <path id="a" d="m19.5 19.4h557.1v557.1h-557.1z"/>
   <clipPath id="b">

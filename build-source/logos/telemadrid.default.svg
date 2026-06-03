@@ -1,9 +1,13 @@
 <svg enable-background="new 0 0 628.6 598.5" version="1.1" viewBox="0 0 488.39 465" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><script/>
-<g transform="scale(.77694)" fill="#FF0027" stroke-width="1.2871">
-	<polygon points="0 305.9 87.3 370.1 53.8 473 139.9 535.5 206.4 331.3 33 204.7"/>
-	<polygon points="562.6 103.5 453.9 103.5 420.4 0 314 0 380.5 204.7 595.6 204.7"/>
-	<polygon points="207 0 173.5 103.5 65.3 103.5 33 204.7 247.5 204.7 314 0"/>
-	<polygon points="595.6 204.7 422.1 331.3 487.5 535.5 574.2 473 541.3 370.1 628.6 305.9"/>
-	<polygon points="226.7 598.5 314 535.5 401.3 598.5 487.5 535.5 314 410 139.9 535.5"/>
+<style type="text/css">
+	.st0{fill:#FF0027;}
+</style>
+
+<g transform="scale(.77694)" stroke-width="1.2871">
+	<polygon class="st0" points="0 305.9 87.3 370.1 53.8 473 139.9 535.5 206.4 331.3 33 204.7"/>
+	<polygon class="st0" points="562.6 103.5 453.9 103.5 420.4 0 314 0 380.5 204.7 595.6 204.7"/>
+	<polygon class="st0" points="207 0 173.5 103.5 65.3 103.5 33 204.7 247.5 204.7 314 0"/>
+	<polygon class="st0" points="595.6 204.7 422.1 331.3 487.5 535.5 574.2 473 541.3 370.1 628.6 305.9"/>
+	<polygon class="st0" points="226.7 598.5 314 535.5 401.3 598.5 487.5 535.5 314 410 139.9 535.5"/>
 </g>
 </svg>

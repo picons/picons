@@ -19,7 +19,9 @@
    <path d="m4500 3335v-178l84 5c94 6 153 31 190 81 29 40 30 144 0 184-33 45-102 74-194 80l-80 6z"/>
   </g>
  </g>
- <path d="m528.48 369.89-443.41-0.17758c-0.0921 5.1648 0.43926 11.843 0.31876 16.681l442.91 0.17678z" fill="#c83737" fill-rule="evenodd" stroke="#000" stroke-width=".63581px"/>
- <ellipse cx="346.38" cy="402.08" rx="4.9708" ry="4.7547" fill="#fff" stroke-width=".79477"/>
- <ellipse cx="367.67" cy="402.51" rx="4.9708" ry="4.7547" fill="#fff" stroke-width=".79477"/>
+ <g>
+  <path d="m528.48 369.89-443.41-0.17758c-0.0921 5.1648 0.43926 11.843 0.31876 16.681l442.91 0.17678z" fill="#c83737" fill-rule="evenodd" stroke="#000" stroke-width=".63581px"/>
+  <ellipse cx="346.38" cy="402.08" rx="4.9708" ry="4.7547" fill="#fff" stroke-width=".79477"/>
+  <ellipse cx="367.67" cy="402.51" rx="4.9708" ry="4.7547" fill="#fff" stroke-width=".79477"/>
+ </g>
 </svg>

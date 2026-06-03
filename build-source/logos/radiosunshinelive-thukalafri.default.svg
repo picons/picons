@@ -1,4 +1,5 @@
-<svg version="1.1" viewBox="0 0 1200 535" xmlns="http://www.w3.org/2000/svg">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="535" version="1.1" viewBox="0 0 1200 535" xmlns="http://www.w3.org/2000/svg">
  <g fill="none" stroke-width="2">
   <path d="m8.75 447.46a0.3 0.3 0 0 0 0.3 0.3l111.97 0.01a0.3 0.3 0 0 1 0.29 0.36l-11.64 60.12a0.3 0.3 0 0 0 0.51 0.27l62.44-60.7a0.3 0.3 0 0 1 0.21-0.08h784.8a0.3 0.3 0 0 0 0.3-0.3v-438.38a0.3 0.3 0 0 0-0.3-0.3h-948.58a0.3 0.3 0 0 0-0.3 0.3v438.4" stroke="#808080" vector-effect="non-scaling-stroke"/>
   <path d="m1191.2 9.05a0.29 0.29 0 0 0-0.29-0.29h-223.98a0.29 0.29 0 0 0-0.29 0.29v438.4a0.29 0.29 0 0 0 0.29 0.29h223.98a0.29 0.29 0 0 0 0.29-0.29v-438.4" stroke="#808080" vector-effect="non-scaling-stroke"/>

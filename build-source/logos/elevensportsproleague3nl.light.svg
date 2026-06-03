@@ -1,15 +1,15 @@
 <svg width="347.37mm" height="29.898mm" version="1.1" viewBox="0 0 347.37 29.898" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
-  <linearGradient id="m" x1="-9.2076e-6" x2="3.4355" y1="17.075" y2="17.075" gradientTransform="scale(1.6468 .60723)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="b" x1="-9.2076e-6" x2="3.4355" y1="17.075" y2="17.075" gradientTransform="scale(1.6468 .60723)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
   <linearGradient id="a">
    <stop stop-color="#fff" offset="0"/>
    <stop stop-color="#fff" stop-opacity="0" offset="1"/>
   </linearGradient>
-  <linearGradient id="l" x1="-8.7939e-6" x2="3.2812" y1="8.0581" y2="8.0581" gradientTransform="scale(1.7243 .57995)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
-  <linearGradient id="k" x1="22.006" x2="25.441" y1="17.074" y2="17.074" gradientTransform="scale(1.6467 .60727)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
-  <linearGradient id="j" x1="21.017" x2="24.298" y1="8.0577" y2="8.0577" gradientTransform="scale(1.7242 .57998)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
-  <linearGradient id="i" x1="46.389" x2="49.824" y1="17.075" y2="17.075" gradientTransform="scale(1.6468 .60723)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
-  <linearGradient id="h" x1="44.304" x2="47.586" y1="8.0581" y2="8.0581" gradientTransform="scale(1.7243 .57995)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="c" x1="-8.7939e-6" x2="3.2812" y1="8.0581" y2="8.0581" gradientTransform="scale(1.7243 .57995)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="d" x1="22.006" x2="25.441" y1="17.074" y2="17.074" gradientTransform="scale(1.6467 .60727)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="e" x1="21.017" x2="24.298" y1="8.0577" y2="8.0577" gradientTransform="scale(1.7242 .57998)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="f" x1="46.389" x2="49.824" y1="17.075" y2="17.075" gradientTransform="scale(1.6468 .60723)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="g" x1="44.304" x2="47.586" y1="8.0581" y2="8.0581" gradientTransform="scale(1.7243 .57995)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
  </defs>
  <g transform="matrix(.26365 0 0 .26365 85.405 -13.999)">
   <g transform="matrix(9.0601,0,0,9.0601,-1255.4,-570.73)">
@@ -22,24 +22,26 @@
      <path d="m0.0037399 11.412v3.8041h15.614c0.76232 0 1.3807-0.61833 1.3807-1.3807v-2.4235z"/>
      <path d="m0 5.6242h16.606v3.7019h-16.606z"/>
     </g>
-    <path d="m0 9.3255 5.6579 2.0863v-2.0863z" fill="url(#m)"/>
-    <path d="m0 3.7218 5.6579 1.903v-1.903z" fill="url(#l)"/>
+    <path d="m0 9.3255 5.6579 2.0863v-2.0863z" fill="url(#b)"/>
+    <path d="m0 3.7218 5.6579 1.903v-1.903z" fill="url(#c)"/>
     <g fill="#fff">
      <path d="m53.068 3.7218v-3.7218h-15.452c-0.7617 0-1.3788 0.61771-1.3788 1.3788v2.3431z"/>
      <path d="m36.241 11.412v3.8041h15.614c0.76232 0 1.3807-0.61833 1.3807-1.3807v-2.4235z"/>
      <path d="m36.237 5.6242h16.606v3.7019h-16.606z"/>
     </g>
-    <path d="m36.237 9.3255 5.6573 2.0863v-2.0863z" fill="url(#k)"/>
-    <path d="m36.237 3.7218 5.6573 1.903v-1.903z" fill="url(#j)"/>
+    <path d="m36.237 9.3255 5.6573 2.0863v-2.0863z" fill="url(#d)"/>
+    <path d="m36.237 3.7218 5.6573 1.903v-1.903z" fill="url(#e)"/>
     <g fill="#fff">
      <path d="m93.224 3.7218v-3.7218h-15.452c-0.7617 0-1.3788 0.61771-1.3788 1.3788v2.3431z"/>
      <path d="m76.397 11.412v3.8041h15.614c0.76232 0 1.3807-0.61833 1.3807-1.3807v-2.4235z"/>
      <path d="m76.393 5.6242h16.606v3.7019h-16.606z"/>
     </g>
-    <path d="m76.393 9.3255 5.6579 2.0863v-2.0863z" fill="url(#i)"/>
-    <path d="m76.393 3.7218 5.6579 1.903v-1.903z" fill="url(#h)"/>
+    <path d="m76.393 9.3255 5.6579 2.0863v-2.0863z" fill="url(#f)"/>
+    <path d="m76.393 3.7218 5.6579 1.903v-1.903z" fill="url(#g)"/>
    </g>
-   <g transform="matrix(.25745 0 0 .25745 -245.52 59.526)" fill="#fff" stroke="#000" stroke-width="1px" aria-label="1"></g>
+   <g transform="matrix(.25745 0 0 .25745 -245.52 59.526)" fill="#fff" stroke="#000" stroke-width="1px" aria-label="1">
+    <g fill="#fff"></g>
+   </g>
    <g transform="matrix(.24255 0 0 .24255 196.08 14.839)" fill="#3df4b4">
     <path class="st0" d="m82.4 248.4h-4.2c-0.1-5.9-2.2-11-6.3-15.1-4.1-4.2-9.2-6.2-15.1-6.3v-4.3h25.7c-0.1 8.5-0.1 17-0.1 25.7z"/>
     <path class="st0" d="m35.2 248.5c0.1 5.9 2.2 11 6.3 15.2 4.1 4.1 9.2 6.2 15.1 6.3v4.3h-25.7v-25.7c1.4-0.1 2.8-0.1 4.3-0.1z"/>
