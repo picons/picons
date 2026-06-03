@@ -1,9 +1,9 @@
 <svg data-name="Layer 1" version="1.1" viewBox="0 0 1066.7 214" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <clipPath id="b" transform="translate(.01 -.66)">
+  <clipPath id="e" transform="translate(.01 -.66)">
    <path class="cls-1" d="m76.28 21.33c0 11.13 10.15 20.15 22.68 20.15s22.68-9 22.68-20.15-10.16-20.16-22.64-20.16-22.68 9-22.68 20.16" fill="none"/>
   </clipPath>
-  <radialGradient id="c" cx="189.13" cy="834.83" r=".95" gradientTransform="matrix(22.7,0,0,-22.7,-4194.1,18970)" gradientUnits="userSpaceOnUse">
+  <radialGradient id="d" cx="189.13" cy="834.83" r=".95" gradientTransform="matrix(22.7,0,0,-22.7,-4194.1,18970)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#fff" offset="0"/>
    <stop stop-color="#fff" offset=".16"/>
    <stop stop-color="#f2f9fc" offset=".23"/>
@@ -12,14 +12,14 @@
    <stop stop-color="#51aedb" offset=".78"/>
    <stop stop-color="#0089ca" offset="1"/>
   </radialGradient>
-  <clipPath id="a" transform="translate(.01 -.66)">
+  <clipPath id="f" transform="translate(.01 -.66)">
    <rect class="cls-1" x="-.01" y=".46" width="203.02" height="41.58" fill="none"/>
   </clipPath>
  </defs>
- <g class="cls-2" transform="matrix(5.2545 0 0 5.2545 -.052545 -2.4171)" clip-path="url(#b)">
-  <rect class="cls-3" x="76.29" y=".51" width="45.36" height="40.31" fill="url(#c)"/>
+ <g class="cls-2" transform="matrix(5.2545 0 0 5.2545 -.052545 -2.4171)" clip-path="url(#e)">
+  <rect class="cls-3" x="76.29" y=".51" width="45.36" height="40.31" fill="url(#d)"/>
  </g>
- <g class="cls-4" transform="matrix(5.2545 0 0 5.2545 -.052545 -2.4171)" clip-path="url(#a)">
+ <g class="cls-4" transform="matrix(5.2545 0 0 5.2545 -.052545 -2.4171)" clip-path="url(#f)">
   <g fill="none" stroke="#fff" stroke-width=".87px">
    <path class="cls-5" transform="translate(.01 -.66)" d="m81.35 21.25v-0.36h-5v0.36a18.08 18.08 0 0 0 0.58 4.52h4.9a23.13 23.13 0 0 1-0.48-4.52z"/>
    <path class="cls-5" transform="translate(.01 -.66)" d="m81.9 16.27h-4.9a18 18 0 0 0-0.69 4.62h5a22.3 22.3 0 0 1 0.59-4.62z"/>

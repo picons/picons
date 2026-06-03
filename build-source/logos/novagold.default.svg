@@ -1,20 +1,20 @@
-<svg width="158.75mm" height="92.438mm" version="1.1" viewBox="0 0 158.75 92.437668" xmlns="http://www.w3.org/2000/svg">
+<svg width="158.75mm" height="92.438mm" version="1.1" viewBox="0 0 158.75 92.438" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <clipPath id="clipPath87719">
+  <clipPath id="a">
    <path d="m289.4 570.88h20.976v12.214h-20.976z"/>
   </clipPath>
-  <clipPath id="clipPath87709">
+  <clipPath id="b">
    <path d="m289.4 569.48h20.976v15.025h-20.976z"/>
   </clipPath>
  </defs>
  <g transform="translate(-74.163 44.259)">
   <g transform="matrix(7.5682 0 0 -7.5682 -2116.1 4368.7)">
-   <g clip-path="url(#clipPath87709)">
+   <g clip-path="url(#b)">
     <path d="m289.4 570.88h20.976v12.214h-20.976z" fill="#8b621f"/>
    </g>
   </g>
   <g transform="matrix(7.5682 0 0 -7.5682 -2116.1 4368.7)">
-   <g clip-path="url(#clipPath87719)">
+   <g clip-path="url(#a)">
     <g transform="translate(291.92 580.6)">
      <path d="m0 0h0.548v-0.287c0.151 0.203 0.392 0.329 0.683 0.329 0.522 0 0.88-0.379 0.88-0.898v-1.314h-0.548v1.218c0 0.29-0.21 0.497-0.505 0.497s-0.51-0.207-0.51-0.497v-1.218h-0.548z" fill="#fff"/>
     </g>

@@ -1,52 +1,43 @@
 <svg version="1.0" viewBox="0 0 873.01 200" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g transform="matrix(4.4248 0 0 4.4248 -6.6372 -11.062)">
-	
 		<defs>
-			<path id="j" d="m10.5 20 6.6-1.3 20.8-4 0.1 5.3 0.3 13.1-22.3 2.2-6.7 0.6zm-6.3-6.7-2.7 32.6v0.1l7 1.7 45.5-1.4-2.3-38.2-3.7-5.6z"/>
+			<path id="m" d="m10.5 20 6.6-1.3 20.8-4 0.1 5.3 0.3 13.1-22.3 2.2-6.7 0.6zm-6.3-6.7-2.7 32.6v0.1l7 1.7 45.5-1.4-2.3-38.2-3.7-5.6z"/>
 		</defs>
-		<clipPath id="i">
-			<use width="100%" height="100%" xlink:href="#j"/>
+		<clipPath id="n">
+			<use width="100%" height="100%" xlink:href="#m"/>
 		</clipPath>
-		
-			<linearGradient id="h" x1="-318.39" x2="-315.27" y1="293.51" y2="293.51" gradientTransform="matrix(8.5799 14.861 14.861 -8.5799 -1613.2 7255.8)" gradientUnits="userSpaceOnUse">
+			<linearGradient id="o" x1="-318.39" x2="-315.27" y1="293.51" y2="293.51" gradientTransform="matrix(8.5799 14.861 14.861 -8.5799 -1613.2 7255.8)" gradientUnits="userSpaceOnUse">
 			<stop stop-color="#C02F19" offset="0"/>
 			<stop stop-color="#B42A17" offset=".2191"/>
 			<stop stop-color="#B42A17" offset=".6573"/>
 			<stop stop-color="#D72C16" offset="1"/>
 		</linearGradient>
-		<path d="m73.6 36.4-59 34-32.7-56.6 59-34.1z" clip-path="url(#i)" fill="url(#h)"/>
-	
-	
+		<path d="m73.6 36.4-59 34-32.7-56.6 59-34.1z" clip-path="url(#n)" fill="url(#o)"/>
 		<defs>
-			<polygon id="g" points="1.5 46 8.5 47.7 54 46.3 49.9 44.2"/>
+			<polygon id="p" points="1.5 46 8.5 47.7 54 46.3 49.9 44.2"/>
 		</defs>
-		<clipPath id="f">
-			<use width="100%" height="100%" xlink:href="#g"/>
+		<clipPath id="q">
+			<use width="100%" height="100%" xlink:href="#p"/>
 		</clipPath>
-		
-			<linearGradient id="e" x1="-355.39" x2="-352.27" y1="320.41" y2="320.41" gradientTransform="matrix(12.596 -7.2725 -7.2725 -12.596 6814.8 1508.8)" gradientUnits="userSpaceOnUse">
+			<linearGradient id="r" x1="-355.39" x2="-352.27" y1="320.41" y2="320.41" gradientTransform="matrix(12.596 -7.2725 -7.2725 -12.596 6814.8 1508.8)" gradientUnits="userSpaceOnUse">
 			<stop stop-color="#8C261A" offset="0"/>
 			<stop stop-color="#8C261A" offset=".7978"/>
 			<stop stop-color="#A22A1C" offset="1"/>
 		</linearGradient>
-		<path d="M 40.9,21.4 55.5,46.8 14.6,70.4 0,45.1 Z" clip-path="url(#f)" fill="url(#e)"/>
-	
-	
+		<path d="M 40.9,21.4 55.5,46.8 14.6,70.4 0,45.1 Z" clip-path="url(#q)" fill="url(#r)"/>
 		<defs>
-			<polygon id="d" points="54 46.3 51.7 8.1 48 2.5 49.9 44.2"/>
+			<polygon id="s" points="54 46.3 51.7 8.1 48 2.5 49.9 44.2"/>
 		</defs>
-		<clipPath id="c">
-			<use width="100%" height="100%" xlink:href="#d"/>
+		<clipPath id="t">
+			<use width="100%" height="100%" xlink:href="#s"/>
 		</clipPath>
-		
-			<linearGradient id="b" x1="-305.98" x2="-302.86" y1="291.12" y2="291.12" gradientTransform="matrix(2.4605 13.954 13.954 -2.4605 -3262.3 4988.6)" gradientUnits="userSpaceOnUse">
+			<linearGradient id="u" x1="-305.98" x2="-302.86" y1="291.12" y2="291.12" gradientTransform="matrix(2.4605 13.954 13.954 -2.4605 -3262.3 4988.6)" gradientUnits="userSpaceOnUse">
 			<stop stop-color="#381A14" offset="0"/>
 			<stop stop-color="#451C15" offset=".236"/>
 			<stop stop-color="#451C15" offset=".8371"/>
 			<stop stop-color="#77271C" offset="1"/>
 		</linearGradient>
-		<path d="m61.5 45-13.3 2.3-7.7-43.5 13.3-2.3z" clip-path="url(#c)" fill="url(#b)"/>
-	
+		<path d="m61.5 45-13.3 2.3-7.7-43.5 13.3-2.3z" clip-path="url(#t)" fill="url(#u)"/>
 	<path d="m10.6 20 6 3.5-0.5 11.8-6.7 0.6z" clip-rule="evenodd" fill="#451c15" fill-rule="evenodd"/>
 	<path d="m37.9 14.8 0.1 5.2-21.4 3.5-6-3.5z" clip-rule="evenodd" fill="#8d261a" fill-rule="evenodd"/>
 	<path d="m10.5 20 6.6-1.2-0.5 4.7z" fill="#692219"/><g fill="#7c7f81">
@@ -56,10 +47,10 @@
 	<path d="m127 13.2v3.5h-8.5v3.2h9.6v3.9h-14.1v-17.3h13.8v3.6h-9.3v3.1z"/>
 	</g>
 		<defs>
-			<rect id="k" x="1.5" y="2.5" width="197.3" height="45.2"/>
+			<rect id="l" x="1.5" y="2.5" width="197.3" height="45.2"/>
 		</defs>
 		<clipPath id="a">
-			<use width="100%" height="100%" xlink:href="#k"/>
+			<use width="100%" height="100%" xlink:href="#l"/>
 		</clipPath><g fill="#7c7f81">
 		<path d="m142.6 12.7c-0.2-1.7-1.6-2.7-3.5-2.7-2.9 0-4 2.6-4 5.1 0 2.6 1.1 5.1 4 5.1 2.1 0 3.3-1.2 3.5-3.2h4.5c-0.2 4.5-3.5 7.1-7.9 7.1-5.2 0-8.6-4-8.6-9s3.4-9 8.6-9c3.7 0 7.8 2.4 7.9 6.5h-4.5z" clip-path="url(#a)"/>
 		<path d="m150 23.8v-17.3h4.5v13.4h8.1v3.9z" clip-path="url(#a)"/>
@@ -72,10 +63,4 @@
 		<path d="m146.1 35.5v3.5h-8.5v3.3h9.5v3.9h-14v-17.3h13.8v3.6h-9.3v3z" clip-path="url(#a)"/>
 	</g>
 </g>
-
-
-
-
-
-
 </svg>

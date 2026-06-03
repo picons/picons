@@ -20,73 +20,50 @@
 	</g>
 </g>
 <g transform="matrix(4.4743 0 0 4.4743 -9.8434 -10.291)">
-	
-		
-			
 				<defs>
-					<path id="i" d="m11.2 19.6 6.6-1.2 20.6-3.9 0.1 5.1 0.3 12.9-22 2.2-6.7 0.7zm-6.2-6.6-2.8 32.2v0.1l7 1.6 45.1-1.3-2.4-37.8-3.7-5.5z"/>
+					<path id="j" d="m11.2 19.6 6.6-1.2 20.6-3.9 0.1 5.1 0.3 12.9-22 2.2-6.7 0.7zm-6.2-6.6-2.8 32.2v0.1l7 1.6 45.1-1.3-2.4-37.8-3.7-5.5z"/>
 				</defs>
-				<clipPath id="h">
-					<use width="100%" height="100%" overflow="visible" xlink:href="#i"/>
+				<clipPath id="k">
+					<use width="100%" height="100%" overflow="visible" xlink:href="#j"/>
 				</clipPath>
-				
-					<linearGradient id="g" x1="-312.61" x2="-309.52" y1="-242.27" y2="-242.27" gradientTransform="matrix(8.5799 14.861 -14.861 8.5799 -900.82 6730.1)" gradientUnits="userSpaceOnUse">
+					<linearGradient id="l" x1="-312.61" x2="-309.52" y1="-242.27" y2="-242.27" gradientTransform="matrix(8.5799 14.861 -14.861 8.5799 -900.82 6730.1)" gradientUnits="userSpaceOnUse">
 					<stop stop-color="#C2331B" offset="0"/>
 					<stop stop-color="#B42F19" offset=".2191"/>
 					<stop stop-color="#B42F19" offset=".6573"/>
 					<stop stop-color="#D73116" offset="1"/>
 				</linearGradient>
-				<path d="m73.6 35.8-58.4 33.7-32.3-56 58.4-33.7z" clip-path="url(#h)" fill="url(#g)"/>
-			
-		
-		
-			
+				<path d="m73.6 35.8-58.4 33.7-32.3-56 58.4-33.7z" clip-path="url(#k)" fill="url(#l)"/>
 				<defs>
-					<polygon id="f" points="2.2 45.3 9.2 47 54.3 45.6 50.2 43.6"/>
+					<polygon id="m" points="2.2 45.3 9.2 47 54.3 45.6 50.2 43.6"/>
 				</defs>
-				<clipPath id="e">
-					<use width="100%" height="100%" overflow="visible" xlink:href="#f"/>
+				<clipPath id="n">
+					<use width="100%" height="100%" overflow="visible" xlink:href="#m"/>
 				</clipPath>
-				
-					<linearGradient id="d" x1="-349.64" x2="-346.56" y1="-269.7" y2="-269.7" gradientTransform="matrix(12.596 -7.2725 7.2725 12.596 6374.3 911.01)" gradientUnits="userSpaceOnUse">
+					<linearGradient id="o" x1="-349.64" x2="-346.56" y1="-269.7" y2="-269.7" gradientTransform="matrix(12.596 -7.2725 7.2725 12.596 6374.3 911.01)" gradientUnits="userSpaceOnUse">
 					<stop stop-color="#8E281A" offset="0"/>
 					<stop stop-color="#8E281A" offset=".7978"/>
 					<stop stop-color="#A42B1E" offset="1"/>
 				</linearGradient>
-				<path d="m41.3 21.1 14.4 25-40.5 23.4-14.4-25.1z" clip-path="url(#e)" fill="url(#d)"/>
-			
-		
-		
-			
+				<path d="m41.3 21.1 14.4 25-40.5 23.4-14.4-25.1z" clip-path="url(#n)" fill="url(#o)"/>
 				<defs>
-					<polygon id="c" points="54.3 45.6 51.9 7.8 48.2 2.3 50.2 43.6"/>
+					<polygon id="p" points="54.3 45.6 51.9 7.8 48.2 2.3 50.2 43.6"/>
 				</defs>
-				<clipPath id="b">
-					<use width="100%" height="100%" overflow="visible" xlink:href="#c"/>
+				<clipPath id="q">
+					<use width="100%" height="100%" overflow="visible" xlink:href="#p"/>
 				</clipPath>
-				
-					<linearGradient id="a" x1="-300.13" x2="-297.05" y1="-239.74" y2="-239.74" gradientTransform="matrix(2.4605 13.954 -13.954 2.4605 -2559.4 4780.4)" gradientUnits="userSpaceOnUse">
+					<linearGradient id="r" x1="-300.13" x2="-297.05" y1="-239.74" y2="-239.74" gradientTransform="matrix(2.4605 13.954 -13.954 2.4605 -2559.4 4780.4)" gradientUnits="userSpaceOnUse">
 					<stop stop-color="#381A14" offset="0"/>
 					<stop stop-color="#461E16" offset=".236"/>
 					<stop stop-color="#461E16" offset=".8371"/>
 					<stop stop-color="#78281C" offset="1"/>
 				</linearGradient>
-				<path d="m61.6 44.3-13.2 2.4-7.6-43.1 13.3-2.3z" clip-path="url(#b)" fill="url(#a)"/>
-			
-		
+				<path d="m61.6 44.3-13.2 2.4-7.6-43.1 13.3-2.3z" clip-path="url(#q)" fill="url(#r)"/>
 		<path d="m11.2 19.6 6 3.5-0.5 11.6-6.6 0.7z" fill="#461e16"/>
 		<path d="m38.3 14.5 0.1 5.1-21.2 3.5-6-3.5z" fill="#8f281a"/>
 		<path d="m11.2 19.6 6.5-1.2-0.5 4.7z" fill="#692219"/>
-	
 </g>
 <g transform="matrix(4.4743 0 0 4.4743 -9.8434 -10.291)" fill="#b61d1b">
-	<path d="m175.6 28.6h4.6v6.5h4.2 1.5v-6.5h4.6v17.6h-4.6v-7.2h-0.9-4.5-0.3v7.2h-4.6v-6.9-10.7z"/>
-	<path d="m192.8 28.6h7.9c0.5 0.1 1 0.1 1.4 0.2 1.6 0.2 3.1 0.9 4.2 2 0.8 0.8 1.4 1.8 1.8 2.8s0.6 2.2 0.6 3.3c0 1.2-0.1 2.4-0.4 3.6-0.3 1-0.7 2-1.4 2.9-0.6 0.8-1.4 1.4-2.2 1.8-1.3 0.7-2.8 1-4.3 1h-7.7v-2.4-10.1c0.1-1.7 0.1-3.4 0.1-5.1m4.6 4v9.8c1.1 0 2.2 0.1 3.3-0.1 0.9-0.1 1.9-0.4 2.5-1.1 0.7-0.8 0.9-1.8 1-2.9 0.1-0.8 0.1-1.6-0.1-2.5-0.2-0.8-0.6-1.7-1.2-2.2-0.9-0.8-2.1-1-3.2-1h-2.3z"/>
+	<path d="m175.6 28.6h4.6v6.5h5.7v-6.5h4.6v17.6h-4.6v-7.2h-5.7v7.2h-4.6v-17.6z"/>
+	<path d="m192.8 28.6h7.9c0.5 0.1 1 0.1 1.4 0.2 1.6 0.2 3.1 0.9 4.2 2 0.8 0.8 1.4 1.8 1.8 2.8s0.6 2.2 0.6 3.3c0 1.2-0.1 2.4-0.4 3.6-0.3 1-0.7 2-1.4 2.9-0.6 0.8-1.4 1.4-2.2 1.8-1.3 0.7-2.8 1-4.3 1h-7.7v-12.5c0.1-1.7 0.1-3.4 0.1-5.1m4.6 4v9.8c1.1 0 2.2 0.1 3.3-0.1 0.9-0.1 1.9-0.4 2.5-1.1 0.7-0.8 0.9-1.8 1-2.9 0.1-0.8 0.1-1.6-0.1-2.5-0.2-0.8-0.6-1.7-1.2-2.2-0.9-0.8-2.1-1-3.2-1h-2.3z"/>
 </g>
-
-
-
-
-
-
 </svg>

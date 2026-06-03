@@ -1,31 +1,31 @@
 <svg width="158.75mm" height="17.364mm" version="1.1" viewBox="0 0 158.75 17.364" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
-  <linearGradient id="l" x1="95.2" x2="151.87" y1="327.17" y2="327.17" gradientUnits="userSpaceOnUse">
+  <linearGradient id="a" x1="95.2" x2="151.87" y1="327.17" y2="327.17" gradientUnits="userSpaceOnUse">
    <stop stop-color="red" offset="0"/>
    <stop stop-color="#ff4b00" offset="1"/>
   </linearGradient>
-  <linearGradient id="k" x1="104.74" x2="104.74" y1="284.62" y2="333.76" gradientUnits="userSpaceOnUse">
+  <linearGradient id="b" x1="104.74" x2="104.74" y1="284.62" y2="333.76" gradientUnits="userSpaceOnUse">
    <stop stop-color="#c80000" offset="0"/>
    <stop stop-color="red" offset="1"/>
   </linearGradient>
-  <linearGradient id="m" x1="-27.086" x2="-20.834" y1="120.38" y2="120.38" gradientTransform="matrix(.91411 0 0 .91411 -169.43 59.472)" gradientUnits="userSpaceOnUse" xlink:href="#k"/>
-  <linearGradient id="n" x1="11.81" x2="70.86" y1="53.145" y2="53.145" gradientUnits="userSpaceOnUse" xlink:href="#k"/>
-  <linearGradient id="o" x1="47.24" x2="70.86" y1="35.43" y2="35.43" gradientUnits="userSpaceOnUse" xlink:href="#l"/>
-  <linearGradient id="p" x1="-39.128" x2="-23.962" y1="131.09" y2="131.09" gradientTransform="matrix(.91411 0 0 .91411 -169.43 59.472)" gradientUnits="userSpaceOnUse" xlink:href="#l"/>
-  <linearGradient id="q" x1="-39.585" x2="-33.336" y1="126.17" y2="126.17" gradientTransform="matrix(.91411 0 0 .91411 -169.43 59.472)" gradientUnits="userSpaceOnUse" xlink:href="#k"/>
-  <linearGradient id="r" x2="47.24" y1="11.81" y2="11.81" gradientUnits="userSpaceOnUse" xlink:href="#k"/>
-  <linearGradient id="s" x2="23.62" y1="35.43" y2="35.43" gradientUnits="userSpaceOnUse" xlink:href="#l"/>
-  <linearGradient id="t" x1="-33.336" x2="-21.292" y1="117.02" y2="117.02" gradientTransform="matrix(.91411 0 0 .91411 -169.43 59.472)" gradientUnits="userSpaceOnUse" xlink:href="#l"/>
+  <linearGradient id="j" x1="-27.086" x2="-20.834" y1="120.38" y2="120.38" gradientTransform="matrix(.91411 0 0 .91411 -169.43 59.472)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
+  <linearGradient id="i" x1="11.81" x2="70.86" y1="53.145" y2="53.145" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
+  <linearGradient id="h" x1="47.24" x2="70.86" y1="35.43" y2="35.43" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="g" x1="-39.128" x2="-23.962" y1="131.09" y2="131.09" gradientTransform="matrix(.91411 0 0 .91411 -169.43 59.472)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="f" x1="-39.585" x2="-33.336" y1="126.17" y2="126.17" gradientTransform="matrix(.91411 0 0 .91411 -169.43 59.472)" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
+  <linearGradient id="e" x2="47.24" y1="11.81" y2="11.81" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
+  <linearGradient id="d" x2="23.62" y1="35.43" y2="35.43" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="c" x1="-33.336" x2="-21.292" y1="117.02" y2="117.02" gradientTransform="matrix(.91411 0 0 .91411 -169.43 59.472)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
  </defs>
  <g transform="translate(205.62 -163.59)">
-  <path class="a" d="m-202.76 177.87-2.438 2.438a1.4246 1.4246 0 0 0 1.0086 0.41842h9.9984l2.8564-2.8564z" fill="url(#p)" stroke-width=".24186"/>
-  <path class="b" d="m-199.9 175.01-5.7126-5.7126v9.9984a1.4246 1.4246 0 0 0 0.41841 1.0086l2.438-2.438z" fill="url(#q)" stroke-width=".24186"/>
-  <polygon class="c" transform="matrix(.24186 0 0 .24186 -205.62 163.59)" points="23.62 47.24 11.81 59.05 59.05 59.05 70.86 47.24" fill="url(#n)"/>
-  <polygon class="d" transform="matrix(.24186 0 0 .24186 -205.62 163.59)" points="23.62 23.62 0 23.62 23.62 47.24" fill="url(#s)"/>
-  <polygon class="e" transform="matrix(.24186 0 0 .24186 -205.62 163.59)" points="47.24 23.62 23.62 0 0 23.62" fill="url(#r)"/>
-  <path class="f" d="m-188.9 164a1.4246 1.4246 0 0 0-1.0086-0.41841h-10.001l5.7127 5.7128z" fill="url(#t)" stroke-width=".24186"/>
-  <polygon class="g" transform="matrix(.24186 0 0 .24186 -205.62 163.59)" points="47.24 47.24 70.86 47.24 70.86 23.62" fill="url(#o)"/>
-  <path class="h" d="m-188.48 165.01a1.4246 1.4246 0 0 0-0.41842-1.0086l-5.2967 5.2919v5.7126l5.7127-5.7126z" fill="url(#m)" stroke-width=".24186"/>
+  <path class="a" d="m-202.76 177.87-2.438 2.438a1.4246 1.4246 0 0 0 1.0086 0.41842h9.9984l2.8564-2.8564z" fill="url(#g)" stroke-width=".24186"/>
+  <path class="b" d="m-199.9 175.01-5.7126-5.7126v9.9984a1.4246 1.4246 0 0 0 0.41841 1.0086l2.438-2.438z" fill="url(#f)" stroke-width=".24186"/>
+  <polygon class="c" transform="matrix(.24186 0 0 .24186 -205.62 163.59)" points="23.62 47.24 11.81 59.05 59.05 59.05 70.86 47.24" fill="url(#i)"/>
+  <polygon class="d" transform="matrix(.24186 0 0 .24186 -205.62 163.59)" points="23.62 23.62 0 23.62 23.62 47.24" fill="url(#d)"/>
+  <polygon class="e" transform="matrix(.24186 0 0 .24186 -205.62 163.59)" points="47.24 23.62 23.62 0 0 23.62" fill="url(#e)"/>
+  <path class="f" d="m-188.9 164a1.4246 1.4246 0 0 0-1.0086-0.41841h-10.001l5.7127 5.7128z" fill="url(#c)" stroke-width=".24186"/>
+  <polygon class="g" transform="matrix(.24186 0 0 .24186 -205.62 163.59)" points="47.24 47.24 70.86 47.24 70.86 23.62" fill="url(#h)"/>
+  <path class="h" d="m-188.48 165.01a1.4246 1.4246 0 0 0-0.41842-1.0086l-5.2967 5.2919v5.7126l5.7127-5.7126z" fill="url(#j)" stroke-width=".24186"/>
   <g transform="matrix(.99999 0 0 .99999 -173.49 48.875)" fill="#f9f9f9" stroke-width=".24186">
    <path class="i" d="m-9.7559 126.22c0-3.5699 2.4186-6.0151 5.9183-6.0151a5.853 5.853 0 0 1 4.7767 2.2687l-2.138 1.8817c-0.77154-0.85134-1.5769-1.2553-2.4936-1.2553-1.6398 0-2.8781 1.3036-2.8781 3.0716s1.19 3.0063 2.8636 3.0063a3.224 3.224 0 0 0 2.4597-1.1585l2.1767 1.8502a5.9087 5.9087 0 0 1-4.7767 2.2034c-3.5529 3e-3 -5.9087-2.3291-5.9087-5.853z"/>
    <path class="i" d="m9.9606 131.85-0.66028-1.6568h-1.9349l-1.5769-2.0897-1.2093 3.7464h-3.3135l4.31-11.418h1.768c0.96744 0 1.5769 0.41841 1.9349 1.3181l3.923 10.1zm-1.4512-4.1116-1.3181-3.8698h-0.048375l-1.2553 3.8698z"/>

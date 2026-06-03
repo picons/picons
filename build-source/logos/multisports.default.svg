@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="140.92" width="600" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 158.75 37.28516">
+<svg width="600" height="140.92" version="1.1" viewBox="0 0 158.75 37.285" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(-95.106 208.95)">
-  <path d="m98.096-171.66h155.76v-37.29h-155.76l-0.004 37.29z" fill="#262c29"/>
+  <path d="m98.096-171.66h155.76v-37.29h-155.76l-4e-3 37.29z" fill="#262c29"/>
   <g transform="matrix(.19982 0 0 -.19982 117.59 -188.85)">
    <path d="m0 0-5.798 44.711-18.728-44.711h-8.075l-17.803 44.711-6.625-44.711h-20.08l13.144 77.629h19.977l15.734-41.404 16.664 41.404h19.972l11.803-77.629h-20.185z" fill="#fff"/>
   </g>

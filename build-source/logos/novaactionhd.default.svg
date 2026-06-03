@@ -1,20 +1,20 @@
-<svg width="179.92mm" height="70.513mm" version="1.1" viewBox="0 0 179.91667 70.512672" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="179.92mm" height="70.513mm" version="1.1" viewBox="0 0 179.92 70.513" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <clipPath id="clipPath87485">
+  <clipPath id="a">
    <path d="m289.4 605.78h20.976v9.317h-20.976z"/>
   </clipPath>
-  <clipPath id="clipPath87475">
+  <clipPath id="b">
    <path d="m289.4 602.93h20.976v15.024h-20.976z"/>
   </clipPath>
  </defs>
  <g transform="translate(-55.865 31.161)">
   <g transform="matrix(8.5773 0 0 -7.5682 -2426.4 4624)">
-   <g clip-path="url(#clipPath87475)">
+   <g clip-path="url(#b)">
     <path d="m289.4 605.78h20.976v9.317h-20.976z" fill="#f59b2d"/>
    </g>
   </g>
   <g transform="matrix(7.5682 0 0 -7.5682 -2138.8 4624)">
-   <g clip-path="url(#clipPath87485)">
+   <g clip-path="url(#a)">
     <g transform="translate(291.32 613.19)">
      <path d="m0 0h0.418v-0.219c0.116 0.155 0.299 0.251 0.521 0.251 0.398 0 0.672-0.289 0.672-0.685v-1.003h-0.418v0.929c0 0.222-0.161 0.38-0.386 0.38s-0.389-0.158-0.389-0.38v-0.929h-0.418z" fill="#fff"/>
     </g>
@@ -46,6 +46,6 @@
    </g>
   </g>
   <path d="m201.95 1.2407h2.9825v4.8289h5.2752v-4.8289h2.9825v12.3h-2.9825v-4.8388h-5.2752v4.8388h-2.9825z" fill="#fff" stroke-width=".98954"/>
-  <path d="m220.68 10.899c2.0939 0 3.4772-1.4744 3.4772-3.5129 0-2.0582-1.3834-3.5129-3.4772-3.5129h-1.8603v7.0257zm-4.8517-9.6579h5.112c3.6573 0 6.3083 2.6717 6.3083 6.145 0 3.4733-2.651 6.145-6.3083 6.145h-5.112z" fill="#fff" stroke-width=".98954"/>
+  <path d="m220.68 10.899c2.0939 0 3.4772-1.4744 3.4772-3.5129 0-2.0582-1.3834-3.5129-3.4772-3.5129h-1.8603v7.0257zm-4.8517-9.6579h5.112c3.6573 0 6.3083 2.6717 6.3083 6.145s-2.651 6.145-6.3083 6.145h-5.112z" fill="#fff" stroke-width=".98954"/>
  </g>
 </svg>

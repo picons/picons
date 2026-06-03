@@ -1,12 +1,10 @@
 <svg version="1.1" viewBox="0 0 600 159.44" xmlns="http://www.w3.org/2000/svg">
- <g>
-  <path d="m0.9367 88.328 50.044 0.0017v-19.353l-26.458-8.54e-4v-68.947h-23.587z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
-  <path d="m53.074 88.311h23.587v-88.3h-23.587z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
-  <path d="m79.912 88.328h25.218v-51.288l39.936 51.289 22.139-0.0017v-88.3h-25.218v50.636l-39.384-50.656-22.692 0.020769z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
-  <path d="m199.83 0.027939h-29.344v88.3h29.344c27.451 0 47.211-17.902 47.329-44.755 0.11838-28.305-18.222-43.546-47.329-43.546zm-0.35496 68.947h-5.9161v-49.714h6.2711c16.092 0 24.256 8.5881 24.375 24.192 0.11829 13.789-10.057 25.522-24.729 25.522z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
-  <path d="m302.73 88.328h25.522l-34.231-88.3h-25.039l-33.869 88.3h25.401l5.7708-15.861h30.437zm-12.621-33.323h-17.418l8.5077-23.528z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
-  <path d="m340.16 88.328c8.1044 0 14.708-6.1533 14.708-13.808 0-7.6541-6.6036-13.808-14.858-13.808-8.1044 0-14.708 6.1533-14.708 13.808 0 7.6541 6.6036 13.808 14.858 13.808z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
- </g>
+ <path d="m0.9367 88.328 50.044 0.0017v-19.353l-26.458-8.54e-4v-68.947h-23.587z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
+ <path d="m53.074 88.311h23.587v-88.3h-23.587z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
+ <path d="m79.912 88.328h25.218v-51.288l39.936 51.289 22.139-0.0017v-88.3h-25.218v50.636l-39.384-50.656-22.692 0.020769z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
+ <path d="m199.83 0.027939h-29.344v88.3h29.344c27.451 0 47.211-17.902 47.329-44.755 0.11838-28.305-18.222-43.546-47.329-43.546zm-0.35496 68.947h-5.9161v-49.714h6.2711c16.092 0 24.256 8.5881 24.375 24.192 0.11829 13.789-10.057 25.522-24.729 25.522z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
+ <path d="m302.73 88.328h25.522l-34.231-88.3h-25.039l-33.869 88.3h25.401l5.7708-15.861h30.437zm-12.621-33.323h-17.418l8.5077-23.528z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
+ <path d="m340.16 88.328c8.1044 0 14.708-6.1533 14.708-13.808 0-7.6541-6.6036-13.808-14.858-13.808-8.1044 0-14.708 6.1533-14.708 13.808 0 7.6541 6.6036 13.808 14.858 13.808z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
  <g fill="#e95048">
   <path d="m0 126.9v12.084h53.38v-12.084h-35.872l35.682-45.007v-11.323h-52.239v12.084h34.35z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
   <path d="m58.279 138.98h13.416v-50.716h-13.416zm0-56.711h13.416v-12.465h-13.416z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
