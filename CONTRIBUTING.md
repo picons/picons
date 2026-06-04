@@ -40,7 +40,7 @@ black    — fully black, no colors (indexed 1-bit, black/white); looks good on 
 
 **srp.index:**
 
-Contains the partial Enigma2 service references that link logos in this repository to actual channels.
+Contains the `partial Enigma2 service references` that link the channels to logos in this repository.
 
 - The part before `=` is the partial service reference (uppercase only).
 - The part after `=` is the logo name in this repository (not the channel name).
@@ -63,7 +63,7 @@ The logo for Das Erste HD in this repository is called `daserstehd`, so the entr
 
 **utf8snp.index:**
 
-Contains UTF-8 channel names that link logos in this repository to actual channels. With the exception of system characters and those listed below, names match the channel name and are lowercase.
+Contains `UTF-8 channel names` that link the channels to logos in this repository. With the exception of system characters and those listed below, names match the channel name and are lowercase.
 
 The following characters are not allowed:
 
@@ -85,13 +85,8 @@ Examples:
 
 - `Sony Channel +1` → `sony channel +1`
 - `BT Sport//ESPN` → `bt sportespn`
+- `a.tv HD .` → `a.tv hd`
 
-**Important:** you cannot have two different utf8snp names that map to two different logos. Pull requests with multiple assignments will fail. Only the first line will be used:
-
-```
-sky comedy=skycomedy
-sky comedy=skycinemacomedy   ← ignored
-```
 
 **Channels with identical names:**
 
@@ -105,11 +100,19 @@ E_64_10_D84AD7F=ntv-stawahicle
 D3CD_839_2_11A0000=ntvbangla
 ```
 
+**Important:** you cannot have two different utf8snp names that map to two different logos. Pull requests with multiple assignments will fail.  An example of a double assignemnt is below
+
+```
+sky comedy=skycomedy
+sky comedy=skycinemacomedy
+```
+
+
 # SAMPLES
 
 ### srp.index
 
-New additions can go at the top. Delete redundant or outdated entries when possible.
+New additions can go at the top. Deleting redundant or outdated entries is encouraged but not required.
 
 ```
 1005_29_46_E080000=eurosporthd
