@@ -2,94 +2,114 @@
 
 When submitting an issue, make sure you follow these rules:
 
-- Please put entries to `srp.index` or `utf8snp.index` inside fenced code blocks. You can create fenced code blocks by placing a new line with three backticks ` ``` ` before and after the code block. ([READ THIS GUIDE](https://help.github.com/articles/creating-and-highlighting-code-blocks/))
+- Please put entries to `srp.index` or `utf8snp.index` inside fenced code blocks. You can create fenced code blocks by placing a new line with three backticks ` ``` ` before and after the code block. ([Read this guide](https://help.github.com/articles/creating-and-highlighting-code-blocks/))
 - Logos should be inside an archive, correctly named (see below). Share the link.
 
-Do you like copy/paste? We do too, make sure your issue is easily copy/pasted.
+Do you like copy/paste? We do too — make sure your issue is easily copy/pasted.
 
 # NAMING
 
-__Logo:__
+**Logo:**
 
-- LOWERCASE
-- NO spaces, fancy symbols or `.-+_*`, except for the exceptions below.
-- Time sharing channels are seperated by `_`.
-- If the logo name you wish to use already exists, add a unique identifier like `-trechuhipe`, this is a pronounceable random 10 character string generated using [this](http://www.generate-password.com) password generator. Grouping logos together using the same unique identifier is possible.
-- Filetype `svg` is the way to go, otherwise `png`.
-- The resolution doesn't matter for `svg`, for `png` try to get it > 800px.
-- When submitting `svg` files, make sure to convert `text` to `paths`.
-- It's not allowed for `svg` files to contain base64 encoded images.
-- Try to make `svg` files rsvg compatible, they definately need to open in Inkscape, so no Adobe Illustrator only compatibility.
-- If it's possible to easily trace your png with Inkscape, only the `svg` is allowed. In most cases this is possible.
+- Lowercase only.
+- No spaces, fancy symbols or `.-+_*`, except for the exceptions below.
+- Time sharing channels are separated by `_`.
+- If the logo name you wish to use already exists, add a unique identifier like `-trechuhipe` (a pronounceable random 10-character string, generated using [this](http://www.generate-password.com) password generator). Grouping logos together using the same unique identifier is allowed.
+- Preferred filetype is `svg`; use `png` only as a fallback.
+- Resolution doesn't matter for `svg`; for `png`, aim for > 800px.
+- When submitting `svg` files, convert all text to paths.
+- `svg` files must not contain base64-encoded images.
+- `svg` files must be rsvg-compatible and open correctly in Inkscape (Adobe Illustrator-only compatibility is not acceptable).
+- If your `png` can be easily traced with Inkscape, submit only the `svg`.
 - Quality should be as high as possible.
-- Background should be transparent.
+- Background must be transparent.
 - No empty space around the logo.
-- A `default` version of a logo should get the identifier `.default` at the end of the filename, additional types are possible, by using for example `.light`, `.dark`, `.black` or `.white` as an identifier.
+- A `default` version of a logo gets the suffix `.default` in the filename. Additional variants use `.light`, `.dark`, `.black`, or `.white`.
 
-Explanation of logo types:
+Logo type reference:
+
 ```
-default=standard logo as used by the tv station, looks good on background intended by tv station, mostly white background
-light=modified default logo that makes darker parts lighter, looks good on darker backgrounds
-dark=modified default logo that makes lighter parts darker, looks good on lighter backgrounds
-white=fully white logo, no colors allowed (indexed 1-bit, black/white), looks good on dark backgrounds
-black=fully black logo, no colors allowed (indexed 1-bit, black/white), looks good on light backgrounds
+default  — standard logo as used by the TV station; looks good on the background intended by the station (mostly white)
+light    — modified default with darker parts made lighter; looks good on dark backgrounds
+dark     — modified default with lighter parts made darker; looks good on light backgrounds
+white    — fully white, no colors (indexed 1-bit, black/white); looks good on dark backgrounds
+black    — fully black, no colors (indexed 1-bit, black/white); looks good on light backgrounds
 ```
 
-__srp.index:__
+---
 
-Contains the partial Enigma2 service references, establishing a link between the actual logos in this repository.
-The parts before the `=` sign are the partial service references.
-The parts after the `=` sign are the logos on **this repository**. These are not the channel names.
+**srp.index:**
 
-- Only the unique part of the service refernce is used.
-For example, Das Erste HD has the following service reference `1_0_19_283D_3FB_1_C00000_0_0_0`
+Contains the partial Enigma2 service references that link logos in this repository to actual channels.
 
-The first three elements are dropped. `1_0_19_`.  Depending on service type, other channels/services could have `1_0_1_` or `1_0_16_` or `4097_0_1_`
-The last three elements are dropped too, leaving 
+- The part before `=` is the partial service reference (uppercase only).
+- The part after `=` is the logo name in this repository (not the channel name).
 
-`283D_3FB_1_C00000`
+Only the unique part of the service reference is used. For example, Das Erste HD has the full service reference `1_0_19_283D_3FB_1_C00000_0_0_0`. The first three elements (`1_0_19_`) and the last three elements are dropped, leaving:
 
-- All entries on the first part must be in UPPERCASE
-The logo we want to use on this repository is called `daserstehd`
+```
+283D_3FB_1_C00000
+```
 
-Example entry in srp.index will be
+Depending on service type, the dropped prefix could also be `1_0_1_`, `1_0_16_`, or `4097_0_1_`.
+
+The logo for Das Erste HD in this repository is called `daserstehd`, so the entry is:
 
 ```
 283D_3FB_1_C00000=daserstehd
 ```
 
+---
 
-__utf8snp.index:__
+**utf8snp.index:**
 
-Contains utf8 channel names establishing a link between the actual logos in this repository. With the exception of system characters and those listed below, the names will match the channel name. We use lowercase.
+Contains UTF-8 channel names that link logos in this repository to actual channels. With the exception of system characters and those listed below, names match the channel name and are lowercase.
 
 The following characters are not allowed:
 
 ```
-< (less than)
-> (greater than)
-: (colon)
-" (double quote)
-/ (forward slash)
-\ (backslash)
-| (vertical bar or pipe)
-? (question mark)
-* (asterisk)
+<   (less than)
+>   (greater than)
+:   (colon)
+"   (double quote)
+/   (forward slash)
+\   (backslash)
+|   (vertical bar or pipe)
+?   (question mark)
+*   (asterisk)
 ```
 
-A full stop at the end of the channel name is not allowed.
+A full stop at the end of a channel name is also not allowed.
 
-Example utf8snp names:
+Examples:
 
-- `Sony Channel +1` => `sony channel +1`
-- `BT Sport//ESPN` => `bt sportespn`
+- `Sony Channel +1` → `sony channel +1`
+- `BT Sport//ESPN` → `bt sportespn`
 
+**Important:** you cannot have two different utf8snp names that map to two different logos. Pull requests with multiple assignments will fail. Only the first line will be used:
+
+```
+sky comedy=skycomedy
+sky comedy=skycinemacomedy   ← ignored
+```
+
+**Channels with identical names:**
+
+When different channels share the same utf8snp name, use srp references to distinguish them. For example, several satellites carry a channel called `NTV`, all sharing the utf8snp name `ntv`. The entries to ensure each links to a different logo are:
+
+```
+ntv=ntv
+55F3_FFDF_36E_1680000=ntv-kiwuslorit
+E_64_10_D84AD7F=ntv-stawahicle
+1D6F_C3B4_7E_460000=ntv-trahaclasp
+D3CD_839_2_11A0000=ntvbangla
+```
 
 # SAMPLES
 
 ### srp.index
 
-New additions can go at the top. Best to delete redundant/old entries.
+New additions can go at the top. Delete redundant or outdated entries when possible.
 
 ```
 1005_29_46_E080000=eurosporthd
@@ -109,10 +129,9 @@ New additions can go at the top. Best to delete redundant/old entries.
 101_E_85_C00000=skybundesligahd-racratridr
 ```
 
-
 ### utf8snp.index
 
-New additions can go at the top. Best to delete redundant/old entries, although this is not a requirement.
+New additions can go at the top. Deleting redundant or outdated entries is encouraged but not required.
 
 ```
 kabelio 5 uk=channel5
@@ -126,34 +145,4 @@ channel s=channels
 chstv=channels
 channels 24=channels24
 al malakoot sat – the kingdom sat الملكوت سات=almalakoot
-```
-
-In the above examples, 
-The parts before the `=` sign are the channel's utf8snp names.
-The parts after the `=` sign are the logos on **this repository**. These are not the channel names.
-
-**Channels with identical names**
-
-When there are different channels but with identical utf8snp names, we distinguish between them by using srp references for some of them. For example there is `NTV` on a few satellites. They have the same utf8snp name `ntv`. The entries in the index to ensure they have linkages to different logos are:
-
-```
-ntv=ntv
-55F3_FFDF_36E_1680000=ntv-kiwuslorit
-E_64_10_D84AD7F=ntv-stawahicle
-1D6F_C3B4_7E_460000=ntv-trahaclasp
-D3CD_839_2_11A0000=ntvbangla
-```
-
-You **cannot** have two different `utf8snp names` that link to different `logos on this repository`. Pull requests with multiple assignments will fail. 
-
-Previously, in the examples below, only the the first line will be used to create a picon.
-
-```
-sky comedy=skycomedy
-sky comedy=skycinemacomedy
-```
-
-```
-ntv=ntv
-ntv=ntvbangla
 ```
