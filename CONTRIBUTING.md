@@ -99,11 +99,13 @@ E_64_10_D84AD7F=ntv-stawahicle
 D3CD_839_2_11A0000=ntvbangla
 ```
 
-**Important:** you cannot have two identical utf8snp names that map to two different logos. Pull requests with multiple assignments will fail.  An example of a double assignemnt is below
+**Important:** you cannot have two identical utf8snp names that map to two different logos. Pull requests with multiple assignments will fail.  Examples of double assignemnts are shown below
 
 ```
 sky comedy=skycomedy
 sky comedy=skycinemacomedy
+ntv=ntv
+ntv=ntv-stawahicle
 ```
 
 
