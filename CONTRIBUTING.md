@@ -15,8 +15,7 @@ Do you like copy/paste? We do too — make sure your issue is easily copy/pasted
 - No spaces, fancy symbols or `.-+_*`, except for the exceptions below.
 - Time sharing channels are separated by `_`.
 - If the logo name you wish to use already exists, add a unique identifier like `-trechuhipe` (a pronounceable random 10-character string, generated using [this](http://www.generate-password.com) password generator). Grouping logos together using the same unique identifier is allowed.
-- Preferred filetype is `svg`; use `png` only as a fallback.
-- Resolution doesn't matter for `svg`; for `png`, aim for > 800px.
+- Both svg and high-quality png (> 800px) are accepted; svg is preferred when a clean trace is achievable.
 - When submitting `svg` files, convert all text to paths.
 - `svg` files must not contain base64-encoded images.
 - `svg` files must be rsvg-compatible and open correctly in Inkscape (Adobe Illustrator-only compatibility is not acceptable).
@@ -29,7 +28,7 @@ Do you like copy/paste? We do too — make sure your issue is easily copy/pasted
 Logo type reference:
 
 ```
-default  — standard logo as used by the TV station; looks good on the background intended by the station (mostly white)
+default  — standard logo as used by the TV station; designed for the station's own background (typically light/white), may not be legible on dark backgrounds
 light    — modified default with darker parts made lighter; looks good on dark backgrounds
 dark     — modified default with lighter parts made darker; looks good on light backgrounds
 white    — fully white, no colors (indexed 1-bit, black/white); looks good on dark backgrounds
