@@ -4,21 +4,18 @@ All the full resolution channel logos and their link to the actual channel (=ser
 
 ## BUILDING THE PICONS
 
-[Ubuntu](http://www.ubuntu.com/download) and [Bash on Ubuntu on Windows](https://msdn.microsoft.com/commandline/wsl) are tested and supported platforms for building the picons.
+Supported platforms: [Ubuntu](https://ubuntu.com/download) / [Debian](https://www.debian.org/distrib/) (recent versions) and [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install) running either of the two.
 
-When using [Bash on Ubuntu on Windows](https://msdn.microsoft.com/commandline/wsl), clone to `/mnt/c`, which is your `C:\` drive on Windows. That way you can manipulate your files from within Windows, going to `%localappdata%\lxss\rootfs` directly inside Windows and modifying files, is not recommended.
+> **WSL2 note:** Clone the repository into your **Linux home directory** (e.g. `~/picons`), not into a Windows-mounted path like `/mnt/c/`. Storing the files on the Linux filesystem gives significantly better I/O performance and avoids permission and symlink issues that arise when working across the WSL2/Windows boundary. You can still access the output files from Windows via the UNC path `\\wsl$\<distro>\home\<your-username>\picons\build-output` in File Explorer.
 
 Download the repository by using one of the following commands:
 
 ```shell
-# Ubuntu, Bash on Ubuntu on Windows
+# Install dependencies (Ubuntu / Debian / WSL2)
 sudo apt-get install git binutils pngquant imagemagick librsvg2-bin jq
 
-# Ubuntu
+# Clone the repository
 git clone https://github.com/picons/picons.git ~/picons
-
-# Bash on Ubuntu on Windows
-git clone https://github.com/picons/picons.git /mnt/c/picons
 ```
 
 Next, copy the required files to the folder [build-input](build-input).
@@ -26,13 +23,7 @@ Next, copy the required files to the folder [build-input](build-input).
 We will start the creation of the servicelist and the picons with the following commands:
 
 ```shell
-# Ubuntu
 cd ~/picons
-
-# Bash on Ubuntu on Windows
-cd /mnt/c/picons
-
-# Ubuntu, Bash on Ubuntu on Windows
 ./1-build-servicelist.sh
 ./2-build-picons.sh
 ```
@@ -60,7 +51,7 @@ The idea behind SNP is that a simplified name derived from the channel name is u
 ## UTF8 SNP - UTF8 SERVICE NAME PICONS
 The problem with Service Name Picons is that the code in Enigma2 only allowed a-z and 0-9 and no other characters such as `+` , `&`, `*`, `(`  and others This is ok for channels that use the western alphabet without accents or special characters but not for Arabic ( اسم قناتي ) or Bulgarian ( Диема ХД ) or even western European ( Áèíöúñ ).
 
-Following this commit https://github.com/OpenPLi/enigma2/commit/2e7479e22eb2694fa1071f2429aad5721c663e1f, picon code was subsequently changed in April 2024 to allow unicode names and overcome the limitations of SNP.
+Following a [dedicated OpenPLi commit](https://github.com/OpenPLi/enigma2/commit/2e7479e22eb2694fa1071f2429aad5721c663e1f) merged in April 2024, the picon code was updated to support unicode names, overcoming the limitations of SNP.
 
 More details about UTF8 here: 
 https://en.wikipedia.org/wiki/UTF-8
@@ -75,6 +66,8 @@ https://en.wikipedia.org/wiki/UTF-8
 Copy your `enigma2` folder, probably located in `/etc` on your box into this folder.
 
 #### TvHeadend servicelist creation
+
+> **Prerequisites:** Before using the generator with TvHeadend, you must enable picons in the server by defining a destination folder under **Configuration -> General -> Base**. Without this step the generator will not work.
 
 Use the servers API and directly ask the server about all channels by creating a file called `tvheadend.serverconf`. The file can contain the following values:
 
@@ -99,32 +92,62 @@ TVH_HOST="my.tvheadend.server"
 
 If you're running TvHeadend on the same machine, even an empty file (defaulting to `localhost`) should be sufficient.
 
-*Note*: In order to make the generator work with TvHeadend, you'll need to enable picons first by defining a path to the future picon folder under Configuration -> General -> Base.
-
 #### VDR servicelist creation
 
 If you're using VDR together with the Kodi addon xvdr, copy your `channels.conf` file to this folder.
 
 #### Configuring which backgrounds to build
 
-A file `backgrounds.conf` should be placed in this folder. If no file is found, the default file will be used.
+A file `backgrounds.conf` should be placed in this folder. If no file is found, the default file will be used. The default file is located at `build-source/config/backgrounds.conf` and is a good starting point: copy it to `build-input/` and uncomment the lines you want to build.
 
 Syntax:
 
-```yaml
+```
 <resolution>;<resolution-padding>;<logotype>;<background>
 ```
 
-Example:
+The default configuration looks like this:
 
-```yaml
-# My own awesome settings
+```shell
+###########################################################
+### Copy this file to the folder 'build-input'          ###
+### Remove or comment the lines you don't want to build ###
+###########################################################
+
+# 70x53;62x45;dark;blue
+# 70x53;62x45;dark;reflection
+# 70x53;62x45;dark;transparent
+# 70x53;62x45;dark;white
+# 70x53;62x45;light;black
+# 70x53;62x45;light;transparent
+
+# 100x60;86x46;dark;blue
 100x60;86x46;dark;reflection
-100x60;100x60;default;transparent
-100x60;100x60;light;transparent
+100x60;86x46;dark;transparent
+# 100x60;86x46;dark;white
+# 100x60;86x46;light;black
+100x60;86x46;light;transparent
 
-# My commented settings
-# 800x450;800x450;light;transparent
+# 220x132;190x102;dark;blue
+220x132;190x102;dark;reflection
+220x132;190x102;dark;transparent
+# 220x132;220x132;dark;transparent
+# 220x132;190x102;dark;white
+# 220x132;190x102;light;black
+220x132;190x102;light;transparent
+# 220x132;220x132;light;transparent
+
+# 256x256;226x226;light;transparent
+# 256x256;226x226;dark;reflection
+# 256x256;226x226;light;grey
+
+# 400x170;370x140;dark;transparent
+
+# 400x240;370x210;dark;blue
+# 400x240;370x210;light;transparent
+# 400x240;400x240;light;transparent
+
+# 800x450;760x410;light;transparent
 ```
 
 ### ~/picons/build-output
@@ -150,7 +173,7 @@ servicelist-vdr-srp.txt
 
 ### ~/picons/build-source
 
-This is where all the channel logos go and how they are linked to the serviceref or a simplified version of the name. Backgrounds and the default `backgrounds.conf` file can also be found in this directory.
+This is where all the channel logos go and how they are linked to the serviceref or a simplified version of the name. Backgrounds and the default `backgrounds.conf` file (in `build-source/config/`) can also be found in this directory.
 
 ### ~/picons/resources
 
