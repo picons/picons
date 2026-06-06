@@ -10867,6 +10867,7 @@ hseextra=hseextra
 hseextrahd=hseextra
 hseextrasd=hseextra
 hse trend=hsetrend
+hse trend hd=hsetrend
 hse trend sd=hsetrend
 hse24 trend=hsetrend
 hsetrendsd=hsetrend
