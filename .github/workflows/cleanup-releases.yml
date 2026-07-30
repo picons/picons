@@ -16,14 +16,26 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           KEEP_COUNT: 9
+          KEEP_CHANNELLIST_COUNT: 2
           KEEP_SPECIFIC_TAG: "2025-10-11--01-02-12"
         run: |
           REPO="${{ github.repository }}"
 
           ALL_TAGS=$(gh release list --repo "$REPO" --json tagName -q '.[].tagName' --limit 500)
 
-          KEEP_TAGS=$(echo "$ALL_TAGS" | head -n "$KEEP_COUNT")
-          KEEP_TAGS="$KEEP_TAGS"$'\n'"$KEEP_SPECIFIC_TAG"
+          # Plain releases: everything NOT starting with "channellists-"
+          PLAIN_TAGS=$(echo "$ALL_TAGS" | grep -v '^channellists-')
+          KEEP_PLAIN=$(echo "$PLAIN_TAGS" | head -n "$KEEP_COUNT")
+
+          # Ziggo channellist releases
+          ZIGGO_TAGS=$(echo "$ALL_TAGS" | grep '^channellists-ziggo-')
+          KEEP_ZIGGO=$(echo "$ZIGGO_TAGS" | head -n "$KEEP_CHANNELLIST_COUNT")
+
+          # 13e.19e.23e.28e channellist releases
+          C13E_TAGS=$(echo "$ALL_TAGS" | grep '^channellists-13e19e23e28e-')
+          KEEP_C13E=$(echo "$C13E_TAGS" | head -n "$KEEP_CHANNELLIST_COUNT")
+
+          KEEP_TAGS=$(printf '%s\n%s\n%s\n%s\n' "$KEEP_PLAIN" "$KEEP_ZIGGO" "$KEEP_C13E" "$KEEP_SPECIFIC_TAG")
 
           for tag in $ALL_TAGS; do
             if echo "$KEEP_TAGS" | grep -qx "$tag"; then
