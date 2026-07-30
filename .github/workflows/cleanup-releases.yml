@@ -21,8 +21,7 @@ jobs:
           ALL_TAGS=$(gh release list --repo "$REPO" --json tagName -q '.[].tagName')
 
           KEEP_TAGS=$(echo "$ALL_TAGS" | head -n "$KEEP_COUNT")
-          KEEP_TAGS="$KEEP_TAGS
-$KEEP_SPECIFIC_TAG"
+          KEEP_TAGS="$KEEP_TAGS"$'\n'"$KEEP_SPECIFIC_TAG"
 
           for tag in $ALL_TAGS; do
             if echo "$KEEP_TAGS" | grep -qx "$tag"; then
