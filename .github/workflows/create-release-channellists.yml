@@ -1,0 +1,70 @@
+name: Create Channellists Release
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 1 * *'   # 1st of every month, 00:00 UTC
+
+jobs:
+  create-release-channellists:
+    name: Create Channellists Release
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{steps.version.outputs.version}}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Get current version
+        id: version
+        run: |
+          hash=$(git rev-parse --short HEAD)
+          echo "version=channellists-$(date --utc --date=@$(git show -s --format=%ct $hash) +'%Y-%m-%d--%H-%M-%S')" >> $GITHUB_OUTPUT
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{steps.version.outputs.version}}
+          name: ${{steps.version.outputs.version}}
+          body: |
+            This release contains picons built against external channel lists.
+            Picon packages can take up to an hour to appear here...
+          draft: false
+          prerelease: false
+
+  build-srp:
+    runs-on: ubuntu-latest
+    needs: [create-release-channellists]
+    steps:
+    - name: Install dependencies
+      run: |
+        sudo apt update
+        sudo apt install -y --no-install-recommends --no-install-suggests git xz-utils binutils pngquant imagemagick librsvg2-bin jq
+    - name: Checkout the repository
+      uses: actions/checkout@v4
+      with:
+        ref: '${{needs.create-release-channellists.outputs.version}}'
+    - name: Download channellists
+      run: |
+        curl -fsSL "https://github.com/picons/channellists/archive/master.tar.gz" | tar xzf - -C "./build-input" --strip-components=1
+    - name: Build srp-13e.19e.23e.28e picons
+      run: |
+        mv ./build-input/13e.19e.23e.28e ./build-input/enigma2
+        bash 1-build-servicelist.sh srp
+        bash 2-build-picons.sh srp -13e.19e.23e.28e
+        rm -rf ./build-input/enigma2
+    - name: Upload srp picons
+      uses: svenstaro/upload-release-action@2.9.0
+      with:
+        file: build-output/binaries-srp/*
+        file_glob: true
+        tag: ${{needs.create-release-channellists.outputs.version}}
+    - name: Build srp-ziggo picons
+      run: |
+        mv ./build-input/ziggo ./build-input/enigma2
+        bash 1-build-servicelist.sh srp
+        bash 2-build-picons.sh srp -ziggo
+        rm -rf ./build-input/enigma2
+    - name: Upload srp picons
+      uses: svenstaro/upload-release-action@2.9.0
+      with:
+        file: build-output/binaries-srp/*
+        file_glob: true
+        tag: ${{needs.create-release-channellists.outputs.version}}
