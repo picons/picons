@@ -13,7 +13,7 @@ jobs:
       - name: Delete old releases
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          KEEP_COUNT: 10
+          KEEP_COUNT: 9
           KEEP_SPECIFIC_TAG: "2025-10-11--01-02-12"
         run: |
           REPO="${{ github.repository }}"
