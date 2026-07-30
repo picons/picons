@@ -18,7 +18,7 @@ jobs:
         run: |
           REPO="${{ github.repository }}"
 
-          ALL_TAGS=$(gh release list --repo "$REPO" --json tagName -q '.[].tagName')
+          ALL_TAGS=$(gh release list --repo "$REPO" --json tagName -q '.[].tagName' --limit 500)
 
           KEEP_TAGS=$(echo "$ALL_TAGS" | head -n "$KEEP_COUNT")
           KEEP_TAGS="$KEEP_TAGS"$'\n'"$KEEP_SPECIFIC_TAG"
