@@ -2,6 +2,8 @@ name: Cleanup Old Releases
 
 on:
   workflow_dispatch:      # manual trigger button in the Actions tab
+  schedule:
+    - cron: '0 3 * * 1'   # runs every Monday at 03:00 UTC
 
 permissions:
   contents: write
@@ -13,7 +15,7 @@ jobs:
       - name: Delete old releases
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          KEEP_COUNT: 10
+          KEEP_COUNT: 9
           KEEP_SPECIFIC_TAG: "2025-10-11--01-02-12"
         run: |
           REPO="${{ github.repository }}"
