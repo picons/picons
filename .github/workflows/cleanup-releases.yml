@@ -1,0 +1,34 @@
+name: Cleanup Old Releases
+
+on:
+  workflow_dispatch:      # manual trigger button in the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete old releases
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          KEEP_COUNT: 10
+          KEEP_SPECIFIC_TAG: "2025-10-11--01-02-12"
+        run: |
+          REPO="${{ github.repository }}"
+
+          ALL_TAGS=$(gh release list --repo "$REPO" --json tagName -q '.[].tagName')
+
+          KEEP_TAGS=$(echo "$ALL_TAGS" | head -n "$KEEP_COUNT")
+          KEEP_TAGS="$KEEP_TAGS
+$KEEP_SPECIFIC_TAG"
+
+          for tag in $ALL_TAGS; do
+            if echo "$KEEP_TAGS" | grep -qx "$tag"; then
+              echo "Keeping $tag"
+            else
+              echo "Deleting $tag"
+              gh release delete "$tag" --repo "$REPO" -y --cleanup-tag
+            fi
+          done
