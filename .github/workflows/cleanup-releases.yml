@@ -11,6 +11,7 @@ permissions:
 jobs:
   cleanup:
     runs-on: ubuntu-latest
+    if: github.repository == 'picons/picons' || github.event_name == 'workflow_dispatch'
     steps:
       - name: Delete old releases
         env:
