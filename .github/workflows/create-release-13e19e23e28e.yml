@@ -8,6 +8,7 @@ jobs:
   create-release-13e19e23e28e:
     name: Create 13e.19e.23e.28e Release
     runs-on: ubuntu-latest
+    if: github.repository == 'picons/picons' || github.event_name == 'workflow_dispatch'
     outputs:
       version: ${{steps.version.outputs.version}}
     steps:
