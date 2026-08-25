@@ -1,8 +1,11 @@
-<svg width="200mm" height="514.56mm" version="1.1" viewBox="0 0 200 514.56" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
- <g transform="translate(2616.6 -700.59)">
-  <g transform="matrix(.2002 0 0 .2002 -2681.1 1102.4)" fill="#a90f26">
-   <path d="m524.67 563.36h785.89v-1837.2c-179.58 247.15-431.16 420.63-785.89 420.63z"/>
-   <path d="m528.02-1008.4c-138.84 0-205.9-31.86-205.9-31.86l970.76-966.57s28.235 86.859 28.235 211.61c0 391.56-314.97 786.82-793.1 786.82z"/>
-  </g>
- </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FF000D;}
+</style>
+<g>
+	<path class="st0" d="M0,500h500V0H0V500z M437.2,437.2H62V62h375.2V437.2z"/>
+	<path class="st0" d="M207.7,225.1c35.8,0,68.1-18.3,86.4-46.2v201.6h-86.4C207.7,380.5,207.7,225.1,207.7,225.1z M291.4,99.5   l-22.7,22.7l-61.1,61.1L185,205.9c7,1.7,14.8,2.6,22.7,2.6c48,0,86.4-38.4,86.4-86.4C294.1,113.4,293.2,106.5,291.4,99.5z"/>
+</g>
 </svg>

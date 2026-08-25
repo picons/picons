@@ -1,0 +1,17 @@
+<svg version="1.1" viewBox="0 0 800 105.97" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <style>.cls-1{fill:#142b8b;}.cls-2{fill:#ff4100;}.cls-3{fill:#404041;}</style>
+ </defs>
+ <g transform="scale(6.3608)" stroke-width=".15721" data-name="Layer 2">
+  <g stroke-width=".15721" data-name="Layer 1">
+   <g stroke-width=".15721" data-name="Layer 1-2">
+    <path class="cls-1" d="m24.98 16.66h5.55l8.33-16.66h-5.55l-5.55 11.1-5.55-11.1h-22.21v4.16h6.94v12.5h5.55v-12.5h6.24z" fill="#142b8b"/>
+    <path class="cls-1" d="m47.86 16.66 1.4-2.8-2.77-5.53 2.77-5.54-1.4-2.79h-5.55l2.78 5.55h-6.23v5.55h6.23l-2.78 5.56z" fill="#142b8b"/>
+    <path class="cls-2" d="m106.34 0v4.16h6.94v12.5h5.55v-12.5h6.94v-4.16z" fill="#ff4100"/>
+    <path class="cls-2" d="m82.74 0h-5.55v9.02l-8.32-9.02h-5.56v16.66h5.56v-9.03l8.32 9.03h5.55z" fill="#ff4100"/>
+    <path class="cls-2" d="m97.32 6.25h-6.25v-2.09h12.49v-4.16h-18.04v16.66h18.04v-4.17h-12.49v-2.08h6.25z" fill="#ff4100"/>
+    <path class="cls-2" d="m60.54 5.55h-6.26l2.77-5.55h-5.55l-4.16 8.33 4.16 8.33h5.55l-2.77-5.56h6.26z" fill="#ff4100"/>
+   </g>
+  </g>
+ </g>
+</svg>
