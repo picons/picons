@@ -59,6 +59,23 @@ if [[ ! $style = "srp" ]] && [[ ! $style = "snp" ]] && [[ ! $style = "utf8snp" ]
     exit 1
 fi
 
+##########################################################################################
+## Optional orbital-position (namespace) filter - srp only.                             ##
+## Builds straight from the index for the chosen position(s),                           ##
+## with no lamedb/bouquet read at all. snp/utf8snp index keys                           ##
+## carry no namespace, so filtering isn't possible for those;                           ##
+## they always run the full lamedb/bouquet match instead.                               ##
+## Usage: ./1-build-servicelist.sh srp 11A,600_FFFF                                     ##
+## Usage: ./1-build-servicelist.sh srp all       (every index entry, no lamedb/bouquet) ##
+## Usage: ./1-build-servicelist.sh srp enigma2   (lamedb/bouquet build, unchanged)      ##
+##########################################################################################
+nsfilter=$2
+
+if [[ -n $nsfilter ]] && [[ ! $style = "srp" ]]; then
+    echo "$(date +'%H:%M:%S') - INFO: Orbital-position filter ignored: not supported for style \"$style\", running the full lamedb/bouquet match instead."
+    nsfilter=""
+fi
+
 #####################
 ## Read index file ##
 #####################
@@ -67,7 +84,228 @@ index=$(<"$location/build-source/$style.index")
 ##################################
 ## Enigma2 servicelist creation ##
 ##################################
-if [[ -d $location/build-input/enigma2 ]]; then
+
+#######################################################################
+## srp only: work out which orbital position(s) to build.            ##
+## The last 4 hex digits of a namespace are the "subnet" (varies     ##
+## per multi-feed transponder), so we group/match on the orbital     ##
+## prefix only, e.g. 11Axxxx rather than 11A0000. Cable (FFFFxxxx)   ##
+## and Terrestrial (EEEExxxx) aren't tied to a physical position -   ##
+## every operator on cable/terrestrial shares that same namespace    ##
+## prefix, so those two are additionally keyed by onid (e.g.         ##
+## 600_FFFFxxxx, 233A_EEEExxxx) to tell operators apart.             ##
+##                                                                   ##
+## Choosing specific orbital position(s), or "all", builds straight  ##
+## from the $style.index file - no lamedb or bouquet files are read  ##
+## or required. Choosing "enigma2" builds against your enigma2       ##
+## folder (lamedb/bouquet), exactly as before.                       ##
+#######################################################################
+
+#####################################################################
+## Friendly names for Cable/Terrestrial onids - most people won't  ##
+## recognise a bare onid, so fill this in as you identify them.    ##
+## Format: [onid]="Friendly Name". Uncomment/add lines as needed.  ##
+#####################################################################
+declare -A ns_onid_names=(
+      [600]="Ziggo National"
+	  # [3E8]="Ziggo (legacy)"
+      [233A]="UK Freeview"
+)
+
+ns_label() {
+    local key=$1 prefix onid dec deg label name
+    if [[ $key == *_* ]]; then onid=${key%_*}; prefix=${key#*_}; else prefix=$key; fi
+    case $prefix in
+        FFFF) name=${ns_onid_names[$onid]}; label=${name:-Cable} ;;
+        EEEE) name=${ns_onid_names[$onid]}; label=${name:-Terrestrial} ;;
+        *)
+            dec=$((16#$prefix))
+            if (( dec > 3599 )); then
+                label="Unclassified"
+            elif (( dec <= 1800 )); then
+                deg=$(awk -v d="$dec" 'BEGIN{printf "%.1f", d/10}')
+                label="${deg}°E"
+            else
+                deg=$(awk -v d="$dec" 'BEGIN{printf "%.1f", (3600-d)/10}')
+                label="${deg}°W"
+            fi
+            ;;
+    esac
+    if [[ -n $onid ]]; then echo "$label (namespace ${prefix}xxxx, onid $onid)"; else echo "$label (namespace ${prefix}xxxx)"; fi
+}
+ns_pattern_index() {
+    local key=$1 prefix onid
+    if [[ $key == *_* ]]; then
+        onid=${key%_*}; prefix=${key#*_}
+        echo "_${onid}_${prefix}[0-9A-F]{4}="
+    else
+        prefix=$key
+        echo "_${prefix}[0-9A-F]{4}="
+    fi
+}
+normalize_ns_token() {
+    local tok=${1^^} onid prefix deg dir dec
+    if [[ $tok == *_* ]]; then onid=${tok%_*}; prefix=${tok#*_}; else prefix=$tok; fi
+    if [[ $prefix =~ ^([0-9]+(\.[0-9]+)?)(E|W)\.?$ ]]; then
+        deg=${BASH_REMATCH[1]}; dir=${BASH_REMATCH[3]}
+        if [[ $dir = "E" ]]; then
+            dec=$(awk -v d="$deg" 'BEGIN{printf "%d", (d*10)+0.5}')
+        else
+            dec=$(awk -v d="$deg" 'BEGIN{printf "%d", (3600-(d*10))+0.5}')
+        fi
+        prefix=$(printf '%X' "$dec")
+    else
+        prefix=${prefix%XXXX}
+    fi
+    if [[ -n $onid ]]; then echo "${onid}_${prefix}"; else echo "$prefix"; fi
+}
+
+ns_group_and_sort() {
+    # Reads $ns_available (newline list of keys) into sorted globals:
+    # ns_cable, ns_terrestrial (by onid, numeric), ns_satellite (by
+    # signed degree, West negative -> East positive, ascending), and
+    # ns_other (out-of-range namespace values, by hex, listed last).
+    local key prefix onid dec signed
+    ns_cable=() ; ns_terrestrial=() ; ns_satellite=() ; ns_other=()
+    while read -r key; do
+        [[ -z $key ]] && continue
+        if [[ $key == *_* ]]; then onid=${key%_*}; prefix=${key#*_}; else prefix=$key; onid=""; fi
+        case $prefix in
+            FFFF) ns_cable+=("$key") ;;
+            EEEE) ns_terrestrial+=("$key") ;;
+            *) if (( $((16#$prefix)) > 3599 )); then ns_other+=("$key"); else ns_satellite+=("$key"); fi ;;
+        esac
+    done <<< "$ns_available"
+
+    if [[ ${#ns_cable[@]} -gt 0 ]]; then
+        ns_cable=($(for key in "${ns_cable[@]}"; do onid=${key%_*}; printf '%d\t%s\n' "$((16#$onid))" "$key"; done | sort -n -k1,1 | cut -f2))
+    fi
+    if [[ ${#ns_terrestrial[@]} -gt 0 ]]; then
+        ns_terrestrial=($(for key in "${ns_terrestrial[@]}"; do onid=${key%_*}; printf '%d\t%s\n' "$((16#$onid))" "$key"; done | sort -n -k1,1 | cut -f2))
+    fi
+    if [[ ${#ns_satellite[@]} -gt 0 ]]; then
+        ns_satellite=($(for key in "${ns_satellite[@]}"; do
+            dec=$((16#$key))
+            if (( dec <= 1800 )); then signed=$dec; else signed=$(( -(3600-dec) )); fi
+            printf '%d\t%s\n' "$signed" "$key"
+        done | sort -n -k1,1 | cut -f2))
+    fi
+    if [[ ${#ns_other[@]} -gt 0 ]]; then
+        ns_other=($(for key in "${ns_other[@]}"; do printf '%d\t%s\n' "$((16#$key))" "$key"; done | sort -n -k1,1 | cut -f2))
+    fi
+}
+
+resolve_ns_token() {
+    # Resolves one answer/CLI token to one or more group keys (one per
+    # line). Tries, in order: an exact menu number (interactive only),
+    # a rough (case-insensitive substring) match against named Cable/
+    # Terrestrial entries, then normalize_ns_token (hex/xxxx/degree/
+    # onid_prefix). Prints nothing if none of these match.
+    local tok=$1 upper key onid found=0
+    if [[ $tok =~ ^[0-9]+$ ]] && [[ -n ${ns_menu[$tok]:-} ]]; then
+        echo "${ns_menu[$tok]}"
+        return
+    fi
+    upper=${tok^^}
+    for key in "${ns_cable[@]}" "${ns_terrestrial[@]}"; do
+        onid=${key%_*}
+        if [[ -n ${ns_onid_names[$onid]:-} ]] && [[ ${ns_onid_names[$onid]^^} == *"$upper"* ]]; then
+            echo "$key"
+            found=1
+        fi
+    done
+    if [[ $found -eq 1 ]]; then return; fi
+    normalize_ns_token "$tok"
+}
+
+ns_mode="full"
+unset ns_menu; declare -A ns_menu
+if [[ $style = "srp" ]]; then
+    ns_available=$(awk -F'=' '{print $1}' <<< "$index" | awk -F'_' '{ns=$NF; onid=$(NF-1); prefix=(length(ns)>4)?substr(ns,1,length(ns)-4):ns; if (prefix=="FFFF" || prefix=="EEEE") print onid"_"prefix; else print prefix}' | sort -u)
+    ns_group_and_sort
+
+    if [[ -n $nsfilter ]]; then
+        case $nsfilter in
+            all) ns_mode="index" ;;
+            enigma2) ns_mode="full" ;;
+            *)
+                ns_mode="orbital"
+                ns_selected=$(tr ',' '\n' <<< "$nsfilter" | while read -r tok; do resolve_ns_token "$tok"; done | sort -u)
+                ;;
+        esac
+    else
+        echo "Which orbital position(s) do you want to build?"
+        i=0
+        if [[ ${#ns_cable[@]} -gt 0 ]]; then
+            echo "-- Cable --"
+            for key in "${ns_cable[@]}"; do ((i++)); ns_menu[$i]=$key; echo "  $i) $(ns_label "$key")"; done
+        fi
+        if [[ ${#ns_terrestrial[@]} -gt 0 ]]; then
+            echo "-- Terrestrial --"
+            for key in "${ns_terrestrial[@]}"; do ((i++)); ns_menu[$i]=$key; echo "  $i) $(ns_label "$key")"; done
+        fi
+        if [[ ${#ns_satellite[@]} -gt 0 ]]; then
+            echo "-- Satellite positions --"
+            for key in "${ns_satellite[@]}"; do ((i++)); ns_menu[$i]=$key; echo "  $i) $(ns_label "$key")"; done
+        fi
+        if [[ ${#ns_other[@]} -gt 0 ]]; then
+            echo "-- Unclassified --"
+            for key in "${ns_other[@]}"; do ((i++)); ns_menu[$i]=$key; echo "  $i) $(ns_label "$key")"; done
+        fi
+        echo "  'all'     - every reference in the $style.index (no lamedb/bouquet)"
+        echo "  'enigma2' - filter against your enigma2 folder (lamedb/bouquet)"
+        echo "  'cancel'  - exit without building anything"
+        read -p "Enter number(s), position(s) (e.g. 28.2E), name(s) (e.g. Ziggo), 'all'/'enigma2' (no response defaults to 'enigma2'), or 'cancel': " ns_answer
+        case $ns_answer in
+            cancel|quit|exit)
+                echo "$(date +'%H:%M:%S') - INFO: Cancelled, nothing was built."
+                exit 0
+                ;;
+            ""|enigma2) ns_mode="full" ;;
+            all) ns_mode="index" ;;
+            *)
+                ns_mode="orbital"
+                ns_selected=$(tr ',' '\n' <<< "$ns_answer" | while read -r tok; do resolve_ns_token "$tok"; done | sort -u)
+                ;;
+        esac
+    fi
+fi
+
+if [[ $ns_mode = "orbital" ]]; then
+    ################################################################
+    ## Orbital-position build: straight from the index, no        ##
+    ## lamedb/bouquet read or required.                           ##
+    ################################################################
+    file=$location/build-output/servicelist-enigma2-$style.txt
+    tempfile=$(mktemp --suffix=.servicelist)
+
+    patterns=()
+    while read -r key; do patterns+=("$(ns_pattern_index "$key")"); done <<< "$ns_selected"
+    index_regex=$(IFS='|'; echo "${patterns[*]}")
+
+    grep -E "$index_regex" <<< "$index" | while IFS='=' read -r key logo; do
+        echo -e "1_0_1_${key}_0_0_0\t\t${key}=${logo}" >> "$tempfile"
+    done
+
+    sort -t $'\t' -k 2,2 "$tempfile" | sed -e 's/\t/^|/g' | column -t -s $'^' | sed -e 's/|/  |  /g' > "$file"
+    rm "$tempfile"
+    echo "$(date +'%H:%M:%S') - INFO: Enigma2: Exported to $file (orbital-position filter, no lamedb/bouquet used)"
+elif [[ $ns_mode = "index" ]]; then
+    #####################################################################
+    ## Full index build: every entry in $style.index, no filtering,    ##
+    ## no lamedb/bouquet read or required.                             ##
+    #####################################################################
+    file=$location/build-output/servicelist-enigma2-$style.txt
+    tempfile=$(mktemp --suffix=.servicelist)
+
+    while IFS='=' read -r key logo; do
+        echo -e "1_0_1_${key}_0_0_0\t\t${key}=${logo}" >> "$tempfile"
+    done <<< "$index"
+
+    sort -t $'\t' -k 2,2 "$tempfile" | sed -e 's/\t/^|/g' | column -t -s $'^' | sed -e 's/|/  |  /g' > "$file"
+    rm "$tempfile"
+    echo "$(date +'%H:%M:%S') - INFO: Enigma2: Exported to $file (full index, no lamedb/bouquet used)"
+elif [[ -d $location/build-input/enigma2 ]]; then
     file=$location/build-output/servicelist-enigma2-$style.txt
     tempfile=$(mktemp --suffix=.servicelist)
     lamedb=$(<"$location/build-input/enigma2/lamedb")
