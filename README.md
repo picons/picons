@@ -43,6 +43,30 @@ TIP: To automate the building process, you can also use some of the following co
 ./2-build-picons.sh snp-full
 ./2-build-picons.sh srp-full
 ```
+**Building SRP for specific providers and orbital positions**
+You can build Service Reference Picons for specific satellite orbital positions, Cable and Terrestrial providers
+
+```shell
+./1-build-servicelist.sh srp
+```
+A list of positions will be presented. Select the ones you want. You can select the numbered position, orbital position, name or ONID and namespace combination.
+For multiple selections, use a comma. Example below.
+```
+28.2E,23.5E,19.2E,13E,uk freeview,nld ziggo,531_EEEE0000
+
+```
+You can also build the list with options selected by the following.
+
+```
+./1-build-servicelist.sh srp "ziggo,13E,19.2E,23.5E,28.2E,uk freeview,nld ziggo,531_EEEE0000"
+```
+
+The above creates the `servicelist-enigma2-srp.txt` file. Start the build with the following.
+
+```shell
+./2-build-picons.sh srp
+```
+
 
 ## SNP - SERVICE NAME PICONS
 
