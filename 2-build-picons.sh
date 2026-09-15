@@ -9,6 +9,25 @@ logfile=$(mktemp --suffix=.picons.log)
 
 echo "$(date +'%H:%M:%S') - INFO: Log file located at: $logfile"
 
+####################################################
+## --name=X : must match the name used in step 1. ##
+##                                                ##
+## Example - build the astra-1-and-2 package      ##
+## created in step 1:                             ##
+##                                                ##
+##   ./2-build-picons.sh srp --name=astra-1-and-2 ##
+####################################################
+buildname=""
+args=()
+for arg in "$@"; do
+    if [[ $arg == --name=* ]]; then
+        buildname=${arg#--name=}
+    else
+        args+=("$arg")
+    fi
+done
+set -- "${args[@]}"
+
 ###########################
 ## Check path for spaces ##
 ###########################
@@ -107,12 +126,20 @@ fi
 ## Check if previously chosen style exists ##
 #############################################
 if [[ ! $style = "srp-full" ]] && [[ ! $style = "snp-full" ]] && [[ ! $style = "utf8snp-full" ]]; then
-    for file in $location/build-output/servicelist-*-$style.txt ; do
-        if [[ ! -f $file ]]; then
-            echo "$(date +'%H:%M:%S') - ERROR: No $style servicelist has been found!"
+    if [[ -n $buildname ]]; then
+        namedfile=$location/build-output/servicelist-enigma2-$style-$buildname.txt
+        if [[ ! -f $namedfile ]]; then
+            echo "$(date +'%H:%M:%S') - ERROR: No servicelist named \"$buildname\" found for $style. Build it first with: ./1-build-servicelist.sh $style --name=$buildname <filter>"
             exit 1
         fi
-    done
+    else
+        for file in $location/build-output/servicelist-*-$style.txt ; do
+            if [[ ! -f $file ]]; then
+                echo "$(date +'%H:%M:%S') - ERROR: No $style servicelist has been found!"
+                exit 1
+            fi
+        done
+    fi
 fi
 
 ###########################################
@@ -128,13 +155,15 @@ mkdir $binaries
 if [[ -d $location/.git ]] && which git &> /dev/null; then
     cd $location
     hash=$(git rev-parse --short HEAD)
-    version=$(date --utc --date=@$(git show -s --format=%ct $hash) +'%Y-%m-%d--%H-%M-%S')
+    commitdate=$(date --utc --date=@$(git show -s --format=%ct $hash) +'%Y-%m-%d--%H-%M-%S')
     timestamp=$(date --utc --date=@$(git show -s --format=%ct $hash) +'%Y%m%d%H%M.%S')
 else
     epoch="date --utc +%s"
-    version=$(date --utc --date=@$($epoch) +'%Y-%m-%d--%H-%M-%S')
+    commitdate=$(date --utc --date=@$($epoch) +'%Y-%m-%d--%H-%M-%S')
     timestamp=$(date --utc --date=@$($epoch) +'%Y%m%d%H%M.%S')
 fi
+
+version=${buildname:+$buildname-}$commitdate
 
 echo "$(date +'%H:%M:%S') - INFO: Version: $version"
 
@@ -154,6 +183,19 @@ fi
 #####################
 ## Create symlinks ##
 #####################
+plainfile=$location/build-output/servicelist-enigma2-$style.txt
+if [[ -n $buildname ]]; then
+    namedfile=$location/build-output/servicelist-enigma2-$style-$buildname.txt
+    if [[ -f $plainfile ]]; then
+        restorefile=$(mktemp --suffix=.servicelist.bak)
+        cp "$plainfile" "$restorefile"
+        trap 'cp "$restorefile" "$plainfile"; rm -f "$restorefile"' EXIT
+    else
+        trap 'rm -f "$plainfile"' EXIT
+    fi
+    cp "$namedfile" "$plainfile"
+fi
+
 echo "$(date +'%H:%M:%S') - EXECUTING: Creating symlinks"
 $location/resources/tools/create-symlinks.sh $location $temp $style
 

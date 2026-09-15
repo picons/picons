@@ -52,13 +52,24 @@ You can build Service Reference Picons for specific satellite orbital positions,
 A list of positions will be presented. Select the ones you want. You can select the numbered position, orbital position, name or ONID and namespace combination.
 For multiple selections, use a comma. Example below.
 ```
+105,106,107,28.2E,uk freeview
+or 
 28.2E,23.5E,19.2E,13E,uk freeview,nld ziggo,531_EEEE0000
 
 ```
-You can also build the list with options selected by the following.
+
+If you didn't pass `--name=`, you'll then be asked to name the build:
 
 ```
-./1-build-servicelist.sh srp "ziggo,13E,19.2E,23.5E,28.2E,uk freeview,nld ziggo,531_EEEE0000"
+Enter a name for this build, e.g. astra-1-and-2 (optional, press enter to skip): astra-1-and-2
+```
+
+Press enter to skip it, or type a name to use instead of `--name=`. Either way the result is the same - it's just a way to be asked for a name interactively instead of typing it on the command line up front.
+
+You can also build the list with options selected by the following.
+
+```shell
+./1-build-servicelist.sh srp --filter="13E,19.2E,23.5E,28.2E,uk freeview,nld ziggo,531_EEEE0000"
 ```
 
 The above creates the `servicelist-enigma2-srp.txt` file. Start the build with the following.
@@ -66,6 +77,34 @@ The above creates the `servicelist-enigma2-srp.txt` file. Start the build with t
 ```shell
 ./2-build-picons.sh srp
 ```
+
+If you want to build more than one filtered package without one overwriting the other - say, one for Astra 19.2E/28.2E and a separate one for another set of providers - give each build a `--name=` on both scripts:
+
+```shell
+./1-build-servicelist.sh srp --name=astra-1-and-2 --filter=19.2E,28.2E
+./2-build-picons.sh srp --name=astra-1-and-2
+
+./1-build-servicelist.sh srp --name=other-providers --filter=233A_EEEE0000
+./2-build-picons.sh srp --name=other-providers
+```
+
+This writes `servicelist-enigma2-srp-astra-1-and-2.txt` and `servicelist-enigma2-srp-other-providers.txt` side by side instead of overwriting the plain `servicelist-enigma2-srp.txt`, and the name also appears in the resulting package version so the two builds' output files can be told apart. Use dashes rather than spaces in the name. Both flags are optional and can be left off entirely - doing so builds and packages exactly as described above, using the plain `servicelist-enigma2-srp.txt` file.
+
+The same two builds, done interactively instead of with `--filter=`/`--name=`:
+
+```shell
+./1-build-servicelist.sh srp
+# Enter number(s)...: 19.2E,28.2E
+# Enter a name for this build...: astra-1-and-2
+./2-build-picons.sh srp --name=astra-1-and-2
+
+./1-build-servicelist.sh srp
+# Enter number(s)...: 233A_EEEE0000
+# Enter a name for this build...: other-providers
+./2-build-picons.sh srp --name=other-providers
+```
+
+`2-build-picons.sh` always needs `--name=` to pick which build to package, whichever way you built the servicelist.
 
 
 ## SNP - SERVICE NAME PICONS
@@ -196,6 +235,8 @@ The default configuration looks like this:
 
 This folder will contain the output from the build. Similar to the files [servicelist-enigma2-utf8snp.txt](resources/samples/servicelist-enigma2-utf8snp.txt), [servicelist-enigma2-snp.txt](resources/samples/servicelist-enigma2-snp.txt) and [servicelist-enigma2-srp.txt](resources/samples/servicelist-enigma2-srp.txt). The picon binaries are also saved in this folder.
 
+If you build with `--name=`, an additional `servicelist-enigma2-<style>-<name>.txt` is written alongside the plain one, plus a `.filter` file recording which filter produced it - both stay behind so you can build several named packages without overwriting each other.
+
 Possible output files and folders:
 
 ```yaml
@@ -205,6 +246,8 @@ binaries-srp/
 servicelist-enigma2-utf8snp.txt
 servicelist-enigma2-snp.txt
 servicelist-enigma2-srp.txt
+servicelist-enigma2-srp-<name>.txt      # only when built with --name=
+servicelist-enigma2-srp-<name>.txt.filter  # only when built with --name=
 servicelist-tvheadend-filemode-snp.txt
 servicelist-tvheadend-filemode-srp.txt
 servicelist-tvheadend-servermode-snp.txt

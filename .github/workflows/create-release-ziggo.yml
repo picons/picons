@@ -44,7 +44,7 @@ jobs:
         ref: '${{needs.create-release-ziggo.outputs.version}}'
     - name: Build srp-ziggo picons
       run: |
-        bash 1-build-servicelist.sh srp 600_FFFF0000
+        bash 1-build-servicelist.sh srp --filter=600_FFFF0000
         bash 2-build-picons.sh srp -ziggo
     - name: Upload srp picons
       uses: svenstaro/upload-release-action@2.9.0
