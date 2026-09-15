@@ -47,14 +47,45 @@ jobs:
             fi
           done
 
+      - name: Delete orphan tags (no release attached)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          KEEP_SPECIFIC_TAG: "2025-10-11--01-02-12"
+        run: |
+          REPO="${{ github.repository }}"
+
+          # Tags that still have a Release object (what the step above works from)
+          RELEASED_TAGS=$(gh release list --repo "$REPO" --json tagName -q '.[].tagName' --limit 5000)
+
+          # Every git tag ref in the repo, regardless of whether it has a Release
+          ALL_GIT_TAGS=$(gh api "repos/$REPO/git/refs/tags" --paginate -q '.[].ref' | sed 's#refs/tags/##')
+
+          # Tags present as git refs but with no matching Release - these are invisible
+          # to "gh release list" (e.g. a Release deleted via the web UI without
+          # --cleanup-tag, or an old tag from before Releases were used) and would
+          # otherwise never be cleaned up no matter how many times this workflow runs.
+          ORPHAN_TAGS=$(comm -23 <(echo "$ALL_GIT_TAGS" | sort) <(echo "$RELEASED_TAGS" | sort))
+
+          for tag in $ORPHAN_TAGS; do
+            if [ "$tag" = "$KEEP_SPECIFIC_TAG" ]; then
+              echo "Keeping orphan tag $tag (pinned)"
+              continue
+            fi
+            echo "Deleting orphan tag (no release) $tag"
+            gh api -X DELETE "repos/$REPO/git/refs/tags/$tag"
+          done
+
       - name: List remaining tags
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           REPO="${{ github.repository }}"
-          REMAINING_TAGS=$(gh release list --repo "$REPO" --json tagName -q '.[].tagName' --limit 5000)
+          REMAINING_RELEASE_TAGS=$(gh release list --repo "$REPO" --json tagName -q '.[].tagName' --limit 5000)
+          REMAINING_GIT_TAGS=$(gh api "repos/$REPO/git/refs/tags" --paginate -q '.[].ref' | sed 's#refs/tags/##')
 
-          echo "## Remaining tags ($(echo "$REMAINING_TAGS" | grep -c .) total)" >> "$GITHUB_STEP_SUMMARY"
+          echo "## Remaining tags" >> "$GITHUB_STEP_SUMMARY"
+          echo "- With a release: $(echo "$REMAINING_RELEASE_TAGS" | grep -c .)" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Total git tags: $(echo "$REMAINING_GIT_TAGS" | grep -c .)" >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
-          echo "$REMAINING_TAGS" >> "$GITHUB_STEP_SUMMARY"
+          echo "$REMAINING_GIT_TAGS" | sort >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
