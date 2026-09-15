@@ -22,7 +22,7 @@ jobs:
         run: |
           REPO="${{ github.repository }}"
 
-          ALL_TAGS=$(gh release list --repo "$REPO" --json tagName -q '.[].tagName' --limit 500)
+          ALL_TAGS=$(gh release list --repo "$REPO" --json tagName -q '.[].tagName' --limit 5000)
 
           # Plain releases: everything NOT starting with "channellists-"
           PLAIN_TAGS=$(echo "$ALL_TAGS" | grep -v '^channellists-')
