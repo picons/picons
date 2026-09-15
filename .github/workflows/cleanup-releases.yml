@@ -46,3 +46,15 @@ jobs:
               gh release delete "$tag" --repo "$REPO" -y --cleanup-tag
             fi
           done
+
+      - name: List remaining tags
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          REPO="${{ github.repository }}"
+          REMAINING_TAGS=$(gh release list --repo "$REPO" --json tagName -q '.[].tagName' --limit 5000)
+
+          echo "## Remaining tags ($(echo "$REMAINING_TAGS" | grep -c .) total)" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          echo "$REMAINING_TAGS" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
