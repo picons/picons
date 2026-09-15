@@ -44,7 +44,7 @@ jobs:
         ref: '${{needs.create-release-13e19e23e28e.outputs.version}}'
     - name: Build srp-13e.19e.23e.28e picons
       run: |
-        bash 1-build-servicelist.sh srp 13e,19.2e,23.5e,28.2e
+        bash 1-build-servicelist.sh srp --filter=13e,19.2e,23.5e,28.2e
         bash 2-build-picons.sh srp -13e.19e.23e.28e
     - name: Upload srp picons
       uses: svenstaro/upload-release-action@2.9.0

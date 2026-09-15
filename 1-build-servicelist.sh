@@ -8,6 +8,28 @@ logfile=$(mktemp --suffix=.servicelist.log)
 
 echo "$(date +'%H:%M:%S') - INFO: Log file located at: $logfile"
 
+##############################################################################
+## --name=X   sets this build's name to X.                                  ##
+## --filter=Y sets which channels to include.                               ##
+##                                                                          ##
+## Example - build a package named astra-1-and-2,                           ##
+## filtered to just 19.2E and 28.2E:                                        ##
+##                                                                          ##
+##   ./1-build-servicelist.sh srp --name=astra-1-and-2 --filter=19.2E,28.2E ##
+##   ./2-build-picons.sh srp --name=astra-1-and-2                           ##
+##############################################################################
+buildname=""
+filterarg=""
+args=()
+for arg in "$@"; do
+    case $arg in
+        --name=*) buildname=${arg#--name=} ;;
+        --filter=*) filterarg=${arg#--filter=} ;;
+        *) args+=("$arg") ;;
+    esac
+done
+set -- "${args[@]}"
+
 ########################################################
 ## Search for required commands and exit if not found ##
 ########################################################
@@ -65,11 +87,11 @@ fi
 ## with no lamedb/bouquet read at all. snp/utf8snp index keys                           ##
 ## carry no namespace, so filtering isn't possible for those;                           ##
 ## they always run the full lamedb/bouquet match instead.                               ##
-## Usage: ./1-build-servicelist.sh srp 11A,600_FFFF                                     ##
-## Usage: ./1-build-servicelist.sh srp all       (every index entry, no lamedb/bouquet) ##
-## Usage: ./1-build-servicelist.sh srp enigma2   (lamedb/bouquet build, unchanged)      ##
+## Usage: ./1-build-servicelist.sh srp --filter=11A,600_FFFF                           ##
+## Usage: ./1-build-servicelist.sh srp --filter=all  (every index entry, no lamedb)     ##
+## Usage: ./1-build-servicelist.sh srp --filter=enigma2 (lamedb/bouquet build)          ##
 ##########################################################################################
-nsfilter="${*:2}"
+nsfilter=$filterarg
 
 if [[ -n $nsfilter ]] && [[ ! $style = "srp" ]]; then
     echo "$(date +'%H:%M:%S') - INFO: Orbital-position filter ignored: not supported for style \"$style\", running the full lamedb/bouquet match instead."
@@ -353,6 +375,11 @@ if [[ $style = "srp" ]]; then
                 ns_selected=$(tr ',' '\n' <<< "$ns_answer" | while read -r tok; do resolve_ns_token "$tok"; done | sort -u)
                 ;;
         esac
+
+        if [[ -z $buildname ]]; then
+            read -rp "Enter a name for this build, e.g. astra-1-and-2 (optional, press enter to skip): " buildname
+            buildname=$(sed -e 's/[^A-Za-z0-9_-]/-/g' -e 's/-\{2,\}/-/g' -e 's/^-//' -e 's/-$//' <<< "$buildname")
+        fi
     fi
 fi
 
@@ -361,7 +388,7 @@ if [[ $ns_mode = "orbital" ]]; then
     ## Orbital-position build: straight from the index, no        ##
     ## lamedb/bouquet read or required.                           ##
     ################################################################
-    file=$location/build-output/servicelist-enigma2-$style.txt
+    file=$location/build-output/servicelist-enigma2-$style${buildname:+-$buildname}.txt
     tempfile=$(mktemp --suffix=.servicelist)
 
     patterns=()
@@ -375,12 +402,13 @@ if [[ $ns_mode = "orbital" ]]; then
     sort -t $'\t' -k 2,2 "$tempfile" | sed -e 's/\t/^|/g' | column -t -s $'^' | sed -e 's/|/  |  /g' > "$file"
     rm "$tempfile"
     echo "$(date +'%H:%M:%S') - INFO: Enigma2: Exported to $file (orbital-position filter, no lamedb/bouquet used)"
+    [[ -n $buildname ]] && echo "filter: ${nsfilter:-$ns_answer}" > "$file.filter"
 elif [[ $ns_mode = "index" ]]; then
     #####################################################################
     ## Full index build: every entry in $style.index, no filtering,    ##
     ## no lamedb/bouquet read or required.                             ##
     #####################################################################
-    file=$location/build-output/servicelist-enigma2-$style.txt
+    file=$location/build-output/servicelist-enigma2-$style${buildname:+-$buildname}.txt
     tempfile=$(mktemp --suffix=.servicelist)
 
     while IFS='=' read -r key logo; do
@@ -390,8 +418,9 @@ elif [[ $ns_mode = "index" ]]; then
     sort -t $'\t' -k 2,2 "$tempfile" | sed -e 's/\t/^|/g' | column -t -s $'^' | sed -e 's/|/  |  /g' > "$file"
     rm "$tempfile"
     echo "$(date +'%H:%M:%S') - INFO: Enigma2: Exported to $file (full index, no lamedb/bouquet used)"
+    [[ -n $buildname ]] && echo "filter: all (full index)" > "$file.filter"
 elif [[ -d $location/build-input/enigma2 ]]; then
-    file=$location/build-output/servicelist-enigma2-$style.txt
+    file=$location/build-output/servicelist-enigma2-$style${buildname:+-$buildname}.txt
     tempfile=$(mktemp --suffix=.servicelist)
     lamedb=$(<"$location/build-input/enigma2/lamedb")
     channelcount=$(cat "$location/build-input/enigma2/"*bouquet.* | grep -o '#SERVICE .*:0:.*:.*:.*:.*:.*:0:0:0' | sort -u | wc -l)
@@ -467,6 +496,7 @@ elif [[ -d $location/build-input/enigma2 ]]; then
     sort -t $'\t' -k 2,2 "$tempfile" | sed -e 's/\t/^|/g' | column -t -s $'^' | sed -e 's/|/  |  /g' > $file
     rm $tempfile "$bouquetmap"
     echo "$(date +'%H:%M:%S') - INFO: Enigma2: Exported to $file"
+    [[ -n $buildname ]] && echo "filter: enigma2 lamedb/bouquet (no orbital-position filter)" > "$file.filter"
 else
     echo "$(date +'%H:%M:%S') - INFO: Enigma2: $location/build-input/enigma2 not found, skipping"
 fi
