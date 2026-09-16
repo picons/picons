@@ -188,7 +188,7 @@ ns_label() {
             fi
             ;;
     esac
-    if [[ -n $onid ]]; then echo "$label (${onid}_${prefix}0000)"; else echo "$label (namespace ${prefix}xxxx)"; fi
+    if [[ -n $onid ]]; then echo "$label (${onid}_${prefix}xxxx)"; else echo "$label (namespace ${prefix}xxxx)"; fi
 }
 ns_pattern_index() {
     local key=$1 prefix onid
