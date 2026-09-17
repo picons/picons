@@ -1,9 +1,15 @@
 #!/bin/bash
 #
-# Lists picon names that are reused by more than one channel-name entry in
-# a utf8snp-style index file (lines of the form "channelname=picon").
-# Useful to spot the picon "hubs": the ones that absorb many name variants
-# (regional splits, HD/SD duplicates, kabelio/movistar-style prefixes...).
+# Lists picon logo files that are reused by more than one channel-name
+# entry in a utf8snp-style index file (lines of the form
+# "channelname=picon"). Useful to spot the logo files that are shared by
+# many channel-name symlinks (regional splits, HD/SD duplicates,
+# kabelio/movistar-style prefixes...).
+#
+# Terminology: the "picon" is the actual logo file. A "channel name" is
+# just a symlink pointing to a picon. Many channel names can legitimately
+# point to the same picon (same logo, different name variants); this
+# script only counts and lists that reuse, it does not judge it.
 #
 # Usage: ./list_reused_picons.sh [OPTIONS] [path/to/utf8snp.index]
 #
@@ -14,28 +20,34 @@
 #   -l, --list-names    Also print the channel names sharing each picon.
 #   -h, --help          Show this help and exit.
 #
+# Index file lookup:
+#   If no path is given, the script looks for utf8snp.index in, in order:
+#     1. ./utf8snp.index
+#     2. ./build-source/utf8snp.index
+#   This lets you run the script either from the picons repo root or from
+#   inside build-source itself.
+#
 # Examples:
 #   # Default view: grid of picons reused by >= 10 channel names
-#   ./list_reused_picons.sh utf8snp.index
+#   ./list_reused_picons.sh
 #
 #   # Only the 15 most-reused picons overall, sorted by reuse count
-#   ./list_reused_picons.sh --top 15 utf8snp.index
+#   ./list_reused_picons.sh --top 15
 #
-#   # Quick outlier check: picons reused by a LOT of names may signal a
-#   # too-generic simplified name (e.g. "itv1" absorbing every regional
-#   # ITV feed); inspect the channel names behind the top offenders
-#   ./list_reused_picons.sh --top 5 --list-names utf8snp.index
+#   # Quick outlier check: a picon reused by a LOT of channel names may be
+#   # worth a look at the channel names behind it
+#   ./list_reused_picons.sh --top 5 --list-names
 #
 #   # Looser threshold, to catch smaller clusters too (e.g. a 3-region
 #   # local network sharing one picon)
-#   ./list_reused_picons.sh --min 3 utf8snp.index
+#   ./list_reused_picons.sh --min 3
 #
 #   # Save a full report to file (grid layout still applies, sized to a
 #   # wide terminal via COLUMNS)
-#   COLUMNS=200 ./list_reused_picons.sh --min 5 utf8snp.index > report.txt
+#   COLUMNS=200 ./list_reused_picons.sh --min 5 > report.txt
 #
 #   # Pipe into less for paging through a long, low-threshold list
-#   ./list_reused_picons.sh --min 2 utf8snp.index | less
+#   ./list_reused_picons.sh --min 2 | less
 
 set -euo pipefail
 
@@ -45,7 +57,7 @@ list_names=0
 index_file=""
 
 usage() {
-    sed -n '2,38p' "$0" | sed 's/^# \{0,1\}//'
+    sed -n '2,46p' "$0" | sed 's/^# \{0,1\}//'
 }
 
 die() {
@@ -74,17 +86,33 @@ parse_args() {
         esac
         shift
     done
-    index_file=${index_file:-build-source/utf8snp.index}
+}
+
+# Resolves index_file: uses the explicit path if given, otherwise tries
+# ./utf8snp.index then ./build-source/utf8snp.index.
+resolve_index() {
+    if [[ -n $index_file ]]; then
+        return 0
+    fi
+
+    if [[ -f utf8snp.index ]]; then
+        index_file="utf8snp.index"
+    elif [[ -f build-source/utf8snp.index ]]; then
+        index_file="build-source/utf8snp.index"
+    else
+        index_file="build-source/utf8snp.index"
+    fi
 }
 
 validate_index() {
     [[ -f $index_file ]] || die "index file not found: $index_file
-Run this from the picons folder (containing build-source/utf8snp.index), or pass the path as an argument."
+Run this from the picons repo root (containing utf8snp.index or build-source/utf8snp.index), or pass the path as an argument."
     [[ -s $index_file ]] || die "index file is empty: $index_file"
 }
 
-# Prints "count<TAB>picon<TAB>name1, name2, ..." for every picon reused by
-# at least $min_reuse channel names, sorted by count descending.
+# Prints "count<TAB>picon<TAB>channel_name1, channel_name2, ..." for every
+# picon (logo file) reused by at least $min_reuse channel names, sorted by
+# count descending.
 build_reuse_table() {
     awk -F'=' -v min="$min_reuse" '
         NF < 2 { next }
@@ -92,9 +120,9 @@ build_reuse_table() {
             picon = $NF
             $NF = ""
             sub(/=$/, "", $0)
-            name = $0
+            channel_name = $0
             count[picon]++
-            names[picon] = (names[picon] == "" ? name : names[picon] ", " name)
+            names[picon] = (names[picon] == "" ? channel_name : names[picon] ", " channel_name)
         }
         END {
             for (p in count) {
@@ -150,7 +178,7 @@ print_grid() {
 
 clear_screen() {
     # Never emit terminal control sequences when stdout is redirected
-    # (e.g. ./list_reused_picons.sh --min 5 utf8snp.index > report.txt).
+    # (e.g. ./list_reused_picons.sh --min 5 > report.txt).
     if [[ -t 1 ]]; then
         clear
     fi
@@ -159,6 +187,7 @@ clear_screen() {
 
 main() {
     parse_args "$@"
+    resolve_index
     validate_index
     clear_screen
     print_table | sed -E 's/^[[:space:]]+//'
