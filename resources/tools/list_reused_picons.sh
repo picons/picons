@@ -1,23 +1,24 @@
 #!/bin/bash
 #
-# Lists picon logo files that are reused by more than one channel-name
-# entry in a utf8snp-style index file (lines of the form
-# "channelname=picon"). Useful to spot the logo files that are shared by
+# Lists logo files that are used by more than one channel-name
+# entry in the utf8snp.index file (lines of the form
+# "channelname=logo"). Useful to spot the logo files that are shared by
 # many channel-name symlinks (regional splits, HD/SD duplicates,
 # kabelio/movistar-style prefixes...).
 #
-# Terminology: the "picon" is the actual logo file. A "channel name" is
-# just a symlink pointing to a picon. Many channel names can legitimately
-# point to the same picon (same logo, different name variants); this
-# script only counts and lists that reuse, it does not judge it.
+# Terminology: the "logo" is the source logo file used on this repository.
+# "utfsnp names/channel names" are a symlink pointing to a logo.
+# Many channel names can legitimately point to the same logo,
+# different name variants); this script only counts and lists that reuse,
+# it does not judge it.
 #
 # Usage: ./list_reused_picons.sh [OPTIONS] [path/to/utf8snp.index]
 #
 # Options:
-#   -m, --min N        Only show picons reused by at least N channel names
+#   -m, --min N        Only show logos reused by at least N channel names
 #                       (default: 10).
-#   -n, --top N         Only show the top N most-reused picons.
-#   -l, --list-names    Also print the channel names sharing each picon.
+#   -n, --top N         Only show the top N most-reused logos.
+#   -l, --list-names    Also print the channel names sharing each logo.
 #   -h, --help          Show this help and exit.
 #
 # Index file lookup:
@@ -28,18 +29,18 @@
 #   inside build-source itself.
 #
 # Examples:
-#   # Default view: grid of picons reused by >= 10 channel names
+#   # Default view: grid of logos reused by >= 10 channel names
 #   ./list_reused_picons.sh
 #
-#   # Only the 15 most-reused picons overall, sorted by reuse count
+#   # Only the 15 most-reused logos overall, sorted by reuse count
 #   ./list_reused_picons.sh --top 15
 #
-#   # Quick outlier check: a picon reused by a LOT of channel names may be
+#   # Quick outlier check: a logo reused by a LOT of channel names may be
 #   # worth a look at the channel names behind it
 #   ./list_reused_picons.sh --top 5 --list-names
 #
 #   # Looser threshold, to catch smaller clusters too (e.g. a 3-region
-#   # local network sharing one picon)
+#   # local network sharing one logo)
 #   ./list_reused_picons.sh --min 3
 #
 #   # Save a full report to file (grid layout still applies, sized to a
