@@ -22,11 +22,10 @@
 #   -h, --help          Show this help and exit.
 #
 # Index file lookup:
-#   If no path is given, the script looks for utf8snp.index in, in order:
-#     1. ./utf8snp.index
-#     2. ./build-source/utf8snp.index
-#   This lets you run the script either from the picons repo root or from
-#   inside build-source itself.
+#   If no path is given, the script checks the current directory first
+#   for utf8snp.index. If not found there, it goes two levels back from
+#   the script's location (e.g. from picons/resources/tools back to
+#   picons) and looks for utf8snp.index inside build-source/ there.
 #
 # Examples:
 #   # Default view: grid of logos reused by >= 10 channel names
@@ -89,25 +88,37 @@ parse_args() {
     done
 }
 
-# Resolves index_file: uses the explicit path if given, otherwise tries
-# ./utf8snp.index then ./build-source/utf8snp.index.
+# Resolves index_file: uses the explicit path if given, otherwise
+# Firtsly checks the current directory for utf8snp.index. If not found
+# there, it goes two levels back from the script's location (e.g. from
+# picons/resources/tools back to picons) and looks for
+# utf8snp.index inside build-source/ folder.
 resolve_index() {
     if [[ -n $index_file ]]; then
         return 0
     fi
 
-    if [[ -f utf8snp.index ]]; then
-        index_file="utf8snp.index"
-    elif [[ -f build-source/utf8snp.index ]]; then
-        index_file="build-source/utf8snp.index"
+    local self script_dir repo_root
+
+    self=${BASH_SOURCE[0]}
+    if command -v readlink &>/dev/null; then
+        self=$(readlink -f -- "$self" 2>/dev/null || echo "$self")
+    fi
+    script_dir=$(cd -- "$(dirname -- "$self")" &>/dev/null && pwd)
+    repo_root=$(cd -- "$script_dir/../.." &>/dev/null && pwd)
+
+    if [[ -f "$PWD/utf8snp.index" ]]; then
+        index_file="$PWD/utf8snp.index"
+    elif [[ -f "$repo_root/build-source/utf8snp.index" ]]; then
+        index_file="$repo_root/build-source/utf8snp.index"
     else
-        index_file="build-source/utf8snp.index"
+        index_file="$repo_root/build-source/utf8snp.index"
     fi
 }
 
 validate_index() {
     [[ -f $index_file ]] || die "index file not found: $index_file
-Run this from the picons repo root (containing utf8snp.index or build-source/utf8snp.index), or pass the path as an argument."
+Run this script from the resources/tools folder, or from the folder containing utf8snp.index, or pass the path as an argument."
     [[ -s $index_file ]] || die "index file is empty: $index_file"
 }
 

@@ -5,6 +5,11 @@
 # providers first, Unclassified by hex value, then Common Positions/
 # Providers). Pass --by-count to sort each section by entry count instead.
 # Usage: ./count-srpindex-entries.sh [--by-count] [path/to/srp.index]
+#
+# Index file lookup: if no path is given, firstly checks the current 
+# directory for srp.index. If not found there, it goes two levels back
+# from the script's location (e.g. from picons/resources/tools back to
+# picons) and looks for srp.index inside the /build-source folder.
 
 sort_by_count=0
 index_file=""
@@ -14,11 +19,37 @@ for arg in "$@"; do
         *) index_file=$arg ;;
     esac
 done
-index_file=${index_file:-build-source/srp.index}
+
+# Resolves index_file when not given explicitly: checks the current
+# directory first for srp.index. If not found there, it goes two
+# levels back from the script's location (e.g. from
+# picons/resources/tools back to picons) and looks for srp.index
+# inside build-source/ there.
+resolve_index() {
+    [[ -n $index_file ]] && return 0
+
+    local self script_dir repo_root
+
+    self=${BASH_SOURCE[0]}
+    if command -v readlink &>/dev/null; then
+        self=$(readlink -f -- "$self" 2>/dev/null || echo "$self")
+    fi
+    script_dir=$(cd -- "$(dirname -- "$self")" &>/dev/null && pwd)
+    repo_root=$(cd -- "$script_dir/../.." &>/dev/null && pwd)
+
+    if [[ -f "$PWD/srp.index" ]]; then
+        index_file="$PWD/srp.index"
+    elif [[ -f "$repo_root/build-source/srp.index" ]]; then
+        index_file="$repo_root/build-source/srp.index"
+    else
+        index_file="$repo_root/build-source/srp.index"
+    fi
+}
+resolve_index
 
 if [[ ! -f $index_file ]]; then
     echo "ERROR: index file not found: $index_file" >&2
-    echo "Run this from the picons folder (containing build-source/srp.index), or pass the path as an argument." >&2
+    echo "Run this script from the resources/tools folder, or from the folder containing srp.index, or pass the path as an argument." >&2
     exit 1
 fi
 
