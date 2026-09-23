@@ -3,6 +3,12 @@
 source_location=$1
 style=$2
 
+# Check that every line contains at least one '=' sign
+grep -n -v '=' "$source_location/$style.index" | while IFS=: read -r lineno content ; do
+    echo "Line $lineno in $style.index is missing an '=' sign: $content"
+    [[ -n $3 ]] && touch "$3"
+done
+
 sed -e 's/^.*=//g' $source_location/$style.index | sort -u | while read line ; do
     if [[ ! -f $source_location/logos/$line.default.png ]] && [[ ! -f $source_location/logos/$line.default.svg ]]; then
         echo The following logo does not exist: $line, found in $style.index
