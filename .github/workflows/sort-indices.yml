@@ -22,7 +22,7 @@ jobs:
         run: python resources/tools/sort_srp_index.py
 
       - name: Run UTF8 SNP sorting script
-        run: python resources/tools/sort_utf8snp_index.py
+        run: python resources/tools/clean-utf8snp-index.py
 
       - name: Commit changes (if any)
         run: |
