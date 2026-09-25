@@ -42,7 +42,7 @@ if not in_repo:  # tool not running from the repo, test /tmp
 if not isfile(file_path):  # fetch to local from repo if necessary
 	open(file_path, "w").write(urllib.request.urlopen(f"https://raw.githubusercontent.com/picons/picons/master/build-source/{filename}").read().decode())
 
-SRP_RE = re.compile(r"^[0-9A-F]+_[0-9A-F]+_[0-9A-F]+_[0-9A-F]+$", re.IGNORECASE)
+SRP_RE = re.compile(r"^[0-9A-F]+_[0-9A-F]+_[0-9A-F]+_[0-9A-F]{6,}$", re.IGNORECASE)
 
 
 def sanitizeFilename(filename, maxlen=255):
@@ -131,7 +131,7 @@ for lineno, raw_line in enumerate(raw_bytes.splitlines(keepends=True), start=1):
 
 if fatal_encoding:
 	print()
-	print(f"  {RED}{BOLD}Aborted:{RST} file contains corrupted/unreadable text -- file not saved. Fix the utf8snp.index file and re-run.\n")
+	print(f"  {RED}{BOLD}Aborted:{RST} file contains corrupted/unreadable text -- file not modified. Fix the utf8snp.index file and re-run.\n")
 	sys.exit(1)
 
 orig = "".join(decoded_lines)
@@ -163,8 +163,13 @@ for i, line in enumerate(orig.splitlines(), start=1):
 		logo = logo.lower()
 		fixed_lines.append(i)
 
-	# Invalid characters (e.g. a stray space) in the logo name are a
-	# mistake the submitter needs to fix -- this aborts the whole save.
+	# Invalid characters (e.g. a stray space) or an empty logo name are
+	# mistakes the submitter needs to fix -- this aborts the whole save.
+	if not logo:
+		error(f"Line {i}: empty logo name")
+		invalid_logo += 1
+		continue
+
 	invalid_logo_chars = sorted(set(c for c in logo if not re.match(r'[a-z0-9_-]', c)))
 	if invalid_logo_chars:
 		chars = ", ".join(repr(c) for c in invalid_logo_chars)
@@ -196,11 +201,11 @@ for i, line in enumerate(orig.splitlines(), start=1):
 if missing_eq or invalid_srp or invalid_logo:
 	print()
 	if missing_eq:
-		print(f"  {RED}{BOLD}Aborted:{RST} {missing_eq} line(s) missing '=' sign -- file not saved. Fix the utf8snp.index file and re-run.")
+		print(f"  {RED}{BOLD}Aborted:{RST} {missing_eq} line(s) missing '=' sign -- file not modified. Fix the utf8snp.index file and re-run.")
 	if invalid_srp:
-		print(f"  {RED}{BOLD}Aborted:{RST} {invalid_srp} invalid SRP-style entry(ies) found -- file not saved. Fix the utf8snp.index file and re-run.")
+		print(f"  {RED}{BOLD}Aborted:{RST} {invalid_srp} invalid SRP-style entry(ies) found -- file not modified. Fix the utf8snp.index file and re-run.")
 	if invalid_logo:
-		print(f"  {RED}{BOLD}Aborted:{RST} {invalid_logo} invalid logo name(s) found -- file not saved. Fix the utf8snp.index file and re-run.")
+		print(f"  {RED}{BOLD}Aborted:{RST} {invalid_logo} invalid logo name(s) found -- file not modified. Fix the utf8snp.index file and re-run.")
 	print()
 	sys.exit(1)
 
