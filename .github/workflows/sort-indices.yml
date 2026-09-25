@@ -19,7 +19,7 @@ jobs:
           python-version: '3.x'
 
       - name: Run SRP sorting script
-        run: python resources/tools/sort_srp_index.py
+        run: python resources/tools/clean-srp-index.py
 
       - name: Run UTF8 SNP sorting script
         run: python resources/tools/clean-utf8snp-index.py
