@@ -143,7 +143,12 @@ for i, line in enumerate(orig.splitlines(), start=1):
 		empty_skipped += 1
 		continue
 
-	rsp = line.rstrip().rsplit("=", 1)
+	if line != line.rstrip():
+		info(f"Line {i}: trailing whitespace removed")
+		line = line.rstrip()
+		fixed_lines.append(i)
+
+	rsp = line.rsplit("=", 1)
 	if not len(rsp) == 2:
 		error(f"Line {i}: missing '=' sign: {line!r}")
 		missing_eq += 1
