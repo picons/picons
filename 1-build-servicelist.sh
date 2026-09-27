@@ -558,8 +558,8 @@ if [[ -f $location/build-input/tvheadend.serverconf ]]; then
             if [[ $style = "utf8snp" ]]; then
                 channelname=$channelname_raw
                 # TVHeadend uses NFC for filenames; normalise to NFD only for index lookup, then convert back to NFC for output
-                utf8snpname_nfd=$(python3 -c "import unicodedata,sys; print(unicodedata.normalize('NFD', sys.argv[1]))" "$channelname" | sed -e 's/\(.*\)/\L\1/g' -e 's/[<>:"\/\\|?*]//g' -e 's/\.\+$//')
-                utf8snpname=$(python3 -c "import unicodedata,sys; print(unicodedata.normalize('NFC', sys.argv[1]))" "$channelname" | sed -e 's/\(.*\)/\L\1/g')
+                utf8snpname_nfd=$(python3 -c "import unicodedata,sys; print(unicodedata.normalize('NFD', sys.argv[1]))" "$channelname" | sed -e 's/\(.*\)/\L\1/g' -e 's/[\/\\]/-/g' -e 's/[<>:"|?*]//g' -e 's/\.\+$//')
+                utf8snpname=$(python3 -c "import unicodedata,sys; print(unicodedata.normalize('NFC', sys.argv[1]))" "$channelname" | sed -e 's/\(.*\)/\L\1/g' -e 's/[\/\\]/-/g' -e 's/[<>:"|?*]//g' -e 's/\.\+$//')
                 if [[ -z $utf8snpname ]]; then utf8snpname="--------"; fi
                 logo_utf8snp=$(grep -i -m 1 "^$utf8snpname_nfd=" <<< "$index" | sed -n -e 's/.*=//p')
                 if [[ -z $logo_utf8snp ]]; then logo_utf8snp="--------"; fi
