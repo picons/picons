@@ -3,10 +3,10 @@
 #####################
 ## Setup locations ##
 #####################
+
 location=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 temp=$(mktemp -d --suffix=.picons)
 logfile=$(mktemp --suffix=.picons.log)
-
 echo "$(date +'%H:%M:%S') - INFO: Log file located at: $logfile"
 
 ####################################################
@@ -15,22 +15,38 @@ echo "$(date +'%H:%M:%S') - INFO: Log file located at: $logfile"
 ## Example - build the astra-1-and-2 package      ##
 ## created in step 1:                             ##
 ##                                                ##
-##   ./2-build-picons.sh srp --name=astra-1-and-2 ##
+## ./2-build-picons.sh srp --name=astra-1-and-2   ##
+##                                                ##
+## Package selection flags (all optional):        ##
+##                                                ##
+## --no-ipk       do not create ipk files         ##
+## --no-hardlink  do not create hardlink tar file ##
+## --no-symlink   do not create symlink tar file  ##
+## --ipk-only     only create ipk files           ##
+##                (= --no-hardlink --no-symlink)  ##
 ####################################################
+
 buildname=""
+noipk="false"
+nohardlink="false"
+nosymlink="false"
 args=()
 for arg in "$@"; do
-    if [[ $arg == --name=* ]]; then
-        buildname=${arg#--name=}
-    else
-        args+=("$arg")
-    fi
+    case $arg in
+        --name=*)      buildname=${arg#--name=} ;;
+        --no-ipk)      noipk="true" ;;
+        --no-hardlink) nohardlink="true" ;;
+        --no-symlink)  nosymlink="true" ;;
+        --ipk-only)    nohardlink="true"; nosymlink="true" ;;
+        *)             args+=("$arg") ;;
+    esac
 done
 set -- "${args[@]}"
 
 ###########################
 ## Check path for spaces ##
 ###########################
+
 if [[ $location == *" "* ]]; then
     echo "$(date +'%H:%M:%S') - ERROR: The path contains spaces, please move the repository to a path without spaces!"
     exit 1
@@ -39,6 +55,7 @@ fi
 ########################################################
 ## Search for required commands and exit if not found ##
 ########################################################
+
 commands=( tar sed grep tr cat sort find mkdir rm cp mv ln readlink )
 for i in ${commands[@]}; do
     if ! which $i &> /dev/null; then
@@ -52,12 +69,27 @@ else
     exit 1
 fi
 
-if which ar &> /dev/null; then
+if [[ $noipk == "true" ]]; then
+    skipipk="true"
+    echo "$(date +'%H:%M:%S') - INFO: Creation of ipk files skipped (--no-ipk)!"
+elif which ar &> /dev/null; then
     skipipk="false"
     echo "$(date +'%H:%M:%S') - INFO: Creation of ipk files enabled!"
 else
     skipipk="true"
     echo "$(date +'%H:%M:%S') - WARNING: Creation of ipk files disabled! Try installing: ar (found in package: binutils)"
+fi
+
+if [[ $nohardlink == "true" ]]; then
+    echo "$(date +'%H:%M:%S') - INFO: Creation of hardlink tar files skipped!"
+fi
+if [[ $nosymlink == "true" ]]; then
+    echo "$(date +'%H:%M:%S') - INFO: Creation of symlink tar files skipped!"
+fi
+
+if [[ $skipipk == "true" ]] && [[ $nohardlink == "true" ]] && [[ $nosymlink == "true" ]]; then
+    echo "$(date +'%H:%M:%S') - ERROR: Nothing to build, every package type is disabled! (ipk needs: ar, found in package: binutils)"
+    exit 1
 fi
 
 if which xz &> /dev/null; then
@@ -92,6 +124,7 @@ else
     echo "$(date +'%H:%M:%S') - WARNING: No \"svgconverter.conf\" file found in \"build-input\", using default file!"
     svgconverterconf=$location/build-source/config/svgconverter.conf
 fi
+
 if which inkscape &> /dev/null && [[ $(grep -v -e '^#' -e '^$' $svgconverterconf) = "inkscape" ]]; then
     svgconverter="inkscape -w 850 --without-gui --export-area-drawing --export-png="
     echo "$(date +'%H:%M:%S') - INFO: Using inkscape as svg converter!"
@@ -106,6 +139,7 @@ fi
 #########################################################
 ## Ask the user whether to build SNP or SRP or UTF8SNP ##
 #########################################################
+
 if [[ -z $1 ]]; then
     echo "Which style are you going to build?"
     select choice in "Service Reference" "Service Reference (Full)" "UTF8 Service Name" "UTF8 Service Name (Full)" "Service Name (Being made redundant, please move to UTF8 Service Name)" "Service Name Full (Being made redundant, please move to UTF8 Service Name)"; do
@@ -125,6 +159,7 @@ fi
 #############################################
 ## Check if previously chosen style exists ##
 #############################################
+
 if [[ ! $style = "srp-full" ]] && [[ ! $style = "snp-full" ]] && [[ ! $style = "utf8snp-full" ]]; then
     if [[ -n $buildname ]]; then
         namedfile=$location/build-output/servicelist-enigma2-$style-$buildname.txt
@@ -145,6 +180,7 @@ fi
 ###########################################
 ## Cleanup binaries folder and re-create ##
 ###########################################
+
 binaries=$location/build-output/binaries-$style
 if [[ -d $binaries ]]; then rm -rf $binaries; fi
 mkdir $binaries
@@ -152,6 +188,7 @@ mkdir $binaries
 ##############################
 ## Determine version number ##
 ##############################
+
 if [[ -d $location/.git ]] && which git &> /dev/null; then
     cd $location
     hash=$(git rev-parse --short HEAD)
@@ -162,20 +199,18 @@ else
     commitdate=$(date --utc --date=@$($epoch) +'%Y-%m-%d--%H-%M-%S')
     timestamp=$(date --utc --date=@$($epoch) +'%Y%m%d%H%M.%S')
 fi
-
 version=${buildname:+$buildname-}$commitdate
-
 echo "$(date +'%H:%M:%S') - INFO: Version: $version"
 
 #############################################
 ## Some basic checking of the source files ##
 #############################################
+
 if [[ $- == *i* ]]; then
     echo "$(date +'%H:%M:%S') - EXECUTING: Checking index"
     $location/resources/tools/check-index.sh $location/build-source srp
     $location/resources/tools/check-index.sh $location/build-source snp
     $location/resources/tools/check-index.sh $location/build-source utf8snp
-
     echo "$(date +'%H:%M:%S') - EXECUTING: Checking logos"
     $location/resources/tools/check-logos.sh $location/build-source/logos
 fi
@@ -183,6 +218,7 @@ fi
 #####################
 ## Create symlinks ##
 #####################
+
 plainfile=$location/build-output/servicelist-enigma2-$style.txt
 if [[ -n $buildname ]]; then
     namedfile=$location/build-output/servicelist-enigma2-$style-$buildname.txt
@@ -202,6 +238,7 @@ $location/resources/tools/create-symlinks.sh $location $temp $style
 ####################################################################
 ## Start the actual conversion to picons and creation of packages ##
 ####################################################################
+
 logocollection=$(grep -v -e '^#' -e '^$' $temp/create-symlinks.sh | sed -e 's/^.*logos\///g' -e 's/.png.*$//g' | sort -u )
 logocount=$(echo "$logocollection" | wc -l)
 mkdir -p $temp/cache
@@ -215,12 +252,10 @@ fi
 
 grep -v -e '^#' -e '^$' $backgroundsconf | while read lines ; do
     currentlogo=""
-
     OLDIFS=$IFS
     IFS=";"
     line=($lines)
     IFS=$OLDIFS
-
     resolution=${line[0]}
     resize=${line[1]}
     type=${line[2]}
@@ -228,15 +263,12 @@ grep -v -e '^#' -e '^$' $backgroundsconf | while read lines ; do
     tag=$2
     packagenamenoversion=$style$tag.$resolution-$resize.$type.on.$background
     packagename=$style$tag.$resolution-$resize.$type.on.${background}_${version}
-
     mkdir -p $temp/package/picon/logos
-
     echo "$(date +'%H:%M:%S') - EXECUTING: Creating picons: $packagenamenoversion"
-
     echo "$logocollection" | while read logoname ; do
         ((currentlogo++))
         if [[ $- == *i* ]]; then
-            echo -ne "           Converting logo: $currentlogo/$logocount"\\r
+            echo -ne "  Converting logo: $currentlogo/$logocount"\\r
         fi
 
         # Determine the logo type with fallbacks
@@ -254,7 +286,7 @@ grep -v -e '^#' -e '^$' $backgroundsconf | while read lines ; do
             else
                 logotype=default
             fi
-	elif [[ $type == "dark" ]]; then
+        elif [[ $type == "dark" ]]; then
             if [[ -f $location/build-source/logos/$logoname.dark.png ]] || [[ -f $location/build-source/logos/$logoname.dark.svg ]]; then
                 logotype=dark
             else
@@ -284,31 +316,35 @@ grep -v -e '^#' -e '^$' $backgroundsconf | while read lines ; do
 
     if [[ $skipipk = "false" ]]; then
         mkdir $temp/package/CONTROL ; cat > $temp/package/CONTROL/control <<-EOF
-			Package: enigma2-plugin-picons-$packagenamenoversion
-			Version: $version
-			Section: base
-			Architecture: all
-			Maintainer: https://github.com/picons
-			Source: https://github.com/picons
-			Description: $packagenamenoversion
-			OE: enigma2-plugin-picons-$packagenamenoversion
-			HomePage: https://github.com/picons
-			License: unknown
-			Priority: optional
-		EOF
-		if [[ "$style" == "utf8snp" ]] || [[ "$style" == "utf8snp-full" ]]; then
-			echo "Provides: enigma2-plugin-picons-snp-${packagenamenoversion:8}" >> $temp/package/CONTROL/control
-			echo "Replaces: enigma2-plugin-picons-snp-${packagenamenoversion:8}" >> $temp/package/CONTROL/control
-			echo "Conflicts: enigma2-plugin-picons-snp-${packagenamenoversion:8}" >> $temp/package/CONTROL/control
-		fi
+Package: enigma2-plugin-picons-$packagenamenoversion
+Version: $version
+Section: base
+Architecture: all
+Maintainer: https://github.com/picons
+Source: https://github.com/picons
+Description: $packagenamenoversion
+OE: enigma2-plugin-picons-$packagenamenoversion
+HomePage: https://github.com/picons
+License: unknown
+Priority: optional
+EOF
+        if [[ "$style" == "utf8snp" ]] || [[ "$style" == "utf8snp-full" ]]; then
+            echo "Provides: enigma2-plugin-picons-snp-${packagenamenoversion:8}" >> $temp/package/CONTROL/control
+            echo "Replaces: enigma2-plugin-picons-snp-${packagenamenoversion:8}" >> $temp/package/CONTROL/control
+            echo "Conflicts: enigma2-plugin-picons-snp-${packagenamenoversion:8}" >> $temp/package/CONTROL/control
+        fi
         touch --no-dereference -t $timestamp $temp/package/CONTROL/control
         $location/resources/tools/ipkg-build.sh -o root -g root $temp/package $binaries >> $logfile
     fi
 
     mv $temp/package/picon $temp/package/$packagename
 
-    tar --dereference --owner=root --group=root -cf - --exclude=logos --exclude='*%*' --directory=$temp/package $packagename | $compressor 2>> $logfile > $binaries/$packagename.hardlink.tar.$ext
-    tar --owner=root --group=root -cf - --directory=$temp/package $packagename | $compressor 2>> $logfile > $binaries/$packagename.symlink.tar.$ext
+    if [[ $nohardlink = "false" ]]; then
+        tar --dereference --owner=root --group=root -cf - --exclude=logos --exclude='*%*' --directory=$temp/package $packagename | $compressor 2>> $logfile > $binaries/$packagename.hardlink.tar.$ext
+    fi
+    if [[ $nosymlink = "false" ]]; then
+        tar --owner=root --group=root -cf - --directory=$temp/package $packagename | $compressor 2>> $logfile > $binaries/$packagename.symlink.tar.$ext
+    fi
 
     find $binaries -exec touch -t $timestamp {} \;
     rm -rf $temp/package
@@ -317,7 +353,7 @@ done
 ######################################
 ## Cleanup temporary files and exit ##
 ######################################
-if [[ -d $temp ]]; then rm -rf $temp; fi
 
+if [[ -d $temp ]]; then rm -rf $temp; fi
 echo "$(date +'%H:%M:%S') - INFO: Finished building $style!"
 exit 0
