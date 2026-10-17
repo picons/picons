@@ -2,7 +2,6 @@ import unicodedata
 from os.path import dirname, isfile, realpath, sep, splitext
 import re
 import sys
-import urllib.request
 
 # Workaround for when run on Windows.
 if sys.stdout.encoding != "utf-8":
@@ -38,9 +37,6 @@ in_repo = isfile(file_path)
 
 if not in_repo:  # tool not running from the repo, test /tmp
 	file_path = f"{sep}tmp{sep}{filename}"
-
-if not isfile(file_path):  # fetch to local from repo if necessary
-	open(file_path, "w").write(urllib.request.urlopen(f"https://raw.githubusercontent.com/picons/picons/master/build-source/{filename}").read().decode())
 
 SRP_RE = re.compile(r"^[0-9A-F]+_[0-9A-F]+_[0-9A-F]+_[0-9A-F]{6,}$", re.IGNORECASE)
 

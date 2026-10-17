@@ -1,7 +1,6 @@
 from os.path import dirname, isfile, realpath, sep
 import re
 import sys
-import urllib.request
 
 if sys.stdout.encoding != "utf-8":
 	sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -62,9 +61,6 @@ in_repo = isfile(file_path)
 
 if not in_repo:  # tool not running from the repo, test /tmp
 	file_path = f"{sep}tmp{sep}{filename}"
-
-if not isfile(file_path):  # fetch to local from repo if necessary
-	open(file_path, "w").write(urllib.request.urlopen(f"https://raw.githubusercontent.com/picons/picons/master/build-source/{filename}").read().decode())
 
 logos = {}
 logos_lines = {}  # track which line each ref was first seen on
