@@ -258,14 +258,14 @@ if error_lines:
 print()
 
 if not saved and not errors:
-	print(f"  {GREEN}{BOLD}✓{RST}  File is clean, no changes needed.")
+	print(f"  {GREEN}{BOLD}OK   {RST}  File is clean, no changes needed.")
 elif saved and not errors:
-	print(f"  {GREEN}{BOLD}✓{RST}  Changes applied and saved.")
+	print(f"  {GREEN}{BOLD}OK   {RST}  Changes applied and saved.")
 elif saved and errors:
-	print(f"  {GREEN}{BOLD}✓{RST}  Changes applied and saved.")
-	print(f"  {RED}{BOLD}✗{RST}  {errors} error(s) were logged but not fixed -- review manually.")
+	print(f"  {GREEN}{BOLD}OK   {RST}  Changes applied and saved.")
+	print(f"  {RED}{BOLD}FAIL {RST}  {errors} error(s) were logged but not fixed -- review manually.")
 elif errors:
-	print(f"  {RED}{BOLD}✗{RST}  {errors} error(s) were logged but not fixed -- review manually.")
+	print(f"  {RED}{BOLD}FAIL {RST}  {errors} error(s) were logged but not fixed -- review manually.")
 print()
 
 if errors:
