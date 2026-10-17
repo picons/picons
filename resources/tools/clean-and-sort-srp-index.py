@@ -1,9 +1,14 @@
+import os
 from os.path import dirname, isfile, realpath, sep
 import re
 import sys
 
 if sys.stdout.encoding != "utf-8":
 	sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+# Enable ANSI colour codes in the Windows console (Windows 10 and later).
+if sys.platform == "win32":
+	os.system("")
 
 # cleans and sorts srp.index
 
@@ -213,14 +218,14 @@ if error_lines:
 print()
 
 if not saved and not errors:
-	print(f"  {GREEN}{BOLD}✓{RST}  File is clean, no changes needed.")
+	print(f"  {GREEN}{BOLD}OK   {RST}  File is clean, no changes needed.")
 elif saved and not errors:
-	print(f"  {GREEN}{BOLD}✓{RST}  Changes applied and saved.")
+	print(f"  {GREEN}{BOLD}OK   {RST}  Changes applied and saved.")
 elif saved and errors:
-	print(f"  {GREEN}{BOLD}✓{RST}  Changes applied and saved.")
-	print(f"  {RED}{BOLD}✗{RST}  {errors} error(s) were logged but not fixed -- review manually.")
+	print(f"  {GREEN}{BOLD}OK   {RST}  Changes applied and saved.")
+	print(f"  {RED}{BOLD}FAIL {RST}  {errors} error(s) were logged but not fixed -- review manually.")
 elif errors:
-	print(f"  {RED}{BOLD}✗{RST}  {errors} error(s) were logged but not fixed -- review manually.")
+	print(f"  {RED}{BOLD}FAIL {RST}  {errors} error(s) were logged but not fixed -- review manually.")
 print()
 
 if errors:
