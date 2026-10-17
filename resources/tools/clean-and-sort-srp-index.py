@@ -79,6 +79,7 @@ try:
 		raw_bytes = f.read()
 except FileNotFoundError:
 	error(f"File not found: {file_path!r}")
+	error(f"Run this script from inside the picons repository, or copy {filename} to {dirname(file_path)}")
 	sys.exit(1)
 except OSError as e:
 	error(f"Read error: {e}")
@@ -152,7 +153,7 @@ for i, line in enumerate(orig.splitlines(), start=1):
 		fixed_lines.append(i)
 
 	if ref in logos:
-		warn(f"Line {i}: duplicate service reference {ref!r} (first seen at line {logos_lines[ref]}) — removed")
+		warn(f"Line {i}: duplicate service reference {ref!r} (first seen at line {logos_lines[ref]}) -- removed")
 		duplicates_removed += 1
 		continue
 
@@ -217,9 +218,9 @@ elif saved and not errors:
 	print(f"  {GREEN}{BOLD}✓{RST}  Changes applied and saved.")
 elif saved and errors:
 	print(f"  {GREEN}{BOLD}✓{RST}  Changes applied and saved.")
-	print(f"  {RED}{BOLD}✗{RST}  {errors} error(s) were logged but not fixed — review manually.")
+	print(f"  {RED}{BOLD}✗{RST}  {errors} error(s) were logged but not fixed -- review manually.")
 elif errors:
-	print(f"  {RED}{BOLD}✗{RST}  {errors} error(s) were logged but not fixed — review manually.")
+	print(f"  {RED}{BOLD}✗{RST}  {errors} error(s) were logged but not fixed -- review manually.")
 print()
 
 if errors:
