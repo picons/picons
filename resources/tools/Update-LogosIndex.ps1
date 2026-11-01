@@ -1478,8 +1478,6 @@ try {
     Write-Host ('  8. Then open {0} and click "Compare & pull request"' -f $UpstreamUrl)
     Write-Host '     (or "Contribute" ---> "Open pull request") to send your changes to the picons repository.'
     Write-Host ''
-    Write-Host '  Tip: run with -Open to open the picons folder and the upload page automatically.' -ForegroundColor DarkGray
-    Write-Host ''
 
     } # end of the next steps (skipped with -DryRun)
 
