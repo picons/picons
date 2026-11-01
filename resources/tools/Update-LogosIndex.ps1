@@ -92,7 +92,7 @@
     powershell -ExecutionPolicy Bypass -File .\Update-LogosIndex.ps1
 
 .NOTES
-    Version 1.2.0
+    Version 1.2.1
     Works with Windows PowerShell 5.1 and PowerShell 7.
     Exit code: 0 = ok, 1 = at least one file rejected or with errors to review, 2 = general error.
 #>
@@ -113,7 +113,7 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
-$ScriptVersion = '1.2.0'
+$ScriptVersion = '1.2.1'
 
 # ----------------------------------------------------------------------------
 # Basic settings
