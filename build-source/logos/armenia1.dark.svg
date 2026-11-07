@@ -1,0 +1,22 @@
+<svg fill="none" version="1.1" viewBox="0 0 800 862.71" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(19.646 0 0 19.646 -137.52 0)" clip-path="url(#c)" stroke-width=".050902">
+  <path d="m46.551 0h-38.376c-0.64887 0-1.1748 0.52593-1.1748 1.1748v41.564c0 0.6489 0.52592 1.1748 1.1748 1.1748h25.499l3.3468-2.1424h-0.0091v-30.533c0-0.2391-0.1935-0.5191-0.4348-0.5191h-18.339c-0.2892 0-0.5259 0.2299-0.5259 0.5191v7.5086c0 0.2892 0.2367 0.5259 0.5259 0.5259h3.7475v22.499h-11.673c-0.64884 0-1.1748-0.5259-1.1748-1.1748v-37.279c0-0.64886 0.52592-1.1748 1.1748-1.1748h34.092c0.6466 0 1.1748 0.52592 1.1748 1.1748v37.279c0 0.6489-0.5259 1.1748-1.1748 1.1748h-3.1919l-3.3286 2.1424h8.6629c0.6466 0 1.1748-0.5259 1.1748-1.1748v-41.564c0-0.64887-0.5259-1.1748-1.1748-1.1748" fill="#BCBDBF"/>
+  <mask id="b" x="21" y="19" width="17" height="21" maskUnits="userSpaceOnUse">
+   <path d="m21.99 28.919v10.71l15.026-9.6374v-10.71z" fill="#BCBDBF"/>
+  </mask>
+  <g mask="url(#b)">
+   <path d="m27.906 11.957-15.842 19.69 19.058 15.334 15.842-19.69z" fill="url(#a)" stroke-width=".050902"/>
+  </g>
+ </g>
+ <defs>
+  <linearGradient id="a" x1="35.664" x2="21.257" y1="21.799" y2="39.706" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#23A6E0" offset="0"/>
+   <stop stop-color="#1F70B7" offset=".46"/>
+   <stop stop-color="#1C4E9D" offset=".81"/>
+   <stop stop-color="#1C4194" offset="1"/>
+  </linearGradient>
+  <clipPath id="c">
+   <rect transform="translate(7)" width="86" height="45" fill="#BCBDBF"/>
+  </clipPath>
+ </defs>
+</svg>
