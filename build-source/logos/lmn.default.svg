@@ -1,0 +1,18 @@
+<svg version="1.1" viewBox="0 0 800 345.07" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<style type="text/css">
+		.st0{clip-path:url(#a);}
+	</style>
+	<path d="m93.297 262.44v-262.44h-93.297v290.81c0 29.957 24.3 54.258 54.258 54.258h150.74v-82.621z"/>
+	<polygon transform="scale(.79673)" points="1004.1 433.1 1004.1 0 889.9 0 889.9 226 715.3 0 715.3 433.1 730.2 433.1 730.2 204.9 907 433.1" stroke-width="1.2551"/>
+	<g transform="scale(.79673)" stroke-width="1.2551">
+		<g stroke-width="1.2551">
+			<defs>
+				<polygon id="b" points="597 183.4 597 433.1 706.7 433.1 706.7 0 580.4 0 486.3 161.8 392.1 0 265.9 0 265.9 433.1 375.5 433.1 375.5 183.4 486.3 351.4"/>
+			</defs>
+			<clipPath id="a">
+				<use xlink:href="#b"/>
+			</clipPath>
+			<path class="st0" d="m279.7 440h-13.9v-447h13.9zm22.5-447h-13.9v447h13.9zm22.5 0h-13.9v447h13.9zm22.5 0h-13.9v447h13.9zm22.4 0h-13.9v447h13.9zm22.5 0h-13.9v447h13.9zm22.5 0h-13.9v447h13.9zm22.4 0h-13.9v447h13.9zm22.5 0h-13.9v447h13.9zm22.5 0h-13.9v447h13.9zm22.4 0h-13.9v447h13.9zm22.5 0h-13.9v447h13.9zm22.5 0h-13.9v447h13.9zm22.4 0h-13.8v447h13.9v-447zm22.5 0h-13.9v447h13.9zm22.5 0h-13.9v447h13.9zm22.5 0h-13.9v447h13.9zm22.4 0h-13.9v447h13.9zm22.5 0h-13.9v447h13.9zm22.5 0h-13.9v447h13.9z" clip-path="url(#a)" stroke-width="1.2551"/>
+		</g>
+	</g>
+</svg>
