@@ -11,18 +11,26 @@
       - creates the "logos" folder inside "picons" (put your logo files there)
       - creates two text files next to the script: Add-UTF.txt and Add-SRP.txt
 
+    USUAL WAY OF USE: TWO RUNS
+      1st run: downloads utf8snp.index and srp.index into "picons" (and creates the "logos" folder and the
+               two Add files). Nothing of yours is merged yet.
+      2nd run: after you wrote your lines in Add-UTF.txt and/or Add-SRP.txt (and copied the logo files in
+               picons\logos) the script merges them, checks and sorts the files, and writes them.
+      Later runs work on the files already in "picons" (never downloaded again unless you use -Download).
+
     ADDING NEW LINES
       Write your new lines (one per channel, <identifier>=<logo>) in Add-UTF.txt (for utf8snp.index)
-      and/or Add-SRP.txt (for srp.index), then run the script again. It checks your lines, tells you
-      exactly what it is going to do and ASKS before writing into the .index files. If you agree:
-      the lines are merged, the whole file is checked and sorted exactly like the Python scripts do,
+      and/or Add-SRP.txt (for srp.index), then run the script again. It checks your lines and updates the
+      .index files WITHOUT asking anything (the output is kept short): the lines are merged, the whole file
+      is checked and sorted exactly like the Python scripts do,
       the previous .index is saved in backup\<date-time> and the Add file is emptied
       (a copy goes to the same backup folder).
 
     EVERY RUN
       - a .index file already in "picons" is never replaced by a download (your edits are kept):
-        it is checked, sorted and rewritten in place, only after asking you (default answer: YES;
-        replacing it with a fresh download with -Download defaults to NO)
+        it is checked, sorted and rewritten in place (a backup is saved first); with -Download it is
+        replaced by a fresh copy instead
+      - no question is ever asked
       - if a file fails a blocking check (missing '=', invalid SRP, invalid logo name, corrupted
         UTF-8) it is NOT modified, and the Add file is not emptied
       - prints the time of each file and the total, and the steps to upload to GitHub
@@ -32,10 +40,18 @@
       - a pasted line  javascript:zapChannel('1:0:19:...', 'Rai 1');  (optionally followed by =<logo>, otherwise
         the logo is the name in lowercase without spaces: rai1) becomes SRP=logo in Add-SRP.txt and
         name=logo in Add-UTF.txt
+      - a zapChannel line pasted in Add-UTF.txt (the same line you paste in Add-SRP.txt) writes name=logo in
+        utf8snp.index and replaces that SRP in srp.index (the old line is removed, the one in Add-SRP.txt is added). If the
+        removed srp.index line had a logo (e.g. 1C8E_332C_13E_820000=ntctv), NOTHING is removed from
+        utf8snp.index (the same logo may belong to another satellite): the script only warns when other lines
+        still use that old logo, in utf8snp.index or in srp.index, and lists them
       - warns when a line points to a logo with no file in picons\logos (fine if the logo is already
         in the GitHub repository)
-      - your lines that are NOT added because the identifier is already in the index are listed, and
-        kept in the Add file as comments
+      - if the identifier of one of your lines is already in the index, the EXISTING line is overwritten
+        with yours (the overwritten lines are listed, and the ones already identical are counted)
+      - the SRP lines of Add-SRP.txt also update the logo of the same SRP when it is already in
+        utf8snp.index (the SRP is never added there, only its logo is replaced)
+      - your lines repeated inside the same Add file are listed, and kept in the Add file as comments
       - an Add file saved as ANSI (Windows-1252) instead of UTF-8 is read anyway, with a warning
       - with -GitHubUser <name> the upload link points to your fork
         (https://github.com/<name>/picons/tree/master/build-source)
@@ -48,12 +64,14 @@
     Folder in which "picons" and the Add files are created. Default: the folder of the script.
 
 .PARAMETER Download
-    For .index files that already exist in "picons", offer to replace them with a fresh copy
-    downloaded from GitHub (instead of sorting the existing one).
+    For .index files that already exist in "picons", replace them with a fresh copy downloaded from
+    GitHub (instead of sorting the existing one). A backup is made first.
 
 .PARAMETER Force
-    Do not ask any question: work on existing files in place (or replace them when combined
-    with -Download). Merging the Add files is included.
+    Kept for compatibility: the script never asks questions.
+
+.PARAMETER Guide
+    At the end, print the long step-by-step instructions (add a logo, upload to GitHub).
 
 .PARAMETER NoBackup
     Do not save the previous copy of the .index files in backup\<date-time>.
@@ -92,7 +110,7 @@
     powershell -ExecutionPolicy Bypass -File .\Update-LogosIndex.ps1
 
 .NOTES
-    Version 1.2.1
+    Version 1.4.5
     Works with Windows PowerShell 5.1 and PowerShell 7.
     Exit code: 0 = ok, 1 = at least one file rejected or with errors to review, 2 = general error.
 #>
@@ -109,11 +127,12 @@ param(
     [switch]$Open,
     [switch]$DryRun,
     [switch]$NoLog,
+    [switch]$Guide,
     [string]$GitHubUser
 )
 
 $ErrorActionPreference = 'Stop'
-$ScriptVersion = '1.2.1'
+$ScriptVersion = '1.4.5'
 
 # ----------------------------------------------------------------------------
 # Basic settings
@@ -192,31 +211,21 @@ function Write-Err([string]$Msg) {
     Write-Host '  ERROR  ' -NoNewline -ForegroundColor Red
     Write-Host $Msg
 }
-function Write-Row([string]$Label, $Value, [string]$Color) {
-    Write-Host ('  {0,-20}{1,8}' -f $Label, $Value) -ForegroundColor $Color
-}
-
 function Show-Messages($Log) {
-    # The workers only collect messages; they are printed here, in order, per file
+    # The workers only collect messages; they are printed here, in order, per file.
+    # Fix messages (info) only with -ShowAll; warnings are capped; errors are always printed.
+    $warns = 0
+    $hidden = 0
     foreach ($m in $Log) {
         $kind = $m[0]
-        if ($kind -eq 'info') { Write-Info $m[1] }
-        elseif ($kind -eq 'warn') { Write-Warn $m[1] }
+        if ($kind -eq 'info') { if ($ShowAll) { Write-Info $m[1] } }
+        elseif ($kind -eq 'warn') {
+            if ($ShowAll -or $warns -lt 5) { Write-Warn $m[1]; $warns++ } else { $hidden++ }
+        }
         elseif ($kind -eq 'err') { Write-Err $m[1] }
         else { Write-Host ('  ' + $m[1]) -ForegroundColor Red }
     }
-}
-
-function Read-YesNo([string]$Question, [bool]$DefaultYes = $false) {
-    # Pressing Enter gives the default; non-interactive hosts also get the default.
-    if ($DefaultYes) { $hint = 'Y/n' } else { $hint = 'y/N' }
-    try {
-        $answer = Read-Host ('  {0} [{1}]' -f $Question, $hint)
-    } catch {
-        return $DefaultYes
-    }
-    if ($null -eq $answer -or $answer.Trim().Length -eq 0) { return $DefaultYes }
-    return ($answer -match '^\s*(y|yes)\s*$')
+    if ($hidden -gt 0) { Write-Info ('... {0} more warnings hidden (use -ShowAll to print all of them)' -f $hidden) }
 }
 
 # ----------------------------------------------------------------------------
@@ -693,55 +702,6 @@ function Invoke-CleanupParallel {
     }
 }
 
-function Show-Summary {
-    param([string]$Title, [string]$FilePath, $R)
-
-    Write-Host ''
-    Write-Host ('  {0}  ' -f $Title) -NoNewline
-    Write-Host $FilePath -ForegroundColor DarkGray
-    Write-Host ('  ' + ('-' * 34)) -ForegroundColor DarkGray
-    Write-Row 'Lines read' $R.Lines 'Cyan'
-    Write-Row 'Written' $R.Written 'Green'
-    if ($R.Empty -gt 0) { Write-Row 'Empty removed' $R.Empty 'Red' }
-    if ($R.Duplicates -gt 0) { Write-Row 'Duplicates removed' $R.Duplicates 'Red' }
-    if ($R.Fixed.Count -gt 0) { Write-Row 'Fixed' $R.Fixed.Count 'Yellow' }
-    if ($R.Errors -gt 0) { Write-Row 'Errors' $R.Errors 'Red' }
-    if ($R.Fixed.Count -gt 0) {
-        $shown = @($R.Fixed)
-        $tail = ''
-        if (-not $ShowAll -and $R.Fixed.Count -gt 50) {
-            $shown = @($R.Fixed | Select-Object -First 50)
-            $tail = (' ... (+{0} more)' -f ($R.Fixed.Count - 50))
-        }
-        Write-Host ('  Fixed line(s): {0}{1}' -f ($shown -join ', '), $tail)
-    }
-    if ($R.ErrorLines.Count -gt 0) {
-        Write-Host ('  Error line(s): {0}' -f (($R.ErrorLines | ForEach-Object { $_ }) -join ', ')) -ForegroundColor Red
-    }
-    Write-Host ''
-    if (-not $R.Changed -and $R.Errors -eq 0) {
-        Write-Host '  [OK] File is clean, no changes needed.' -ForegroundColor Green
-    } elseif ($R.Errors -eq 0) {
-        Write-Host '  [OK] Changes applied.' -ForegroundColor Green
-    } else {
-        Write-Host '  [OK] Changes applied.' -ForegroundColor Green
-        Write-Host ('  [!!] {0} error(s) were logged but not fixed -- review manually.' -f $R.Errors) -ForegroundColor Red
-    }
-}
-
-function Get-Differences {
-    param([string]$Old, [string]$New)
-    $a = New-Object 'System.Collections.Generic.HashSet[string]' ([StringComparer]::Ordinal)
-    $b = New-Object 'System.Collections.Generic.HashSet[string]' ([StringComparer]::Ordinal)
-    foreach ($l in ($Old -split "`r?`n")) { if ($l.Length -gt 0) { [void]$a.Add($l) } }
-    foreach ($l in ($New -split "`r?`n")) { if ($l.Length -gt 0) { [void]$b.Add($l) } }
-    $added = 0
-    $removed = 0
-    foreach ($l in $b) { if (-not $a.Contains($l)) { $added++ } }
-    foreach ($l in $a) { if (-not $b.Contains($l)) { $removed++ } }
-    return @($added, $removed)
-}
-
 # ----------------------------------------------------------------------------
 # Add files: the user writes new lines here, the script merges them into the .index files
 # ----------------------------------------------------------------------------
@@ -762,6 +722,9 @@ function Get-AddTemplate {
             '# Empty lines and lines starting with # are ignored. Save this file as UTF-8.',
             '# Run Update-LogosIndex.ps1 again: your lines are checked and, after asking you,',
             '# merged into picons\utf8snp.index. Then this file is emptied (a copy goes to backup).',
+            '# If an identifier is already in the index, your line REPLACES the existing one.',
+            '# A pasted zapChannel line here (the same one you paste in Add-SRP.txt) also replaces that SRP in srp.index',
+            '# (nothing is removed from utf8snp.index: you get a warning if other lines still use the old logo).',
             '# In an SRP a ":" is replaced with "_" (in a channel name it is removed by the checks, as the',
             '# rules say). A full service reference (1:0:19:SID:TSID:ONID:NAMESPACE:0:0:0: or 1_0_19_SID_..._0_0_0)',
             '# followed by =<logo> is converted to the SRP form.',
@@ -786,6 +749,8 @@ function Get-AddTemplate {
             '# Empty lines and lines starting with # are ignored. Save this file as UTF-8.',
             '# Run Update-LogosIndex.ps1 again: your lines are checked and, after asking you,',
             '# merged into picons\srp.index. Then this file is emptied (a copy goes to backup).',
+            '# If an identifier is already in the index, your line REPLACES the existing one. The logo of the same',
+            '# SRP is also updated in picons\utf8snp.index, but only if it is already there (nothing is added to it).',
             '# In an SRP a ":" is replaced with "_" (in a channel name it is removed by the checks, as the',
             '# rules say). A full service reference (1:0:19:SID:TSID:ONID:NAMESPACE:0:0:0: or 1_0_19_SID_..._0_0_0)',
             '# followed by =<logo> is converted to the SRP form.',
@@ -829,6 +794,7 @@ function Read-AddFile {
         Converted = 0; Replaced = 0
         Samples = (New-Object 'System.Collections.Generic.List[string]'); SamplesHidden = 0
         Fallback = $false; CheckText = ''
+        ZapSrps = (New-Object 'System.Collections.Generic.List[string]')
     }
     try {
         $bytes = [System.IO.File]::ReadAllBytes($FilePath)
@@ -879,6 +845,7 @@ function Read-AddFile {
                         $lg = ($chName.Normalize([System.Text.NormalizationForm]::FormD).ToLowerInvariant() -replace '[^a-z0-9]', '')
                     }
                     if ($Type -eq 'utf8snp') { $l = ('{0}={1}' -f $chName, $lg) } else { $l = ('{0}={1}' -f ($parts -join '_'), $lg) }
+                    [void]$r.ZapSrps.Add(($parts -join '_'))
                     $r.Converted++
                     $zapOk = $true
                     if ($Limit -lt 0 -or $r.Samples.Count -lt $Limit) {
@@ -964,12 +931,144 @@ function New-MergedSource {
     }
 }
 
+function Get-IndexKey {
+    # Identifier of a line, built exactly like Invoke-Cleanup does (used to find the lines to overwrite)
+    param([string]$Type, [string]$Name)
+    if ($Type -eq 'srp' -or $SrpRe.IsMatch($Name)) { return $Name.ToUpperInvariant() }
+    if ($Name.Length -eq 0) { return '' }
+    if ($Name.Length -le 255 -and $FastNameRe.IsMatch($Name) -and -not $SanReservedSet.Contains($Name)) { return $Name.ToLowerInvariant() }
+    return (Get-SanitizedName -Name $Name).ToLowerInvariant()
+}
+
+function Merge-IndexLines {
+    # Builds the text to check: the source index with
+    #   - the lines whose identifier is also in your new lines dropped (so yours replace them)
+    #   - srp only: the existing lines of the SRPs in $RemoveKeys dropped (their logos are returned in RemovedLogos);
+    #     your new line for the same SRP (the new logo) is then added as usual
+    #   - the lines that still use a logo of $RemoveLogos (the old logo of a removed srp.index line) are only
+    #     REPORTED in StillUsing, never removed (the same logo may belong to another satellite)
+    #   - utf8snp only: the logo of the SRP lines in $UpdateLines replaced where that SRP is already there
+    # and your new lines appended at the end. Returns $null when the source is not valid UTF-8
+    # (the normal checks report it).
+    param([string]$Type, [string]$Source, $AddLines, $UpdateLines, $RemoveKeys = @(), $RemoveLogos = $null)
+    try {
+        $bytes = [System.IO.File]::ReadAllBytes($Source)
+        $off = 0
+        if ($bytes.Length -ge 3 -and $bytes[0] -eq 0xEF -and $bytes[1] -eq 0xBB -and $bytes[2] -eq 0xBF) { $off = 3 }
+        $text = $Utf8Strict.GetString($bytes, $off, $bytes.Length - $off)
+    } catch {
+        return $null
+    }
+
+    $remSet = New-Object 'System.Collections.Generic.HashSet[string]' ([StringComparer]::Ordinal)
+    if ($Type -eq 'srp') {
+        foreach ($rk in @($RemoveKeys)) { if ($rk) { [void]$remSet.Add(([string]$rk).Trim().ToUpperInvariant()) } }
+    }
+
+    # your new lines (without the ones of the SRPs that are being removed)
+    $addList = New-Object 'System.Collections.Generic.List[string]'
+    $dropped = 0
+    foreach ($al in @($AddLines)) {
+        $p = $al.LastIndexOf([char]'=')
+        $addList.Add($al)
+    }
+
+    $addMap = New-Object 'System.Collections.Generic.Dictionary[string,object]' ([StringComparer]::Ordinal)
+    foreach ($al in $addList) {
+        $p = $al.LastIndexOf([char]'=')
+        if ($p -lt 0) { continue }
+        $nm = $al.Substring(0, $p)
+        $k = Get-IndexKey -Type $Type -Name $nm
+        if ($k.Length -gt 0 -and -not $addMap.ContainsKey($k)) {
+            $addMap[$k] = @($al, $al.Substring($p + 1).Trim().ToLowerInvariant())
+        }
+    }
+    $updMap = New-Object 'System.Collections.Generic.Dictionary[string,string]' ([StringComparer]::Ordinal)
+    if ($Type -eq 'utf8snp') {
+        foreach ($ul in @($UpdateLines)) {
+            $p = $ul.LastIndexOf([char]'=')
+            if ($p -lt 0) { continue }
+            $nm = $ul.Substring(0, $p)
+            $k = Get-IndexKey -Type 'srp' -Name $nm
+            if ($k.Length -gt 0 -and -not $updMap.ContainsKey($k)) { $updMap[$k] = $ul.Substring($p + 1).Trim().ToLowerInvariant() }
+        }
+    }
+
+    $parts = [regex]::Split($text, '\r\n|\n|\r')
+    $srcLines = New-Object 'System.Collections.Generic.List[string]'
+    $srcLines.AddRange([string[]]$parts)
+    if ($srcLines.Count -gt 0 -and $srcLines[$srcLines.Count - 1].Length -eq 0) { $srcLines.RemoveAt($srcLines.Count - 1) }
+
+    $kept = New-Object 'System.Collections.Generic.List[string]'
+    $over = New-Object 'System.Collections.Generic.List[object]'
+    $upd = New-Object 'System.Collections.Generic.List[object]'
+    $removed = New-Object 'System.Collections.Generic.List[object]'
+    $removedLogos = New-Object 'System.Collections.Generic.List[string]'
+    $same = 0
+    $users = New-Object 'System.Collections.Generic.List[string]'
+    $srpCand = New-Object 'System.Collections.Generic.List[object]'
+    foreach ($line in $srcLines) {
+        $t = $line.TrimEnd()
+        $p = $t.LastIndexOf([char]'=')
+        if ($t.Length -eq 0 -or $p -lt 0) { $kept.Add($line); continue }
+        $nm = $t.Substring(0, $p)
+        $lg = $t.Substring($p + 1).Trim().ToLowerInvariant()
+        $k = Get-IndexKey -Type $Type -Name $nm
+        if ($remSet.Count -gt 0 -and $remSet.Contains($k)) {
+            $removed.Add(@($t, 'removed'))
+            $removedLogos.Add($lg)
+            continue
+        }
+        if ($k.Length -gt 0 -and $addMap.ContainsKey($k)) {
+            # your line wins: the existing one is dropped (your line is appended below)
+            if ($lg -ceq $addMap[$k][1]) { $same++ } else { $over.Add(@($t, $addMap[$k][0])) }
+            continue
+        }
+        if ($null -ne $RemoveLogos -and $lg.Length -gt 0 -and $RemoveLogos.Contains($lg)) { $users.Add($t) }
+        if ($k.Length -gt 0 -and $updMap.ContainsKey($k) -and $lg -cne $updMap[$k]) {
+            $newLine = $nm + '=' + $updMap[$k]
+            $upd.Add(@($t, $newLine))
+            $kept.Add($newLine)
+            continue
+        }
+        if ($remSet.Count -gt 0) { $srpCand.Add(@($t, $lg)) }
+        $kept.Add($line)
+    }
+    if ($remSet.Count -gt 0 -and $removedLogos.Count -gt 0) {
+        foreach ($c in $srpCand) { if ($removedLogos.Contains($c[1])) { $users.Add($c[0]) } }
+    }
+
+    $sb = New-Object System.Text.StringBuilder
+    foreach ($l in $kept) { [void]$sb.Append($l).Append("`n") }
+    foreach ($l in $addList) { [void]$sb.Append($l).Append("`n") }
+    return @{
+        Text = $sb.ToString(); SrcLines = $kept.Count; AddKept = $addList
+        Overwritten = $over; Same = $same; Updated = $upd
+        Removed = $removed; RemovedLogos = $removedLogos; Dropped = $dropped; StillUsing = $users
+    }
+}
+
+function Write-Samples {
+    # Prints "old   ->   new" pairs (at most $Limit; -1 = all)
+    param($Items, [int]$Limit, [string]$Indent = '        ', [string]$Color = 'DarkGray')
+    $n = 0
+    foreach ($it in $Items) {
+        if ($Limit -ge 0 -and $n -ge $Limit) {
+            Write-Host ('{0}... {1} more (use -ShowAll to print all of them)' -f $Indent, ($Items.Count - $n)) -ForegroundColor DarkGray
+            break
+        }
+        Write-Host ('{0}{1}   ->   {2}' -f $Indent, $it[0], $it[1]) -ForegroundColor $Color
+        $n++
+    }
+}
+
 # ----------------------------------------------------------------------------
 # Main program
 # ----------------------------------------------------------------------------
 $exitCode = 0
 $transcribing = $false
 $BackupDir = ''
+$backupUsed = $false
 try {
     $BaseDir = (Resolve-Path -LiteralPath $Path).Path
     $PiconsDir = Join-Path $BaseDir 'picons'
@@ -988,9 +1087,8 @@ try {
         try { Start-Transcript -Path $LogTemp -Force | Out-Null; $transcribing = $true } catch { $transcribing = $false }
     }
     Write-Host ''
-    Write-Host ('  Picons index cleaner (Windows) v{0}' -f $ScriptVersion) -ForegroundColor Cyan
-    if ($DryRun) { Write-Host '  DRY RUN: nothing will be written or changed' -ForegroundColor Magenta }
-    Write-Host ('  Script folder: {0}' -f $BaseDir) -ForegroundColor DarkGray
+    Write-Host ('  Picons index cleaner v{0}' -f $ScriptVersion) -ForegroundColor Cyan -NoNewline
+    if ($DryRun) { Write-Host '   DRY RUN: nothing will be written or changed' -ForegroundColor Magenta } else { Write-Host '' }
 
     $defs = @(
         @{ Type = 'utf8snp'; Name = 'utf8snp.index'; Title = 'UTF8SNP Index'; AddName = 'Add-UTF.txt' },
@@ -999,48 +1097,48 @@ try {
 
     $copied = 0
     $unchanged = 0
-    $kept = 0
     $rejected = 0
     $withErrors = 0
     $ignoredTotal = 0
     $wouldWrite = 0
 
-    # 1) the picons folder (and the temporary work folder inside it)
+    # 1) folders
     if ($DryRun) { $dirsToMake = @($WorkDir) } else { $dirsToMake = @($PiconsDir, $WorkDir) }
     foreach ($d in $dirsToMake) {
-        if (-not (Test-Path -LiteralPath $d -PathType Container)) {
-            [void](New-Item -ItemType Directory -Path $d -Force)
-            if ($d -eq $PiconsDir) { Write-Info ('Folder created: {0}' -f $d) }
-        } elseif ($d -eq $PiconsDir) {
-            Write-Info ('Folder already exists: {0}' -f $d)
-        }
-    }
-    if ($DryRun -and -not (Test-Path -LiteralPath $PiconsDir -PathType Container)) {
-        Write-Info ('(dry run) folder {0} does not exist and was not created' -f $PiconsDir)
+        if (-not (Test-Path -LiteralPath $d -PathType Container)) { [void](New-Item -ItemType Directory -Path $d -Force) }
     }
 
-    # 2) the Add files (next to the script): created the first time, read every time
+    # 2) the Add files (next to the script): created the first time, read and checked every time
+    $createdAdd = @()
+    $secondRunShown = $false
     foreach ($def in $defs) {
         $def.Dest = Join-Path $PiconsDir $def.Name
         $def.AddPath = Join-Path $BaseDir $def.AddName
         $def.AddCount = 0
         $def.AddLines = @()
+        $def.AddEffective = @()
         $def.AddValid = $true
         $def.Merged = $false
+        $def.HasMerge = $false
+        $def.UpdateLines = @()
+        $def.RemoveKeys = @()
+        $def.ZapSrps = @()
+        $def.Overwritten = New-Object 'System.Collections.Generic.List[object]'
+        $def.Updated = New-Object 'System.Collections.Generic.List[object]'
+        $def.Removed = New-Object 'System.Collections.Generic.List[object]'
+        $def.Same = 0
+        $def.Dropped = 0
+        $def.StillUsing = New-Object 'System.Collections.Generic.List[string]'
 
         if (-not (Test-Path -LiteralPath $def.AddPath -PathType Leaf)) {
-            if ($DryRun) {
-                Write-Info ('(dry run) {0} does not exist and was not created' -f $def.AddPath)
-                continue
-            }
+            if ($DryRun) { continue }
             [System.IO.File]::WriteAllText($def.AddPath, (Get-AddTemplate $def.Type), $Utf8NoBom)
-            Write-Info ('File created: {0}  (write your new {1} lines in it)' -f $def.AddPath, $def.Name)
+            $createdAdd += $def.AddName
             continue
         }
 
         $add = Read-AddFile -FilePath $def.AddPath -Type $def.Type -Limit $DetailLimit
         if (-not $add.Ok) {
-            Write-Host ''
             Write-Err ('{0} {1}' -f $def.AddName, $add.Error)
             $def.AddValid = $false
             $withErrors++
@@ -1048,26 +1146,18 @@ try {
         }
         if ($add.Lines.Count -eq 0) { continue }
 
+        if (-not $secondRunShown) {
+            Write-Host '  2nd run: merging your lines into the index files, please wait...' -ForegroundColor Yellow
+            $secondRunShown = $true
+        }
         # same checks as for the index files; the line numbers shown are the ones of the Add file
         $checkPath = Join-Path $WorkDir ($def.AddName + '.check')
         [System.IO.File]::WriteAllText($checkPath, $add.CheckText, $Utf8NoBom)
         $clog = New-Object 'System.Collections.Generic.List[object]'
         $cres = New-CleanupResult
         Invoke-Cleanup -Type $def.Type -FilePath $checkPath -Log $clog -Result $cres -DetailLimit $DetailLimit
-        Write-Host ''
-        Write-Host ('  Checking the lines in {0} ({1} line(s) to add)' -f $def.AddName, $add.Lines.Count) -ForegroundColor Cyan
         if ($add.Fallback) {
-            Write-Warn ('{0} is not valid UTF-8: it was read as Windows-1252 (ANSI). Check the accented characters in your lines.' -f $def.AddName)
-        }
-        if ($add.Converted -gt 0) {
-            Write-Info ('{0} line(s) held a full service reference: converted to the SRP form' -f $add.Converted)
-        }
-        if ($add.Replaced -gt 0) {
-            Write-Info ('{0} line(s) contained ":": replaced automatically with "_"' -f $add.Replaced)
-        }
-        foreach ($smp in $add.Samples) { Write-Host ('           {0}' -f $smp) -ForegroundColor DarkGray }
-        if ($add.SamplesHidden -gt 0) {
-            Write-Host ('           ... {0} more (use -ShowAll to print all of them)' -f $add.SamplesHidden) -ForegroundColor DarkGray
+            Write-Warn ('{0} is not valid UTF-8: it was read as Windows-1252 (ANSI). Check the accented characters.' -f $def.AddName)
         }
         for ($k = 0; $k -lt $clog.Count; $k++) {
             # the checks ran on a temporary copy: show the real name of the Add file
@@ -1075,119 +1165,115 @@ try {
         }
         Show-Messages $clog
         if ($cres.Aborted -or $cres.Errors -gt 0) {
-            Write-Host ''
-            Write-Err ('{0} has errors (line numbers above are the ones of {0}).' -f $def.AddName)
-            Write-Host ('  Fix them and run the script again. Nothing has been changed for {0}.' -f $def.Name) -ForegroundColor Red
+            Write-Err ('{0}: fix the errors above (line numbers are the ones of {0}) and run again. {1} not changed.' -f $def.AddName, $def.Name)
             $def.AddValid = $false
             $withErrors++
-        } else {
-            $def.AddCount = $add.Lines.Count
-            $def.AddLines = $add.Lines
-            Write-Host ('  [OK] {0}: the lines are valid.' -f $def.AddName) -ForegroundColor Green
-            # logos named by the new lines that have no file in the local logos folder
-            $logoBases = Get-LogoBases $LogosDir
-            $noLogoFile = New-Object 'System.Collections.Generic.List[string]'
-            foreach ($al in $add.Lines) {
-                $ep = $al.LastIndexOf([char]'=')
-                if ($ep -ge 0) {
-                    $lg = $al.Substring($ep + 1).Trim().ToLowerInvariant()
-                    if ($lg.Length -gt 0 -and -not $logoBases.Contains($lg) -and -not $noLogoFile.Contains($lg)) { $noLogoFile.Add($lg) }
-                }
-            }
-            if ($noLogoFile.Count -gt 0) {
-                Write-Warn ('{0} logo(s) named in {1} have no file in {2}: {3}' -f $noLogoFile.Count, $def.AddName, $LogosDir, ((@($noLogoFile | Select-Object -First 8)) -join ', '))
-                Write-Host '         (fine if the logo is already in the GitHub repository; otherwise copy the file there before uploading)' -ForegroundColor DarkGray
+            continue
+        }
+        $def.AddCount = $add.Lines.Count
+        $def.AddLines = $add.Lines
+        $def.AddEffective = $add.Lines
+        $def.ZapSrps = @($add.ZapSrps)
+        if ($ShowAll) {
+            if ($add.Converted + $add.Replaced -gt 0) { Write-Info ('{0}: {1} line(s) converted' -f $def.AddName, ($add.Converted + $add.Replaced)) }
+            foreach ($smp in $add.Samples) { Write-Host ('           {0}' -f $smp) -ForegroundColor DarkGray }
+        }
+        # logos named by the new lines that have no file in the local logos folder
+        $logoBases = Get-LogoBases $LogosDir
+        $noLogoFile = New-Object 'System.Collections.Generic.List[string]'
+        foreach ($al in $add.Lines) {
+            $ep = $al.LastIndexOf([char]'=')
+            if ($ep -ge 0) {
+                $lg = $al.Substring($ep + 1).Trim().ToLowerInvariant()
+                if ($lg.Length -gt 0 -and -not $logoBases.Contains($lg) -and -not $noLogoFile.Contains($lg)) { $noLogoFile.Add($lg) }
             }
         }
+        if ($noLogoFile.Count -gt 0) {
+            $more = ''
+            if ($noLogoFile.Count -gt 8) { $more = ', ...' }
+            Write-Warn ('{0}: no file in logos\ for: {1}{2} (fine if already on GitHub)' -f $def.AddName, ((@($noLogoFile | Select-Object -First 8)) -join ', '), $more)
+        }
+    }
+    if ($createdAdd.Count -gt 0) {
+        Write-Info ('1st run: the index files are downloaded into picons and {0} created. Write your lines in the Add file(s) and run the script a 2nd time to merge and write them.' -f ($createdAdd -join ', '))
     }
 
-    # 3) decide what to do with each .index file. Everything is asked BEFORE writing anything.
+    # Cross-file rules (everything automatic)
+    #  - a zapChannel line pasted in Add-UTF.txt makes the channel known by name: its SRP is removed from srp.index
+    #    (its new line in Add-SRP.txt, with the new logo, is added as usual), see Merge-IndexLines
+    #  - the SRP lines of Add-SRP.txt also update the logo of the same SRP already present in utf8snp.index
+    $zapKeys = New-Object 'System.Collections.Generic.HashSet[string]' ([StringComparer]::Ordinal)
+    if ($defs[0].AddValid -and $defs[0].AddCount -gt 0) {
+        foreach ($z in $defs[0].ZapSrps) { [void]$zapKeys.Add($z.ToUpperInvariant()) }
+    }
+    if ($defs[1].AddValid) { $defs[1].RemoveKeys = @($zapKeys) }
+    if ($defs[1].AddValid -and $defs[1].AddCount -gt 0) {
+        $upd = New-Object 'System.Collections.Generic.List[string]'
+        foreach ($al in $defs[1].AddLines) {
+            $p = $al.LastIndexOf([char]'=')
+            $upd.Add($al)
+        }
+        $defs[0].UpdateLines = @($upd)
+    }
+
+    # 3) what to do with each .index file (no questions: a backup is always made before writing)
     foreach ($def in $defs) {
         $def.Mode = 'skip'
         if (-not $def.AddValid) {
             Write-Warn ('Skipping {0} until {1} is fixed' -f $def.Name, $def.AddName)
             continue
         }
-        if (-not (Test-Path -LiteralPath $def.Dest -PathType Leaf)) {
-            $def.Mode = 'download'
-            Write-Host ''
-            Write-Info ('{0} is not in picons yet: it will be downloaded from GitHub and created.' -f $def.Name)
-            continue
-        }
-
-        if ($Download) {
-            Write-Host ''
-            if ($Force -or $DryRun -or (Read-YesNo ('{0} already exists in picons. Replace it with a fresh copy from GitHub? (your own changes to it are lost, a backup is made)' -f $def.Name))) {
-                $def.Mode = 'download'
-            }
-        }
-        if ($def.Mode -ne 'skip') { continue }
-
-        $existingLines = 0
-        foreach ($l in [System.IO.File]::ReadLines($def.Dest)) { $existingLines++ }
-        $def.ExistingLines = $existingLines
-
-        Write-Host ''
-        Write-Host ('  {0}' -f $def.Name) -ForegroundColor Cyan
-        Write-Host ('    Current file : {0}  ({1:N0} lines)' -f $def.Dest, $existingLines)
-        if ($def.AddCount -gt 0) {
-            Write-Host ('    New lines    : {0} valid line(s) found in {1}:' -f $def.AddCount, $def.AddPath)
-            foreach ($l in @($def.AddLines | Select-Object -First 10)) { Write-Host ('        {0}' -f $l) -ForegroundColor Yellow }
-            if ($def.AddCount -gt 10) { Write-Host ('        ... and {0} more' -f ($def.AddCount - 10)) -ForegroundColor Yellow }
-            Write-Host '    If you answer Y:'
-            Write-Host ('      1. your new lines are added to {0} and the whole file is checked and sorted' -f $def.Name)
-            Write-Host ('      2. a backup of the current {0} is saved in {1}' -f $def.Name, $BackupDir)
-            Write-Host ('      3. {0} is emptied afterwards (a copy of it goes to the same backup folder)' -f $def.AddName)
-            Write-Host '    If an identifier already exists in the index, the EXISTING line is kept and yours is'
-            Write-Host '    ignored (you get a warning). Line numbers beyond the end of the current file in the'
-            Write-Host ('    messages are your new lines, in the order written in {0}.' -f $def.AddName)
-            $question = ('Merge the new lines into {0} now?' -f $def.Name)
-        } else {
-            Write-Host ('    New lines    : none ({0} is empty)' -f $def.AddName)
-            Write-Host '    If you answer Y, the existing file is checked, sorted and rewritten only if something'
-            Write-Host ('    changes; a backup is saved in {0} first.' -f $BackupDir)
-            $question = ('Check and sort {0} in place?' -f $def.Name)
-        }
-        Write-Host '    Nothing is written to the .index file until you answer.'
-        if ($Force -or $DryRun -or (Read-YesNo $question $true)) {
-            $def.Mode = 'inplace'
-        } else {
-            Write-Warn ('Keeping the existing {0}: it will not be touched (and {1} stays as it is)' -f $def.Name, $def.AddName)
-            $kept++
-        }
+        if ((-not (Test-Path -LiteralPath $def.Dest -PathType Leaf)) -or $Download) { $def.Mode = 'download' } else { $def.Mode = 'inplace' }
     }
 
-    # 4) download what is missing, then create the logos folder
-    $workSw = [System.Diagnostics.Stopwatch]::StartNew()    # from here on the time is counted: prompts are not
+    # 4) download what is missing, merge the Add files. srp.index goes first: the logos of the srp.index lines
+    #    that are removed are needed to clean utf8snp.index.
+    $workSw = [System.Diagnostics.Stopwatch]::StartNew()
     $jobs = New-Object System.Collections.Generic.List[object]
-    foreach ($def in $defs) {
-        $def.Note = ''
-        $def.DownloadSec = -1.0
+    $removedLogos = New-Object 'System.Collections.Generic.HashSet[string]' ([StringComparer]::Ordinal)
+    foreach ($def in @($defs[1], $defs[0])) {
         if ($def.Mode -eq 'skip') { continue }
         if ($def.Mode -eq 'inplace') {
             $def.Source = $def.Dest
-            $def.Note = 'Working on the existing file in picons (nothing downloaded)'
         } else {
             $def.Source = Join-Path $WorkDir $def.Name
-            Write-Host ''
-            Write-Info ('Downloading {0}/{1}' -f $BaseUrl, $def.Name)
-            $sw = [System.Diagnostics.Stopwatch]::StartNew()
+            Write-Info ('Downloading {0}' -f $def.Name)
             if (-not (Get-RemoteFile -Url ('{0}/{1}' -f $BaseUrl, $def.Name) -Destination $def.Source)) {
                 $rejected++
                 $def.Mode = 'failed'
                 continue
             }
-            $def.DownloadSec = $sw.Elapsed.TotalSeconds
-            $def.Note = ('Downloaded {0:N0} KB in {1:N1} s' -f ((Get-Item -LiteralPath $def.Source).Length / 1KB), $def.DownloadSec)
         }
         $jobPath = $def.Source
-        if ($def.AddCount -gt 0) {
-            # number of lines of the index before the new ones (to tell which lines are yours in the messages)
-            if ($def.Mode -eq 'inplace') { $def.SrcLines = $def.ExistingLines } else { $def.SrcLines = Get-LineCount $def.Source }
-            $jobPath = Join-Path $WorkDir ($def.Name + '.merge')
-            New-MergedSource -Source $def.Source -AddLines $def.AddLines -Out $jobPath
-            $def.Merged = $true
-            $def.Note = $def.Note + ('{0}{1} new line(s) from {2} added for checking' -f $(if ($def.Note.Length -gt 0) { '. ' } else { '' }), $def.AddCount, $def.AddName)
+        $updCount = @($def.UpdateLines).Count
+        $remKeys = @($def.RemoveKeys)
+        $remLogos = $null
+        if ($def.Type -eq 'utf8snp' -and $removedLogos.Count -gt 0) { $remLogos = $removedLogos }
+        if ($def.AddCount -gt 0 -or $updCount -gt 0 -or $remKeys.Count -gt 0 -or $null -ne $remLogos) {
+            $mergePath = Join-Path $WorkDir ($def.Name + '.merge')
+            $m = Merge-IndexLines -Type $def.Type -Source $def.Source -AddLines $def.AddLines -UpdateLines $def.UpdateLines -RemoveKeys $remKeys -RemoveLogos $remLogos
+            if ($null -ne $m) {
+                [System.IO.File]::WriteAllText($mergePath, $m.Text, $Utf8NoBom)
+                $def.SrcLines = $m.SrcLines
+                $def.AddEffective = $m.AddKept
+                $def.Overwritten = $m.Overwritten
+                $def.Updated = $m.Updated
+                $def.Removed = $m.Removed
+                $def.Same = $m.Same
+                $def.Dropped = $m.Dropped
+                $def.StillUsing = $m.StillUsing
+                foreach ($x in $m.RemovedLogos) { if ($x.Length -gt 0) { [void]$removedLogos.Add($x) } }
+                $jobPath = $mergePath
+            } elseif ($def.AddCount -gt 0) {
+                # the source is not valid UTF-8: plain append, the checks will report the corrupted lines
+                $def.SrcLines = Get-LineCount $def.Source
+                New-MergedSource -Source $def.Source -AddLines $def.AddLines -Out $mergePath
+                $jobPath = $mergePath
+            }
+            if ($jobPath -ne $def.Source) {
+                $def.HasMerge = $true
+                if ($def.AddCount -gt 0) { $def.Merged = $true }
+            }
         }
         $def.Log = New-Object 'System.Collections.Generic.List[object]'
         $job = @{ Type = $def.Type; Path = $jobPath; Log = $def.Log; Result = (New-CleanupResult) }
@@ -1197,13 +1283,10 @@ try {
 
     if (-not $DryRun -and -not (Test-Path -LiteralPath $LogosDir -PathType Container)) {
         [void](New-Item -ItemType Directory -Path $LogosDir -Force)
-        Write-Info ('Folder created: {0}' -f $LogosDir)
     }
 
     # 5) check and sort (one after the other, or on 2 CPU cores with -Parallel)
     if ($jobs.Count -gt 0) {
-        Write-Host ''
-        $sw = [System.Diagnostics.Stopwatch]::StartNew()
         $parallel = $Parallel -and ($jobs.Count -gt 1)
         if ($parallel) {
             try {
@@ -1220,95 +1303,71 @@ try {
                 Invoke-Cleanup -Type $job.Type -FilePath $job.Path -Log $job.Log -Result $job.Result -DetailLimit $DetailLimit
             }
         }
-        $mode = 'sequential'
-        if ($parallel) { $mode = 'parallel' }
-        Write-Info ('Checks and sorting took {0:N1} s ({1}, {2} file(s))' -f $sw.Elapsed.TotalSeconds, $mode, $jobs.Count)
     }
 
-    # 6) report per file, write the results, empty the Add files that were merged
-    $archived = $false
+    # 6) one result line per file; write the results, empty the Add files that were merged
+    $listLimit = 5
+    if ($ShowAll) { $listLimit = -1 }
     foreach ($def in $defs) {
         if ($def.Mode -eq 'skip' -or $def.Mode -eq 'failed') { continue }
-
-        Write-Host ''
-        Write-Host ('=== {0} ===' -f $def.Name) -ForegroundColor Cyan
-        Write-Info $def.Note
-        Show-Messages $def.Log
         $res = $def.Job.Result
+        Show-Messages $def.Log
 
         if ($res.Aborted) {
-            Write-Host ''
-            Write-Host ('  [X] {0} NOT modified (it contains errors that must be fixed first).' -f $def.Name) -ForegroundColor Red
-            if ($def.Merged) { Write-Host ('      {0} has NOT been emptied.' -f $def.AddName) -ForegroundColor Red }
+            $note = ''
+            if ($def.Merged) { $note = (' {0} not emptied.' -f $def.AddName) }
+            Write-Host ('  [X] {0} NOT modified (errors above).{1}' -f $def.Name, $note) -ForegroundColor Red
             $rejected++
             continue
         }
-        if ($def.Merged) { $res.Changed = $true }
-        Show-Summary -Title $def.Title -FilePath $def.Source -R $res
-        if ($res.Errors -gt 0) { $withErrors++ }
+        if ($def.HasMerge) { $res.Changed = $true }
+        if ($res.Errors -gt 0) {
+            $withErrors++
+            Write-Warn ('{0}: {1} error(s) logged but not fixed: review manually' -f $def.Name, $res.Errors)
+        }
 
-        # your lines that were dropped because the identifier is already in the index (or repeated in the Add file)
+        # your lines dropped because the identifier is repeated in the Add file
         $ignored = @()
         if ($def.Merged -and $res.DupInfo) {
             foreach ($d in $res.DupInfo) {
                 $ix = [int]$d[0] - [int]$def.SrcLines - 1
-                if ($ix -ge 0 -and $ix -lt $def.AddLines.Count) {
-                    $ignored += [pscustomobject]@{ Line = $def.AddLines[$ix]; OtherLogo = $d[3]; InAdd = ([int]$d[2] -gt [int]$def.SrcLines) }
+                if ($ix -ge 0 -and $ix -lt @($def.AddEffective).Count) {
+                    $ignored += [pscustomobject]@{ Line = @($def.AddEffective)[$ix]; OtherLogo = $d[3]; InAdd = ([int]$d[2] -gt [int]$def.SrcLines) }
                 }
             }
         }
-        if ($ignored.Count -gt 0) {
-            $ignoredTotal += $ignored.Count
-            Write-Host ''
-            Write-Warn ('{0} of your line(s) NOT added to {1}:' -f $ignored.Count, $def.Name)
-            foreach ($g in $ignored) {
-                if ($g.InAdd) { $why = ('repeated in {0}' -f $def.AddName) } else { $why = ("already in the index with logo '{0}': the existing line is kept" -f $g.OtherLogo) }
-                Write-Host ('      {0}   ({1})' -f $g.Line, $why) -ForegroundColor Yellow
-            }
-        }
+        $ignoredTotal += $ignored.Count
 
+        # write (a backup of the previous file is saved first)
         $newText = $res.Out
-        Write-Host ''
         $writeNeeded = $true
-
+        $status = ''
         if ($def.Mode -eq 'inplace' -and -not $res.Changed) {
-            Write-Info ('{0} is already clean and sorted: nothing to rewrite' -f $def.Name)
             $unchanged++
             $writeNeeded = $false
+            $status = 'already clean'
         }
-
         if ($writeNeeded -and (Test-Path -LiteralPath $def.Dest -PathType Leaf)) {
             $oldText = $Utf8NoBom.GetString([System.IO.File]::ReadAllBytes($def.Dest))
             if ([string]::Equals($oldText, $newText, [StringComparison]::Ordinal)) {
-                Write-Info ('{0} in picons is already up to date: nothing to write' -f $def.Name)
                 $unchanged++
                 $writeNeeded = $false
-            } else {
-                $diff = Get-Differences -Old $oldText -New $newText
-                if ($diff[0] -eq 0 -and $diff[1] -eq 0) {
-                    Write-Info 'Compared with the existing copy: same lines, only their order or spacing changed'
-                } else {
-                    Write-Info ('Compared with the existing copy: +{0} new/changed lines, -{1} removed/changed lines' -f $diff[0], $diff[1])
-                }
-                if (-not $NoBackup -and -not $DryRun) {
-                    [void](New-Item -ItemType Directory -Path $BackupDir -Force)
-                    Copy-Item -LiteralPath $def.Dest -Destination (Join-Path $BackupDir $def.Name) -Force
-                    Write-Info ('Previous copy backed up in {0}' -f $BackupDir)
-                }
+                $status = 'already up to date'
+            } elseif (-not $NoBackup -and -not $DryRun) {
+                [void](New-Item -ItemType Directory -Path $BackupDir -Force)
+                Copy-Item -LiteralPath $def.Dest -Destination (Join-Path $BackupDir $def.Name) -Force
+                $backupUsed = $true
             }
-        } elseif ($writeNeeded) {
-            Write-Info 'No previous file in picons: first copy'
         }
-
         if ($writeNeeded) {
             if ($DryRun) {
-                Write-Host ('  [DRY RUN] {0} would be written: {1}' -f $def.Name, $def.Dest) -ForegroundColor Magenta
+                $status = 'would be written'
                 $wouldWrite++
             } else {
                 $tmp = $def.Dest + '.tmp'
                 [System.IO.File]::WriteAllText($tmp, $newText, $Utf8NoBom)
                 Move-Item -LiteralPath $tmp -Destination $def.Dest -Force
-                Write-Host ('  [OK] Written: {0}' -f $def.Dest) -ForegroundColor Green
+                $status = 'written'
                 $copied++
             }
         }
@@ -1316,50 +1375,78 @@ try {
         # the new lines are now in the index (or were already there): empty the Add file, keep a copy
         if ($def.Merged) {
             if ($DryRun) {
-                Write-Host ('  [DRY RUN] {0} would be emptied (a copy would be saved in backup)' -f $def.AddName) -ForegroundColor Magenta
+                $status = $status + '; ' + $def.AddName + ' would be emptied'
             } else {
                 [void](New-Item -ItemType Directory -Path $BackupDir -Force)
                 Copy-Item -LiteralPath $def.AddPath -Destination (Join-Path $BackupDir $def.AddName) -Force
+                $backupUsed = $true
                 $addText = Get-AddTemplate $def.Type
                 if ($ignored.Count -gt 0) {
                     # the lines that were not added stay in the Add file, as comments
-                    $extra = @('#', ('# NOT added: the identifier is already in {0} (the existing line was kept).' -f $def.Name), '# To replace it: delete the existing line from the .index file, then remove the leading # below.')
+                    $extra = @('#', '# NOT added: the identifier is repeated in this file (the first line was kept).', '# To use one of them instead: delete the other line with the same identifier, then remove the leading # below.')
                     foreach ($g in $ignored) { $extra += ('# ' + $g.Line) }
                     $addText = $addText + (($extra -join "`r`n") + "`r`n")
                 }
                 [System.IO.File]::WriteAllText($def.AddPath, $addText, $Utf8NoBom)
-                Write-Host ('  [OK] {0} emptied (copy saved in {1})' -f $def.AddName, $BackupDir) -ForegroundColor Green
-                if ($ignored.Count -gt 0) { Write-Host ('       the {0} line(s) not added were left in it as comments' -f $ignored.Count) -ForegroundColor Yellow }
-                $archived = $true
+                $status = $status + '; ' + $def.AddName + ' emptied'
             }
+        }
+
+        # the result line
+        $bits = @()
+        $nNew = [Math]::Max(0, $def.AddCount - $def.Dropped - $ignored.Count - $def.Same - $def.Overwritten.Count)
+        if ($nNew -gt 0) { $bits += ('{0} added' -f $nNew) }
+        if ($def.Overwritten.Count -gt 0) { $bits += ('{0} replaced' -f $def.Overwritten.Count) }
+        if ($def.Removed.Count -gt 0) { $bits += ('{0} removed' -f $def.Removed.Count) }
+        if ($def.Updated.Count -gt 0) { $bits += ('{0} logo(s) updated' -f $def.Updated.Count) }
+        if ($def.Same -gt 0) { $bits += ('{0} already identical' -f $def.Same) }
+        if ($def.Dropped -gt 0) { $bits += ('{0} skipped (channel now by name)' -f $def.Dropped) }
+        if ($ignored.Count -gt 0) { $bits += ('{0} not added (repeated)' -f $ignored.Count) }
+        $dupOther = $res.Duplicates - $ignored.Count
+        if ($dupOther -gt 0) { $bits += ('{0} duplicate(s) cleaned' -f $dupOther) }
+        if ($res.Fixed.Count -gt 0) { $bits += ('{0} fixed' -f $res.Fixed.Count) }
+        if ($res.Empty -gt 0) { $bits += ('{0} empty line(s) removed' -f $res.Empty) }
+        if ($bits.Count -eq 0) { $bits += 'no changes' }
+        $color = 'Green'
+        if ($status -like 'already*') { $color = 'DarkGray' }
+        Write-Host ('  {0,-14}' -f $def.Name) -NoNewline -ForegroundColor Cyan
+        Write-Host (($bits -join ', ') + '  ') -NoNewline
+        Write-Host ('[{0}]' -f $status.TrimStart(';', ' ')) -ForegroundColor $color
+
+        if ($def.Overwritten.Count -gt 0) {
+            Write-Host '    replaced (old -> new):' -ForegroundColor DarkGray
+            Write-Samples -Items $def.Overwritten -Limit $listLimit -Indent '      '
+        }
+        if ($def.Removed.Count -gt 0) {
+            Write-Host '    removed:' -ForegroundColor DarkGray
+            Write-Samples -Items $def.Removed -Limit $listLimit -Indent '      '
+        }
+        if ($def.Updated.Count -gt 0) {
+            Write-Host '    logo updated (old -> new):' -ForegroundColor DarkGray
+            Write-Samples -Items $def.Updated -Limit $listLimit -Indent '      '
+        }
+        if ($ignored.Count -gt 0) {
+            Write-Host '    not added:' -ForegroundColor DarkGray
+            foreach ($g in @($ignored | Select-Object -First $(if ($ShowAll) { 100000 } else { $listLimit }))) {
+                if ($g.InAdd) { $why = ('repeated in {0}' -f $def.AddName) } else { $why = ("already in the index with logo '{0}'" -f $g.OtherLogo) }
+                Write-Host ('      {0}   ({1})' -f $g.Line, $why) -ForegroundColor DarkGray
+            }
+        }
+        if ($def.StillUsing.Count -gt 0) {
+            Write-Warn ('{0}: {1} line(s) still use the old logo ({2}); nothing was removed (another satellite?):' -f $def.Name, $def.StillUsing.Count, (@($removedLogos) -join ', '))
+            $showN = $listLimit
+            if ($ShowAll) { $showN = $def.StillUsing.Count }
+            foreach ($u in @($def.StillUsing | Select-Object -First $showN)) { Write-Host ('      {0}' -f $u) -ForegroundColor DarkGray }
+            if ($def.StillUsing.Count -gt $showN) { Write-Host ('      ... {0} more (use -ShowAll to print all of them)' -f ($def.StillUsing.Count - $showN)) -ForegroundColor DarkGray }
         }
     }
 
-    # 7) final summary and cleanup
-    Write-Host ''
-    Write-Host '=== Summary ===' -ForegroundColor Cyan
-    if ($DryRun) { Write-Host '  DRY RUN: no file was changed' -ForegroundColor Magenta }
-    Write-Host ('  Files written/updated    : {0}' -f $copied)
-    if ($wouldWrite -gt 0) { Write-Host ('  Would be written (dry run): {0}' -f $wouldWrite) -ForegroundColor Magenta }
-    if ($ignoredTotal -gt 0) { Write-Host ('  Your lines not added     : {0} (identifier already present)' -f $ignoredTotal) -ForegroundColor Yellow }
-    if ($unchanged -gt 0) { Write-Host ('  Already clean/up to date : {0}' -f $unchanged) }
-    if ($kept -gt 0) { Write-Host ('  Kept untouched (your choice): {0}' -f $kept) -ForegroundColor Yellow }
-    if ($rejected -gt 0) { Write-Host ('  Files rejected           : {0}' -f $rejected) -ForegroundColor Red }
-    if ($withErrors -gt 0) { Write-Host ('  Files with errors to review: {0}' -f $withErrors) -ForegroundColor Yellow }
-    Write-Host ('  picons folder            : {0}' -f $PiconsDir)
-    Write-Host ('  logos folder             : {0}' -f $LogosDir)
-
-    # Processing time: per file and total (time spent answering the prompts is not counted)
-    Write-Host ''
-    Write-Host '  Processing time:'
-    foreach ($def in $defs) {
-        if ($def.Mode -eq 'skip' -or $def.Mode -eq 'failed') { continue }
-        if ($def.DownloadSec -ge 0) { $dl = ('{0,6:N1} s' -f $def.DownloadSec) } else { $dl = '     - ' }
-        Write-Host ('    {0,-15} download {1}   checks and sorting {2,6:N1} s' -f $def.Name, $dl, $def.Job.Result.Seconds)
-    }
-    Write-Host ('    Total           {0,6:N1} s (downloads + checks + writing files)' -f $workSw.Elapsed.TotalSeconds)
-
+    # 7) end
     if ($rejected -gt 0 -or $withErrors -gt 0) { $exitCode = 1 }
+    Write-Host ''
+    $endBits = @(('{0:N1} s' -f $workSw.Elapsed.TotalSeconds))
+    if ($backupUsed) { $endBits += ('backup: {0}' -f $BackupDir) }
+    Write-Host ('  Done ({0})' -f ($endBits -join ', ')) -ForegroundColor DarkGray
 
     if ($KeepDownload -or $rejected -gt 0) {
         Write-Host ('  Work files kept in: {0}' -f $WorkDir) -ForegroundColor DarkGray
@@ -1367,119 +1454,110 @@ try {
         Remove-Item -LiteralPath $WorkDir -Recurse -Force -ErrorAction SilentlyContinue
     }
 
-    if ($DryRun) {
-        Write-Host ''
-        Write-Host '  Dry run finished: nothing was changed. Run the script again without -DryRun to apply.' -ForegroundColor Magenta
-        Write-Host ''
-    }
-
-    # Next steps: what is ready, how to add logos and lines, how to upload
-    if (-not $DryRun) {
-    # the GitHub user name is used only when it is given with -GitHubUser
     $ghUser = ''
     if ($GitHubUser) {
         if ($GitHubUser.Trim() -match $UserNameRe) { $ghUser = $GitHubUser.Trim() }
         else { Write-Warn ('"{0}" is not a valid GitHub user name: ignored' -f $GitHubUser) }
     }
     if ($ghUser) { $UploadUrl = $UploadUrlFmt -f $ghUser } else { $UploadUrl = $UploadUrlFmt -f 'YOUR_GITHUB_USERNAME' }
-    $logoRe = '^([a-z0-9_-]+)\.(default|light|dark|black|white)\.(png|svg)$'
-    $logoFiles = @(Get-ChildItem -LiteralPath $LogosDir -File -ErrorAction SilentlyContinue)
-    $badNames = @($logoFiles | Where-Object { $_.Name -cnotmatch $logoRe })
 
-    # logo names used by the lines of the two index files (to spot logo files that no line points to)
-    $usedLogos = New-Object 'System.Collections.Generic.HashSet[string]' ([StringComparer]::Ordinal)
-    foreach ($def in $defs) {
-        $def.FinalLines = 0
-        if (Test-Path -LiteralPath $def.Dest -PathType Leaf) {
-            foreach ($l in [System.IO.File]::ReadLines($def.Dest)) {
-                $def.FinalLines++
-                $p = $l.LastIndexOf([char]'=')
-                if ($p -ge 0) { [void]$usedLogos.Add($l.Substring($p + 1).Trim()) }
+    if ($DryRun) {
+        Write-Host '  Dry run finished: nothing was changed. Run again without -DryRun to apply.' -ForegroundColor Magenta
+    } else {
+        $logoRe = '^([a-z0-9_-]+)\.(default|light|dark|black|white)\.(png|svg)$'
+        $logoFiles = @(Get-ChildItem -LiteralPath $LogosDir -File -ErrorAction SilentlyContinue)
+        $badNames = @($logoFiles | Where-Object { $_.Name -cnotmatch $logoRe })
+
+        # logo names used by the lines of the two index files (to spot logo files that no line points to)
+        $usedLogos = New-Object 'System.Collections.Generic.HashSet[string]' ([StringComparer]::Ordinal)
+        foreach ($def in $defs) {
+            if (Test-Path -LiteralPath $def.Dest -PathType Leaf) {
+                foreach ($l in [System.IO.File]::ReadLines($def.Dest)) {
+                    $p = $l.LastIndexOf([char]'=')
+                    if ($p -ge 0) { [void]$usedLogos.Add($l.Substring($p + 1).Trim()) }
+                }
             }
         }
-    }
-    $unused = @($logoFiles | Where-Object { $_.Name -cmatch $logoRe -and -not $usedLogos.Contains($Matches[1]) })
+        $unused = @($logoFiles | Where-Object { $_.Name -cmatch $logoRe -and -not $usedLogos.Contains($Matches[1]) })
 
-    Write-Host ''
-    Write-Host '=== Next steps ===' -ForegroundColor Cyan
-    Write-Host ''
-    Write-Host '  Ready in the picons folder:'
-    foreach ($def in $defs) {
-        if (Test-Path -LiteralPath $def.Dest -PathType Leaf) {
-            $lineCount = $def.FinalLines
-            Write-Host ('    {0,-15}{1,8:N0} lines {2,8:N0} KB' -f $def.Name, $lineCount, ((Get-Item -LiteralPath $def.Dest).Length / 1KB))
-        } else {
-            Write-Host ('    {0,-15}MISSING' -f $def.Name) -ForegroundColor Red
+        foreach ($def in $defs) {
+            $pending = 0
+            if ($def.AddValid -and (Test-Path -LiteralPath $def.AddPath -PathType Leaf)) {
+                $a = Read-AddFile -FilePath $def.AddPath -Type $def.Type -Limit 0
+                if ($a.Ok) { $pending = $a.Lines.Count }
+            }
+            if ($pending -gt 0) { Write-Warn ('{0} still has {1} line(s) waiting: run the script again' -f $def.AddName, $pending) }
+        }
+        if ($badNames.Count -gt 0) {
+            Write-Warn ('{0} file(s) in logos\ with a wrong name (must be <logo>.default.png/.svg, lowercase): {1}' -f $badNames.Count, ((@($badNames | Select-Object -First 5 | ForEach-Object { $_.Name })) -join ', '))
+        }
+        if ($unused.Count -gt 0) {
+            Write-Warn ('{0} logo file(s) not used by any index line: {1}' -f $unused.Count, ((@($unused | Select-Object -First 5 | ForEach-Object { $_.Name })) -join ', '))
+        }
+        if ($rejected -gt 0 -or $withErrors -gt 0) { Write-Warn 'Some files were rejected or have errors: fix them and re-run before uploading.' }
+        $anyDownloaded = $false
+        $anyMerged = $false
+        foreach ($def in $defs) {
+            if ($def.Mode -eq 'download') { $anyDownloaded = $true }
+            if ($def.Merged) { $anyMerged = $true }
+        }
+        if ($rejected -eq 0 -and $anyMerged -and $copied -gt 0) {
+            Write-Host ''
+            Write-Host '  Next (2nd run done): upload to GitHub' -ForegroundColor Cyan
+            Write-Host ('    1. open {0}  ->  Add file > Upload files' -f $UploadUrl)
+            Write-Host '    2. drag utf8snp.index, srp.index and the logos folder from picons (not backup or _download), then Commit changes'
+            Write-Host '    3. open a pull request from your fork to picons/picons'
+        } elseif ($anyDownloaded -and -not $anyMerged) {
+            Write-Host ''
+            Write-Host '  Next (1st run done):' -ForegroundColor Cyan
+            Write-Host '    1. copy your logo files into picons\logos  (<logo>.default.png or .svg)'
+            Write-Host '    2. write one line per channel in Add-UTF.txt and/or Add-SRP.txt (instructions inside)'
+            Write-Host '    3. run this script again (2nd run)'
+        }
+        if ($Guide) {
+        Write-Host ''
+        Write-Host '  HOW TO ADD A NEW LOGO' -ForegroundColor Cyan
+        Write-Host ''
+        Write-Host '  1. Copy the logo file(s) into the logos folder:'
+        Write-Host ('       {0}' -f $LogosDir) -ForegroundColor Yellow
+        Write-Host '     File name:  <logo>.default.png  or  <logo>.default.svg   e.g.  novipazar.default.svg'
+        Write-Host '     (the variants .light  .dark  .black  .white are also allowed, png or svg)'
+        Write-Host '     <logo> = lowercase, only letters, digits, _ and -'
+        Write-Host ''
+        Write-Host '  2. Write ONE NEW LINE per channel in the Add files, next to this script:'
+        Write-Host ('       {0}' -f $BaseDir) -ForegroundColor Yellow
+        Write-Host '       Add-UTF.txt   goes into utf8snp.index   <channel name>=<logo>    e.g.  kabelio itv2=itv2'
+        Write-Host '                                         or    <SRP>=<logo>             e.g.  1D5_B_1_130000=novipazar'
+        Write-Host '       Add-SRP.txt   goes into srp.index       <SRP>=<logo>             e.g.  1D5_B_1_130000=novipazar'
+        Write-Host '     Open them with a text editor (Notepad, Notepad++, VS Code...) and save as UTF-8.'
+        Write-Host '     Any order is fine; lines starting with # are ignored (the instructions are inside the files).'
+        Write-Host '     <logo> is the name of the logo file of step 1 without ".default.png" / ".default.svg".'
+        Write-Host '     The SRP is made of the 4 hex values SID, TSID, ONID and NAMESPACE of the channel,'
+        Write-Host '     uppercase, without leading zeros, separated by "_". In an enigma2 service reference'
+        Write-Host '     1:0:TYPE:SID:TSID:ONID:NAMESPACE:0:0:0:  they are the 4 values after the TYPE.'
+        Write-Host ''
+        Write-Host '  3. Run this script again. It checks your lines, shows what it is going to do and asks'
+        Write-Host '     before writing into the .index files (a backup is saved in backup). Your lines'
+        Write-Host '     are merged, the files are sorted and the Add files are emptied.'
+        Write-Host ''
+        Write-Host '  HOW TO UPLOAD TO GITHUB' -ForegroundColor Cyan
+        Write-Host ''
+        Write-Host '  4. Open the build-source folder of YOUR fork of picons/picons in your browser:'
+        Write-Host ('       {0}' -f $UploadUrl) -ForegroundColor Yellow
+        Write-Host ('     No fork yet? Open {0} and click "Fork" first.' -f $UpstreamUrl)
+        Write-Host '  5. Click "Add file" ---> "Upload files"'
+        Write-Host '  6. Drag and drop from the picons folder:'
+        Write-Host ('       {0}' -f $PiconsDir) -ForegroundColor Yellow
+        Write-Host '       - utf8snp.index and srp.index'
+        Write-Host '       - the "logos" folder'
+        Write-Host '     (do NOT upload the "backup" and "_download" folders)'
+        Write-Host '  7. Write a short commit message (e.g. "Add <logo> logo") and click the green button at'
+        Write-Host '     the bottom ("Commit changes").'
+        Write-Host ('  8. Then open {0} and click "Compare & pull request"' -f $UpstreamUrl)
+        Write-Host '     (or "Contribute" ---> "Open pull request") to send your changes to the picons repository.'
+        Write-Host ''
         }
     }
-    if ($logoFiles.Count -eq 0) {
-        Write-Host '    logos\         EMPTY (see step 1)' -ForegroundColor Yellow
-    } else {
-        Write-Host ('    logos\         {0} file(s)' -f $logoFiles.Count)
-    }
-    foreach ($def in $defs) {
-        $pending = 0
-        if ($def.AddValid -and (Test-Path -LiteralPath $def.AddPath -PathType Leaf)) {
-            $a = Read-AddFile -FilePath $def.AddPath -Type $def.Type -Limit 0
-            if ($a.Ok) { $pending = $a.Lines.Count }
-        }
-        if ($pending -gt 0) {
-            Write-Warn ('{0} still has {1} line(s) waiting to be merged: run the script again (step 3)' -f $def.AddName, $pending)
-        }
-    }
-    if ($badNames.Count -gt 0) {
-        Write-Warn ('{0} file(s) in logos\ with a wrong name (must be <logo>.default.png/.svg, lowercase): {1}' -f $badNames.Count, ((@($badNames | Select-Object -First 5 | ForEach-Object { $_.Name })) -join ', '))
-    }
-    if ($unused.Count -gt 0) {
-        Write-Warn ('{0} logo file(s) are not used by any line of the .index files, write a line for them (step 2): {1}' -f $unused.Count, ((@($unused | Select-Object -First 5 | ForEach-Object { $_.Name })) -join ', '))
-    }
-    if ($rejected -gt 0 -or $withErrors -gt 0) {
-        Write-Warn 'Some files were rejected or have errors: fix them and re-run before uploading.'
-    }
-
-    Write-Host ''
-    Write-Host '  HOW TO ADD A NEW LOGO' -ForegroundColor Cyan
-    Write-Host ''
-    Write-Host '  1. Copy the logo file(s) into the logos folder:'
-    Write-Host ('       {0}' -f $LogosDir) -ForegroundColor Yellow
-    Write-Host '     File name:  <logo>.default.png  or  <logo>.default.svg   e.g.  novipazar.default.svg'
-    Write-Host '     (the variants .light  .dark  .black  .white are also allowed, png or svg)'
-    Write-Host '     <logo> = lowercase, only letters, digits, _ and -'
-    Write-Host ''
-    Write-Host '  2. Write ONE NEW LINE per channel in the Add files, next to this script:'
-    Write-Host ('       {0}' -f $BaseDir) -ForegroundColor Yellow
-    Write-Host '       Add-UTF.txt   goes into utf8snp.index   <channel name>=<logo>    e.g.  kabelio itv2=itv2'
-    Write-Host '                                         or    <SRP>=<logo>             e.g.  1D5_B_1_130000=novipazar'
-    Write-Host '       Add-SRP.txt   goes into srp.index       <SRP>=<logo>             e.g.  1D5_B_1_130000=novipazar'
-    Write-Host '     Open them with a text editor (Notepad, Notepad++, VS Code...) and save as UTF-8.'
-    Write-Host '     Any order is fine; lines starting with # are ignored (the instructions are inside the files).'
-    Write-Host '     <logo> is the name of the logo file of step 1 without ".default.png" / ".default.svg".'
-    Write-Host '     The SRP is made of the 4 hex values SID, TSID, ONID and NAMESPACE of the channel,'
-    Write-Host '     uppercase, without leading zeros, separated by "_". In an enigma2 service reference'
-    Write-Host '     1:0:TYPE:SID:TSID:ONID:NAMESPACE:0:0:0:  they are the 4 values after the TYPE.'
-    Write-Host ''
-    Write-Host '  3. Run this script again. It checks your lines, shows what it is going to do and asks'
-    Write-Host '     before writing into the .index files (a backup is saved in backup). Your lines'
-    Write-Host '     are merged, the files are sorted and the Add files are emptied.'
-    Write-Host ''
-    Write-Host '  HOW TO UPLOAD TO GITHUB' -ForegroundColor Cyan
-    Write-Host ''
-    Write-Host '  4. Open the build-source folder of YOUR fork of picons/picons in your browser:'
-    Write-Host ('       {0}' -f $UploadUrl) -ForegroundColor Yellow
-    Write-Host ('     No fork yet? Open {0} and click "Fork" first.' -f $UpstreamUrl)
-    Write-Host '  5. Click "Add file" ---> "Upload files"'
-    Write-Host '  6. Drag and drop from the picons folder:'
-    Write-Host ('       {0}' -f $PiconsDir) -ForegroundColor Yellow
-    Write-Host '       - utf8snp.index and srp.index'
-    Write-Host '       - the "logos" folder'
-    Write-Host '     (do NOT upload the "backup" and "_download" folders)'
-    Write-Host '  7. Write a short commit message (e.g. "Add <logo> logo") and click the green button at'
-    Write-Host '     the bottom ("Commit changes").'
-    Write-Host ('  8. Then open {0} and click "Compare & pull request"' -f $UpstreamUrl)
-    Write-Host '     (or "Contribute" ---> "Open pull request") to send your changes to the picons repository.'
-    Write-Host ''
-
-    } # end of the next steps (skipped with -DryRun)
 
     if ($Open -and -not $DryRun) {
         try {
@@ -1501,7 +1579,7 @@ catch {
 if ($transcribing) {
     try { Stop-Transcript | Out-Null } catch { }
     try {
-        if ($BackupDir -and ($exitCode -ne 0 -or (Test-Path -LiteralPath $BackupDir -PathType Container))) {
+        if ($BackupDir -and ($exitCode -ne 0 -or $copied -gt 0 -or (Test-Path -LiteralPath $BackupDir -PathType Container))) {
             [void](New-Item -ItemType Directory -Path $BackupDir -Force)
             Copy-Item -LiteralPath $LogTemp -Destination (Join-Path $BackupDir 'log.txt') -Force
             Write-Host ('  Log saved in {0}' -f (Join-Path $BackupDir 'log.txt')) -ForegroundColor DarkGray
