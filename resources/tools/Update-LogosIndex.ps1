@@ -31,8 +31,8 @@
         it is checked, sorted and rewritten in place (a backup is saved first); with -Download it is
         replaced by a fresh copy instead
       - no question is ever asked
-      - if a file fails a blocking check (missing '=', invalid SRP, invalid logo name, corrupted
-        UTF-8) it is NOT modified, and the Add file is not emptied
+      - if an .index file fails a blocking check (missing '=', invalid SRP, invalid logo name, or text that
+        is not valid UTF-8) it is NOT modified, and the Add file is not emptied
       - prints the time of each file and the total, and the steps to upload to GitHub
       - in an Add file a ":" in an SRP (or in the logo) is replaced with "_" (in a channel name the checks
         remove it, as the picons rules say) and a full service reference (1:0:TYPE:SID:TSID:ONID:NAMESPACE:0:0:0:
@@ -52,7 +52,8 @@
       - the SRP lines of Add-SRP.txt also update the logo of the same SRP when it is already in
         utf8snp.index (the SRP is never added there, only its logo is replaced)
       - your lines repeated inside the same Add file are listed, and kept in the Add file as comments
-      - an Add file saved as ANSI (Windows-1252) instead of UTF-8 is read anyway, with a warning
+      - an Add file saved as ANSI (Windows-1252) instead of UTF-8 is read anyway, with a warning (the .index
+        files, instead, must be valid UTF-8: otherwise they are not modified)
       - with -GitHubUser <name> the upload link points to your fork
         (https://github.com/<name>/picons/tree/master/build-source)
       - the output of the run is saved in backup\<date-time>\log.txt when something was written or
@@ -110,7 +111,7 @@
     powershell -ExecutionPolicy Bypass -File .\Update-LogosIndex.ps1
 
 .NOTES
-    Version 1.4.5
+    Version 1.4.6
     Works with Windows PowerShell 5.1 and PowerShell 7.
     Exit code: 0 = ok, 1 = at least one file rejected or with errors to review, 2 = general error.
 #>
@@ -132,7 +133,7 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
-$ScriptVersion = '1.4.5'
+$ScriptVersion = '1.4.6'
 
 # ----------------------------------------------------------------------------
 # Basic settings
@@ -260,12 +261,8 @@ function Get-RemoteFile {
 # ============================================================================
 
 # Equivalent of enigma2 Directories.sanitizeFilename (same as the Python script)
+# (the reserved Windows names are in $SanReservedSet, defined above: the only copy of the list)
 $SanBlacklist = [char[]]@('\', '/', ':', '*', '?', '"', '<', '>', '|', [char]0)
-$SanReserved = @(
-    'CON', 'PRN', 'AUX', 'NUL',
-    'COM1', 'COM2', 'COM3', 'COM4', 'COM5', 'COM6', 'COM7', 'COM8', 'COM9',
-    'LPT1', 'LPT2', 'LPT3', 'LPT4', 'LPT5', 'LPT6', 'LPT7', 'LPT8', 'LPT9'
-)
 
 function Get-SanitizedName {
     param([string]$Name, [int]$MaxLen = 255)
@@ -274,7 +271,7 @@ function Get-SanitizedName {
     # (verified identical to the full algorithm on the real utf8snp.index)
     if ($Name.Length -le $MaxLen -and
         $Name -cmatch '^[A-Za-z0-9_+\-]([A-Za-z0-9 _.+\-]*[A-Za-z0-9_+\-])?$' -and
-        ($SanReserved -cnotcontains $Name)) {
+        -not $SanReservedSet.Contains($Name)) {
         return $Name
     }
 
@@ -284,7 +281,7 @@ function Get-SanitizedName {
     }
     $s = $sb.ToString().Normalize([System.Text.NormalizationForm]::FormKD).Trim()
 
-    if ($s.Length -eq 0 -or $s.Trim([char]'.').Length -eq 0 -or ($SanReserved -ccontains $s)) {
+    if ($s.Length -eq 0 -or $s.Trim([char]'.').Length -eq 0 -or $SanReservedSet.Contains($s)) {
         $s = '__' + $s
     }
 
@@ -663,7 +660,6 @@ function Invoke-CleanupParallel {
         Utf8Ignore   = $Utf8Ignore
         SrpRe        = $SrpRe
         SanBlacklist = $SanBlacklist
-        SanReserved  = $SanReserved
         SanReservedSet = $SanReservedSet
         LogoOkRe     = $LogoOkRe
         UpperRefRe   = $UpperRefRe
@@ -720,8 +716,8 @@ function Get-AddTemplate {
             '#                  ".default.png" / ".default.svg" (or the .light .dark .black .white variants).',
             '#',
             '# Empty lines and lines starting with # are ignored. Save this file as UTF-8.',
-            '# Run Update-LogosIndex.ps1 again: your lines are checked and, after asking you,',
-            '# merged into picons\utf8snp.index. Then this file is emptied (a copy goes to backup).',
+            '# Run Update-LogosIndex.ps1 again: your lines are checked and merged (no question is asked)',
+            '# into picons\utf8snp.index. Then this file is emptied (a copy goes to backup).',
             '# If an identifier is already in the index, your line REPLACES the existing one.',
             '# A pasted zapChannel line here (the same one you paste in Add-SRP.txt) also replaces that SRP in srp.index',
             '# (nothing is removed from utf8snp.index: you get a warning if other lines still use the old logo).',
@@ -747,8 +743,8 @@ function Get-AddTemplate {
             '#            ".default.png" / ".default.svg" (or the .light .dark .black .white variants).',
             '#',
             '# Empty lines and lines starting with # are ignored. Save this file as UTF-8.',
-            '# Run Update-LogosIndex.ps1 again: your lines are checked and, after asking you,',
-            '# merged into picons\srp.index. Then this file is emptied (a copy goes to backup).',
+            '# Run Update-LogosIndex.ps1 again: your lines are checked and merged (no question is asked)',
+            '# into picons\srp.index. Then this file is emptied (a copy goes to backup).',
             '# If an identifier is already in the index, your line REPLACES the existing one. The logo of the same',
             '# SRP is also updated in picons\utf8snp.index, but only if it is already there (nothing is added to it).',
             '# In an SRP a ":" is replaced with "_" (in a channel name it is removed by the checks, as the',
@@ -966,12 +962,7 @@ function Merge-IndexLines {
     }
 
     # your new lines (without the ones of the SRPs that are being removed)
-    $addList = New-Object 'System.Collections.Generic.List[string]'
-    $dropped = 0
-    foreach ($al in @($AddLines)) {
-        $p = $al.LastIndexOf([char]'=')
-        $addList.Add($al)
-    }
+    $addList = @($AddLines)
 
     $addMap = New-Object 'System.Collections.Generic.Dictionary[string,object]' ([StringComparer]::Ordinal)
     foreach ($al in $addList) {
@@ -1044,7 +1035,7 @@ function Merge-IndexLines {
     return @{
         Text = $sb.ToString(); SrcLines = $kept.Count; AddKept = $addList
         Overwritten = $over; Same = $same; Updated = $upd
-        Removed = $removed; RemovedLogos = $removedLogos; Dropped = $dropped; StillUsing = $users
+        Removed = $removed; RemovedLogos = $removedLogos; StillUsing = $users
     }
 }
 
@@ -1127,7 +1118,6 @@ try {
         $def.Updated = New-Object 'System.Collections.Generic.List[object]'
         $def.Removed = New-Object 'System.Collections.Generic.List[object]'
         $def.Same = 0
-        $def.Dropped = 0
         $def.StillUsing = New-Object 'System.Collections.Generic.List[string]'
 
         if (-not (Test-Path -LiteralPath $def.AddPath -PathType Leaf)) {
@@ -1208,12 +1198,7 @@ try {
     }
     if ($defs[1].AddValid) { $defs[1].RemoveKeys = @($zapKeys) }
     if ($defs[1].AddValid -and $defs[1].AddCount -gt 0) {
-        $upd = New-Object 'System.Collections.Generic.List[string]'
-        foreach ($al in $defs[1].AddLines) {
-            $p = $al.LastIndexOf([char]'=')
-            $upd.Add($al)
-        }
-        $defs[0].UpdateLines = @($upd)
+        $defs[0].UpdateLines = @($defs[1].AddLines)
     }
 
     # 3) what to do with each .index file (no questions: a backup is always made before writing)
@@ -1260,7 +1245,6 @@ try {
                 $def.Updated = $m.Updated
                 $def.Removed = $m.Removed
                 $def.Same = $m.Same
-                $def.Dropped = $m.Dropped
                 $def.StillUsing = $m.StillUsing
                 foreach ($x in $m.RemovedLogos) { if ($x.Length -gt 0) { [void]$removedLogos.Add($x) } }
                 $jobPath = $mergePath
@@ -1394,13 +1378,12 @@ try {
 
         # the result line
         $bits = @()
-        $nNew = [Math]::Max(0, $def.AddCount - $def.Dropped - $ignored.Count - $def.Same - $def.Overwritten.Count)
+        $nNew = [Math]::Max(0, $def.AddCount - $ignored.Count - $def.Same - $def.Overwritten.Count)
         if ($nNew -gt 0) { $bits += ('{0} added' -f $nNew) }
         if ($def.Overwritten.Count -gt 0) { $bits += ('{0} replaced' -f $def.Overwritten.Count) }
         if ($def.Removed.Count -gt 0) { $bits += ('{0} removed' -f $def.Removed.Count) }
         if ($def.Updated.Count -gt 0) { $bits += ('{0} logo(s) updated' -f $def.Updated.Count) }
         if ($def.Same -gt 0) { $bits += ('{0} already identical' -f $def.Same) }
-        if ($def.Dropped -gt 0) { $bits += ('{0} skipped (channel now by name)' -f $def.Dropped) }
         if ($ignored.Count -gt 0) { $bits += ('{0} not added (repeated)' -f $ignored.Count) }
         $dupOther = $res.Duplicates - $ignored.Count
         if ($dupOther -gt 0) { $bits += ('{0} duplicate(s) cleaned' -f $dupOther) }
@@ -1536,9 +1519,9 @@ try {
         Write-Host '     uppercase, without leading zeros, separated by "_". In an enigma2 service reference'
         Write-Host '     1:0:TYPE:SID:TSID:ONID:NAMESPACE:0:0:0:  they are the 4 values after the TYPE.'
         Write-Host ''
-        Write-Host '  3. Run this script again. It checks your lines, shows what it is going to do and asks'
-        Write-Host '     before writing into the .index files (a backup is saved in backup). Your lines'
-        Write-Host '     are merged, the files are sorted and the Add files are emptied.'
+        Write-Host '  3. Run this script again. It checks your lines and writes into the .index files without'
+        Write-Host '     asking anything (a backup is saved in backup). Your lines are merged, the files are'
+        Write-Host '     sorted and the Add files are emptied.'
         Write-Host ''
         Write-Host '  HOW TO UPLOAD TO GITHUB' -ForegroundColor Cyan
         Write-Host ''
